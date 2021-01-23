@@ -1,0 +1,7 @@
+(linearised version||of||source graph)
+(Baselines||take as input||linearised version)
+(GCN EC||behind||ADAPT)
+(ADAPT||relies on||sub-word encoding)
+(GCN EC||has||ADAPT)
+(Baselines||has||GCN EC)
+(Contribution||has||Baselines)

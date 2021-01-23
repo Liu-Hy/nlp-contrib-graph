@@ -1,0 +1,121 @@
+2	37	56	Text Classification
+6	47	62	text processing
+6	69	89	operates directly at
+6	94	109	character level
+6	114	118	uses
+6	147	165	pooling operations
+17	30	38	consider
+17	39	76	feature extraction and classification
+17	77	79	as
+35	34	52	deep architectures
+35	53	55	of
+35	56	81	many convolutional layers
+35	82	93	to approach
+35	106	111	using
+35	112	127	up to 29 layers
+43	4	39	proposed deep convolutional network
+43	40	45	shows
+43	46	74	significantly better results
+43	75	79	than
+43	80	106	previous ConvNets approach
+138	0	10	Going from
+138	11	31	depth 9 to 17 and 29
+138	32	35	for
+138	36	47	Amazon Full
+138	48	55	reduces
+138	60	70	error rate
+138	71	73	by
+138	74	86	1 % absolute
+141	10	21	compared to
+141	22	53	previous state - of - the - art
+141	56	77	our best architecture
+141	78	82	with
+141	83	109	depth 29 and max - pooling
+141	116	126	test error
+141	127	129	of
+141	130	134	37.0
+141	135	146	compared to
+141	147	154	40.43 %
+144	0	13	Max - pooling
+144	14	22	performs
+144	23	29	better
+144	30	34	than
+144	35	54	other pooling types
+148	11	21	outperform
+148	22	55	state - of - the - art Con -vNets
+167	5	10	using
+167	11	31	shortcut connections
+167	37	44	observe
+167	45	61	improved results
+167	62	66	when
+167	71	78	network
+167	83	92	49 layers
+167	104	128	training and test errors
+167	129	131	go
+167	132	136	down
+167	170	182	underfitting
+195	12	26	all processing
+195	30	37	done at
+195	42	57	character level
+195	58	66	which is
+195	71	92	atomic representation
+195	93	95	of
+195	98	106	sentence
+198	4	23	character embedding
+198	27	34	of size
+198	35	37	16
+199	0	8	Training
+199	12	26	performed with
+199	27	30	SGD
+199	33	38	using
+199	41	51	mini-batch
+199	52	59	of size
+199	60	63	128
+199	69	90	initial learning rate
+199	94	98	0.01
+199	103	111	momentum
+199	115	118	0.9
+201	3	13	initialize
+201	18	38	convolutional layers
+204	22	32	done using
+204	33	38	Torch
+205	20	32	performed on
+205	35	56	single NVidia K40 GPU
+206	73	76	use
+206	77	96	temporal batch norm
+206	97	104	without
+206	105	112	dropout
+210	0	21	Our deep architecture
+210	22	27	works
+210	28	32	well
+210	33	35	on
+210	36	49	big data sets
+210	71	74	for
+210	75	87	small depths
+212	0	3	For
+212	8	22	smallest depth
+212	62	70	see that
+212	71	80	our model
+212	89	97	performs
+212	98	104	better
+212	105	109	than
+212	110	142	Zhang 's convolutional baselines
+212	218	220	on
+212	225	242	biggest data sets
+213	0	9	Yelp Full
+213	30	54	Amazon Full and Polarity
+214	4	27	most important decrease
+214	28	30	in
+214	31	51	classification error
+214	59	70	observed on
+214	75	103	largest data set Amazon Full
+214	104	109	which
+214	114	150	more than 3 Million training samples
+217	8	15	observe
+217	21	24	for
+217	27	38	small depth
+217	41	63	temporal max - pooling
+217	64	69	works
+217	70	74	best
+217	75	77	on
+217	78	91	all data sets

@@ -1,0 +1,5 @@
+(all processing||done at||character level)
+(character level||which is||atomic representation)
+(atomic representation||of||sentence)
+(Baselines||has||all processing)
+(Contribution||has||Baselines)

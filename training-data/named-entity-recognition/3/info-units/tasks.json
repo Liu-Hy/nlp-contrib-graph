@@ -1,0 +1,69 @@
+{
+  "has" : {
+    "Tasks" : {
+      "has" : {
+        "CoNLL 2003 NER" : {
+          "Hyperparameters" : {
+            "two bidirectional GRUs" : {
+              "for" : {
+                "token character encoder" : {
+                  "with" : ["80 hidden units", "25 dimensional character embeddings"]
+                }
+              },
+              "from sentence" : "CoNLL 2003 NER .
+We use two bidirectional GRUs with 80 hidden units and 25 dimensional character embeddings for the token character encoder ."
+
+            },
+            "sequence layer" : {
+              "uses" : {
+                "bidirectional GRUs" : {
+                  "with" : "300 hidden units each"
+                }
+              },
+              "from sentence" : "The sequence layer uses two bidirectional GRUs with 300 hidden units each ."
+            },
+            "regularization" : {
+              "add" : {
+                "25 % dropout" : {
+                  "to the input of" : "each GRU"
+                }
+              },
+              "from sentence" : "For regularization , we add 25 % dropout to the input of each GRU , but not to the recurrent connections ."
+            }
+          }
+        },
+        "CoNLL 2000 chunking" : {
+          "Hyperparameters" : {
+            "baseline sequence tagger" : {
+              "uses" : [
+                "30 dimensional character embeddings",
+                {"CNN" : {
+                  "with" : {
+                    "30 filters of width 3 characters" : {
+                      "followed by" : "tanh non-linearity for the token character encoder"
+                    }
+                  }
+                }}
+              ],
+              "from sentence" : "CoNLL 2000 chunking .
+The baseline sequence tagger uses 30 dimensional character embeddings and a CNN with 30 filters of width 3 characters followed by a tanh non-linearity for the token character encoder ."
+
+            },
+            "sequence layer" : {
+              "uses" : {
+                "two bidirectional LSTMs" : {
+                  "hidden units" : "200"
+                }
+              },
+              "from sentence" : "The sequence layer uses two bidirectional LSTMs with 200 hidden units ."              
+            },
+            "50 % dropout" : {
+              "to" : ["character embeddings", "input to each LSTM layer", "output of the final LSTM layer"],
+              "from sentence" : "Following we added 50 % dropout to the character embeddings , the input to each LSTM layer ( but not recurrent connections ) and to the output of the final LSTM layer ."
+            }
+          }
+        }
+      }
+    }
+  }
+}

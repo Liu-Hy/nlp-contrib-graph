@@ -1,0 +1,72 @@
+2	0	41	Semi-supervised Word Sense Disambiguation
+4	43	83	text - word sense disambiguation ( WSD )
+13	0	33	Word sense disambiguation ( WSD )
+20	19	27	describe
+20	28	52	two novel WSD algorithms
+21	13	21	based on
+21	24	57	Long Short Term Memory ( LSTM ) )
+23	8	15	present
+23	18	43	semi-supervised algorithm
+23	55	72	label propagation
+23	73	81	to label
+23	82	101	unlabeled sentences
+23	102	110	based on
+23	117	127	similarity
+23	128	130	to
+23	131	143	labeled ones
+130	0	14	Sem Eval Tasks
+136	0	23	Our proposed algorithms
+136	24	31	achieve
+136	36	66	highest all - words F 1 scores
+136	67	77	except for
+136	78	93	Sem - Eval 2013
+141	0	34	Our self - trained word embeddings
+141	35	39	have
+141	40	59	similar performance
+141	60	62	to
+141	67	89	pre-trained embeddings
+145	4	17	learning rate
+145	18	20	is
+145	21	24	0.1
+146	3	20	experimented with
+146	21	41	other learning rates
+146	48	56	observed
+146	57	94	no significant performance difference
+146	95	100	after
+146	105	123	training converges
+148	0	26	Word2 Vec vectors Vs. LSTM
+151	0	5	shows
+151	15	30	LSTM classifier
+151	31	42	outperforms
+151	47	67	Word2 Vec classifier
+152	0	17	Sem Cor Vs. OMSTI
+153	42	57	LSTM classifier
+153	58	70	trained with
+153	71	76	OMSTI
+153	77	85	performs
+153	86	91	worse
+153	92	96	than
+153	102	114	trained with
+153	115	121	SemCor
+159	4	13	algorithm
+159	14	22	performs
+159	23	32	similarly
+159	33	35	on
+159	40	59	different data sets
+182	0	10	Word 2 Vec
+182	15	22	nearest
+182	45	49	with
+182	50	74	Word2 Vec word embedding
+189	0	6	Across
+189	7	43	all part of speech tags and datasets
+189	46	55	F1 scores
+189	56	64	increase
+189	65	70	after
+189	71	77	adding
+189	78	96	more training data
+191	4	41	SemCor ( or MASC ) trained classifier
+191	45	53	on a par
+191	54	58	with
+191	63	86	NOAD trained classifier
+191	87	89	on
+191	90	98	F1 score

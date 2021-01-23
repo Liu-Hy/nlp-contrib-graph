@@ -1,0 +1,3 @@
+(content selection and planning||within||neural data - to - text architecture)
+(Model||explicitly modeling||content selection and planning)
+(Contribution||has||Model)

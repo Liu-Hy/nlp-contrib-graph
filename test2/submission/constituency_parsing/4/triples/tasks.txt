@@ -1,0 +1,2 @@
+(Tasks||has||Score combination)
+(Contribution||has||Tasks)

@@ -1,0 +1,73 @@
+157	31	36	train
+157	41	49	networks
+157	50	55	using
+157	60	88	back - propagation algorithm
+157	89	97	updating
+157	102	112	parameters
+157	50	55	using
+157	163	198	stochastic gradient descent ( SGD )
+157	206	219	learning rate
+157	223	227	0.01
+157	234	251	gradient clipping
+157	255	258	5.0
+160	4	20	LSTM - CRF model
+160	21	25	uses
+160	28	75	single layer for the forward and backward LSTMs
+160	82	92	dimensions
+160	104	107	100
+162	11	23	dropout rate
+162	27	30	0.5
+164	23	27	uses
+164	28	38	two layers
+164	47	56	dimension
+164	57	60	100
+164	61	64	for
+164	65	75	each stack
+165	30	37	used in
+165	42	63	composition functions
+165	64	68	have
+165	69	87	16 dimensions each
+165	98	114	output embedding
+165	72	81	dimension
+165	131	133	20
+20	110	120	LSTM - CRF
+20	37	55	bidirectional LSTM
+20	99	107	above it
+20	63	98	sequential conditional random layer
+20	303	311	S - LSTM
+20	156	177	constructs and labels
+20	178	203	chunks of input sentences
+20	204	209	using
+20	213	273	algorithm inspired by transition - based parsing with states
+20	274	288	represented by
+20	289	300	stack LSTMs
+22	101	103	is
+22	0	10	To capture
+22	11	35	orthographic sensitivity
+22	41	44	use
+22	45	88	character - based word representation model
+22	162	166	with
+22	167	197	distributional representations
+2	25	49	Named Entity Recognition
+2	0	49	Neural Architectures for Named Entity Recognition
+4	0	127	State - of - the - art named entity recognition systems rely heavily on hand - crafted features and domain - specific knowledge
+7	56	59	NER
+181	21	32	outperforms
+181	33	50	all other systems
+181	53	62	including
+181	67	115	ones using external labeled data like gazetteers
+182	28	39	outperforms
+182	40	59	all previous models
+182	65	83	do not incorporate
+182	84	101	external features
+183	33	36	for
+183	37	63	German , Dutch and Spanish
+183	46	51	Dutch
+184	31	47	LSTM - CRF model
+184	48	73	significantly outperforms
+184	74	94	all previous methods
+185	9	18	exception
+186	83	94	compared to
+186	95	132	systems that do not use external data
+186	35	43	presents
+186	44	82	statethe - art ( or close to ) results

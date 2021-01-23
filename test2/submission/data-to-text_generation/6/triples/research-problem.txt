@@ -1,0 +1,5 @@
+(Contribution||has research problem||Character - based Data - to - text Generation)
+(Contribution||has research problem||natural language generation)
+(Contribution||has research problem||characters)
+(Contribution||has research problem||more general approach)
+(Contribution||has research problem||text generation)

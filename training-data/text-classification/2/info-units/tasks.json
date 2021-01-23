@@ -1,0 +1,104 @@
+{
+  "has" : {
+    "Tasks" : {
+      "has" : {
+        "Sentiment analysis" : {
+          "has" : {
+            "Hyperparameters" : {
+              "hidden units" : "10",
+              "run" : {
+                "fastText" : {
+                  "for" : {
+                    "5 epochs" : {
+                      "with" : {
+                        "learning rate" : {
+                          "selected on" : "validation set",
+                          "from" : "{ 0.05 , 0.1 , 0.25 , 0.5 }"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "from sentence" : "Sentiment analysis
+We use 10 hidden units and run fastText for 5 epochs with a learning rate selected on a validation set from { 0.05 , 0.1 , 0.25 , 0.5 } ."
+
+            },
+            "Results" : {
+              "adding" : {
+                "bigram information" : {
+                  "improves the performance by" : "1 - 4 %"
+                },
+                "from sentence" : "On this task , adding bigram information improves the performance by 1 - 4 % ."
+              },
+              "has" : {
+                "our accuracy" : {
+                  "slightly better than" : "char - CNN and char - CRNN",
+                  "bit worse than" : "VDCNN",
+                  "from sentence" : "Overall our accuracy is slightly better than char - CNN and char - CRNN and , a bit worse than VDCNN ."              
+                }
+              },
+              "increase" : {
+                "accuracy slightly" : {
+                  "using" : {
+                    "more n-grams" : {
+                      "for example with" : {
+                        "trigrams" : {
+                          "performance on" : {
+                            "Sogou" : {
+                              "goes up to" : "97.1 %"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "from sentence" : "Note that we can increase the accuracy slightly by using more n-grams , for example with trigrams , the performance on Sogou goes up to 97.1 % ." 
+              }
+            }
+          }
+        },
+        "Tag prediction" : {
+          "has" : {
+            "Results" : {
+              "At test time" : {
+                "Tagspace" : {
+                  "needs to compute" : {
+                    "scores" : {
+                      "for" : {
+                        "all the classes" : {
+                          "makes it" : "relatively slow"
+                        }
+                      }
+                    }
+                  }
+                },
+                "our fast inference" : {
+                  "gives" : {
+                    "significant speed - up" : {
+                      "when" : "number of classes is large ( more than 300 K here )"
+                    }
+                  }
+                },
+                "from sentence" : "Tag prediction
+At test time , Tagspace needs to compute the scores for all the classes which makes it relatively slow , while our fast inference gives a significant speed - up when the number of classes is large ( more than 300 K here ) ."
+
+              },
+              "more than an order of magnitude" : {
+                "faster" : {
+                  "to obtain" : {
+                    "model" : {
+                      "with" : "better quality"
+                    }
+                  }
+                },
+                "from sentence" : "Overall , we are more than an order of magnitude faster to obtain model with a better quality ."
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

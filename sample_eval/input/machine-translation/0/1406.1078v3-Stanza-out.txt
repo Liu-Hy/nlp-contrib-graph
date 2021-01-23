@@ -1,0 +1,219 @@
+title
+Learning Phrase Representations using RNN Encoder - Decoder for Statistical Machine Translation
+abstract
+In this paper , we propose a novel neural network model called RNN Encoder - Decoder that consists of two recurrent neural networks ( RNN ) .
+One RNN encodes a sequence of symbols into a fixedlength vector representation , and the other decodes the representation into another sequence of symbols .
+The encoder and decoder of the proposed model are jointly trained to maximize the conditional probability of a target sequence given a source sequence .
+The performance of a statistical machine translation system is empirically found to improve by using the conditional probabilities of phrase pairs computed by the RNN Encoder - Decoder as an additional feature in the existing log - linear model .
+Qualitatively , we show that the proposed model learns a semantically and syntactically meaningful representation of linguistic phrases .
+Introduction
+Deep neural networks have shown great success in various applications such as objection recognition ( see , e.g. , ) and speech recognition ( see , e.g. , ) .
+Furthermore , many recent works showed that neural networks can be successfully used in a number of tasks in natural language processing ( NLP ) .
+These include , but are not limited to , language modeling , paraphrase detection and word embedding extraction .
+In the field of statistical machine translation ( SMT ) , deep neural networks have begun to show promising results .
+summarizes a successful usage of feedforward neural networks in the framework of phrase - based SMT system .
+Along this line of research on using neural networks for SMT , this paper focuses on a novel neural network architecture that can be used as apart of the conventional phrase - based SMT system .
+The proposed neural network architecture , which we will refer to as an RNN Encoder - Decoder , consists of two recurrent neural networks ( RNN ) that act as an encoder and a decoder pair .
+The encoder maps a variable - length source sequence to a fixed - length vector , and the decoder maps the vector representation back to a variable - length target sequence .
+The two networks are trained jointly to maximize the conditional probability of the target sequence given a source sequence .
+Additionally , we propose to use a rather sophisticated hidden unit in order to improve both the memory capacity and the ease of training .
+The proposed RNN Encoder - Decoder with a novel hidden unit is empirically evaluated on the task of translating from English to French .
+We train the model to learn the translation probability of an English phrase to a corresponding French phrase .
+The model is then used as apart of a standard phrase - based SMT system by scoring each phrase pair in the phrase table .
+The empirical evaluation reveals that this approach of scoring phrase pairs with an RNN Encoder - Decoder improves the translation performance .
+We qualitatively analyze the trained RNN Encoder - Decoder by comparing its phrase scores with those given by the existing translation model .
+The qualitative analysis shows that the RNN Encoder - Decoder is better at capturing the linguistic regularities in the phrase table , indirectly explaining the quantitative improvements in the overall translation performance .
+The further analysis of the model reveals that the RNN Encoder - Decoder learns a continuous space representation of a phrase that preserves both the semantic and syntactic structure of the phrase .
+A recurrent neural network ( RNN ) is a neural network that consists of a hidden state hand an optional output y which operates on a variablelength sequence x = ( x 1 , . . . , x T ) .
+At each time step t , the hidden state ht of the RNN is updated by
+where f is a non-linear activation function .
+f maybe as simple as an elementwise logistic sigmoid function and as complex as along short - term memory ( LSTM ) unit ) .
+An RNN can learn a probability distribution over a sequence by being trained to predict the next symbol in a sequence .
+In that case , the output at each timestep t is the conditional distribution p ( x t | x t?1 , . . . , x 1 ) .
+For example , a multinomial distribution ( 1 - of - K coding ) can be output using a softmax activation function
+for all possible symbols j = 1 , . . . , K , where w j are the rows of a weight matrix W. By combining these probabilities , we can compute the probability of the sequence x using
+From this learned distribution , it is straightforward to sample anew sequence by iteratively sampling a symbol at each time step .
+RNN Encoder - Decoder
+The RNN Encoder - Decoder used in the experiment had 1000 hidden units with the proposed gates at the encoder and at the decoder .
+The input matrix between each input symbol x t and the hidden unit is approximated with two lower - rank matrices , and the output matrix is approximated similarly .
+We used rank - 100 matrices , equivalent to learning an embedding of dimension 100 for each word .
+The activation function used forh in Eq. ( 8 ) is a hyperbolic tangent function .
+The computation from the hidden state in the decoder to the output is implemented as a deep neural network ( Pascanu et al. , 2014 ) with a single intermediate layer having 500 maxout units each pooling 2 inputs .
+All the weight parameters in the RNN Encoder - Decoder were initialized by sampling from an isotropic zero-mean ( white ) Gaussian distribution with its standard deviation fixed to 0.01 , except for the recurrent weight parameters .
+For the recurrent weight matrices , we first sampled from a white Gaussian distribution and used its left singular vectors matrix , following .
+We used Adadelta and stochastic gradient descent to train the RNN Encoder - Decoder with hyperparameters = 10 ?6 and ? = 0.95 ( Zeiler , 2012 ) .
+At each update , we used 64 randomly selected phrase pairs from a phrase table ( which was created from 348 M words ) .
+The model was trained for approximately three days .
+Details of the architecture used in the experiments are explained in more depth in the supplementary material .
+Hidden Unit that Adaptively Remembers and Forgets
+In addition to a novel model architecture , we also propose anew type of hidden unit ( f in Eq .
+( 1 ) ) that has been motivated by the LSTM unit but is much simpler to compute and implement .
+1 shows the graphical depiction of the proposed hidden unit .
+Let us describe how the activation of the j - th hidden unit is computed .
+First , the reset gate r j is computed by
+where ?
+is the logistic sigmoid function , and [. ] j denotes the j - th element of a vector .
+x and h t?1 are the input and the previous hidden state , respectively .
+W rand Ur are weight matrices which are learned .
+Similarly , the update gate z j is computed by
+The actual activation of the proposed unit h j is then computed by
+wher ?
+h
+In this formulation , when the reset gate is close to 0 , the hidden state is forced to ignore the previous hidden state and reset with the current input only .
+This effectively allows the hidden state to drop any information that is found to be irrelevant later in the future , thus , allowing a more compact representation .
+On the other hand , the update gate controls how much information from the previous hidden state will carryover to the current hidden state .
+This acts similarly to the memory cell in the LSTM network and helps the RNN to remember longterm information .
+Furthermore , this maybe considered an adaptive variant of a leaky - integration unit .
+As each hidden unit has separate reset and update gates , each hidden unit will learn to capture dependencies over different time scales .
+Those units that learn to capture short - term dependencies will tend to have reset gates that are frequently active , but those that capture longer - term dependencies will have update gates that are mostly active .
+In our preliminary experiments , we found that it is crucial to use this new unit with gating units .
+We were notable to get meaningful result with an oft - used tanh unit without any gating .
+Statistical Machine Translation
+Ina commonly used statistical machine translation system ( SMT ) , the goal of the system ( decoder , specifically ) is to find a translation f given a source sentence e , which maximizes
+where the first term at the right hand side is called translation model and the latter language model ( see , e.g. , ) .
+In practice , however , most SMT systems model log p ( f | e ) as a loglinear model with additional features and corre - sponding weights : where f n and w n are the n - th feature and weight , respectively .
+Z ( e ) is a normalization constant that does not depend on the weights .
+The weights are often optimized to maximize the BLEU score on a development set .
+In the phrase - based SMT framework introduced in and , the translation model log p ( e | f ) is factorized into the translation probabilities of matching phrases in the source and target sentences .
+2
+These probabilities are once again considered additional features in the log - linear model ( see Eq. ) and are weighted accordingly to maximize the BLEU score .
+Since the neural net language model was proposed in , neural networks have been used widely in SMT systems .
+In many cases , neural networks have been used to rescore translation hypotheses ( n- best lists ) ( see , e.g. , ) .
+Recently , however , there has been interest in training neural networks to score the translated sentence ( or phrase pairs ) using a representation of the source sentence as an additional input .
+See , e.g. , , and .
+Scoring Phrase Pairs with RNN Encoder - Decoder
+Here we propose to train the RNN Encoder - Decoder ( see Sec. 2.2 ) on a table of phrase pairs and use its scores as additional features in the loglinear model in Eq. ( 9 ) when tuning the SMT decoder .
+When we train the RNN Encoder - Decoder , we ignore the ( normalized ) frequencies of each phrase pair in the original corpora .
+This measure was taken in order ( 1 ) to reduce the computational expense of randomly selecting phrase pairs from a large phrase table according to the normalized frequencies and ( 2 ) to ensure that the RNN Encoder - Decoder does not simply learn to rank the phrase pairs according to their numbers of occurrences .
+One underlying reason for this choice was that the existing translation probability in the phrase table already reflects the frequencies of the phrase pairs in the original corpus .
+With a fixed capacity of the RNN Encoder - Decoder , we try to ensure that most of the capacity of the model is focused toward learning linguistic regularities , i.e. , distinguishing between plausible and implausible translations , or learning the " manifold " ( region of probability concentration ) of plausible translations .
+Once the RNN Encoder - Decoder is trained , we add anew score for each phrase pair to the existing phrase table .
+This allows the new scores to enter into the existing tuning algorithm with minimal additional overhead in computation .
+As Schwenk pointed out in , it is possible to completely replace the existing phrase table with the proposed RNN Encoder - Decoder .
+In that case , fora given source phrase , the RNN Encoder - Decoder will need to generate a list of ( good ) target phrases .
+This requires , however , an expensive sampling procedure to be performed repeatedly .
+In this paper , thus , we only consider rescoring the phrase pairs in the phrase table .
+Related Approaches : Neural Networks in Machine Translation
+Before presenting the empirical results , we discuss a number of recent works that have proposed to use neural networks in the context of SMT .
+Schwenk in proposed a similar approach of scoring phrase pairs .
+Instead of the RNN - based neural network , he used a feedforward neural network that has fixed - size inputs ( 7 words in his case , with zero - padding for shorter phrases ) and fixed - size outputs ( 7 words in the target language ) .
+When it is used specifically for scoring phrases for the SMT system , the maximum phrase length is often chosen to be small .
+However , as the length of phrases increases or as we apply neural networks to other variable - length sequence data , it is important that the neural network can handle variable - length input and output .
+The proposed RNN Encoder - Decoder is well - suited for these applications .
+Similar to , Devlin et al. proposed to use a feedforward neural network to model a translation model , however , by predicting one word in a target phrase at a time .
+They reported an impressive improvement , but their approach still requires the maximum length of the input phrase ( or context words ) to be fixed a priori .
+Although it is not exactly a neural network they train , the authors of proposed to learn a bilingual embedding of words / phrases .
+They use the learned embedding to compute the distance between a pair of phrases which is used as an additional score of the phrase pair in an SMT system .
+In , a feedforward neural network was trained to learn a mapping from a bag - of - words representation of an input phrase to an output phrase .
+This is closely related to both the proposed RNN Encoder - Decoder and the model proposed in , except that their input representation of a phrase is a bag - of - words .
+A similar approach of using bag - of - words representations was proposed in as well .
+Earlier , a similar encoder - decoder model using two recursive neural networks was proposed in ) , but their model was restricted to a monolingual setting , i.e. the model reconstructs an input sentence .
+More recently , another encoder - decoder model using an RNN was proposed in , where the decoder is conditioned on a representation of either a source sentence or a source context .
+One important difference between the proposed RNN Encoder - Decoder and the approaches in and is that the order of the words in source and target phrases is taken into account .
+The RNN Encoder - Decoder naturally distinguishes between sequences that have the same words but in a different order , whereas the aforementioned approaches effectively ignore order information .
+The closest approach related to the proposed RNN Encoder - Decoder is the Recurrent Continuous Translation Model ( Model 2 ) proposed in .
+In their paper , they proposed a similar model that consists of an encoder and decoder .
+The difference with our model is that they used a convolutional n-gram model ( CGM ) for the encoder and the hybrid of an inverse CGM and a recurrent neural network for the decoder .
+They , however , evaluated their model on rescoring the n-best list proposed by the conventional SMT system and computing the perplexity of the gold standard translations .
+Experiments
+We evaluate our approach on the English / French translation task of the WMT ' 14 workshop .
+Data and Baseline System
+Large amounts of resources are available to build an English / French SMT system in the framework of the WMT ' 14 translation task .
+The bilingual corpora include Europarl ( 61M words ) , news commentary ( 5.5 M ) , UN ( 421 M ) , and two crawled corpora of 90 M and 780M words respectively .
+The last two corpora are quite noisy .
+To train the French language model , about 712M words of crawled newspaper material is available in addition to the target side of the bitexts .
+All the word counts refer to French words after tokenization .
+It is commonly acknowledged that training statistical models on the concatenation of all this data does not necessarily lead to optimal performance , and results in extremely large models which are difficult to handle .
+Instead , one should focus on the most relevant subset of the data fora given task .
+We have done so by applying the data selection method proposed in , and its extension to bitexts .
+By these means we selected a subset of 418 M words out of more than 2G words for language modeling and a subset of 348 M out of 850 M words for training the RNN Encoder - Decoder .
+We used the test set newstest2012 and 2013 for data selection and weight tuning with MERT , and newstest2014 as our test set .
+Each set has more than 70 thousand words and a single reference translation .
+For training the neural networks , including the proposed RNN Encoder - Decoder , we limited the source and target vocabulary to the most frequent 15,000 words for both English and French .
+This covers approximately 93 % of the dataset .
+All the out - of - vocabulary words were mapped to a special token ( [ UNK ] ) .
+The baseline phrase - based SMT system was built using Moses with default settings .
+This system achieves a BLEU score of 30.64 and 33.3 on the development and test sets , respectively ( see Table 1 ) .
+Neural Language Model
+In order to assess the effectiveness of scoring phrase pairs with the proposed RNN Encoder - Decoder , we also tried a more traditional approach of using a neural network for learning a target language model ( CSLM ) .
+Especially , the comparison between the SMT system using CSLM and that using the proposed approach of phrase scoring by RNN Encoder - Decoder will clarify whether the contributions from multiple neural networks in different parts of the SMT sys - tem add up or are redundant .
+We trained the CSLM model on 7 - grams from the target corpus .
+Each input word was projected into the embedding space R 512 , and they were concatenated to form a 3072 dimensional vector .
+The concatenated vector was fed through two rectified layers ( of size 1536 and 1024 ) .
+The output layer was a simple softmax layer ( see Eq. ) .
+All the weight parameters were initialized uniformly between ? 0.01 and 0.01 , and the model was trained until the validation perplexity did not improve for 10 epochs .
+After training , the language model achieved a perplexity of 45.80 .
+The validation set was a random selection of 0.1 % of the corpus .
+The model was used to score partial translations during the decoding process , which generally leads to higher gains in BLEU score than n-best list rescoring .
+To address the computational complexity of using a CSLM in the decoder a buffer was used to aggregate n-grams during the stacksearch performed by the decoder .
+Only when the buffer is full , or a stack is about to be pruned , the n-grams are scored by the CSLM .
+This allows us to perform fast matrixmatrix multiplication on GPU using Theano .
+Quantitative Analysis
+We tried the following combinations : :
+The top scoring target phrases fora small set of source phrases according to the translation model ( direct translation probability ) and by the RNN Encoder - Decoder .
+Source phrases were randomly selected from phrases with 4 or more words .
+?
+denotes an incomplete ( partial ) character .
+r is a Cyrillic letter ghe .
+The results are presented in .
+As expected , adding features computed by neural networks consistently improves the performance over the baseline performance .
+The best performance was achieved when we used both CSLM and the phrase scores from the RNN Encoder - Decoder .
+This suggests that the contributions of the CSLM and the RNN Encoder - Decoder are not too correlated and that one can expect better results by improving each method independently .
+Furthermore , we tried penalizing the number of words that are unknown to the neural networks ( i.e. words which are not in the shortlist ) .
+We do so by simply adding the number of unknown words as an additional feature the loglinear model in Eq. ( 9 ) .
+3
+However , in this case we 3 To understand the effect of the penalty , consider the set of all words in the 15,000 large shortlist , SL .
+All words x i / ?
+SL are replaced by a special token [ UNK ] before being scored by the neural networks .
+Hence , the conditional probability of any xi t / ?
+SL is actually given by the model as
+where x <t is a shorthand notation for xt ? 1 , . . . , x 1 .
+were notable to achieve better performance on the test set , but only on the development set .
+Qualitative Analysis
+In order to understand where the performance improvement comes from , we analyze the phrase pair scores computed by the RNN Encoder - Decoder against the corresponding p ( f | e ) from the translation model .
+Since the existing translation model relies solely on the statistics of the phrase pairs in the corpus , we expect its scores to be better estimated for the frequent phrases but badly estimated for rare phrases .
+Also , as we mentioned earlier in Sec. 3.1 , we further expect the RNN Encoder - Decoder which was trained without any frequency information to score the phrase pairs based rather on the linguistic regularities than on the statistics of their occurrences in the corpus .
+We focus on those pairs whose source phrase is long ( more than 3 words per source phrase ) and
+As a result , the probability of words not in the shortlist is always overestimated .
+It is possible to address this issue by backing off to an existing model that contain non-shortlisted words ( see ) In this paper , however , we opt for introducing a word penalty instead , which counteracts the word probability overestimation .
+frequent .
+For each such source phrase , we look at the target phrases that have been scored high either by the translation probability p ( f | e ) or by the RNN Encoder - Decoder .
+Similarly , we perform the same procedure with those pairs whose source phrase is long but rare in the corpus .
+lists the top - 3 target phrases per source phrase favored either by the translation model or by the RNN Encoder - Decoder .
+The source phrases were randomly chosen among long ones having more than 4 or 5 words .
+In most cases , the choices of the target phrases by the RNN Encoder - Decoder are closer to actual or literal translations .
+We can observe that the RNN Encoder - Decoder prefers shorter phrases in general .
+Interestingly , many phrase pairs were scored similarly by both the translation model and the RNN Encoder - Decoder , but there were as many other phrase pairs that were scored radically different ( see ) .
+This could arise from the proposed approach of training the RNN Encoder - Decoder on a set of unique phrase pairs , discouraging the RNN Encoder - Decoder from learning simply the frequencies of the phrase pairs from the corpus , as explained earlier . , we show for each of the source phrases in , the generated samples from the RNN Encoder - Decoder .
+For each source phrase , we generated 50 samples and show the top - five phrases accordingly to their scores .
+We can see that the RNN Encoder - Decoder is able to propose well - formed target phrases without looking at the actual phrase table .
+Importantly , the generated phrases do not overlap completely with the target phrases from the phrase table .
+This encourages us to further investigate the possibility of replacing the whole or apart of the phrase table with the proposed RNN Encoder - Decoder in the future .
+Furthermore , in
+Word and Phrase Representations
+Since the proposed RNN Encoder - Decoder is not specifically designed only for the task of machine translation , here we briefly look at the properties of the trained model .
+It has been known for sometime that continuous space language models using neural networks are able to learn semantically meaningful embeddings ( See , e.g. , ) .
+Since the proposed RNN Encoder - Decoder also projects to and maps back from a sequence of words into a continuous space vector , we expect to see a similar property with the proposed model as well .
+The left plot in shows the 2 - D embedding of the words using the word embedding matrix learned by the RNN Encoder - Decoder .
+The projection was done by the recently proposed Barnes - Hut - SNE .
+We can clearly see that semantically similar words are clustered with each other ( see the zoomed - in plots in .
+The proposed RNN Encoder - Decoder naturally generates a continuous - space representation of a phrase .
+The representation ( c in ) in this case is a 1000 - dimensional vector .
+Similarly to the word representations , we visualize the representations of the phrases that consists of four or more words using the Barnes - Hut - SNE in .
+From the visualization , it is clear that the RNN Encoder - Decoder captures both semantic and syntactic structures of the phrases .
+For instance , in the bottom - left plot , most of the phrases are about the duration of time , while those phrases that are syntactically similar are clustered together .
+The bottom - right plot shows the cluster of phrases that are semantically similar ( countries or regions ) .
+On the other hand , the top - right plot shows the phrases that are syntactically similar .
+Conclusion
+In this paper , we proposed anew neural network architecture , called an RNN Encoder - Decoder that is able to learn the mapping from a sequence of an arbitrary length to another sequence , possibly from a different set , of an arbitrary length .
+The proposed RNN Encoder - Decoder is able to either score a pair of sequences ( in terms of a conditional probability ) or generate a target sequence given a source sequence .
+Along with the new architecture , we proposed a novel hidden unit that includes a reset gate and an update gate that adaptively control how much each hidden unit remembers or forgets while reading / generating a sequence .
+We evaluated the proposed model with the task of statistical machine translation , where we used the RNN Encoder - Decoder to score each phrase pair in the phrase table .
+Qualitatively , we were able to show that the new model is able to capture linguistic regularities in the phrase pairs well and also that the RNN Encoder - Decoder is able to propose well - formed target phrases .
+The scores by the RNN Encoder - Decoder were found to improve the overall translation performance in terms of BLEU scores .
+Also , we found that the contribution by the RNN Encoder - Decoder is rather orthogonal to the existing approach of using neural networks in the SMT system , so that we can improve further the performance by using , for instance , the RNN Encoder - Decoder and the neural net language model together .
+Our qualitative analysis of the trained model shows that it indeed captures the linguistic regularities in multiple levels i.e. at the word level as well as phrase level .
+This suggests that there maybe more natural language related applications that may benefit from the proposed RNN Encoder - Decoder .
+The proposed architecture has large potential for further improvement and analysis .
+One approach that was not investigated here is to replace the whole , or apart of the phrase table by letting the RNN Encoder - Decoder propose target phrases .
+Also , noting that the proposed model is not limited to being used with written language , it will bean important future research to apply the proposed architecture to other applications such as speech transcription .

@@ -1,0 +1,171 @@
+2	72	97	Facial Landmark Detection
+12	17	24	recover
+12	29	62	unconfidently predicted landmarks
+12	63	69	due to
+12	70	95	occlusion and low quality
+12	101	108	propose
+12	111	150	global heatmap correction unit ( GHCU )
+12	151	161	to correct
+12	162	170	outliers
+12	171	185	by considering
+12	190	207	global face shape
+12	208	210	as
+12	213	223	constraint
+37	61	68	propose
+37	71	110	global heatmap correction unit ( GHCU )
+37	117	126	maintains
+37	131	159	global face shape constraint
+37	164	172	recovers
+37	177	210	unconfidently predicted landmarks
+37	211	220	caused by
+37	221	240	challenging factors
+37	241	248	such as
+37	249	259	occlusions
+37	264	281	low resolution of
+37	282	288	images
+181	8	12	GHCU
+181	13	30	implicitly learns
+181	35	62	whole face shape constraint
+181	63	67	from
+181	72	85	training data
+181	90	102	always gives
+181	103	124	facialshape landmarks
+201	0	2	To
+201	3	10	perform
+201	11	28	data augmentation
+201	34	49	randomly sample
+201	54	98	angle of rotation and the bounding box scale
+201	99	103	from
+201	104	125	Gaussian distribution
+202	3	6	use
+202	9	47	four - stage stacked hourglass network
+202	48	50	as
+202	51	63	our backbone
+202	73	83	trained by
+202	88	105	optimizer RMSprop
+203	28	41	our algorithm
+203	42	51	comprises
+203	52	61	two parts
+203	64	80	network training
+203	85	111	real groundtruth searching
+203	120	123	are
+203	124	147	alternatively optimized
+204	15	17	at
+204	18	28	each epoch
+204	34	46	first search
+204	51	71	real ground - trut ?
+207	5	13	training
+207	18	41	roughly converged model
+207	42	46	with
+207	47	64	human annotations
+207	71	92	initial learning rate
+207	93	95	is
+207	96	105	2.5 10 ?4
+207	115	122	decayed
+207	126	136	2.5 10 ? 6
+207	137	142	after
+207	143	153	120 epochs
+208	5	13	training
+208	19	37	Semantic Alignment
+208	57	59	of
+208	109	130	initial learning rate
+208	131	133	is
+208	134	144	2.5 10 ? 6
+208	152	162	divided by
+208	163	174	5 , 2 and 2
+208	175	177	at
+208	178	198	epoch 30 , 60 and 90
+211	3	6	set
+211	7	17	batch size
+211	18	20	to
+211	21	23	10
+211	24	27	for
+211	28	44	network training
+213	23	35	trained with
+213	36	50	PyTorch [ 18 ]
+213	51	53	on
+213	54	68	2 Titan X GPUs
+218	4	8	uses
+218	13	35	hourglass architecture
+218	36	40	with
+218	41	58	human annotations
+218	67	69	is
+220	11	14	see
+220	20	23	HGs
+220	24	28	with
+220	29	64	our Semantic Alignment ( HGs + SA )
+220	65	83	greatly outperform
+220	84	101	hourglass ( HGs )
+220	109	125	4.37 % vs 5.04 %
+220	126	137	in terms of
+220	138	141	NME
+220	142	144	on
+220	145	153	Full set
+220	156	163	showing
+221	3	9	adding
+221	10	14	GHCU
+221	24	27	see
+221	33	48	HGs + SA + GHCU
+221	49	69	slightly outperforms
+221	74	82	HGs + SA
+223	20	29	normalize
+223	34	55	in - plane - rotation
+223	56	67	by training
+223	70	91	preprocessing network
+223	97	104	conduct
+223	110	150	normalization ( HGs + SA + GHCU + Norm )
+223	155	162	achieve
+223	163	191	state of the art performance
+223	192	194	on
+223	195	221	Challenge set and Full set
+223	224	241	6.38 % and 4.02 %
+224	16	18	on
+224	19	32	Challenge set
+224	38	62	significantly outperform
+224	67	90	state of the art method
+224	93	125	6.38 % ( HGs + SA +GHCU + Norm )
+224	129	143	6.98 % ( LAB )
+233	11	19	observed
+233	25	40	HGs + SA + GHCU
+233	41	46	works
+233	47	53	better
+233	54	58	than
+233	59	67	HGs + SA
+236	4	21	subset Category 3
+236	22	24	is
+236	29	49	most challenging one
+238	11	19	see that
+238	20	28	HGs + SA
+238	29	48	greatly outperforms
+238	49	52	HGs
+239	14	27	compared with
+239	28	54	HGs + SA , HGs + SA + GHCU
+239	55	61	reduce
+239	66	85	error rate ( RMSE )
+239	86	88	by
+239	89	93	18 %
+239	94	96	on
+239	97	116	Category 3 test set
+240	33	35	on
+240	36	48	AFLW dataset
+243	0	4	GHCU
+243	5	14	considers
+243	19	36	global face shape
+243	37	39	as
+243	40	50	constraint
+285	21	39	our CNN based GHCU
+285	40	51	outperforms
+285	52	68	PCA based method
+285	69	80	in terms of
+285	81	109	both accuracy and efficiency
+290	4	22	Semantic alignment
+290	27	47	consistently improve
+290	52	63	performance
+290	64	66	on
+290	67	82	all subset sets
+291	0	4	GHCU
+291	5	7	is
+291	8	22	more effective
+291	23	25	on
+291	30	48	challenge data set
+291	66	82	8.15 % vs 9.91 %

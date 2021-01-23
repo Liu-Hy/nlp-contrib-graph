@@ -1,0 +1,8 @@
+(very large corpus||with||large output space)
+(Model||explore||very large corpus)
+(linear models||with||rank constraint)
+(billion words||within||ten minutes)
+(performance||on par with||state - of - the - art)
+(achieving||has||performance)
+(Model||show||linear models)
+(Contribution||has||Model)

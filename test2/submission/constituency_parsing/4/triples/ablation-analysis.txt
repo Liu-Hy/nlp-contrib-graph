@@ -1,0 +1,5 @@
+(two state - of - the - art generative neural parsing models||name||Recurrent Neural Network Grammar generative parser ( RG ))
+(beam - based search procedure||with||augmented state space)
+(augmented state space||search directly in||generative models)
+(Ablation analysis||present||beam - based search procedure)
+(Contribution||has||Ablation analysis)

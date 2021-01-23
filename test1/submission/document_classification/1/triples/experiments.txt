@@ -1,0 +1,7 @@
+(Train - Test Discrepancy||of||UDA Method)
+(UDA Method||With||UDA algorithm)
+(Train - Test Discrepancy||has||UDA Method)
+(XLM||with||MLM loss)
+(MLM loss||for||each target domain)
+(sentiment classification task||has||XLM)
+(Contribution||has||Experiments)

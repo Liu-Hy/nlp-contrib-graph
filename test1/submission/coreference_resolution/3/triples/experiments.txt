@@ -1,0 +1,4 @@
+(maximum span width||from||10 to 30 words)
+(maximum span width||has||10 to 30 words)
+(3 highway LSTMs||instead of||1)
+(Contribution||has||Experiments)

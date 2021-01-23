@@ -1,0 +1,4 @@
+(initial learning rate||of||0.01)
+(momentum||of||0.9)
+(weight decay||of||0.001)
+(Contribution||has||Experiments)

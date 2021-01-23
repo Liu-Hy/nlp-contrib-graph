@@ -1,0 +1,7 @@
+(our model||based on||Theano)
+(our model||based on||python library)
+(python library||supports||efficient symbolic differentiation)
+(our model||transparent use of||GPU)
+(Theano||has||python library)
+(Baselines||implement||our model)
+(Contribution||has||Baselines)

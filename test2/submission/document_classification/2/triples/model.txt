@@ -1,0 +1,5 @@
+(simple bi-directional LSTM ( BiLSTM ) architecture||with||appropriate regularization)
+(appropriate regularization||yields||accuracy and F 1)
+(accuracy and F 1||competitive or exceed||state of the art)
+(state of the art||on||four standard benchmark datasets)
+(Contribution||has||Model)

@@ -1,0 +1,5 @@
+F1_score = 0
+eval_loss = 2.7530998868990673
+f1_score = 0.0
+precision = 0.0
+recall = 0.0

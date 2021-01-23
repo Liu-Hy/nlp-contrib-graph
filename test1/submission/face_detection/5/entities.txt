@@ -1,0 +1,45 @@
+5	0	8	Abstract
+5	11	42	Face detection and alignment in
+5	43	68	unconstrained environment
+76	4	27	Bounding box regression
+87	4	25	Multi-source training
+98	4	29	Online Hard sample mining
+117	4	10	P- Net
+117	16	29	randomly crop
+117	30	45	several patches
+117	46	50	from
+117	51	61	WIDER FACE
+117	62	72	to collect
+117	73	82	positives
+117	99	108	part face
+119	4	11	R - Net
+119	17	20	use
+119	21	32	first stage
+119	33	35	of
+119	36	49	our framework
+119	50	59	to detect
+119	60	65	faces
+119	66	70	from
+119	71	81	WIDER FACE
+119	82	92	to collect
+119	93	114	positives , negatives
+119	119	128	part face
+119	135	149	landmark faces
+119	154	167	detected from
+119	168	174	CelebA
+120	4	11	O - Net
+120	56	59	use
+120	60	76	first two stages
+120	77	79	of
+120	80	93	our framework
+120	94	103	to detect
+120	104	109	faces
+132	8	15	compare
+132	32	34	of
+132	35	58	bounding box regression
+132	82	90	suggests
+132	96	138	joint landmarks localization task learning
+132	142	152	beneficial
+132	153	156	for
+132	162	181	face classification
+132	186	215	bounding box regression tasks

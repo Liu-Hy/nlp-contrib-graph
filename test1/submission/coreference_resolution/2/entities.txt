@@ -1,0 +1,44 @@
+2	32	61	Mention - Ranking Coreference
+15	21	34	explore using
+15	35	73	two variants of reinforcement learning
+15	74	94	to directly optimize
+15	97	115	coreference system
+15	116	119	for
+15	120	150	coreference evaluation metrics
+16	19	25	modify
+16	30	62	max-margin coreference objective
+16	75	91	by incorporating
+16	96	102	reward
+16	103	118	associated with
+16	119	144	each coreference decision
+16	145	149	into
+16	154	177	loss 's slack rescaling
+18	10	12	is
+18	15	45	neural mention - ranking model
+70	0	22	Reinforcement Learning
+110	3	12	find that
+110	13	22	REINFORCE
+110	23	27	does
+110	28	43	slightly better
+110	44	48	than
+110	53	67	heuristic loss
+110	74	90	reward rescaling
+110	91	99	performs
+110	100	120	significantly better
+112	0	6	During
+112	7	15	training
+112	19	28	optimizes
+112	33	53	model 's performance
+112	54	56	in
+112	57	68	expectation
+112	75	77	at
+112	78	89	test - time
+112	93	98	takes
+112	103	125	most probable sequence
+112	126	128	of
+112	129	136	actions
+115	4	39	reward - rescaled max - margin loss
+115	40	48	combines
+115	53	72	best of both worlds
+115	75	87	resulting in
+115	88	108	superior performance

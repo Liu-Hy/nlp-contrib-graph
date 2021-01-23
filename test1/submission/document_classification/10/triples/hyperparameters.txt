@@ -1,0 +1,5 @@
+(embeddings||of||words ( v w ) and entities ( v e ))
+(words ( v w ) and entities ( v e )||using||pretrained embeddings)
+(pretrained embeddings||trained on||KB)
+(Hyperparameters||initialized||embeddings)
+(Contribution||has||Hyperparameters)

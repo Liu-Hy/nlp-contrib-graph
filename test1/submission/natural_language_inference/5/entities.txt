@@ -1,0 +1,20 @@
+2	0	28	Sentence Similarity Learning
+13	17	42	paraphrase identification
+13	50	69	sentence similarity
+13	78	90	to determine
+13	99	112	two sentences
+13	113	116	are
+13	117	128	paraphrases
+166	4	29	paraphrase identification
+170	24	27	set
+170	32	36	size
+170	37	39	of
+170	40	61	word vector dimension
+170	62	64	as
+170	65	72	d = 300
+170	79	88	pre-train
+170	93	100	vectors
+170	101	105	with
+170	110	127	word2 vec toolkit
+170	128	130	on
+170	135	166	English Gigaword ( LDC2011T07 )

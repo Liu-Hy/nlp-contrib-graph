@@ -1,0 +1,5 @@
+(WIDER||through proposing||multi-scale two - stage cascade framework)
+(multi-scale two - stage cascade framework||uses||divide and conquer strategy)
+(divide and conquer strategy||to deal with||large scale variations)
+(WIDER||has||multi-scale two - stage cascade framework)
+(Contribution||has||Model)

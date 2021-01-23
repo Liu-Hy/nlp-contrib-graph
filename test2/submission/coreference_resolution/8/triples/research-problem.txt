@@ -1,0 +1,3 @@
+(Contribution||has research problem||Neural Coreference Resolution)
+(Contribution||has research problem||first end - to - end coreference resolution model)
+(Contribution||has research problem||significantly outperforms)

@@ -1,0 +1,5 @@
+(every training||for||20 epochs)
+(mini-batches||of||100 sentences)
+(100 sentences||truncated to||80 words)
+(mini-batches||has||100 sentences)
+(Contribution||has||Experiments)

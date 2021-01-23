@@ -1,0 +1,6 @@
+(Tasks||has||Sentence Classification)
+(NTI - SLSTM model||performed||slightly worse)
+(input||with||LSTM leaf node function)
+(input||achieved||best performance)
+(LSTM leaf node function||achieved||best performance)
+(Contribution||has||Tasks)

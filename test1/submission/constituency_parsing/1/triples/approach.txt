@@ -1,0 +1,8 @@
+(both directions||of||large language - model - inspired self - attention cloze model)
+(Approach||show||even larger performance gains)
+(cloze - style training objective||where||model)
+(model||must predict||center word)
+(center word||given||left - to - right and right - to - left context representations)
+(cloze - style training objective||has||model)
+(Approach||introducing||cloze - style training objective)
+(Contribution||has||Approach)

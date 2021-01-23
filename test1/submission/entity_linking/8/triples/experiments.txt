@@ -1,0 +1,7 @@
+(RELIC||learns||better representations)
+(better representations||of||entity properties)
+(better representations||trained to match||contexts)
+(entity properties||trained to match||contexts)
+(RELIC 's context encoder and entity embeddings||to||task)
+(task||of||end - to - end trivia question answering)
+(Contribution||has||Experiments)

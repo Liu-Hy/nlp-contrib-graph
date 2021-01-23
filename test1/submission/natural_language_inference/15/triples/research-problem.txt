@@ -1,0 +1,4 @@
+(Contribution||has research problem||Neural Natural Language Inference Models)
+(Contribution||has research problem||Modeling natural language inference)
+(Contribution||has research problem||Natural language inference ( NLI ))
+(Contribution||has research problem||recognizing textual entailment ( RTE ))

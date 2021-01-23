@@ -1,0 +1,6 @@
+(continuous form||of||Memory Network)
+(Model||considered||continuous form)
+(RNNsearch||with||multiple computational steps)
+(multiple computational steps||per||output symbol)
+(Model||seen as||RNNsearch)
+(Contribution||has||Model)

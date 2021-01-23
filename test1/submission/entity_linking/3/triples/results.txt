@@ -1,0 +1,7 @@
+(state of the art||of||lexical sample task)
+(UFSAC 4 BERT||performed||best)
+(Results||has||UFSAC 4 BERT)
+(POS restriction||increases||F 1 scores)
+(F 1 scores||for||S7 - T7 and S7 - T17)
+(Results||including||POS restriction)
+(Contribution||has||Results)

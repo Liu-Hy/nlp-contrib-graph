@@ -1,0 +1,240 @@
+2	40	57	Face Alignment In
+4	0	14	Face Alignment
+6	19	28	introduce
+6	29	35	DeCaFA
+6	41	95	end - to - end deep convolutional cascade architecture
+6	96	99	for
+6	100	114	face alignment
+10	3	7	show
+10	28	34	DeCaFA
+10	35	60	significantly outperforms
+10	61	80	existing approaches
+10	81	83	on
+10	84	116	300W , CelebA and WFLW databases
+17	15	29	robustly learn
+17	30	51	rigid transformations
+17	54	61	such as
+17	62	86	translation and rotation
+17	89	91	in
+17	96	116	first cascade stages
+17	125	133	learning
+17	134	155	non-rigid deformation
+17	163	169	due to
+17	170	187	facial expression
+17	191	210	non-planar rotation
+22	19	28	introduce
+22	31	87	Deep convolutional Cascade for Face Alignment ( DeCaFA )
+23	0	6	DeCaFA
+23	10	21	composed of
+23	22	36	several stages
+23	42	54	each produce
+23	55	85	landmark - wise attention maps
+23	88	101	relatively to
+23	102	134	heterogeneous annotation markups
+27	3	12	introduce
+27	15	53	fully - convolutional Deep Cascade for
+27	54	79	Face Alignment ( DeCaFA )
+27	85	92	unifies
+27	93	116	cascaded regression and
+27	117	147	end - to - end deep approaches
+27	150	158	by using
+27	159	189	landmark - wise attention maps
+27	190	206	fused to extract
+27	207	224	local information
+27	225	231	around
+27	234	259	current landmark estimate
+28	3	7	show
+28	13	37	intermediate supervision
+28	38	42	with
+28	43	61	increasing weights
+28	62	67	helps
+28	68	74	DeCaFA
+28	75	83	to learn
+28	84	105	coarse attention maps
+28	106	108	in
+28	113	125	early stages
+29	0	16	Through chaining
+29	17	41	multiple transfer layers
+29	44	50	DeCaFA
+29	51	61	integrates
+29	62	80	heterogeneous data
+29	81	95	annotated with
+29	96	126	different numbers of landmarks
+29	131	136	model
+29	141	163	intrinsic relationship
+29	178	183	tasks
+130	4	17	DeCaFA models
+130	50	53	use
+130	54	67	1 to 4 stages
+130	73	86	each contains
+130	87	114	12 3 3 convolutional layers
+130	115	119	with
+130	120	160	64 ? 64 ? 128 ? 128 ? 256 ? 256 channels
+130	161	164	for
+130	169	189	downsampling portion
+130	217	235	upsampling portion
+132	0	16	Each convolution
+132	20	31	followed by
+132	34	59	batch normalization layer
+132	60	64	with
+132	65	80	ReLU activation
+133	9	20	to generate
+133	21	40	smooth feature maps
+133	44	54	do not use
+133	55	77	transposed convolution
+133	82	90	bilinear
+133	91	107	image upsampling
+133	108	121	followed with
+133	122	146	3 3 convolutional layers
+134	4	22	whole architecture
+134	26	39	trained using
+134	40	54	ADAM optimizer
+134	55	59	with
+134	62	82	5e ? 4 learning rate
+134	83	87	with
+134	88	100	momentum 0.9
+134	105	118	learning rate
+134	119	133	annealing with
+134	134	143	power 0.9
+135	3	8	apply
+135	9	23	400000 updates
+135	24	28	with
+135	29	41	batch size 8
+135	42	45	for
+135	46	59	each database
+153	4	12	accuracy
+153	13	31	steadily increases
+153	32	34	as
+153	38	41	add
+153	42	53	more stages
+153	60	69	saturates
+153	70	75	after
+153	80	85	third
+153	86	88	on
+153	89	103	LFPW and HELEN
+154	0	2	On
+154	3	7	IBUG
+154	15	25	difference
+154	26	28	is
+154	29	45	more conspicuous
+154	66	77	improvement
+154	78	80	by
+154	81	89	stacking
+154	90	109	more cascade stages
+156	0	39	Coarsely annotated data ( 5 landmarks )
+156	40	59	significantly helps
+156	64	100	fine - grained landmark localization
+160	8	19	reinjecting
+160	24	41	whole input image
+160	79	92	significantly
+160	106	114	accuracy
+160	115	117	on
+160	118	134	challenging data
+160	135	142	such as
+160	143	162	300 W - challenging
+160	166	177	WFLW - pose
+161	56	61	using
+161	62	88	local + global information
+161	89	95	rivals
+161	100	119	basic deep approach
+162	14	35	F 5 - Equation fusion
+162	49	70	local and global cues
+162	71	73	is
+162	78	82	best
+162	83	85	by
+162	88	106	significant margin
+165	79	81	on
+165	82	95	300W database
+166	0	12	Our approach
+166	13	21	performs
+166	22	28	better
+166	29	33	than
+166	34	58	most existing approaches
+166	59	61	on
+166	66	79	common subset
+166	86	94	performs
+166	95	105	very close
+166	106	108	to
+166	109	112	its
+166	113	128	best contenders
+166	129	131	on
+166	136	154	challenging subset
+167	10	16	DeCaFA
+167	17	32	trained only on
+167	33	47	300 W trainset
+167	54	56	ME
+167	57	59	of
+167	60	66	3.69 %
+167	82	98	very competitive
+167	124	133	thanks to
+167	138	173	end - to - end cascade architecture
+168	0	6	DeCaFA
+168	10	21	competitive
+168	22	26	with
+168	31	46	best approaches
+168	49	68	LAB and DAN - MENPO
+168	69	79	as well as
+168	80	92	JMFA - MENPO
+168	106	109	use
+168	110	123	external data
+172	0	6	DeCaFA
+172	7	15	performs
+172	16	22	better
+172	23	27	than
+172	28	40	LAB and Wing
+172	41	43	by
+172	46	64	significant margin
+172	65	67	on
+172	68	80	every subset
+173	7	11	note
+173	17	23	DeCaFA
+173	24	41	trained solely on
+173	42	46	WFLW
+173	55	57	as
+173	60	62	ME
+173	63	65	of
+173	66	70	5.01
+173	71	73	on
+173	78	92	whole test set
+173	104	116	still better
+179	0	23	Method Mean error ( % )
+179	24	27	SDM
+179	83	85	is
+179	90	94	best
+179	95	97	by
+179	100	118	significant margin
+181	17	21	sets
+181	24	50	new state - of - the - art
+181	51	53	on
+181	58	73	three databases
+181	74	78	with
+181	79	105	several evaluation metrics
+188	0	1	A
+188	12	33	substantially improve
+188	38	59	landmark localization
+188	60	62	on
+188	63	76	both datasets
+188	101	126	number of training images
+188	127	129	is
+188	130	138	very low
+190	0	6	DeCaFA
+190	7	19	trained with
+190	20	42	15 % of 300 W trainset
+190	47	67	6 % of WFLW trainset
+190	71	77	on par
+190	78	82	with
+190	83	86	SAN
+190	87	89	on
+190	90	94	300W
+190	114	134	substantially better
+190	135	139	than
+190	140	144	DVLN
+190	145	147	on
+190	148	152	WFLW
+195	5	11	notice
+195	21	40	predicted landmarks
+195	45	53	close to
+195	58	84	corresponding ground truth
+195	92	110	in the presence of
+195	111	144	rotations and occlusions ( WFLW )
+195	148	177	facial expressions ( CelebA )

@@ -1,0 +1,7 @@
+(official code||provided in||E2E NLG Challenge website)
+(E2E NLG Challenge website||for||TGen)
+(official code||developed||our models and EDA)
+(our models and EDA||in||PyTorch)
+(our models and EDA||training them on||NVIDIA GPUs)
+(Ablation analysis||used||official code)
+(Contribution||has||Ablation analysis)

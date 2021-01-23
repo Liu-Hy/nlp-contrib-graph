@@ -1,0 +1,86 @@
+2	0	58	Learning Distributed Representations of Texts and Entities
+22	32	80	learning distributed representations of entities
+22	98	146	https://github.com/studio-ousia/ntee base ( KB )
+26	19	26	propose
+26	27	64	Neural Text - Entity Encoder ( NTEE )
+26	69	89	neural network model
+26	90	106	to jointly learn
+26	107	134	distributed representations
+26	135	137	of
+26	138	179	texts ( i.e. , sentences and paragraphs )
+26	184	195	KB entities
+27	0	3	For
+27	4	14	every text
+27	15	17	in
+27	22	24	KB
+27	27	36	our model
+27	37	44	aims to
+27	45	52	predict
+27	57	74	relevant entities
+27	81	87	places
+27	92	122	text and the relevant entities
+27	123	131	close to
+27	132	142	each other
+27	143	145	in
+27	148	171	continuous vector space
+31	14	17	ESA
+31	18	23	shows
+31	29	33	text
+31	34	40	can be
+31	41	63	accurately represented
+31	64	69	using
+31	72	81	small set
+31	82	84	of
+40	19	24	adopt
+40	27	76	simple multi -layer perceptron ( MLP ) classifier
+40	77	81	with
+40	86	109	learned representations
+47	3	8	train
+47	13	18	model
+47	19	24	using
+47	27	61	large amount of entity annotations
+47	62	85	extracted directly from
+47	86	95	Wikipedia
+126	0	8	BOW - DT
+126	12	20	based on
+126	25	37	BOW baseline
+126	38	52	augmented with
+126	57	68	feature set
+126	69	73	with
+126	74	104	dependency relation indicators
+127	0	5	QANTA
+127	21	29	based on
+127	32	56	recursive neural network
+127	57	66	to derive
+127	71	98	distributed representations
+127	99	101	of
+127	102	111	questions
+128	16	20	uses
+128	25	38	LR classifier
+128	39	43	with
+128	48	71	derived representations
+128	72	74	as
+128	75	83	features
+129	0	10	FTS - BRNN
+129	14	22	based on
+129	27	73	bidirectional recurrent neural network ( RNN )
+129	74	78	with
+129	79	108	gated recurrent units ( GRU )
+135	25	29	show
+135	35	49	our NTEE model
+135	50	58	achieved
+135	63	79	best performance
+135	80	91	compared to
+135	96	117	other proposed models
+135	122	146	all the baseline methods
+135	147	149	on
+135	159	194	history and the literature datasets
+137	74	76	of
+137	77	87	our method
+137	88	99	compared to
+137	104	134	state - of - the - art methods
+137	137	141	i.e.
+137	144	166	QANTA and FTS - BRNN )
+137	169	179	our method
+137	180	200	clearly outperformed
+137	207	214	methods

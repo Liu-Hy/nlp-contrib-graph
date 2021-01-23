@@ -1,0 +1,8 @@
+(distributed representations||for||words and phrases)
+(distributed representations||for||words and phrases)
+(Model||introduce||neural network architecture)
+(unambiguous vector representation||via||term embedding)
+(deep neural networks||to discover||hypernym relationships)
+(hypernym relationships||between||terms)
+(Model||leverage||unambiguous vector representation)
+(Contribution||has||Model)

@@ -1,0 +1,5 @@
+(Contribution||has research problem||DSFD)
+(Contribution||has research problem||Face detection)
+(Contribution||has research problem||Single Shot Detector ( SSD ) based one - stage methods)
+(Contribution||has research problem||RPN)
+(Contribution||has research problem||bounding boxes)

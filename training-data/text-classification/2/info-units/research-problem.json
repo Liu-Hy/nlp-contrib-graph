@@ -1,0 +1,6 @@
+{
+  "has research problem" : [
+    ["Efficient Text Classification", {"from sentence" : "Bag of Tricks for Efficient Text Classification"}],
+    ["text classification", {"from sentence" : "This paper explores a simple and efficient baseline for text classification ."}]
+  ]
+}

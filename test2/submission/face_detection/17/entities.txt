@@ -1,0 +1,64 @@
+4	0	14	Face detection
+12	43	95	https://github.com/PaddlePaddle/models/tree/develop/
+31	18	21	use
+31	24	48	semi-supervised solution
+31	49	60	to generate
+31	61	79	approximate labels
+31	80	83	for
+31	84	100	contextual parts
+31	101	111	related to
+31	112	117	faces
+31	124	141	series of anchors
+31	142	148	called
+31	149	163	PyramidAnchors
+31	199	235	general anchor - based architectures
+34	3	14	investigate
+34	19	30	performance
+34	31	33	of
+34	34	66	Feature Pyramid Networks ( FPN )
+34	71	85	modify it into
+34	88	132	Low - level Feature Pyramid Network ( LFPN )
+34	133	140	to join
+34	141	166	mutually helpful features
+36	3	12	introduce
+36	17	62	Context - sensitive prediction module ( CPM )
+36	63	77	to incorporate
+36	78	97	context information
+36	98	104	around
+36	109	120	target face
+36	121	125	with
+36	128	152	wider and deeper network
+37	15	22	propose
+37	25	45	max - in - out layer
+37	46	49	for
+37	54	71	prediction module
+37	72	90	to further improve
+37	95	105	capability
+37	106	108	of
+37	109	131	classification network
+38	17	24	propose
+38	27	44	training strategy
+38	45	53	named as
+38	54	78	Data - anchor - sampling
+38	79	86	to make
+38	90	100	adjustment
+38	101	103	on
+38	108	120	distribution
+38	121	123	of
+38	128	144	training dataset
+219	0	12	FDDB Dataset
+223	4	14	PyramidBox
+223	15	23	achieves
+223	24	49	state - ofart performance
+224	0	18	WIDER FACE Dataset
+228	0	14	Our PyramidBox
+228	15	26	outperforms
+228	27	33	others
+228	34	40	across
+228	41	58	all three subsets
+228	61	65	i.e.
+228	66	80	0.961 ( easy )
+228	117	120	for
+228	121	135	validation set
+228	193	196	for
+228	197	208	testing set

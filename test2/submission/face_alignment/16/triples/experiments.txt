@@ -1,0 +1,3 @@
+(average running speed||of||deep learning methods)
+(deep learning methods||for detecting||68 facial landmarks)
+(Contribution||has||Experiments)

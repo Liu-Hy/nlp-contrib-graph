@@ -1,0 +1,71 @@
+2	51	69	Hypernym Discovery
+12	54	72	hypernym discovery
+12	73	81	exploits
+12	119	158	unsupervised , pattern - based approach
+12	165	206	supervised , projection learning approach
+134	4	17	hybrid system
+134	22	32	ranked 1st
+134	33	35	on
+134	36	57	all three sub - tasks
+135	18	24	scores
+135	25	39	obtained using
+135	52	55	are
+135	56	67	much higher
+135	68	72	than
+135	77	96	strongest baselines
+136	41	48	improve
+136	49	59	our scores
+136	60	62	on
+136	63	72	2A and 2B
+137	53	61	see that
+137	62	79	data augmentation
+137	80	88	improved
+137	89	99	our scores
+137	100	108	slightly
+137	109	111	on
+137	112	121	1A and 2B
+137	128	145	increased them by
+137	146	160	several points
+137	161	163	on
+137	164	166	2A
+138	4	28	cross-evaluation results
+138	29	32	are
+138	33	44	better than
+138	49	68	supervised baseline
+138	69	83	computed using
+138	88	111	normal evaluation setup
+138	219	223	than
+140	14	33	unsupervised system
+140	34	46	outperformed
+140	47	77	all other unsupervised systems
+140	112	124	outperformed
+140	129	148	supervised baseline
+143	61	66	run 1
+143	67	69	is
+143	74	78	best
+143	79	81	on
+143	82	97	all 3 test sets
+143	98	102	when
+143	106	109	use
+143	114	127	hybrid system
+146	142	144	on
+165	14	18	show
+165	54	60	namely
+165	61	72	subsampling
+165	77	95	multitask learning
+165	107	113	harmed
+165	114	139	our system 's performance
+165	140	142	on
+165	143	155	test set 1 A
+167	20	33	fine - tuning
+167	38	53	word embeddings
+167	54	60	during
+167	61	69	training
+167	189	197	sampling
+167	201	227	multiple negative examples
+167	228	231	for
+167	232	253	each positive example
+173	29	45	supervised model
+173	49	57	prone to
+173	58	69	overfitting
+173	85	99	early stopping

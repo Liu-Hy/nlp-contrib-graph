@@ -1,0 +1,119 @@
+2	47	66	Text Classification
+8	14	23	our model
+8	24	32	achieved
+8	33	63	state - of - the - art results
+8	64	66	on
+8	67	79	all datasets
+21	11	19	proposes
+21	24	73	Neural Attentive Bagof - Entities ( NABoE ) model
+21	113	122	addresses
+21	127	154	text classification problem
+21	155	166	by modeling
+21	171	180	semantics
+21	181	183	in
+21	188	204	target documents
+21	205	210	using
+21	211	226	entities in the
+21	227	229	KB
+23	4	11	weights
+23	16	30	computed using
+23	33	65	novel neural attention mechanism
+23	66	78	that enables
+23	83	88	model
+23	89	100	to focus on
+23	103	115	small subset
+23	116	118	of
+23	123	131	entities
+23	132	140	that are
+23	141	155	less ambiguous
+23	156	158	in
+23	159	166	meaning
+23	192	200	document
+25	18	37	attention mechanism
+25	38	46	improves
+25	51	67	interpretability
+25	68	70	of
+25	75	80	model
+28	61	108	https://github.com/wikipedia2vec/wikipedia2vec.
+64	3	14	initialized
+64	19	29	embeddings
+64	30	32	of
+64	33	67	words ( v w ) and entities ( v e )
+64	68	73	using
+64	74	95	pretrained embeddings
+64	96	106	trained on
+64	107	109	KB
+90	0	9	FTS- BRNN
+92	3	7	uses
+92	12	42	logistic regression classifier
+92	43	47	with
+92	52	60	features
+92	61	71	derived by
+92	76	79	RNN
+94	45	48	add
+94	49	62	SWEM - concat
+94	73	81	variants
+94	82	84	of
+94	85	124	our NABoEentity and NABoE - full models
+94	125	133	based on
+94	134	152	Wikifier and TAGME
+97	10	20	our models
+97	21	29	achieved
+97	30	50	enhanced performance
+98	20	38	NABoE - full model
+98	39	51	successfully
+98	65	88	all the baseline models
+98	99	117	NABoE-entity model
+98	118	126	achieved
+98	127	150	competitive performance
+98	155	167	outperformed
+98	168	191	all the baseline models
+98	192	194	in
+98	199	218	literature category
+101	28	38	our models
+101	39	46	yielded
+101	47	76	enhanced over all performance
+101	77	79	on
+101	80	93	both datasets
+102	4	22	NABoE - full model
+102	23	35	outperformed
+102	36	55	all baseline models
+102	56	67	in terms of
+102	68	81	both measures
+103	18	36	NABoE-entity model
+103	37	49	outperformed
+103	50	73	all the baseline models
+103	74	85	in terms of
+103	86	99	both measures
+103	100	102	on
+103	107	119	20NG dataset
+103	130	139	F 1 score
+103	140	142	on
+103	147	157	R8 dataset
+104	11	34	our attention mechanism
+104	35	47	consistently
+104	61	72	performance
+107	21	29	based on
+107	34	66	dictionarybased entity detection
+107	87	109	generally outperformed
+107	114	120	models
+107	121	129	based on
+107	134	156	entity linking systems
+107	159	163	i.e.
+107	166	174	Wikifier
+107	179	184	TAGME
+109	11	34	our attention mechanism
+109	35	56	consistently improved
+109	61	72	performance
+109	73	76	for
+109	77	109	Wikifierand TAGME - based models
+131	0	26	Factoid Question Answering
+139	75	124	attention mechanism and the pretrained embeddings
+139	125	146	consistently improved
+139	151	162	performance
+140	15	30	models based on
+140	31	66	dictionary - based entity detection
+140	67	79	outperformed
+140	84	90	models
+140	91	99	based on
+140	104	126	entity linking systems

@@ -1,0 +1,212 @@
+2	62	80	Question Answering
+4	0	25	Question Answering ( QA )
+5	0	17	Sentence matching
+5	46	48	QA
+5	90	122	Paraphrase Identification ( PI )
+8	17	26	implement
+8	29	65	general semantic retrieval framework
+8	66	79	that combines
+8	80	154	our proposed model and the Approximate Nearest Neighbor ( ANN ) technology
+8	163	170	enables
+8	186	237	most similar question from all available candidates
+8	251	257	during
+8	258	272	online serving
+11	0	18	Question answering
+14	27	35	building
+14	39	59	IR - based QA system
+14	60	69	to answer
+15	21	31	IRbased QA
+15	152	192	Paraphrase Identification ( PI ) problem
+15	200	208	known as
+15	209	226	sentence matching
+28	3	9	employ
+28	12	27	connected graph
+28	28	37	to depict
+28	42	61	paraphrase relation
+28	62	69	between
+28	70	79	sentences
+28	80	83	for
+28	88	95	PI task
+28	102	109	propose
+28	112	148	multi-task sentence - encoding model
+28	157	163	solves
+28	168	198	paraphrase identification task
+28	207	242	sentence intent classification task
+29	3	10	propose
+29	13	41	semantic retrieval framework
+29	47	57	integrates
+29	62	102	encoding - based sentence matching model
+29	103	107	with
+29	112	158	approximate nearest neighbor search technology
+29	167	173	allows
+29	189	210	most similar question
+29	224	228	from
+29	229	252	all available questions
+29	304	321	QA knowledge base
+36	0	43	Natural language sentence matching ( NLSM )
+38	8	45	paraphrase identification ( PI ) task
+38	48	52	NLSM
+149	72	125	sentence semantic equivalence identification ( SSEI )
+153	0	3	For
+153	4	17	Quora dataset
+153	23	26	use
+153	31	57	Glove - 840B - 300D vector
+153	58	60	as
+153	65	91	pre-trained word embedding
+154	4	23	character embedding
+154	27	47	randomly initialized
+154	48	52	with
+154	53	58	150 D
+154	67	78	hidden size
+154	79	81	of
+154	82	87	BiGRU
+154	91	97	set to
+154	98	101	300
+155	3	6	set
+155	7	12	= 0.8
+155	13	15	in
+155	20	46	multi - task loss function
+157	0	13	Dropout layer
+157	22	32	applied to
+157	37	43	output
+157	44	46	of
+157	51	74	attentive pooling layer
+157	77	81	with
+157	84	96	dropout rate
+157	97	99	of
+157	100	103	0.1
+158	3	17	Adam optimizer
+158	26	37	to optimize
+158	38	63	all the trainable weights
+159	4	17	learning rate
+159	21	27	set to
+159	28	34	4e - 4
+159	43	53	batch size
+159	57	63	set to
+159	64	67	200
+160	0	4	When
+160	9	20	performance
+160	21	23	of
+160	28	33	model
+160	34	36	is
+160	37	55	no longer improved
+160	61	74	SGD optimizer
+160	75	79	with
+160	82	95	learning rate
+160	96	98	of
+160	99	105	1e - 3
+160	114	121	to find
+160	124	144	better local optimum
+163	0	4	ESIM
+163	7	42	Enhanced Sequential Inference Model
+163	43	45	is
+163	49	74	interaction - based model
+163	75	78	for
+163	79	105	natural language inference
+164	3	7	uses
+164	8	14	BiLSTM
+164	15	24	to encode
+164	25	42	sentence contexts
+164	47	51	uses
+164	56	75	attention mechanism
+164	76	88	to calculate
+164	93	104	information
+164	105	112	between
+164	113	126	two sentences
+165	0	4	ESIM
+165	9	14	shown
+165	15	36	excellent performance
+165	37	39	on
+165	44	56	SNLI dataset
+166	0	5	BiMPM
+166	8	51	Bilateral Multi- Perspective Matching model
+166	52	54	is
+166	58	101	interaction - based sentence matching model
+166	102	106	with
+166	107	115	superior
+166	116	127	performance
+167	10	14	uses
+167	17	29	BiLSTM layer
+167	30	38	to learn
+167	43	66	sentence representation
+167	69	125	four different types of multiperspective matching layers
+167	126	134	to match
+167	135	148	two sentences
+167	154	177	additional BiLSTM layer
+167	178	190	to aggregate
+167	195	211	matching results
+167	220	254	two - layer feed - forward network
+167	255	258	for
+167	259	269	prediction
+168	0	3	SSE
+168	6	41	Shortcut - Stacked Sentence Encoder
+168	42	44	is
+168	48	87	encodingbased sentence - matching model
+168	96	104	enhances
+168	105	125	multi - layer BiLSTM
+168	126	130	with
+168	131	154	short - cut connections
+170	7	44	Densely Interactive Inference Network
+170	45	47	is
+170	51	76	interaction - based model
+170	77	80	for
+170	81	115	natural language inference ( NLI )
+171	3	26	hierarchically extracts
+171	27	44	semantic features
+171	45	49	from
+171	50	67	interaction space
+171	68	78	to achieve
+171	81	107	high - level understanding
+171	108	110	of
+171	115	128	sentence pair
+179	0	13	LCQMC dataset
+182	14	23	our model
+182	24	35	outperforms
+182	36	65	state - of - the - art models
+182	66	68	by
+182	71	83	large margin
+182	86	94	reaching
+182	95	104	83 . 62 %
+182	107	116	recording
+182	121	155	state - of - the - art performance
+184	12	16	show
+184	22	36	our MSEM model
+184	37	45	achieves
+184	50	66	best performance
+187	8	13	model
+187	14	18	with
+187	19	38	multi-task learning
+187	39	55	further improved
+187	56	67	performance
+187	68	80	ranging from
+187	81	86	0.4 %
+187	87	89	to
+188	42	47	shows
+188	48	64	great advantages
+188	65	67	on
+188	68	76	datasets
+188	77	81	with
+188	82	106	low average overlap rate
+196	3	17	turns out that
+196	22	39	attentive pooling
+196	43	54	better than
+196	55	66	max pooling
+197	11	17	remove
+197	22	37	highway network
+197	44	52	accuracy
+197	58	62	drop
+197	63	65	to
+197	66	73	88.36 %
+198	16	22	remove
+198	27	54	character - level embedding
+198	61	69	accuracy
+198	75	79	drop
+198	80	82	to
+198	83	90	88.26 %
+206	18	27	F 1 score
+206	28	30	of
+206	35	45	new system
+206	46	48	is
+206	49	58	14 . 26 %
+206	59	70	higher than
+206	75	90	baseline system

@@ -1,0 +1,153 @@
+2	0	14	End - to - end
+2	15	44	Neural Coreference Resolution
+4	3	12	introduce
+4	17	66	first end - to - end coreference resolution model
+4	71	75	show
+4	84	109	significantly outperforms
+4	110	127	all previous work
+4	128	141	without using
+4	144	195	syntactic parser or handengineered mention detector
+10	3	10	present
+10	15	79	first state - of - the - art neural coreference resolution model
+10	88	95	learned
+10	96	107	end - toend
+10	108	113	given
+10	114	140	only gold mention clusters
+12	3	14	demonstrate
+12	23	33	first time
+12	45	54	resources
+12	59	71	not required
+12	86	97	performance
+12	105	127	improved significantly
+12	143	154	by training
+12	158	185	end - to - end neural model
+12	191	205	jointly learns
+12	206	217	which spans
+12	218	221	are
+12	222	237	entity mentions
+12	249	261	best cluster
+13	0	17	Our model reasons
+13	18	22	over
+13	40	51	spans up to
+13	54	68	maximum length
+13	73	91	directly optimizes
+13	96	115	marginal likelihood
+13	116	118	of
+13	136	140	from
+13	141	166	gold coreference clusters
+14	3	11	includes
+14	14	34	span - ranking model
+14	40	47	decides
+14	50	53	for
+14	54	63	each span
+14	66	74	which of
+14	79	93	previous spans
+14	105	107	is
+14	110	125	good antecedent
+15	25	28	are
+15	29	46	vector embeddings
+15	47	59	representing
+15	60	73	spans of text
+15	74	76	in
+15	81	89	document
+15	98	105	combine
+15	106	150	context - dependent boundary representations
+15	151	155	with
+15	158	192	head - finding attention mechanism
+15	193	197	over
+15	202	206	span
+24	4	38	head - finding attention mechanism
+24	44	51	reveals
+24	58	79	mentioninternal words
+24	80	98	contribute most to
+24	99	120	coreference decisions
+118	4	44	word embeddings area fixed concatenation
+118	45	47	of
+118	48	82	300 - dimensional GloVe embeddings
+118	87	114	50 - dimensional embeddings
+118	127	137	normalized
+118	144	156	unit vectors
+123	4	17	hidden states
+123	18	20	in
+123	25	30	LSTMs
+123	31	35	have
+123	36	50	200 dimensions
+126	3	9	encode
+126	10	29	speaker information
+126	30	32	as
+126	35	49	binary feature
+126	50	68	indicating whether
+126	71	84	pair of spans
+126	85	88	are
+126	89	93	from
+128	4	64	features ( speaker , genre , span distance , mention width )
+128	69	83	represented as
+128	84	119	learned 20 - dimensional embeddings
+130	3	8	prune
+130	13	18	spans
+130	19	28	such that
+130	33	53	maximum span width L
+130	54	55	=
+130	56	58	10
+130	65	91	number of spans per word ?
+130	94	97	0.4
+130	108	139	maximum number of antecedents K
+133	3	6	use
+133	7	11	ADAM
+133	12	15	for
+133	16	24	learning
+133	25	29	with
+133	32	46	minibatch size
+133	47	49	of
+133	50	51	1
+136	3	8	apply
+136	9	20	0.2 dropout
+136	21	23	to
+136	24	64	all hidden layers and feature embeddings
+138	4	17	learning rate
+138	21	28	decayed
+138	29	31	by
+138	32	37	0.1 %
+138	38	43	every
+138	44	53	100 steps
+144	0	10	Ensembling
+144	14	32	performed for both
+144	37	49	span pruning
+144	54	74	antecedent decisions
+154	16	32	our single model
+154	33	41	improves
+154	46	79	state - of - the - art average F1
+154	80	82	by
+154	83	86	1.5
+154	93	115	our 5 - model ensemble
+154	116	124	improves
+154	128	130	by
+154	131	134	3.1
+155	4	26	most significant gains
+155	27	36	come from
+155	37	49	improvements
+155	50	52	in
+155	53	59	recall
+162	4	20	distance between
+162	21	49	spans and the width of spans
+162	50	53	are
+162	54	69	crucial signals
+162	70	73	for
+162	74	96	coreference resolution
+183	0	4	With
+183	5	20	oracle mentions
+183	26	29	see
+183	33	44	improvement
+183	45	47	of
+183	48	55	17.5 F1
+183	58	68	suggesting
+194	0	17	Mention Precision
+198	0	3	For
+198	4	9	spans
+198	10	14	with
+198	15	26	2 - 5 words
+198	29	38	75 - 90 %
+198	39	41	of
+198	46	57	predictions
+198	58	61	are
+198	62	74	constituents

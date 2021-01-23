@@ -1,0 +1,8 @@
+(path - based technique and distributional technique||via concatenating||two feature vectors)
+(feature vector||constructed using||dependency parser output)
+(feature vector||obtained using||term embeddings)
+(two feature vectors||name||feature vector)
+(Model||propose||path - based technique and distributional technique)
+(concatenated vector||create||binary supervised classifier model)
+(binary supervised classifier model||based on||support vector machine ( SVM ) algorithm)
+(Contribution||has||Model)

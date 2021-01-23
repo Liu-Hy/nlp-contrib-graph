@@ -1,0 +1,6 @@
+(Contribution||has research problem||Face detection)
+(Contribution||has research problem||proposed method)
+(Contribution||has research problem||superior accuracy)
+(Contribution||has research problem||WIDER)
+(Contribution||has research problem||Face detection)
+(Contribution||has research problem||Face detection)

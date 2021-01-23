@@ -1,0 +1,46 @@
+2	0	48	In- Order Transition - based Constituent Parsing
+4	53	61	used for
+4	62	107	neural transition - based constituent parsing
+32	19	26	propose
+32	29	52	novel transition system
+32	53	56	for
+32	57	76	constituent parsing
+32	79	89	mitigating
+32	153	163	compromise
+32	172	207	bottom - up constituent information
+32	212	244	top - down lookahead information
+49	23	69	https://github.com/LeonCrashCode/InOrderParser
+131	0	21	Reranking experiments
+133	4	22	bottom - up system
+133	23	31	performs
+133	32	47	slightly better
+133	48	52	than
+133	57	74	top - down system
+134	4	18	inorder system
+134	19	30	outperforms
+134	40	77	bottom - up and the top - down system
+136	3	12	find that
+136	17	61	bottom - up parser and the top - down parser
+136	62	66	have
+136	67	82	similar results
+136	83	88	under
+136	93	107	greedy setting
+136	118	135	in - order parser
+136	136	147	outperforms
+138	0	27	English constituent results
+140	0	4	With
+140	9	34	fully - supervise setting
+140	43	57	inorder parser
+140	58	69	outperforms
+140	74	112	state - of - the - art discrete parser
+140	119	156	state - of - the - art neural parsers
+145	0	26	Chinese dependency results
+146	60	75	our final model
+146	76	84	achieves
+146	89	101	best results
+146	102	107	among
+146	108	131	transitionbased parsing
+146	138	145	obtains
+146	146	164	comparable results
+146	165	167	to
+146	172	215	state - of - the - art graph - based models

@@ -1,0 +1,2 @@
+(Tasks||has||NOAD Eval)
+(Contribution||has||Tasks)

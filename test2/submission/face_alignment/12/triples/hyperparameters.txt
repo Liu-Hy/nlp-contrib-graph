@@ -1,0 +1,7 @@
+(initial global learning rate||as||1 e ? 3)
+(learning rate||by||factor of 10)
+(factor of 10||when||training error)
+(training error||approaches||plateau)
+(initial global learning rate||has||1 e ? 3)
+(Hyperparameters||set||initial global learning rate)
+(Contribution||has||Hyperparameters)

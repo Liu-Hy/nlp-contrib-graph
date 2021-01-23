@@ -1,0 +1,5 @@
+(second artificial dataset||consisting of||high - confidence parse trees)
+(high - confidence parse trees||measured by||agreement)
+(agreement||of||two parsers)
+(Dataset||constructed||second artificial dataset)
+(Contribution||has||Dataset)

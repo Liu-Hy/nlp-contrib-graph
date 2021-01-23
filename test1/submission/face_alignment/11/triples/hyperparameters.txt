@@ -1,0 +1,3 @@
+(Phong reflection model||for||shading)
+(Hyperparameters||use||Phong reflection model)
+(Contribution||has||Hyperparameters)

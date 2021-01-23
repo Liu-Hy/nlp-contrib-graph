@@ -1,0 +1,107 @@
+2	58	91	NATURAL LANGUAGE UNDERSTAND - ING
+4	4	42	natural language understanding ( NLU )
+9	14	38	low absolute performance
+9	39	41	of
+9	42	56	our best model
+9	80	108	improved general NLU systems
+15	58	108	General Language Understanding Evaluation ( GLUE )
+16	0	4	GLUE
+16	5	19	does not place
+16	24	35	constraints
+16	36	38	on
+16	39	57	model architecture
+16	58	64	beyond
+16	69	76	ability
+16	77	87	to process
+16	88	132	single - sentence and sentence - pair inputs
+16	137	144	to make
+16	145	170	corresponding predictions
+17	9	19	GLUE tasks
+17	22	35	training data
+17	36	38	is
+17	39	48	plentiful
+17	102	107	genre
+17	115	123	test set
+20	21	28	feature
+20	29	55	privately - held test data
+20	77	86	to ensure
+20	96	105	benchmark
+157	48	89	https://github.com/nyu-mll/GLUE-baselines
+157	126	173	https://github.com/jsalt18-sentence-repl/jiant.
+159	4	34	simplest baseline architecture
+159	38	46	based on
+159	47	78	sentence - to - vector encoders
+159	85	95	sets aside
+159	96	100	GLUE
+159	112	123	to evaluate
+159	124	130	models
+159	131	135	with
+159	136	159	more complex structures
+183	3	12	find that
+183	3	7	find
+183	13	32	multi-task training
+183	33	39	yields
+183	40	61	better overall scores
+183	62	66	over
+183	67	89	single - task training
+183	90	97	amongst
+183	98	104	models
+183	105	110	using
+183	111	128	attention or ELMo
+185	3	6	see
+185	9	31	consistent improvement
+185	32	40	in using
+185	41	56	ELMo embeddings
+185	57	68	in place of
+185	69	93	GloVe or CoVe embeddings
+185	96	112	particularly for
+185	113	136	single - sentence tasks
+187	0	5	Among
+187	10	52	pre-trained sentence representation models
+187	58	65	observe
+187	66	89	fairly consistent gains
+187	90	101	moving from
+187	102	106	CBoW
+187	107	109	to
+187	110	124	Skip - Thought
+187	128	148	Infersent and GenSen
+188	0	11	Relative to
+188	16	22	models
+188	23	42	trained directly on
+188	47	57	GLUE tasks
+188	60	69	InferSent
+188	70	72	is
+188	73	84	competitive
+188	89	95	GenSen
+188	96	107	outperforms
+188	108	128	all but the two best
+189	33	42	find that
+189	47	77	sentence representation models
+189	78	104	substantially underperform
+189	105	107	on
+189	108	112	CoLA
+189	113	124	compared to
+189	129	135	models
+189	136	155	directly trained on
+189	160	164	task
+190	20	23	for
+190	24	31	STS - B
+190	34	40	models
+190	41	60	trained directly on
+190	65	69	task
+190	70	94	lag significantly behind
+190	99	110	performance
+190	111	113	of
+190	118	152	best sentence representation model
+192	0	2	On
+192	3	7	WNLI
+192	19	26	exceeds
+192	27	70	most - frequent - class guessing ( 65.1 % )
+192	78	88	substitute
+192	93	110	model predictions
+192	111	114	for
+192	119	142	most -frequent baseline
+193	0	2	On
+193	3	6	RTE
+193	50	64	leave room for
+193	65	76	improvement

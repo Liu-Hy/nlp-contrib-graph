@@ -1,0 +1,6 @@
+(Contribution||has||Model)
+(Model||has||beneficial computational and learning properties)
+(Model||From||computational perspective)
+(computational perspective||running time||linear in the length of the source and target sequences)
+(Model||From||learning perspective)
+(learning perspective||representation of the source sequence||resolution preserving)

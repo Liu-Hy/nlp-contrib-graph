@@ -1,0 +1,121 @@
+2	23	44	Robust Face Alignment
+13	40	88	https://github.com/protossw512/AdaptiveWingLoss.
+15	0	14	Face alignment
+15	31	59	facial landmark localization
+30	8	15	propose
+30	18	35	new loss function
+30	40	44	name
+30	48	66	Adaptive Wing loss
+30	84	91	able to
+30	92	113	significantly improve
+30	118	125	quality
+30	129	155	heatmap regression results
+31	34	36	of
+31	63	65	in
+31	66	107	bottom - up and top - down CNN structures
+31	108	115	such as
+31	116	140	stacked Hourglass ( HG )
+31	147	154	network
+31	158	176	notable to capture
+31	177	199	coordinate information
+31	233	261	facial landmark localization
+32	63	74	encode into
+32	75	84	our model
+32	89	116	full coordinate information
+32	125	136	information
+32	145	155	boundaries
+32	156	170	predicted from
+32	175	193	previous HG module
+32	194	198	into
+32	199	208	our model
+34	0	9	To encode
+34	10	30	boundary coordinates
+34	41	44	add
+34	47	55	sub-task
+34	56	58	of
+34	59	78	boundary prediction
+34	79	95	by concatenating
+34	99	126	additional boundary channel
+34	127	131	into
+34	136	156	ground truth heatmap
+34	166	186	jointly trained with
+34	187	201	other channels
+231	0	6	During
+231	7	15	training
+231	21	24	use
+231	25	35	RM - SProp
+231	36	40	with
+231	44	65	initial learning rate
+231	66	68	of
+231	69	76	1 10 ?4
+232	3	6	set
+232	11	19	momentum
+232	20	25	to be
+232	26	27	0
+232	53	65	weight decay
+232	66	71	to be
+232	72	79	1 10 ?5
+233	3	12	train for
+233	13	24	240 epoches
+233	35	48	learning rate
+233	52	62	reduced to
+233	63	83	1 10 ?5 and 1 10 ? 6
+233	84	89	after
+233	90	108	80 and 160 epoches
+234	0	17	Data augmentation
+234	21	35	performed with
+234	61	82	translation ( 25 px )
+234	85	93	flipping
+234	109	118	rescaling
+244	14	18	300W
+245	0	10	Our method
+245	14	29	able to achieve
+245	34	68	state - of - the - art performance
+245	69	71	on
+245	76	96	300W testing dataset
+246	0	3	For
+246	8	41	challenge subset ( iBug dataset )
+246	51	58	able to
+246	59	69	outperform
+247	0	4	Wing
+247	0	7	Wing by
+247	5	7	by
+247	10	28	significant margin
+247	42	48	proves
+247	53	63	robustness
+247	64	66	of
+247	67	79	our approach
+247	80	87	against
+247	88	122	occlusion and large pose variation
+248	14	16	on
+248	21	47	300 W private test dataset
+248	61	71	outperform
+248	76	104	previous state - of - theart
+248	105	107	on
+248	108	123	variant metrics
+248	124	133	including
+248	134	137	NME
+248	151	164	measured with
+248	172	179	8 % NME
+248	184	192	10 % NME
+250	14	18	WFLW
+251	0	10	Our method
+251	17	25	achieves
+251	30	42	best results
+251	43	45	on
+251	50	62	WFLW dataset
+251	77	105	significantly more difficult
+251	106	110	than
+251	111	124	COFW and 300W
+252	0	2	On
+252	3	15	every subset
+252	19	29	outperform
+252	34	65	previous state - of - the - art
+256	13	25	our approach
+256	26	31	fails
+256	32	34	on
+256	47	49	of
+256	50	60	all images
+256	75	96	two times improvement
+256	97	110	compared with
+256	111	114	7.6

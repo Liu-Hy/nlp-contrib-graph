@@ -1,0 +1,178 @@
+11	16	27	demonstrate
+11	33	63	simple feed - forward networks
+11	64	71	without
+11	72	86	any recurrence
+11	87	98	can achieve
+11	99	130	comparable or better accuracies
+11	131	135	than
+11	136	141	LSTMs
+11	144	146	as
+11	147	154	long as
+11	160	163	are
+11	164	183	globally normalized
+13	10	13	use
+13	14	28	any recurrence
+13	35	42	perform
+13	43	54	beam search
+13	55	58	for
+13	59	70	maintaining
+13	71	90	multiple hypotheses
+13	95	104	introduce
+13	105	125	global normalization
+13	126	130	with
+13	133	175	conditional random field ( CRF ) objective
+13	176	187	to overcome
+13	192	210	label bias problem
+13	216	241	locally normalized models
+15	3	10	compute
+15	11	20	gradients
+15	21	29	based on
+15	35	67	approximate global normalization
+15	72	79	perform
+15	80	109	full backpropagation training
+15	110	112	of
+15	113	142	all neural network parameters
+15	143	151	based on
+15	156	164	CRF loss
+21	51	61	outperform
+21	62	101	previous structured training approaches
+21	102	110	used for
+21	111	149	neural network transitionbased parsing
+27	8	15	provide
+27	18	78	pre-trained , state - of - the art English dependency parser
+27	79	85	called
+27	88	106	Parsey McParseface
+72	3	6	use
+72	7	34	stochastic gradient descent
+72	35	37	on
+72	42	67	negative log - likelihood
+72	68	70	of
+72	75	79	data
+72	80	85	under
+72	90	95	model
+151	3	8	apply
+151	22	24	to
+151	25	36	POS tagging
+151	39	67	syntactic dependency parsing
+151	74	94	sentence compression
+152	6	25	directly optimizing
+152	30	42	global model
+152	64	69	works
+152	70	74	well
+152	91	99	training
+152	104	109	model
+152	110	112	in
+152	113	122	two steps
+152	123	131	achieves
+152	136	150	same precision
+152	174	182	pretrain
+152	187	194	network
+152	195	200	using
+152	205	220	local objective
+152	251	258	perform
+152	259	284	additional training steps
+152	285	290	using
+152	295	311	global objective
+156	18	21	use
+156	22	58	averaged stochastic gradient descent
+156	59	63	with
+156	64	72	momentum
+156	82	86	tune
+156	91	104	learning rate
+156	107	129	learning rate schedule
+156	132	140	momentum
+156	147	166	early stopping time
+156	167	172	using
+156	175	201	separate held - out corpus
+156	202	205	for
+156	206	215	each task
+159	8	30	speech ( POS ) tagging
+167	3	10	extract
+167	11	19	features
+167	20	24	from
+167	25	30	words
+167	66	70	from
+167	73	89	window of tokens
+167	90	101	centered on
+167	106	114	in - put
+167	117	119	as
+167	128	136	features
+167	137	141	from
+167	146	168	history of predictions
+168	3	6	use
+168	9	28	single hidden layer
+168	29	36	of size
+168	37	40	400
+171	0	29	Our globally normalized model
+171	36	61	significantly outperforms
+171	66	77	local model
+173	8	18	compare to
+173	23	50	sentence compression system
+173	51	55	from
+173	60	82	3 - layer stacked LSTM
+173	89	93	uses
+173	94	122	dependency label information
+174	4	29	LSTM and our global model
+174	30	37	perform
+174	38	44	on par
+174	45	52	on both
+174	57	77	automatic evaluation
+174	93	106	human ratings
+174	113	122	our model
+174	123	125	is
+174	126	144	roughly 100 faster
+175	0	16	All compressions
+175	17	21	kept
+175	22	40	approximately 42 %
+175	41	43	of
+175	48	54	tokens
+177	77	83	employ
+177	86	110	simple transition system
+177	116	120	uses
+177	128	140	SHIFT action
+177	145	153	predicts
+177	158	165	POS tag
+177	166	168	of
+177	173	185	current word
+177	186	188	on
+177	193	199	buffer
+177	211	221	shifted to
+177	226	231	stack
+178	3	10	extract
+178	34	36	on
+178	39	54	window 3 tokens
+178	55	66	centered at
+178	71	90	current focus token
+178	93	107	word , cluster
+178	128	133	up to
+178	134	142	length 3
+185	0	15	Our local model
+185	24	32	compares
+185	33	42	favorably
+186	0	5	Using
+186	6	17	beam search
+186	18	22	with
+186	25	49	locally normalized model
+186	50	54	does
+186	59	63	help
+186	70	74	with
+186	75	95	global normalization
+186	99	107	leads to
+186	110	123	7 % reduction
+186	124	126	in
+186	127	141	relative error
+187	4	35	set of character ngrams feature
+187	36	38	is
+187	39	53	very important
+187	56	66	increasing
+187	67	83	average accuracy
+187	84	86	on
+187	91	109	CoNLL '09 datasets
+187	110	112	by
+187	113	133	about 0.5 % absolute
+192	51	59	compares
+192	60	69	favorably
+192	77	104	94.26 % LAS and 92.41 % UAS
+192	117	121	with
+194	17	41	significantly outperform
+194	46	69	LSTM - based approaches

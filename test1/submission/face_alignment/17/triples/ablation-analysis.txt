@@ -1,0 +1,5 @@
+(our separation component||tends to capture||weak style information)
+(weak style information||such as||color and lighting)
+(data||has||our separation component)
+(Ablation analysis||shows when||data)
+(Contribution||has||Ablation analysis)

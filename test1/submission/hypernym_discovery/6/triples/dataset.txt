@@ -1,0 +1,8 @@
+(hypernym||in||domain - specific corpus)
+(domain - specific corpus||provide||participants)
+(data||for||two specific domains)
+(discovering||has||hypernym)
+(participants||has||data)
+(two specific domains||name||Medical and Music)
+(Dataset||has||discovering)
+(Contribution||has||Dataset)

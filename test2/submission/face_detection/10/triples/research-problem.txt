@@ -1,0 +1,5 @@
+(Contribution||has research problem||novel face detection network)
+(Contribution||has research problem||three novel contributions)
+(Contribution||has research problem||better feature learning)
+(Contribution||has research problem||progressive loss design)
+(Contribution||has research problem||anchor assign based data augmentation)

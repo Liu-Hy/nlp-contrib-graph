@@ -1,0 +1,138 @@
+2	47	66	Text Categorization
+4	11	19	proposes
+4	107	110	for
+4	111	130	text categorization
+4	140	161	efficiently represent
+4	162	192	longrange associations in text
+29	3	7	call
+29	11	37	deep pyramid CNN ( DPCNN )
+29	40	42	as
+29	47	63	computation time
+29	64	67	per
+29	68	73	layer
+29	74	83	decreases
+29	84	97	exponentially
+29	98	100	in
+29	103	118	' pyramid shape
+30	6	16	converting
+30	17	30	discrete text
+30	31	33	to
+30	34	59	continuous representation
+30	66	84	DPCNN architecture
+30	92	102	alternates
+30	105	147	convolution block and a downsampling layer
+30	148	156	over and
+30	162	163	1
+30	166	176	leading to
+30	179	191	deep network
+30	192	200	in which
+30	201	256	internal data size ( as well as per-layer computation )
+30	257	267	shrinks in
+30	270	283	pyramid shape
+37	4	15	first layer
+37	16	24	performs
+37	25	46	text region embedding
+37	55	66	generalizes
+37	67	95	commonly used word embedding
+37	96	98	to
+37	103	112	embedding
+37	113	115	of
+37	116	128	text regions
+37	129	137	covering
+37	138	155	one or more words
+40	3	6	use
+40	7	18	max pooling
+40	19	22	for
+40	23	41	all pooling layers
+125	0	11	To minimize
+125	14	22	log loss
+125	23	27	with
+125	28	35	softmax
+125	38	51	minibatch SGD
+125	52	56	with
+125	57	69	momentum 0.9
+125	74	87	conducted for
+125	88	96	n epochs
+125	190	203	learning rate
+125	208	214	set to
+129	4	18	minibatch size
+129	23	31	fixed to
+129	32	35	100
+130	0	14	Regularization
+130	19	26	done by
+130	27	39	weight decay
+130	40	44	with
+130	49	65	parameter 0.0001
+130	70	72	by
+130	73	89	optional dropout
+130	90	94	with
+130	95	98	0.5
+130	99	109	applied to
+130	114	119	input
+130	120	122	to
+131	14	25	overfitting
+131	30	38	observed
+131	51	60	performed
+131	61	75	early stopping
+131	116	130	after reducing
+131	135	148	learning rate
+131	149	151	to
+131	152	155	0.1
+132	0	7	Weights
+132	13	27	initialized by
+132	32	53	Gaussian distribution
+132	54	58	with
+132	59	68	zero mean
+132	73	96	standard deviation 0.01
+133	4	18	discrete input
+133	19	21	to
+133	26	48	region embedding layer
+133	53	61	fixed to
+133	66	75	bow input
+133	86	97	region size
+133	102	113	chosen from
+133	114	127	{ 1 , 3 , 5 }
+133	136	142	fixing
+133	143	164	output dimensionality
+133	165	167	to
+133	168	171	250
+148	4	18	dimensionality
+148	19	21	of
+148	22	45	unsupervised embeddings
+148	50	56	set to
+148	57	60	300
+151	27	32	depth
+151	33	35	of
+151	36	41	DPCNN
+151	46	54	fixed to
+151	55	57	15
+152	0	6	Making
+152	10	16	deeper
+152	17	24	did not
+152	25	46	substantially improve
+152	58	66	accuracy
+155	0	18	Large data results
+159	0	2	On
+159	27	32	DPCNN
+159	33	44	outperforms
+159	45	72	all of the previous results
+159	81	90	validates
+159	95	108	effectiveness
+191	0	18	Small data results
+195	15	19	from
+195	24	45	large dataset results
+195	58	69	strength of
+195	70	84	shallow models
+195	85	91	stands
+196	0	10	ShallowCNN
+196	21	27	rivals
+196	28	33	DPCNN
+196	66	83	best linear model
+196	94	107	moved up from
+196	112	127	worst performer
+196	128	130	to
+196	135	155	third best performer
+205	4	14	error rate
+205	15	23	improves
+205	24	26	as
+205	31	46	depth increases

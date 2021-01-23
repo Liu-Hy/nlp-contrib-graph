@@ -1,0 +1,3 @@
+(50 - dimensional word embedding||trained with||Word2 Vec)
+(Hyperparameters||use||50 - dimensional word embedding)
+(Contribution||has||Hyperparameters)

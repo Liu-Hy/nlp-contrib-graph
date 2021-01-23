@@ -1,0 +1,74 @@
+2	0	44	Supervised Distributional Hypernym Discovery
+6	19	26	propose
+6	29	64	supervised distributional framework
+6	65	68	for
+6	69	87	hypernym discovery
+6	94	105	operates at
+6	124	132	enabling
+6	133	168	large - scale automatic acquisition
+6	169	171	of
+6	172	197	dis ambiguated taxonomies
+7	3	13	exploiting
+7	14	35	semantic regularities
+7	36	43	between
+7	44	66	hyponyms and hypernyms
+7	67	69	in
+7	70	87	embeddings spaces
+7	94	105	integrating
+7	108	135	domain clustering algorithm
+7	138	147	our model
+7	148	155	becomes
+7	156	165	sensitive
+7	173	184	target data
+12	31	39	perceive
+25	17	24	propose
+25	25	34	TAXOEMBED
+25	41	69	hypernym detection algorithm
+25	70	78	based on
+25	79	95	sense embeddings
+25	111	128	easily applied to
+25	133	145	construction
+25	146	148	of
+25	149	167	lexical taxonomies
+26	6	26	designed to discover
+26	27	47	hypernymic relations
+26	48	61	by exploiting
+26	62	84	linear transformations
+26	85	87	in
+26	88	104	embedding spaces
+26	140	149	leverages
+26	165	173	to learn
+26	176	224	specific semanticallyaware transformation matrix
+26	225	228	for
+26	229	253	each domain of knowledge
+32	0	11	Compared to
+32	12	42	word - level taxonomy learning
+32	45	57	TAXO - EMBED
+32	58	68	results in
+32	69	118	more refined and unambiguous hypernymic relations
+32	119	121	at
+32	126	137	sense level
+67	0	10	KB - UNIFY
+67	89	97	based on
+67	98	106	BabelNet
+67	109	124	for integrating
+67	136	138	of
+67	139	160	different OIE systems
+67	161	165	into
+67	168	222	single unified and dis ambiguated knowledge repository
+68	4	25	unification algorithm
+68	26	40	takes as input
+68	43	75	set K of OIE - derived resources
+68	95	105	modeled as
+68	108	111	set
+68	227	231	each
+68	243	252	linked to
+68	257	272	sense inventory
+68	273	275	of
+68	276	285	Babel Net
+68	286	292	by dis
+68	309	332	relation argument pairs
+139	14	27	Yago and WiBi
+139	28	35	achieve
+139	40	61	best over all results
+149	15	29	Extra-Coverage

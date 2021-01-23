@@ -1,0 +1,6 @@
+(humanedited entity annotations||obtained from||Wikipedia)
+(humanedited entity annotations||as||supervised data)
+(supervised data||of||relevant entities)
+(relevant entities||to||texts)
+(Dataset||use||humanedited entity annotations)
+(Contribution||has||Dataset)

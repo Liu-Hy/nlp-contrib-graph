@@ -1,0 +1,6 @@
+(Results||has||WIDER FACE Dataset)
+(best performance||among||all of the state - of - the - art face detectors)
+(all of the state - of - the - art face detectors||based on||average precision ( AP ))
+(average precision ( AP )||across||three subsets)
+(96.0 % ( Easy ) , 95.3 % ( Medium ) and 90.0 % ( Hard )||on||test set)
+(Contribution||has||Results)

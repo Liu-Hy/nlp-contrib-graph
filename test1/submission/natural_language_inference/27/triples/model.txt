@@ -1,0 +1,7 @@
+(contextual attention - based deep neural network||for||task)
+(SDNet||has||contextual attention - based deep neural network)
+(Model||propose||SDNet)
+(SDNet||leverages||latest breakthrough)
+(latest breakthrough||in||NLP)
+(Model||has||SDNet)
+(Contribution||has||Model)

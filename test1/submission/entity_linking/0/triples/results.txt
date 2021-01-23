@@ -1,0 +1,8 @@
+(outperforms||of using||less information ( only word - entity statistics)
+(outperforms||has||well established Wikipedia link measure)
+(Results||has||outperforms)
+(power||of||our local and joint neural network architectures)
+(our global ED model||has||outperforms)
+(outperforms||has||Huang 's ED model)
+(Results||emphasize||our global ED model)
+(Contribution||has||Results)

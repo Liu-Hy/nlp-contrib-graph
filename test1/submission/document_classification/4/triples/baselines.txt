@@ -1,0 +1,4 @@
+(multi-label classification of clinical text||including||Condensed Memory Networks ( C - MemNN ))
+(multi-label classification of clinical text||including||Attentive LSTM)
+(multi-label classification of clinical text||including||Convolutional Attention ( CAML ))
+(Contribution||has||Baselines)

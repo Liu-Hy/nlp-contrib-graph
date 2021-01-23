@@ -1,0 +1,78 @@
+2	59	93	Neural Data - to - Text Generation
+18	14	19	given
+18	22	41	set of RDF triplets
+18	42	52	describing
+18	53	83	facts ( entities and relations
+18	120	131	fluent text
+18	140	151	faithful to
+18	156	161	facts
+49	12	19	propose
+49	23	64	explicit , symbolic , text planning stage
+49	67	72	whose
+49	73	79	output
+49	83	91	fed into
+49	94	118	neural generation system
+50	4	16	text planner
+50	17	27	determines
+50	32	53	information structure
+50	58	70	expresses it
+50	71	84	unambiguously
+50	104	129	sequence of ordered trees
+51	14	23	performed
+51	24	36	symbolically
+51	44	57	guaranteed to
+51	58	64	remain
+51	87	102	with regards to
+51	107	118	input facts
+57	67	101	https://github.com/AmitMY/ chimera
+189	3	6	map
+189	7	37	DBPedia relations to sequences
+189	38	40	of
+189	41	47	tokens
+189	48	63	by splitting on
+189	64	75	underscores
+189	80	89	CamelCase
+190	16	19	use
+190	24	40	Open NMT toolkit
+190	41	45	with
+190	50	64	copy attn flag
+192	4	25	pretrained embeddings
+192	38	48	initialize
+192	53	68	relation tokens
+192	69	71	in
+192	76	81	plans
+192	84	94	as well as
+192	99	105	tokens
+192	106	108	in
+192	113	128	reference texts
+208	3	10	compare
+208	18	34	best submissions
+208	35	37	in
+208	42	58	WebNLG challenge
+208	61	70	Melbourne
+208	76	97	end - to - end system
+208	110	114	best
+208	115	117	on
+208	118	132	all categories
+210	3	7	uses
+210	10	21	set encoder
+210	27	39	LSTM decoder
+210	40	44	with
+210	45	54	attention
+210	59	85	copy - attention mechanism
+210	92	114	neural checklist model
+210	137	151	entity dropout
+228	0	8	BestPlan
+228	9	16	reduces
+228	17	32	all error types
+228	33	44	compared to
+228	45	57	StrongNeural
+228	60	62	by
+228	63	83	85 % , 56 % and 90 %
+244	0	8	BestPlan
+244	9	18	performed
+244	19	27	on - par
+244	28	32	with
+244	33	45	StrongNeural
+244	52	61	surpassed
+244	66	109	previous state - of - the - art UPF - FORGe

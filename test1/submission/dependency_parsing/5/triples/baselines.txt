@@ -1,0 +1,5 @@
+(union||of||each corpora 's training set)
+(transition - based parser||with||beam search)
+(Baselines||process it with||Berkeley - Parser)
+(Baselines||compare to||best dependency parsers)
+(Contribution||has||Baselines)

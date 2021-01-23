@@ -1,0 +1,8 @@
+(Contribution||has research problem||Natural Language Comprehension)
+(Contribution||has research problem||EpiReader)
+(Contribution||has research problem||machine comprehension of text)
+(Contribution||has research problem||Machine comprehension of unstructured , real - world text)
+(Contribution||has research problem||machine comprehension)
+(Contribution||has research problem||semantic comparisons)
+(Contribution||has research problem||concept)
+(Contribution||has research problem||recognizing textual entailment ( RTE ))

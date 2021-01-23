@@ -1,0 +1,198 @@
+2	27	59	Neural Word Sense Disambiguation
+4	0	33	Word Sense Disambiguation ( WSD )
+9	0	3	GAS
+9	4	10	models
+9	15	36	semantic relationship
+9	37	44	between
+9	49	70	context and the gloss
+9	71	73	in
+9	77	110	improved memory network framework
+9	139	141	of
+9	146	203	previous supervised methods and knowledge - based methods
+13	0	33	Word Sense Disambiguation ( WSD )
+30	19	26	propose
+30	29	44	novel model GAS
+30	49	85	gloss - augmented WSD neural network
+30	97	107	variant of
+30	112	126	memory network
+31	0	3	GAS
+31	4	19	jointly encodes
+31	24	43	context and glosses
+31	44	46	of
+31	51	62	target word
+31	67	73	models
+31	78	99	semantic relationship
+31	100	107	between
+31	112	131	context and glosses
+31	132	134	in
+31	139	152	memory module
+32	9	19	to measure
+32	24	42	inner relationship
+32	43	50	between
+32	51	70	glosses and context
+32	71	86	more accurately
+32	92	98	employ
+32	99	124	multiple passes operation
+32	125	131	within
+32	136	142	memory
+32	143	145	as
+32	150	168	re-reading process
+32	173	178	adopt
+32	179	209	two memory updating mechanisms
+36	9	17	to model
+36	18	39	semantic relationship
+36	40	42	of
+36	43	50	context
+36	68	75	propose
+36	78	115	glossaugmented neural network ( GAS )
+36	116	118	in
+36	122	154	improved memory network paradigm
+38	3	9	extend
+38	14	26	gloss module
+38	27	29	in
+38	30	33	GAS
+38	34	36	to
+38	39	61	hierarchical framework
+38	71	80	to mirror
+38	85	111	hierarchies of word senses
+38	112	114	in
+38	115	122	WordNet
+195	3	6	use
+195	7	34	pre-trained word embeddings
+195	35	39	with
+195	40	54	300 dimensions
+195	63	67	keep
+195	73	78	fixed
+195	79	85	during
+195	90	106	training process
+196	3	9	employ
+196	10	26	256 hidden units
+196	27	34	in both
+196	39	51	gloss module
+196	60	74	context module
+197	0	25	Orthogonal initialization
+197	29	37	used for
+197	38	45	weights
+197	46	48	in
+197	49	53	LSTM
+197	58	87	random uniform initialization
+197	88	92	with
+197	93	114	range [ - 0.1 , 0.1 ]
+197	118	126	used for
+197	127	133	others
+198	3	9	assign
+198	10	33	gloss expansion depth K
+198	38	43	value
+198	44	46	of
+198	47	48	4
+199	8	23	experiment with
+199	28	52	number of passes | T M |
+199	53	57	from
+199	65	67	in
+199	68	81	our framework
+199	84	91	finding
+199	104	112	performs
+199	113	117	best
+200	3	6	use
+200	7	21	Adam optimizer
+200	22	24	in
+200	29	45	training process
+200	46	50	with
+200	51	78	0.001 initial learning rate
+201	9	17	to avoid
+201	18	29	overfitting
+201	35	38	use
+201	39	61	dropout regularization
+201	66	69	set
+201	70	79	drop rate
+201	80	82	to
+201	83	86	0.5
+212	0	7	Babelfy
+212	10	18	exploits
+212	23	49	semantic network structure
+212	50	54	from
+212	55	63	BabelNet
+212	68	74	builds
+212	77	111	unified graph - based architecture
+212	112	115	for
+212	116	138	WSD and Entity Linking
+216	0	8	IMS +emb
+216	11	18	selects
+216	19	22	IMS
+216	23	25	as
+216	30	50	underlying framework
+216	55	67	makes use of
+216	68	83	word embeddings
+216	84	86	as
+216	87	95	features
+219	0	8	Bi- LSTM
+219	11	20	leverages
+219	50	62	which shares
+219	63	79	model parameters
+219	80	85	among
+219	86	95	all words
+225	0	27	English all - words results
+226	30	41	performance
+226	64	66	in
+226	71	95	English all - words task
+230	0	15	GAS and GAS ext
+230	16	24	achieves
+230	29	60	state - of - theart performance
+230	61	63	on
+230	68	102	concatenation of all test datasets
+231	86	95	find that
+231	96	103	GAS ext
+231	104	108	with
+231	109	147	concatenation memory updating strategy
+231	148	156	achieves
+231	161	178	best results 70.6
+231	179	181	on
+231	186	225	concatenation of the four test datasets
+235	24	33	find that
+235	34	48	our best model
+235	49	60	outperforms
+235	65	100	previous best neural network models
+235	101	103	on
+235	104	129	every individual test set
+237	14	24	best model
+237	39	48	IMS + emb
+237	49	51	on
+237	56	85	SE3 , SE13 and SE15 test sets
+238	0	13	Incorporating
+238	14	21	glosses
+238	22	26	into
+238	27	37	neural WSD
+238	42	57	greatly improve
+238	62	73	performance
+238	78	87	extending
+238	92	106	original gloss
+238	129	136	results
+239	0	13	Compared with
+239	18	36	Bi - LSTM baseline
+239	53	65	labeled data
+239	68	86	our proposed model
+239	87	103	greatly improves
+239	108	116	WSD task
+239	117	119	by
+239	120	136	2.2 % F1 - score
+239	137	153	with the help of
+239	154	169	gloss knowledge
+240	14	27	compared with
+240	32	35	GAS
+240	36	51	which only uses
+240	52	66	original gloss
+240	67	69	as
+240	74	94	background knowledge
+240	97	104	GAS ext
+240	105	124	can further improve
+240	129	140	performance
+240	141	157	with the help of
+240	162	178	extended glosses
+240	179	186	through
+240	191	209	semantic relations
+252	3	8	shows
+252	14	39	multiple passes operation
+252	40	48	performs
+252	49	55	better
+252	56	60	than
+252	61	69	one pass

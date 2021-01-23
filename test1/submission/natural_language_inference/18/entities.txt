@@ -1,0 +1,108 @@
+2	0	27	Parameter Re-Initialization
+19	9	17	explores
+19	43	64	weight initialization
+19	65	67	to
+19	72	93	optimization dynamics
+19	94	96	of
+19	101	123	specific learning task
+23	30	41	incorporate
+23	45	72	" adaptive initialization "
+23	73	76	for
+23	77	100	neural network training
+23	133	138	where
+23	142	145	use
+23	146	175	cyclical batch size schedules
+23	176	186	to control
+23	191	215	noise ( or temperature )
+23	216	218	of
+23	219	222	SGD
+29	63	87	training neural networks
+34	3	10	propose
+34	34	51	ensembling method
+34	57	65	combines
+34	66	72	models
+34	73	85	saved during
+34	86	102	different cycles
+82	0	16	Language Results
+83	0	17	Language modeling
+88	20	49	best performing CBS schedules
+88	50	59	result in
+88	60	84	significant improvements
+88	85	87	in
+88	88	113	perplexity ( up to 7.91 )
+88	114	118	over
+88	123	141	baseline schedules
+88	151	156	offer
+88	157	167	reductions
+88	168	170	in
+88	175	208	number of SGD training iterations
+88	211	216	up to
+88	217	221	33 %
+90	0	6	Notice
+90	12	36	almost all CBS schedules
+90	37	47	outperform
+90	52	69	baseline schedule
+101	3	11	see that
+101	16	29	CBS schedules
+101	30	35	match
+101	36	56	baseline performance
+101	67	96	number of training iterations
+101	97	104	used in
+101	105	118	CBS schedules
+101	122	127	up to
+101	128	135	2 fewer
+105	3	10	observe
+105	16	19	CBS
+105	20	28	achieves
+105	29	48	similar performance
+105	49	51	to
+105	56	64	baseline
+107	0	4	With
+107	5	13	CBS - 15
+107	19	22	see
+107	23	48	90.71 % training accuracy
+107	53	78	56. 44 % testing accuracy
+109	0	9	Combining
+109	10	24	CBS - 15 on C2
+109	44	52	improves
+109	53	61	accuracy
+109	62	64	to
+109	65	72	94.82 %
+111	0	8	Applying
+111	9	28	snapshot ensembling
+111	29	31	on
+111	32	34	C3
+111	35	47	trained with
+111	48	66	CBS - 15 - 2 leads
+111	70	87	improved accuracy
+111	88	90	of
+111	91	99	93. 56 %
+111	103	114	compared to
+111	115	122	92.58 %
+112	6	16	ensembling
+112	17	25	ResNet50
+112	26	28	on
+112	29	37	Imagenet
+112	38	42	with
+112	43	52	snapshots
+112	62	77	last two cycles
+112	84	95	performance
+112	96	108	increases to
+112	109	117	76.401 %
+112	118	122	from
+112	123	131	75.336 %
+155	0	6	During
+155	7	15	training
+155	21	25	crop
+155	30	35	image
+155	36	38	to
+155	39	46	224 224
+158	4	25	total vocabulary size
+158	26	28	is
+158	29	33	10 k
+158	40	49	all words
+158	50	57	outside
+158	62	72	vocabulary
+158	77	88	replaced by
+158	91	108	placeholder token
+158	111	119	WikiText

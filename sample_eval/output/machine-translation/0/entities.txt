@@ -1,0 +1,38 @@
+16	13	40	neural network architecture
+16	57	68	refer to as
+16	72	93	RNN Encoder - Decoder
+16	96	107	consists of
+16	108	145	two recurrent neural networks ( RNN )
+16	151	157	act as
+16	161	168	encoder
+16	175	182	decoder
+16	105	107	of
+17	12	16	maps
+17	17	79	a variable - length source sequence to a fixed - length vector
+17	12	16	maps
+17	103	172	the vector representation back to a variable - length target sequence
+18	21	28	trained
+18	29	36	jointly
+18	37	48	to maximize
+18	53	76	conditional probability
+18	80	123	the target sequence given a source sequence
+19	18	25	propose
+19	42	67	sophisticated hidden unit
+19	77	87	to improve
+19	88	137	both the memory capacity and the ease of training
+135	43	54	built using
+135	55	60	Moses
+135	61	65	with
+135	66	82	default settings
+2	64	95	Statistical Machine Translation
+15	57	60	SMT
+15	167	185	phrase - based SMT
+159	71	95	improves the performance
+159	14	29	adding features
+159	30	41	computed by
+159	42	57	neural networks
+159	96	125	over the baseline performance
+160	4	33	best performance was achieved
+160	42	78	used both CSLM and the phrase scores
+160	79	83	from
+160	88	109	RNN Encoder - Decoder

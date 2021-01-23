@@ -1,0 +1,8 @@
+(Contribution||has research problem||Question Answering Data)
+(Contribution||has research problem||Our approach)
+(Contribution||has research problem||outperforms)
+(Contribution||has research problem||previous state - of - the - art system)
+(Contribution||has research problem||average 8 % improvement)
+(Contribution||has research problem||final score)
+(Contribution||has research problem||Knowledge base question answering ( QA ))
+(Contribution||has research problem||EL on Twitter data)

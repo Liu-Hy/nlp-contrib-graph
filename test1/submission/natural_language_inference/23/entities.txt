@@ -1,0 +1,100 @@
+2	22	44	Text Semantic Matching
+4	39	78	modelling the interactions of text pair
+14	150	205	modelling the relevance / similarity of a pair of texts
+14	229	251	text semantic matching
+25	19	24	adopt
+25	27	47	deep fusion strategy
+25	48	56	to model
+25	61	80	strong interactions
+25	81	83	of
+25	84	97	two sentences
+28	7	20	text matching
+28	28	39	regarded as
+28	40	49	modelling
+28	54	65	interaction
+28	66	68	of
+28	69	78	two texts
+28	79	81	in
+28	84	106	recursive matching way
+29	25	32	propose
+29	33	100	deep fusion long short - term memory neural networks ( DF - LSTMs )
+29	101	109	to model
+29	114	126	interactions
+30	18	28	DF - LSTMs
+30	29	39	consist of
+30	40	76	two interconnected conditional LSTMs
+30	93	99	models
+30	100	109	apiece of
+30	110	114	text
+30	115	120	under
+30	125	134	influence
+30	138	145	another
+31	4	17	output vector
+31	18	20	of
+31	21	31	DF - LSTMs
+31	35	43	fed into
+31	46	74	task - specific output layer
+31	75	85	to compute
+31	90	107	match - ing score
+34	44	49	model
+34	54	73	strong interactions
+34	74	76	of
+34	77	86	two texts
+34	87	89	in
+34	92	114	recursive matching way
+34	123	133	consist of
+34	134	170	two inter -and intra-dependent LSTMs
+40	0	34	Recursively Text Semantic Matching
+53	0	32	Long Short - Term Memory Network
+67	22	51	Recursively Semantic Matching
+139	0	32	Neural bag - of - words ( NBOW )
+140	0	13	Each sequence
+140	17	31	represented as
+140	36	39	sum
+140	40	42	of
+140	47	57	embeddings
+140	58	60	of
+140	65	82	words it contains
+140	99	119	concatenated and fed
+140	120	122	to
+140	125	128	MLP
+141	0	11	Single LSTM
+141	32	42	encoded by
+142	0	14	Parallel LSTMs
+142	41	51	encoded by
+142	52	61	two LSTMs
+142	89	101	concatenated
+142	115	118	MLP
+143	0	15	Attention LSTMs
+143	18	31	Two sequences
+143	36	46	encoded by
+143	47	52	LSTMs
+143	53	57	with
+143	58	77	attention mechanism
+144	0	32	Word - by - word Attention LSTMs
+144	38	55	improved strategy
+144	56	58	of
+144	83	93	introduces
+144	94	130	word - by - word attention mechanism
+146	0	47	Experiment - I : Recognizing Textual Entailment
+152	4	14	results of
+152	15	25	DF - LSTMs
+152	26	36	outperform
+152	37	62	all the competitor models
+152	63	67	with
+152	72	100	same number of hidden states
+152	107	116	achieving
+152	117	135	comparable results
+152	136	138	to
+152	143	165	state - of - the - art
+152	176	197	much fewer parameters
+156	3	12	analyzing
+156	17	35	evaluation results
+156	36	38	of
+156	39	62	questionanswer matching
+156	71	78	can see
+156	79	141	strong interaction models ( attention LSTMs , our DF - LSTMs )
+156	142	165	consistently outperform
+156	170	219	weak interaction models ( NBOW , parallel LSTMs )
+156	220	224	with
+156	227	239	large margin

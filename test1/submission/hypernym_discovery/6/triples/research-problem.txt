@@ -1,0 +1,7 @@
+(Contribution||has research problem||hypernym discovery task)
+(Contribution||has research problem||discovering hypernym relations from a text corpus)
+(Contribution||has research problem||Hypernym detection)
+(Contribution||has research problem||Hypernym discovery)
+(Contribution||has research problem||two)
+(Contribution||has research problem||General - Purpose Hypernym Discovery)
+(Contribution||has research problem||Domain - Specific Hypernym Discovery)

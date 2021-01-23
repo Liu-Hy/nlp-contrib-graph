@@ -1,0 +1,30 @@
+{
+  "has" : {
+    "Experimental setup" : {
+      "trained using" : ["Adam", {"from sentence" : "The models are trained using Adam with hyperparameters selected on development set ."}],
+      "chose" : {
+        "two one - layer LSTM" : {
+          "for" : {
+            "read / write modules" : {
+              "on" : "tasks other than QA"
+            }
+          }
+        },
+        "from sentence" : "We chose two one - layer LSTM for read / write modules on the tasks other than QA on which we used two - layer LSTM ."
+      },
+      "obtained for" : {
+        "word embeddings" : {
+          "has" : ["pre-trained 300 - D Glove 840B vectors", "100 - D Glove 6B vectors"]
+        },
+        "from sentence" : "The pre-trained 300 - D Glove 840B vectors and 100 - D Glove 6B vectors were obtained for the word embeddings ."
+      },
+      "crop or pad" : {
+        "input sequence" : {
+          "to" : "fixed length"
+        },
+        "from sentence" : "We crop or pad the input sequence to a fixed length ."
+      },
+      "regularized by" : ["dropouts", "l 2 weight decay", {"from sentence" : "The models were regularized by using dropouts and an l 2 weight decay ."}]
+    }
+  }
+}

@@ -1,0 +1,7 @@
+(our approaches||in||Python)
+(our approaches||using||Compute Unified Device Architecture ( CUDA ))
+(Python||using||Compute Unified Device Architecture ( CUDA ))
+(Experimental setup||implemented||our approaches)
+(Keras and Tensor Flow libraries||for creating||neural networks)
+(Experimental setup||used||Keras and Tensor Flow libraries)
+(Contribution||has||Experimental setup)

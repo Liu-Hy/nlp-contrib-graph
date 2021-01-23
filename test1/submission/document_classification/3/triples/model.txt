@@ -1,0 +1,7 @@
+(text classification model||requires||significantly fewer parameters)
+(significantly fewer parameters||compared to||stateof - the - art CNNs)
+(Squeezed Very Deep Convolutional Neural Networks ( SVDCNN )||has||text classification model)
+(Model||propose||Squeezed Very Deep Convolutional Neural Networks ( SVDCNN ))
+(Model||has||Temporal Depthwise Separable Convolutions ( TD - SCs ))
+(Model||has||Global Average Pooling ( GAP ))
+(Contribution||has||Model)

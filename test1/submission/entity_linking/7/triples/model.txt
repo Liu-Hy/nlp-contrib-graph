@@ -1,0 +1,7 @@
+(Model||describe||two novel WSD algorithms)
+(Model||based on||Long Short Term Memory ( LSTM ) ))
+(label propagation||to label||unlabeled sentences)
+(unlabeled sentences||based on||similarity)
+(similarity||to||labeled ones)
+(Model||present||semi-supervised algorithm)
+(Contribution||has||Model)

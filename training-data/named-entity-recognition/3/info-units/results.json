@@ -1,0 +1,16 @@
+{
+  "has" : {
+    "Results" : {
+      "In" : {
+        "CoNLL 2003 NER task" : {
+          "scores" : "91.93 mean F 1",
+          "from sentence" : "In the CoNLL 2003 NER task , our model scores 91.93 mean F 1 , which is a statistically significant increase over the previous best result of 91.62 0.33 from that used gazetteers ( at 95 % , two - sided Welch t- test , p = 0.021 ) ."
+        },
+        "CoNLL 2000 Chunking task" : {
+          "achieves" : "96.37 mean F 1",
+          "from sentence" : "In the CoNLL 2000 Chunking task , Tag LM achieves 96.37 mean F 1 , exceeding all previously published results without additional labeled data by more then 1 % absolute F 1 ."
+        }
+      }
+    }
+  }
+}

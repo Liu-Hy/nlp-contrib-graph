@@ -1,0 +1,2 @@
+(Contribution||has research problem||Sequence - to - Sequence Natural Language Generation)
+(Contribution||has research problem||Natural language generation)

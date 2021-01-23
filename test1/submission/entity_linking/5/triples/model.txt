@@ -1,0 +1,5 @@
+(multiple semantic relationships||between||senses)
+(senses||included in||WordNet)
+(one||has||multiple semantic relationships)
+(Model||by creating||new sense annotated corpora)
+(Contribution||has||Model)

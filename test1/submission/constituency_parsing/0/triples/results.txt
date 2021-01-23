@@ -1,0 +1,3 @@
+(fixed RNNG||has||outperforms)
+(outperforms||has||highly optimized sequential LSTM baseline)
+(Contribution||has||Results)

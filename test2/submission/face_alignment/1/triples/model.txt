@@ -1,0 +1,7 @@
+(3D face reconstruction||by using||novel volumetric representation)
+(3D face reconstruction||by using||appropriate CNN architecture)
+(appropriate CNN architecture||trained to||regress)
+(regress||directly from||2 D facial image)
+(2 D facial image||to||corresponding 3D volume)
+(Model||bypasses||3D face reconstruction)
+(Contribution||has||Model)

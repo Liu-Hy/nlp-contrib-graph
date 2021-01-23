@@ -1,0 +1,8 @@
+(artificial dataset||by labelling||large corpus)
+(large corpus||with||BerkeleyParser)
+(Model||work||poorly)
+(model||with||3 LSTM layers)
+(model||with||256 units)
+(256 units||in||each layer)
+(Model||used||model)
+(Contribution||has||Model)

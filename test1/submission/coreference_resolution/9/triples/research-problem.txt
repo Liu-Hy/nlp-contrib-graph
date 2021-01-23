@@ -1,0 +1,6 @@
+(Contribution||has research problem||Coreference Resolution)
+(Contribution||has research problem||BERT)
+(Contribution||has research problem||coreference resolution)
+(Contribution||has research problem||strong improvements)
+(Contribution||has research problem||OntoNotes ( + 3.9 F1 ) and)
+(Contribution||has research problem||GAP ( + 11.5 F1 ) benchmarks)

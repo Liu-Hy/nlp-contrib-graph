@@ -1,0 +1,8 @@
+(results||comparable with||some state - of - the - art methods)
+(Results||attained||results)
+(string similarity features||has||slightly further improved performance)
+(Results||Adding||string similarity features)
+(some state - of - the - art methods||without using||coherence)
+(Our method||has||outperformed)
+(outperformed||has||some state - of - the - art methods)
+(Contribution||has||Results)

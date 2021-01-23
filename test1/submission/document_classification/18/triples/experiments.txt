@@ -1,0 +1,6 @@
+(dimension||of||embedding)
+(dimension||is||300)
+(embedding||is||300)
+(number of means||is||5000)
+(number of means||has||5000)
+(Contribution||has||Experiments)

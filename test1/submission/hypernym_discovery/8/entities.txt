@@ -1,0 +1,15 @@
+2	32	61	Detecting Hypernymy Relations
+4	87	105	Hypernym Discovery
+5	32	89	automatic extraction of hypernymy relations from a corpus
+8	11	19	presents
+8	50	68	hypernym discovery
+8	75	90	participated in
+8	114	122	based on
+8	123	152	unsupervised machine learning
+9	3	5	is
+9	8	27	rule - based system
+9	33	41	exploits
+9	42	68	syntactic dependency paths
+9	69	84	that generalize
+9	85	116	Hearst - style lexical patterns
+24	18	43	Detect Hypernymy Relation

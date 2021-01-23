@@ -1,0 +1,3 @@
+(Contribution||has research problem||Statistical Machine Translation)
+(Contribution||has research problem||SMT)
+(Contribution||has research problem||phrase - based SMT)

@@ -1,0 +1,8 @@
+(Approach||to||text classification tasks)
+(Approach||has||Adversarial perturbations)
+(perturbation||on||continuous word embeddings)
+(continuous word embeddings||instead of||discrete word inputs)
+(Approach||define||perturbation)
+(text classifier||by stabilizing||classification function)
+(Approach||propose||text classifier)
+(Contribution||has||Approach)

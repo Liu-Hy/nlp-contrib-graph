@@ -1,0 +1,6 @@
+(logistic regression model||with||bag - ofwords)
+(logistic regression model||with||single - layer 1 D convolutional network)
+(clinical text||including||Condensed Memory Networks ( C - MemNN ))
+(clinical text||including||Attentive LSTM)
+(clinical text||including||Convolutional Attention ( CAML ))
+(Contribution||has||Baselines)

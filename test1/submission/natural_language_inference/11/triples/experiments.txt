@@ -1,0 +1,8 @@
+(max sequence length||of||600)
+(hidden state size||of||200)
+(600||during||training)
+(200||for||all recurrent units)
+(200||for||linear layers)
+(max sequence length||has||600)
+(hidden state size||has||200)
+(Contribution||has||Experiments)

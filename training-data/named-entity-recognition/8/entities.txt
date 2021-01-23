@@ -1,0 +1,131 @@
+250	0	20	Effect of Model Size
+260	31	33	is
+260	38	48	first work
+260	49	63	to demonstrate
+260	82	106	scaling to extreme model
+260	118	126	leads to
+260	127	145	large improvements
+260	146	148	on
+260	149	171	very small scale tasks
+260	174	187	provided that
+260	192	231	model has been sufficiently pre-trained
+263	0	34	Feature - based Approach with BERT
+275	0	10	BERT LARGE
+275	11	33	performs competitively
+275	39	69	state - of - the - art methods
+277	5	17	demonstrates
+277	23	40	BERT is effective
+277	41	49	for both
+277	50	60	finetuning
+277	65	91	feature - based approaches
+24	65	74	proposing
+24	75	137	BERT : Bidirectional Encoder Representations from Transformers
+25	0	4	BERT
+25	5	15	alleviates
+25	41	69	unidirectionality constraint
+25	73	78	using
+25	81	137	" masked language model " ( MLM ) pre-training objective
+26	4	25	masked language model
+26	26	40	randomly masks
+26	41	59	some of the tokens
+26	60	64	from
+26	69	74	input
+26	85	94	objective
+26	101	135	predict the original vocabulary id
+26	136	138	of
+26	143	154	masked word
+26	155	168	based only on
+26	173	180	context
+27	56	69	MLM objective
+27	70	77	enables
+27	82	135	representation to fuse the left and the right context
+27	144	165	allows us to pretrain
+27	168	198	deep bidirectional Transformer
+28	51	54	use
+28	57	90	" next sentence prediction " task
+28	96	113	jointly pretrains
+28	114	141	text - pair representations
+2	59	81	Language Understanding
+4	19	48	language representation model
+14	0	27	Language model pre-training
+155	0	4	GLUE
+156	4	54	General Language Understanding Evaluation ( GLUE )
+170	3	6	use
+170	9	19	batch size
+170	20	22	of
+170	23	25	32
+170	30	41	fine - tune
+170	42	54	for 3 epochs
+170	55	59	over
+170	64	87	data for all GLUE tasks
+171	19	27	selected
+171	32	64	best fine - tuning learning rate
+171	67	72	among
+171	73	114	5 e - 5 , 4 e - 5 , 3 e - 5 , and 2 e - 5
+171	117	119	on
+171	124	131	Dev set
+172	15	18	for
+172	19	29	BERT LARGE
+172	104	107	ran
+172	108	131	several random restarts
+172	136	144	selected
+172	149	174	best model on the Dev set
+175	5	29	BERT BASE and BERT LARGE
+175	30	40	outperform
+175	41	65	all systems on all tasks
+175	66	68	by
+175	71	89	substantial margin
+175	92	101	obtaining
+175	102	157	4.5 % and 7.0 % respective average accuracy improvement
+175	158	162	over
+175	167	189	prior state of the art
+179	13	23	BERT LARGE
+179	24	49	significantly outperforms
+179	50	59	BERT BASE
+179	60	66	across
+179	67	76	all tasks
+181	0	11	SQuAD v 1.1
+182	4	54	Stanford Question Answering Dataset ( SQuAD v1.1 )
+195	3	14	fine - tune
+195	19	27	3 epochs
+195	35	48	learning rate
+195	52	59	5 e - 5
+195	66	76	batch size
+195	80	82	32
+199	4	26	best performing system
+199	27	38	outperforms
+199	43	65	top leaderboard system
+199	66	68	by
+199	69	77	+ 1.5 F1
+199	78	80	in
+199	81	91	ensembling
+199	96	104	+ 1.3 F1
+199	105	107	as
+199	110	123	single system
+203	0	11	SQuAD v 2.0
+213	3	15	fine - tuned
+213	20	28	2 epochs
+213	36	49	learning rate
+213	53	60	5 e - 5
+213	67	77	batch size
+213	81	83	48
+215	3	10	observe
+215	13	33	+ 5.1 F1 improvement
+215	34	38	over
+215	43	63	previous best system
+216	0	4	SWAG
+217	4	43	Situations With Adversarial Generations
+221	3	14	fine - tune
+221	29	37	3 epochs
+221	45	58	learning rate
+221	62	69	2 e - 5
+221	76	86	batch size
+221	90	92	16
+223	0	10	BERT LARGE
+223	11	22	outperforms
+223	27	64	authors ' baseline ESIM + ELMo system
+223	65	67	by
+223	68	76	+ 27.1 %
+223	81	91	OpenAI GPT
+223	92	94	by
+223	95	100	8.3 %

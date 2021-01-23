@@ -1,0 +1,8 @@
+(RetinaNet with STC||improves||recall efficiency)
+(recall efficiency||to||certain extent)
+(recall efficiency||has||certain extent)
+(non-maximum suppression ( NMS )||with||jaccard overlap)
+(jaccard overlap||of||0.5)
+(0.5||to generate||top 750 high confident detections per image)
+(jaccard overlap||has||0.5)
+(Contribution||has||Experiments)

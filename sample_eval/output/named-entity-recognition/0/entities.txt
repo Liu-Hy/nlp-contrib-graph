@@ -1,0 +1,39 @@
+48	19	26	propose
+48	30	65	accelerated robust subset selection
+49	17	20	use
+49	25	68	p ( 0 < p ? 1 ) - norm based robust measure
+49	69	72	for
+49	77	96	representation loss
+51	7	15	based on
+51	20	31	observation
+51	32	36	that
+51	37	91	data size is generally much larger than feature length
+51	108	115	propose
+51	118	132	speedup solver
+52	25	33	owing to
+52	38	104	Augmented Lagrange Multiplier ( ALM ) and an equivalent derivation
+52	22	24	is
+52	4	21	main acceleration
+2	14	49	Accelerated Robust Subset Selection
+4	0	34	Subset selection from massive data
+7	20	36	subset selection
+203	35	41	server
+203	95	100	Cache
+203	89	94	18 Mb
+203	114	117	RAM
+203	105	113	0.986 TB
+203	120	125	using
+203	126	137	Matlab 2012
+204	21	43	ten benchmark datasets
+221	37	42	curve
+221	54	90	surprisingly lower and highly stable
+221	156	170	over growing N
+221	123	155	almost no rise of selection time
+228	13	15	is
+228	20	37	fastest algorithm
+249	47	54	achieve
+249	58	79	appreciable advantage
+256	66	77	K increases
+256	22	62	prediction accuracies generally increase
+258	40	54	among the best
+258	22	26	ARSS

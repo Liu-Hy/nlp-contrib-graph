@@ -1,0 +1,5 @@
+(eight very different languages||namely||English)
+(Model||use||eight very different languages)
+(each language||define||train , development and test corpus)
+(Model||For||each language)
+(Contribution||has||Model)

@@ -1,0 +1,132 @@
+4	0	46	One - hot CNN ( convolutional neural network )
+4	82	101	text categorization
+31	18	26	build on
+31	31	48	general framework
+31	49	51	of
+31	54	80	region embedding + pooling
+31	87	94	explore
+31	97	132	more sophisticated region embedding
+31	133	136	via
+31	137	170	Long Short - Term Memory ( LSTM )
+31	218	220	in
+31	225	264	supervised and semi-supervised settings
+35	6	24	designed to enable
+35	25	33	learning
+35	34	36	of
+35	37	49	dependencies
+35	50	54	over
+35	55	71	larger time lags
+35	91	121	traditional recurrent networks
+36	13	17	LSTM
+36	25	38	used to embed
+36	39	51	text regions
+36	52	54	of
+36	55	92	variable ( and possibly large ) sizes
+38	16	18	to
+38	19	27	simplify
+38	32	37	model
+38	60	69	including
+38	70	81	elimination
+38	82	84	of
+38	87	107	word embedding layer
+38	143	147	LSTM
+46	51	90	http://riejohnson.com/cnn download.html
+135	0	12	Optimization
+135	17	26	done with
+135	27	30	SGD
+135	31	35	with
+135	36	61	mini-batch size 50 or 100
+135	62	66	with
+135	67	75	momentum
+135	79	89	optionally
+135	90	97	rmsprop
+135	98	101	for
+135	102	114	acceleration
+139	40	48	see that
+139	49	111	our one - hot bidirectional LSTM with pooling ( oh - 2 LSTMp )
+139	112	123	outperforms
+139	124	156	word - vector LSTM ( wv - LSTM )
+139	157	159	on
+139	160	176	all the datasets
+140	18	44	non -LSTM baseline methods
+143	5	7	on
+143	8	38	three out of the four datasets
+143	41	53	oh - 2 LSTMp
+143	54	65	outperforms
+143	66	81	SVM and the CNN
+147	8	12	RCV1
+147	15	25	n-gram SVM
+147	26	28	is
+147	29	43	no better than
+147	44	63	bag - of - word SVM
+147	78	82	RCV1
+147	85	94	bow - CNN
+147	95	106	outperforms
+147	107	114	seq-CNN
+158	10	23	one - hot CNN
+158	24	29	works
+158	30	45	surprising well
+160	4	29	previous best performance
+160	30	32	on
+160	33	37	20NG
+160	38	40	is
+160	41	45	15.3
+160	73	75	of
+160	76	80	DL15
+160	83	94	obtained by
+160	95	117	pre-training wv - LSTM
+160	118	120	of
+160	121	131	1024 units
+160	132	136	with
+160	137	158	labeled training data
+161	4	16	oh - 2 LSTMp
+161	17	25	achieved
+161	26	31	13.32
+161	43	53	2 % better
+195	0	27	Semi-supervised experiments
+210	13	34	pre-trained wv - LSTM
+210	60	80	supervised wv - LSTM
+210	86	100	underperformed
+210	105	111	models
+210	112	116	with
+210	117	137	region tv-embeddings
+216	0	2	On
+216	3	12	our tasks
+216	15	27	wv - 2 LSTMp
+216	28	33	using
+216	38	57	Google News vectors
+216	70	79	performed
+216	80	97	relatively poorly
+220	7	13	review
+220	18	29	performance
+220	30	32	of
+220	33	46	one - hot CNN
+220	47	51	with
+220	52	82	one 200 - dim CNN tv-embedding
+220	104	119	comparable with
+220	120	128	our LSTM
+220	129	133	with
+220	134	166	two 100 - dim LSTM tv-embeddings
+220	179	190	in terms of
+221	4	8	LSTM
+221	21	42	rivals or outperforms
+221	47	50	CNN
+221	63	65	on
+221	66	77	IMDB / Elec
+221	82	95	underperforms
+221	99	101	on
+221	102	106	RCV1
+222	0	10	Increasing
+222	15	29	dimensionality
+222	30	32	of
+222	33	50	LSTM tvembeddings
+222	51	55	from
+222	56	66	100 to 300
+222	67	69	on
+222	70	74	RCV1
+222	80	86	obtain
+222	87	91	8.62
+222	107	121	does not reach
+222	122	126	7.97
+222	127	129	of
+222	134	137	CNN

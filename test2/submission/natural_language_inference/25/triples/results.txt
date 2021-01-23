@@ -1,0 +1,6 @@
+(proposed model||outperforms||previous state - of - the - art methods)
+(previous state - of - the - art methods||by||evident margin)
+(evident margin||on||both datasets)
+(deep cascade learning framework||has||proposed model)
+(Results||by adopting||deep cascade learning framework)
+(Contribution||has||Results)

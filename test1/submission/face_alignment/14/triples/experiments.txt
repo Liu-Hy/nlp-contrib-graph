@@ -1,0 +1,7 @@
+(AlexNet architecture||train for||100,000 iterations)
+(100,000 iterations||with||batch size of 50)
+(VGG - 16 architecture||train for||200,000 iterations)
+(200,000 iterations||with||batch size)
+(batch size||of||25)
+(batch size||has||25)
+(Contribution||has||Experiments)

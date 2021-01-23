@@ -1,0 +1,100 @@
+27	0	10	SCIB - ERT
+27	11	18	follows
+27	23	48	same architecture as BERT
+27	64	77	pretrained on
+27	78	93	scientific text
+31	3	12	construct
+31	13	21	SCIVOCAB
+31	24	50	a new WordPiece vocabulary
+31	51	53	on
+31	54	75	our scientific corpus
+31	76	81	using
+31	86	112	Sen - tencePiece 1 library
+34	0	6	Corpus
+35	3	8	train
+35	9	16	SCIBERT
+35	17	19	on
+35	22	35	random sample
+35	36	38	of
+35	39	52	1.14 M papers
+35	53	57	from
+35	58	74	Semantic Scholar
+36	12	20	consists
+36	24	35	18 % papers
+36	36	40	from
+36	45	68	computer science domain
+36	73	77	82 %
+36	78	82	from
+36	87	110	broad biomedical domain
+9	48	83	https://github.com/allenai/scibert/
+2	12	37	Pretrained Language Model
+4	0	77	Obtaining large - scale annotated data for NLP tasks in the scientific domain
+5	23	87	pretrained language model based on BERT ( Devlin et al. , 2019 )
+5	91	165	address the lack of high - quality , large - scale labeled scientific data
+13	129	234	annotated data is difficult and expensive to collect due to the expertise required for quality annotation
+103	3	10	observe
+103	16	23	SCIBERT
+103	24	35	outperforms
+103	36	47	BERT - Base
+103	48	50	on
+103	51	119	scientific tasks ( + 2.11 F1 with finetuning and + 2.43 F1 without )
+106	0	17	Biomedical Domain
+107	3	10	observe
+107	16	23	SCIBERT
+107	24	35	outperforms
+107	36	47	BERT - Base
+107	48	50	on
+107	51	67	biomedical tasks
+107	80	95	with finetuning
+107	70	79	+ 1.92 F1
+107	110	117	without
+107	100	109	+ 3.59 F1
+108	14	24	SCIB - ERT
+108	25	33	achieves
+108	34	50	new SOTA results
+108	51	53	on
+108	54	74	BC5 CDR and ChemProt
+108	81	90	EBM - NLP
+118	0	23	Computer Science Domain
+119	3	10	observe
+119	16	23	SCIBERT
+119	24	35	outperforms
+119	36	47	BERT - Base
+119	48	50	on
+119	51	73	computer science tasks
+119	86	101	with finetuning
+119	76	85	+ 3.55 F1
+119	116	123	without
+119	106	115	+ 1.13 F1
+120	14	21	SCIBERT
+120	22	30	achieves
+120	31	47	new SOTA results
+120	48	50	on
+120	51	60	ACL - ARC
+120	71	89	NER part of SciERC
+122	0	16	Multiple Domains
+123	3	10	observe
+123	16	23	SCIBERT
+123	24	35	outperforms
+123	36	47	BERT - Base
+123	48	50	on
+123	55	72	multidomain tasks
+123	85	100	with finetuning
+123	75	84	+ 0.49 F1
+123	115	122	without
+123	105	114	+ 0.93 F1
+124	14	21	SCIBERT
+124	22	33	outperforms
+124	38	42	SOTA
+124	43	45	on
+124	46	56	Sci - Cite
+44	0	24	Named Entity Recognition
+44	27	30	NER
+45	4	19	PICO Extraction
+45	22	26	PICO
+46	4	23	Text Classification
+46	26	29	CLS
+47	4	27	Relation Classification
+47	30	33	REL
+48	4	22	Dependency Parsing
+48	25	28	DEP

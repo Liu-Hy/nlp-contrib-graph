@@ -1,0 +1,87 @@
+2	40	59	Text Classification
+4	92	136	searching , retrieving , and organizing text
+15	27	60	automatic document classification
+24	38	50	hierarchical
+24	83	87	call
+24	88	149	Hierarchical Deep Learning for Text classification ( HDLTex )
+25	0	6	HDLTex
+25	7	15	combines
+25	16	43	deep learning architectures
+25	44	52	to allow
+25	58	91	over all and specialized learning
+25	92	94	by
+25	95	126	level of the document hierarchy
+30	64	87	document classification
+41	11	15	uses
+41	50	53	for
+41	54	77	document classification
+41	78	88	taken from
+41	89	102	deep learning
+60	32	56	deep learning approaches
+60	57	66	to create
+60	69	114	hierarchical document classification approach
+66	51	74	document classification
+74	0	17	Multi - Class SVM
+74	20	39	Text classification
+84	0	40	Stacking Support Vector Machines ( SVM )
+232	4	14	processing
+232	19	26	done on
+232	29	55	Xeon E5 ? 2640 ( 2.6 GHz )
+232	56	60	with
+232	61	69	32 cores
+232	74	85	64GB memory
+232	96	105	GPU cards
+232	106	110	were
+232	111	130	N vidia Quadro K620
+232	135	153	N vidia Tesla K20c
+238	0	3	CNN
+238	4	12	performs
+238	13	23	secondbest
+238	24	27	for
+238	28	43	three data sets
+239	0	23	SVM with term weighting
+239	24	26	is
+239	27	32	third
+244	0	3	For
+244	4	25	data set W OS ? 11967
+244	32	45	best accuracy
+244	49	60	obtained by
+244	65	80	combination RNN
+244	81	84	for
+244	89	118	first level of classification
+244	123	126	DNN
+244	127	130	for
+244	135	147	second level
+246	8	28	significantly better
+246	29	33	than
+246	34	51	all of the others
+246	52	62	except for
+246	67	93	combination of CNN and DNN
+247	4	25	data set W OS ? 46985
+247	30	41	best scores
+247	52	63	achieved by
+247	64	67	RNN
+247	68	71	for
+247	101	104	RNN
+254	0	23	Document classification
+256	40	76	hierarchical document classification
+256	79	85	HDLTex
+256	93	101	combines
+257	0	10	Testing on
+257	68	73	shows
+257	79	91	combinations
+257	92	94	of
+257	95	98	RNN
+257	99	101	at
+257	106	118	higher level
+257	123	133	DNN or CNN
+257	134	136	at
+257	141	152	lower level
+257	153	161	produced
+257	162	172	accuracies
+257	173	192	consistently higher
+257	193	197	than
+257	204	217	obtainable by
+257	218	241	conventional approaches
+257	242	247	using
+257	248	265	nave Bayes or SVM

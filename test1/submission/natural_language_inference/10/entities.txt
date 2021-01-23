@@ -1,0 +1,79 @@
+2	39	55	Story Cloze Test
+6	29	36	present
+6	39	70	simpler fully - neural approach
+6	71	73	to
+6	78	94	Story Cloze Test
+6	95	100	using
+6	101	126	skip - thought embeddings
+6	127	129	of
+6	134	141	stories
+6	142	144	in
+6	147	169	feed - forward network
+6	175	192	achieves close to
+6	193	227	state - of - the - art performance
+6	241	248	without
+6	253	272	feature engineering
+7	18	29	considering
+7	30	52	just the last sentence
+7	53	55	of
+7	60	66	prompt
+7	67	77	instead of
+7	82	94	whole prompt
+7	95	101	yields
+7	102	117	higher accuracy
+7	118	122	with
+7	123	135	our approach
+64	3	6	use
+64	7	57	two layer and three layer fully connected networks
+64	58	62	with
+64	63	104	Rectified Linear ( ReLU ) non-linearities
+71	0	19	Full Context ( FC )
+71	30	33	use
+71	36	64	Gated Recurrent Unit ( GRU )
+71	65	74	to encode
+71	79	98	entire story prompt
+71	99	103	into
+71	106	131	4800 - dimensional vector
+71	134	143	add it to
+71	148	169	skipthought embedding
+71	170	172	of
+71	177	189	story ending
+71	196	206	pass it as
+71	207	212	input
+71	213	215	to
+71	220	234	neural network
+83	3	6	use
+83	7	25	cross-entropy loss
+83	30	33	SGD
+83	34	38	with
+83	39	52	learning rate
+83	53	55	of
+83	56	60	0.01
+89	4	43	3 - layer feed - forward neural network
+89	44	54	trained on
+89	59	73	validation set
+89	74	84	by summing
+89	89	114	skip - thought embeddings
+89	115	117	of
+89	122	142	last sentence ( LS )
+89	143	145	of
+89	150	162	story prompt
+89	171	177	ending
+89	178	183	gives
+89	188	201	best accuracy
+90	159	167	achieves
+90	168	208	close to state - of - the - art accuracy
+95	3	7	note
+95	17	22	model
+95	23	36	trained using
+95	37	66	only the last sentence ( LS )
+95	67	69	of
+95	74	87	story context
+95	92	107	higher accuracy
+95	108	119	compared to
+95	124	129	model
+95	135	139	uses
+95	142	145	GRU
+95	146	155	to encode
+95	160	179	full context ( FC )
+95	219	233	entire context

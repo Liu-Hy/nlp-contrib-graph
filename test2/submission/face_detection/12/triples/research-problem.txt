@@ -1,0 +1,4 @@
+(Contribution||has research problem||Region proposal mechanisms)
+(Contribution||has research problem||Rebar Head Detection)
+(Contribution||has research problem||WIDER Face Detection)
+(Contribution||has research problem||MS COCO Detection)

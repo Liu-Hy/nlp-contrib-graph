@@ -1,0 +1,4 @@
+(Contribution||has research problem||Named Entity Recognition)
+(Contribution||has research problem||Neural Architectures for Named Entity Recognition)
+(Contribution||has research problem||State - of - the - art named entity recognition systems rely heavily on hand - crafted features and domain - specific knowledge)
+(Contribution||has research problem||NER)

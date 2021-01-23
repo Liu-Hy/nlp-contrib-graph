@@ -1,0 +1,257 @@
+2	0	40	Deep contextualized word representations
+12	19	28	introduce
+12	43	82	deep contextualized word representation
+12	155	170	existing models
+12	177	199	significantly improves
+12	204	220	state of the art
+12	221	223	in
+12	246	252	across
+13	20	31	differ from
+13	32	64	traditional word type embeddings
+13	65	67	in
+13	73	83	each token
+13	87	95	assigned
+13	98	112	representation
+13	123	131	function
+13	132	134	of
+14	3	6	use
+14	7	14	vectors
+14	15	27	derived from
+14	30	48	bidirectional LSTM
+14	57	69	trained with
+14	72	114	coupled lan - guage model ( LM ) objective
+14	115	117	on
+14	120	137	large text corpus
+15	21	25	call
+15	31	87	ELMo ( Embeddings from Language Models ) representations
+16	70	90	ELMo representations
+16	91	94	are
+16	95	99	deep
+16	131	142	function of
+16	143	169	all of the internal layers
+16	170	172	of
+16	177	181	biLM
+17	23	28	learn
+17	31	64	linear combination of the vectors
+17	65	78	stacked above
+17	79	94	each input word
+17	95	98	for
+17	99	112	each end task
+17	121	129	markedly
+17	139	150	performance
+17	151	155	over
+17	161	185	using the top LSTM layer
+20	0	23	Simultaneously exposing
+20	24	44	all of these signals
+20	45	47	is
+20	48	65	highly beneficial
+20	68	76	allowing
+20	81	95	learned models
+20	107	132	types of semi-supervision
+20	142	153	most useful
+20	154	157	for
+20	158	171	each end task
+31	18	31	benefits from
+31	32	45	subword units
+31	46	64	through the use of
+31	65	87	character convolutions
+31	97	119	seamlessly incorporate
+31	120	143	multi-sense information
+31	144	148	into
+31	149	165	downstream tasks
+31	166	184	without explicitly
+31	205	229	predefined sense classes
+33	0	11	context2vec
+33	12	16	uses
+33	19	64	bidirectional Long Short Term Memory ( LSTM ;
+33	65	74	to encode
+33	79	86	context
+33	87	93	around
+33	96	106	pivot word
+43	3	7	show
+43	13	28	similar signals
+43	38	48	induced by
+43	53	86	modified language model objective
+43	87	89	of
+43	90	114	our ELMo representations
+43	167	183	downstream tasks
+43	184	192	that mix
+45	36	40	biLM
+45	41	45	with
+45	46	60	unlabeled data
+45	66	69	fix
+45	74	81	weights
+45	86	89	add
+45	90	128	additional taskspecific model capacity
+45	131	154	allowing us to leverage
+45	155	202	large , rich and universal biLM representations
+45	203	212	for cases
+45	219	248	downstream training data size
+45	249	257	dictates
+45	260	284	smaller supervised model
+99	34	40	adding
+99	41	45	ELMo
+99	46	57	establishes
+99	96	100	with
+99	101	126	relative error reductions
+99	127	139	ranging from
+99	140	148	6 - 20 %
+99	149	153	over
+99	154	172	strong base models
+107	6	12	adding
+107	13	17	ELMo
+107	18	20	to
+107	25	39	baseline model
+107	42	54	test set F 1
+107	55	66	improved by
+107	67	72	4.7 %
+107	73	77	from
+107	78	84	81.1 %
+107	85	87	to
+107	88	94	85.8 %
+107	99	130	24.9 % relative error reduction
+107	155	164	improving
+107	169	212	overall single model state - of - the - art
+107	213	215	by
+107	216	221	1.4 %
+116	10	16	adding
+116	17	21	ELMo
+116	22	24	to
+116	29	39	ESIM model
+116	40	48	improves
+116	49	57	accuracy
+116	58	60	by
+116	64	80	average of 0.7 %
+116	81	87	across
+116	88	105	five random seeds
+128	14	17	our
+128	18	44	ELMo enhanced biLSTM - CRF
+128	45	53	achieves
+128	54	66	92. 22 % F 1
+128	67	80	averaged over
+128	81	90	five runs
+131	23	28	using
+131	29	39	all layers
+131	40	50	instead of
+131	60	70	last layer
+131	71	79	improves
+131	80	91	performance
+131	92	98	across
+131	99	113	multiple tasks
+132	0	18	Sentiment analysis
+148	0	9	Averaging
+148	10	25	all biLM layers
+148	26	42	instead of using
+148	52	62	last layer
+148	63	71	improves
+148	72	75	F 1
+148	76	83	another
+148	84	89	0.3 %
+148	139	147	allowing
+148	152	162	task model
+148	163	171	to learn
+148	172	196	individual layer weights
+148	197	205	improves
+148	206	209	F 1
+148	210	217	another
+148	218	223	0.2 %
+155	23	32	including
+155	33	37	ELMo
+155	38	40	at
+155	45	51	output
+155	52	54	of
+155	59	64	biRNN
+155	65	67	in
+155	68	97	task - specific architectures
+155	98	106	improves
+155	107	122	overall results
+155	123	126	for
+155	127	137	some tasks
+156	14	23	including
+156	24	28	ELMo
+156	41	64	input and output layers
+156	65	68	for
+156	69	83	SNLI and SQuAD
+156	84	97	improves over
+156	107	118	input layer
+156	125	128	for
+156	129	132	SRL
+156	188	190	is
+156	191	198	highest
+156	210	221	included at
+156	231	242	input layer
+161	4	43	task - specific context representations
+161	48	59	likely more
+161	90	94	biLM
+164	0	4	ELMo
+164	5	13	improves
+164	14	30	task performance
+164	31	35	over
+164	36	54	word vectors alone
+178	14	45	biLM top layer rep-resentations
+178	46	50	have
+178	51	54	F 1
+178	55	57	of
+178	58	62	69.0
+178	71	80	better at
+178	81	84	WSD
+178	85	89	then
+178	94	105	first layer
+185	23	33	accuracies
+185	34	39	using
+185	44	60	first biLM layer
+185	65	76	higher than
+185	81	90	top layer
+185	93	108	consistent with
+185	122	137	deep biL - STMs
+185	138	140	in
+185	141	167	multi-task training and MT
+195	7	10	SRL
+195	22	32	ELMo model
+195	33	37	with
+195	38	41	1 %
+195	42	44	of
+195	49	61	training set
+195	85	87	as
+195	92	106	baseline model
+195	107	111	with
+195	112	116	10 %
+195	117	119	of
+199	4	24	output layer weights
+199	25	28	are
+199	29	48	relatively balanced
+199	51	55	with
+199	58	75	slight preference
+199	76	79	for
+199	84	96	lower layers
+205	0	9	Replacing
+205	14	28	Glo Ve vectors
+205	29	33	with
+205	38	58	biLM character layer
+205	59	64	gives
+205	67	85	slight improvement
+205	86	89	for
+205	90	99	all tasks
+205	159	171	improvements
+205	172	175	are
+205	176	181	small
+205	182	193	compared to
+205	198	213	full ELMo model
+206	15	23	conclude
+206	29	46	most of the gains
+206	47	49	in
+206	54	70	downstream tasks
+206	75	81	due to
+206	86	108	contextual information
+206	113	116	not
+206	121	141	sub-word information
+211	44	50	adding
+211	51	57	Glo Ve
+211	58	60	to
+211	61	67	models
+211	68	72	with
+211	73	77	ELMo
+211	88	96	provides
+211	99	119	marginal improvement
+211	120	124	over
+211	125	141	ELMo only models

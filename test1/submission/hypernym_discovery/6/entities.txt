@@ -1,0 +1,57 @@
+2	55	73	Hypernym Discovery
+4	78	101	hypernym discovery task
+5	36	85	discovering hypernym relations from a text corpus
+25	0	18	Hypernym detection
+26	0	18	Hypernym discovery
+27	12	24	divided into
+27	25	28	two
+27	40	76	General - Purpose Hypernym Discovery
+27	81	117	Domain - Specific Hypernym Discovery
+29	23	34	discovering
+29	35	43	hypernym
+29	44	46	in
+29	49	73	domain - specific corpus
+29	86	93	provide
+29	98	110	participants
+29	116	120	data
+29	121	124	for
+29	125	145	two specific domains
+29	148	165	Medical and Music
+32	25	32	propose
+32	50	58	combines
+32	61	112	path - based technique and distributional technique
+32	113	130	via concatenating
+32	131	150	two feature vectors
+32	155	169	feature vector
+32	170	187	constructed using
+32	188	212	dependency parser output
+32	219	233	feature vector
+32	234	248	obtained using
+32	249	264	term embeddings
+33	20	39	concatenated vector
+33	43	49	create
+33	52	86	binary supervised classifier model
+33	87	95	based on
+33	96	136	support vector machine ( SVM ) algorithm
+101	0	3	For
+101	8	21	three corpora
+101	24	34	our system
+101	35	43	performs
+101	44	50	better
+101	51	55	than
+101	56	67	STJU system
+101	77	85	performs
+101	86	92	better
+101	93	97	than
+101	102	112	MFH system
+101	113	115	on
+101	120	135	English corpora
+114	30	76	candidate hypernym extraction ( CHE ) coverage
+114	77	80	for
+114	81	102	English testing terms
+114	103	105	is
+114	106	118	950 ( 63 % )
+114	132	135	our
+114	146	152	unable
+114	187	190	for
+114	191	209	550 ( 37 % ) terms

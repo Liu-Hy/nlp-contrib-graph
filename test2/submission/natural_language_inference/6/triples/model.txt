@@ -1,0 +1,8 @@
+(new self - attention mechanism||for||sentence embedding)
+(sentence embedding||namely||Dynamic Self - Attention ( DSA ))
+(Model||propose||new self - attention mechanism)
+(dynamic routing||functions as||self - attention)
+(self - attention||with||dynamic weight vector)
+(Model||modify||dynamic routing)
+(recent models||in terms of||time efficiency)
+(Contribution||has||Model)

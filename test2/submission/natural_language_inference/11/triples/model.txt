@@ -1,0 +1,8 @@
+(end - to - end neural network||for||question answering)
+(Model||introduce||Dynamic Coattention Network ( DCN ))
+(coattentive encoder||captures||interactions)
+(interactions||between||question and the document)
+(dynamic pointing decoder||alternates between||estimating)
+(estimating||has||start and end)
+(Model||consists of||coattentive encoder)
+(Contribution||has||Model)

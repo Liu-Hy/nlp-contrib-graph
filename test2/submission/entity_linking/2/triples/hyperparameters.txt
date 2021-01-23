@@ -1,0 +1,7 @@
+(pre-trained||on||English uk WaC corpus)
+(English uk WaC corpus||as||initialization)
+(layer of word embeddings||has||pre-trained)
+(all architectures||employed||2 layers)
+(bidirectional LSTM||with||2048 hidden units)
+(Hyperparameters||For||all architectures)
+(Contribution||has||Hyperparameters)

@@ -1,0 +1,8 @@
+(proposed model||shows||superiority)
+(superiority||outperforms||stateof - the - arts methods)
+(proposed model||has||superiority)
+(questionanswer matching||see||strong interaction models ( attention LSTMs , our DF - LSTMs ))
+(strong interaction models ( attention LSTMs , our DF - LSTMs )||consistently outperform||weak interaction models ( NBOW , parallel LSTMs ))
+(weak interaction models ( NBOW , parallel LSTMs )||with||large margin)
+(Results||of||questionanswer matching)
+(Contribution||has||Results)

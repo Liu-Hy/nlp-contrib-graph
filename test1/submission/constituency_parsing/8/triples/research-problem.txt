@@ -1,0 +1,5 @@
+(Contribution||has research problem||Constituency Parsing)
+(Contribution||has research problem||LSTM encoder)
+(Contribution||has research problem||self - attentive architecture)
+(Contribution||has research problem||improvements)
+(Contribution||has research problem||state - of the - art discriminative constituency parser)

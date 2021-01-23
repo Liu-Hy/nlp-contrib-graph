@@ -1,0 +1,3 @@
+(two approaches||name||unsupervised , pattern - based approach)
+(Model||for||task of hypernym discovery exploits)
+(Contribution||has||Model)

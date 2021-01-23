@@ -1,0 +1,96 @@
+2	0	29	Grammar as a Foreign Language
+4	0	30	Syntactic constituency parsing
+118	6	28	single attention model
+118	29	36	gets to
+118	37	41	88.3
+118	49	67	ensemble of 5 LSTM
+118	81	89	achieves
+118	90	94	90.5
+118	95	103	matching
+118	106	135	single - model BerkeleyParser
+118	136	138	on
+119	5	15	trained on
+119	20	50	large high - confidence corpus
+119	55	76	single LSTM + A model
+119	77	85	achieves
+119	86	90	92.5
+119	98	109	outperforms
+119	123	140	best single model
+119	156	176	best ensemble result
+120	3	31	ensemble of 5 LSTM+ A models
+120	32	48	further improves
+120	54	59	score
+120	60	62	to
+120	63	67	92.8
+130	4	14	difference
+130	15	22	between
+130	27	36	F 1 score
+130	37	39	on
+130	40	49	sentences
+130	50	59	of length
+130	60	64	upto
+130	65	67	30
+130	77	81	upto
+130	82	84	70
+130	85	87	is
+130	88	91	1.3
+130	92	95	for
+130	100	114	BerkeleyParser
+130	117	120	1.7
+130	129	142	baseline LSTM
+130	149	152	0.7
+130	157	165	LSTM + A
+132	15	22	LSTM +A
+132	23	28	shows
+132	29	45	less degradation
+132	46	50	with
+132	51	57	length
+132	58	62	than
+132	63	77	BerkeleyParser
+145	42	53	initialized
+145	58	81	word - vector embedding
+145	82	86	with
+145	87	111	pre-trained word vectors
+145	112	125	obtained from
+145	126	135	word2 vec
+157	0	8	LSTM + A
+157	9	19	trained on
+157	24	48	high - confidence corpus
+157	88	96	achieved
+157	100	109	F 1 score
+157	110	112	of
+157	113	117	95.7
+157	118	120	on
+157	121	124	QTB
+157	129	133	84.6
+157	134	136	on
+157	137	140	WEB
+158	0	9	Our score
+158	10	12	on
+158	13	16	WEB
+158	20	36	higher both than
+158	41	51	best score
+158	64	72	( 83.5 )
+158	81	91	best score
+158	95	103	achieved
+158	112	139	in - house reimplementation
+158	140	142	of
+158	143	158	Berkeley Parser
+158	159	169	trained on
+158	170	201	human - annotated data ( 84.4 )
+159	14	21	achieve
+159	24	54	slightly higher score ( 84.8 )
+159	55	59	with
+159	64	90	in - house Berkeley Parser
+159	91	101	trained on
+159	104	116	large corpus
+160	0	2	On
+160	3	6	QTB
+160	13	23	95.7 score
+160	24	26	of
+160	27	35	LSTM + A
+160	44	54	lower than
+160	59	69	best score
+160	70	72	of
+160	73	76	our
+160	77	111	in - house BerkeleyParser ( 96.2 )

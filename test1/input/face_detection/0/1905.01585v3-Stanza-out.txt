@@ -1,0 +1,148 @@
+title
+Accurate Face Detection for High Performance
+abstract
+Face detection has witnessed significant progress due to the advances of deep convolutional neural networks ( CNNs ) .
+Its central issue in recent years is how to improve the detection performance of tiny faces .
+To this end , many recent works propose some specific strategies , redesign the architecture and introduce new loss functions for tiny object detection .
+In this report , we start from the popular one - stage RetinaNet [ 20 ] approach and apply some recent tricks to obtain a high performance face detector namely AInnoFace .
+Specifically , we apply the Intersection over Union ( IoU ) loss function [ 45 ] for regression , employ the two - step classification and regression [ 4 ] for detection , revisit the data augmentation based on data - anchor - sampling [ 32 ] for training , utilize the max - out operation [ 54 ] for classification and use the multi -scale testing strategy [ 54 ] for inference .
+As a consequence , the proposed face detection method achieves state - of - the - art performance on the most popular and challenging face detection benchmark WIDER FACE [ 43 ] dataset .
+Introduction
+Face detection is a tremendously important field in computer vision needed for face recognition , sentiment analysis , video surveillance , and many other fields .
+Given an arbitrary image , the goal of face detection is to determine whether there are any faces in the image , and if present , return the image location and extent of each face .
+The recent issue of face detection is how to improve the detection performance in unrestricted scenarios .
+Because detecting faces in real - world images has many difficulties including occlusion , significant scale variation , different illumination conditions , various facial poses , rich facial expressions , etc .
+Many works are devoted to solving this issue and great progress has been achieved with the development of deep convolutional neural networks ( CNNs ) .
+For example , the average precision ( AP ) performance on the challenging WIDER FACE dataset has been improved from 40 % to 90 % over recent years .
+To improve the performance of face detection in unrestricted scenarios where exists plenty of tiny faces , some works combine traditional methods ( e.g. , cascade - based mechanism and part - based in DPM ) with deep learning methods ( e.g. , CNN ) to perform face detection .
+A number of works resort to the context information around the face region to find tiny faces based on the Faster R - CNN and SSD detectors .
+Several works redesign the architecture of modern object detection to better detect tiny faces .
+A series of works propose some special strategies for tiny faces into the generic object detection methods to improve face detection performance .
+There are many works present some new data augmentations for tiny faces to improve the performance .
+Some works introduce the attention mechanism on the feature maps to focus on face regions for better detection performance .
+In this work , we first modify the popular one - stage RetinaNet method to perform face detection as our baseline model .
+Then some recent tricks are applied on this baseline to develop a high performance face detector namely AInnoFace :
+( 1 ) Employing the two - step classification and regression for detection ; ( 2 ) Applying the Intersection over Union ( IoU ) loss function for regression ; ( 3 ) Revisiting the data augmentation based on data - anchor - sampling for training ; ( 4 ) Utilizing the max - out operation for robuster classification ; ( 5 ) Using the multi-scale testing strategy for inference .
+Consequently , we achieve some new state - of - the - art AP results on the challenging face detection benchmark WIDER FACE dataset .
+Related Work
+Traditional Method
+Face detection has been extensively studied from its emergence in the 1990s to the present because of its wide practical applications .
+The pioneering work of Viola and Jones uses the Haarlike feature and the AdaBoost strategy to train several cascaded face detectors , achieving a very good tradeoff between accuracy and efficiency in some simple and fixed scenarios .
+Afterwards , subsequent works have made great progress by developing more advanced features and more powerful classifiers .
+Apart from the boosted cascade methods , several studies introduce another famous framework of Deformable Part Model ( DPM ) to the filed of face detection task , which detect faces by modelling the relationship of deformable facial parts and achieve promising performance in some simple application scenarios .
+However , these traditional face detectors are unreliable in complex scenarios because they depend on non-robust hand - crafted features and classifiers .
+Deep Learning Method
+Deep learning approaches significantly boost the recent progress in the face detection filed and the CNN - based face detectors have achieved the highest performance in the last few years .
+The cascade CNN - based methods train a series of CNN models separately or jointly to perform face detection , and achieve promising accuracy and efficiency simultaneously .
+After that , MTCNN and PCN add another extra branch to detect five facial landmarks and predict face angles via the multi-task learning in a coarse - to - fine manner under a cascade - style structure .
+Faceness obtains different scores according to the spatial structure and arrangement of facial parts to detect faces under severe occlusion and unconstrained pose variations .
+LDCF + utilizes the boosted decision tree classifier to detect faces .
+UnitBox introduces an Intersection - over - Union ( IoU ) loss to directly minimize the IoUs of the predictions and the ground - truths for more accurate location .
+Scale
+Face detects different scales of faces via applying a specialized set of CNNs with different structures .
+SAFD develops a scale proposal stage to automatically normalize face sizes prior to detection .
+Hu et al .
+explore the contextual information with some separate detectors for different scales to find tiny faces .
+S 2 AP finds face via paying attention to specific scales in image pyramid and valid locations in each scales layer .
+Zhu et al. use the Expected Max Overlapping ( EMO ) score to evaluate the quality of anchor setting .
+Bai et al.
+generate a clear super- resolution face from a blurry small one via to GAN to detect blurry small faces .
+Besides , many state - of - the - are face detectors are evolved from generic object detection methods including the two - stage approach ( Faster R - CNN , R - FCN and FPN ) and the one - stage approach ( SSD , RefineDet and RetinaNet ) .
+Based on Faster R - CNN and R - FCN , some face detection methods ( e.g. , Face R - CNN , Face R - FCN , CMS - RCNN and FDNet ) design several specific training and testing strategies with the consideration of the characteristics of face detection .
+Similar to FPN , FANet aggregates higher - level features to augment lower - level features for face detection .
+Based on SSD , DCFPN and FaceBoxes design a lightweight face detection network to achieve CPU real - time speed with promising result .
+In contrast , high performance face detectors including S 3 FD , SFDet , SSH , PyramidBox and DSFD equip SSD with some specific strategies for better detection of small faces , such as architecture diagram , training strategy , contextual reasoning and multiple layers exploiting .
+Besides , FAN and DFS use different types of attention mechanism on RetinaNet to handle hard faces .
+SRN combines the multi-step detection in RefineDet and the focal loss in RetinaNet to perform efficient and accurate face detection .
+After that , VIM - FD and ISRN combine many previous techniques on SRN and achieve new state - of - the - art performance ..
+( a ) Backbone : a feedforward ResNet - 152 architecture extracts the multi-scale feature maps .
+( b ) Neck : a 6 - level Feature Pyramid Network ( FPN ) structure generates a richer multi-scale convolutional feature pyramid .
+After that , two shared subnetworks are attached , one for classifying anchor boxes ( c ) and one for regressing from anchor boxes to ground - truth object boxes ( d ) .
+At the end , we use the focal loss for the binary classification and the IoU loss for the regression .
+Method
+Starting from the RetinaNet face detector baseline , we apply some recently proposed strategies to achieve state - of - the - art performance on the challenging WIDER FACE dataset .
+RetinaNet Baseline
+RetinaNet is one of the most popular one - stage object detection methods .
+One - stage detectors that are applied over a regular , dense sampling of possible object locations have the potential to be faster and simpler , but have trailed the accuracy of two - stage detectors because of extreme class imbalance encountered during training .
+To solve this issue , the focal loss is proposed in Retina Net as follow :
+and
+where y ?
+{ 1 } specifies the ground - truth class , p ?
+[ 0 , 1 ] is the model 's estimated probability for the class with label y = 1 , ?
+t is a balanced factor and ?
+a tunable focusing parameter .
+The focal loss is the reshaping of cross entropy loss such that it down - weights the loss assigned to well - classified examples .
+The novel focal loss focuses training on a sparse set of hard examples and prevents the vast number of easy negatives from overwhelming the detector during training .
+In this report , we take the modified RetinaNet shown in as our baseline , which is a single and unified network composed of a backbone network , a neck network and two task - specific subnetworks .
+The backbone and neck networks are responsible for computing a multi-scale convolutional feature maps over an entire input image .
+The first subnet performs classification on the backbones output and the second subnet performs convolution bounding box regression .
+Specifically , we adopt the ResNet - 152 with 6 - level feature pyramid structure as our backbone network .
+We follow the way in FPN to generate the 6 - level feature maps ( P2 to P7 ) for detection .
+Io U Regression Loss
+The object detection task consists of the classification subtask and the regression subtask .
+For regression , the smooth L1 loss is the common loss function used to reduce the difference between anchor boxes and ground - truth bounding boxes , and the Intersection over Union ( IoU ) is the most popular evaluation metric used in the object detection benchmarks .
+However , as indicated in , there is a gap between optimizing the commonly used smooth L1 distance losses for regressing the parameters of a bounding box and maximizing this IoU metric value .
+The optimal objective fora metric should be the metric itself , so we follow the UnitBox to minimize the difference between the predictions and the ground - truths via directly using IoU as the regression loss .
+The IoU regression loss function is defined as below :
+where B p = ( x 1 , y 1 , x 2 , y 2 ) and B gt = ( x * 1 , y * 1 , x * 2 , y * 2 ) are the predicted bounding box and the ground - truth bounding box respectively , Intersection ( ) and U nion ( ) indicate the intersection and union area between B p and B gt .
+Selective Refinement Network
+As described in Selective Refinement Network ( SRN ) , using RetinaNet to perform face detection still exists two problems : ( a ) low recall efficiency : the precision is not high enough at high recall rates , i.e. , the Precision - Recall curve extends far enough to the right but not steep enough ; ( b ) low location accuracy : the performance drops dramatically as the IoU threshold increases , i.e. , the accuracy of the bounding box location needs to be improved .
+To solve the aforementioned two issues , Selective Two - step Classification ( STC ) and Selective Two - step Regression ( STR ) are proposed in SRN and we follow these designs to further improve the performance of our face detector .
+STC conducts two - step classification on three low level detection layers to filter out most simple negatives and reduce the search space for the subsequent classifier .
+It s loss function is :
+STR performs is two - step regression on three high level detection layers to adjust anchors and provide better initialization for the subsequent regressor .
+It s loss function is :
+where i is the anchor index , pi / q i and x i /t i are the prediction of classification and regression in the first / second step , l * i /g * i are the ground truth of class / location , N s 1 / N s 2 are the number of positive anchors in the first / second step , ?/?
+are the collection of classification / regression samples for the first step and ?
+is the collection of samples for the second step , L FL is the sigmoid focal loss and [ l * i = 1 ] L r indicates that the IoU regression loss is computed only for positive anchors .
+Data Augmentation
+Date augmentation is of importance for one - stage detectors to construct a robust model to adapt to variations of objects , especially for face detection where has plenty tiny faces .
+Following most of the face detectors , we randomly expand and crop the original training images with additional random photometric distortion and flipping to generate the training samples .
+Besides , with probability of 0.5 , we replace the above random cropping operation with the anchor - based sampling like data - anchor - sampling in PyramidBox to diversify the scale distribution of training samples .
+The anchor - based sampling operation first randomly selects a face of size S face in a batch , then finds its nearest anchor scale S anchor .
+After that , it chooses a random scale S random around the nearest anchor scale .
+Finally , it resizes the image by S * = S random / S face and randomly crops a standard size of the training size containing the selected face to get the anchor-sampled training data .
+Max - out Label
+To reduce the tiny false positives from background regions , the max - out operation for the background class is introduced in , and then the following work uses this max - out operation on both foreground and background classes .
+In the proposed face detection method , the max - out operation is applied in the classification subnet to recall more faces and reduce false positives simultaneously .
+To be more specific , the classification subnet first predicts c p +c n scores for each anchor , and then selects max { c p } and max {c n } as the final face and no - face confidence score to compute the classification loss .
+Empirically , we set c p = 3 and c n = 3 to train our final model .
+Multi-scale Testing
+Since there are plenty of tiny faces in the challenging WIDER FACE dataset , the multi-scale testing strategy is useful to improve the performance .
+We use the open source code 1 to conduct the multiscale testing during inference .
+It inputs the image to the trained model multiple times with different sizes and then merge these detection results with the bounding box voting operation .
+Experiment
+Experimental Dataset
+We verify the proposed AInnoFace detector on the WIDER FACE dataset , which is a popular face detection benchmark dataset and whose images are selected from the publicly available WIDER dataset .
+The WIDER FACE dataset contains 32 , 203 images and 393 , 703 annotated face bounding boxes with a high degree of variability in scale , pose , occlusion , expression , makeup and illumination as depicted in .
+All the images are organized based on 61 event classes and are randomly selected from each event class by 40%/ 10 % / 50 % as training , validation and testing subsets .
+Based on the detection rate of EdgeBox , the validation and testing subsets are divided into three difficulty levels :
+Easy , Medium , Hard .
+The Average Precision ( AP ) is adopted as the evaluation metric .
+Following MALF and Caltech datasets , this dataset does not release bounding box ground truth for the testing images and researchers are required to submit final prediction files to get the AP performance on the testing subset .
+The proposed method is trained on the training subset and evaluated on both validation and testing subsets .
+Anchor Detail
+Following we set two 2S and 2 ?
+2S anchor scales ( S is the downsampling factor of detection layer ) and one 1.25 aspect ratio .
+Thus , there are A = 2 anchors at each location , covering the scale of 8 ? 362 pixels in the 1024 1024 input image .
+During the training phase , anchors are assigned to ground - truth boxes using the ?
+p IoU threshold and to background if their IoU is in [ 0 , ? n ) .
+The rest anchors in [ ? n , ? p ) are ignored .
+We set ? n = 0.3 and ? p = 0.7 for the first step , and ? n = 0.4 and ? p =
+0.5 for the second step .
+Optimization Detail
+The backbone network in the proposed AInnoFace detector is initialized by the pretrained model on the ImageNet dataset .
+We use the " xavier " method to randomly initialize the parameters in the newly added convolutional layers .
+The stochastic gradient descent ( SGD ) algorithm is used to fine - tune the model with 0.9 momentum , 0.0001 weight decay and batch size 32 .
+The warmup strategy is applied to gradually ramp up the learning rate from 0.0003125 to 0.01 at the first 5 epochs .
+After that , it switches to the regular learning rate schedule , i.e. , dividing by 10 at 100 and 120 epochs and ending at 130 epochs .
+The full training and testing codes are built on the PyTorch library .
+shows the comparison of the proposed AInnoFace detector with twenty - seven state - of - the - art methods on both the validation and testing subsets based on the precision - recall curve and AP .
+As shown in , our face detector sets some new state - of - the - art results based on the AP score across the three subsets on both validation and testing subsets , i.e. , 97.0 % ( Easy ) , 96.1 % ( Medium ) and 91.8 % ( Hard ) for validation subset , and 96.5 % ( Easy ) , 95.7 % ( Medium ) and 91.2 % ( Hard ) for testing subset .
+These results outperform all the compared state - of - the - art methods and demonstrate the superiority of our AInnoFace detector .
+Evaluation Result
+Conclusion
+In this report , we present a high performance face detector by equipping the popular one - stage RetinaNet method with some recent tricks :
+( 1 ) Employing the two - step classification and regression for detection ; ( 2 ) Applying the Intersection over Union ( IoU ) loss function for regression ;
+( 3 ) Revisiting the data augmentation based on data - anchor - sampling for training ; ( 4 ) Utilizing the max - out operation for robuster classification ; ( 5 ) Using the multi-scale testing strategy for inference .
+Experiments on the WIDER FACE dataset demonstrate that the proposed AInnoFace detector achieves the state - of - the - art detection performance .

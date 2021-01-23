@@ -1,0 +1,105 @@
+2	42	54	Edge Devices
+4	0	14	Face detection
+14	27	42	proposed method
+14	43	54	can achieve
+14	55	72	superior accuracy
+14	75	80	WIDER
+21	0	14	Face detection
+31	0	14	Face detection
+33	37	71	aggregate channel features ( ACF )
+33	78	81	can
+33	82	100	take advantages of
+33	101	117	channel features
+37	0	19	Two - stage methods
+37	20	30	consist of
+37	31	49	proposal selection
+37	90	96	mainly
+42	19	26	propose
+42	29	66	Light and Fast Face Detector ( LFFD )
+42	67	70	for
+42	71	83	edge devices
+42	86	108	considerably balancing
+42	127	145	running efficiency
+211	3	7	flip
+211	12	25	cropped image
+211	26	30	with
+211	31	42	probability
+211	43	45	of
+211	46	49	0.5
+214	0	3	For
+214	4	23	face classification
+214	29	32	use
+214	33	40	softmax
+214	41	45	with
+214	46	66	cross - entropy loss
+214	67	71	over
+214	72	83	two classes
+218	0	3	For
+218	4	19	bbox regression
+218	25	30	adopt
+218	31	38	L2 loss
+227	3	13	initialize
+227	14	28	all parameters
+227	29	33	with
+227	34	47	xavier method
+227	52	57	train
+227	62	69	network
+227	70	74	from
+229	4	23	optimization method
+229	24	26	is
+229	27	30	SGD
+229	31	35	with
+229	36	48	0.9 momentum
+229	51	68	zero weight decay
+229	73	83	batch size
+229	84	86	32
+232	4	25	initial learning rate
+232	26	28	is
+232	29	32	0.1
+233	3	8	train
+233	9	29	1,500,000 iterations
+233	34	40	reduce
+233	45	58	learning rate
+233	59	73	by multiplying
+233	74	77	0.1
+233	78	80	at
+233	81	98	iteration 600,000
+234	4	17	training time
+234	18	20	is
+234	21	33	about 5 days
+234	34	38	with
+234	39	61	two NVIDIA GTX 1080 TI
+268	0	33	DSFD , Pyramid Box , S3FD and SSH
+268	34	45	can achieve
+268	46	59	high accuracy
+268	60	64	with
+268	65	78	marginal gaps
+285	11	22	Pyramid Box
+285	23	30	obtains
+285	35	47	best results
+285	48	50	on
+285	51	61	Hard parts
+285	91	94	SSH
+289	7	10	see
+289	20	27	results
+289	28	30	on
+289	31	52	Medium and Hard parts
+289	57	65	improved
+289	66	76	remarkably
+292	15	35	proposed method LFFD
+292	36	48	consistently
+292	61	73	Face - Boxes
+292	102	126	state of the art methods
+298	22	35	FaceBoxes 3.2
+298	49	59	instead of
+298	60	69	FaceBoxes
+305	4	17	proposed LFFD
+305	18	22	runs
+305	27	34	fastest
+305	35	37	at
+305	38	46	38402160
+305	53	66	FaceBoxes 3.2
+305	67	74	obtains
+305	79	92	highest speed
+305	93	95	at
+305	96	119	other three resolutions

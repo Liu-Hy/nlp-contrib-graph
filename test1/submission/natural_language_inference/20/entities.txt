@@ -1,0 +1,243 @@
+2	25	43	Text Understanding
+8	0	3	NTI
+8	4	14	constructs
+8	17	32	full n-ary tree
+8	33	46	by processing
+8	51	61	input text
+8	62	66	with
+8	71	84	node function
+8	85	87	in
+8	90	109	bottom - up fashion
+19	19	28	introduce
+19	29	57	Neural Tree Indexers ( NTI )
+22	39	53	tree structure
+22	54	57	for
+22	58	61	NTI
+22	62	64	is
+22	65	72	relaxed
+22	107	112	input
+22	123	125	to
+24	7	39	sequential leaf node transformer
+24	40	47	such as
+24	48	52	LSTM
+24	56	62	chosen
+24	69	80	NTI network
+24	81	86	forms
+24	89	117	sequence - tree hybrid model
+24	118	137	taking advantage of
+24	143	179	conditional and compositional powers
+24	180	182	of
+24	183	214	sequential and recursive models
+29	6	9	NTI
+29	10	16	learns
+29	17	32	representations
+29	33	36	for
+29	41	73	premise and hypothesis sentences
+29	83	94	attentively
+29	95	112	combines them for
+29	113	127	classification
+136	3	10	trained
+136	11	14	NTI
+136	15	20	using
+136	21	25	Adam
+137	4	42	pre-trained 300 - D Glove 840B vectors
+137	48	60	obtained for
+137	65	80	word embeddings
+139	4	19	word embeddings
+139	24	36	fixed during
+139	37	45	training
+140	4	14	embeddings
+140	15	18	for
+140	19	43	out - ofvocabulary words
+140	49	55	set to
+140	56	67	zero vector
+144	4	8	size
+144	9	11	of
+144	12	24	hidden units
+144	25	27	of
+144	32	43	NTI modules
+144	49	55	set to
+144	56	59	300
+145	16	30	regularized by
+145	37	45	dropouts
+145	53	69	l 2 weight decay
+147	0	26	Natural Language Inference
+152	20	23	set
+152	28	38	batch size
+152	39	41	to
+152	42	44	32
+153	4	20	initial learning
+153	27	50	regularization strength
+153	59	74	number of epoch
+153	75	77	to
+153	81	88	trained
+153	104	114	each model
+154	0	11	NTI - SLSTM
+154	65	69	uses
+154	74	88	S - LSTM units
+154	89	92	for
+154	97	119	non-leaf node function
+155	3	6	set
+155	11	32	initial learning rate
+155	33	35	to
+155	36	42	1e - 3
+155	47	50	l 2
+155	51	71	regularizer strength
+155	72	74	to
+155	75	82	3 e - 5
+155	89	94	train
+155	99	104	model
+155	105	108	for
+155	109	118	90 epochs
+156	4	14	neural net
+156	19	33	regularized by
+156	34	53	10 % input dropouts
+156	62	82	20 % output dropouts
+157	0	18	NTI - SLSTM - LSTM
+157	24	27	use
+157	33	36	for
+157	41	66	leaf node function f leaf
+162	0	45	NTI - SLSTM node - by - node global attention
+165	3	6	set
+165	11	32	initial learning rate
+165	33	35	to
+165	36	42	3e - 4
+165	47	50	l 2
+165	51	71	regularizer strength
+165	72	74	to
+165	75	82	1 e - 5
+165	89	94	train
+165	99	104	model
+165	105	108	for
+165	109	118	40 epochs
+166	4	14	neural net
+166	19	33	regularized by
+166	34	53	15 % input dropouts
+166	62	82	15 % output dropouts
+167	0	43	NTI - SLSTM node - by - node tree attention
+171	3	6	set
+171	11	32	initial learning rate
+171	33	35	to
+171	36	42	3e - 4
+171	47	50	l 2
+171	51	71	regularizer strength
+171	72	74	to
+171	75	82	1 e - 5
+171	89	94	train
+171	99	104	model
+171	105	108	for
+171	109	118	10 epochs
+172	4	14	neural net
+172	19	33	regularized by
+172	34	53	10 % input dropouts
+172	62	82	15 % output dropouts
+173	0	50	NTI - SLSTM - LSTM node - by - node tree attention
+175	0	49	Tree matching NTI - SLSTM - LSTM global attention
+175	63	79	first constructs
+175	84	106	premise and hypothesis
+175	128	132	with
+175	137	161	NTI - SLSTM - LSTM model
+175	171	179	computes
+175	186	201	matching vector
+175	202	210	by using
+175	215	254	global attention and an additional LSTM
+180	3	6	set
+180	11	32	initial learning rate
+180	33	35	to
+180	36	42	3e - 4
+180	47	50	l 2
+180	51	71	regularizer strength
+180	72	74	to
+180	75	82	3 e - 5
+180	89	94	train
+180	99	104	model
+180	105	108	for
+180	109	118	20 epochs
+181	4	14	neural net
+181	19	33	regularized by
+181	34	53	20 % input dropouts
+181	62	82	20 % output dropouts
+182	0	47	Tree matching NTI - SLSTM - LSTM tree attention
+182	53	60	replace
+182	65	81	global attention
+182	82	86	with
+182	91	105	tree attention
+184	0	54	Full tree matching NTI - SLSTM - LSTM global attention
+184	120	129	attending
+184	203	217	attending over
+184	238	247	regarding
+184	248	270	each premise tree node
+193	4	14	best score
+193	28	30	is
+193	31	46	87.3 % accuracy
+193	47	60	obtained with
+193	65	93	full tree matching NTI model
+195	12	16	show
+195	22	33	NTI - SLSTM
+195	34	42	improved
+195	47	58	performance
+195	59	61	of
+195	66	89	sequential LSTM encoder
+195	90	92	by
+195	93	110	approximately 2 %
+196	19	24	using
+196	25	29	LSTM
+196	30	32	as
+196	33	51	leaf node function
+196	52	60	helps in
+196	61	69	learning
+196	70	92	better representations
+197	0	3	Our
+197	4	22	NTI - SLSTM - LSTM
+197	23	25	is
+197	28	40	hybrid model
+197	47	54	encodes
+197	57	78	sequence sequentially
+197	79	86	through
+197	91	109	leaf node function
+197	119	142	hierarchically composes
+197	147	169	output representations
+198	4	37	node - by - node attention models
+198	38	45	improve
+198	50	61	performance
+221	4	39	Deep LSTM and LSTM attention models
+221	40	50	outperform
+221	55	75	previous best result
+221	76	78	by
+221	81	93	large margin
+221	96	110	nearly 5 - 6 %
+222	0	4	NASM
+222	5	13	improves
+222	18	24	result
+222	37	41	sets
+222	44	59	strong baseline
+222	60	72	by combining
+222	73	96	variational autoencoder
+222	97	101	with
+222	106	120	soft attention
+263	15	31	attention degree
+263	32	35	for
+263	40	62	single word expression
+263	63	67	like
+263	68	77	" stone "
+263	107	112	lower
+263	113	128	to compare with
+263	129	146	multiword phrases
+276	12	21	NTI model
+276	25	31	robust
+276	32	34	to
+276	39	60	length of the phrases
+288	0	4	When
+288	9	21	padding size
+288	22	24	is
+288	25	42	less ( up to 10 )
+288	49	73	NTI - SLSTM - LSTM model
+288	74	82	performs
+288	83	89	better
+290	11	25	do not observe
+290	30	58	significant performance drop
+290	59	62	for
+290	63	74	both models
+290	75	77	as
+290	82	94	padding size
+290	95	104	increases

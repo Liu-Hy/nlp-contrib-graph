@@ -1,0 +1,6 @@
+(Contribution||has research problem||system)
+(Contribution||has research problem||93.6 F 1)
+(Contribution||has research problem||supervised reranking)
+(Contribution||has research problem||94.2 F 1)
+(Contribution||has research problem||semi-supervised reranking)
+(Contribution||has research problem||Transition - based constituent parsing)

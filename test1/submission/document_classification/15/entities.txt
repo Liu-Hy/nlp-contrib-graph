@@ -1,0 +1,148 @@
+2	33	70	SEMI - SUPERVISED TEXT CLASSIFICATION
+6	3	9	extend
+6	10	54	adversarial and virtual adversarial training
+6	55	57	to
+6	62	73	text domain
+6	74	85	by applying
+6	86	99	perturbations
+6	100	102	to
+6	107	122	word embeddings
+6	123	125	in
+6	128	152	recurrent neural network
+6	153	167	rather than to
+6	172	193	original input itself
+13	3	11	improves
+13	21	31	robustness
+13	32	34	to
+13	35	55	adversarial examples
+13	67	93	generalization performance
+13	94	97	for
+13	98	115	original examples
+16	8	15	done by
+16	16	28	regularizing
+16	33	38	model
+16	47	52	given
+16	56	63	example
+16	70	75	model
+16	93	117	same output distribution
+16	118	120	as
+16	124	135	produces on
+16	139	163	adversarial perturbation
+16	164	166	of
+16	172	179	example
+22	103	109	define
+22	114	126	perturbation
+22	127	129	on
+22	130	156	continuous word embeddings
+22	157	167	instead of
+22	168	188	discrete word inputs
+100	16	20	used
+100	21	31	TensorFlow
+100	32	34	on
+100	35	39	GPUs
+101	26	92	https://github.com/tensorflow/models/tree/master/adversarial_text.
+113	3	10	applied
+113	11	28	gradient clipping
+113	29	33	with
+113	34	38	norm
+113	39	45	set to
+113	46	49	1.0
+113	50	52	on
+113	53	71	all the parameters
+113	72	78	except
+113	79	94	word embeddings
+114	0	9	To reduce
+114	10	17	runtime
+114	18	20	on
+114	21	24	GPU
+114	30	34	used
+114	35	60	truncated backpropagation
+114	61	66	up to
+114	67	76	400 words
+114	77	81	from
+114	82	97	each end of the
+114	98	106	sequence
+115	0	3	For
+115	4	18	regularization
+115	19	21	of
+115	26	50	recurrent language model
+115	56	63	applied
+115	64	71	dropout
+115	72	74	on
+115	79	99	word embedding layer
+115	100	104	with
+115	105	121	0.5 dropout rate
+116	0	3	For
+116	8	32	bidirectional LSTM model
+116	38	42	used
+116	43	64	512 hidden units LSTM
+116	65	68	for
+116	78	121	standard order and reversed order sequences
+116	131	135	used
+116	136	167	256 dimensional word embeddings
+116	178	189	shared with
+116	190	207	both of the LSTMs
+119	63	65	on
+119	66	92	classification performance
+124	4	16	optimization
+124	28	32	used
+124	37	51	Adam optimizer
+124	54	58	with
+124	59	87	0.0005 initial learning rate
+125	0	11	Batch sizes
+125	12	15	are
+125	16	18	64
+125	19	21	on
+125	22	26	IMDB
+125	29	33	Elec
+125	36	40	RCV1
+125	47	50	128
+125	51	53	on
+125	54	61	DBpedia
+129	9	16	applied
+129	17	34	gradient clipping
+129	35	39	with
+129	44	48	norm
+129	49	51	as
+129	52	55	1.0
+129	56	58	on
+129	59	77	all the parameters
+129	78	84	except
+129	89	103	word embedding
+148	0	33	Every adversarial training method
+148	34	46	outperformed
+148	47	79	every random perturbation method
+159	0	3	For
+159	8	47	baseline and random perturbation method
+159	54	70	cosine distances
+159	71	75	were
+159	76	91	0.361 and 0.377
+166	11	30	our proposed method
+166	31	56	improved test performance
+166	57	59	on
+166	64	79	baseline method
+167	0	29	Our unidirectional LSTM model
+167	30	38	improves
+167	46	69	state of the art method
+167	74	84	our method
+167	111	127	further improves
+167	128	135	results
+167	136	138	on
+167	139	143	RCV1
+170	0	20	Adversarial training
+170	25	32	able to
+170	33	40	improve
+170	41	45	over
+170	50	65	baseline method
+170	72	76	with
+170	125	133	achieved
+170	134	161	almost the same performance
+170	162	164	as
+170	169	200	current state of the art method
+180	7	15	see that
+180	20	35	baseline method
+180	48	56	achieved
+180	57	104	nearly the current state of the art performance
+180	111	130	our proposed method
+180	131	144	improves from
+180	149	164	baseline method

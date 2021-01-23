@@ -1,0 +1,7 @@
+(ELMo||to||our model ( without DEBS ))
+(ELMo||uses||word embedding)
+(our model ( without DEBS )||uses||word embedding)
+(word embedding||as||weighted)
+(ELMo||has||our model ( without DEBS ))
+(Ablation analysis||adopt||ELMo)
+(Contribution||has||Ablation analysis)

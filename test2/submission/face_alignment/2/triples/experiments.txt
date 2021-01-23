@@ -1,0 +1,5 @@
+(400000 updates||with||batch size 8)
+(400000 updates||with||alternating updates)
+(batch size 8||for||each database)
+(400000 updates||with||alternating updates)
+(Contribution||has||Experiments)

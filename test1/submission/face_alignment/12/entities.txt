@@ -1,0 +1,298 @@
+4	0	14	Face alignment
+6	59	82	very dense 3D alignment
+6	83	86	for
+6	87	108	largepose face images
+21	11	15	DeFA
+21	23	28	offer
+21	29	49	dense correspondence
+21	59	66	between
+21	67	82	two face images
+21	94	101	between
+21	106	120	face image and
+21	125	149	canonical 3 D face model
+24	28	35	develop
+24	40	44	idea
+24	45	47	of
+24	48	55	fitting
+24	79	81	to
+24	85	90	image
+24	93	98	where
+24	103	135	model with thousands of vertexes
+24	136	141	makes
+24	158	172	face alignment
+24	173	178	to go
+24	179	193	very " dense "
+38	54	59	learn
+38	62	65	CNN
+38	66	72	to fit
+38	75	89	3 D face model
+38	90	92	to
+38	97	107	face image
+41	10	25	first challenge
+41	26	28	of
+41	29	54	limited landmark labeling
+41	60	67	propose
+41	71	77	employ
+41	78	100	additional constraints
+42	3	10	include
+42	11	29	contour constraint
+42	30	35	where
+42	40	47	contour
+42	48	50	of
+42	55	70	predicted shape
+42	88	96	detected
+42	97	114	2 D face boundary
+42	121	136	SIFT constraint
+42	147	162	SIFT key points
+42	163	174	detected on
+42	175	190	two face images
+42	191	193	of
+42	198	213	same individual
+42	221	227	map to
+42	232	245	same vertexes
+42	246	248	on
+42	253	266	3D face model
+43	0	16	Both constraints
+43	21	36	integrated into
+43	41	53	CNN training
+43	54	56	as
+43	57	87	additional loss function terms
+43	90	95	where
+43	100	123	end - to - end training
+43	124	134	results in
+43	138	150	enhanced CNN
+43	151	154	for
+43	155	177	3 D face model fitting
+46	65	84	identify and define
+46	98	100	of
+46	101	121	dense face alignment
+46	124	135	which seeks
+46	136	145	alignment
+46	146	148	of
+46	149	169	face - region pixels
+46	170	176	beyond
+46	181	204	sparse set of landmarks
+48	0	10	To achieve
+48	11	31	dense face alignment
+48	37	44	develop
+48	47	85	novel 3 D face model fitting algorithm
+48	91	97	adopts
+48	98	118	multiple constraints
+48	123	132	leverages
+48	133	150	multiple datasets
+196	16	19	use
+196	20	29	300W - LP
+196	30	38	to train
+196	39	55	our DeFA network
+196	56	60	with
+196	61	88	parameter constraint ( PL )
+197	29	36	include
+197	37	44	samples
+197	45	49	from
+197	76	87	to continue
+197	92	100	training
+197	101	103	of
+197	104	115	our network
+197	116	120	with
+197	125	171	additional landmark fitting constraint ( LFC )
+198	16	27	fine - tune
+198	32	37	model
+198	38	42	with
+198	43	66	SPC and CFC constraints
+199	0	3	For
+199	4	31	large - pose face alignment
+199	37	48	fine - tune
+199	53	58	model
+199	59	63	with
+199	64	88	AFLW - LFPA training set
+200	0	3	For
+200	4	33	near - frontal face alignment
+200	39	50	fine - tune
+200	55	60	model
+200	61	65	with
+200	66	84	300 W training set
+201	4	11	samples
+201	12	14	at
+201	19	30	third stage
+201	35	44	augmented
+201	45	53	20 times
+201	54	58	with
+201	59	94	up to 20 random in - plain rotation
+201	99	116	15 % random noise
+201	117	119	on
+201	124	154	center , width , and length of
+203	13	20	network
+203	26	29	use
+203	30	53	20 , 10 , and 10 epochs
+203	54	57	for
+203	58	70	stage 1 to 3
+204	3	6	set
+204	11	39	initial global learning rate
+204	40	42	as
+204	43	50	1 e ? 3
+204	57	63	reduce
+204	68	81	learning rate
+204	82	84	by
+204	87	99	factor of 10
+204	100	104	when
+204	109	123	training error
+204	124	134	approaches
+204	137	144	plateau
+205	4	18	minibatch size
+205	19	21	is
+205	22	24	32
+205	27	39	weight decay
+205	40	42	is
+205	43	48	0.005
+205	59	70	leak factor
+205	71	74	for
+205	75	85	Leaky ReLU
+205	86	88	is
+205	89	93	0.01
+206	17	39	regularization weights
+208	0	2	lm
+208	3	6	for
+208	7	10	LFC
+208	11	13	is
+208	14	15	5
+209	6	9	LFC
+209	12	23	SPC and CFC
+209	28	34	set as
+209	35	46	5 , 1 and 1
+218	0	3	For
+218	4	15	AFLW - LFPA
+218	18	28	our method
+218	29	40	outperforms
+218	45	57	best methods
+218	58	62	with
+218	65	77	large margin
+218	78	80	of
+218	81	99	17.8 % improvement
+219	0	3	For
+219	4	17	AFLW2000 - 3D
+219	20	30	our method
+219	36	41	shows
+219	44	61	large improvement
+220	15	18	for
+220	19	25	images
+220	26	30	with
+220	31	40	yaw angle
+220	41	43	in
+220	44	55	[ 60 , 90 ]
+220	58	68	our method
+220	69	77	improves
+220	82	93	performance
+220	94	96	by
+220	97	123	28 % ( from 7.93 to 5.68 )
+221	0	3	For
+221	8	23	IJB - A dataset
+223	4	37	consistently superior performance
+223	38	40	of
+223	41	49	our DeFA
+223	50	59	indicates
+223	73	81	advanced
+223	86	102	state of the art
+223	103	105	in
+223	106	133	large - pose face alignment
+225	124	132	evaluate
+225	144	146	on
+225	151	163	300W dataset
+227	4	11	To find
+227	16	39	corresponding landmarks
+227	40	42	on
+227	47	52	cheek
+227	58	63	apply
+227	68	95	landmark marching algorithm
+227	96	103	to move
+227	104	121	contour landmarks
+227	122	126	from
+227	127	151	self - occluded location
+227	152	154	to
+227	159	169	silhouette
+228	0	10	Our method
+228	11	13	is
+228	18	36	second best method
+228	37	39	on
+228	44	59	challenging set
+229	17	28	performance
+229	29	31	of
+229	32	42	our method
+229	46	59	comparable to
+229	60	73	other methods
+229	74	78	that
+229	96	119	near - frontal datasets
+232	8	24	strong testimony
+232	25	27	of
+232	46	50	DeFA
+232	53	60	without
+232	82	93	outperforms
+232	99	104	3DDFA
+232	109	131	its fine tuned version
+232	132	136	with
+232	137	140	SDM
+238	4	12	accuracy
+238	13	15	of
+238	16	26	our method
+238	27	29	on
+238	34	47	AFLW2000 - 3D
+238	48	69	consistently improves
+238	70	79	by adding
+238	80	93	more datasets
+239	0	3	For
+239	8	27	AFLW - PIFA dataset
+239	30	40	our method
+239	41	49	achieves
+239	50	85	9.5 % and 20 % relative improvement
+239	86	98	by utilizing
+239	103	111	datasets
+239	112	114	in
+239	119	138	stage 2 and stage 3
+239	139	143	over
+239	148	159	first stage
+240	3	12	including
+240	17	25	datasets
+240	26	30	from
+240	31	63	both the second and third stages
+240	69	77	can have
+240	78	103	26 % relative improvement
+240	108	115	achieve
+240	116	119	NME
+240	120	122	of
+240	123	129	3.86 %
+242	2	7	shows
+242	17	30	effectiveness
+242	31	33	of
+242	34	45	CFC and SPC
+242	49	58	more than
+242	59	62	LFC
+248	0	9	Comparing
+248	10	46	LFC + SPC and LFC + CFC performances
+248	47	52	shows
+248	62	65	CFC
+248	69	81	more helpful
+248	82	86	than
+248	91	94	SPC
+250	0	5	Using
+250	6	21	all constraints
+250	22	30	achieves
+250	35	51	best performance
+254	12	17	shows
+254	23	26	for
+254	31	37	images
+254	38	42	with
+254	43	51	NME - lp
+254	52	59	between
+254	60	72	5 % and 15 %
+254	77	80	SPC
+254	81	83	is
+254	84	91	helpful
+262	14	17	SPC
+262	18	26	utilizes
+262	27	38	SIFT points
+262	39	47	to cover
+262	52	66	whole 3D shape
+262	75	81	points
+262	82	84	in
+262	89	110	highly textured areas
+262	111	114	are
+262	115	133	substantially used

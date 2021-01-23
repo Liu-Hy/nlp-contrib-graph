@@ -1,0 +1,8 @@
+(Model||introduce||Face Alignment ( DeCaFA ))
+(DeCaFA||composed of||several stages)
+(landmark - wise attention maps||relatively to||heterogeneous annotation markups)
+(Model||has||DeCaFA)
+(attention maps||refined through||successive stages)
+(different prediction tasks||benefit from||each other)
+(Model||illustrates||attention maps)
+(Contribution||has||Model)

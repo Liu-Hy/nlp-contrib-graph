@@ -1,0 +1,8 @@
+(lack of real natural language training data||by introducing||novel approach)
+(novel approach||to building||supervised reading comprehension data set)
+(Model||directly||lack of real natural language training data)
+(learning||has||reading comprehension models)
+(two machine reading corpora||by exploiting||online newspaper articles)
+(two machine reading corpora||by exploiting||matching summaries)
+(Model||create||two machine reading corpora)
+(Contribution||has||Model)

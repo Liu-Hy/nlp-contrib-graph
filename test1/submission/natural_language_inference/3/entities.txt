@@ -1,0 +1,113 @@
+2	51	94	Neural - Network - Based Question Answering
+4	98	126	machine comprehension ( MC )
+4	131	156	question answering ( QA )
+19	4	27	question - answer pairs
+19	32	49	annotated through
+19	50	63	crowdsourcing
+28	4	43	bi-directional attention flow ( BIDAF )
+28	44	48	used
+28	53	77	bi-directional attention
+28	78	87	to obtain
+28	90	129	question - aware context representation
+29	19	28	introduce
+29	29	50	syntactic information
+29	51	60	to encode
+29	61	70	questions
+29	71	75	with
+29	78	120	specific form of recursive neural networks
+30	23	30	explore
+30	33	55	tree - structured LSTM
+30	62	69	extends
+30	74	122	linear - chain long short - term memory ( LSTM )
+30	125	127	to
+30	130	149	recursive structure
+30	187	215	long - distance interactions
+30	216	220	over
+30	225	235	structures
+35	0	14	Word embedding
+168	3	6	use
+168	7	45	pre-trained 300 - D Glove 840B vectors
+168	46	59	to initialize
+168	60	79	our word embeddings
+169	0	35	Out - of - vocabulary ( OOV ) words
+169	40	60	initialized randomly
+169	61	65	with
+169	66	82	Gaussian samples
+170	0	21	CharCNN filter length
+170	22	24	is
+170	25	34	1 , 3 , 5
+170	45	58	50 dimensions
+172	4	20	cluster number K
+172	21	23	in
+172	24	44	discriminative block
+172	45	47	is
+172	48	51	100
+173	4	15	Adam method
+173	19	27	used for
+173	28	40	optimization
+175	4	25	initial learning rate
+175	26	28	is
+175	29	35	0.0004
+175	44	54	batch size
+175	58	60	32
+178	4	17	hidden states
+178	18	20	of
+178	21	41	GRUs , and TreeLSTMs
+178	42	45	are
+178	46	60	500 dimensions
+178	69	95	word - level embedding d w
+178	96	98	is
+178	99	113	300 dimensions
+179	3	6	set
+179	7	17	max length
+179	18	20	of
+179	21	29	document
+179	30	32	to
+179	33	36	500
+179	43	47	drop
+179	52	77	question - document pairs
+179	90	92	on
+179	93	105	training set
+181	3	8	apply
+181	9	16	dropout
+181	17	19	to
+181	24	59	Encoder layer and aggregation layer
+181	60	64	with
+181	67	79	dropout rate
+181	80	82	of
+181	83	86	0.5
+192	0	9	Our model
+192	10	18	achieves
+192	21	37	68.73 % EM score
+192	42	58	77.39 % F1 score
+192	70	82	ranked among
+192	87	117	state of the art single models
+194	0	18	Our baseline model
+194	19	24	using
+194	25	35	no Q- code
+194	36	44	achieved
+194	47	84	68.00 % and 77.36 % EM and F 1 scores
+195	8	13	added
+195	18	49	explicit question type T - code
+195	50	54	into
+195	59	73	baseline model
+195	80	91	performance
+195	96	116	improved slightly to
+195	117	131	68.16 % ( EM )
+195	136	150	77.58 % ( F1 )
+196	8	12	used
+196	13	21	TreeLSTM
+196	22	31	introduce
+196	32	48	syntactic parses
+196	49	52	for
+196	53	94	question representation and understanding
+196	171	189	consistently shows
+198	5	12	letting
+198	17	54	number of hidden question types ( K )
+198	55	60	to be
+198	61	63	20
+198	70	81	performance
+198	82	90	improves
+198	94	108	68.73%/77.74 %
+198	109	111	on
+198	112	121	EM and F1

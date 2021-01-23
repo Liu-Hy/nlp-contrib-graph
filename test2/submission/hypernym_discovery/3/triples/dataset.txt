@@ -1,0 +1,5 @@
+(Manually curated pairs||from||Wikidata)
+(Hypernymy relations||from||KB)
+(Hypernymy relations||from||KB)
+(Hypernymy relations||integrates||several Open Information Extraction ( OIE ) systems)
+(Contribution||has||Dataset)

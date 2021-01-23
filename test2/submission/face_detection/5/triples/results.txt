@@ -1,0 +1,7 @@
+(Results||compare||face detector and alignment)
+(hard sample mining||beneficial to||performance improvement)
+(Results||has||hard sample mining)
+(our method||consistently outperforms||all the previous approaches)
+(all the previous approaches||by||large margin)
+(Results||shows||our method)
+(Contribution||has||Results)

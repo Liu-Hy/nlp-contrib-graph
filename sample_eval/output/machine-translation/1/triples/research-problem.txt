@@ -1,0 +1,5 @@
+(Contribution||has research problem||Neural Machine Translation in Linear Time)
+(Contribution||has research problem||character - level language modelling)
+(Contribution||has research problem||character - to - character machine translation)
+(Contribution||has research problem||neural language modelling)
+(Contribution||has research problem||neural machine translation)

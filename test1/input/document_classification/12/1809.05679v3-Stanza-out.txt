@@ -1,0 +1,222 @@
+title
+Graph Convolutional Networks for Text Classification
+abstract
+Text classification is an important and classical problem in natural language processing .
+There have been a number of studies that applied convolutional neural networks ( convolution on regular grid , e.g. , sequence ) to classification .
+However , only a limited number of studies have explored the more flexible graph convolutional neural networks ( convolution on non-grid , e.g. , arbitrary graph ) for the task .
+In this work , we propose to use graph convolutional networks for text classification .
+We build a single text graph for a corpus based on word co-occurrence and document word relations , then learn a Text Graph Convolutional Network ( Text GCN ) for the corpus .
+Our Text GCN is initialized with one - hot representation for word and document , it then jointly learns the embeddings for both words and documents , as supervised by the known class labels for documents .
+Our experimental results on multiple benchmark datasets demonstrate that a vanilla Text GCN without any external word embeddings or knowledge outperforms state - of - the - art methods for text classification .
+On the other hand , Text GCN also learns predictive word and document embeddings .
+In addition , experimental results show that the improvement of Text GCN over state - of - the - art comparison methods become more prominent as we lower the percentage of training data , suggesting the robustness of Text GCN to less training data in text classification .
+Introduction
+Text classification is a fundamental problem in natural language processing ( NLP ) .
+There are numerous applications of text classification such as document organization , news filtering , spam detection , opinion mining , and computational phenotyping ) .
+An essential intermediate step for text classification is text representation .
+Traditional methods represent text with hand - crafted features , such as sparse lexical features ( e.g. , bag - of - words and n-grams ) .
+Recently , deep learning models have been widely used to learn text representations , including convolutional neural networks ( CNN ) ( Kim 2014 ) and recurrent neural networks ( RNN ) such as long short - term memory ( LSTM ) .
+As CNN and RNN prioritize locality and sequentiality , these deep learning models can capture semantic and syntactic information in local consecutive word sequences well , but may ignore global word cooccurrence in a corpus which carries non-consecutive and long - distance semantics .
+Recently , a new research direction called graph neural networks or graph embeddings has attracted wide attention .
+Graph neural networks have been effective at tasks thought to have rich relational structure and can preserve global structure information of a graph in graph embeddings .
+In this work , we propose a new graph neural networkbased method for text classification .
+We construct a single large graph from an entire corpus , which contains words and documents as nodes .
+We model the graph with a Graph Convolutional Network ( GCN ) , a simple and effective graph neural network that captures high order neighborhoods information .
+The edge between two word nodes is built byword co-occurrence information and the edge between a word node and document node is built using word frequency and word 's document frequency .
+We then turn text classification problem into anode classification problem .
+The method can achieve strong classification performances with a small proportion of labeled documents and learn interpretable word and document node embeddings .
+Our source code is available at https://github. com/yao8839836/text_gcn .
+To summarize , our contributions are as follows :
+We propose a novel graph neural network method for text classification .
+To the best of our knowledge , this is the first study to model a whole corpus as a heterogeneous graph and learn word and document embeddings with graph neural networks jointly .
+Results on several benchmark datasets demonstrate that our method outperforms state - of - the - art text classification methods , without using pre-trained word embeddings or external knowledge .
+Our method also learn predictive word and document embeddings automatically .
+Related Work Traditional Text Classification
+Traditional text classification studies mainly focus on feature engineering and classification algorithms .
+For feature engineering , the most commonly used feature is the bagof - words feature .
+In addition , some more complex features have been designed , such as n-grams and entities in ontologies ) .
+There are also existing studies on converting texts to graphs and perform feature engineering on graphs and subgraphs .
+Unlike these methods , our method can learn text representations as node embeddings automatically .
+Deep Learning for Text Classification
+Deep learning text classification studies can be categorized into two groups .
+One group of studies focused on models based on word embeddings .
+Several recent studies showed that the success of deep learning on text classification largely depends on the effectiveness of the word embeddings .
+Some authors aggregated unsupervised word embeddings as document embeddings then fed these document embeddings into a classifier .
+Others jointly learned word / document and document label embeddings ) .
+Our work is connected to these methods , the major difference is that these methods build text representations after learning word embeddings while we learn word and document embeddings simultaneously for text classification .
+Another group of studies employed deep neural networks .
+Two representative deep networks are CNN and RNN .
+( Kim 2014 ) used CNN for sentence classification .
+The architecture is a direct application of CNNs as used in computer vision but with one dimensional convolutions .
+and ) designed character level CNNs and achieved promising results. , and used LSTM , a specific type of RNN , to learn text representation .
+To further increase the representation flexibility of such models , attention mechanisms have been introduced as an integral part of models employed for text classification .
+Although these methods are effective and widely used , they mainly focus on local consecutive word sequences , but do not explicitly use global word co-occurrence information in a corpus .
+Graph Neural Networks
+The topic of Graph Neural Networks has received growing attentions recently .
+A number of authors generalized well - established neural network models like CNN that apply to regular grid structure ( 2 -d mesh or 1 -d sequence ) to work on arbitrarily structured graphs .
+In their pioneering work , Kipf and Welling presented a simplified graph neural network model , called graph convolutional networks ( GCN ) , which achieved state - of - the - art classification results on a number of benchmark graph datasets .
+GCN was also explored in several NLP tasks such as semantic role labeling , relation classification and machine translation , where GCN is used to encode syntactic structure of sentences .
+Some recent studies explored graph neural networks for text classification .
+However , they either viewed a document or a sentence as a graph of word nodes or relied on the not -routinely - available document citation relation to construct the graph .
+In contrast , when constructing the corpus graph , we regard the documents and words as nodes ( hence heterogeneous graph ) and do not require inter-document relations .
+Method Graph Convolutional Networks ( GCN )
+A GCN ( Kipf and Welling 2017 ) is a multilayer neural network that operates directly on a graph and induces embedding vectors of nodes based on properties of their neighborhoods .
+Formally , consider a graph G = ( V , E ) , where V ( | V | = n ) and E are sets of nodes and edges , respectively .
+Every node is assumed to be connected to itself , i.e. , ( v , v ) ?
+E for any v. Let X ?
+R nm be a matrix containing all n nodes with their features , where m is the dimension of the feature vectors , each row xv ?
+R m is the feature vector for v.
+We introduce an adjacency matrix A of G and its degree matrix D , where D ii = j A ij .
+The diagonal elements of A are set to 1 because of self - loops .
+GCN can capture information only about immediate neighbors with one layer of convolution .
+When multiple GCN layers are stacked , information about larger neighborhoods are integrated .
+For a one - layer GCN , the new k-dimensional node feature matrix L ( 1 ) ?
+R nk is computed as
+is the normalized symmetric adjacency matrix and W 0 ?
+R mk is a weight matrix . ?
+is an activation function , e.g. a ReLU ?( x ) = max ( 0 , x ) .
+As mentioned before , one can incorporate higher order neighborhoods information by stacking multiple GCN layers :
+where j denotes the layer number and L ( 0 ) = X.
+Text Graph Convolutional Networks ( Text GCN )
+We build a large and heterogeneous text graph which contains word nodes and document nodes so that global word co-occurrence can be explicitly modeled and graph convolution can be easily adapted , as shown in .
+The number of nodes in the text graph | V | is the number of documents ( corpus size ) plus the number of unique words ( vocabulary size ) in a corpus .
+We simply set feature matrix X = I as an identity matrix which means every word or document is represented as a one - hot vector as the input to Text GCN .
+We build edges among nodes based on word occurrence in documents ( document - word edges ) and word co-occurrence in the whole corpus ( word - word edges ) .
+The weight of the edge between a document node and a word node is the term frequency - inverse document frequency ( TF - IDF ) of the word in the document , where term frequency is the number of times the word appears in the document , inverse document frequency is the logarithmically scaled inverse fraction of the number of documents that contain the word .
+We found using TF - IDF weight is better than using term frequency only .
+To utilize global word co-occurrence information , we use a fixed size sliding window on all documents in the corpus to gather co-occurrence statistics .
+We employ point - wise mutual information ( PMI ) , a popular measure for word associations , to calculate weights between two word nodes .
+We also found using PMI achieves better results than using word co-occurrence count in our preliminary experiments .
+Formally , the weight of edge between node i and node j is defined as
+The PMI value of a word pair i , j is computed as
+where # W ( i ) is the number of sliding windows in a corpus that contain word i , # W ( i , j ) is the number of sliding windows that contain both word i and j , and # W is the total number of sliding windows in the corpus .
+A positive PMI value implies a high semantic correlation of words in a corpus , while a negative PMI value indicates little or no semantic correlation in the corpus .
+Therefore , we only add edges between word pairs with positive PMI values .
+After building the text graph , we feed the graph into a simple two layer GCN as in , the second layer node ( word / document ) embeddings have the same size as the labels set and are fed into a softmax classifier :
+where = D ? 1 2 AD ?
+1 2 is the same as in equation 1 , and softmax (
+The loss function is defined as the cross - entropy error over all labeled documents :
+where Y Dis the set of document indices that have labels and F is the dimension of the output features , which is equal to the number of classes .
+Y is the label indicator matrix .
+The weight parameters W 0 and W 1 can be trained via gradient descent .
+In equation 7 , E 1 = XW 0 contains the first layer document and word embeddings and E 2 = ReLU ( XW 0 ) W 1 contains the second layer document and word embeddings .
+The over all Text GCN model is schematically illustrated in .
+A two - layer GCN can allow message passing among nodes thatare at maximum two steps away .
+Thus although there is no direct document - document edges in the graph , the two - layer GCN allows the information exchange between pairs of documents .
+In our preliminary experiment .
+We found that a two - layer GCN performs better than a onelayer GCN , while more layers did not improve the performances .
+This is similar to results in and .
+Experiment
+In this section we evaluate our Text Graph Convolutional Networks ( Text GCN ) on two experimental tasks .
+Specifically we want to determine :
+Can our model achieve satisfactory results in text classification , even with limited labeled data ?
+Can our model learn predictive word and document embeddings ?
+Baselines .
+We compare our Text GCN with multiple stateof - the - art text classification and embedding methods as follows :
+TF - IDF + LR : bag - of - words model with term frequencyinverse document frequency weighting .
+Logistic Regression is used as the classifier .
+CNN : Convolutional Neural Network ( Kim 2014 ) .
+We explored CNN -rand which uses randomly initialized word embeddings and CNN - non- static which uses pre-trained word embeddings .
+LSTM : The LSTM model defined in which uses the last hidden state as the representation of the whole text .
+We also experimented with the model with / without pre-trained word embeddings .
+Bi- LSTM : a bi-directional LSTM , commonly used in text classification .
+We input pre-trained word embeddings to Bi - LSTM .
+PV - DBOW : a paragraph vector model proposed by , the orders of words in text are ignored .
+We used Logistic Regression as the classifier .
+PV - DM : a paragraph vector model proposed by , which considers the word order .
+We used Logistic Regression as the classifier .
+PTE : predictive text embedding , which firstly learns word embedding based on heterogeneous text network containing words , documents and labels as nodes , then averages word embeddings as document embeddings for text classification .
+fast Text : a simple and efficient text classification method , which treats the average of word / n- grams embeddings as document embeddings , then feeds document embeddings into a linear classifier .
+We evaluated it with and without bigrams .
+SWEM : simple word embedding models , which employs simple pooling strategies operated over word embeddings .
+LEAM : label - embedding attentive models , which embeds the words and labels in the same joint space for text classification .
+It utilizes label descriptions .
+Graph - CNN - C : a graph CNN model that operates convolutions over word embedding similarity graphs ( Defferrard , Bresson , and Vandergheynst 2016 ) , in which Chebyshev filter is used .
+Graph - CNN - S : the same as Graph - CNN - C but using Spline filter ) . 
+Graph - CNN - F : the same as Graph - CNN - C but using Fourier filter .
+Datasets .
+We ran our experiments on five widely used benchmark corpora including 20 - Newsgroups ( 20 NG ) , Ohsumed , R52 and R8 of Reuters 21578 and Movie Review ( MR ) .
+The 20 NG dataset 1 ( bydate version ) contains 18,846 documents evenly categorized into 20 different categories .
+In total , 11,314 documents are in the training set and 7,532 documents are in the test set . The Ohsumed corpus 2 is from the MEDLINE data base , which is a bibliographic data base of important medical literature maintained by the National Library of Medicine .
+In this work , we used the 13,929 unique cardiovascular diseases abstracts in the first 20,000 abstracts of the year 1991 .
+Each document in the set has one or more associated categories from the 23 disease categories .
+As we focus on single - label text classification , the documents belonging to multiple categories are excluded so that 7,400 documents belonging to only one category remain .
+3,357 documents are in the training set and 4,043 documents are in the test set . R52 and R8 3 ( all - terms version ) are two subsets of the Reuters 21578 dataset .
+R8 has 8 categories , and was split to 5,485 training and 2,189 test documents .
+R52 has 52 categories , and was split to 6,532 training and 2,568 test documents .
+MR is a movie review dataset for binary sentiment classification , in which each review only contains one sentence .
+The corpus has 5,331 positive and 5,331 negative reviews .
+We used the training / test split in 5 .
+We first preprocessed all the datasets by cleaning and tokenizing text as ( Kim 2014 ) .
+We then removed stop words defined in NLTK 6 and low frequency words appearing less than 5 times for 20 NG , R8 , R52 and Ohsumed .
+The only exception was MR , we did not remove words after cleaning and tokenizing raw text , as the documents are very short .
+The statistics of the preprocessed datasets are summarized in .
+Settings .
+For Text GCN , we set the embedding size of the first convolution layer as 200 and set the window size as 20 .
+We also experimented with other settings and found that small changes did not change the results much .
+We tuned other parameters and set the learning rate as 0.02 , dropout For baseline models , we used default parameter settings as in their original papers or implementations .
+For baseline models using pre-trained word embeddings , we used 300 dimensional Glo Ve word embeddings ( Pennington , Socher , and Manning 2014 )
+7 .
+Test Performance . presents test accuracy of each model .
+Text GCN performs the best and significantly outperforms all baseline models ( p < 0.05 based on student t- test ) on four datasets , which showcases the effectiveness of the proposed method on long text datasets .
+For more in - depth performance analysis , we note that TF - IDF + LR performs well on long text datasets like 20 NG and can outperform CNN with randomly initialized word embeddings .
+When pre-trained Glo Ve word embeddings are provided , CNN performs much better , especially on Ohsumed and 20 NG .
+CNN also achieves the best results on short text dataset MR with pre-trained word embeddings , which shows it can 7 http://nlp.stanford.edu/data/glove.6B.zip model consecutive and short - distance semantics well .
+Similarly , LSTM - based models also rely on pre-trained word embeddings and tend to perform better when documents are shorter .
+PV - DBOW achieves comparable results to strong baselines on 20 NG and Ohsumed , but the results on shorter text are clearly inferior to others .
+This is likely due to the fact that word orders are important in short text or sentiment classification .
+PV - DM performs worse than PV - DBOW , the only comparable results are on MR , where word orders are more essential .
+The results of PV - DBOW and PV - DM indicate that unsupervised document embeddings are not very discriminative in text classification .
+PTE and fast Text clearly outperform PV - DBOW and PV - DM because they learn document embeddings in a supervised manner so that label information can be utilized to learn more discriminative embeddings .
+The two recent methods SWEM and LEAM perform quite well , which demonstrates the effectiveness of simple pooling methods and label descriptions / embeddings .
+Graph - CNN models also show competitive performances .
+This suggests that building word similarity graph using pretrained word embeddings can preserve syntactic and semantic relations among words , which can provide additional information in large external text data .
+The main reasons why Text GCN works well are two fold :
+1 ) the text graph can capture both document - word relations and global word - word relations ; 2 ) the GCN model , as a special form of Laplacian smoothing , computes the new features of anode as the weighted average of itself and its second order neighbors .
+The label information of document nodes can be passed to their neighboring word nodes ( words within the documents ) , then relayed to other word nodes and document nodes thatare neighbor to the first step neighboring word nodes .
+Word nodes can gather comprehensive document label information and act as bridges or key paths in the graph , so that label information can be propagated to the entire graph .
+However , we also observed that Text GCN did not outperform CNN and LSTM - based models on MR .
+This is because GCN ignores word orders thatare very useful in sentiment classification , while CNN and LSTM model consecutive word sequences explicitly .
+Another reason is that the edges in MR text graph are fewer than other text graphs , which limits the message passing among the nodes .
+There are only few document - word edges because the documents are very short .
+The number of word - word edges is also limited due to the small number of sliding windows .
+Nevertheless , CNN and LSTM rely on pre-trained word embeddings from external corpora while Text GCN only uses information in the target input corpus .
+Parameter Sensitivity .
+shows test accuracies with different sliding window sizes on R8 and MR .
+We can see that test accuracy first increases as window size becomes larger , but the average accuracy stops increasing when window size is larger than 15 .
+This suggests that too small window sizes could not generate sufficient global word cooccurrence information , while too large window sizes may add edges between nodes thatare not very closely related .
+depicts the classification performance on R8 and MR with different dimensions of the - first layer embeddings .
+We observed similar trends as in .
+Too low dimensional embeddings may not propagate label information to the whole graph well , while high dimensional embeddings do not improve classification performances and may cost more training time .
+Effects of the Size of Labeled Data .
+In order to evaluate the effect of the size of the labeled data , we tested several best performing models with different proportions of the training data .
+reports test accuracies with 1 % , 5 % , 10 % and 20 % of original 20 NG and R8 training set .
+We note that Text GCN can achieve higher test accuracy with limited labeled documents .
+For instance , Text GCN achieves a test accuracy of 0.8063 0.0025 on 20 NG with only 20 % training documents and a test accuracy of 0.8830 0.0027 on R8 with only 1 % training documents which are higher than some baseline models with even the full training documents .
+These encouraging results are similar to results in where GCN can perform quite well with low label rate , which again suggests that GCN can propagate document label information to the entire graph well and our word document graph preserves global word co-occurrence information .
+Document Visualization .
+We give an illustrative visualization of the document embeddings leaned by Text GCN .
+We use t- SNE tool to visualize the learned document embeddings .
+shows the visualization of 200 dimensional 20 NG test document embeddings learned by GCN ( first layer ) , PV - DBOW and PTE .
+We also show 20 dimensional second layer test document embeddings of Text GCN .
+We observe that Text GCN can learn more discriminative document embeddings , and the second layer embeddings are more distinguishable than the first layer .
+Word Visualization .
+We also qualitatively visualize word embeddings learned by Text GCN.
+shows the t - SNE visualization of the second layer word embeddings learned from 20 NG .
+We set the dimension with the highest value as a word 's label .
+We can see that words with the same label are close to each other , which means most words are closely related to some certain document classes .
+We also show top 10 words with highest values under each class in .
+We note that the top 10 words are interpretable .
+For example , " jpeg " , " graphics " and " image " in column 1 can represent the meaning of their label " comp.graphics " well .
+Words in other columns can also indicate their label 's meaning .
+Discussion .
+From experimental results , we can see the proposed Text GCN can achieve strong text classification results and learn predictive document and word embeddings .
+However , a major limitation of this study is that the GCN model is inherently transductive , in which test document nodes ( without labels ) are included in GCN training .
+Thus Text GCN could not quickly generate embeddings and make prediction for unseen test documents .
+Possible solutions to the problem are introducing inductive or fast GCN model .
+Conclusion and Future Work
+In this study , we propose a novel text classification method termed Text Graph Convolutional Networks ( Text GCN ) .
+We build a heterogeneous word document graph for a whole corpus and turn document classification into anode classification problem .
+Text GCN can capture global word cooccurrence information and utilize limited labeled documents well .
+A simple two - layer Text GCN demonstrates promising results by outperforming numerous state - of - theart methods on multiple benchmark datasets .
+In addition to generalizing Text GCN model to inductive settings , some interesting future directions include improving the classification performance using attention mechanisms ) and developing unsupervised text GCN framework for representation learning on largescale unlabeled text data .

@@ -1,0 +1,179 @@
+title
+Copy Mechanism and Tailored Training for Character - based Data - to - text Generation
+abstract
+In the last few years , many different methods have been focusing on using deep recurrent neural networks for natural language generation .
+The most widely used sequence - to - sequence neural methods are word - based : as such , they need a pre-processing step called delexicalization ( conversely , relexicalization ) to deal with uncommon or unknown words .
+These forms of processing , however , give rise to models that depend on the vocabulary used and are not completely neural .
+In this work , we present an end - to - end sequence - to - sequence model with attention mechanism which reads and generates at a character level , no longer requiring delexicalization , tokenization , nor even lowercasing .
+Moreover , since characters constitute the common " building blocks " of every text , it also allows a more general approach to text generation , enabling the possibility to exploit transfer learning for training .
+These skills are obtained thanks to two major features : ( i ) the possibility to alternate between the standard generation mechanism and a copy one , which allows to directly copy input facts to produce outputs , and ( ii ) the use of an original training pipeline that further improves the quality of the generated texts .
+We also introduce a new dataset called E2E + , designed to highlight the copying capabilities of character - based models , that is a modified version of the well - known E2E dataset used in the E2E Challenge .
+We tested our model according to five broadly accepted metrics ( including the widely used bleu ) , showing that it yields competitive performance with respect to both character - based and word - based approaches .
+Introduction
+The ability of recurrent neural networks ( RNNs ) to model sequential data stimulated interest towards deep learning models which face data - to - text generation .
+An interesting application is the generation of descriptions for factual tables that consist of a set of field - value pairs ; an example is shown in .
+We present in this paper an effective end - to - end approach to this task .
+Sequence - to - sequence frameworks have proved to be very effective in natural language generation ( NLG ) tasks , as well as in machine translation and in language modeling .
+Usually , data are represented word - by - word both in input and output sequences ; anyways , such schemes ca n't be effective without a special , non-neural delexicalization phase that handles unknown words , such as proper names or foreign words ( see ) .
+The delexicalization step has the benefit of reducing the dictionary size and , consequently , the data sparsity , but it is affected by various shortcomings .
+In particular , according to - it needs some reliable mechanism for entity identification , i.e. the recognition of named entities inside text ; - it requires a subsequent " re-lexicalization " phase , where the original named entities take back placeholders ' place ; - it can not account for lexical or morphological variations due to the specific entity , such as gender and number agreements , that ca n't be achieved without a clear context awareness .
+Recently , some strategies have been proposed to solve these issues : and face this problem using a special neural copying mechanism that is quite effective in alleviating the out - of - vocabulary words problem , while tries to extend neural networks with a post-processing phase that copies words as indicated by the model 's output sequence .
+Some character - level aspects appear as a solution of the issue as well , either as a fallback for rare words , or as subword units .
+A significantly different approach consists in employing characters instead of words , for input slot - value pairs tokenization as well as for the generation of the final utterances , as done for instance in .
+In order to give an original contribution to the field , in this paper we present a character - level sequence - to - sequence model with attention mechanism that results in a completely neural end - to - end architecture .
+In contrast to traditional word - based ones , it does not require delexicalization , tokenization nor lowercasing ; besides , according to our experiments it never hallucinates words , nor duplicates them .
+As we will see , such an approach achieves rather interesting performance results and produces a vocabulary - free model that is inherently more general , as it does not depend on a specific domain 's set of terms , but rather on a general alphabet .
+Because of this , it opens up the possibility , not viable when using words , to adapt already trained networks to deal with different datasets .
+More specifically , our model shows two important features , with respect to the state - of - art architecture proposed by : ( i ) a character - wise copy mechanism , consisting in a soft switch between generation and copy mode , that disengages the model to learn rare and unhelpful self - correspondences , and ( ii ) a peculiar training procedure , which improves the internal representation capabilities , enhancing recall ; it consists in the exchange of encoder and decoder RNNs , ( GRUs As a further original contribution , we also introduce a new dataset , described in section 3.1 , whose particular structure allows to better highlight improvements in copying / recalling abilities with respect to character - based state - of - art approaches .
+In section 2 , after resuming the main ideas on encoder - decoder methods with attention , we detail our model : section 2.2 is devoted to explaining the copy mechanism while in section 2.3 our peculiar training procedure is presented .
+Section 3 includes the datasets descriptions , some implementation specifications , the experimental framework and the analysis and evaluation of the achieved results .
+Finally , in section 4 some conclusions are drawn , outlining future work .
+Model Description
+Summary on Encoder - decoder
+Architectures with Attention
+The sequence - to - sequence encoder - decoder architecture with attention is represented in figure 1 : on the left , the encoder , a bi-directional RNN , outputs one annotation h j for each input token x j .
+Each vector h j corresponds to the concatenation of the hidden states produced by the backward and forward RNNs .
+On the right side of the figure , we find the decoder , which produces one state s i for each time step ; on the center of the figure the attention mechanism is shown .
+The main components of the attention mechanism are : ( i ) the alignment model e ij
+which is parameterized as a feedforward neural network and scores how well input in position j- th and output observed in the i - th time instant match ; T x and Ty are the length of the input and output sequences , respectively .
+( ii ) the attention probability distribution ?
+ij
+( e i is the vector whose j- th element is e ij ) ( iii ) the context vector Ci
+weighted sum of the encoder annotations h j .
+According to , the context vector Ci is the key element for evaluating the conditional probability P ( y i |y 1 , . . . , y i?1 , x ) to output a target token y i , given the previously outputted tokens y 1 , . . . , y i?1 and the input x .
+They in fact express this probability as :
+where g is a non-linear , potentially multi -layered , function .
+So doing , the explicit information about y 1 , . . . , y i ?1 and x is replaced with the knowledge of the context Ci and the decoder state s i .
+The model we present in this paper incorporates two additional mechanisms , detailed in the next sections : a character - wise copy mechanism and a peculiar training procedure based on GRUs switch .
+Learning to Copy
+On top of the just recalled model , we build a character - based copy mechanism inspired by the Pointer - Generator Network , a word - based model that hybridizes the Bahdanau traditional model and a Pointer Network .
+Basing on these ideas , in our model we identify two probability distributions that , differently from what done by and , act now on characters rather than on words : the alphabet distribution P alph and the attention distribution P att .
+The former is the network 's generative probability of sampling a given character at time i , recalled in eq. ( 4 ) :
+where V and bare trainable parameters .
+The latter is the distribution reminded in eq. ( 2 ) , created by the attention mechanism over the input tokens , i.e. in our case , over input characters :
+In our method this distribution is used for directly copying characters from the input to the output , pointing their input positions , while in P att is used only internally to weigh the input annotations and create the context vector Ci .
+The final probability of outputting a specific character c is obtained combining P alph and P att through the quantity p gen , defined later , which acts as a soft switch between generating cor copying it :
+where P i alph [ c ] is the component of P i alph corresponding to that character c .
+The backpropagation training algorithm , therefore , brings p gen close to 1 when it is necessary to generate the output as in a standard encoder - decoder with attention ( P i ( c ) P i alph [ c ] ) ; conversely , p gen will be close to 0 ( i.e. P i ( c ) j| xi =c P j att ( c ) ) when a copying step is needed .
+The model we propose therefore learns when to sample from P alph for selecting the character to be generated , and when to sample from P att for selecting the character that has to be copied directly from the input .
+This copy mechanism is fundamental to output all the unknown words present in the input , i.e. words which never occur in the training set .
+In fact , generating characters in the right order to reproduce unknown words is a sub -task not " solvable " by a naive sequence - to - sequence model , which learns to output only known words .
+The generation probability p gen ?
+[ 0 , 1 ] is computed as follows :
+where ?
+is the sigmoid function , ?
+i? 1 is the last output character 's embedding , s i is the current decoder 's cell state and Ci is the current context vector .
+W y , W s , W c and W pare the parameters whose training allows p gen to have the convenient value .
+We highlight that in our formulation p i ?1 gen , i.e. the value of p gen at time i ?
+1 , contributes to the determination of pi gen .
+In fact , in a character - based model it is desirable that this probability remains unchanged for a fair number of time steps , and knowing its last value helps this behavior .
+This never happens in word - based models ( such as ) , in which copying for a single time step is usually enough .
+Switching GRUs
+Aiming at improving performance , we enrich our model ' training pipeline with an additional phase , which forces an appropriate language representation inside the recurrent components of the model .
+In order to achieve this goal , the encoder and the decoder do not own a fixed GRU , differently from what happens in classical end - to - end approaches .
+The recurrent module is passed each time as a parameter , depending on which one of the two training phases is actually performed .
+In the first phase , similar to the usual one , the GRU assigned to the encoder deals with a tabular representation x as input , the GRU assigned to the decoder has to cope with natural language , and the model generates an output utteranc ? y = F ( x ) .
+Conversely , in the second phase GRUs are switched and we use as input the just obtained natural language utterance ?
+to generate a new tabl ?
+.
+Therefore , the same model can build both F and G , thanks to the switch of GRUs .
+In other words , the learning iteration is performed as follows .
+- A dataset example ( x , y ) is given .
+x is a tabular meaning representation and y is the corresponding reference sentence .
+The higher training time , direct consequence of the just described technique , is a convenient investment , as it brings an appreciable improvement of the model 's performance ( see section 3.3 ) .
+Experiments
+Datasets
+We tested our model on four datasets , whose main descriptive statistics are given in table 1 : among them , the most known and frequently used in literature is the E2E dataset , used as benchmark for the E2E Challenge organized by the Heriot - Watt University in 2017 .
+It is a crowdsourced collection of roughly 50,000 instances , in which every input is a list of slot - value pairs and every expected output is the corresponding natural language sentence .
+The dataset has been partitioned by the challenge organizers in predefined training , validation and test sets , conceived for training data - driven , end - to - end Natural Language Generation models in the restaurant domain .
+However , during our experiments , we noticed that the values contained in the E2E dataset area little naive in terms of variability .
+In other words , a slot like name , that could virtually contain a very broad range of different values , is filled alternating between 19 fixed possibilities .
+Moreover , values are partitioned among training , validation and test set , in such away that test set always contains values thatare also present in the training set .
+Consequently , we created a modified version of the E2E dataset , called E2E + , as follows : we selected the slots that represent more copy - susceptible attributes , i.e. name , near and food , and conveniently replaced their values , in both meaning representations and reference sentences .
+New values for food are picked from Wikipedia 's list of adjectival forms of countries and nations 1 , while both name and near are filled with New York restaurants ' names contained in the Entree dataset presented in .
+It is worth noting that none of the values of name are found in near ; likewise , values that belong to the training set are not found in the validation set nor in the test one , and vice versa .
+This value partitioning shall ensure the absence of generation bias in the copy mechanism , stimulating the models to copy attribute values , regardless of their presence in the training set .
+The MR and 1st reference fields in table 4 are instances of this new dataset .
+Finally , we decided to test our model also on two datasets , Hotel and Restaurant , frequently used in literature ( for instance in and ) .
+They are built on a 12 attributes ontology : some attributes are common to both domains , while others are domain specific .
+Every MR is a list of key - value pairs enclosed in a dialogue act type , such as inform , used to present information about restaurants , confirm , to check that a slot value has been recognized correctly , and reject , to advise that the user 's constraints can not be met .
+For the sake of compatibility , we filtered out from Hotel and Restaurant all inputs whose dialogue act type was not inform , and removed the dialogue act type .
+Besides , we changed the format of the key - value pairs to E2E - like ones .
+Tables are encoded simply converting all characters to ASCII and feeding every corresponding index to the encoder , sequentially .
+The resulting model 's vocabulary is independent of the input , allowing the application of the transfer learning procedure .
+Implementation Details
+We developed our system using the PyTorch framework 2 , release 0.4.1 3 .
+The training has been carried out as described in subsection 2.3 : this training procedure needs the two GRUs to have the same dimensions , in terms of input size , hidden size , number of layers and presence of a bias term .
+Moreover , they both have to be bidirectional , even if the decoder ignores the backward part of its current GRU .
+We minimize the negative log - likelihood loss using teacher forcing and Adam , the latter being an optimizer that computes individual adaptive learning rates .
+As a consequence of the length of the input sequences , a characterbased model is often subject to the exploding gradient problem , that we solved via the well - known technique of gradient norm clipping .
+We also propose a new formulation of P ( c ) that helps the model to learn when it is necessary to start a copying phase :
+Sometimes , our model has difficulty in focusing on the first letter it has to copy .
+This maybe caused by the variety of characters it could be attending on ; instead , it seems easier to learn to focus on the most largely seen characters , as for instance ' ' and ' [ ' .
+As these special characters are very often the prefix of the words we need to copy , when this focus is achieved , we would like the attention distribution to be translated one step to the right , over the first letter that must be copied .
+Therefore , the final probability of outputting a specific character c , introduced in eq. , is modified to P i , j?1 att , i.e. the attention distribution shifted one step to the right and normalized .
+Notice that P i,j?1 att is the only shifted probability , while P i alph remains unchanged .
+Therefore , if the network is generating the next token ( i.e. pi gen 1 ) , the shift trick does not involve P i ( c ) and the network samples the next character from P i alph , as usual .
+This means that the shift operation is not degrading the generation ability of the model , whilst improving the copying one .
+Results and Discussion
+In order to show that our model represents an effective and relevant improvement , we carry out two different experimentations : an ablation study and a comparison with two well - known models .
+The first model is the encoder - decoder architecture with attention mechanism by ( hereafter " EDA " ) , used character - by - character .
+The second one is TGen , a word - based model , still derived from , but integrating a beam search mechanism and a reranker over the top k outputs , in order to dis advantage utterances that do not verbalize all the information contained in the MR .
+We chose it because it has been adopted as baseline in the E2E NLG Challenge 4 .
+We used the official code provided in the E2E NLG Challenge website for TGen , and we developed our models and EDA in PyTorch , training them on NVIDIA GPUs .
+Hyperparameter tuning is done through 10 - fold cross - validation , using the bleu metric for evaluating each model .
+The training stopping criterion was based on the absence of models ' performance improvements ( see ) .
+We evaluated the models ' performance on test sets ' output utterances using the Evaluation metrics script 5 provided by the E2E NLG Challenge organizers .
+It rates quality according to five different metrics : bleu , nist , meteor , rouge_l and cider .
+Our first experimentation , the ablation study , refers to the E2E dataset because of its wide diffusion , and is shown in table 2 ; " EDA _CS " identifies our model , and ' C ' and ' S ' stand for " Copy " and " Switch " , the two major improvements presented in this work .
+It is evident that the partially - improved networks are able to provide independent benefits to the performance .
+Those components cooperate positively , as EDA_CS further enhances those results .
+Furthermore , the obtained bleu metric value on the E2E test set would allow our model to be ranked fourth in the E2E NLG Challenge , while its baseline TGen was ranked tenth .
+Our second experimentation , the comparison study , is shown in table
+3 .
+The character - based design of EDA_CS led us to explore in this context also a possible behavior as a transfer learning capable model : in order to test this hypothesis , we used the weights learned during training on the E2E + dataset as the starting point for a fine - tuning phase on all the other datasets .
+We chose E2E + because it reduces the generation bias , as discussed in subsection 3.1 .
+We named this approach EDA_CS TL .
+A first interesting result is that our model EDA_CS always obtains higher metric values with respect to TGen on the Hotel and Restaurant datasets , and three out of five higher metrics values on the E2E dataset .
+However , in the case of E2E + , TGen achieves three out of five higher metrics values .
+These results suggest that EDA_CS and TGen are comparable , at least from the point of view of automatic metrics ' evaluation .
+A more surprising result is that the approach EDA_CS TL allows to obtain better performance with respect to training EDA_CS in the standard way on the Hotel and Restaurant datasets ( for the majority of metrics ) ; on E2E , EDA_CS TL outperforms EDA_CS only in one case ( i.e. meteor metric ) .
+Moreover , EDA_CS TL shows a bleu increment of at least 14 % with respect to TGen 's score when compared to both Hotel and Restaurant datasets .
+Finally , the baseline model , EDA , is largely outperformed by all other examined methods .
+Therefore , we can claim that our model exploits its transfer learning capabilities effectively , showing very good performances in a context like data - to - text generation in which the portability of features learned from different datasets , in the extent of our knowledge , has not yet been explored .
+We highlight that EDA_CS 's model 's good results are achieved even if it consists in a fully end - to - end model which does not benefit from the delexicalizationrelexicalization procedure , differently from TGen .
+Most importantly , the latter represents a word - based system : as such , it is bound to a specific , limited vocabulary , in contrast to the general - purpose character one used in our work .
+reports the output of the analyzed models for a couple of MR , taken from the E2E + test set .
+The EDA 's inability to copy is clear , as it tends , in its output , to substitute those values of name , food and near that do not appear in the training set with known ones , guided by the first few characters of the input slot 's content .
+Besides , it shows serious coverage issues , frequently ' forgetting ' to report information , and / or repeating more times the same ones .
+These troubles are not present in EDA_CS output utterances : the model nearly always renders all of the input slots , still without duplicating any of them .
+This goal is achieved even in absence of explicit coverage techniques thanks to our peculiar training procedure , detailed in section 2.3 , that for each input sample minimizes also the loss on the reconstructed tabular input .
+It is worth noting that the performance of TGen and EDA _ CS are over all comparable , especially when they deal with names or other expressions not present in training .
+The joint analysis of the matrix of the attention distribution P ij att and the vector p gen allows a deeper understanding of how our model works .
+In figure 2 every row shows the attention probability distribution " seen " when an output character is produced at the i - th time instant ( i.e. the vector P ij att , 1 ? j ? T x ) , while every column shows values of the attention distribution corresponding to a specific input position j ( i.e. the vector P ij att , 1 ? i ?
+Ty ) .
+We can therefore follow the white spots , corresponding to higher values of attention , to understand the flow of the model 's attention during the generation of the output utterance .
+Moreover , p gen values , which lie in the numeric interval [ 0 , 1 ] , help us in the interpretation of the attention : they are represented as a grayscale vector from zero ( black ) to one ( white ) under the matrices .
+Values close to 0 mean copying and those near 1 mean generating .
+We can note that our model 's behavior varies significantly depending on the dataset it has been trained on ..
+Copying common words leads the model to " uncertain " values of pgen dataset : as observed before , attribute values in this dataset have a very low variability ( and are already present in the training set ) , so that they can be individually represented and easily generated by the decoder .
+In this case , a typical pattern is the copy of only the first , discriminating character , clearly noticeable in the graphical representation of the p gen vector , and the subsequent generation of the others .
+Notice that the attention tends to remain improperly focused on the same character for more than one output time step , as in the first letter of " high " .
+On the other hand , the copy mechanism shows it s full potential when the system must learn to copy attribute values , as in the E2E + dataset .
+In figure 2 b the diagonal attention pattern is pervasive : ( i ) it occurs when the model actually copies , as in " Harley Davidson " and " Coco Pazzo " , and ( ii ) as a soft track for the generation , as in " customer rating " , where the copy - first - generate - rest behavior emerges again .
+A surprising effect is shown in figure 3 , when the model is expected to copy words that , instead , are usually generated : an initial difficulty in copying the word " The " , that is usually a substring of a slot value , is ingeniously overcome as follows .
+The first character is purely generated , as shown by the white color in the underlying vector , and the sequence of the following characters , " he_ " , is half - generated and half - copied .
+Then , the value of p gen gets suddenly but correctly close to 0 ( black ) until the closing square bracket is met .
+The network 's output is not affected negatively by this confusion and the attention matrix remains quite well - formed .
+As a final remark , the metrics used , while being useful , well - known and broadly accepted , do not reflect the ability to directly copy input facts to produce outputs , so settling the rare word problem .
+Conclusion
+We showed in this paper an effective character - based end - to - end model that faces data - to - text generation tasks .
+It takes advantage of a copy mechanism , that deals successfully with the rare word problem , and of a specific training procedure , characterized by the switching GRUs mechanism .
+These innovative contributions to state - of - art further improve the quality of the generated texts .
+We highlight that our formulation of the copy mechanism is an original character - based adaptation of , because of the use of p i ?1 gen to determine the value of pi gen , at the following time step .
+This helps the model in choosing whether to maintain the same value for a fair number of time steps or not .
+Besides , the use of characters allows the creation of more general models , which do not depend on a specific vocabulary ; it also enables a very effective straightforward transfer learning procedure , which in addition eases training on small datasets .
+Moreover , outputs are obtained in a completely end - to - end fashion , in contrast to what happens for the chosen baseline word - based model , whose performances are comparable or even worse .
+One future improvement of our model could be the " reinforcement " of the learning iteration described in section 2.3 : for each dataset example ( x , y ) , we could consider , as an ulterior example , the reverse instance ( y , x ) .
+The network obtained this way should be completely reversible , and the interchangeability of input and output languages could open up new opportunities in neural machine translation , such as two - way neural translators .
+New metrics that give greater importance to rare words might be needed in the future , with the purpose of better assess performances of able - to - copy NLG models on datasets such as the E2E + one .

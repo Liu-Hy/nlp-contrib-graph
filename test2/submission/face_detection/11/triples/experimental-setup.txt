@@ -1,0 +1,3 @@
+(NVIDIA Titan GPU||used for||CNN computations)
+(Experimental setup||has||NVIDIA Titan GPU)
+(Contribution||has||Experimental setup)

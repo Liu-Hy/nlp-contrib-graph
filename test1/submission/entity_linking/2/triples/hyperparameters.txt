@@ -1,0 +1,7 @@
+(fixed number of epochs E = 40||using||Adadelta)
+(Adadelta||with||learning rate)
+(Adadelta||with||batch size)
+(learning rate||has||1.0)
+(batch size||has||32)
+(Hyperparameters||trained fora||fixed number of epochs E = 40)
+(Contribution||has||Hyperparameters)

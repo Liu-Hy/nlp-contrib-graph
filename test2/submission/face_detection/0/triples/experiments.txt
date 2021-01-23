@@ -1,0 +1,4 @@
+(regular learning rate schedule||dividing by||10)
+(10||at||100 and 120 epochs)
+(regular learning rate schedule||ending at||130 epochs)
+(Contribution||has||Experiments)

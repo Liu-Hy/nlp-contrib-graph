@@ -1,0 +1,6 @@
+{
+  "has research problem" : [
+    ["natural language understanding", {"from sentence" : "We present a memory augmented neural network for natural language understanding : Neural Semantic Encoders ."}],
+    ["NLU", {"from sentence" : "NSE is flexible , robust and suitable for practical NLU tasks and can be trained easily by any gradient descent optimizer ."}]
+  ] 
+}

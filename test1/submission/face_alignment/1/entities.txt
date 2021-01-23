@@ -1,0 +1,90 @@
+2	0	33	Large Pose 3D Face Reconstruction
+9	0	7	Our CNN
+9	8	18	works with
+9	19	23	just
+9	52	68	does not require
+9	69	77	accurate
+9	142	151	works for
+9	152	190	arbitrary facial poses and expressions
+9	212	223	reconstruct
+9	228	253	whole 3 D facial geometry
+9	256	265	including
+9	270	290	non-visible parts of
+9	302	311	bypassing
+9	316	328	construction
+9	353	360	fitting
+9	380	382	of
+9	385	403	3D Morphable Model
+14	0	23	3 D face reconstruction
+17	13	15	on
+17	16	38	3D face reconstruction
+17	39	44	using
+19	94	114	by directly learning
+19	117	124	mapping
+19	125	129	from
+19	130	154	pixels to 3D coordinates
+19	155	160	using
+19	163	199	Convolutional Neural Network ( CNN )
+20	38	48	works with
+20	49	77	totally unconstrained images
+20	78	93	downloaded from
+20	98	101	web
+20	104	113	including
+20	114	127	facial images
+20	128	130	of
+20	131	146	arbitrary poses
+20	149	167	facial expressions
+20	172	182	occlusions
+147	0	25	Each of our architectures
+147	30	37	trained
+147	38	52	end - to - end
+147	53	58	using
+147	59	66	RMSProp
+147	67	71	with
+147	75	96	initial learning rate
+147	97	99	of
+147	100	106	10 ? 4
+147	119	132	lowered after
+147	133	142	40 epochs
+147	143	145	to
+147	146	151	10 ?5
+148	0	6	During
+148	7	15	training
+148	18	37	random augmentation
+148	42	52	applied to
+148	53	85	each input sample ( face image )
+148	134	141	applied
+148	142	184	in - plane rotation r ? [ ?45 , ... , 45 ]
+148	187	202	translation t z
+160	0	13	3DDFA and EOS
+160	14	16	on
+161	4	12	All VRNs
+161	13	20	perform
+161	21	25	well
+161	26	32	across
+161	37	51	whole spectrum
+161	52	54	of
+161	55	96	facial poses , expressions and occlusions
+162	7	16	there are
+162	17	19	no
+162	20	57	significant performance discrepancies
+162	58	64	across
+162	65	83	different datasets
+164	0	12	VRN - Guided
+164	13	17	uses
+164	18	51	another stacked hourglass network
+164	52	55	for
+164	56	77	landmark localization
+165	4	19	VRN - Multitask
+165	20	35	does not always
+165	44	63	particularly better
+165	64	68	than
+165	73	82	plain VRN
+199	34	38	used
+199	43	58	best performing
+199	59	71	VRN - Guided
+211	4	15	performance
+211	16	18	of
+211	23	40	3D reconstruction
+211	41	48	dropped
+211	54	71	negligible amount
