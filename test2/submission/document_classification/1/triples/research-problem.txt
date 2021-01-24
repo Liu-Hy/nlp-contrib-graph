@@ -1,2 +1,0 @@
-(Contribution||has research problem||CROSS - LINGUAL DOCUMENT CLASSIFICATION)
-(Contribution||has research problem||cross - lingual understanding ( XLU ))

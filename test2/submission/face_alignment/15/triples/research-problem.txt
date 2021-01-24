@@ -1,8 +1,0 @@
-(Contribution||has research problem||Face Alignment)
-(Contribution||has research problem||Face alignment)
-(Contribution||has research problem||3D Dense Face Alignment ( 3DDFA ))
-(Contribution||has research problem||3 DDFA)
-(Contribution||has research problem||competitive performance)
-(Contribution||has research problem||common set)
-(Contribution||has research problem||state - of - the - art performance)
-(Contribution||has research problem||challenging set)

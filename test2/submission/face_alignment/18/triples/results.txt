@@ -1,3 +1,0 @@
-(9 % improvement||of||mean error)
-(mean error||on||challenging subset)
-(Contribution||has||Results)

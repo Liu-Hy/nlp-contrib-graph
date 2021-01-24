@@ -1,6 +1,0 @@
-(MS - RPN and the CMS - CNN||share||same parameters)
-(same parameters||for||all convolution layers)
-(computation||done||once)
-(computation||resulting in||higher efficiency)
-(once||resulting in||higher efficiency)
-(Contribution||has||Experiments)

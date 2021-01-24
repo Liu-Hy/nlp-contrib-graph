@@ -1,8 +1,0 @@
-(beam search||with||locally normalized model)
-(beam search||with||global normalization)
-(beam search||with||global normalization)
-(global normalization||leads to||7 % reduction)
-(7 % reduction||in||relative error)
-(beam search||has||locally normalized model)
-(Results||Using||beam search)
-(Contribution||has||Results)

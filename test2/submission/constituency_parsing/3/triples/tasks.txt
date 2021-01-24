@@ -1,7 +1,0 @@
-(LSTM + A model||trained on||WSJ dataset)
-(WSJ dataset||produced||malformed trees)
-(malformed trees||for||25 of the 1700 sentences)
-(25 of the 1700 sentences||in||our development set)
-(full high - confidence dataset||for||14 sentences ( 0.8 % ))
-(Tasks||has||LSTM + A model)
-(Contribution||has||Tasks)

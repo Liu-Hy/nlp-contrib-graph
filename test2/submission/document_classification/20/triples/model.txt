@@ -1,4 +1,0 @@
-(mLSTM and Transformer language models||on||large 40 GB text dataset)
-(multidimensional emotion classification||based on||Plutchik wheel of emotions)
-(Model||train||mLSTM and Transformer language models)
-(Contribution||has||Model)

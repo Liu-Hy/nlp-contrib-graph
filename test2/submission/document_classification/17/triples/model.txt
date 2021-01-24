@@ -1,2 +1,0 @@
-(deep architectures||of||many convolutional layers)
-(Contribution||has||Model)

@@ -1,6 +1,0 @@
-(Contribution||has research problem||Parsing)
-(Contribution||has research problem||syntactic parsing)
-(Contribution||has research problem||constituency Penn Treebank parsing)
-(Contribution||has research problem||training)
-(Contribution||has research problem||development)
-(Contribution||has research problem||tri-training)

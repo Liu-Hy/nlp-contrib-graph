@@ -1,2 +1,0 @@
-(Tasks||has||GLUE)
-(Contribution||has||Tasks)

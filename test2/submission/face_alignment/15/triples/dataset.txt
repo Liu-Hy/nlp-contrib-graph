@@ -1,8 +1,0 @@
-(training||of||3DDFA)
-(pairs||of||2D face images and 3D face models)
-(3DDFA||construct||face database)
-(face database||containing||pairs)
-(pairs||of||2D face images and 3D face models)
-(training||has||3DDFA)
-(Dataset||To enable||training)
-(Contribution||has||Dataset)

@@ -1,6 +1,0 @@
-(capsule networks||achieve||best results)
-(best results||on||4 out of 6 benchmarks)
-(best results||verifies||effectiveness)
-(4 out of 6 benchmarks||verifies||effectiveness)
-(Results||observe that||capsule networks)
-(Contribution||has||Results)

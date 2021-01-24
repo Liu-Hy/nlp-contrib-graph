@@ -1,3 +1,0 @@
-(Contribution||has research problem||Unconstrained Face Detection)
-(Contribution||has research problem||Robust face detection in the wild)
-(Contribution||has research problem||face detection)

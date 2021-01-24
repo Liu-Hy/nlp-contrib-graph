@@ -1,3 +1,0 @@
-(facial structure||using||13 boundary lines)
-(Dataset||represent||facial structure)
-(Contribution||has||Dataset)

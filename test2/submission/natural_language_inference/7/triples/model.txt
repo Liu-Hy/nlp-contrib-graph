@@ -1,8 +1,0 @@
-(novel approach||to building||supervised reading comprehension data set)
-(Model||introducing||novel approach)
-(summary and paraphrase sentences||readily converted to||context - query - answer triples)
-(context - query - answer triples||using||simple entity detection and anonymisation algorithms)
-(Model||observe||summary and paraphrase sentences)
-(novel deep learning models||for||reading comprehension)
-(Model||demonstrate||novel deep learning models)
-(Contribution||has||Model)

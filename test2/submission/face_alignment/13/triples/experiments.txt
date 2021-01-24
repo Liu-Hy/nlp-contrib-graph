@@ -1,8 +1,0 @@
-(shape and texture representation power||over||linear 3 DMM)
-(significantly improved||has||shape and texture representation power)
-(low error||comparable to||optimization - based methods)
-(on - par results||with||Garrido et al.)
-(on - par results||with||offline optimization method)
-(on - par results||surpassing||all other regression methods)
-(Garrido et al.||has||offline optimization method)
-(Contribution||has||Experiments)

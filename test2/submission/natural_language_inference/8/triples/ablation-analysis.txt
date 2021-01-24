@@ -1,7 +1,0 @@
-(mean pooling||regarded||each word)
-(each word||of||equal importance)
-(attention mechanism||helps||re-weight words)
-(re-weight words||according to||importance)
-(mean pooling||has||each word)
-(Ablation analysis||has||mean pooling)
-(Contribution||has||Ablation analysis)

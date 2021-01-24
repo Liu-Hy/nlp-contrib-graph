@@ -1,2 +1,0 @@
-(Tasks||has||WIDER FACE)
-(Contribution||has||Tasks)

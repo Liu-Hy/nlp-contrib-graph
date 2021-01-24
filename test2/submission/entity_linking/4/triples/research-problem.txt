@@ -1,7 +1,0 @@
-(Contribution||has research problem||KB entities)
-(Contribution||has research problem||semantics)
-(Contribution||has research problem||texts)
-(Contribution||has research problem||Explicit Semantic Analysis ( ESA ))
-(Contribution||has research problem||sparse vector space)
-(Contribution||has research problem||ESA)
-(Contribution||has research problem||text)

@@ -1,6 +1,0 @@
-(neural - network - based NLI models||with||external knowledge)
-(external knowledge||in||coattention)
-(external knowledge||in||local inference collection)
-(external knowledge||in||inference composition components)
-(Model||enrich||neural - network - based NLI models)
-(Contribution||has||Model)

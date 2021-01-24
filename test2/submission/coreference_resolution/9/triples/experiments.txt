@@ -1,4 +1,0 @@
-(BERT - large||improves||c 2 f - coref)
-(c 2 f - coref||by||much larger margin)
-(much larger margin||of||3.9 %)
-(Contribution||has||Experiments)

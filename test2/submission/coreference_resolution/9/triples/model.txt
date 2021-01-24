@@ -1,6 +1,0 @@
-(BERT||to||coreference resolution)
-(Model||fine - tune||BERT)
-(two ways||extending||c 2f - coref model)
-(two ways||name||c 2f - coref model)
-(Model||present||two ways)
-(Contribution||has||Model)

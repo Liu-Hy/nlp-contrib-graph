@@ -1,7 +1,0 @@
-(Model||introduce||general framework PhaseCond)
-(multi-hops architecture||refines||results)
-(results||by using||self - attention model)
-(alternatively captures||has||question - aware passage representations)
-(alignment matrix||corresponding to||all question and passage word pairs)
-(Model||has||question - passage attention models)
-(Contribution||has||Model)

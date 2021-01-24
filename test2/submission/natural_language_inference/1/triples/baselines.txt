@@ -1,4 +1,0 @@
-(Baselines||in||Multi-range Reasoning Unit ( MRU ))
-(two baseline models||with||Context Zoom layer)
-(Baselines||implemented||two baseline models)
-(Contribution||has||Baselines)

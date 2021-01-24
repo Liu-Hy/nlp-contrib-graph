@@ -1,2 +1,0 @@
-(Contribution||has research problem||Text Categorization)
-(Contribution||has research problem||Large data results)

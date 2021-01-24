@@ -1,5 +1,0 @@
-(WSD||trained||end - to - end)
-(end - to - end||from||sense - annotated text)
-(sense - annotated text||to||sense labels)
-(single all - words model||from||training data)
-(Contribution||has||Model)

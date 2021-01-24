@@ -1,5 +1,0 @@
-(significantly better||than||algorithm)
-(algorithm||based on||continuous bag of words model ( Word2 vec ))
-(continuous bag of words model ( Word2 vec )||especially on||verbs)
-(our naive nearest neighbor classifiers||do not have||learned model)
-(Contribution||has||Experiments)

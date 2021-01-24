@@ -1,8 +1,0 @@
-(Contribution||has research problem||Hypernym Discovery)
-(Contribution||has research problem||sparse coding)
-(Contribution||has research problem||formal concept hierarchy)
-(Contribution||has research problem||word embeddings)
-(Contribution||has research problem||Sparse representation)
-(Contribution||has research problem||Formal concept Analysis ( FCA ))
-(Contribution||has research problem||hierarchical sparse coding)
-(Contribution||has research problem||trees)

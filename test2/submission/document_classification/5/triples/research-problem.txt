@@ -1,4 +1,0 @@
-(Contribution||has research problem||Text Classification)
-(Contribution||has research problem||document classification)
-(Contribution||has research problem||hierarchical classification)
-(Contribution||has research problem||Hierarchical Deep Learning for Text classification ( HDLTex ))

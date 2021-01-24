@@ -1,2 +1,0 @@
-(Contribution||has research problem||Multilingual Document Classification)
-(Contribution||has research problem||Cross - lingual document classification)

@@ -1,5 +1,0 @@
-(number of passes | T M |||from||1 to 5)
-(1 to 5||in||our framework)
-(finding||performs||best)
-(number of passes | T M |||has||1 to 5)
-(Contribution||has||Experiments)

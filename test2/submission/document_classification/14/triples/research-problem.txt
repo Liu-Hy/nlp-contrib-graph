@@ -1,2 +1,0 @@
-(Contribution||has research problem||One - hot CNN ( convolutional neural network ))
-(Contribution||has research problem||text categorization)

@@ -1,6 +1,0 @@
-(Our model||performs||best)
-(Our model||performs||2.82 % failure rate)
-(best||with||4.43 % mean error)
-(best||with||2.82 % failure rate)
-(Results||has||Our model)
-(Contribution||has||Results)

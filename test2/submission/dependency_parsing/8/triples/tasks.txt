@@ -1,2 +1,0 @@
-(Tasks||has||Part of Speech Tagging)
-(Contribution||has||Tasks)

@@ -1,4 +1,0 @@
-(reported accuracy||of||94.22 % UAS)
-(competitive||with||some of the highest reported accuries)
-(our model||has||competitive)
-(Contribution||has||Results)

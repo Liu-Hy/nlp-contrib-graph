@@ -1,8 +1,0 @@
-(Contribution||has research problem||Open-Domain Questions)
-(Contribution||has research problem||open - domain setting)
-(Contribution||has research problem||Wikipedia)
-(Contribution||has research problem||few relevant articles)
-(Contribution||has research problem||more than 5 million items)
-(Contribution||has research problem||carefully)
-(Contribution||has research problem||answer)
-(Contribution||has research problem||machine reading at scale ( MRS ))

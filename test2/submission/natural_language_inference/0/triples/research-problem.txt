@@ -1,6 +1,0 @@
-(Contribution||has research problem||Reasoning over Multiple Mentions)
-(Contribution||has research problem||higher performance)
-(Contribution||has research problem||C - GRU model)
-(Contribution||has research problem||low data regime)
-(Contribution||has research problem||better generalization)
-(Contribution||has research problem||training curve)

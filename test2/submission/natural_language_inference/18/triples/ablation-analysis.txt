@@ -1,6 +1,0 @@
-(training curves||of||CBS schedules)
-(CBS schedules||exhibit||aforementioned cyclical spikes)
-(aforementioned cyclical spikes||in||training loss and testing accuracy)
-(training curves||has||CBS schedules)
-(Ablation analysis||has||training curves)
-(Contribution||has||Ablation analysis)

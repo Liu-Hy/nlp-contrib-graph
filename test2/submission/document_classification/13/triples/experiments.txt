@@ -1,5 +1,0 @@
-(DPCNN||with||15 weight layers)
-(15 weight layers||outperforms||previous best models)
-(previous best models||on||six benchmark datasets)
-(six benchmark datasets||for||sentiment classification)
-(Contribution||has||Experiments)

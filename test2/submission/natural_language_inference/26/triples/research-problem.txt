@@ -1,8 +1,0 @@
-(Contribution||has research problem||Machine Reading Comprehension)
-(Contribution||has research problem||Machine reading comprehension ( MRC ))
-(Contribution||has research problem||MRC)
-(Contribution||has research problem||MRC)
-(Contribution||has research problem||three sub - tasks)
-(Contribution||has research problem||answer pointer)
-(Contribution||has research problem||no - answer pointer)
-(Contribution||has research problem||answer verifier)

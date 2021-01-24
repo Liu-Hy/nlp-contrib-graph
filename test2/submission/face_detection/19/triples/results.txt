@@ -1,3 +1,0 @@
-(FDNet1.0||wins||one 2nd place ( hard set = 87.9 % ))
-(one 2nd place ( hard set = 87.9 % )||on||validation set)
-(Contribution||has||Results)

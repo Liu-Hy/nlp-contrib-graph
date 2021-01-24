@@ -1,5 +1,0 @@
-(Contribution||has research problem||SEMI - SUPERVISED TEXT CLASSIFICATION)
-(Contribution||has research problem||image classification)
-(Contribution||has research problem||text classification)
-(Contribution||has research problem||input)
-(Contribution||has research problem||discrete)

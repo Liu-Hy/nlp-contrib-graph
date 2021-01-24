@@ -1,5 +1,0 @@
-(Contribution||has research problem||3D Morphable Model Regression)
-(Contribution||has research problem||unlabeled photographs)
-(Contribution||has research problem||3D face results)
-(Contribution||has research problem||accuracy)
-(Contribution||has research problem||previous work)

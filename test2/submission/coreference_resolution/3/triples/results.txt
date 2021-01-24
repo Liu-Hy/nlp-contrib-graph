@@ -1,8 +1,0 @@
-(span - ranking model||augmented with||ELMo and hyperparameter tuning)
-(span - ranking model||achieves||72.3 F1)
-(Our full approach||achieves||73.0 F1)
-(Results||has||Our full approach)
-(much higher recall||when adopting||coarse - to - fine approach)
-(further improvement||including||second - order inference)
-(Results||observe||further improvement)
-(Contribution||has||Results)

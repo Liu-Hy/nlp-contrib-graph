@@ -1,4 +1,0 @@
-(attribute pairs||achieved||first place)
-(first place||in||categories)
-(Results||with||attribute pairs)
-(Contribution||has||Results)

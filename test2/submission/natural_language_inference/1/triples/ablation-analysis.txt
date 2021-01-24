@@ -1,5 +1,0 @@
-(self - attention mechanism||in||Context zoom layer)
-(Context zoom layer||is||important component)
-(important component||to identify||related relevant sentences)
-(Ablation analysis||points out that||self - attention mechanism)
-(Contribution||has||Ablation analysis)

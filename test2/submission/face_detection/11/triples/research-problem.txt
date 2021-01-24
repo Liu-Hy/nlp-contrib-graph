@@ -1,4 +1,0 @@
-(Contribution||has research problem||Fast Object Detection)
-(Contribution||has research problem||unified deep neural network)
-(Contribution||has research problem||multi -scale CNN ( MS - CNN ))
-(Contribution||has research problem||fast multi-scale object detection)
