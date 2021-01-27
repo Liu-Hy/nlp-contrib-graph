@@ -1,0 +1,200 @@
+210	0	25	Knowledge - based Systems
+212	0	7	Babelfy
+212	10	18	exploits
+212	23	49	semantic network structure
+212	50	54	from
+212	55	63	BabelNet
+212	68	74	builds
+212	77	111	unified graph - based architecture
+212	112	115	for
+212	116	138	WSD and Entity Linking
+213	0	18	Supervised Systems
+215	0	3	IMS
+215	26	33	selects
+215	36	73	linear Support Vector Machine ( SVM )
+215	74	76	as
+215	81	91	classifier
+215	102	105	use
+215	111	126	set of features
+215	127	138	surrounding
+215	143	154	target word
+215	155	161	within
+215	164	178	limited window
+215	181	188	such as
+215	189	197	POS tags
+215	200	211	local words
+215	216	234	local collocations
+216	0	8	IMS +emb
+216	11	18	selects
+216	19	22	IMS
+216	23	25	as
+216	30	50	underlying framework
+216	55	67	makes use of
+216	68	83	word embeddings
+216	84	86	as
+216	87	95	features
+216	102	107	makes
+216	111	123	hard to beat
+216	124	133	inmost of
+216	134	146	WSD datasets
+217	0	22	Neural - based Systems
+219	0	8	Bi- LSTM
+219	11	20	leverages
+219	23	49	bidirectional LSTM network
+219	56	62	shares
+219	63	79	model parameters
+219	80	85	among
+219	86	95	all words
+221	0	60	Bi-LSTM +att.+ LEX and it s variant Bi- LSTM +att.+ LEX+P OS
+221	63	72	transfers
+221	73	76	WSD
+221	77	81	into
+221	84	106	sequence learning task
+221	111	118	propose
+221	121	152	multi - task learning framework
+221	153	156	for
+221	157	160	WSD
+221	163	174	POS tagging
+221	179	219	coarse - grained semantic labels ( LEX )
+195	3	6	use
+195	7	34	pre-trained word embeddings
+195	35	39	with
+195	40	54	300 dimensions
+195	63	67	keep
+195	73	78	fixed
+195	79	85	during
+195	90	106	training process
+200	7	21	Adam optimizer
+200	22	24	in
+200	29	45	training process
+200	46	50	with
+200	51	78	0.001 initial learning rate
+196	3	9	employ
+196	10	26	256 hidden units
+196	27	29	in
+196	39	51	gloss module
+196	60	74	context module
+196	83	88	means
+196	89	96	n = 256
+197	29	37	used for
+197	38	45	weights
+197	46	48	in
+197	49	53	LSTM
+197	0	25	Orthogonal initialization
+197	127	133	others
+197	58	87	random uniform initialization
+197	88	92	with
+197	93	114	range [ - 0.1 , 0.1 ]
+198	3	9	assign
+198	10	33	gloss expansion depth K
+198	38	43	value
+198	44	46	of
+198	47	48	4
+199	8	23	experiment with
+199	28	52	number of passes | T M |
+199	53	57	from
+199	58	59	1
+199	60	62	to
+199	63	64	5
+199	65	67	in
+199	68	81	our framework
+199	84	91	finding
+199	92	103	| T M | = 3
+199	104	117	performs best
+201	9	17	to avoid
+201	18	29	overfitting
+201	35	38	use
+201	39	61	dropout regularization
+201	66	69	set
+201	70	79	drop rate
+201	80	82	to
+201	83	86	0.5
+202	0	8	Training
+202	14	23	for up to
+202	24	34	100 epochs
+202	35	39	with
+202	40	54	early stopping
+202	55	57	if
+202	62	77	validation loss
+202	78	94	does n't improve
+202	95	101	within
+202	106	120	last 10 epochs
+30	19	26	propose
+30	29	44	novel model GAS
+30	49	85	gloss - augmented WSD neural network
+30	97	104	variant
+30	105	107	of
+30	112	126	memory network
+31	0	3	GAS
+31	4	19	jointly encodes
+31	24	43	context and glosses
+31	44	46	of
+31	51	62	target word
+31	67	73	models
+31	78	99	semantic relationship
+31	100	107	between
+31	112	131	context and glosses
+31	132	134	in
+31	139	152	memory module
+32	24	42	inner relationship
+32	43	50	between
+32	51	70	glosses and context
+32	71	86	more accurately
+32	92	98	employ
+32	99	124	multiple passes operation
+32	125	131	within
+32	136	142	memory
+32	143	145	as
+32	150	168	re-reading process
+32	173	178	adopt
+32	179	209	two memory updating mechanisms
+2	27	59	Neural Word Sense Disambiguation
+4	0	33	Word Sense Disambiguation ( WSD )
+5	72	75	WSD
+225	0	27	English all - words results
+230	0	15	GAS and GAS ext
+230	16	24	achieves
+230	29	60	state - of - theart performance
+230	61	63	on
+230	68	81	concatenation
+230	82	84	of
+230	85	102	all test datasets
+231	86	90	find
+231	96	103	GAS ext
+231	104	108	with
+231	109	147	concatenation memory updating strategy
+231	148	156	achieves
+231	161	173	best results
+231	174	178	70.6
+231	53	55	on
+231	186	199	concatenation
+231	200	202	of
+231	207	225	four test datasets
+242	0	24	Multiple Passes Analysis
+252	3	8	shows
+252	14	39	multiple passes operation
+252	40	48	performs
+252	49	55	better
+252	56	60	than
+252	61	69	one pass
+234	14	42	appropriate number of passes
+234	47	52	boost
+234	57	68	performance
+234	80	85	avoid
+234	86	100	over - fitting
+234	101	103	of
+234	108	113	model
+256	13	17	with
+256	22	32	increasing
+256	33	49	number of passes
+256	56	66	F1 - score
+256	67	76	increases
+257	10	14	when
+257	19	35	number of passes
+257	39	52	larger than 3
+257	59	68	F1- score
+257	69	74	stops
+257	75	103	increasing or even decreases
+257	104	110	due to
+257	111	123	over-fitting
+65	27	59	Neural Word Sense Disambiguation

@@ -1,0 +1,125 @@
+172	3	8	train
+172	13	18	model
+172	22	26	used
+172	27	54	stochastic gradient descent
+172	55	59	with
+172	64	80	ADAM update rule
+172	85	98	learning rate
+172	99	101	of
+172	102	117	0.001 or 0.0005
+178	0	7	Weights
+178	8	10	in
+178	15	27	GRU networks
+178	33	47	initialized by
+178	48	85	random orthogonal matrices and biases
+178	91	105	initialized to
+178	106	110	zero
+179	8	12	used
+179	15	42	gradient clipping threshold
+179	43	45	of
+179	46	48	10
+179	53	60	batches
+179	61	63	of
+179	64	71	size 32
+65	10	16	called
+65	21	55	Attention Sum Reader ( AS Reader )
+65	61	74	tailor - made
+65	75	86	to leverage
+65	91	95	fact
+65	96	100	that
+65	105	111	answer
+65	58	60	is
+65	117	121	word
+65	122	126	from
+65	131	147	context document
+70	3	10	compute
+70	13	29	vector embedding
+72	33	53	each individual word
+72	54	56	in
+72	61	68	context
+72	30	32	of
+72	76	115	whole document ( contextual embedding )
+74	0	5	Using
+74	8	19	dot product
+74	20	27	between
+74	32	79	question embedding and the contextual embedding
+74	80	82	of
+74	83	98	each occurrence
+74	99	101	of
+74	104	120	candidate answer
+74	121	123	in
+74	128	136	document
+2	0	18	Text Understanding
+5	54	72	text comprehension
+212	13	25	single model
+212	26	28	is
+212	31	47	little bit worse
+212	48	52	than
+212	53	64	performance
+212	6	8	of
+212	68	99	simultaneously published models
+214	10	18	ensemble
+214	19	21	of
+214	22	32	our models
+214	33	44	outperforms
+214	45	57	these models
+214	75	78	use
+214	79	106	pre-trained word embeddings
+215	0	18	On the CNN dataset
+215	19	35	our single model
+215	36	40	with
+215	41	65	best validation accuracy
+215	66	74	achieves
+215	77	90	test accuracy
+215	91	93	of
+215	94	100	69.5 %
+216	4	23	average performance
+216	24	26	of
+216	31	46	top 20 % models
+216	83	89	69.9 %
+216	99	116	even 0.5 % better
+216	117	121	than
+216	126	156	single best - validation model
+218	0	6	Fusing
+218	7	22	multiple models
+218	28	33	gives
+218	36	64	significant further increase
+218	65	67	in
+218	68	76	accuracy
+218	77	79	on
+218	85	112	CNN and Daily Mail datasets
+220	0	2	In
+220	3	26	named entity prediction
+220	27	48	our best single model
+220	49	53	with
+220	54	62	accuracy
+220	63	65	of
+220	66	72	68.6 %
+220	73	81	performs
+220	82	94	2 % absolute
+220	95	101	better
+220	102	106	than
+220	111	116	MemNN
+220	117	121	with
+220	122	138	self supervision
+220	145	163	averaging ensemble
+220	164	172	performs
+220	173	185	4 % absolute
+220	186	192	better
+220	193	197	than
+220	202	222	best previous result
+221	3	25	common noun prediction
+221	26	43	our single models
+221	47	61	0.4 % absolute
+221	62	68	better
+221	69	73	than
+221	74	80	Mem NN
+221	93	101	ensemble
+221	102	110	improves
+221	115	126	performance
+221	127	129	to
+221	130	134	69 %
+221	144	156	6 % absolute
+221	157	163	better
+221	164	168	than
+221	169	174	MemNN

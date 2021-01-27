@@ -1,0 +1,89 @@
+87	18	30	LSTM modules
+87	31	41	applied in
+87	42	51	our model
+87	57	73	200 output units
+89	4	25	initial learning rate
+89	29	35	set as
+89	36	41	0.001
+89	46	52	decays
+89	53	60	0.001 %
+89	61	76	every 100 steps
+90	4	9	model
+90	13	27	optimized with
+90	32	46	Adam algorithm
+88	0	2	In
+88	3	6	ASL
+88	12	21	calculate
+88	22	49	cross - sentence dependency
+88	50	55	using
+88	58	79	multilayer perceptron
+88	80	84	with
+88	85	101	one hidden layer
+88	102	115	consisting of
+88	116	132	150 hidden units
+91	12	18	select
+91	19	48	up to 40 continuous sentences
+91	49	52	for
+91	53	61	training
+24	267	274	propose
+24	277	301	cross - sentence encoder
+24	302	305	for
+24	306	346	end - to - end co-reference ( E2E - CR )
+25	58	79	external memory block
+25	80	90	containing
+25	91	125	syntactic and semantic information
+25	48	52	from
+25	131	148	context sentences
+25	152	160	added to
+25	165	184	standard LSTM model
+26	0	4	With
+26	10	30	context memory block
+26	37	51	proposed model
+26	63	69	encode
+26	70	85	input sentences
+26	86	88	as
+26	91	96	batch
+26	108	117	calculate
+26	122	137	representations
+26	138	140	of
+26	141	152	input words
+26	153	162	by taking
+26	168	206	target sentences and context sentences
+2	67	106	End - to - End Co -reference Resolution
+4	103	154	end - to - end co-reference resolution ( E2E - CR )
+5	22	30	E2E - CR
+10	0	23	Co-reference resolution
+97	0	14	Comparing with
+97	19	33	baseline model
+97	39	47	achieved
+97	48	63	67.2 % F1 score
+97	70	79	ASL model
+97	80	88	improved
+97	93	104	performance
+97	105	107	by
+97	108	113	0.6 %
+97	118	126	achieved
+97	127	144	67.8 % average F1
+108	0	4	show
+108	14	20	models
+108	26	34	consider
+108	35	62	cross - sentence dependency
+108	63	87	significantly outperform
+108	92	106	baseline model
+108	115	122	encodes
+108	123	136	each sentence
+108	137	141	from
+108	146	160	input document
+109	17	26	indicated
+109	36	45	ASL model
+109	50	68	better performance
+109	69	73	than
+109	78	87	LSL model
+109	110	118	extracts
+109	119	138	context information
+109	139	143	with
+109	147	166	attention mechanism
+109	167	177	instead of
+109	178	192	simply viewing
+109	193	220	sentence - level embeddings
+93	11	18	Results

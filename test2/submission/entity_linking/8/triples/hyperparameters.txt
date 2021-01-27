@@ -1,0 +1,6 @@
+(each context sentence||to||128 tokens)
+(Hyperparameters||limit||each context sentence)
+(entity embedding size||to||d = 300)
+(entity embedding size||has||d = 300)
+(Hyperparameters||set||entity embedding size)
+(Contribution||has||Hyperparameters)

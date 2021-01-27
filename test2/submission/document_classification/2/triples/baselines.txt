@@ -1,0 +1,6 @@
+(large - scale reproducibility study||involving||HAN)
+(large - scale reproducibility study||involving||XML - CNN)
+(large - scale reproducibility study||involving||KimCNN)
+(large - scale reproducibility study||involving||SGM)
+(Baselines||conduct||large - scale reproducibility study)
+(Contribution||has||Baselines)

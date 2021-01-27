@@ -1,0 +1,114 @@
+189	36	74	https : //github.com/swiseman/nn_coref
+185	0	3	For
+185	4	18	regularization
+185	24	29	apply
+185	30	37	Dropout
+185	38	42	with
+185	45	49	rate
+185	50	52	of
+185	53	56	0.4
+185	57	72	before applying
+185	77	93	linear weights u
+185	137	140	0.3
+185	141	143	to
+185	148	159	LSTM states
+185	160	174	before forming
+185	179	198	dot -product scores
+181	4	12	training
+181	18	21	use
+181	22	49	document - size minibatches
+181	118	126	minimize
+181	131	135	loss
+181	159	163	with
+181	164	171	AdaGrad
+182	103	109	choose
+182	110	124	learning rates
+182	46	49	for
+182	129	139	each layer
+182	140	146	out of
+182	147	184	{ 0.1 , 0.02 , 0.01 , 0.002 , 0.001 }
+183	20	23	set
+183	24	62	ha ( x n ) , h c ( x n ) , and h ( m )
+183	63	68	to be
+183	71	76	R 200
+183	83	96	hp ( x n , y)
+183	99	104	R 700
+184	3	6	use
+184	9	28	single - layer LSTM
+184	31	38	without
+184	39	66	" peep - hole " connections
+184	74	88	implemented in
+184	93	114	element - rnn library
+190	4	10	system
+190	11	23	makes use of
+190	26	29	GPU
+190	30	33	for
+190	34	42	training
+190	49	55	trains
+190	59	74	about two hours
+12	18	23	posit
+12	29	43	global context
+12	47	63	indeed necessary
+12	64	67	for
+12	68	88	further improvements
+12	89	91	in
+12	92	114	coreference resolution
+13	36	41	learn
+13	42	57	representations
+13	58	60	of
+13	61	77	mention clusters
+13	78	90	by embedding
+13	96	108	sequentially
+13	109	114	using
+13	117	141	recurrent neural network
+14	14	50	no manually defined cluster features
+14	65	71	learns
+14	74	95	global representation
+14	96	100	from
+14	105	124	individual mentions
+14	125	135	present in
+14	136	148	each cluster
+15	37	41	into
+15	44	86	mention - ranking style coreference system
+16	19	28	including
+16	29	94	the recurrent neural network and the mention - ranking sub-system
+16	100	107	trained
+16	108	122	end - to - end
+16	123	125	on
+16	130	146	coreference task
+17	3	8	train
+17	13	18	model
+17	19	21	as
+17	24	40	local classifier
+17	41	45	with
+17	46	59	fixed context
+2	29	51	Coreference Resolution
+4	34	56	coreference prediction
+193	3	6	see
+193	9	46	statistically significant improvement
+193	47	49	of
+193	50	72	over 0.8 Co NLL points
+193	73	77	over
+193	82	107	previous state of the art
+193	118	136	highest F 1 scores
+193	145	147	on
+193	148	171	all three CoNLL metrics
+203	19	22	RNN
+203	23	31	improves
+203	32	43	performance
+203	55	59	with
+203	64	93	most dramatic improve - ments
+203	94	96	on
+203	97	119	non-anaphoric pronouns
+203	129	135	errors
+203	145	168	decreased significantly
+203	169	172	for
+203	173	214	non-anaphoric nominal and proper mentions
+205	18	33	RNN performance
+205	37	57	significantly better
+205	58	62	than
+205	75	87	Avg baseline
+205	96	111	barely improves
+205	112	116	over
+205	117	134	mention - ranking
+191	0	7	Results

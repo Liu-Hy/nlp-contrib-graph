@@ -1,0 +1,6 @@
+(mean pooling||regarded||each word)
+(each word||of||equal importance)
+(words||according to||importance)
+(mean pooling||has||each word)
+(Baselines||has||mean pooling)
+(Contribution||has||Baselines)

@@ -1,0 +1,92 @@
+147	0	26	Natural Language Inference
+193	0	14	Our best score
+193	31	46	87.3 % accuracy
+193	47	60	obtained with
+193	65	93	full tree matching NTI model
+195	22	33	NTI - SLSTM
+195	34	42	improved
+195	47	58	performance
+195	59	61	of
+195	66	89	sequential LSTM encoder
+195	90	92	by
+195	93	110	approximately 2 %
+198	4	37	node - by - node attention models
+198	38	45	improve
+198	50	61	performance
+204	0	25	Answer Sentence Selection
+221	4	39	Deep LSTM and LSTM attention models
+221	40	50	outperform
+221	55	75	previous best result
+221	76	78	by
+221	81	93	large margin
+221	96	102	nearly
+221	103	110	5 - 6 %
+222	0	4	NASM
+222	5	13	improves
+222	18	32	result further
+222	37	41	sets
+222	44	59	strong baseline
+222	60	72	by combining
+222	73	96	variational autoencoder
+222	97	101	with
+222	106	120	soft attention
+224	0	13	Our NTI model
+224	14	21	exceeds
+224	22	26	NASM
+224	27	29	by
+224	30	49	approximately 0.4 %
+224	50	52	on
+224	53	56	MAP
+225	0	23	Sentence Classification
+234	0	21	Our NTI - SLSTM model
+234	22	31	performed
+234	32	46	slightly worse
+255	9	20	transformed
+255	25	30	input
+255	31	35	with
+255	40	63	LSTM leaf node function
+255	69	77	achieved
+255	82	98	best performance
+255	99	101	on
+255	107	111	task
+19	19	28	introduce
+19	29	57	Neural Tree Indexers ( NTI )
+19	62	93	class of tree structured models
+19	94	97	for
+19	98	107	NLP tasks
+20	0	3	NTI
+20	4	9	takes
+20	12	20	sequence
+20	21	23	of
+20	24	30	tokens
+20	35	43	produces
+20	48	62	representation
+20	63	78	by constructing
+20	81	96	full n-ary tree
+20	97	99	in
+20	102	121	bottom - up fashion
+21	0	16	Each node in NTI
+21	20	35	associated with
+21	36	76	one of the node transformation functions
+21	79	96	leaf node mapping
+21	101	136	non-leaf node composition functions
+24	7	39	sequential leaf node transformer
+24	40	47	such as
+24	48	52	LSTM
+24	56	62	chosen
+24	69	80	NTI network
+24	81	86	forms
+24	89	117	sequence - tree hybrid model
+24	118	137	taking advantage of
+24	143	179	conditional and compositional powers
+24	180	182	of
+24	183	214	sequential and recursive models
+23	17	24	propose
+23	25	43	different variants
+23	44	46	of
+23	47	86	node composition function and attention
+23	87	91	over
+23	92	96	tree
+23	97	100	for
+23	101	115	our NTI models
+2	25	43	Text Understanding

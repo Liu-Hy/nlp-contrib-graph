@@ -1,0 +1,36 @@
+15	21	34	explore using
+15	35	73	two variants of reinforcement learning
+15	74	94	to directly optimize
+15	97	115	coreference system
+15	116	119	for
+15	120	150	coreference evaluation metrics
+16	19	25	modify
+16	30	62	max-margin coreference objective
+16	75	91	by incorporating
+16	96	102	reward
+16	103	118	associated with
+16	119	144	each coreference decision
+16	145	149	into
+16	154	177	loss 's slack rescaling
+17	8	12	test
+17	17	52	REINFORCE policy gradient algorithm
+18	0	9	Our model
+18	15	45	neural mention - ranking model
+110	3	12	find that
+110	13	22	REINFORCE
+110	23	27	does
+110	28	43	slightly better
+110	44	48	than
+110	53	67	heuristic loss
+110	74	90	reward rescaling
+110	91	99	performs
+110	100	120	significantly better
+110	131	133	on
+110	134	148	both languages
+115	4	39	reward - rescaled max - margin loss
+115	40	48	combines
+115	53	72	best of both worlds
+115	75	87	resulting in
+115	88	108	superior performance
+4	0	22	Coreference resolution
+108	0	7	Results

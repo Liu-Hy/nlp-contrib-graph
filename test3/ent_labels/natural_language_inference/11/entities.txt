@@ -1,0 +1,102 @@
+127	0	13	To preprocess
+127	18	24	corpus
+127	30	33	use
+127	38	47	tokenizer
+127	48	52	from
+127	53	69	Stanford CoreNLP
+128	3	6	use
+128	10	29	Glo Ve word vectors
+128	30	43	pretrained on
+128	48	72	840B Common Crawl corpus
+131	9	28	max sequence length
+131	29	31	of
+131	32	35	600
+131	36	42	during
+131	43	51	training
+131	58	75	hidden state size
+131	76	78	of
+131	79	82	200
+131	83	86	for
+131	91	106	recurrent units
+131	109	122	maxout layers
+131	129	142	linear layers
+135	7	14	dropout
+135	15	28	to regularize
+135	29	40	our network
+135	41	47	during
+135	48	56	training
+135	63	71	optimize
+135	76	81	model
+135	82	87	using
+135	88	92	ADAM
+129	3	8	limit
+129	13	23	vocabulary
+129	24	26	to
+129	27	32	words
+129	42	52	present in
+129	57	76	Common Crawl corpus
+129	81	84	set
+129	85	95	embeddings
+129	96	99	for
+129	100	127	out - of - vocabulary words
+129	128	130	to
+129	131	135	zero
+132	0	9	All LSTMs
+132	15	35	randomly initialized
+132	36	46	parameters
+132	54	67	initial state
+132	68	70	of
+132	71	75	zero
+133	0	16	Sentinel vectors
+133	21	41	randomly initialized
+133	46	55	optimized
+133	56	62	during
+133	63	71	training
+136	0	10	All models
+136	15	43	implemented and trained with
+136	44	51	Chainer
+134	0	3	For
+134	8	23	dynamic decoder
+134	29	32	set
+134	37	51	maximum number
+134	52	54	of
+134	55	65	iterations
+134	66	68	to
+134	69	70	4
+134	75	78	use
+134	81	97	maxout pool size
+134	98	100	of
+134	101	103	16
+22	3	12	introduce
+22	17	52	Dynamic Coattention Network ( DCN )
+22	75	104	end - to - end neural network
+22	105	108	for
+22	109	127	question answering
+23	0	9	The model
+23	10	21	consists of
+23	24	43	coattentive encoder
+23	49	57	captures
+23	62	74	interactions
+23	75	82	between
+23	87	112	question and the document
+23	128	152	dynamic pointing decoder
+23	158	176	alternates between
+23	177	187	estimating
+23	192	205	start and end
+23	206	208	of
+23	213	224	answer span
+145	148	151	DCN
+145	160	170	capability
+145	171	182	to estimate
+145	187	207	start and end points
+145	16	18	of
+145	215	226	answer span
+145	227	241	multiple times
+146	18	23	model
+146	35	42	explore
+146	43	55	local maxima
+146	56	72	corresponding to
+146	73	99	multiple plausible answers
+13	9	11	QA
+2	78	96	QUESTION ANSWERING
+12	0	25	Question answering ( QA )

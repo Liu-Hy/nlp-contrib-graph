@@ -1,0 +1,112 @@
+128	0	21	All our neural layers
+128	24	33	including
+128	34	44	embeddings
+128	52	58	set to
+128	59	73	300 dimensions
+130	0	15	Word embeddings
+130	21	31	pretrained
+130	42	44	by
+130	45	53	word2vec
+130	54	56	on
+130	61	85	English Wikipedia corpus
+130	90	101	fined tuned
+130	102	108	during
+130	109	117	training
+130	118	129	as apart of
+130	130	146	model parameters
+134	0	21	Initial learning rate
+134	26	32	set to
+134	33	34	1
+134	59	66	applied
+134	43	54	power decay
+131	13	20	penalty
+131	21	23	of
+131	24	31	310 ? 4
+131	34	41	dropout
+131	46	55	chosen by
+131	56	66	validation
+131	67	71	with
+131	74	85	granularity
+131	86	88	of
+131	89	92	0.1
+135	3	7	used
+135	8	35	stochastic gradient descent
+135	36	40	with
+135	43	53	batch size
+135	54	56	of
+135	57	59	50
+33	19	26	propose
+33	31	56	TBCNN - pair neural model
+33	57	69	to recognize
+33	70	98	entailment and contradiction
+33	99	106	between
+33	107	120	two sentences
+34	3	13	lever- age
+34	14	44	our newly proposed TBCNN model
+34	45	55	to capture
+34	56	78	structural information
+34	79	81	in
+34	82	91	sentences
+36	16	21	TBCNN
+36	25	36	more robust
+36	37	41	than
+36	42	64	sequential convolution
+36	65	76	in terms of
+36	77	98	word order distortion
+37	2	15	pooling layer
+37	21	31	aggregates
+37	32	43	information
+37	44	49	along
+37	54	58	tree
+37	61	68	serving
+37	80	104	semantic compositonality
+38	10	37	two sentences ' information
+38	41	52	combined by
+38	53	86	several heuristic matching layers
+38	89	98	including
+38	99	112	concatenation
+38	115	152	element - wise product and difference
+2	0	26	Natural Language Inference
+4	50	88	recognize entailment and contradiction
+8	0	40	Recognizing entailment and contradiction
+8	113	147	natural language inference ( NLI )
+10	36	39	NLI
+138	14	39	TBCNN sentence pair model
+138	42	53	followed by
+138	54	80	simple concatenation alone
+138	83	94	outperforms
+138	95	140	existing sentence encoding - based approaches
+138	143	150	without
+138	151	162	pretraining
+138	167	176	including
+138	179	200	feature - rich method
+140	0	13	Model Variant
+144	45	50	using
+144	51	79	element - wise product alone
+144	83	102	significantly worse
+144	103	107	than
+144	108	150	concatenation or element - wise difference
+145	0	9	Combining
+145	10	39	different matching heuristics
+145	40	48	improves
+145	53	59	result
+145	66	84	TBCNN - pair model
+145	85	89	with
+145	90	143	concatenation , element - wise product and difference
+145	144	150	yields
+145	155	174	highest performance
+145	175	177	of
+145	178	184	82.1 %
+148	8	16	applying
+148	17	39	element - wise product
+148	40	48	improves
+148	53	61	accuracy
+148	62	64	by
+148	65	78	another 0.5 %
+149	4	27	full TBCNN - pair model
+149	28	39	outperforms
+149	40	89	all existing sentence encoding - based approaches
+149	92	104	in - cluding
+149	107	153	1024d gated recurrent unit ( GRU ) - based RNN
+149	154	158	with
+149	159	189	" skip - thought " pretraining

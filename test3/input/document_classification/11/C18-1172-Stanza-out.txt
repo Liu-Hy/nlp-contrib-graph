@@ -1,0 +1,210 @@
+title
+Task - oriented Word Embedding for Text Classification
+abstract
+Distributed word representation plays a pivotal role in various natural language processing tasks .
+In spite of its success , most existing methods only consider contextual information , which is suboptimal when used in various tasks due to alack of task - specific features .
+The rational word embeddings should have the ability to capture both the semantic features and task - specific features of words .
+In this paper , we propose a task - oriented word embedding method and apply it to the text classification task .
+With the function - aware component , our method regularizes the distribution of words to enable the embedding space to have a clear classification boundary .
+We evaluate our method using five text classification datasets .
+The experiment results show that our method significantly outperforms the state - of - the - art methods .
+* Corresponding author
+This work is licenced under a Creative Commons Attribution 4.0 International Licence .
+Licence details : http://creativecommons.org/licenses/by/4.0/
+Text Classification Expected Distribution Word Embeddings Actual Distribution
+AI : a combination of active learning and self learning for named entity recognition on twitter using conditional random fields learning :
+Law : we assess the relationship between legal origin and a range of correlated indicators of social responsibility
+Introduction
+Learning word representation is a fundamental step in various natural language processing tasks .
+Tremendous advances have been made by distributed representations ( also known as word embeddings ) which learn a transformation of each word from raw text data to a dense , lower - dimensional vector space .
+Most existing methods leverage contextual information from the corpus and other complementary information , such as subword information , implicitly syntactic dependencies , and semantic relations .
+In traditional evaluations such as word similarity and word analogy , the aforementioned context - aware word embeddings work well since semantic information plays a vital role in these tasks , and this information is naturally addressed byword contexts .
+However , in real - world applications , such as text classification and information retrieval , word contexts alone are insufficient to achieve success in the absence of task - specific features .
+illustrates this problem with the classification task as an example .
+Several sentences from different categories are given at the far left of the figure where the words in bold are salient words for the category distinction .
+We also illustrated expected word distribution of these salient words in the embedding space .
+To obtain a good classification performance , the expected word distribution should have a clear classification boundary : words within the same category are close to each other and faraway from words in other categories as illustrated in .
+However , the actual distribution obtained from Word2 Vec at the far right of is normally not satisfactory because Word2 Vec only focuses on context similarity .
+For example , although learning and educational are with similar context as recognized by Word2 Vec , they are salient words to distinguish categories of AI and Sociology , so they should be faraway from each other .
+Apparently , using word embedding directly from Word2 Vec would not obtain good performance on the text classification task due to the fact that words ' functional features in the real tasks are ignored in the training process .
+In this paper , we propose a task - oriented word embedding method ( denoted as ToWE ) to solve the aforementioned problem .
+It learns the distributed representation of words according to the given specific :
+The example sentences from the text classification dataset .
+Words in bold are salient words to distinguish the sentence category .
+Their most similar words in the Word2 Vec space are shown in the right - hand column .
+The word color indicates the category , and the words in black are general words for the task .
+NLP task .
+Specifically , we focus on text classification .
+In our method , the words ' contextual information and task information are inherently jointed to construct the word embeddings .
+In the joint learning framework , the contextual information is captured following the context prediction task introduced by .
+To model the task information , we regularize the distribution of the salient words to have a clear classification boundary , and then adjust the distribution of the other words in the embedding space correspondingly .
+To give an intuitive understanding on how our method works from the classification perspective , we design a 5 Abstracts
+Group dataset ( detailed in Section 4.1 ) and conduct a qualitative analysis .
+Experiments show qualitative improvements of our method over context - based Skip - gram method on word neighbors for classification .
+We also perform empirical comparisons on five text classification datasets , which demonstrate the effectiveness of our method over the other state - of the - art methods .
+The contributions of this paper can be summarized as following :
+We propose a task - oriented word embedding method that is specially designed for text classification .
+It introduces the function - aware component and highlights word 's functional attributes in the embedding space by regularizing the distribution of words to have a clear classification boundary .
+We design a 5 Abstracts
+Group dataset and present a qualitative analysis , giving an intuitive understanding on how our method works from the classification perspective .
+Experimental results on five text classification datasets also show that the proposed method is more optimal for classification on account of revealing functional attributes of words .
+Related Work
+Word embeddings that provide continuous low - dimensional vector representations of words have been widely studied by NLP communities .
+The last few years have seen the development of word embedding methods purely based on the co-occurrence information in a corpus .
+Some studies also pay attention to the semantic knowledge stored in the knowledge bases .
+For example , refine word representations using relational information from semantic lexicons , represent semantic knowledge as a number of ordinal similarity inequalities of related word pairs to learn semantic word embeddings .
+Recent works have thrown light on the problems associated with directly applying word embeddings into real - world applications .
+demonstrated that the globally trained word embedding underperform corpus and query - specific embeddings for retrieval tasks .
+They proposed locally training word embeddings in a query - specific manner for the query expansion task .
+indicated that the underlying assumption in typical word embedding methods is not equal to the need of IR tasks , and they proposed relevance - based models to learn word representations based on querydocument relevance information , which is the primary objective of most IR task .
+For the sentiment analysis task , refined word embedding to avoid generating similar vector representations for sentimentally opposite words .
+For the contradiction detection task , developed contradiction - specific word embedding to recognize contradiction relations between a pair of sentences .
+These studies show that general trained word embeddings can not be optimized for a specific task , thus , they are likely to be suboptimal .
+To meet the needs of real - world applications , rational word embeddings should have the ability to capture both the semantics of words and the task - specific features of words .
+In this work , we focus on task - oriented word embedding for the text classification task .
+Several attempts have shown that revised word embeddings can boost the performance of classification .
+For example , topical information is shown to be effective in generating high quality word embeddings , which can enhance the performance of text classification .
+On the other hand , to enhance the performance of sentiment classification , Chih et al. proposed a word embedding refinement model to refine existing semantically oriented word vectors using sentiment lexicons in order to distinguish words with similar vector representations but opposite sentiment polarities .
+Our work departs from previous work in that it directly models task - specific features to construct the embedding space with a clear boundary for classification .
+Method
+Given the unlabeled corpus C and the labeled training set D = { D 1 , D 2 , , D g } with g text categories , our method aims to train the task - oriented d-dimensional word embedding w i ?
+Rd for the i - th word w i in vocabulary V .
+Formally , the document collection belonging to the k -th category is denoted as D k .
+Our proposed joint learning framework contains two components , i.e. , the context - aware component and function - aware component .
+The context - aware part models the co-occurrence in corpus C and captures the word semantic features .
+The function - aware part reveals the word 's functional attributes following the task - specific features observed in D .
+We next describe these two parts respectively .
+Context - aware Component
+Our method uses the Word2 Vec method to model the context information and uses log - linear models to produce word embeddings .
+It applies a sliding window moving on the corpus .
+The word in the center of the window is the target word and the others are context words .
+Word2 Vec has two versions , i.e. , CBOW and Skip - gram .
+The CBOW model uses the average / sum of context words as input to predict the target , and the Skip - gram model uses the target word as input to predict each context word .
+To simplify , we represent the objective of each prediction as
+.
+( 1 )
+In CBOW , w is the target word , and c is the vector of the context words , and in Skip - gram , w is each word in the context , and c is the vector of the target word .
+Function - aware Component
+In the function - aware component , we define salient words as those words with the ability to distinguish the document category .
+These salient words are first extracted from the labeled training set D in an offline process .
+Then the correlations among these words are used to model the functional features in the embedding space .
+Each salient word w of the k -th category is offline extracted according to the following the two principles :
+( 1 ) The term frequency of the word win this category ( i.e. , D k ) is much higher than that in other categories ; ( 2 ) w is common in other categories , expressed as a small variance of term frequencies in other categories .
+Formally , we design the following formula to measure the importance of word w to the k -th category as a salient word :
+where ti is the term frequency in the i - th category , T ?k ( w ) is the collection of term frequencies except the k - th category ( i.e. , T ?k ( w ) = {t j | 1 ? j ? g , j = k} ) , and var ( ) is the variance .
+According to this importance score , we generate a salience words set by selecting the top N words for each category , denoted as S k = {w j | 1 ? j ? N } , k ?
+[ 1 , g] .
+Then , for the task , the words in the salient words set S = { S 1 , S 2 , , S g } have the ability to distinguish different categories .
+The salient words are next utilized to capture the functional relations between words in the embedding space .
+In the learning framework , if the predicted word w is in S , the function - aware component will be activated .
+As to modeling the correlations of function - salient words , we expect to constrain w to be close to the words in the same category and faraway from the words in different categories .
+According to this idea , we construct a set P ( w ) with n word - pairs for each salient word w .
+Each word - pair contains a positive word u and a negative word v.
+The positive words are randomly selected from S which belong to the same category with w , and the negative words are randomly sampled from other categories .
+We maximize a margin - based ranking criterion over the training set S:
+where ?
+is a margin hyper parameter , n is the size of sample set P ( w ) , and s ( , ) is similarity measure .
+Following the recommendations in prior work on word similarity measurement , we apply the cosine similarity of a pair of words by computing s ( a , b ) = ab | a | | b | .
+The objective function favors higher values of the similarity for positive word - pairs than for negative word - pairs , and is thus a natural implementation of the intended criterion .
+Joint Learning
+The context - aware component and the function - aware component are jointly optimized , so we then obtain the following object function :
+where ?
+is a set of all parameters in L context and L function , and ?
+is the combination parameter which balances the contribution of each component in the training process .
+The goal of the training objective is to maximize L with respect to the model parameters .
+The optimization process is conducted via Stochastic Gradient Descent ( SGD ) .
+The optimization of L context follows the negative sampling introduced in .
+If the predicted word w is in the salient words set S , the corresponding optimization process for L function will be activated , and the parameters are updated as w ? w + ? ? L ?w , u ? u + ? ? L ?u , and v ? v + ? ?L ?v , where ?
+is the learning rate , and the gradients are calculated as follows :
+where w is the predicted word , u is its positive word and v is its negative word .
+Since we apply cosine distance to compute the similarity between two words , the optimization can be derived as follows :
+Algorithm 1 Task - oriented Word Embedding Method .
+Input : Corpus
+C , the labeled training set D with g categories , dimensionality d , sampling times n , and word vocabulary V Output : Embeddings w ?
+Rd of all words in the vocabulary V .
+Initialization : randomly set w ?
+Rd for all words in V ; generate the salient words set S ; constructing T prediction tasks using a sliding window . fort = 1 , 2 , . . . , T do optimize L context using negative sample method introduced in if win S then for n do sampling the positive word u and the negative word v. optimize L function using Eq. ( 5 ) to update w , u , v. end for end if end for return w for all words in V .
+where S a , b = ab | a| | b | .
+The pseudo code for our word embedding method is shown in Algorithm 1 , and the source code is available on the Github 1 .
+Experiments
+Datasets
+To undertake an extensive evaluation , we investigate the empirical performances of our proposed method on five text classification datasets .
+The detailed statistics of all the datasets are listed in ( 1 ) The 20 NewsGroup 2 is a popular text classification dataset which contains 18,846 documents from 20 different newsgroups .
+Each document contains several sentences .
+The dataset is separated into a training set of 11,314 documents and a test set of 7,532 documents .
+( 2 ) The 5 Abstracts Group dataset is academic papers from five different domains collected from the Web of Science namely , business , artificial intelligence , sociology , transport and law .
+We extracted the abstract and title fields of each paper as a document .
+The dataset contains 6,256 documents , and we randomly selected 500 papers in each category as the training set , and the others as the test set .
+The dataset is published on the Github 3 .
+( 3 ) The IMDB 4 contains movie reviews with binary classes ( i.e. , positive and negative ) .
+It consists of 50,000 movie reviews , and each movie review has several sentences .
+( 4 ) The MR 5 dataset consists of movie reviews from Rotten Tomato website with two classes labeled by .
+Each review contains only one sentence .
+( 5 ) The SST 6 dataset contains the movie reviews in the Stanford Sentiment Treebank labeled by comprising one sentence for each review .
+50 % of the MR and SST datasets are partitioned randomly into the training set and 50 % into the test set .
+Baseline Methods
+To evaluate our method , we consider the following baselines : ( 1 ) the BOW method is employed as a basic baseline .
+It represents each document as a bag of words and the weighting scheme is TFIDF .
+We select the top 2,000 words according to the TFIDF scores as features ;
+( 2 ) the Word2 Vec method is a neural network language method which learns word embeddings by maximizing the conditional probability leveraging contextual information .
+It comprises two models , i.e. , CBOW which predicts the target word using context information , and the Skip - gram ( denoted as SG ) which predicts each context word using the target word ; ( 3 ) the Glo Ve method is a state - of - the - art matrix factorization method .
+It leverages global count information aggregated from the entire corpus as wordword occurrence matrix to learn word embeddings ; ( 4 ) the Topical Word Embedding method ( denoted as TWE ) ) learns a topic model from the training set , then generates word embeddings by jointly considering words and topics in a neural network ; ( 5 ) the Retrofit method is a popular method that refines pre-trained word embeddings using relational information from the knowledge base ( e.g. , WordNet used in our experiments ) .
+Experimental Settings
+In this paper , we use the text classification task to evaluate the performance of word embeddings .
+Word embeddings are used to construct the document embeddings d by simply averaging all word embeddings in the given document , i.e. , d = 1 |d | w?d w , where w is a word in document d .
+We regard document embedding as a document feature and trained a linear classifier using Liblinear 7 , since the feature size is large , and Liblinear can quickly train a linear classifier with high dimension features .
+The classifier is then used to predict the class labels of documents in the test set .
+The multi-group classification performance was evaluated in terms of four measures : accuracy ( Acc. ) , precision ( Prec. ) , recall ( Rec. ) and F - measure ( F1 ) , and the binary classification performance was evaluated by accuracy ( Acc. ) .
+All the measures are computed by averaging the metrics of each class and are weighted by the number of true instances for each class .
+For each dataset , all documents are joined together as a corpus for embedding training .
+We tokenized the corpus with the Stanford Tokenizer 8 and converted it to lowercase , then removed the stop words .
+For a fair comparison , all word embeddings adhere to the following settings : the dimensionality of vectors is 300 , the size of the context window is 5 , the number of negative samples is 25 .
+In our method , an offline process is used to extract salient word set S from labeled training set D.
+To obtain an intuitive understanding of these salient words , we list the top ten words for each category in the 5 Abstracts
+Group dataset .
+The result is displayed in .
+We vary parameter N ( detailed in section 3.2 ) in the range between 30 and 200 , and show the performance in .
+Our method achieves the best performance when N is set to 150 for the 5 Abstracts
+Group dataset .
+If the value of N is too large , this may hinder the performance because too much noise will be involved .
+The recommended N is 150 with the constraint that the total size of S is under 1200 based on practical experience .
+There are two hyper - parameters in our method , i.e. , the combination parameter ? in Eq. ( 4 ) and the size n of sample set P ( w ) in Eq. ( 3 ) .
+We carefully tune these parameters by fixing one and varying the other .
+The parameters corresponding to the best accuracy in 20 New s Group are used to report the final settings .
+As shown in , the optimal values for ?
+were tuned from 0 to 1 , with a step size of 0.1 .
+The proposed method based on Skip - gram and CBOW reaches optimal performance when ? = 0.4 and ? = 0.3 , respectively .
+We tuned the value for n from 50 to 300 , and the methods achieve the best performance when n = 150 .
+We follow the optimal settings in this work , with recommended settings of ? ? ( 0.3 , 0.4 ) and n ? ( 100 , 150 ) .
+Overall Performance
+We compared our proposed method with the baseline methods .
+shows the evaluation results .
+Based on the experiment results , we make several observations :
+( 1 ) Our method performs better than the other methods , and are proved to be highly reliable for the text classification task .
+In particular , the ToWE - SG method significantly outperforms the other baselines on the 20 New s Group , 5 Abstract s Group , and MR .
+This is mainly attributed to the task - specific modeling mechanism , which enables our models to capture functional features among words , therefore , it can more accurately distinguish classes .
+( 2 ) The word embedding methods outperform the basic bag - of - words methods in most cases , indicating the superiority of distributed word representation over the one - hot representation .
+Moreover , the manager ( Business ) layer ( AI ) congress ( Law ) poverty ( Sociology ) accident methods which integrate the abundant information discovered from the datasets ( i.e. , TWE and ToWE ) achieve better performance compared to those that only consider contextual information , such as GloVe , CBOW , and SG .
+This demonstrates the effectiveness of refining context - aware word embeddings with task information .
+( 3 ) The Retrofit method is the knowledge - base enhanced word embedding method .
+Our method achieves better performance over Retrofit method , indicating that the task - specific features could be more effective compared with general semantic relations constructed by humans in the knowledge bases .
+( 4 ) In sentence classification , such as the MR and SST datasets , it is obvious that TWE achieves a relatively lower performance .
+This observation shows that topical information enhanced word embedding does not accurately represent a short text .
+Our method outperforms the TWE method on both the document - level and sentence - level tasks , which shows the stability and reliability of modeling taskspecific features in real - world applications .
+Case Study
+A case study was conducted to qualitatively analyze in - depth why task - oriented word embedding methods surpass typical context - aware word embedding methods .
+We selected several salient words from different categories in the 5 Abstracts
+Group dataset , and then compared the top ten similar words obtained by ToWE - SG and SG , respectively .
+The results are displayed in .
+We observe that the similar words selected by the ToWE - SG method belong to the same category , while the SG method may select words from different categories .
+Taking the word manager as an example , the most similar words selected by ToWE - SG all belong to the Business category , whereas the SG method selects helps , create which can hardly be regarded as being in the Business category .
+This demonstrates that our method is capable of capturing a clear boundary in the embedding space .
+For further investigation , we compared the classification performance of these two word embeddings in each category .
+As shown in , ToWE - SG outperforms SG in all these categories .
+This indicates that by forcing words in the same category to have similar representations , the classifier achieves better performance .
+Conclusion
+In this paper , we proposed a novel approach for learning task - oriented word embedding , especially for the text classification task .
+Instead of learning embedding vectors merely based on context information , we incorporate task - specific features into the training process in order to reveal the words functional attributes in the embedding space .
+The results of the experiments with different datasets show that the proposed method outperforms the existing state - of - the - art word embedding learning methods on text classification tasks .
+In the future , we will study how to effectively construct the task - oriented word embeddings with the help of transferable task - features across domains .
+6 Acknowledgment

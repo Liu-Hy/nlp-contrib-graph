@@ -1,0 +1,69 @@
+29	3	7	call
+29	11	37	deep pyramid CNN ( DPCNN )
+29	47	63	computation time
+29	64	67	per
+29	68	73	layer
+29	74	97	decreases exponentially
+29	98	100	in
+29	105	118	pyramid shape
+30	0	16	After converting
+30	17	30	discrete text
+30	31	33	to
+30	34	59	continuous representation
+30	66	84	DPCNN architecture
+30	92	102	alternates
+30	103	147	a convolution block and a downsampling layer
+30	148	161	over and over
+31	4	17	network depth
+31	25	35	treated as
+31	38	52	meta-parameter
+32	4	28	computational complexity
+32	48	61	bounded to be
+32	62	80	no more than twice
+32	29	31	of
+32	89	110	one convolution block
+36	13	18	DPCNN
+36	19	23	with
+36	24	40	15 weight layers
+37	4	15	first layer
+37	16	24	performs
+37	25	46	text region embedding
+38	18	26	stacking
+38	27	29	of
+38	30	48	convolution blocks
+38	91	107	interleaved with
+38	108	122	pooling layers
+38	123	127	with
+38	128	136	stride 2
+38	137	140	for
+38	141	153	downsampling
+39	4	23	final pooling layer
+39	24	34	aggregates
+39	35	48	internal data
+39	49	52	for
+39	53	66	each document
+39	67	71	into
+39	72	82	one vector
+40	3	6	use
+40	7	18	max pooling
+40	19	22	for
+40	23	41	all pooling layers
+155	0	18	Large data results
+159	0	2	On
+159	3	24	all the five datasets
+159	27	32	DPCNN
+159	33	44	outperforms
+159	45	72	all of the previous results
+191	0	18	Small data results
+194	31	49	DPCNN performances
+194	50	54	with
+194	55	91	100 - dim unsupervised embed - dings
+194	110	126	turned out to be
+194	127	137	as good as
+194	144	148	with
+194	149	182	300 - dim unsupervised embeddings
+196	0	10	ShallowCNN
+196	21	27	rivals
+196	28	33	DPCNN
+2	47	66	Text Categorization
+150	0	7	Results

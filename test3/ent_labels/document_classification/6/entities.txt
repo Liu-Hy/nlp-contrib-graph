@@ -1,0 +1,171 @@
+130	0	28	Multi - Class Classification
+141	31	36	chose
+141	37	53	region embedding
+141	54	56	as
+141	61	68	Encoder
+141	69	71	in
+141	72	76	EXAM
+142	4	15	region size
+142	16	18	is
+142	19	20	7
+142	25	39	embedding size
+142	40	42	is
+142	43	46	128
+145	0	10	Our models
+145	15	41	implemented and trained by
+145	42	47	MXNet
+145	64	68	with
+145	71	93	single NVIDIA TITAN Xp
+143	3	7	used
+143	8	35	adam ( Kingma and Ba 2014 )
+143	36	38	as
+143	43	52	optimizer
+143	53	57	with
+143	62	83	initial learning rate
+143	84	90	0.0001
+143	99	109	batch size
+143	113	119	set to
+143	120	122	16
+144	3	6	for
+144	11	26	aggregation MLP
+144	32	35	set
+144	40	44	size
+144	45	47	of
+144	52	64	hidden layer
+144	65	67	as
+144	68	69	2
+144	70	75	times
+144	76	102	interaction feature length
+148	18	27	mainly in
+148	28	42	three variants
+149	4	10	models
+149	11	19	based on
+149	20	39	feature engineering
+150	4	28	Char - based deep models
+150	39	63	Word - based deep models
+154	0	6	Models
+154	7	15	based on
+154	16	35	feature engineering
+154	36	39	get
+154	44	57	worst results
+154	58	60	on
+154	61	82	all the five datasets
+156	0	19	Char - based models
+156	20	23	get
+156	28	51	highest over all scores
+156	52	54	on
+156	59	78	two Amazon datasets
+160	0	22	Word - based baselines
+160	23	29	exceed
+160	34	48	other variants
+160	49	51	on
+160	52	66	three datasets
+160	71	78	lose on
+160	83	102	two Amazon datasets
+162	0	3	For
+162	8	22	five baselines
+162	25	39	W.C Region Emb
+162	40	48	performs
+162	53	57	best
+164	8	14	Yah.A.
+164	17	21	EXAM
+164	22	30	improves
+164	35	51	best performance
+164	52	54	by
+164	55	60	1.1 %
+163	15	23	see that
+163	24	28	EXAM
+163	29	37	achieves
+163	42	58	best performance
+163	59	63	over
+163	68	82	three datasets
+163	85	87	AG
+163	90	97	Yah. A.
+163	102	105	DBP
+176	0	28	Multi - Label Classification
+194	3	14	implemented
+194	19	43	baseline models and EXAM
+194	44	46	by
+194	47	52	MXNet
+195	3	7	used
+195	12	18	matrix
+195	19	29	trained by
+195	30	38	word2vec
+195	39	52	to initialize
+195	57	72	embedding layer
+195	83	97	embedding size
+195	98	100	is
+195	101	104	256
+196	3	10	adopted
+196	11	14	GRU
+196	15	17	as
+196	22	29	Encoder
+196	36	49	each GRU Cell
+196	54	73	1,024 hidden states
+197	4	19	accumulated MLP
+197	24	39	60 hidden units
+199	4	18	validation set
+199	22	33	applied for
+199	34	50	early - stopping
+199	51	59	to avoid
+199	60	71	overfitting
+198	3	10	applied
+198	11	15	Adam
+198	16	27	to optimize
+198	28	34	models
+198	35	37	on
+198	42	57	NVIDIA TITAN Xp
+198	58	62	with
+198	67	77	batch size
+198	78	80	of
+198	81	85	1000
+198	94	115	initial learning rate
+198	116	118	is
+198	119	124	0.001
+210	0	19	Word - based models
+210	24	35	better than
+210	36	55	char - based models
+210	56	58	in
+210	59	80	Kanshan - Cup dataset
+213	0	10	Our models
+213	11	18	achieve
+213	23	57	state - of - the - art performance
+213	58	62	over
+213	63	85	two different datasets
+31	44	53	introduce
+31	58	105	interaction mechanism ( Wang and Jiang 2016 b )
+31	117	141	capable of incorporating
+31	146	175	word - level matching signals
+31	176	179	for
+31	180	199	text classification
+35	0	10	Based upon
+35	15	36	interaction mechanism
+35	42	48	devise
+35	52	78	EXplicit interAction Model
+35	81	90	dubbed as
+35	91	95	EXAM
+36	38	49	consists of
+36	50	71	three main components
+36	74	94	word - level encoder
+36	97	114	interaction layer
+36	121	138	aggregation layer
+37	4	24	word - level encoder
+37	25	33	projects
+37	38	54	textual contents
+37	55	59	into
+37	64	92	word - level representations
+38	16	33	interaction layer
+38	34	44	calculates
+38	49	64	matching scores
+38	65	72	between
+38	77	94	words and classes
+39	11	21	last layer
+39	22	32	aggregates
+39	39	54	matching scores
+39	55	59	into
+39	60	71	predictions
+39	72	76	over
+39	77	87	each class
+2	35	54	Text Classification
+129	0	11	Experiments
+146	0	9	Baselines

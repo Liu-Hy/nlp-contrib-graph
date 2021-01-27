@@ -1,0 +1,39 @@
+13	14	20	update
+13	25	41	Seq2seq approach
+13	54	56	as
+13	59	76	stronger baseline
+13	77	79	of
+13	80	100	constituency parsing
+111	6	13	Smaller
+111	14	55	mini-batch size M and gradient clipping G
+111	56	64	provided
+111	69	87	better performance
+113	6	64	Larger layer size , hidden state dimension , and beam size
+113	65	69	have
+113	70	83	little impact
+113	84	86	on
+113	91	102	performance
+126	0	20	Our Seq2seq approach
+126	34	42	achieved
+126	47	64	competitive level
+126	65	67	as
+126	72	99	current top - notch methods
+126	102	123	RNNG and its variants
+115	46	51	using
+115	52	65	subword split
+115	66	68	as
+115	69	85	input token unit
+115	86	96	instead of
+115	97	125	standard tokenized word unit
+115	130	139	potential
+115	140	150	to improve
+115	155	166	performance
+119	13	32	subword information
+119	33	35	as
+119	36	44	features
+119	52	70	promising approach
+119	71	85	for leveraging
+119	86	105	subword information
+119	106	110	into
+119	111	131	constituency parsing
+2	53	73	Constituency Parsing

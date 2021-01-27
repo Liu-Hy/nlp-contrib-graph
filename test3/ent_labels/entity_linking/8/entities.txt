@@ -1,0 +1,133 @@
+98	3	8	train
+98	9	14	RELIC
+98	20	26	obtain
+98	27	31	data
+98	32	36	from
+98	41	81	2018 - 10 - 22 dump of English Wikipedia
+101	3	8	limit
+101	9	30	each context sentence
+101	31	33	to
+101	34	44	128 tokens
+104	3	6	set
+104	11	32	entity embedding size
+104	33	35	to
+104	36	43	d = 300
+105	3	8	train
+105	13	18	model
+105	19	24	using
+105	25	36	Tensor Flow
+113	0	14	ENTITY LINKING
+124	21	26	adopt
+124	31	81	standard CoNLL - Aida training set and alias table
+124	84	89	RELIC
+124	90	97	matches
+124	102	118	state of the art
+124	119	121	on
+124	127	136	benchmark
+134	26	61	RELIC 's entity linking performance
+134	71	78	boosted
+134	79	90	even higher
+134	91	98	through
+134	103	111	adoption
+134	112	114	of
+134	115	152	commonly used entity linking features
+141	0	5	RELIC
+141	6	17	outperforms
+141	18	28	prior work
+141	36	40	with
+141	41	49	only 5 %
+141	50	52	of
+141	57	70	training data
+142	0	26	ENTITY - LEVEL FINE TYPING
+146	0	4	show
+146	10	15	RELIC
+146	16	41	significantly outperforms
+146	42	55	prior results
+146	56	58	on
+146	59	72	both datasets
+148	0	3	For
+148	4	11	TypeNet
+148	14	23	aggregate
+148	24	45	mention - level types
+148	50	60	train with
+148	63	78	structured loss
+148	79	87	based on
+148	92	109	TypeNet hierarchy
+148	119	137	still outperformed
+148	138	140	by
+148	141	160	our flat classifier
+148	161	163	of
+148	164	177	binary labels
+151	0	17	EFFECT OF MASKING
+154	6	16	clear that
+154	17	33	masking mentions
+154	34	40	during
+154	41	49	training
+154	53	63	beneficial
+154	64	67	for
+154	68	87	entity typing tasks
+154	94	105	detrimental
+154	106	109	for
+154	110	124	entity linking
+159	0	18	A higher mask rate
+159	19	27	leads to
+159	28	46	better performance
+159	57	87	low and high - data situations
+162	49	66	mask rate of 10 %
+162	69	74	RELIC
+162	75	80	nears
+162	81	100	optimum performance
+162	101	103	on
+162	104	114	most tasks
+164	0	30	FEW - SHOT CATEGORY COMPLETION
+166	14	20	due to
+166	25	39	incompleteness
+166	40	42	of
+166	51	83	FIGMENT and TypeNet type systems
+166	107	127	RELIC 's performance
+166	131	142	approaching
+166	147	158	upper bound
+166	159	161	on
+166	162	192	both of these supervised tasks
+181	0	25	TRIVIA QUESTION ANSWERING
+196	3	10	observe
+196	20	51	retrieve - then - read approach
+196	52	60	taken by
+196	61	65	ORQA
+196	66	77	outperforms
+196	82	114	direct answer retrieval approach
+196	115	123	taken by
+196	124	129	RELIC
+197	136	139	see
+197	145	189	RELIC 's much faster nearest neighbor lookup
+197	190	198	captures
+197	199	203	80 %
+197	204	206	of
+197	207	226	ORQA 's performance
+198	28	33	RELIC
+198	34	48	outperforms 's
+198	49	79	reading comprehension baseline
+198	80	82	by
+198	83	92	20 points
+21	3	10	present
+21	11	67	RELIC ( Representations of Entities Learned in Context )
+21	72	77	table
+21	78	80	of
+21	81	110	independent entity embeddings
+21	126	133	trained
+21	134	142	to match
+21	143	178	fixed length vector representations
+21	179	181	of
+21	186	201	textual context
+21	202	210	in which
+21	217	225	entities
+21	116	120	have
+21	231	240	been seen
+22	3	8	apply
+22	9	14	RELIC
+22	15	17	to
+22	18	31	entity typing
+22	112	126	entity linking
+22	198	223	trivia question answering
+5	139	163	learning word embeddings
+5	168	212	context dependent representations of phrases

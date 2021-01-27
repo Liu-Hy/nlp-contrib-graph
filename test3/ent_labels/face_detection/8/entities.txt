@@ -1,0 +1,167 @@
+107	4	31	training hyper - parameters
+107	36	46	similar to
+107	47	59	Face R - CNN
+115	4	19	RPN and R - FCN
+115	29	44	learned jointly
+115	45	49	with
+115	54	66	softmax loss
+115	75	89	smooth L1 loss
+116	0	32	Non- maximum suppression ( NMS )
+116	36	47	adopted for
+116	48	60	regularizing
+116	65	72	anchors
+116	73	77	with
+116	78	96	certain IoU scores
+108	33	43	initialize
+108	44	55	our network
+108	56	60	with
+108	65	84	pre-trained weights
+108	85	87	of
+108	88	106	101 - layer ResNet
+108	107	117	trained on
+108	118	127	Image Net
+109	18	24	freeze
+109	29	44	general kernels
+109	55	57	of
+109	95	112	pre-trained model
+109	113	123	throughout
+109	128	151	entire training process
+109	161	168	to keep
+109	173	200	essential feature extractor
+109	201	211	trained on
+109	212	220	ImageNet
+110	0	11	In terms of
+110	16	25	RPN stage
+110	28	40	Face R - FCN
+110	41	51	enumerates
+110	52	75	multiple configurations
+110	76	78	of
+110	83	89	anchor
+111	3	10	combine
+111	13	18	range
+111	19	21	of
+111	22	55	multiple scales and aspect ratios
+111	65	77	to construct
+111	78	97	multi-scale anchors
+118	3	6	set
+118	11	14	256
+118	15	18	for
+118	23	27	size
+118	28	30	of
+118	31	45	RPN mini-batch
+118	50	53	128
+118	54	57	for
+118	58	65	R - FCN
+120	3	10	utilize
+120	11	31	multi-scale training
+120	32	37	where
+120	42	53	input image
+120	57	64	resized
+120	65	69	with
+120	70	92	bilinear interpolation
+120	93	95	to
+120	96	133	various scales ( say , 1024 or 1200 )
+121	0	2	In
+121	7	20	testing stage
+121	23	42	multi-scale testing
+121	59	64	scale
+121	65	70	image
+121	71	75	into
+121	79	92	image pyramid
+121	93	96	for
+121	97	113	better detecting
+121	114	121	on both
+121	122	144	tiny and general faces
+22	20	27	develop
+22	30	43	face detector
+22	44	57	on the top of
+22	58	65	R - FCN
+22	66	70	with
+22	71	87	elaborate design
+22	88	90	of
+22	95	102	details
+23	57	63	design
+23	17	21	size
+23	22	24	of
+23	72	88	anchors and RoIs
+24	74	83	introduce
+24	86	122	position - sensitive average pooling
+24	123	134	to generate
+24	135	153	embedding features
+24	154	167	for enhancing
+24	168	182	discrimination
+24	189	198	eliminate
+24	203	209	effect
+24	23	25	of
+24	213	239	non-uniformed contribution
+24	240	242	in
+24	243	259	each facial part
+25	22	27	apply
+25	32	73	multi-scale training and testing strategy
+26	4	52	on - line hard example mining ( OHEM ) technique
+26	56	71	integrated into
+26	72	83	our network
+26	92	95	for
+26	96	104	boosting
+26	109	117	learning
+26	118	120	on
+26	121	134	hard examples
+2	0	15	Detecting Faces
+4	0	14	Face detection
+125	20	41	our proposed approach
+125	42	59	consistently wins
+125	64	73	1st place
+125	74	80	across
+125	85	98	three subsets
+125	99	106	on both
+125	111	138	validation set and test set
+125	139	141	of
+125	142	152	WIDER FACE
+125	157	182	significantly outperforms
+125	187	203	existing results
+127	0	4	FDDB
+133	26	38	Face R - FCN
+133	39	60	consistently achieves
+133	65	87	impressive performance
+133	88	104	in terms of both
+133	109	152	discrete ROC curve and continuous ROC curve
+141	13	18	shows
+141	23	43	superior performance
+141	44	48	over
+141	53	66	prior methods
+141	67	73	across
+141	78	91	three subsets
+141	94	116	easy , medium and hard
+141	119	121	in
+141	122	151	both validation and test sets
+134	0	22	Our discrete ROC curve
+134	26	34	superior
+134	35	37	to
+134	42	72	prior best - performing method
+135	8	14	obtain
+135	19	42	best true positive rate
+135	43	45	of
+135	50	68	discrete ROC curve
+135	69	71	at
+135	72	97	1000/2000 false positives
+135	100	114	98.49%/99.07 %
+147	24	42	true positive rate
+147	43	51	98. 99 %
+147	52	54	of
+147	59	77	discrete ROC curve
+147	78	80	at
+147	81	101	1000 false positives
+147	106	114	99. 42 %
+147	115	117	at
+147	118	138	2000 false positives
+147	151	177	new state - of - the - art
+147	178	183	among
+147	184	209	all the published methods
+126	16	18	on
+126	19	41	WIDER FACE hard subset
+126	44	56	our approach
+126	60	68	superior
+126	69	71	to
+126	76	103	prior best - performing one
+126	104	106	by
+126	109	121	clear margin

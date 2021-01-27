@@ -1,0 +1,5 @@
+(very productive||generating||tens of thousands relations)
+(main objective||to outperform||random strategy)
+(Results||show||main objective)
+(lower scores||obtained for||multiword expressions)
+(Contribution||has||Results)

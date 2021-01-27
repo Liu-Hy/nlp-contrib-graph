@@ -1,0 +1,226 @@
+158	18	24	report
+158	29	66	preceding sentence baseline ( PS BL )
+158	72	79	chooses
+158	84	101	previous sentence
+158	102	105	for
+158	110	120	antecedent
+158	125	147	TAGbaseline ( TAG BL )
+158	153	169	randomly chooses
+158	172	181	candidate
+158	182	186	with
+158	191	212	constituent tag label
+158	213	215	in
+158	216	239	{S , VP , ROOT , SBAR }
+41	97	153	https://github.com/amarasovic / neural-abstract-anaphora
+172	0	22	Glo Ve word embeddings
+172	23	37	pre-trained on
+172	42	64	Gigaword and Wikipedia
+172	75	90	not fine - tune
+173	0	10	Vocabulary
+173	15	25	built from
+173	30	35	words
+173	36	38	in
+173	43	56	training data
+173	57	61	with
+173	62	71	frequency
+173	72	74	in
+173	75	95	{ 3 , U ( 1 , 10 ) }
+173	102	111	OOV words
+173	117	130	replaced with
+173	134	143	UNK token
+177	4	8	size
+177	9	11	of
+177	16	35	LSTMs hidden states
+177	40	46	set to
+177	47	78	{ 100 , qlog - U ( 30 , 150 ) }
+179	4	35	first feed - forward layer size
+179	39	45	set to
+179	48	53	value
+179	54	56	in
+179	57	69	Optimization
+182	3	8	train
+182	9	12	for
+182	13	22	10 epochs
+178	3	14	initialized
+178	19	34	weight matrices
+178	35	37	of
+178	42	47	LSTMs
+178	48	52	with
+178	53	79	random orthogonal matrices
+180	3	10	trained
+180	15	20	model
+180	21	23	in
+180	24	35	minibatches
+180	36	41	using
+180	42	46	Adam
+180	72	76	with
+180	81	94	learning rate
+180	95	97	of
+180	98	104	10 ? 4
+180	109	127	maximal batch size
+180	128	130	64
+181	3	7	clip
+181	8	17	gradients
+181	18	20	by
+181	21	32	global norm
+181	35	39	with
+181	42	56	clipping value
+181	57	59	in
+181	60	83	{ 1.0 , U ( 1 , 100 ) }
+184	3	7	used
+184	12	32	l 2 - regularization
+184	33	37	with
+184	42	78	{ 10 ?5 , log - U (10 ?7 , 10 ?2 ) }
+185	0	7	Dropout
+185	8	12	with
+185	15	35	keep probability k p
+185	38	62	{ 0.8 , U( 0.5 , 1.0 ) }
+185	67	77	applied to
+185	82	89	outputs
+185	90	92	of
+185	97	102	LSTMs
+185	110	131	feed - forward layers
+185	136	149	optionally to
+185	154	159	input
+185	160	164	with
+185	165	185	k p ? U (0.8 , 1.0 )
+28	13	24	inspired by
+28	29	52	mention - ranking model
+28	53	56	for
+28	57	79	coreference resolution
+28	84	92	combines
+28	103	114	Siamese Net
+28	117	129	for learning
+28	130	140	similarity
+28	141	148	between
+28	149	158	sentences
+29	187	205	LSTM - Siamese Net
+29	0	5	Given
+29	9	27	anaphoric sentence
+29	54	74	candidate antecedent
+29	206	212	learns
+29	213	228	representations
+29	229	232	for
+29	233	273	the candidate and the anaphoric sentence
+29	37	39	in
+29	279	291	shared space
+30	6	21	representations
+30	26	39	combined into
+30	42	62	joint representation
+30	68	80	to calculate
+30	83	88	score
+30	94	107	characterizes
+30	112	120	relation
+31	4	17	learned score
+31	26	35	to select
+31	40	78	highest - scoring antecedent candidate
+31	79	82	for
+31	87	111	given anaphoric sentence
+31	116	121	hence
+31	126	133	anaphor
+36	46	62	easily adaptable
+36	63	65	to
+36	66	81	other languages
+36	3	11	produces
+36	12	25	large amounts
+36	26	28	of
+36	29	38	instances
+32	3	11	consider
+32	12	23	one anaphor
+32	24	26	at
+32	27	33	a time
+32	38	45	provide
+32	50	59	embedding
+32	60	62	of
+32	67	74	context
+32	75	77	of
+32	82	89	anaphor
+32	115	119	head
+32	108	110	of
+32	127	143	anaphoric phrase
+32	157	172	to characterize
+32	173	203	each individual anaphorsimilar
+32	232	235	for
+32	236	249	individuating
+32	250	279	multiply occurring predicates
+32	280	282	in
+32	283	286	SRL
+33	26	30	show
+33	40	45	model
+33	46	52	learns
+33	55	63	relation
+33	64	71	between
+33	76	83	anaphor
+33	84	86	in
+33	91	109	anaphoric sentence
+33	110	113	and
+33	118	128	antecedent
+2	30	58	Abstract Anaphora Resolution
+15	20	58	anaphora ( or coreference ) resolution
+188	0	11	In terms of
+188	12	21	s@1 score
+188	24	33	MR - LSTM
+188	34	45	outperforms
+188	46	50	both
+188	51	67	KZH13 's results
+188	72	78	TAG BL
+188	79	105	without even necessitating
+188	106	115	HP tuning
+190	8	15	observe
+190	24	32	with HPs
+190	33	41	tuned on
+190	42	52	ARRAU - AA
+190	58	64	obtain
+190	65	72	results
+190	73	84	well beyond
+190	85	90	KZH13
+190	99	125	all ablated model variants
+190	126	133	perform
+190	134	139	worse
+190	140	144	than
+190	149	159	full model
+190	170	192	large performance drop
+190	193	197	when
+190	198	206	omitting
+190	207	228	syntactic information
+195	0	14	Performance of
+195	15	30	68.10 s@1 score
+195	31	40	indicates
+195	50	55	model
+195	67	72	learn
+195	73	99	without syntactic guidance
+199	8	10	on
+199	15	27	ARRAU corpus
+200	4	13	MR - LSTM
+200	17	32	more successful
+200	36	45	resolving
+200	46	53	nominal
+200	54	58	than
+200	59	78	pronominal anaphors
+202	11	14	for
+202	15	36	shell noun resolution
+202	37	39	in
+202	40	56	KZH13 's dataset
+202	63	72	MR - LSTM
+202	73	81	achieved
+202	82	92	s@1 scores
+202	93	105	in the range
+202	106	117	76.09-93.14
+202	130	142	best variant
+202	143	145	of
+202	150	155	model
+202	156	164	achieves
+202	165	180	51.89 s@1 score
+202	181	184	for
+202	185	201	nominal anaphors
+202	202	204	in
+202	205	215	ARRAU - AA
+209	66	109	MR - LSTM without context embedding ( ctx )
+209	110	118	achieves
+209	121	142	comparable s@ 2 score
+209	143	147	with
+209	152	159	variant
+209	165	170	omits
+209	171	192	syntactic information
+209	199	220	better s@3 - 4 scores
+156	0	9	Baselines

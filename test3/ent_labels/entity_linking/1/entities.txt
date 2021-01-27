@@ -1,0 +1,67 @@
+18	19	27	describe
+18	30	64	new contextualized embedding model
+18	65	68	for
+18	69	87	words and entities
+18	88	91	for
+18	92	95	NED
+19	16	30	proposed model
+19	34	42	based on
+19	47	80	bidirectional transformer encoder
+20	3	8	takes
+20	11	41	sequence of words and entities
+20	42	44	in
+20	49	59	input text
+20	66	74	produces
+20	77	101	contextualized embedding
+20	102	105	for
+20	106	126	each word and entity
+21	21	28	propose
+21	29	53	masked entity prediction
+21	58	66	new task
+21	72	85	aims to train
+21	90	105	embedding model
+21	106	119	by predicting
+21	120	144	randomly masked entities
+21	145	153	based on
+21	154	183	words and non-masked entities
+21	184	186	in
+21	191	201	input text
+22	3	10	trained
+22	15	20	model
+22	21	26	using
+22	27	32	texts
+22	43	61	entity annotations
+22	62	76	retrieved from
+22	77	86	Wikipedia
+2	73	100	Named Entity Disambiguation
+5	90	125	named entity disambiguation ( NED )
+9	37	40	NED
+113	11	21	our models
+113	22	34	outperformed
+113	35	65	all previously proposed models
+118	0	10	Our models
+118	11	19	achieved
+118	20	54	new state - of - the - art results
+118	55	57	on
+118	58	62	four
+118	63	65	of
+118	70	83	five datasets
+118	86	92	namely
+118	93	98	MSNBC
+118	101	108	AQUAINT
+118	111	118	ACE2004
+118	125	136	WNED - WIKI
+118	143	152	performed
+118	153	164	competitive
+118	165	167	on
+118	172	194	WNED - CLUEWEB dataset
+114	14	19	using
+114	20	45	pseudo entity annotations
+114	46	53	boosted
+114	58	66	accuracy
+114	67	69	by
+114	70	75	0.3 %
+119	46	54	improved
+119	59	70	performance
+119	71	73	on
+119	78	106	AQUAINT and ACE2004 datasets

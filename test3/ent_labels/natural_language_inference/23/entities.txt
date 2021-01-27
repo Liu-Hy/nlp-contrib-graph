@@ -1,0 +1,85 @@
+139	0	32	Neural bag - of - words ( NBOW )
+140	0	13	Each sequence
+140	17	31	represented as
+140	36	57	sum of the embeddings
+140	58	60	of
+140	65	70	words
+140	99	111	concatenated
+140	116	122	fed to
+140	125	128	MLP
+141	0	11	Single LSTM
+141	14	27	Two sequences
+141	32	42	encoded by
+141	45	56	single LSTM
+142	0	14	Parallel LSTMs
+142	17	30	Two sequences
+142	35	48	first encoded
+142	49	51	by
+142	52	61	two LSTMs
+142	62	72	separately
+143	0	15	Attention LSTMs
+143	18	31	Two sequences
+143	36	46	encoded by
+143	47	52	LSTMs
+143	53	57	with
+143	58	77	attention mechanism
+144	0	32	Word - by - word Attention LSTMs
+144	38	55	improved strategy
+144	56	58	of
+144	59	74	attention LSTMs
+25	19	24	adopt
+25	27	47	deep fusion strategy
+25	48	56	to model
+25	61	80	strong interactions
+25	81	83	of
+25	84	97	two sentences
+28	7	20	text matching
+28	28	39	regarded as
+28	40	49	modelling
+28	54	65	interaction
+28	66	68	of
+28	69	78	two texts
+28	79	81	in
+28	84	106	recursive matching way
+30	18	28	DF - LSTMs
+30	29	39	consist of
+30	40	76	two interconnected conditional LSTMs
+30	93	99	models
+30	100	114	apiece of text
+30	115	120	under
+30	125	145	influence of another
+31	4	17	output vector
+31	18	20	of
+31	21	31	DF - LSTMs
+31	35	43	fed into
+31	46	74	task - specific output layer
+31	75	85	to compute
+31	90	107	match - ing score
+29	25	32	propose
+29	33	100	deep fusion long short - term memory neural networks ( DF - LSTMs )
+29	101	109	to model
+29	114	126	interactions
+29	127	138	recursively
+2	22	44	Text Semantic Matching
+14	150	205	modelling the relevance / similarity of a pair of texts
+155	7	15	see that
+155	20	34	proposed model
+155	40	45	shows
+155	50	61	superiority
+155	62	64	on
+155	70	74	task
+155	83	94	outperforms
+155	99	127	stateof - the - arts methods
+155	128	130	on
+155	131	172	both metrics ( P@1 ( 5 ) and P@1 ( 10 ) )
+155	173	177	with
+155	180	192	large margin
+156	79	104	strong interaction models
+156	107	122	attention LSTMs
+156	125	139	our DF - LSTMs
+156	142	165	consistently outperform
+156	170	193	weak interaction models
+156	196	200	NBOW
+156	203	217	parallel LSTMs
+156	220	224	with
+156	227	239	large margin

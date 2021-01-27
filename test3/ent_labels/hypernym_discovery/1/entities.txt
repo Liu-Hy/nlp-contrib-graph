@@ -1,0 +1,102 @@
+83	0	9	Our model
+83	14	31	implemented using
+83	36	42	Theano
+84	4	20	diagonal variant
+84	21	23	of
+84	24	34	Ada - Grad
+84	38	46	used for
+84	47	70	neural network training
+87	4	20	hidden dimension
+87	21	23	of
+87	24	41	all neural models
+87	46	49	200
+88	4	14	batch size
+88	18	24	set to
+88	25	27	20
+88	36	76	word embedding and sense embedding sizes
+88	81	87	set to
+88	88	91	300
+89	0	17	All of our models
+89	22	32	trained on
+89	35	67	single GPU ( NVIDIA GTX 980 Ti )
+89	70	74	with
+89	75	87	roughly 1.5h
+89	88	91	for
+89	92	117	general - purpose subtask
+89	118	121	for
+89	122	129	English
+89	134	179	0.5h domain - specific domain - specific ones
+89	180	183	for
+89	184	201	medical and music
+85	3	7	tune
+85	12	30	hyper - parameters
+85	31	35	with
+85	40	65	following range of values
+85	68	81	learning rate
+86	0	21	{ 1 e ? 3 , 1 e ? 2 }
+86	24	43	dropout probability
+86	46	59	{ 0.1 , 0.2 }
+86	62	78	CNN filter width
+86	81	94	{ 2 , 3 , 4 }
+23	18	27	introduce
+23	30	57	neural network architecture
+23	58	61	for
+23	66	80	concerned task
+23	85	102	empirically study
+23	103	126	various neural networks
+23	127	135	to model
+23	140	167	distributed representations
+23	168	171	for
+23	172	189	words and phrases
+24	19	27	leverage
+24	31	64	unambiguous vector representation
+24	65	68	via
+24	69	83	term embedding
+24	93	97	take
+24	98	107	advantage
+24	108	110	of
+24	111	131	deep neural networks
+24	132	143	to discover
+24	148	170	hypernym relationships
+24	171	178	between
+24	179	184	terms
+2	35	60	Neural Hypernym Discovery
+4	23	41	hypernym discovery
+14	36	54	hypernym detection
+96	0	41	Convolution or recurrent gated mechanisms
+96	42	44	in
+96	52	78	CNN - based ( CNN , RCNN )
+96	82	122	RNN ( GRU , LSTM ) based neural networks
+96	144	154	helpful of
+96	155	163	modeling
+96	168	188	semantic connections
+96	189	196	between
+96	197	202	words
+96	203	205	in
+96	208	214	phrase
+96	221	226	guide
+96	231	239	networks
+96	240	251	to discover
+96	256	278	hypernym relationships
+97	8	15	observe
+97	16	47	CNN - based network performance
+97	51	57	better
+97	58	62	than
+97	63	74	RNN - based
+98	3	14	investigate
+98	19	30	performance
+98	31	33	of
+98	34	47	neural models
+98	48	50	on
+98	51	67	specific domains
+98	73	80	conduct
+98	81	92	experiments
+98	93	95	on
+98	96	124	medical and medicine subtask
+100	22	32	outperform
+100	33	47	term embedding
+101	0	13	Compared with
+101	14	28	word embedding
+101	35	50	sense embedding
+101	51	56	shows
+101	59	77	much poorer result

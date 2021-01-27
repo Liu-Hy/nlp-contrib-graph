@@ -1,0 +1,109 @@
+156	0	51	Single - Label to Multi - Label Text Classification
+163	21	32	investigate
+163	37	47	capability
+163	48	50	of
+163	51	66	capsule network
+163	67	69	on
+163	70	101	multi-label text classification
+163	105	115	using only
+163	120	142	single - label samples
+163	143	145	as
+163	146	159	training data
+175	26	38	observe that
+175	43	59	capsule networks
+175	60	64	have
+175	65	104	substantial and significant improvement
+175	105	116	in terms of
+175	117	144	all four evaluation metrics
+175	145	149	over
+175	154	177	strong baseline methods
+175	178	180	on
+175	185	194	test sets
+175	195	197	in
+175	203	252	Reuters - Multi-label and Reuters - Full datasets
+176	16	34	larger improvement
+176	38	49	achieved on
+176	50	81	Reuters - Multi - label dataset
+176	93	101	contains
+176	106	127	multi-label documents
+176	128	130	in
+176	135	143	test set
+178	4	19	capsule network
+178	24	61	much stronger transferring capability
+178	62	66	than
+178	71	104	conventional deep neural networks
+179	18	30	good results
+179	31	33	on
+179	34	48	Reuters - Full
+179	54	67	indicate that
+179	72	87	capsule network
+179	92	110	robust superiority
+179	111	115	over
+179	116	127	competitors
+179	128	130	on
+179	131	155	single - label documents
+180	0	33	Connection Strength Visualization
+188	22	29	observe
+188	35	51	capsule networks
+188	56	87	correctly recognize and cluster
+188	92	109	important phrases
+188	110	125	with respect to
+188	130	145	text categories
+31	0	15	A recent method
+31	16	22	called
+31	23	38	capsule network
+31	39	48	introduce
+32	15	43	an iterative routing process
+32	44	53	to decide
+32	58	76	credit attribution
+32	77	84	between
+32	85	90	nodes
+32	91	95	from
+32	96	119	lower and higher layers
+36	0	16	Three strategies
+36	30	42	to stabilize
+36	47	70	dynamic routing process
+36	71	83	to alleviate
+36	88	99	disturbance
+36	100	102	of
+36	103	122	some noise capsules
+36	129	140	may contain
+36	141	167	" background " information
+36	168	175	such as
+36	176	186	stop words
+36	195	200	words
+36	209	221	unrelated to
+36	222	241	specific categories
+144	60	91	several strong baseline methods
+144	92	101	including
+144	104	120	LSTM / Bi - LSTM
+144	123	161	tree - structured LSTM ( Tree - LSTM )
+144	164	218	LSTM regularized by linguistic knowledge ( LR - LSTM )
+144	221	277	CNNrand / CNN - static / CNN - non-static ( Kim , 2014 )
+144	280	324	very deep convolutional network ( VD - CNN )
+144	331	383	character - level convolutional network ( CL - CNN )
+10	36	97	https : //github.com/andyweizhao/capsule_text_ classification
+139	24	27	use
+139	28	62	300 - dimensional word2vec vectors
+139	63	76	to initialize
+139	77	94	embedding vectors
+141	7	34	Adam optimization algorithm
+141	35	39	with
+141	40	60	1e - 3 learning rate
+140	3	10	conduct
+140	11	21	mini-batch
+140	22	26	with
+140	27	34	size 50
+140	35	38	for
+140	39	49	AG 's news
+140	54	61	size 25
+140	62	65	for
+140	66	80	other datasets
+2	56	75	Text Classification
+149	22	29	observe
+149	39	55	capsule networks
+149	56	63	achieve
+149	64	76	best results
+149	77	79	on
+149	80	101	4 out of 6 benchmarks
+145	13	20	Results

@@ -1,0 +1,128 @@
+172	25	35	found that
+172	40	58	NE and CN category
+172	64	77	benefit a lot
+172	78	82	from
+172	87	106	re-ranking features
+173	24	35	NE category
+173	42	53	performance
+173	57	71	mainly boosted
+173	72	74	by
+173	79	95	LM local feature
+141	0	15	Embedding Layer
+142	4	21	embedding weights
+142	26	46	randomly initialized
+142	47	51	with
+142	56	78	uniformed distribution
+142	79	81	in
+142	86	112	interval [ ? 0.05 , 0.05 ]
+148	0	12	Hidden Layer
+148	15	31	Internal weights
+148	32	34	of
+148	35	39	GRUs
+148	44	55	initialized
+148	56	60	with
+148	61	87	random orthogonal matrices
+155	0	27	All language model features
+155	32	42	trained on
+155	47	66	training proportion
+155	67	69	of
+155	70	82	each dataset
+155	85	89	with
+155	90	116	8 - gram wordbased setting
+155	121	143	Kneser - Ney smoothing
+155	144	154	trained by
+155	155	168	SRILM toolkit
+158	0	14	Implementation
+158	18	27	done with
+158	28	69	Theano ( Theano Development Team , 2016 )
+158	74	79	Keras
+158	86	96	all models
+158	101	111	trained on
+158	112	125	Tesla K40 GPU
+150	3	10	adopted
+150	11	25	ADAM optimizer
+150	26	29	for
+150	30	45	weight updating
+150	48	52	with
+150	56	77	initial learning rate
+150	78	80	of
+150	81	86	0.001
+151	70	73	set
+151	78	105	gradient clipping threshold
+151	106	108	to
+151	109	110	5
+152	3	7	used
+152	8	33	batched training strategy
+152	34	36	of
+152	37	47	32 samples
+154	0	2	In
+154	3	18	re-ranking step
+154	24	32	generate
+154	33	46	5 - best list
+154	47	51	from
+154	56	85	baseline neural network model
+20	19	26	present
+20	29	62	novel neural network architecture
+20	65	71	called
+20	72	106	attention - over - attention model
+21	63	68	place
+21	69	96	another attention mechanism
+21	97	101	over
+21	106	141	existing document - level attention
+22	126	135	our model
+22	142	164	automatically generate
+22	170	188	attended attention
+22	191	195	over
+22	196	231	various document - level attentions
+2	49	70	Reading Comprehension
+4	0	35	Cloze - style reading comprehension
+11	3	42	read and comprehend the human languages
+163	21	35	our AoA Reader
+163	36	47	outperforms
+163	48	78	state - of - the - art systems
+163	79	81	by
+163	84	96	large margin
+163	99	104	where
+163	105	142	2.3 % and 2.0 % absolute improvements
+163	143	147	over
+163	148	157	EpiReader
+163	158	160	in
+163	161	187	CBTest NE and CN test sets
+165	28	40	single model
+165	47	63	stay on par with
+165	68	97	previous best ensemble system
+165	120	140	absolute improvement
+165	144	149	0.9 %
+165	150	156	beyond
+165	161	204	best ensemble model ( Iterative Attention )
+165	205	207	in
+165	212	236	CBTest NE validation set
+166	17	31	ensemble model
+166	34	48	our AoA Reader
+166	54	59	shows
+166	60	84	significant improvements
+166	85	89	over
+166	90	119	previous best ensemble models
+166	120	122	by
+166	125	137	large margin
+166	142	147	setup
+166	150	183	new state - of - the - art system
+168	144	161	significant boost
+168	139	141	in
+168	169	180	performance
+168	183	188	where
+168	189	217	4.1 % and 3.7 % improvements
+168	225	232	made in
+168	233	260	CNN validation and test set
+168	261	268	against
+168	269	279	CAS Reader
+164	5	14	by adding
+164	15	34	additional features
+164	35	37	in
+164	42	57	re-ranking step
+164	69	94	another significant boost
+164	95	109	2.0 % to 3.7 %
+164	110	114	over
+164	115	126	Ao A Reader
+164	127	129	in
+164	130	154	CBTest NE / CN test sets

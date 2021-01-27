@@ -1,0 +1,8 @@
+(batch size||set to||128)
+(all the dimensions||of||input vectors and hidden)
+(input vectors and hidden||shows||our proposed model)
+(all the other models||in||7 datasets)
+(batch size||has||128)
+(our proposed model||has||significantly outperforms)
+(significantly outperforms||has||all the other models)
+(Contribution||has||Experiments)

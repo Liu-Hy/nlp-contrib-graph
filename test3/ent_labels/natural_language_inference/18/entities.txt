@@ -1,0 +1,138 @@
+19	30	38	adapting
+19	43	64	weight initialization
+19	65	67	to
+19	72	93	optimization dynamics
+19	27	29	of
+19	101	131	specific learning task at hand
+20	0	4	From
+20	9	29	Bayesian perspective
+20	32	62	improved weight initialization
+20	117	125	leads to
+20	128	151	more accurate posterior
+20	161	190	better generalization ability
+22	40	54	adaptive prior
+22	58	73	implemented via
+22	74	115	Markov Chain Monte Carlo ( MCMC ) methods
+23	30	41	incorporate
+23	47	70	adaptive initialization
+23	73	76	for
+23	77	100	neural network training
+23	142	145	use
+23	146	175	cyclical batch size schedules
+23	176	186	to control
+23	191	215	noise ( or temperature )
+23	216	218	of
+23	219	222	SGD
+26	34	42	studying
+26	43	82	different cyclical annealing strategies
+26	83	86	for
+26	89	99	wide range
+26	100	102	of
+26	103	111	problems
+2	0	27	Parameter Re-Initialization
+4	0	32	Optimal parameter initialization
+82	0	16	Language Results
+83	0	17	Language modeling
+83	23	42	challenging problem
+83	43	49	due to
+83	54	91	complex and long - range interactions
+83	92	99	between
+83	100	113	distant words
+97	21	34	CBS schedules
+97	35	47	do not yield
+97	48	78	large performance improvements
+97	79	81	on
+97	82	88	models
+97	89	93	like
+97	94	96	E1
+97	103	110	exhibit
+97	111	130	smaller disparities
+97	131	138	between
+97	139	171	training and testing performance
+85	26	39	help us avoid
+85	40	51	overfitting
+85	70	89	snapshot ensembling
+85	90	97	enables
+85	98	122	even greater performance
+88	20	49	best performing CBS schedules
+88	50	59	result in
+88	60	84	significant improvements
+88	85	87	in
+88	88	113	perplexity ( up to 7.91 )
+88	114	118	over
+88	123	141	baseline schedules
+88	151	156	offer
+88	157	167	reductions
+88	168	170	in
+88	175	181	number
+88	182	184	of
+88	185	223	SGD training iterations ( up to 33 % )
+90	19	36	all CBS schedules
+90	37	47	outperform
+90	52	69	baseline schedule
+102	0	28	Image Classification Results
+103	17	32	training curves
+103	33	35	of
+103	36	49	CBS schedules
+103	55	62	exhibit
+103	67	97	aforementioned cyclical spikes
+103	8	10	in
+103	106	119	training loss
+103	124	140	testing accuracy
+105	3	10	observe
+105	16	19	CBS
+105	20	28	achieves
+105	29	48	similar performance
+105	49	51	to
+105	56	64	baseline
+107	0	4	With
+107	5	13	CBS - 15
+107	19	22	see
+107	23	30	90.71 %
+107	31	48	training accuracy
+107	53	61	56. 44 %
+107	62	78	testing accuracy
+107	92	110	larger improvement
+107	111	115	than
+107	121	128	offered
+107	129	131	by
+107	132	135	CBS
+107	136	138	on
+107	139	159	convolutional models
+107	160	162	on
+107	163	173	Cifar - 10
+109	0	9	Combining
+109	10	18	CBS - 15
+109	19	21	on
+109	22	24	C2
+109	44	52	improves
+109	53	61	accuracy
+109	62	64	to
+109	65	72	94.82 %
+111	0	8	Applying
+111	9	28	snapshot ensembling
+111	29	31	on
+111	32	34	C3
+111	35	47	trained with
+111	48	60	CBS - 15 - 2
+111	61	69	leads to
+111	70	87	improved accuracy
+111	88	90	of
+111	91	99	93. 56 %
+111	103	114	compared to
+111	115	122	92.58 %
+112	0	5	After
+112	6	16	ensembling
+112	17	25	ResNet50
+112	26	28	on
+112	29	37	Imagenet
+112	38	42	with
+112	43	52	snapshots
+112	53	57	from
+112	62	77	last two cycles
+112	84	95	performance
+112	96	105	increases
+112	106	108	to
+112	109	117	76.401 %
+112	118	122	from
+112	123	131	75.336 %

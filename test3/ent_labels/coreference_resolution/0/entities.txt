@@ -1,0 +1,67 @@
+16	26	31	train
+16	34	53	deep neural network
+16	54	62	to build
+16	63	90	distributed representations
+16	91	93	of
+16	94	99	pairs
+16	100	102	of
+16	103	123	coreference clusters
+17	5	13	captures
+17	14	40	entity - level information
+17	41	45	with
+17	48	60	large number
+17	61	63	of
+17	64	93	learned , continuous features
+17	94	104	instead of
+17	107	119	small number
+17	120	122	of
+17	123	154	hand - crafted categorical ones
+18	0	5	Using
+18	10	40	cluster - pair representations
+18	43	54	our network
+18	55	61	learns
+18	62	101	when combining two coreference clusters
+18	105	114	desirable
+19	0	2	At
+19	3	12	test time
+19	16	25	builds up
+19	26	46	coreference clusters
+19	47	60	incrementally
+19	118	125	merging
+19	128	135	pair of
+19	136	144	clusters
+19	145	154	each step
+19	63	76	starting with
+19	77	89	each mention
+19	90	92	in
+19	93	108	its own cluster
+20	3	8	makes
+20	9	24	these decisions
+20	25	29	with
+20	32	78	novel easy - first cluster - ranking procedure
+20	84	92	combines
+20	97	106	strengths
+20	107	109	of
+20	110	180	cluster - ranking ( Rahman and and easy - first coreference algorithms
+22	19	24	using
+22	27	59	learning - to - search algorithm
+22	60	71	inspired by
+22	72	77	SEARN
+22	78	86	to train
+22	87	105	our neural network
+23	34	39	learn
+23	40	52	which action
+23	73	87	available from
+23	92	105	current state
+23	110	152	partially completed coreference clustering
+23	171	178	lead to
+23	181	217	high - scoring coreference partition
+229	0	27	Our mention - ranking model
+229	28	37	surpasses
+229	38	58	all previous systems
+231	4	27	cluster - ranking model
+231	28	36	improves
+231	37	52	results further
+231	53	59	across
+231	60	101	both languages and all evaluation metrics
+2	10	32	Coreference Resolution

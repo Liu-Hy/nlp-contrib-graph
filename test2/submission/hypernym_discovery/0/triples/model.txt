@@ -1,0 +1,5 @@
+(ADAPT||focused on||two specialised domain English subtasks)
+(two specialised domain English subtasks||by developing||unsupervised system)
+(word embeddings||from||supplied reference corpora)
+(Model||has||ADAPT)
+(Contribution||has||Model)

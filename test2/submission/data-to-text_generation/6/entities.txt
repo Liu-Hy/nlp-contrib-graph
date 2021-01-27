@@ -1,0 +1,89 @@
+2	41	86	Character - based Data - to - text Generation
+4	110	137	natural language generation
+8	28	38	constitute
+8	94	100	allows
+8	103	124	more general approach
+8	125	127	to
+8	128	143	text generation
+23	74	81	present
+23	84	132	character - level sequence - to - sequence model
+23	133	137	with
+23	138	157	attention mechanism
+23	163	173	results in
+23	176	221	completely neural end - to - end architecture
+24	67	83	delexicalization
+24	86	98	tokenization
+24	103	114	lowercasing
+25	34	42	achieves
+25	43	81	rather interesting performance results
+25	86	94	produces
+25	97	120	vocabulary - free model
+25	129	139	inherently
+25	140	152	more general
+27	30	35	shows
+27	36	58	two important features
+27	81	110	state - of - art architecture
+27	133	164	character - wise copy mechanism
+27	167	180	consisting in
+27	183	194	soft switch
+27	195	202	between
+27	203	227	generation and copy mode
+27	250	255	model
+27	256	264	to learn
+27	265	306	rare and unhelpful self - correspondences
+27	322	349	peculiar training procedure
+27	358	366	improves
+27	371	407	internal representation capabilities
+27	410	419	enhancing
+27	420	426	recall
+27	432	443	consists in
+27	448	456	exchange
+27	460	484	encoder and decoder RNNs
+105	3	12	developed
+105	13	23	our system
+105	24	29	using
+105	34	51	PyTorch framework
+108	3	11	minimize
+108	16	46	negative log - likelihood loss
+108	47	52	using
+108	53	77	teacher forcing and Adam
+137	35	51	our model EDA_CS
+137	67	87	higher metric values
+137	88	103	with respect to
+137	104	108	TGen
+137	109	111	on
+137	116	145	Hotel and Restaurant datasets
+137	152	191	three out of five higher metrics values
+137	192	194	on
+137	199	210	E2E dataset
+138	10	24	in the case of
+138	25	30	E2E +
+138	33	37	TGen
+138	38	46	achieves
+138	47	86	three out of five higher metrics values
+140	37	45	approach
+140	56	72	allows to obtain
+140	73	91	better performance
+140	92	107	with respect to
+140	108	123	training EDA_CS
+140	124	126	in
+140	131	143	standard way
+140	144	146	on
+140	151	180	Hotel and Restaurant datasets
+140	215	217	on
+140	218	221	E2E
+140	234	245	outperforms
+140	246	252	EDA_CS
+141	11	20	EDA_CS TL
+141	21	26	shows
+141	29	43	bleu increment
+141	44	46	of
+141	47	60	at least 14 %
+141	61	76	with respect to
+141	77	90	TGen 's score
+141	96	107	compared to
+141	113	142	Hotel and Restaurant datasets
+142	14	28	baseline model
+142	31	34	EDA
+142	40	63	largely outperformed by
+142	64	90	all other examined methods

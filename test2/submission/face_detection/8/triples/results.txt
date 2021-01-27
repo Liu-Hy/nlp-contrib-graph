@@ -1,0 +1,8 @@
+(1st place||across||three subsets)
+(three subsets||on||validation set and test set)
+(validation set and test set||of||WIDER FACE)
+(our approach||superior to||prior best - performing one)
+(prior best - performing one||by||clear margin)
+(WIDER FACE hard subset||has||our approach)
+(Results||on||WIDER FACE hard subset)
+(Contribution||has||Results)

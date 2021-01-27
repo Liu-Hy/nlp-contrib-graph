@@ -1,0 +1,138 @@
+31	29	40	investigate
+31	41	88	current stateof - the - art ( SOTA ) approaches
+31	89	91	to
+31	92	110	dependency parsing
+31	114	124	applied to
+31	125	141	biomedical texts
+33	13	18	study
+33	23	29	impact
+33	30	32	of
+33	33	46	parser choice
+33	47	49	on
+33	50	77	biomedical event extraction
+97	0	3	For
+97	8	41	three BiLSTM - CRF - based models
+97	44	60	Stanford - NNdep
+97	63	68	jPTDP
+97	73	92	Stanford - Biaffine
+97	141	147	employ
+97	148	188	200 dimensional pre-trained word vectors
+99	8	42	traditional feature - based models
+99	43	49	MarMoT
+99	52	63	NLP4J - POS
+99	68	79	NLP4J - dep
+99	85	88	use
+99	95	129	original pure Java implementations
+99	130	134	with
+99	135	166	default hyperparameter settings
+100	8	35	BiLSTM - CRF - based models
+100	41	44	use
+100	138	143	Nadam
+100	148	155	run for
+100	156	165	50 epochs
+103	4	20	Stanford - NNdep
+103	26	32	select
+103	37	48	word CutOff
+103	49	53	from
+103	54	63	{ 1 , 2 }
+103	72	76	size
+103	77	79	of
+103	84	96	hidden layer
+103	97	101	from
+103	102	145	{ 100 , 150 , 200 , 250 , 300 , 350 , 400 }
+104	4	9	jPTDP
+104	15	18	use
+104	19	56	50 - dimensional character embeddings
+104	61	64	fix
+104	69	90	initial learning rate
+104	91	93	at
+104	94	100	0.0005
+105	16	22	number
+105	23	25	of
+105	26	39	BiLSTM layers
+105	40	42	at
+105	43	44	2
+105	49	55	select
+105	60	66	number
+105	67	69	of
+105	70	80	LSTM units
+105	81	83	in
+105	84	94	each layer
+105	95	99	from
+105	100	131	{ 100 , 150 , 200 , 250 , 300 }
+118	0	19	POS tagging results
+120	0	26	BiLSTM - CRF and Mar - MoT
+120	27	33	obtain
+120	38	51	lowest scores
+120	52	54	on
+120	55	60	GENIA
+120	65	70	CRAFT
+121	0	5	jPTDP
+121	6	13	obtains
+121	16	29	similar score
+121	30	32	to
+121	33	42	Mar - MoT
+121	43	45	on
+121	46	51	GENIA
+121	73	85	BiLSTM - CRF
+121	86	88	on
+121	89	94	CRAFT
+122	16	22	MarMoT
+122	23	30	obtains
+122	31	47	accuracy results
+122	48	50	at
+122	51	70	98.61 % and 97.07 %
+122	71	73	on
+122	74	89	GENIA and CRAFT
+124	0	12	BiLSTM - CRF
+124	13	20	obtains
+124	21	31	accuracies
+124	32	34	of
+124	35	42	98.44 %
+124	43	45	on
+124	46	54	GE - NIA
+124	59	66	97.25 %
+124	67	69	on
+124	70	75	CRAFT
+130	10	13	for
+130	14	17	PTB
+130	20	65	CNN - based character - level word embeddings
+130	71	79	provided
+130	82	99	0.1 % improvement
+130	100	102	to
+130	103	115	BiLSTM - CRF
+135	0	7	On both
+135	8	23	GENIA and CRAFT
+135	26	38	BiLSTM - CRF
+135	39	43	with
+135	44	77	character - level word embeddings
+135	78	85	obtains
+135	90	113	highest accuracy scores
+140	0	34	Overall dependency parsing results
+148	0	2	On
+148	3	8	GENIA
+148	11	16	among
+148	17	35	pre-trained models
+148	38	43	BLLIP
+148	44	51	obtains
+148	52	67	highest results
+150	4	48	pre-trained Stanford - Biaffine ( v1 ) model
+150	49	57	produces
+150	58	70	lower scores
+150	71	75	than
+150	80	114	pre-trained Stanford - NNdep model
+150	115	117	on
+150	118	123	GENIA
+152	14	51	pre-trained NNdep and Biaffine models
+152	52	61	result in
+152	62	100	no significant performance differences
+152	151	178	pre-trained Stanford tagger
+152	179	181	at
+152	182	189	98.37 %
+152	190	193	vs.
+152	198	225	retrained NLP4J - POS model
+152	226	228	at
+152	229	236	98.80 %
+2	5	16	POS tagging
+2	20	38	dependency parsing
+12	42	84	https://github.com/datquocnguyen/BioPosDep
