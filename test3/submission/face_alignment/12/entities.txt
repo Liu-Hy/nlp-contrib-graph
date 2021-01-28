@@ -1,0 +1,175 @@
+238	4	12	accuracy
+238	27	29	on
+238	34	47	AFLW2000 - 3D
+238	13	15	of
+238	16	26	our method
+238	48	69	consistently improves
+238	70	79	by adding
+238	80	93	more datasets
+254	5	11	result
+254	12	17	shows
+254	31	37	images
+254	38	42	with
+254	43	51	NME - lp
+254	52	59	between
+254	60	72	5 % and 15 %
+254	77	80	SPC
+254	84	91	helpful
+239	0	3	For
+239	8	27	AFLW - PIFA dataset
+239	30	40	our method
+239	41	49	achieves
+239	50	64	9.5 % and 20 %
+239	65	85	relative improvement
+239	86	98	by utilizing
+239	103	111	datasets
+239	112	114	in
+239	119	138	stage 2 and stage 3
+239	139	143	over
+239	148	159	first stage
+240	3	12	including
+240	17	25	datasets
+240	26	30	from
+240	40	63	second and third stages
+240	73	77	have
+240	78	103	26 % relative improvement
+240	108	115	achieve
+240	116	119	NME
+240	120	122	of
+240	123	129	3.86 %
+248	0	9	Comparing
+248	10	46	LFC + SPC and LFC + CFC performances
+248	47	57	shows that
+248	62	65	CFC
+248	69	81	more helpful
+248	82	86	than
+248	91	94	SPC
+250	0	5	Using
+250	6	21	all constraints
+250	22	30	achieves
+250	35	51	best performance
+203	26	29	use
+203	30	53	20 , 10 , and 10 epochs
+203	54	57	for
+203	58	70	stage 1 to 3
+203	0	8	To train
+203	13	20	network
+204	3	6	set
+204	11	39	initial global learning rate
+204	40	42	as
+204	43	50	1 e ? 3
+204	57	63	reduce
+204	68	81	learning rate
+204	82	84	by
+204	87	93	factor
+204	94	96	of
+204	97	99	10
+204	100	104	when
+204	109	123	training error
+204	124	134	approaches
+204	137	144	plateau
+205	4	18	minibatch size
+205	22	24	32
+205	27	39	weight decay
+205	43	48	0.005
+205	59	70	leak factor
+205	71	74	for
+205	75	85	Leaky ReLU
+205	89	93	0.01
+38	54	59	learn
+38	62	65	CNN
+38	66	72	to fit
+38	75	89	3 D face model
+38	90	92	to
+38	97	107	face image
+41	0	9	To tackle
+41	10	25	first challenge
+41	26	28	of
+41	29	54	limited landmark labeling
+41	71	77	employ
+41	78	100	additional constraints
+42	3	10	include
+42	11	29	contour constraint
+42	40	47	contour
+42	48	50	of
+42	55	70	predicted shape
+42	78	83	match
+42	88	114	detected 2 D face boundary
+42	121	136	SIFT constraint
+42	30	35	where
+42	147	162	SIFT key points
+42	163	174	detected on
+42	175	190	two face images
+42	191	193	of
+42	198	213	same individual
+42	221	227	map to
+42	232	245	same vertexes
+42	246	248	on
+42	253	266	3D face model
+43	0	16	Both constraints
+43	21	36	integrated into
+43	41	53	CNN training
+43	54	56	as
+43	57	87	additional loss function terms
+43	90	95	where
+43	100	123	end - to - end training
+43	124	134	results in
+43	138	150	enhanced CNN
+43	151	154	for
+43	155	177	3 D face model fitting
+44	0	3	For
+44	8	24	second challenge
+44	28	38	leveraging
+44	39	56	multiple datasets
+44	63	93	3D face model fitting approach
+44	102	120	inherent advantage
+44	124	132	handling
+44	133	160	multiple training databases
+2	0	20	Dense Face Alignment
+4	0	14	Face alignment
+218	0	3	For
+218	4	15	AFLW - LFPA
+218	18	28	our method
+218	29	40	outperforms
+218	45	57	best methods
+218	58	62	with
+218	65	77	large margin
+218	78	80	of
+218	81	99	17.8 % improvement
+219	4	17	AFLW2000 - 3D
+219	20	30	our method
+219	36	41	shows
+219	44	61	large improvement
+221	8	23	IJB - A dataset
+221	113	123	our method
+221	130	137	reaches
+221	140	155	higher accuracy
+220	15	18	for
+220	19	25	images
+220	26	30	with
+220	31	40	yaw angle
+220	41	43	in
+220	44	55	[ 60 , 90 ]
+220	58	68	our method
+220	69	77	improves
+220	82	93	performance
+220	94	96	by
+220	97	101	28 %
+220	104	108	from
+220	109	113	7.93
+220	114	116	to
+220	117	121	5.68
+225	144	146	on
+225	151	163	300W dataset
+228	0	10	Our method
+228	18	36	second best method
+228	37	39	on
+228	44	59	challenging set
+229	17	28	performance
+229	29	31	of
+229	32	42	our method
+229	46	59	comparable to
+229	60	73	other methods
+229	83	95	designed for
+229	96	119	near - frontal datasets
+83	0	20	Dense Face Alignment

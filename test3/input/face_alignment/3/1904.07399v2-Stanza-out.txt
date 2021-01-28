@@ -10,7 +10,7 @@ To address the imbalance between foreground and background pixels , we also prop
 To further improve face alignment accuracy , we introduce boundary prediction and CoordConv with boundary coordinates .
 Extensive experiments on different benchmarks , including COFW , 300 W and WFLW , show our approach outperforms the state - of - the - art by a significant margin on various evaluation metrics .
 Besides , the Adaptive Wing loss also helps other heatmap regression tasks .
-Code will be made publicly available at https://github.com/protossw512/AdaptiveWingLoss.
+Code will be made publicly available at https://github.com/protossw512/AdaptiveWingLoss .
 Introduction
 Face alignment , also known as facial landmark localization , seeks to localize pre-defined landmarks on human faces .
 Face alignment plays an essential role in many face related applications such as face recognition , face frontalization and 3D face reconstruction .

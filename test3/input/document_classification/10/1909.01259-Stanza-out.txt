@@ -6,7 +6,7 @@ Entities provide unambiguous and relevant semantic signals that are beneficial f
 We combine simple high - recall entity detection based on a dictionary , to detect entities in a document , with a novel neural attention mechanism that enables the model to focus on a small number of unambiguous and relevant entities .
 We tested the effectiveness of our model using two standard text classification datasets ( i.e. , the 20 Newsgroups and R8 datasets ) and a popular factoid question answering dataset based on a trivia quiz game .
 As a result , our model achieved state - of - the - art results on all datasets .
-The source code of the proposed model is available online at https://github.com/wikipedia2vec/wikipedia2vec.
+The source code of the proposed model is available online at https://github.com/wikipedia2vec/wikipedia2vec .
 Introduction
 Text classification is an important task , and its applications span a wide range of activities such as topic classification , spam detection , and sentiment classification .
 Recent studies showed that models based on neural networks can outperform conventional models ( e.g. , nave Bayes ) on text classification tasks .

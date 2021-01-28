@@ -139,7 +139,7 @@ For Data augmentation , we follow the conventional augmentation setting from S3F
 The augmentation includes color distortions , random crop , horizontal flip , and vertical flip .
 The proposed method is implemented with PyTorch and NAVER Smart Machine Learning ( NSML ) system .
 Please refer Appendix A to seethe detailed training and optimization settings for training the proposed network .
-Code will be available at https ://github.com/clovaai.
+Code will be available at https ://github.com/clovaai .
 Experiments
 In this section , we quantitatively and qualitatively analyze the proposed method with various ablations .
 For the quantitative analysis , we compare the detection performance of the proposed method and the SOTA face detection algorithms .

@@ -1,0 +1,8 @@
+(300D Glo Ve 840B vectors ( Pennington et al. , 2014 )||as||our pre-trained word embeddings)
+(Hyperparameters||utilize||300D Glo Ve 840B vectors ( Pennington et al. , 2014 ))
+(Adadelta ( Zeiler , 2012 )||to optimize||all the trainable parameters)
+(Hyperparameters||use||Adadelta ( Zeiler , 2012 ))
+(Hyperparameters||of||Adadelta)
+(gradient explosion problem||apply||gradient norm clipping)
+(Hyperparameters||To avoid||gradient explosion problem)
+(Contribution||has||Hyperparameters)

@@ -1,0 +1,3 @@
+(Contribution||has research problem||Natural Language Inference)
+(Contribution||has research problem||recognizing text entailment)
+(Contribution||has research problem||recognizing text entailment ( RTE ))

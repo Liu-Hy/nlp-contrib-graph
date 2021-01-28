@@ -1,0 +1,7 @@
+(both mLSTM and Transformer language models||on||large 40 GB text dataset)
+(both mLSTM and Transformer language models||transfer||those models)
+(those models||to||two text classification problems)
+(multidimensional emotion classification||based on||Plutchik wheel of emotions)
+(two text classification problems||name||binary sentiment)
+(Approach||train||both mLSTM and Transformer language models)
+(Contribution||has||Approach)

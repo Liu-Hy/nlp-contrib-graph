@@ -1,0 +1,4 @@
+(more robust||than||sequential convolution)
+(sequential convolution||in terms of||word order distortion)
+(TBCNN||has||more robust)
+(Contribution||has||Experiments)

@@ -1,0 +1,271 @@
+256	4	46	Global Average Pooling vs. Full Connection
+259	10	19	seen that
+259	20	22	BM
+259	23	31	performs
+259	32	38	better
+259	39	41	on
+259	42	55	IBUG and COFW
+259	60	65	worse
+259	66	68	on
+259	69	73	AFLW
+259	74	78	than
+259	79	85	pre-BM
+260	3	15	demonstrates
+260	21	43	Global Average Pooling
+260	47	64	more advantageous
+260	65	68	for
+260	69	90	more complex problems
+260	91	95	with
+260	96	117	more facial landmarks
+266	4	27	Robustness of Weighting
+273	10	13	0.4
+273	29	37	achieves
+273	38	54	good performance
+276	4	39	Analysis of Shape Prediction Layers
+279	21	59	left eye model and the right eye model
+279	65	71	reduce
+279	76	92	alignment errors
+279	93	95	of
+279	102	124	corresponding clusters
+279	0	11	Compared to
+279	12	14	WM
+280	18	30	assembled AM
+280	35	42	improve
+280	47	65	detection accuracy
+280	66	68	of
+280	69	78	landmarks
+280	79	81	of
+280	86	112	left eye and the right eye
+280	113	115	on
+280	120	131	basis of WM
+281	30	37	improve
+281	42	64	localization precision
+281	65	67	of
+281	68	82	other clusters
+285	4	75	Integration of Weighting Fine - Tuning and Multi - Center Fine - Tuning
+288	4	12	accuracy
+288	13	15	of
+288	16	18	AM
+288	22	30	superior
+288	31	33	to
+288	42	55	Simplified AM
+288	56	69	especially on
+288	70	86	challenging IBUG
+295	4	25	localization accuracy
+295	26	28	of
+295	29	45	facial landmarks
+295	46	50	from
+295	51	63	each cluster
+295	67	75	improved
+290	10	19	seen that
+290	20	43	Weighting Simplified AM
+290	44	61	improves slightly
+290	62	64	on
+290	65	69	COFW
+290	74	79	fails
+290	80	89	to search
+290	92	107	better solution
+290	108	110	on
+290	111	115	IBUG
+293	10	18	observed
+293	24	26	AM
+293	31	70	higher accuracy and stronger robustness
+293	71	75	than
+293	76	85	BM and WM
+297	0	35	D. MCL for Partially Occluded Faces
+298	4	16	correlations
+298	17	22	among
+298	23	45	different facial parts
+298	50	61	very useful
+298	62	65	for
+298	66	80	face alignment
+298	92	95	for
+298	96	120	partially occluded faces
+306	10	19	WM and AM
+306	26	38	perform well
+306	39	41	on
+306	42	60	occluded left eyes
+306	61	65	with
+306	70	80	mean error
+306	81	83	of
+306	84	97	6.60 and 6.50
+303	6	16	processing
+303	17	30	testing faces
+303	31	35	with
+303	36	46	occlusions
+303	53	71	mean error results
+303	72	74	of
+303	75	89	both WM and AM
+303	90	98	increase
+304	12	19	results
+304	116	122	become
+304	123	137	worse slightly
+304	20	22	of
+304	23	32	landmarks
+304	33	37	from
+304	42	58	left eye cluster
+304	76	95	remaining landmarks
+304	96	100	from
+304	101	115	other clusters
+310	0	64	E. Weighting Fine - Tuning for State - of - the - Art Frameworks
+317	10	19	seen that
+317	24	34	mean error
+317	35	37	of
+317	38	45	re -DAN
+317	49	56	reduced
+317	57	61	from
+317	62	66	7.97
+317	67	69	to
+317	70	74	7.81
+317	75	86	after using
+317	87	123	our proposed weighting fine - tuning
+230	32	62	state - of - the - art methods
+230	63	72	including
+230	73	76	ESR
+230	79	82	SDM
+230	85	97	Cascaded CNN
+230	100	104	RCPR
+230	107	111	CFAN
+230	114	117	LBF
+230	120	126	c GPRT
+230	129	133	CFSS
+230	136	141	TCDCN
+230	146	149	ALR
+230	152	155	CFT
+230	158	162	RFLD
+230	165	171	RecNet
+230	174	177	RAR
+230	184	193	FLD + PDE
+11	40	85	https://github.com/ZhiwenShao/MCNet-Extension
+210	0	31	Uniform scaling and translation
+210	32	36	with
+210	37	54	different extents
+210	55	57	on
+210	58	77	face bounding boxes
+210	90	99	conducted
+211	8	24	training samples
+211	29	46	augmented through
+211	47	62	horizontal flip
+211	67	83	JPEG compression
+214	4	20	input face patch
+214	26	47	50 50 grayscale image
+214	54	70	each pixel value
+214	74	87	normalized to
+214	88	98	[ ?1 , 1 )
+214	99	113	by subtracting
+214	114	117	128
+214	122	133	multiplying
+214	134	143	0.0078125
+215	2	20	more complex model
+215	31	34	for
+215	37	53	labeling pattern
+215	54	58	with
+215	59	80	more facial landmarks
+216	4	18	type of solver
+216	19	21	is
+216	22	25	SGD
+216	26	30	with
+216	33	48	mini-batch size
+216	49	51	of
+216	52	54	64
+216	59	67	momentum
+216	68	70	of
+216	71	74	0.9
+216	83	95	weight decay
+216	96	98	of
+216	99	105	0.0005
+217	4	31	maximum learning iterations
+217	32	34	of
+217	35	47	pre-training
+217	52	72	each finetuning step
+217	77	93	1810 4 and 610 4
+217	188	202	0.02 and 0.001
+217	117	139	initial learning rates
+217	140	142	of
+217	143	155	pre-training
+217	160	183	each fine - tuning step
+219	4	17	learning rate
+219	21	34	multiplied by
+219	37	43	factor
+219	44	46	of
+219	47	50	0.3
+219	51	53	at
+219	54	77	every 3 10 4 iterations
+213	3	8	train
+213	9	16	our MCL
+213	17	22	using
+213	26	67	open source deep learning framework Caffe
+35	20	27	propose
+35	30	59	novel deep learning framework
+35	60	65	named
+35	66	97	Multi - Center Learning ( MCL )
+35	98	108	to exploit
+35	113	132	strong correlations
+35	133	138	among
+35	139	148	landmarks
+38	59	82	model assembling method
+38	83	95	to integrate
+38	96	128	multiple shape prediction layers
+38	129	133	into
+38	134	160	one shape prediction layer
+36	16	27	our network
+36	28	32	uses
+36	33	65	multiple shape prediction layers
+36	66	76	to predict
+36	81	103	locations of landmarks
+36	110	137	each shape prediction layer
+36	138	151	emphasizes on
+36	156	165	detection
+36	166	168	of
+36	179	186	cluster
+36	187	189	of
+36	190	199	landmarks
+39	4	20	entire framework
+39	21	31	reinforces
+39	36	52	learning process
+39	53	55	of
+39	56	69	each landmark
+39	70	74	with
+39	77	97	low model complexity
+37	0	12	By weighting
+37	17	21	loss
+37	22	24	of
+37	25	38	each landmark
+37	41	62	challenging landmarks
+37	67	82	focused firstly
+37	94	114	cluster of landmarks
+37	118	135	further optimized
+2	32	46	Face Alignment
+237	0	14	Our method MCL
+237	15	26	outperforms
+237	27	69	most of the state - of - the - art methods
+237	83	85	on
+237	86	98	AFLW dataset
+237	99	104	where
+237	107	131	relative error reduction
+237	145	153	achieved
+237	135	141	3.93 %
+237	154	165	compared to
+237	166	172	RecNet
+239	41	59	challenging images
+239	60	64	from
+239	65	78	AFLW and COFW
+242	0	3	MCL
+242	4	16	demonstrates
+242	19	38	superior capability
+242	39	50	of handling
+242	51	68	severe occlusions
+242	73	91	complex variations
+242	92	94	of
+242	95	127	pose , expression , illumination
+245	4	25	average running speed
+245	26	28	of
+245	29	50	deep learning methods
+245	51	64	for detecting
+245	65	84	68 facial landmarks
+244	6	14	observed
+244	20	23	MCL
+244	24	32	achieves
+244	33	56	competitive performance
+244	57	59	on
+244	60	80	all three benchmarks

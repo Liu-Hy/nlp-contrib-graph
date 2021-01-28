@@ -1,0 +1,2 @@
+(Contribution||has research problem||Character - based Data - to - text Generation)
+(Contribution||has research problem||natural language generation)

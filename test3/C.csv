@@ -1,0 +1,2721 @@
+triple_C
+[]
+"[['Model', 'introduce', 'recurrent neural network grammars ( RNNGs']]"
+[]
+"[['Model', 'give', 'two variants']]"
+[]
+"[['Model', 'present', 'simple importance sampling algorithm']]"
+"[['Hyperparameters', 'For', 'discriminative model']]"
+"[['Hyperparameters', 'For', 'generative model']]"
+"[['Hyperparameters', 'tuned', 'dropout rate']]"
+"[['Hyperparameters', 'For', 'sequential LSTM baseline']]"
+"[['Hyperparameters', 'For', 'training']]"
+[]
+[]
+[]
+"[['Model', 'show', 'even larger performance gains']]"
+[]
+"[['Model', 'introducing', 'cloze - style training objective']]"
+"[['Model', 'separately computes', 'forward and backward states']]"
+[]
+[]
+[]
+"[['Experimental setup', 'run', 'experiments']]"
+"[['Experimental setup', 'use', 'NCCL2 library']]"
+[]
+[]
+[]
+[]
+[]
+"[['Results', 'with comparison to', 'fine tuning']]"
+[]
+"[['Ablation analysis', 'results in', 'bilm loss']]"
+"[['Results', 'shows', 'cloze loss']]"
+[]
+"[['Model', 'update', 'Seq2seq approach']]"
+[]
+[]
+"[['Results', 'using', 'subword split']]"
+[]
+[]
+[]
+"[['Model', 'work', 'poorly']]"
+[]
+[]
+[]
+"[['Model', 'used', 'model']]"
+"[['Hyperparameters', 'Training on', 'small dataset']]"
+[]
+"[['Hyperparameters', 'pre-trained', 'skip - gram embeddings']]"
+[]
+"[['Results', 'trained on', 'large high - confidence corpus']]"
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+"[['Approach', 'present', 'beam - based search procedure']]"
+"[['Results', 'taking', 'weighted average']]"
+[]
+[]
+[]
+"[['Results', 'combining', 'scores']]"
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+"[['Model', 'propose', 'novel transition system']]"
+[]
+[]
+[]
+[]
+"[['Results', 'find that', 'bottom - up parser and the top - down parser']]"
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+"[['Model', 'present', 'neural - net parse reranker']]"
+[]
+"[['Hyperparameters', 'initialize', 'starting states']]"
+[]
+[]
+[]
+"[['Hyperparameters', 'use', 'vanilla softmax']]"
+[]
+[]
+[]
+[]
+[]
+"[['Approach', 'focus on', 'RNNGs']]"
+"[['Approach', 'manipulates', 'inductive bias']]"
+"[['Approach', 'begin with', 'importance']]"
+"[['Approach', 'augment', 'RNNG composition function']]"
+"[['Approach', 'Using', 'GA - RNNG']]"
+[]
+"[['Results', 'Ablating', 'stack']]"
+[]
+"[['Results', 'modeling', 'syntax']]"
+"[['Results', 'remark', 'stack - only results']]"
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+"[['Results', 'On', 'test data']]"
+[]
+"[['Model', 'introduce', 'parser']]"
+"[['Model', 'present', 'character LSTM']]"
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+"[['Model', 'train', 'deep neural network']]"
+"[['Model', 'captures', 'entity - level information']]"
+"[['Model', 'Using', 'cluster - pair representations']]"
+"[['Model', 'At', 'test time']]"
+"[['Model', 'makes', 'novel easy - first cluster - ranking procedure']]"
+"[['Model', 'using', 'learning - to - search algorithm']]"
+"[['Model', 'allows', 'model']]"
+[]
+[]
+[]
+"[['Model', 'propose', 'goal - directed endto - end deep reinforcement learning framework']]"
+"[['Model', 'leverage', 'neural architecture']]"
+[]
+"[['Model', 'introduce', 'entropy regularization term']]"
+"[['Model', 'update', 'regularized policy network parameters']]"
+[]
+"[['Hyperparameters', 'pretrain', 'our model']]"
+"[['Hyperparameters', 'set', 'number of sampled trajectories N s']]"
+[]
+"[['Results', 'Built on top of', 'model']]"
+[]
+"[['Results', 'introducing', 'context - dependent ELMo embedding']]"
+[]
+[]
+[]
+"[['Approach', 'modify', 'max-margin coreference objective']]"
+[]
+"[['Approach', 'is', 'neural mention - ranking model']]"
+[]
+"[['Results', 'find', 'REINFORCE']]"
+[]
+[]
+"[['Approach', 'introduce', 'approximation']]"
+"[['Approach', 'At', 'each iteration']]"
+"[['Approach', 'propose', 'coarseto - fine approach']]"
+"[['Approach', 'introduce', 'less accurate but more efficient coarse factor']]"
+[]
+"[['Approach', 'cheaply computes', 'rough sketch']]"
+[]
+[]
+[]
+[]
+[]
+"[['Results', 'observe', 'further improvement']]"
+[]
+[]
+"[['Model', 'inspired by', 'mention - ranking model']]"
+"[['Model', 'Given', 'anaphoric sentence']]"
+[]
+[]
+"[['Model', 'consider', 'one anaphor at a time']]"
+"[['Model', 'show', 'model']]"
+"[['Model', 'produces', 'large amounts of instances']]"
+[]
+[]
+"[['Baselines', 'report', 'preceding sentence baseline ( PS BL )']]"
+[]
+[]
+[]
+"[['Hyperparameters', 'initialized', 'weight matrices']]"
+[]
+"[['Hyperparameters', 'trained', 'our model']]"
+"[['Hyperparameters', 'clip', 'gradients']]"
+"[['Hyperparameters', 'train for', '10 epochs']]"
+"[['Hyperparameters', 'used', 'l 2 - regularization']]"
+[]
+"[['Results', 'In terms of', 's@1 score']]"
+"[['Results', 'with', 'HPs']]"
+[]
+[]
+[]
+"[['Results', 'for', 'shell noun resolution']]"
+[]
+[]
+[]
+"[['Approach', 'posit', 'global context']]"
+[]
+"[['Approach', 'no', 'manually defined cluster features']]"
+"[['Approach', 'incorporate', 'mention - ranking style coreference system']]"
+"[['Approach', 'including', 'recurrent neural network']]"
+"[['Approach', 'train', 'model']]"
+"[['Experimental setup', 'For', 'training']]"
+"[['Experimental setup', 'find', 'initial learning rate']]"
+"[['Experimental setup', 'set', 'ha ( x n ) , h c ( x n ) , and h ( m )']]"
+"[['Experimental setup', 'use', 'single - layer LSTM']]"
+"[['Experimental setup', 'For', 'regularization']]"
+[]
+"[['Experimental setup', 'makes use of', 'GPU']]"
+[]
+"[['Results', 'see', 'statistically significant improvement']]"
+[]
+[]
+[]
+"[['Research problem', 'present', 'word embedding model']]"
+"[['Research problem', 'by running', 'attentional sentence linking models']]"
+[]
+"[['Model', 'propose', 'cross - sentence encoder']]"
+[]
+"[['Model', 'With', 'context memory block']]"
+[]
+"[['Hyperparameters', 'In', 'ASL']]"
+[]
+[]
+"[['Hyperparameters', 'randomly select', 'up to 40 continuous sentences']]"
+[]
+"[['Results', 'Comparing with', 'baseline model']]"
+"[['Results', 'show', 'models']]"
+"[['Results', 'indicated', 'ASL model']]"
+[]
+"[['Approach', 'propose', 'entity - level representation']]"
+[]
+"[['Approach', 'uses', 'contextual embeddings']]"
+[]
+"[['Approach', 'done by using', 'BERT']]"
+[]
+[]
+[]
+"[['Results', 'Removing', 'second - order span - representations']]"
+"[['Results', 'Replacing', 'secondorder span representations']]"
+"[['Results', 'set', 'new state of the art']]"
+"[['Research problem', 'End - to - end', 'Neural Coreference Resolution']]"
+"[['Research problem', 'introduce', 'first end - to - end coreference resolution model']]"
+"[['Model', 'present', 'end - toend']]"
+"[['Model', 'demonstrate', 'performance']]"
+[]
+"[['Model', 'includes', 'span - ranking model']]"
+"[['Model', 'are', 'vector embeddings']]"
+[]
+[]
+[]
+[]
+"[['Hyperparameters', 'In', 'character CNN']]"
+[]
+[]
+[]
+"[['Hyperparameters', 'use', 'ADAM']]"
+[]
+"[['Hyperparameters', 'apply', '0.5 dropout']]"
+"[['Hyperparameters', 'apply', '0.2 dropout']]"
+[]
+[]
+"[['Hyperparameters', 'trained for', 'up to 150 epochs']]"
+"[['Hyperparameters', 'implemented in', 'Tensor - Flow']]"
+[]
+[]
+[]
+[]
+[]
+[]
+"[['Ablation analysis', 'contribute', '3.8 F1']]"
+"[['Ablation analysis', 'see', 'contribution']]"
+"[['Ablation analysis', 'show', '1.3 F1 degradation']]"
+"[['Ablation analysis', 'keeping', 'mention candidates']]"
+"[['Ablation analysis', 'With', 'oracle mentions']]"
+[]
+"[['Model', 'fine - tune', 'BERT']]"
+"[['Model', 'extending', 'c 2f - coref model']]"
+[]
+[]
+"[['Hyperparameters', 'fine tune', 'all models']]"
+"[['Hyperparameters', 'trained', 'separate models']]"
+[]
+"[['Results', 'shows', 'BERT']]"
+[]
+"[['Results', 'shows', 'BERT - base']]"
+[]
+"[['Results', 'observe', 'overlap variant']]"
+[]
+[]
+"[['Model', 'propose', 'new structured - data encoder']]"
+"[['Model', 'focuses on', 'encoding']]"
+"[['Model', 'model', 'general structure']]"
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+"[['Hyperparameters', 'use', 'dropout']]"
+"[['Hyperparameters', 'trained with', 'batch size']]"
+"[['Hyperparameters', 'follow', 'training procedure']]"
+"[['Hyperparameters', 'trained with', 'Adam optimizer']]"
+"[['Hyperparameters', 'used', 'beam search']]"
+"[['Hyperparameters', 'implemented in', 'Open NMT - py']]"
+[]
+[]
+[]
+[]
+"[['Ablation analysis', 'shows', 'Flat scenario']]"
+[]
+[]
+[]
+"[['Model', 'present', 'neural ensemble natural language generator']]"
+"[['Model', 'explore', 'novel ways']]"
+"[['Experimental setup', 'built', 'ensemble model']]"
+[]
+[]
+[]
+[]
+"[['Results', 'show', 'LSTM and the CNN models']]"
+"[['Results', 'On', 'official E2E test set']]"
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+"[['Research problem', 'cast', 'language generation and interpretation']]"
+"[['Approach', 'builds on', 'learned Rational Speech Acts ( RSA ) models']]"
+[]
+[]
+[]
+[]
+[]
+"[['Model', 'learns', 'content plan']]"
+"[['Model', 'train', 'end - to - end']]"
+"[['Hyperparameters', 'used', 'one - layer pointer networks']]"
+[]
+"[['Hyperparameters', 'applied', 'dropout']]"
+[]
+"[['Hyperparameters', 'For', 'text decoding']]"
+"[['Hyperparameters', 'set', 'beam size']]"
+"[['Hyperparameters', 'implemented in', 'Open NMT - py']]"
+[]
+[]
+[]
+[]
+"[['Results', 'Compared to', 'best reported system']]"
+[]
+[]
+[]
+"[['Model', 'propose', 'explicit , symbolic , text planning stage']]"
+[]
+[]
+[]
+[]
+"[['Baselines', 'developed', 'end - to - end neural baseline']]"
+[]
+[]
+[]
+[]
+[]
+"[['Model', 'constitute', 'more general approach']]"
+"[['Model', 'present', 'character - level sequence - to - sequence model']]"
+[]
+"[['Model', 'achieves', 'rather interesting performance results']]"
+"[['Model', 'shows', 'two important features']]"
+"[['Experimental setup', 'developed', 'our system']]"
+"[['Experimental setup', 'minimize', 'negative log - likelihood loss']]"
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+"[['Research problem', 'propose', 'novel neural network model']]"
+[]
+[]
+"[['Model', 'present', 'novel neural network - based model']]"
+[]
+[]
+[]
+"[['Experimental setup', 'apply', 'dropout']]"
+"[['Experimental setup', 'apply', 'word dropout']]"
+"[['Experimental setup', 'optimize', 'objective loss']]"
+"[['Experimental setup', 'use', '100 - dimensional word embeddings']]"
+"[['Experimental setup', 'fix', 'number of hidden nodes']]"
+[]
+[]
+[]
+[]
+[]
+"[['Approach', 'centered around', 'BiRNNs']]"
+"[['Approach', 'represent', 'each word']]"
+[]
+"[['Approach', 'demonstrate', 'effectiveness']]"
+"[['Approach', 'In', 'graphbased parser']]"
+[]
+[]
+"[['Hyperparameters', 'use', 'LSTM variant']]"
+"[['Results', 'clear that', 'our parsers']]"
+"[['Results', 'not using', 'external embeddings']]"
+[]
+"[['Results', 'Moving from', 'simple ( 4 features )']]"
+"[['Results', 'adding', 'external word embeddings']]"
+"[['Model', 'give', 'probabilistic interpretation']]"
+"[['Model', 'distilling', 'ensemble']]"
+"[['Model', 'derive', 'cost']]"
+[]
+"[['Ablation analysis', 'consider', 'neural FOG parser']]"
+[]
+"[['Results', 'training', 'same model']]"
+"[['Results', 'For', 'English']]"
+"[['Results', 'For', 'Chinese']]"
+[]
+[]
+[]
+[]
+"[['Experimental setup', 'For', 'three BiLSTM - CRF - based models']]"
+"[['Experimental setup', 'For', 'traditional feature - based models']]"
+"[['Experimental setup', 'For', 'BiLSTM - CRF - based models']]"
+"[['Experimental setup', 'For', 'Stanford - NNdep']]"
+"[['Experimental setup', 'For', 'jPTDP']]"
+"[['Experimental setup', 'fix', 'number of BiLSTM layers']]"
+[]
+[]
+[]
+[]
+[]
+"[['Results', 'for', 'PTB']]"
+"[['Results', 'On', 'GENIA and CRAFT']]"
+[]
+"[['Results', 'On', 'GENIA']]"
+[]
+[]
+[]
+"[['Model', 'propose', 'novel neural network architecture']]"
+[]
+[]
+[]
+"[['Baselines', 're-implemented', 'graph - based Deep Biaffine ( BIAF ) parser']]"
+[]
+"[['Results', 'On', 'UAS and LAS']]"
+[]
+"[['Results', 'On', 'LCM and UCM']]"
+[]
+"[['Results', 're-implementation of', 'BIAF']]"
+[]
+"[['Results', 'On', 'German']]"
+[]
+[]
+[]
+[]
+"[['Model', 'combine', 'representational power']]"
+"[['Model', 'train', 'neural network']]"
+"[['Model', 'use', 'activations']]"
+"[['Model', 'generate', 'high - confidence parse trees']]"
+"[['Model', 'known', 'tri-training']]"
+"[['Hyperparameters', 'used', 'publicly available word2vec 2 tool']]"
+[]
+[]
+[]
+[]
+"[['Model', 'modify', 'neural graphbased approach']]"
+[]
+[]
+[]
+[]
+[]
+"[['Model', 'adapt', 'training criterion']]"
+"[['Model', 'use', 'method']]"
+[]
+[]
+[]
+[]
+[]
+"[['Research problem', 'introduce', 'globally normalized transition - based neural network model']]"
+"[['Model', 'demonstrate', 'simple feed - forward networks']]"
+"[['Model', 'uses', 'transition system']]"
+"[['Model', 'perform', 'beam search']]"
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+"[['Results', 'Using', 'beam search']]"
+"[['Ablation analysis', 'set of', 'character ngrams feature']]"
+[]
+[]
+[]
+"[['Results', 'significantly outperform', 'LSTM - based approaches']]"
+[]
+"[['Model', 'explore', 'very large corpus']]"
+"[['Research problem', 'show', 'linear models']]"
+[]
+"[['Experimental setup', 'use', '10 hidden units']]"
+"[['Results', 'adding', 'bigram information']]"
+[]
+[]
+"[['Results', 'tune', 'hyperparameters']]"
+[]
+[]
+"[['Baselines', 'compare with', 'Tagspace']]"
+[]
+[]
+[]
+[]
+"[['Baselines', 'combine', 'state - of - the - art cross - lingual methods']]"
+"[['Model', 'for', 'domain adaptation']]"
+"[['Model', 'based on', 'masked language model ( MLM ) pre-training']]"
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+"[['Results', 'In', 'sentiment classification task']]"
+[]
+"[['Results', 'in', 'MLdoc dataset']]"
+"[['Results', 'In', 'sentiment classification task']]"
+[]
+"[['Results', 'In', 'MLdoc dataset']]"
+"[['Results', 'comparing with', 'best cross - lingual results']]"
+[]
+"[['Ablation analysis', 'Leveraging', 'unlabeled data']]"
+[]
+[]
+"[['Model', 'proposes', 'Neural Attentive Bagof - Entities ( NABoE ) model']]"
+"[['Model', 'For', 'each entity name']]"
+[]
+[]
+"[['Hyperparameters', 'trained using', 'mini-batch SGD']]"
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+"[['Results', 'Relative to', 'baselines']]"
+[]
+[]
+[]
+"[['Model', 'propose', 'task - oriented word embedding method']]"
+[]
+"[['Model', 'To model', 'task information']]"
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+"[['Model', 'propose', 'new graph neural networkbased method']]"
+"[['Model', 'construct', 'single large graph']]"
+"[['Model', 'model', 'graph']]"
+[]
+"[['Model', 'turn', 'text classification problem']]"
+[]
+[]
+"[['Baselines', 'compare', 'Text GCN']]"
+[]
+[]
+[]
+"[['Baselines', 'explored', 'CNN -rand']]"
+[]
+[]
+[]
+"[['Baselines', 'used', 'Logistic Regression']]"
+[]
+"[['Baselines', 'used', 'Logistic Regression']]"
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+"[['Hyperparameters', 'For', 'Text GCN']]"
+"[['Hyperparameters', 'tuned', 'other parameters']]"
+"[['Hyperparameters', 'For', 'baseline models']]"
+[]
+"[['Results', 'When', 'pre-trained Glo Ve word embeddings']]"
+[]
+[]
+[]
+[]
+[]
+"[['Model', 'call', 'deep pyramid CNN ( DPCNN )']]"
+"[['Model', 'After converting', 'discrete text']]"
+[]
+[]
+"[['Model', 'show', 'DPCNN']]"
+[]
+[]
+[]
+"[['Hyperparameters', 'use', 'max pooling']]"
+[]
+[]
+"[['Results', 'On', 'all the five datasets']]"
+[]
+[]
+[]
+[]
+[]
+"[['Model', 'build on', 'general framework']]"
+"[['Model', 'designed to enable', 'learning']]"
+[]
+"[['Model', 'to', 'model']]"
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+"[['Results', 'On', 'our tasks']]"
+"[['Results', 'review', 'performance']]"
+[]
+"[['Results', 'Increasing', 'dimensionality']]"
+[]
+[]
+"[['Model', 'to', 'text classification tasks']]"
+[]
+[]
+"[['Model', 'define', 'perturbation']]"
+"[['Model', 'propose', 'text classifier']]"
+"[['Experimental setup', 'used', 'TensorFlow']]"
+[]
+"[['Experimental setup', 'trained for', '100,000 steps']]"
+"[['Experimental setup', 'applied', 'gradient clipping']]"
+"[['Experimental setup', 'For', 'regularization']]"
+"[['Experimental setup', 'For', 'bidirectional LSTM model']]"
+"[['Results', 'saw that', 'cosine distance']]"
+"[['Results', 'shows', 'test performance']]"
+[]
+[]
+"[['Results', 'shows', 'test performance']]"
+[]
+[]
+[]
+"[['Model', 'introduce', 'new architecture']]"
+"[['Model', 'design', 'simple end - to - end , unified architecture']]"
+[]
+"[['Model', 'to learn', 'sequential correlations']]"
+"[['Model', 'choose', 'sequence - based input']]"
+"[['Baselines', 'implement', 'our model']]"
+"[['Experimental setup', 'of', 'tensors']]"
+"[['Experimental setup', 'use', 'one convolutional layer and one LSTM layer']]"
+"[['Experimental setup', 'For', 'TREC']]"
+[]
+"[['Experimental setup', 'add', 'L2 regularization']]"
+[]
+[]
+"[['Results', 'achieve', 'fourth best published result']]"
+"[['Results', 'For', 'binary classification task']]"
+[]
+[]
+"[['Results', 'close to', 'state - of - the - art SVM']]"
+[]
+"[['Ablation analysis', 'shown', 'single convolutional layer']]"
+"[['Ablation analysis', 'For', 'multiple convolutional layers']]"
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+"[['Experimental setup', 'performed on', 'single NVidia K40 GPU']]"
+"[['Experimental setup', 'use', 'temporal batch norm']]"
+[]
+[]
+[]
+"[['Results', 'observe', 'small depth']]"
+[]
+"[['Model', 'treating', 'text']]"
+[]
+[]
+"[['Hyperparameters', 'For', 'each dataset']]"
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+"[['Results', 'is', 'character - level ConvNets']]"
+[]
+[]
+[]
+[]
+[]
+"[['Model', 'proposes', 'Bidirectional Long Short - Term Memory Networks with Two - Dimensional Max Pooling ( BLSTM - 2DPooling )']]"
+"[['Model', 'utilizes', 'Bidirectional Long Short - Term Memory Networks ( BLSTM )']]"
+[]
+"[['Model', 'applies', '2D convolution ( BLSTM - 2DCNN )']]"
+[]
+"[['Hyperparameters', 'use', '100 convolutional filters']]"
+"[['Hyperparameters', 'set', 'mini-batch size']]"
+"[['Hyperparameters', 'For', 'regularization']]"
+[]
+[]
+[]
+[]
+[]
+[]
+"[['Results', 'Compared with', 'RCNN']]"
+"[['Results', 'Compared with', 'ReNN']]"
+"[['Results', 'Compared with', 'DSCNN']]"
+[]
+[]
+"[['Approach', 'find', 'simple bi-directional LSTM ( BiLSTM ) architecture']]"
+"[['Baselines', 'conduct', 'large - scale reproducibility study']]"
+"[['Baselines', 'compare', 'neural approaches']]"
+[]
+"[['Experimental setup', 'performed on', 'Nvidia GTX 1080 and RTX 2080 Ti GPUs']]"
+"[['Experimental setup', 'use', 'Scikitlearn 0.19.2']]"
+"[['Results', 'see that', 'our simple LSTM reg model']]"
+"[['Results', 'observe', 'LSTM reg']]"
+[]
+[]
+[]
+"[['Results', 'On', 'AAPD']]"
+"[['Results', 'Compared to', 'SVM']]"
+[]
+"[['Approach', 'train', 'mLSTM and Transformer language models']]"
+[]
+[]
+[]
+[]
+"[['Results', 'find that', 'our models']]"
+[]
+[]
+"[['Results', 'compare', 'deep learning architectures']]"
+[]
+[]
+"[['Model', 'investigate', 'modifications']]"
+"[['Model', 'used', 'Temporal Depthwise Separable Convolution']]"
+"[['Model', 'propose', 'Squeezed Very Deep Convolutional Neural Networks ( SVDCNN )']]"
+"[['Experimental setup', 'For', 'SVDCNN and Char - CNN']]"
+[]
+[]
+[]
+"[['Experimental setup', 'performed on', 'NVIDIA GTX 1060 GPU']]"
+[]
+"[['Ablation analysis', 'Considering', 'dataset']]"
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+"[['Experimental setup', 'use', '300 - dimensional Glo Ve word embeddings']]"
+[]
+[]
+"[['Experimental setup', 'train', 'Adam Optimizer']]"
+[]
+"[['Experimental setup', 'implemented using', 'Tensorflow']]"
+[]
+"[['Baselines', 'compare against', 'logistic regression model']]"
+[]
+[]
+[]
+[]
+[]
+"[['Model', 'perform', 'hierarchical classification']]"
+[]
+[]
+"[['Results', 'using', 'central processing units ( CPUs )']]"
+[]
+"[['Experimental setup', 'implemented', 'Python']]"
+"[['Experimental setup', 'used', 'Keras and Tensor Flow libraries']]"
+[]
+[]
+[]
+[]
+[]
+[]
+"[['Results', 'For', 'data set W OS ? 11967']]"
+[]
+"[['Results', 'For', 'data set W OS ? 46985']]"
+[]
+"[['Model', 'introduce', 'interaction mechanism']]"
+"[['Model', 'devise', 'EXplicit interAction Model']]"
+[]
+[]
+[]
+[]
+[]
+[]
+"[['Experimental setup', 'For', 'multi -class task']]"
+[]
+"[['Experimental setup', 'used', 'adam ( Kingma and Ba 2014 )']]"
+[]
+"[['Experimental setup', 'implemented and trained by', 'MXNet ( Chen et al. )']]"
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+"[['Results', 'For', 'five baselines']]"
+[]
+"[['Results', 'For', 'Yah.A.']]"
+[]
+"[['Experimental setup', 'implemented', 'baseline models']]"
+"[['Experimental setup', 'used', 'matrix']]"
+"[['Experimental setup', 'adopted', 'GRU']]"
+[]
+"[['Experimental setup', 'applied', 'Adam']]"
+[]
+[]
+[]
+[]
+[]
+"[['Research problem', 'use', 'data']]"
+"[['Model', 'For', 'each language']]"
+[]
+[]
+[]
+[]
+[]
+"[['Results', 'Training on', 'German or French']]"
+[]
+[]
+"[['Results', 'leads to', 'important improvement']]"
+[]
+"[['Model', 'incorporate', 'positioninvariance']]"
+"[['Model', 'To maintain', 'position - invariance']]"
+"[['Model', 'regarded as', 'special 1D CNN']]"
+"[['Hyperparameters', 'utilize', '300D Glo Ve 840B vectors']]"
+"[['Hyperparameters', 'use', 'Adadelta ( Zeiler , 2012 )']]"
+[]
+"[['Hyperparameters', 'To avoid', 'gradient explosion problem']]"
+[]
+"[['Results', 'see that', 'very deep CNN ( VDCNN )']]"
+"[['Results', 'shows', 'our model']]"
+"[['Results', 'shows', 'DRNN']]"
+[]
+[]
+[]
+"[['Model', 'called', 'capsule network']]"
+"[['Model', 'introduce', 'iterative routing process']]"
+[]
+"[['Hyperparameters', 'use', '300 - dimensional word2vec vectors']]"
+"[['Hyperparameters', 'conduct', 'mini-batch']]"
+"[['Hyperparameters', 'use', 'Adam optimization algorithm']]"
+[]
+[]
+"[['Results', 'observe', 'capsule networks']]"
+[]
+"[['Ablation analysis', 'investigate', 'capability']]"
+"[['Ablation analysis', 'observe that', 'capsule networks']]"
+[]
+[]
+[]
+[]
+"[['Ablation analysis', 'observe that', 'capsule networks']]"
+[]
+[]
+[]
+[]
+"[['Experimental setup', 'implemented in', 'Torch framework']]"
+"[['Experimental setup', 'For', 'entity embeddings only']]"
+[]
+[]
+[]
+[]
+[]
+[]
+"[['Experimental setup', 'use', 'Adam']]"
+[]
+"[['Experimental setup', 'Training on', 'single GPU']]"
+"[['Results', 'obtain', 'state of the art accuracy']]"
+"[['Results', 'analyzed', 'accuracy']]"
+"[['Results', 'shows', 'our method']]"
+[]
+[]
+"[['Research problem', 'propose', 'words and entities']]"
+"[['Model', 'addressing', 'NED']]"
+"[['Model', 'describe', 'new contextualized embedding model']]"
+"[['Model', 'based on', 'bidirectional transformer encoder']]"
+"[['Model', 'takes', 'sequence of words and entities']]"
+"[['Model', 'propose', 'masked entity prediction']]"
+"[['Model', 'trained', 'model']]"
+[]
+"[['Results', 'using', 'pseudo entity annotations']]"
+"[['Results', 'achieved', 'new state - of - the - art results']]"
+"[['Results', 'using', 'pseudo entity annotations']]"
+[]
+[]
+[]
+[]
+"[['Model', 'differ from', 'traditional word type embeddings']]"
+"[['Model', 'use', 'vectors']]"
+"[['Model', 'call', 'ELMo ( Embeddings from Language Models ) representations']]"
+[]
+"[['Model', 'learn', 'linear combination of the vectors']]"
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+"[['Approach', 'propose', 'two different methods']]"
+"[['Approach', 'present', 'WSD system']]"
+[]
+"[['Approach', 'by taking advantage of', 'semantic relationships']]"
+"[['Approach', 'based on', 'observation']]"
+"[['Experimental setup', 'For', 'BERT']]"
+"[['Experimental setup', 'For', 'Transformer encoder layers']]"
+"[['Results', 'observe', 'our systems']]"
+"[['Results', 'thanks to', 'Princeton WordNet Gloss Corpus']]"
+[]
+"[['Ablation analysis', 'Using', 'BERT']]"
+"[['Ablation analysis', 'using', 'ensembles']]"
+[]
+[]
+[]
+[]
+"[['Model', 'propose', 'novel model GAS']]"
+[]
+[]
+[]
+"[['Hyperparameters', 'use', 'pre-trained word embeddings']]"
+"[['Hyperparameters', 'employ', '256 hidden units']]"
+[]
+"[['Hyperparameters', 'assign', 'gloss expansion depth K']]"
+"[['Hyperparameters', 'experiment with', 'number of passes | T M |']]"
+"[['Hyperparameters', 'use', 'Adam optimizer']]"
+"[['Hyperparameters', 'to avoid', 'overfitting']]"
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+"[['Results', 'find that', 'GAS ext']]"
+"[['Results', 'shows', 'appropriate number of passes']]"
+[]
+"[['Results', 'shows that', 'multiple passes operation']]"
+"[['Results', 'with', 'increasing number of passes']]"
+"[['Results', 'when', 'number of passes']]"
+[]
+[]
+[]
+"[['Model', 'modeling', 'sequence of words']]"
+"[['Experimental setup', 'implemented using', 'TensorFlow']]"
+[]
+[]
+[]
+"[['Results', 'see that', 'dropword']]"
+"[['Results', 'Randomizing', 'input words']]"
+"[['Results', 'see that', 'system']]"
+[]
+[]
+[]
+[]
+"[['Model', 'propose', 'novel knowledge - based WSD algorithm']]"
+"[['Model', 'for', 'WSD']]"
+"[['Model', 'is', 'variant of LDA']]"
+"[['Model', 'use', 'non-uniform prior']]"
+"[['Model', 'model', 'relationships']]"
+[]
+[]
+[]
+[]
+[]
+[]
+"[['Model', 'perform', 'entity mention detection and entity disambiguation']]"
+"[['Model', 'To overcome', 'noise']]"
+[]
+[]
+"[['Model', 'extract', 'features']]"
+[]
+[]
+[]
+"[['Baselines', 'compare to', 'DBPedia Spotlight']]"
+"[['Results', 'compare to', 'state - of - the - art S - MART system']]"
+"[['Baselines', 'include', 'heuristics baseline']]"
+[]
+"[['Hyperparameters', 'employ', 'features']]"
+[]
+[]
+[]
+[]
+[]
+"[['Model', 'develop', 'supervised WSD model']]"
+"[['Model', 'works with', 'neural sense vectors ( i.e. sense embeddings )']]"
+[]
+"[['Results', 'show', '5 top - performing algorithms']]"
+"[['Results', 'shows', 'results']]"
+[]
+"[['Results', 'observe', 'reverse']]"
+[]
+[]
+[]
+[]
+[]
+"[['Hyperparameters', 'on', 'English all - words WSD']]"
+"[['Hyperparameters', 'For', 'all architectures']]"
+"[['Results', 'report', 'F1 - score']]"
+"[['Hyperparameters', 'As', 'supervised systems']]"
+[]
+[]
+[]
+[]
+[]
+[]
+"[['Results', 'show', 'bilingual and multilingual models']]"
+"[['Results', 'note', 'overall F- score performance']]"
+[]
+[]
+"[['Research problem', 'introduce', 'WSD']]"
+"[['Research problem', 'show', 'CWEs']]"
+[]
+[]
+[]
+[]
+"[['Results', 'observe', 'major performance drop']]"
+[]
+[]
+[]
+[]
+[]
+"[['Results', 'For', 'SensEval - 2 and SensEval - 3']]"
+"[['Results', 'For', 'S7 - T *']]"
+[]
+"[['Results', 'investigate', 'different CWE models']]"
+[]
+"[['Results', 'In', 'ELMo embedding space']]"
+[]
+"[['Model', 'propose', 'Neural Text - Entity Encoder ( NTEE )']]"
+"[['Model', 'For', 'every text']]"
+"[['Model', 'use', 'humanedited entity annotations']]"
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+"[['Results', 'indicated', 'our method']]"
+[]
+[]
+"[['Research problem', 'leads to', 'state of the art results']]"
+"[['Approach', 'propose', 'method']]"
+[]
+[]
+"[['Results', 'see that', 'coverage improvement']]"
+[]
+[]
+"[['Results', 'add', 'WordNet Gloss Tagged']]"
+[]
+[]
+"[['Results', 'with', 'ensembles']]"
+[]
+[]
+[]
+"[['Model', 'propose', 'novel model GAS']]"
+[]
+[]
+"[['Hyperparameters', 'use', 'pre-trained word embeddings']]"
+"[['Hyperparameters', 'employ', '256 hidden units']]"
+[]
+"[['Hyperparameters', 'assign', 'gloss expansion depth K']]"
+"[['Hyperparameters', 'experiment with', 'number of passes | T M |']]"
+"[['Hyperparameters', 'use', 'Adam optimizer']]"
+"[['Hyperparameters', 'to avoid', 'overfitting']]"
+[]
+[]
+[]
+"[['Results', 'performs', 'best']]"
+"[['Results', 'Compared with', 'other three neural - based methods']]"
+[]
+"[['Results', 'Incorporating', 'glosses']]"
+"[['Results', 'Compared with', 'Bi - LSTM baseline']]"
+"[['Results', 'compared with', 'GAS']]"
+[]
+[]
+[]
+[]
+"[['Model', 'based on', 'Long Short Term Memory ( LSTM )']]"
+[]
+"[['Model', 'present', 'semi-supervised algorithm']]"
+[]
+[]
+[]
+[]
+[]
+"[['Results', 'shows', 'LSTM classifier']]"
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+"[['Hyperparameters', 'To balance', 'accuracy and resource usage']]"
+[]
+[]
+"[['Results', 'see', 'significant improvements']]"
+[]
+[]
+[]
+"[['Hyperparameters', 'construct', 'LP graph']]"
+[]
+[]
+"[['Approach', 'present', 'RELIC ( Representations of Entities Learned in Context )']]"
+"[['Approach', 'apply', 'RELIC']]"
+[]
+"[['Hyperparameters', 'limit', 'each context sentence']]"
+"[['Hyperparameters', 'set', 'entity embedding size']]"
+"[['Approach', 'train', 'model']]"
+[]
+[]
+[]
+[]
+[]
+"[['Results', 'show', 'RELIC']]"
+"[['Results', 'For', 'TypeNet']]"
+[]
+[]
+[]
+[]
+[]
+"[['Results', 'believe that', ""RELIC 's performance""]]"
+[]
+"[['Results', 'observe', 'retrieve - then - read approach']]"
+[]
+[]
+[]
+[]
+"[['Research problem', 'propose', 'novel embedding method']]"
+"[['Model', 'propose', 'method']]"
+[]
+"[['Model', 'measure', 'similarity']]"
+"[['Model', 'based on', 'skip - gram model']]"
+"[['Model', 'consists of', 'skip - gram model']]"
+[]
+"[['Model', 'develop', 'straightforward NED method']]"
+[]
+[]
+"[['Results', 'choice of', 'candidate generation method']]"
+[]
+[]
+[]
+"[['Model', 'propose', 'methodology']]"
+[]
+"[['Model', 'show', 'advantage']]"
+[]
+[]
+[]
+"[['Results', 'note', 'wide variety of expression , identity , lighting and occlusion conditions']]"
+[]
+[]
+[]
+[]
+"[['Model', 'bypasses', '3D face reconstruction']]"
+"[['Hyperparameters', 'trained', 'end - to - end']]"
+"[['Hyperparameters', 'During', 'training']]"
+"[['Hyperparameters', 'In', 'input and target']]"
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+"[['Experimental setup', 'used', 'Matlab 2017a']]"
+[]
+"[['Experimental setup', 'use', 'one GPU card']]"
+"[['Experimental setup', 'set', 'weight decay']]"
+"[['Experimental setup', 'trained for', '120 k iterations']]"
+[]
+"[['Experimental setup', 'For', 'convolutional layer']]"
+"[['Experimental setup', 'For', 'proposed PDB strategy']]"
+"[['Experimental setup', 'For', 'CNN - 6']]"
+[]
+"[['Experimental setup', 'To perform', 'data augmentation']]"
+"[['Experimental setup', 'For', 'bounding box perturbation']]"
+"[['Experimental setup', 'including', 'SDM']]"
+"[['Experimental setup', 'randomly injected', 'Gaussian blur (? = 1 )']]"
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+"[['Model', 'learns to', 'loss']]"
+"[['Model', 'exploit', 'invariance']]"
+"[['Model', 'alleviate', 'fooling problem']]"
+"[['Model', 'train', '3D shape and texture regression network']]"
+[]
+[]
+"[['Results', 'indicate', 'absolute error']]"
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+"[['Model', 'learn', 'CNN']]"
+[]
+"[['Model', 'include', 'contour constraint']]"
+[]
+"[['Model', 'leveraging', '3D face model fitting approach']]"
+[]
+[]
+"[['Hyperparameters', 'set', 'initial global learning rate']]"
+[]
+"[['Results', 'For', 'AFLW - LFPA']]"
+"[['Results', 'For', 'AFLW2000 - 3D']]"
+"[['Results', 'for', 'images']]"
+"[['Results', 'For', 'IJB - A dataset']]"
+"[['Results', 'on', '300W dataset']]"
+[]
+[]
+[]
+"[['Ablation analysis', 'For', 'AFLW - PIFA dataset']]"
+"[['Ablation analysis', 'including', 'datasets']]"
+"[['Ablation analysis', 'Comparing', 'LFC + SPC and LFC + CFC performances']]"
+"[['Ablation analysis', 'Using', 'all constraints']]"
+"[['Ablation analysis', 'shows', 'images']]"
+"[['Research problem', 'demonstrate', 'superior representation power']]"
+"[['Model', 'utilize', 'two network decoders']]"
+"[['Model', 'design', 'different networks']]"
+[]
+"[['Model', 'learn', 'fitting algorithm']]"
+[]
+[]
+"[['Model', 'design', 'differentiable rendering layer']]"
+[]
+"[['Model', 'Jointly learning', '3 DMM and the model fitting encoder']]"
+[]
+[]
+"[['Hyperparameters', 'set', 'U = V = 128']]"
+[]
+[]
+[]
+[]
+[]
+[]
+"[['Results', 'obtain', 'low error']]"
+[]
+"[['Results', 'achieve', 'on - par results']]"
+"[['Ablation analysis', 'Using', 'global image - based discriminator']]"
+"[['Ablation analysis', 'empirically find', 'global image - based discriminator']]"
+[]
+[]
+[]
+"[['Model', 'observe', 'fairly accurate 3 D models']]"
+[]
+[]
+"[['Experimental setup', 'adopt', 'two architectures']]"
+"[['Experimental setup', 'For', 'AlexNet architecture']]"
+[]
+[]
+[]
+"[['Model', 'fit', '3D dense face model']]"
+"[['Model', 'call', '3D Dense Face Alignment ( 3DDFA )']]"
+[]
+"[['Model', 'adopt', 'CNN']]"
+[]
+"[['Model', 'is', 'first attempt']]"
+"[['Model', 'To enable', 'training']]"
+"[['Model', 'propose', 'face profiling algorithm']]"
+[]
+[]
+[]
+[]
+"[['Ablation analysis', 'In', 'generic cascade process']]"
+"[['Hyperparameters', 'with', 'initialization regeneration']]"
+[]
+"[['Ablation analysis', 'shown', 'PDC']]"
+[]
+[]
+"[['Results', 'indicate', 'all the methods']]"
+[]
+[]
+[]
+[]
+"[['Results', 'For', 'all the methods']]"
+[]
+[]
+[]
+[]
+"[['Model', 'propose', 'novel deep learning framework']]"
+"[['Model', 'uses', 'multiple shape prediction layers']]"
+"[['Model', 'weighting', 'loss']]"
+"[['Model', 'to decrease', 'model complexity']]"
+[]
+[]
+[]
+"[['Experimental setup', 'train', 'MCL']]"
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+"[['Results', 'on', 'several challenging images']]"
+[]
+"[['Results', 'observed', 'MCL']]"
+[]
+[]
+[]
+"[['Ablation analysis', 'demonstrates', 'Global Average Pooling']]"
+[]
+"[['Ablation analysis', 'When', '0.4']]"
+[]
+"[['Ablation analysis', 'Compared to', 'WM']]"
+[]
+[]
+"[['Ablation analysis', 'Integration of', 'Multi - Center Fine - Tuning']]"
+[]
+[]
+"[['Ablation analysis', 'observed', 'AM']]"
+[]
+[]
+[]
+"[['Ablation analysis', 'After processing', 'testing faces']]"
+[]
+[]
+[]
+[]
+[]
+[]
+"[['Model', 'propose', 'new framework']]"
+"[['Model', 'map', 'face images']]"
+"[['Model', 'design', 'conditional variational auto - encoder model']]"
+[]
+"[['Model', 'Given', 'existing facial structure']]"
+"[['Hyperparameters', 'Before', 'training']]"
+"[['Hyperparameters', 'use', '6 residual encoder blocks']]"
+"[['Hyperparameters', 'For', 'training']]"
+"[['Hyperparameters', 'For', 'detectors']]"
+"[['Hyperparameters', 'For', 'detector architecture']]"
+[]
+[]
+"[['Results', 'utilizing', 'stronger baseline']]"
+[]
+"[['Results', 'With', 'additional "" style- augmented "" synthetic training samples']]"
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+"[['Ablation analysis', 'adding', 'number of random sampled styles k']]"
+"[['Ablation analysis', 'adding', 'number of augmented styles']]"
+[]
+[]
+"[['Model', 'proposing', 'novel face alignment method']]"
+"[['Model', 'based on', 'multistage neural network']]"
+"[['Model', 'input to', 'each stage']]"
+[]
+"[['Experimental setup', 'During', 'data augmentation']]"
+[]
+"[['Experimental setup', 'For', 'optimization']]"
+"[['Experimental setup', 'For', 'validation']]"
+[]
+[]
+[]
+[]
+[]
+[]
+"[['Model', 'introduce', 'Face Alignment ( DeCaFA )']]"
+[]
+"[['Model', 'illustrates', 'attention maps']]"
+[]
+[]
+[]
+"[['Hyperparameters', 'to generate', 'smooth feature maps']]"
+[]
+"[['Hyperparameters', 'apply', '400000 updates']]"
+[]
+[]
+"[['Ablation analysis', 'reinjecting', 'whole input image ( F 3 - Equation vs F 2 - Equation )']]"
+[]
+[]
+"[['Ablation analysis', 'chaining', 'transfer layers']]"
+"[['Ablation analysis', 'of', 'Celeb A']]"
+[]
+[]
+[]
+[]
+"[['Model', 'propose', 'new loss function']]"
+[]
+"[['Model', 'encode into', 'our model']]"
+"[['Model', 'To encode', 'boundary coordinates']]"
+"[['Hyperparameters', 'During', 'training']]"
+"[['Hyperparameters', 'set', 'momentum']]"
+"[['Hyperparameters', 'train for', '240 epoches']]"
+[]
+[]
+"[['Results', 'Evaluation on', '300W']]"
+[]
+"[['Results', 'For', 'challenge subset ( iBug dataset )']]"
+[]
+"[['Results', 'on', '300 W private test dataset']]"
+[]
+[]
+"[['Results', 'On', 'every subset']]"
+[]
+[]
+"[['Model', 'develop', 'Self - Iterative Regression ( SIR ) framework']]"
+"[['Model', 'By means of', 'powerful representation']]"
+"[['Model', 'to obtain', 'discriminative landmarks features']]"
+"[['Model', 'concurrently extracts', ""local landmarks ' features""]]"
+"[['Experimental setup', 'based on', 'machine']]"
+[]
+"[['Experimental setup', 'For', 'CNN structure']]"
+"[['Experimental setup', 'Training', 'CNN']]"
+[]
+[]
+[]
+[]
+[]
+[]
+"[['Approach', 'use', 'well - defined facial boundaries']]"
+"[['Approach', 'represent', 'facial structure']]"
+[]
+"[['Approach', 'estimate', 'facial boundary heatmaps']]"
+"[['Approach', 'introduce', 'adversarial learning ideas']]"
+[]
+"[['Approach', 'used', 'stacked hourglass structure']]"
+[]
+"[['Experimental setup', 'trained with', '4 Titan X GPUs']]"
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+"[['Ablation analysis', 'observed', 'boundary map ( "" BM "" )']]"
+[]
+[]
+"[['Ablation analysis', 'observed that', 'performance']]"
+[]
+[]
+[]
+[]
+[]
+"[['Model', 'present', '3 DDE ( 3D Deeply - initialized Ensemble ) regressor']]"
+"[['Model', 'initialized by', 'robustly fitting']]"
+[]
+[]
+"[['Model', 'improve', 'initialization']]"
+"[['Model', 'introduced', 'early stopping']]"
+"[['Experimental setup', 'use', 'Adam stochastic optimization']]"
+"[['Experimental setup', 'train', 'until convergence']]"
+"[['Experimental setup', 'When', 'validation error']]"
+"[['Experimental setup', 'apply', 'batch normalization']]"
+[]
+"[['Experimental setup', 'apply', 'Gaussian filter']]"
+"[['Experimental setup', 'train', 'coarse - to - fine ERT']]"
+"[['Experimental setup', 'requires', 'maximum of T = 20 stages']]"
+[]
+[]
+"[['Experimental setup', 'resize', 'each image']]"
+"[['Experimental setup', 'generate', 'Z = 25 initializations']]"
+"[['Experimental setup', 'augment', 'shapes']]"
+"[['Experimental setup', 'To avoid', 'overfitting']]"
+"[['Experimental setup', 'Training', 'CNN and the coarse - to - fine ensemble of trees']]"
+[]
+"[['Results', 'able to', 'improve']]"
+"[['Results', 'outperform', 'RCN']]"
+[]
+[]
+"[['Results', 'In', 'challenging subset']]"
+"[['Ablation analysis', 'combined with', 'cascaded ERT']]"
+[]
+[]
+[]
+[]
+[]
+[]
+"[['Model', 'propose', 'end - to - end method']]"
+"[['Model', 'design', 'UV position map']]"
+"[['Model', 'train', 'simple encoder - decoder network']]"
+"[['Experimental setup', 'For', 'optimization']]"
+[]
+[]
+[]
+[]
+[]
+"[['Results', 'shows that', 'our method']]"
+"[['Results', 'from', 'AFLW2000 - 3 D dataset']]"
+[]
+[]
+"[['Ablation analysis', 'adding', 'weights']]"
+[]
+[]
+[]
+[]
+"[['Model', 'propose', 'novel learning method']]"
+"[['Model', 'design', 'novel self - supervised learning method']]"
+"[['Model', 'able to recover', '2D landmarks']]"
+"[['Model', 'exploits', 'cycle - consistency']]"
+"[['Model', 'To facilitate', 'overall learning procedure']]"
+[]
+"[['Experimental setup', 'use', 'SGD optimizer']]"
+"[['Experimental setup', 'use', 'two - stage strategy']]"
+[]
+"[['Experimental setup', 'fine - tune', 'our model']]"
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+"[['Ablation analysis', 'Adding', 'weights']]"
+[]
+[]
+"[['Ablation analysis', 'found', 'FLMs']]"
+[]
+"[['Model', 'propose', 'novel Semantic Alignment method']]"
+"[['Model', 'model', ""' real ' ground - truth""]]"
+"[['Model', 'propose', 'probabilistic model']]"
+[]
+[]
+[]
+"[['Model', 'propose', 'global heatmap correction unit ( GHCU )']]"
+"[['Experimental setup', 'To perform', 'data augmentation']]"
+"[['Experimental setup', 'use', 'four - stage stacked hourglass network']]"
+"[['Experimental setup', 'When training', 'training']]"
+"[['Experimental setup', 'When', 'Semantic Alignment']]"
+"[['Experimental setup', 'set', 'batch size']]"
+"[['Experimental setup', 'trained with', 'PyTorch']]"
+[]
+"[['Results', 'see that', 'HGs']]"
+"[['Results', 'adding', 'GHCU']]"
+[]
+"[['Results', 'on', 'Challenge set']]"
+[]
+[]
+[]
+"[['Results', 'observed that', 'HGs + SA + GHCU']]"
+[]
+"[['Results', 'see that', 'HGs + SA']]"
+"[['Results', 'compared with', 'HGs + SA']]"
+"[['Ablation analysis', 'on', '300 - VW']]"
+[]
+[]
+[]
+"[['Model', 'modify', 'popular one - stage RetinaNet method']]"
+"[['Model', 'to develop', 'high performance face detector']]"
+"[['Model', 'Employing', 'two - step classification and regression']]"
+[]
+"[['Experimental setup', 'use', '"" xavier "" method']]"
+[]
+[]
+[]
+[]
+[]
+"[['Results', 'outperform', 'all the compared state - of - the - art methods']]"
+[]
+[]
+"[['Model', 'propose', 'new multi-scale face detector']]"
+"[['Model', 'share', 'network']]"
+"[['Model', 'design', 'backbone network']]"
+[]
+[]
+[]
+[]
+"[['Hyperparameters', 'tested', 'different activation functions']]"
+[]
+[]
+[]
+[]
+[]
+[]
+"[['Results', 'compared with', 'S3FD version']]"
+"[['Results', 'see that', 'our method']]"
+"[['Results', 'for', 'all the different channel width']]"
+"[['Results', 'tested with', 'SSD based architecture']]"
+"[['Model', 'propose', 'novel face detection network']]"
+"[['Model', 'propose', 'three novel techniques']]"
+"[['Model', 'introduce', 'Feature Enhance Module ( FEM )']]"
+"[['Model', 'design', 'Progressive Anchor Loss ( PAL )']]"
+"[['Model', 'assign', 'smaller anchor sizes']]"
+"[['Model', 'propose', 'Improved Anchor Matching ( IAM )']]"
+"[['Model', 'name', 'proposed network']]"
+[]
+[]
+"[['Hyperparameters', 'use', 'SGD']]"
+[]
+[]
+"[['Hyperparameters', 'During', 'inference']]"
+[]
+"[['Hyperparameters', 'For', '4 bounding box coordinates']]"
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+"[['Model', 'proposes', 'unified multi-scale deep CNN']]"
+"[['Model', 'consists of', 'two sub-networks']]"
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+"[['Results', 'led', 'nontrivial margin']]"
+[]
+[]
+[]
+[]
+"[['Model', 'propose', 'weakly supervised multimodal annotation segmentation ( WSMA - Seg ) approach']]"
+"[['Model', 'In', 'training phase']]"
+"[['Model', 'In', 'testing phase']]"
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+"[['Model', 'propose', 'novel pixel - wise face localisation method']]"
+[]
+"[['Experimental setup', 'train', 'RetinaFace']]"
+[]
+[]
+[]
+"[['Experimental setup', 'testing on', 'WIDER FACE']]"
+[]
+"[['Ablation analysis', 'Adding', 'branch']]"
+"[['Ablation analysis', 'adding', 'dense regression branch']]"
+"[['Ablation analysis', 'learning', 'landmark and dense regression']]"
+[]
+[]
+"[['Results', 'Compared to', 'recent best performed method']]"
+[]
+[]
+[]
+"[['Results', 'Compared to', 'MTCNN']]"
+[]
+[]
+"[['Ablation analysis', 'observe', 'five facial landmarks regression']]"
+"[['Ablation analysis', 'using', 'single - stage features']]"
+[]
+"[['Results', 'on', 'CFP - FP']]"
+[]
+"[['Research problem', 'introduce', 'large - scale face detection dataset']]"
+[]
+[]
+"[['Model', 'annotate', 'multiple attributes']]"
+"[['Baselines', 'select', 'VJ , ACF , DPM , and Faceness']]"
+[]
+[]
+"[['Results', 'For', 'easy set']]"
+[]
+[]
+[]
+[]
+[]
+"[['Results', 'With', 'partial occlusion']]"
+[]
+[]
+[]
+[]
+[]
+"[['Model', 'in', 'state - of - the - art face detector']]"
+"[['Model', 'propose', 'novel face detector']]"
+[]
+[]
+"[['Model', 'propose', 'new anchor densification strategy']]"
+"[['Experimental setup', 'filter out', 'most boxes']]"
+"[['Experimental setup', 'measure', 'speed']]"
+[]
+[]
+"[['Ablation analysis', 'see that', 'm AP']]"
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+"[['Model', 'present', 'novel framework']]"
+"[['Model', 'design', 'CNN architecture']]"
+"[['Model', 'refer', 'intermediate layer features']]"
+"[['Model', 'construct', 'separate fusion - CNN']]"
+"[['Model', 'to learn', 'tasks']]"
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+"[['Model', 'use', 'semi-supervised solution']]"
+"[['Model', 'investigate', 'performance']]"
+"[['Model', 'introduce', 'Context - sensitive prediction module ( CPM )']]"
+"[['Model', 'propose', 'max - in - out layer']]"
+"[['Model', 'propose', 'training strategy']]"
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+"[['Model', 'named', 'Contextual Multi - Scale Region - based CNN ( CMS - RCNN )']]"
+[]
+"[['Model', 'helps to', 'global semantic features']]"
+[]
+[]
+[]
+"[['Experimental setup', 'In', 'MS - RPN']]"
+[]
+[]
+"[['Experimental setup', 'To ensure', 'training convergence']]"
+"[['Experimental setup', 'set', 'initial scale']]"
+"[['Experimental setup', 'In', 'CMS - CNN']]"
+[]
+[]
+"[['Experimental setup', 'to shrink', 'channel size']]"
+[]
+[]
+[]
+[]
+[]
+[]
+"[['Research problem', 'propose', 'detailed design Faster RCNN method']]"
+[]
+"[['Research problem', 'find', 'comparable mean average precision ( m AP )']]"
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+"[['Results', 'Compared with', 'FDNet1.0']]"
+[]
+[]
+"[['Model', 'investigate', 'effects']]"
+"[['Model', 'of', 'SRN']]"
+[]
+"[['Model', 'design', 'Receptive Field Enhancement ( RFE )']]"
+[]
+[]
+"[['Experimental setup', 'fine - tune', 'SRN model']]"
+"[['Experimental setup', 'set', 'learning rate']]"
+"[['Experimental setup', 'implement', 'SRN']]"
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+"[['Model', 'adopt', 'variant of channel features']]"
+[]
+"[['Model', 'make', 'deep and all - round investigation']]"
+[]
+[]
+[]
+[]
+"[['Results', 'When using', 'continuous score']]"
+[]
+[]
+[]
+"[['Model', 'propose', 'new cascade Convolutional Neural Network']]"
+[]
+"[['Model', 'jointly conduct', 'face detection']]"
+[]
+[]
+"[['Model', 'keep', 'K face candidate regions']]"
+"[['Model', 'concatenate', 'feature maps']]"
+[]
+"[['Model', 'In', 'end - to - end training']]"
+"[['Model', 'call', 'Supervised Transformer Network']]"
+"[['Model', 'propose', 'region - of - interest ( ROI ) convolution scheme']]"
+"[['Model', 'uses', 'conventional boosting cascade']]"
+"[['Model', 'combine', 'regions']]"
+[]
+[]
+[]
+"[['Results', 'found that', 'NMS']]"
+[]
+"[['Results', 'On', 'FDDB dataset']]"
+"[['Baselines', 'On', 'AFW and PASCAL faces datasets']]"
+[]
+[]
+[]
+"[['Research problem', 'refer to', 'face detection with arbitrary facial variations']]"
+"[['Model', 'propose', 'simple pixel - level feature']]"
+[]
+[]
+"[['Model', 'show', 'NPD features']]"
+"[['Model', 'propose', 'deep quadratic tree learning method']]"
+[]
+"[['Model', 'is', '""']]"
+[]
+[]
+"[['Hyperparameters', 'used', 'detection template']]"
+"[['Hyperparameters', 'set', 'maximum depth']]"
+"[['Hyperparameters', 'In', 'soft cascade training']]"
+[]
+"[['Baselines', 'trained', 'near frontal face detector']]"
+[]
+[]
+[]
+[]
+"[['Results', 'observed', 'proposed method']]"
+[]
+"[['Results', 'observed that', 'proposed NPD detector']]"
+[]
+[]
+"[['Results', 'show', 'proposed NPD face detector']]"
+[]
+"[['Results', 'show', 'Viola - Jones frontal face detector']]"
+[]
+"[['Model', 'propose', 'Light and Fast Face Detector ( LFFD )']]"
+"[['Model', 'inspired by', 'one - stage and multi-scale object detection method']]"
+[]
+"[['Experimental setup', 'initialize', 'all parameters']]"
+[]
+[]
+"[['Experimental setup', 'train', '1,500,000 iterations']]"
+[]
+[]
+[]
+[]
+[]
+[]
+"[['Results', 'indicate', 'LFFD']]"
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+"[['Model', 'propose', 'new framework']]"
+[]
+"[['Model', 'In', 'first stage']]"
+"[['Model', 'refines', 'windows']]"
+"[['Model', 'uses', 'more powerful CNN']]"
+[]
+[]
+[]
+[]
+[]
+[]
+"[['Results', 'shows', 'our method']]"
+[]
+"[['Results', 'shows', 'our method']]"
+[]
+[]
+"[['Approach', 'mine', 'hard examples']]"
+"[['Approach', 'dynamically assign', 'difficulty scores']]"
+"[['Approach', 'fully utilize', 'images']]"
+"[['Approach', 'improve', 'detection quality']]"
+[]
+"[['Experimental setup', 'use', 'ImageNet pretrained VGG16 model']]"
+"[['Experimental setup', 'train', 'model']]"
+"[['Experimental setup', 'During', 'training']]"
+[]
+"[['Experimental setup', 'resize', 'testing image']]"
+"[['Experimental setup', 'follow', 'testing strategies']]"
+"[['Results', 'show', 'precision - recall ( PR ) curve']]"
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+"[['Results', 'Combining', 'HIM and DH']]"
+[]
+[]
+[]
+[]
+[]
+"[['Model', 'propose', 'recurrent scale approximation ( RSA , see ) unit']]"
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+"[['Model', 'develop', 'face detector']]"
+"[['Model', 'According to', 'size']]"
+"[['Model', 'introduce', 'position - sensitive average pooling']]"
+"[['Model', 'apply', 'multi-scale training and testing strategy']]"
+[]
+[]
+"[['Hyperparameters', 'initialize', 'our network']]"
+"[['Hyperparameters', 'freeze', 'pre-trained model']]"
+"[['Baselines', 'In terms of', 'RPN stage']]"
+"[['Hyperparameters', 'combine', 'range of multiple scales and aspect ratios']]"
+[]
+[]
+"[['Hyperparameters', 'set', '256']]"
+"[['Hyperparameters', 'utilize', 'multi-scale training']]"
+"[['Hyperparameters', 'In', 'testing stage']]"
+[]
+"[['Results', 'on', 'WIDER FACE hard subset']]"
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+"[['Research problem', 'in', 'role']]"
+[]
+"[['Model', 'train', 'separate detectors']]"
+"[['Model', 'train and run', 'scale - specific detectors']]"
+[]
+"[['Research problem', 'interpolating', 'small objects']]"
+[]
+"[['Model', 'demonstrate', 'convolutional deep features']]"
+"[['Model', 'show', 'highresolution components']]"
+[]
+[]
+[]
+[]
+"[['Results', 'With', 'post - hoc regressor']]"
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+"[['Results', 'On', 'music industry domain subtask']]"
+[]
+[]
+[]
+"[['Model', 'introduce', 'neural network architecture']]"
+"[['Model', 'leverage', 'unambiguous vector representation']]"
+"[['Experimental setup', 'implemented using', 'Theano']]"
+[]
+"[['Experimental setup', 'tune', 'hyper - parameters']]"
+[]
+[]
+[]
+"[['Experimental setup', 'trained on', 'single GPU ( NVIDIA GTX 980 Ti )']]"
+[]
+[]
+"[['Results', 'on', 'medical and medicine subtask']]"
+[]
+"[['Results', 'Compared with', 'word embedding']]"
+[]
+[]
+"[['Approach', 'for', 'hypernymy detection']]"
+"[['Approach', 'analyze', 'performance']]"
+"[['Approach', 'compare', 'unsupervised measures']]"
+[]
+[]
+"[['Results', 'show', 'preference']]"
+"[['Results', 'In', 'feature weighting']]"
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+"[['Model', 'propose', 'TAXOEMBED']]"
+"[['Model', 'designed to discover', 'hypernymic relations']]"
+[]
+[]
+[]
+[]
+"[['Baselines', 'compare against', 'taxonomy learning and Information Extraction systems']]"
+[]
+"[['Results', 'of', 'TAXOEMBED and all comparison systems']]"
+[]
+[]
+"[['Results', 'does not perform', 'particularly well']]"
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+"[['Results', 'are', '1st']]"
+[]
+[]
+[]
+[]
+[]
+[]
+"[['Results', 'see that', 'data augmentation']]"
+[]
+[]
+[]
+[]
+"[['Ablation analysis', 'show', 'subsampling']]"
+"[['Ablation analysis', 'fine - tuning', 'word embeddings']]"
+"[['Ablation analysis', 'note', 'supervised model']]"
+[]
+"[['Model', 'propose', 'path - based technique']]"
+[]
+"[['Model', 'predicts', 'term and its candidate hypernym']]"
+[]
+"[['Results', 'For', 'three corpora']]"
+"[['Results', 'shows', 'our system']]"
+[]
+[]
+"[['Model', 'apply', 'sparse feature pairs']]"
+[]
+"[['Research problem', 'through', 'Formal concept Analysis ( FCA )']]"
+[]
+"[['Model', 'Exploiting', 'correspondence']]"
+"[['Results', 'with', 'attribute pairs']]"
+"[['Research problem', 'Detecting', 'Hypernymy Relations']]"
+[]
+[]
+[]
+[]
+"[['Results', 'show', 'main objective']]"
+[]
+[]
+"[['Model', 'call', 'coreference - based reasoning']]"
+"[['Model', 'given', 'input sequence and coreference clusters']]"
+[]
+"[['Model', 'compare', 'Coref - GRU layer']]"
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+"[['Research problem', 'on', 'Nar - rative QA']]"
+"[['Model', 'develop', 'novel context zoom - in network ( ConZNet )']]"
+[]
+"[['Model', 'In', 'first phase']]"
+[]
+[]
+[]
+"[['Model', 'allows', 'decoder']]"
+[]
+"[['Baselines', 'implemented', 'two baseline models']]"
+"[['Experimental setup', 'implemented using', 'Python and Tensorflow']]"
+[]
+"[['Experimental setup', 'use', '300 dimensional word vectors']]"
+[]
+"[['Experimental setup', 'apply', 'dropout']]"
+[]
+"[['Experimental setup', 'trained', 'our model']]"
+[]
+"[['Results', 'shows', 'few relevant sentences']]"
+[]
+[]
+[]
+"[['Model', 'achieve', 'high accuracy']]"
+[]
+"[['Model', 'in', 'three strategies']]"
+"[['Hyperparameters', 'use', 'cross-entropy loss']]"
+"[['Hyperparameters', 'During', 'training']]"
+[]
+"[['Results', 'Comparing', 'accuracy']]"
+"[['Results', 'note', 'model']]"
+[]
+[]
+[]
+"[['Model', 'introduce', 'Dynamic Coattention Network ( DCN )']]"
+"[['Model', 'consists of', 'coattentive encoder']]"
+"[['Experimental setup', 'preprocess', 'corpus']]"
+"[['Experimental setup', 'use', 'Glo Ve word vectors']]"
+"[['Experimental setup', 'limit', 'vocabulary']]"
+"[['Experimental setup', 'use', 'max sequence length']]"
+"[['Experimental setup', 'have', 'randomly initialized parameters']]"
+[]
+"[['Experimental setup', 'For', 'dynamic decoder']]"
+"[['Experimental setup', 'use', 'dropout']]"
+"[['Experimental setup', 'implemented and trained with', 'Chainer']]"
+[]
+[]
+[]
+[]
+[]
+[]
+"[['Model', 'uses', 'MLP']]"
+[]
+[]
+[]
+"[['Model', 'For', 'attention component']]"
+"[['Hyperparameters', 'For', 'regularization']]"
+[]
+[]
+"[['Model', 'trained on', 'full dialog scripts']]"
+"[['Model', 'selects', 'most probable response']]"
+[]
+[]
+"[['Model', 'converted', ""RMN 's attention component""]]"
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+"[['Model', 'propose', 'deep , end - to - end , neural comprehension model']]"
+[]
+[]
+[]
+[]
+[]
+[]
+"[['Model', 'for', 'question answering']]"
+[]
+[]
+[]
+"[['Model', 'combine', ""Reasoner 's evidence""]]"
+[]
+[]
+"[['Experimental setup', 'used', 'batches']]"
+"[['Experimental setup', 'implement in', 'Theano']]"
+"[['Experimental setup', 'used', '2 - regularization']]"
+[]
+[]
+"[['Results', 'On', 'CBT - CN']]"
+[]
+[]
+[]
+"[['Research problem', 'present', 'novel recurrent neural network ( RNN ) architecture']]"
+"[['Model', 'considered', 'continuous form']]"
+[]
+"[['Model', 'seen as', 'RNNsearch']]"
+"[['Hyperparameters', 'For', 'each mini-batch update']]"
+"[['Hyperparameters', 'use', 'learning rate annealing schedule']]"
+[]
+"[['Hyperparameters', 'On', 'Penn tree dataset']]"
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+"[['Model', 'enrich', 'neural - network - based NLI models']]"
+[]
+[]
+[]
+[]
+[]
+[]
+"[['Results', 'namely', 'Knowledge - based Inference Model ( KIM )']]"
+[]
+"[['Results', 'shows', 'performance']]"
+[]
+"[['Results', 'extend', 'ESIM']]"
+[]
+"[['Research problem', 'well suited for', 'deep - learning techniques']]"
+"[['Model', 'called', 'Attention Sum Reader ( AS Reader )']]"
+"[['Model', 'compute', 'vector embedding']]"
+"[['Model', 'compute', 'vector embedding']]"
+"[['Model', 'Using', 'dot product']]"
+[]
+[]
+"[['Hyperparameters', 'used', 'gradient clipping threshold']]"
+[]
+[]
+"[['Results', 'On', 'CNN dataset']]"
+[]
+"[['Results', 'Fusing', 'multiple models']]"
+"[['Results', 'In', 'named entity prediction']]"
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+"[['Model', 'explores', 'adapting']]"
+[]
+[]
+"[['Model', 'incorporate', 'neural network training']]"
+"[['Model', 'studying', 'different cyclical annealing strategies']]"
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+"[['Results', 'observe', 'CBS']]"
+"[['Results', 'With', 'CBS - 15']]"
+"[['Results', 'Combining', 'CBS - 15']]"
+"[['Results', 'Applying', 'snapshot ensembling']]"
+"[['Results', 'After', 'ResNet50']]"
+[]
+"[['Research problem', 'propose', 'TBCNNpair model']]"
+[]
+[]
+"[['Model', 'propose', 'TBCNN - pair neural model']]"
+"[['Model', 'lever- age', 'newly proposed TBCNN model']]"
+[]
+[]
+[]
+"[['Hyperparameters', 'including', 'embeddings']]"
+[]
+"[['Hyperparameters', 'applied', '2 penalty']]"
+[]
+"[['Hyperparameters', 'used', 'stochastic gradient descent']]"
+[]
+[]
+"[['Results', 'using', 'element - wise product']]"
+"[['Results', 'Combining', 'different matching heuristics']]"
+"[['Results', 'applying', 'element - wise product']]"
+[]
+[]
+[]
+[]
+[]
+[]
+"[['Experimental setup', 'fix', 'word embedding']]"
+"[['Experimental setup', 'For', 'character encoding']]"
+[]
+[]
+[]
+[]
+"[['Experimental setup', 'To speedup', 'training']]"
+[]
+[]
+"[['Experimental setup', 'is', 'Adamax']]"
+"[['Results', 'shows', 'our multi-step model']]"
+[]
+"[['Results', 'On', 'SciTail dataset']]"
+"[['Results', 'Comparing with', 'Single - step baseline']]"
+[]
+"[['Results', 'find that', 'SAN']]"
+"[['Results', 'Comparing with', ""Chen 's model""]]"
+"[['Results', 'on', 'most challenging "" Long Sentence "" and "" Quantity / Time "" categories']]"
+[]
+"[['Model', 'introduce', 'Neural Tree Indexers ( NTI )']]"
+[]
+[]
+"[['Model', 'propose', 'different variants']]"
+"[['Model', 'When', 'sequential leaf node transformer']]"
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+"[['Model', 'present', 'novel neural network architecture']]"
+"[['Model', 'aims to place', 'another attention mechanism']]"
+"[['Model', 'automatically generate', '"" attended attention ""']]"
+[]
+[]
+[]
+"[['Experimental setup', 'adopted', 'ADAM optimizer']]"
+"[['Experimental setup', 'set', 'gradient clipping threshold']]"
+"[['Experimental setup', 'used', 'batched training strategy']]"
+"[['Experimental setup', 'In', 're-ranking step']]"
+[]
+[]
+[]
+[]
+"[['Results', 'found that', 'our single model']]"
+[]
+[]
+"[['Results', 'found that', 'NE and CN category']]"
+[]
+[]
+[]
+[]
+"[['Model', 'employ', 'connected graph']]"
+"[['Model', 'propose', 'semantic retrieval framework']]"
+"[['Hyperparameters', 'For', 'Quora dataset']]"
+[]
+"[['Hyperparameters', 'set', '= 0.8']]"
+[]
+[]
+[]
+"[['Hyperparameters', 'When', 'performance']]"
+[]
+[]
+[]
+[]
+[]
+[]
+"[['Results', 'show', 'our model']]"
+[]
+[]
+[]
+[]
+"[['Ablation analysis', 'study', 'contribution']]"
+[]
+"[['Ablation analysis', 'turns out that', 'attentive pooling']]"
+"[['Ablation analysis', 'remove', 'highway network']]"
+"[['Ablation analysis', 'remove', 'character - level embedding']]"
+[]
+[]
+"[['Model', 'adopt', 'deep fusion strategy']]"
+[]
+"[['Model', 'propose', 'deep fusion long short - term memory neural networks ( DF - LSTMs )']]"
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+"[['Results', 'of', 'questionanswer matching']]"
+[]
+[]
+[]
+"[['Model', 'retrieve', 'few relevant articles']]"
+[]
+"[['Model', 'treats', 'Wikipedia']]"
+[]
+"[['Model', 'Having', 'single knowledge source']]"
+"[['Experimental setup', 'use', '3 - layer bidirectional LSTMs']]"
+"[['Experimental setup', 'apply', 'Stanford CoreNLP toolkit']]"
+[]
+"[['Experimental setup', 'use', 'Adamax']]"
+[]
+[]
+"[['Results', 'Without', 'aligned question embedding feature']]"
+"[['Ablation analysis', 'remove', 'f aligned and f exact match']]"
+[]
+[]
+[]
+"[['Model', 'propose', 'deep cascade model']]"
+[]
+"[['Model', 'At', 'early stages']]"
+[]
+"[['Model', 'introduce', 'document extraction']]"
+"[['Model', 'jointly optimize', 'all the three tasks']]"
+[]
+"[['Model', 'consists of', 'three modules']]"
+[]
+[]
+[]
+[]
+"[['Experimental setup', 'choose', 'K = 4 and N = 2']]"
+"[['Experimental setup', 'For', 'multi-task deep attention framework']]"
+"[['Experimental setup', 'use', 'GloVe 300 dimensional word embeddings']]"
+[]
+[]
+[]
+[]
+"[['Experimental setup', 'trained on', 'Nvidia Tesla M40 GPU']]"
+"[['Results', 'see', 'deep cascade learning framework']]"
+[]
+[]
+[]
+"[['Ablation analysis', 'Jointly training', 'three extraction tasks']]"
+[]
+[]
+[]
+"[['Research problem', 'decompose', 'problem']]"
+"[['Model', 'propose', 'U - Net']]"
+[]
+"[['Model', 'introduce', 'universal node']]"
+[]
+"[['Experimental setup', 'use', 'Spacy']]"
+"[['Experimental setup', 'use', '12 dimensions']]"
+"[['Experimental setup', 'use', '3 binary features']]"
+"[['Experimental setup', 'use', '100 - dim Glove pretrained word embeddings']]"
+[]
+"[['Experimental setup', 'set', 'hidden layer dimension']]"
+"[['Experimental setup', 'added', 'dropout layer']]"
+"[['Experimental setup', 'use', 'Adam optimizer']]"
+[]
+[]
+"[['Results', 'Comparing to', 'best - performing systems']]"
+"[['Results', 'among', 'all the end - to - end models']]"
+"[['Ablation analysis', 'showed', 'node U']]"
+"[['Ablation analysis', 'show', 'performance']]"
+"[['Ablation analysis', 'After removing', 'plausible answer pointer']]"
+"[['Ablation analysis', 'After removing', 'answer verifier']]"
+"[['Ablation analysis', 'In', 'U - Net']]"
+[]
+[]
+[]
+"[['Model', 'propose', 'SDNet']]"
+"[['Model', 'apply', 'inter-attention and self - attention']]"
+[]
+"[['Model', 'innovatively employed', 'weighted sum']]"
+"[['Model', 'prepend', 'previous rounds of questions and answers']]"
+[]
+[]
+[]
+[]
+[]
+"[['Research problem', 'through', 'simple story understanding scenario']]"
+"[['Model', 'with', 'new kind of memory - augmented neural network']]"
+"[['Model', 'consists of', 'fixed number of dynamic memory cells']]"
+[]
+[]
+[]
+[]
+[]
+"[['Hyperparameters', 'For', 'MemN2N']]"
+[]
+"[['Hyperparameters', 'trained with', 'ADAM']]"
+[]
+[]
+[]
+[]
+[]
+[]
+"[['Model', 'introduce', 'general framework PhaseCond']]"
+[]
+[]
+[]
+[]
+"[['Results', 'shows', 'performance']]"
+"[['Results', 'For', 'question - passage attention phase']]"
+[]
+[]
+[]
+[]
+"[['Model', 'introduced', 'syntactic information']]"
+"[['Model', 'viewed and modelled', 'different types of questions']]"
+"[['Results', 'on', 'Stanford Question Answering Dataset ( SQuAD )']]"
+[]
+"[['Hyperparameters', 'use', 'pre-trained 300 - D Glove 840B vectors']]"
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+"[['Hyperparameters', 'set', 'max length']]"
+[]
+"[['Hyperparameters', 'apply', 'dropout']]"
+[]
+[]
+"[['Results', 'added', 'explicit question type T - code']]"
+"[['Results', 'used', 'TreeLSTM']]"
+[]
+[]
+[]
+[]
+[]
+[]
+"[['Model', 'propose', 'deep neural network models']]"
+"[['Model', 'devise', 'novel model']]"
+"[['Model', 'is', 'generic']]"
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+"[['Approach', 'present', 'MANN']]"
+"[['Approach', 'thresholding', 'memory modifications']]"
+[]
+"[['Results', 'shows', 'sparse models']]"
+[]
+"[['Results', 'For', 'all tasks']]"
+[]
+[]
+[]
+"[['Results', 'believe', 'NTM']]"
+[]
+[]
+[]
+[]
+[]
+"[['Research problem', 'propose', 'novel deep neural network architecture']]"
+[]
+"[['Model', 'propose', 'two novel strategies']]"
+"[['Model', 'extend', 'memory controller']]"
+"[['Model', 'expand', 'gated recurrent unit ( GRU )']]"
+"[['Experimental setup', 'to build', 'model']]"
+[]
+"[['Experimental setup', 'In', 'memory controller']]"
+[]
+"[['Experimental setup', 'use', 'AdaDelta ( Zeiler , 2012 )']]"
+[]
+"[['Experimental setup', 'use', 'exponential moving average']]"
+[]
+"[['Results', 'in', 'lengthy - document cases']]"
+"[['Ablation analysis', 'assume', 'concatenation']]"
+"[['Results', 'using', 'DEBS']]"
+[]
+[]
+"[['Model', 'propose', 'novel model']]"
+"[['Model', 'Given', 'sentence pair']]"
+"[['Model', 'based on', 'semantic matching vector']]"
+"[['Model', 'use', 'similar components']]"
+[]
+[]
+[]
+"[['Results', 'adding', 'some word overlap features']]"
+"[['Results', 'see that', 'our model']]"
+[]
+[]
+[]
+[]
+[]
+"[['Research problem', 'propose', 'Dynamic Self - Attention ( DSA )']]"
+"[['Research problem', 'design', 'DSA']]"
+"[['Model', 'propose', 'new self - attention mechanism']]"
+"[['Model', 'modify', 'dynamic routing']]"
+[]
+[]
+[]
+[]
+[]
+"[['Results', 'With', 'tradeoffs']]"
+"[['Results', 'In comparison to', 'baseline']]"
+[]
+[]
+[]
+"[['Results', 'in', 'SST dataset']]"
+[]
+[]
+"[['Approach', 'introducing', 'novel approach']]"
+"[['Approach', 'observe', 'summary and paraphrase sentences']]"
+"[['Approach', 'collected', 'two new corpora']]"
+"[['Approach', 'demonstrate', 'efficacy']]"
+"[['Results', 'expect', 'attention - based models']]"
+[]
+[]
+[]
+[]
+[]
+[]
+[]
+"[['Research problem', 'proposed', 'sentence encoding - based model']]"
+[]
+[]
+"[['Model', 'proposed', 'unified deep learning framework']]"
+[]
+[]
+"[['Model', 'introduced', 'simple effective input strategy']]"
+[]
+[]
+[]
+"[['Hyperparameters', 'used', 'pretrained 300D Glove 840B vectors']]"
+[]
+"[['Results', 'observed', 'more attention']]"
+[]
+[]
+"[['Model', 'describe', 'BERT - based model']]"
+[]
+"[['Experimental setup', 'initialized', 'our model']]"
+"[['Experimental setup', 'trained', 'model']]"
+"[['Experimental setup', 'tuned', 'number of epochs']]"
+[]
+[]
+[]

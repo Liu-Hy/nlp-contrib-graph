@@ -1,0 +1,4 @@
+(All our models||trained with||Caffe)
+(Caffe||on||4 Titan X GPUs)
+(Experimental setup||has||All our models)
+(Contribution||has||Experimental setup)

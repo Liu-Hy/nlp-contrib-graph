@@ -8,7 +8,7 @@ Given that any face images can be factored into space of style that captures lig
 With these augmented synthetic samples , our semi-supervised model surprisingly outperforms the fully - supervised one by a large margin .
 Extensive experiments verify the effectiveness of our idea with state - of - the - art results on WFLW [ 69 ] , 300W [ 56 ] , COFW [ 7 ] , and AFLW [ 36 ] datasets .
 Our proposed structure is general and could be assembled into any face alignment frameworks .
-The code is made publicly available at https://github.com/thesouthfrog/stylealign.
+The code is made publicly available at https://github.com/thesouthfrog/stylealign .
 Introduction
 Facial landmark detection is a fundamentally important step in many face applications , such as face recognition , 3 D face reconstruction , face tracking and face editing .
 Accurate facial landmark localization was intensively studied with impressive progress made in these years .

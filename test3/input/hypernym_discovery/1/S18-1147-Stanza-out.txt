@@ -83,7 +83,7 @@ For the sake of computational efficiency , we simply average the sense embedding
 Our model was implemented using the Theano 1 .
 The diagonal variant of Ada - Grad is used for neural network training .
 We tune the hyper - parameters with the following range of values : learning rate ?
-{ 1 e ? 3 , 1 e ? 2 } , dropout probability ? { 0.1 , 0.2 } , CNN filter width ? { 2 , 3 , 4 }.
+{ 1 e ? 3 , 1 e ? 2 } , dropout probability ? { 0.1 , 0.2 } , CNN filter width ? { 2 , 3 , 4 } .
 The hidden dimension of all neural models are 200 .
 The batch size is set to 20 and the word embedding and sense embedding sizes are set to 300 .
 All of our models are trained on a single GPU ( NVIDIA GTX 980 Ti ) , with roughly 1.5h for general - purpose subtask for English and 0.5h domain - specific domain - specific ones for medical and music .

@@ -1,0 +1,7 @@
+(small modifications||to||very many real - valued inputs)
+(Model||has||Adversarial perturbations)
+(continuous word embeddings||instead of||discrete word inputs)
+(text classifier||stabilizing||classification function)
+(regularizing||has||text classifier)
+(Model||as a means of||regularizing)
+(Contribution||has||Model)

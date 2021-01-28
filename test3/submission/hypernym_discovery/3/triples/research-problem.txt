@@ -1,0 +1,4 @@
+(Contribution||has research problem||Hypernym Discovery)
+(Contribution||has research problem||Domain Adaptation)
+(Contribution||has research problem||taxonomy learning)
+(Contribution||has research problem||www.taln.upf.edu/taxoembed)

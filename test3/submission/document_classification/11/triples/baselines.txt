@@ -1,0 +1,8 @@
+(Baselines||has||BOW method)
+(weighting scheme||has||TFIDF)
+(neural network language method||learns||word embeddings)
+(word embeddings||by maximizing||conditional probability)
+(conditional probability||leveraging||contextual information)
+(Word2 Vec method||has||neural network language method)
+(Baselines||has||Word2 Vec method)
+(Contribution||has||Baselines)

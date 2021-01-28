@@ -1,0 +1,7 @@
+(SGD||with||learning rate)
+(learning rate||of||0.01)
+(Hyperparameters||use||cross-entropy loss)
+(training||save||model)
+(model||has||every 3000 iterations)
+(Hyperparameters||During||training)
+(Contribution||has||Hyperparameters)

@@ -1,0 +1,5 @@
+(subword information||as||features)
+(promising approach||for leveraging||subword information)
+(subword information||into||constituency parsing)
+(subword information||has||features)
+(Contribution||has||Baselines)

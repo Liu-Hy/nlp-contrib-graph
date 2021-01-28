@@ -1,0 +1,8 @@
+(DBPedia Spotlight||used in||several QA systems)
+(DBPedia Spotlight||represents||strong baseline)
+(strong baseline||for||entity linking)
+(Baselines||compare||DBPedia Spotlight)
+(heuristics baseline||ranks||candidate entities)
+(Baselines||include||heuristics baseline)
+(Baselines||has||Simplified VCG)
+(Contribution||has||Baselines)

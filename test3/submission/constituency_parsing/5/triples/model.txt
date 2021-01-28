@@ -1,0 +1,8 @@
+(novel transition system||for||constituent parsing)
+(novel transition system||mitigating||issues)
+(issues||of both||bottom - up and top - down systems)
+(bottom - up and top - down systems||by finding||compromise)
+(compromise||between||bottom - up constituent information)
+(compromise||between||top - down lookahead information)
+(Model||propose||novel transition system)
+(Contribution||has||Model)

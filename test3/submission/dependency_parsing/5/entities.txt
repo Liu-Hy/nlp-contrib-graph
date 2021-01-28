@@ -1,0 +1,59 @@
+24	18	25	combine
+24	30	52	representational power
+24	53	55	of
+24	56	71	neural networks
+24	72	76	with
+24	81	96	superior search
+24	97	107	enabled by
+24	108	141	structured training and inference
+29	22	27	train
+29	32	46	neural network
+29	47	55	to model
+29	60	71	probability
+29	72	74	of
+29	75	99	individual parse actions
+31	13	16	use
+31	21	32	activations
+31	33	37	from
+31	38	48	all layers
+31	49	51	of
+31	56	70	neural network
+31	71	73	as
+31	78	92	representation
+31	93	95	in
+31	98	125	structured perceptron model
+31	134	146	trained with
+31	147	176	beam search and early updates
+35	17	25	generate
+35	26	75	large quantities of high - confidence parse trees
+35	76	86	by parsing
+35	87	101	unlabeled data
+35	102	106	with
+35	107	128	two different parsers
+35	133	142	selecting
+35	143	161	only the sentences
+35	176	187	two parsers
+35	188	196	produced
+35	201	211	same trees
+36	17	25	known as
+36	28	40	tri-training
+200	3	7	used
+200	12	46	publicly available word2vec 2 tool
+200	47	55	to learn
+200	56	71	CBOW embeddings
+2	24	65	Neural Network Transition - Based Parsing
+4	46	98	neural network transition - based dependency parsing
+11	9	27	dependency parsing
+13	3	29	transition - based parsing
+222	33	50	reported accuracy
+222	12	14	of
+222	54	65	94.22 % UAS
+223	98	107	our model
+223	111	122	competitive
+223	123	127	with
+223	128	165	some of the highest reported accuries
+223	166	169	for
+223	170	182	dependencies
+223	183	185	on
+223	186	189	WSJ
+219	0	7	Results

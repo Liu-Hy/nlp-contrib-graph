@@ -139,7 +139,7 @@ Experiments
 Experimental Setups
 The general settings of our neural network model are listed below in detail .
 Embedding Layer :
-The embedding weights are randomly initialized with the uniformed distribution in the interval [ ? 0.05 , 0.05 ].
+The embedding weights are randomly initialized with the uniformed distribution in the interval [ ? 0.05 , 0.05 ] .
 CNN
 News
 CB Test NE CB Test CN Valid Test Valid Test Valid Test

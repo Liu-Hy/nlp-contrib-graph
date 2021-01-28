@@ -39,7 +39,7 @@ To the best of our knowledge , we are the first to present a unified end - to - 
 Our architecture addresses the challenges of entity linking on question answering data and outperforms state - of - the - art EL systems .
 Code and datasets
 Our system can be applied on any QA dataset .
-The complete code as well as the scripts that produce the evaluation data can be found here : https://github.com/UKPLab/ starsem2018-entity-linking.
+The complete code as well as the scripts that produce the evaluation data can be found here : https://github.com/UKPLab/ starsem2018-entity-linking .
 Several benchmarks exist for EL on Wikipedia texts and news articles , such as ACE and CoNLL - YAGO .
 These datasets contain multi-sentence documents and largely cover three types of entities : Location , Person and Organization .
 These types are commonly recognized by named entity recognition systems , such as Stanford NER Tool .

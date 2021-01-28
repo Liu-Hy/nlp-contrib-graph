@@ -1,0 +1,7 @@
+(novel neural network - based model||for||jointly learning)
+(jointly learning||has||POS tagging and dependency paring)
+(Model||present||novel neural network - based model)
+(joint model||extends||well - known BIST graph - based dependency parser)
+(well - known BIST graph - based dependency parser||with||additional lower - level BiLSTM - based tagging component)
+(Model||has||joint model)
+(Contribution||has||Model)

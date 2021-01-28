@@ -1,0 +1,4 @@
+(optimize||with||Adam)
+(optimize||has||Adam)
+(Hyperparameters||choose||optimize)
+(Contribution||has||Hyperparameters)

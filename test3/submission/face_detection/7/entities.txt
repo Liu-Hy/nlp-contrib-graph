@@ -1,0 +1,192 @@
+206	22	28	handle
+206	29	51	all scales of features
+206	52	54	in
+206	57	71	deep CNN model
+206	86	92	can be
+206	93	105	branched out
+206	106	108	at
+206	109	133	any depth of the network
+214	4	21	minimum operation
+214	22	24	in
+214	25	39	each component
+214	40	45	means
+214	46	76	only the scaleforecast network
+214	77	79	is
+214	80	84	used
+214	130	147	maximum operation
+214	148	157	indicates
+214	162	168	amount
+214	169	173	when
+214	174	186	faces appear
+214	187	189	at
+214	190	200	all scales
+219	0	23	Most of the computation
+219	24	38	happens before
+219	39	51	layer res2 b
+219	66	87	acceptable error rate
+219	88	90	of
+219	91	97	3.44 %
+222	64	72	increase
+222	31	36	times
+222	37	39	of
+222	44	63	recurrent operation
+222	79	89	error rate
+222	90	97	goes up
+222	98	104	due to
+222	109	126	cumulative effect
+222	127	129	of
+222	130	141	rolling out
+222	146	157	predictions
+17	66	113	github.com/sciencefans/RSA-for-object-detection
+178	4	13	structure
+178	14	16	of
+178	17	26	our model
+178	27	29	is
+178	32	47	shallow version
+178	48	50	of
+178	55	61	ResNet
+180	4	23	numbers of channels
+180	28	34	set to
+180	35	39	half
+180	40	42	of
+180	47	68	original ResNet model
+180	71	74	for
+180	79	92	consideration
+180	93	95	of
+180	96	111	time efficiency
+183	4	9	ratio
+183	10	12	of
+183	13	42	the positive and the negative
+183	43	45	is
+183	46	51	1 : 1
+183	52	54	in
+183	55	70	all experiments
+184	4	14	batch size
+184	15	17	is
+184	18	19	4
+184	22	40	base learning rate
+184	44	50	set to
+184	51	56	0.001
+184	57	61	with
+184	64	72	decrease
+184	73	75	of
+184	76	79	6 %
+184	80	85	every
+184	86	103	10,000 iterations
+185	4	30	maximum training iteration
+185	31	33	is
+185	34	43	1,000,000
+187	4	28	scale - forecast network
+187	32	34	of
+187	35	51	vital importance
+187	52	54	to
+187	59	90	computational cost and accuracy
+187	91	93	in
+187	98	106	networks
+179	3	6	use
+179	12	17	model
+179	18	20	in
+179	21	53	scale - forecast network and LRN
+186	7	34	stochastic gradient descent
+186	35	37	as
+186	42	51	optimizer
+181	9	14	train
+181	19	43	scale - forecast network
+181	53	56	use
+181	61	67	output
+181	68	70	of
+181	71	87	predicted scales
+181	88	97	to launch
+181	102	118	RSA unit and LRN
+35	18	25	propose
+35	28	76	recurrent scale approximation ( RSA , see ) unit
+36	4	12	RSA unit
+36	25	30	to be
+36	31	38	plugged
+36	39	41	at
+36	42	62	some specific depths
+36	63	65	in
+36	68	75	network
+36	86	89	fed
+36	90	94	with
+36	98	117	initial feature map
+36	118	120	at
+36	125	138	largest scale
+37	4	8	unit
+37	9	18	convolves
+37	23	28	input
+37	29	31	in
+37	34	50	recurrent manner
+37	51	62	to generate
+37	67	77	prediction
+37	78	80	of
+37	85	96	feature map
+37	97	104	that is
+37	105	109	half
+37	114	131	size of the input
+40	4	9	first
+40	10	12	is
+40	15	39	scale - forecast network
+40	40	59	to globally predict
+40	70	76	scales
+40	77	80	for
+40	83	94	novel image
+40	102	109	compute
+40	110	126	feature pyramids
+40	127	130	for
+40	138	159	certain set of scales
+40	160	168	based on
+40	173	183	prediction
+42	4	10	second
+42	11	13	is
+42	16	42	landmark retracing network
+42	48	56	retraces
+42	61	69	location
+42	70	72	of
+42	77	96	regressed landmarks
+42	97	99	in
+42	104	120	preceding layers
+42	125	134	generates
+42	137	153	confidence score
+42	154	157	for
+42	158	171	each landmark
+42	172	180	based on
+42	185	205	landmark feature set
+43	4	15	final score
+43	16	30	of identifying
+43	33	37	face
+43	38	44	within
+43	45	54	an anchor
+43	66	76	revised by
+43	81	92	LRN network
+46	4	20	three components
+46	25	45	be incorporated into
+46	48	69	unified CNN framework
+46	74	81	trained
+46	82	96	end - to - end
+38	20	24	feed
+38	29	36	network
+38	37	41	with
+38	42	47	input
+38	48	50	at
+38	51	65	one scale only
+38	70	81	approximate
+38	86	99	rest features
+38	100	102	at
+38	103	117	smaller scales
+38	118	125	through
+38	128	146	learnable RSA unit
+2	34	50	Object Detection
+4	164	191	multiscale object detection
+190	7	14	observe
+190	37	62	our trained scale network
+190	63	70	recalls
+190	71	91	almost 99 % at x = 1
+194	25	31	deeper
+194	36	39	RSA
+194	40	42	is
+194	43	55	branched out
+194	62	67	worse
+194	72	93	feature approximation
+194	94	96	at
+194	97	111	smaller scales

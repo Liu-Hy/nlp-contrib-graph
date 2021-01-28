@@ -1,0 +1,128 @@
+46	51	90	http://riejohnson.com/cnn download.html
+124	0	26	Experiments ( supervised )
+135	0	12	Optimization
+135	17	26	done with
+135	27	30	SGD
+135	31	35	with
+135	36	61	mini-batch size 50 or 100
+135	62	66	with
+135	67	75	momentum
+135	79	97	optionally rmsprop
+135	98	101	for
+135	102	114	acceleration
+139	40	48	see that
+139	53	81	one - hot bidirectional LSTM
+139	82	86	with
+139	87	94	pooling
+139	112	123	outperforms
+139	124	156	word - vector LSTM ( wv - LSTM )
+139	157	159	on
+139	160	176	all the datasets
+140	7	13	review
+140	18	44	non -LSTM baseline methods
+143	5	7	on
+143	8	13	three
+143	14	20	out of
+143	25	38	four datasets
+143	41	53	oh - 2 LSTMp
+143	54	65	outperforms
+143	66	69	SVM
+143	78	81	CNN
+147	8	12	RCV1
+147	15	25	n-gram SVM
+147	29	38	no better
+147	39	43	than
+147	44	63	bag - of - word SVM
+147	85	94	bow - CNN
+147	95	106	outperforms
+147	107	114	seq-CNN
+158	10	23	one - hot CNN
+158	24	29	works
+158	30	45	surprising well
+160	4	29	previous best performance
+160	30	32	on
+160	33	37	20NG
+160	73	75	of
+160	76	80	DL15
+160	38	40	is
+160	41	45	15.3
+161	0	16	Our oh - 2 LSTMp
+161	17	25	achieved
+161	26	31	13.32
+195	0	27	Semi-supervised experiments
+210	13	34	pre-trained wv - LSTM
+210	35	55	clearly outperformed
+210	60	80	supervised wv - LSTM
+210	86	100	underperformed
+210	105	111	models
+210	112	116	with
+210	117	137	region tv-embeddings
+216	15	57	wv - 2 LSTMp using the Google News vectors
+216	70	79	performed
+216	80	97	relatively poorly
+221	4	8	LSTM
+221	47	50	CNN
+221	21	42	rivals or outperforms
+221	63	65	on
+221	66	77	IMDB / Elec
+221	82	95	underperforms
+221	99	101	on
+221	102	106	RCV1
+220	7	13	review
+220	18	29	performance
+220	30	32	of
+220	33	46	one - hot CNN
+220	47	51	with
+220	52	82	one 200 - dim CNN tv-embedding
+220	104	114	comparable
+220	115	119	with
+220	120	128	our LSTM
+220	129	133	with
+220	134	166	two 100 - dim LSTM tv-embeddings
+222	0	10	Increasing
+222	15	29	dimensionality
+222	30	32	of
+222	33	50	LSTM tvembeddings
+222	51	55	from
+222	56	59	100
+222	60	62	to
+222	63	66	300
+222	67	69	on
+222	70	74	RCV1
+222	80	86	obtain
+222	87	91	8.62
+31	18	26	build on
+31	31	48	general framework
+31	49	51	of
+31	54	80	region embedding + pooling
+31	87	94	explore
+31	97	132	more sophisticated region embedding
+31	133	136	via
+31	137	170	Long Short - Term Memory ( LSTM )
+31	218	220	in
+31	225	264	supervised and semi-supervised settings
+35	18	24	enable
+35	25	33	learning
+35	34	36	of
+35	37	49	dependencies
+35	50	54	over
+35	55	71	larger time lags
+35	72	90	than feasible with
+35	91	121	traditional recurrent networks
+36	13	17	LSTM
+36	30	38	to embed
+36	39	51	text regions
+36	52	54	of
+36	55	92	variable ( and possibly large ) sizes
+38	4	12	strategy
+38	19	37	simplify the model
+38	60	69	including
+38	70	81	elimination
+38	82	84	of
+38	87	107	word embedding layer
+38	118	133	used to produce
+38	134	139	input
+38	16	18	to
+38	143	147	LSTM
+2	0	51	Supervised and Semi- Supervised Text Categorization
+4	82	101	text categorization

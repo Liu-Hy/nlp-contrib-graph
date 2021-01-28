@@ -1,0 +1,4 @@
+(Contribution||has research problem||Joint 3D Face Reconstruction and Dense Face Alignment from A Single Image)
+(Contribution||has research problem||3 D face reconstruction from a single 2D image)
+(Contribution||has research problem||3 D face reconstruction from a single 2D image)
+(Contribution||has research problem||3 D face reconstruction)

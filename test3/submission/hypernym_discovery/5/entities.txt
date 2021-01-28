@@ -1,0 +1,97 @@
+146	102	113	carried out
+146	116	141	few simple ablation tests
+146	142	144	on
+146	145	156	subtask 1 A
+165	14	23	show that
+165	24	25	2
+165	26	28	of
+165	33	43	techniques
+165	54	60	namely
+165	61	72	subsampling
+165	77	95	multitask learning
+165	107	113	harmed
+165	114	139	our system 's performance
+165	140	142	on
+165	143	155	test set 1 A
+167	20	33	fine - tuning
+167	38	53	word embeddings
+167	54	60	during
+167	61	69	training
+167	70	81	seems to be
+167	93	112	keys to the success
+167	86	88	of
+167	121	129	approach
+173	15	19	note
+173	29	45	supervised model
+173	49	57	prone to
+173	58	69	overfitting
+12	11	23	developed by
+12	28	37	CRIM team
+12	73	81	exploits
+12	84	95	combination
+12	51	53	of
+12	99	113	two approaches
+12	119	158	unsupervised , pattern - based approach
+12	165	206	supervised , projection learning approach
+134	0	17	Our hybrid system
+134	22	28	ranked
+134	29	32	1st
+134	33	35	on
+134	36	57	all three sub - tasks
+134	71	85	submitted runs
+135	18	24	scores
+135	56	67	much higher
+135	68	72	than
+135	77	96	strongest baselines
+136	20	26	likely
+136	41	48	improve
+136	49	59	our scores
+136	60	62	on
+136	63	72	2A and 2B
+138	0	28	Our cross-evaluation results
+138	69	83	computed using
+138	88	111	normal evaluation setup
+138	33	39	better
+138	40	44	than
+138	49	68	supervised baseline
+138	117	125	training
+138	126	136	our system
+138	137	139	on
+138	140	162	general - purpose data
+138	163	171	produced
+138	172	186	better results
+138	187	189	on
+138	192	218	domain - specific test set
+138	219	223	than
+138	226	254	strong , supervised baseline
+138	255	265	trained on
+138	270	292	domain - specific data
+140	14	33	unsupervised system
+140	34	46	outperformed
+140	47	77	all other unsupervised systems
+140	129	148	supervised baseline
+140	88	90	on
+140	152	154	2A
+143	61	66	run 1
+143	74	78	best
+143	79	81	on
+143	82	97	all 3 test sets
+143	106	109	use
+143	114	127	hybrid system
+137	6	13	compare
+137	14	26	runs 1 and 2
+137	27	29	of
+137	30	47	our hybrid system
+137	53	61	see that
+137	62	79	data augmentation
+137	80	88	improved
+137	89	99	our scores
+137	100	108	slightly
+137	109	111	on
+137	112	121	1A and 2B
+137	128	137	increased
+137	143	145	by
+137	146	160	several points
+137	161	163	on
+137	164	166	2A
+2	51	69	Hypernym Discovery

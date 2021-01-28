@@ -7,7 +7,7 @@ We also integrate a weight mask into the loss function during training to improv
 Our method does not rely on any prior face model , and can reconstruct full facial geometry along with semantic meaning .
 Meanwhile , our network is very light - weighted and spends only 9.8 ms to process an image , which is extremely faster than previous works .
 Experiments on multiple challenging datasets show that our method surpasses other state - of - the - art methods on both reconstruction and alignment tasks by a large margin .
-Code is available at https://github.com/YadiraF/PRNet.
+Code is available at https://github.com/YadiraF/PRNet .
 Introduction
 3 D face reconstruction and face alignment are two fundamental and highly related topics in computer vision .
 In the last decades , researches in these two fields benefit each other .

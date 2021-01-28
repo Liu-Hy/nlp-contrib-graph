@@ -1,0 +1,3 @@
+(all scales of features||in||deep CNN model)
+(branched out||at||any depth of the network)
+(Contribution||has||Baselines)

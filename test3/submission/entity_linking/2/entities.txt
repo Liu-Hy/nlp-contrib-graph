@@ -1,0 +1,135 @@
+144	124	128	used
+144	131	155	layer of word embeddings
+144	156	172	pre-trained 8 on
+144	177	198	English uk WaC corpus
+144	199	201	as
+144	202	216	initialization
+144	223	227	kept
+144	233	238	fixed
+144	239	245	during
+144	250	266	training process
+145	0	3	For
+145	4	21	all architectures
+145	30	38	employed
+145	39	47	2 layers
+145	48	50	of
+145	51	69	bidirectional LSTM
+145	70	74	with
+145	75	92	2048 hidden units
+145	95	105	1024 units
+145	106	119	per direction
+18	212	218	aim at
+18	219	227	modeling
+18	232	252	joint disambiguation
+18	142	144	of
+18	260	271	target text
+18	272	274	as
+18	277	282	whole
+18	283	294	in terms of
+18	297	322	sequence labeling problem
+20	23	51	design , analyze and compare
+20	52	66	experimentally
+20	67	95	various neural architectures
+20	96	98	of
+20	99	121	different complexities
+20	124	136	ranging from
+20	139	184	single bidirectional Long Short - Term Memory
+20	185	187	to
+20	190	220	sequence - tosequence approach
+21	0	17	Each architecture
+21	18	26	reflects
+21	29	43	particular way
+21	44	46	of
+21	47	55	modeling
+21	60	82	disambiguation problem
+21	196	203	trained
+21	204	218	end - to - end
+21	142	146	from
+21	224	246	sense - annotated text
+21	178	180	to
+21	250	262	sense labels
+21	269	274	learn
+21	277	301	single all - words model
+21	219	223	from
+21	311	324	training data
+21	327	334	without
+21	335	346	fine tuning
+21	350	370	explicit engineering
+21	371	373	of
+21	374	388	local features
+2	36	61	Word Sense Disambiguation
+9	110	113	WSD
+155	3	9	report
+155	14	24	F1 - score
+155	25	27	on
+155	28	55	each in - dividual test set
+155	83	94	obtained on
+155	99	112	concatenation
+155	113	115	of
+155	116	134	all four test sets
+155	137	147	divided by
+155	148	170	part - of - speech tag
+157	27	37	considered
+157	38	69	Context2 Vec and It Makes Sense
+157	81	104	original implementation
+157	113	131	best configuration
+157	157	167	integrates
+157	168	183	word embeddings
+157	184	189	using
+157	190	207	exponential decay
+161	13	35	both BLSTM and Seq2Seq
+161	36	44	achieved
+161	45	52	results
+161	69	91	state - of - the - art
+161	95	119	statistically equivalent
+161	152	154	to
+161	159	181	best supervised system
+161	182	184	in
+161	185	199	each benchmark
+161	202	212	performing
+161	213	219	on par
+161	220	224	with
+161	225	237	word experts
+161	238	248	tuned over
+161	249	279	explicitly engineered features
+162	23	35	BLSTM models
+162	36	55	tended consistently
+162	59	69	outperform
+162	76	96	Seq2Seq counterparts
+164	0	23	English All - words WSD
+169	6	18	worth noting
+169	24	49	RNN - based architectures
+169	50	62	outperformed
+169	63	94	classical supervised approaches
+169	100	112	dealing with
+169	113	118	verbs
+171	0	22	Both BLSTM and Seq2Seq
+171	23	35	outperformed
+171	36	47	UKB and IMS
+171	48	58	trained on
+171	59	65	SemCor
+171	68	78	as well as
+171	79	107	recent supervised approaches
+171	108	116	based on
+171	117	141	distributional semantics
+171	146	166	neural architectures
+172	0	28	Multilingual All - words WSD
+179	0	17	F - score figures
+179	18	22	show
+179	28	61	bilingual and multilingual models
+179	109	134	consistently outperformed
+179	139	151	MFS baseline
+179	156	164	achieved
+179	165	172	results
+179	182	193	competitive
+179	194	198	with
+179	203	229	best participating systems
+179	230	232	in
+179	237	241	task
+180	8	12	note
+180	22	50	overall F- score performance
+180	51	79	did not change substantially
+180	106	110	when
+180	111	117	moving
+180	118	122	from
+180	123	155	bilingual to multilingual models

@@ -9,7 +9,7 @@ Experimental results show that in general , the neural models outperform the fea
 We also perform a task - oriented evaluation to investigate the influences of these models in a downstream application on biomedical event extraction , and show that better intrinsic parsing performance does not always imply better extrinsic event extraction performance .
 We have presented a detailed empirical study comparing traditional feature - based and neural network - based models for POS tagging and dependency parsing in the biomedical context , and also investigated the influence of parser selection for a biomedical event extraction downstream task .
 Availability of data and material :
-We make the retrained models available at https://github.com/datquocnguyen/BioPosDep.
+We make the retrained models available at https://github.com/datquocnguyen/BioPosDep .
 Background
 The biomedical literature , as captured in the parallel repositories of PubMed ( abstracts ) and PubMed Central ( full text articles ) , is growing at a remarkable rate of over one million publications per year .
 Effort to catalog the key research results in these publications demands automation .

@@ -154,7 +154,7 @@ We briefly describe them here .
 See Appendix
 B for details .
 We implement our models in the AllenNLP library .
-Original code for the baselines is available at https://github.com/nyu-mll/GLUE-baselines and a newer version is available at https://github.com/jsalt18-sentence-repl/jiant.
+Original code for the baselines is available at https://github.com/nyu-mll/GLUE-baselines and a newer version is available at https://github.com/jsalt18-sentence-repl/jiant .
 Architecture
 Our simplest baseline architecture is based on sentence - to - vector encoders , and sets aside GLUE 's ability to evaluate models with more complex structures .
 Taking inspiration from Conneau et al. , the model uses a two - layer , 1500D ( per direction ) BiLSTM with max pooling and 300D Glo Ve word embeddings ( 840B Common Crawl version ; .

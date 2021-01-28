@@ -116,7 +116,7 @@ Results
 Following Pradhan et al. , we report precision , recall and F1 of the MUC , B 3 and CEAF ? 4 metrics , and average the F 1 score of all three metrics to get the main evaluation metric used in the CoNLL - 2012 coreference resolution task .
 We calculated the metrics using the official evaluation scripts of CoNLL - 2012 .
 Results on the test set are shown in .
-Our baseline is the span - ranking model from with ELMo input features and second - order span representations , which achieves 73.0 % Avg.
+Our baseline is the span - ranking model from with ELMo input features and second - order span representations , which achieves 73.0 % Avg .
 F1 . Replacing the ELMo features with BERT features achieves 76. 25 % average F1 .
 Removing the second - order span - representations while using BERT features achieves 76.37 % F1 , achieving higher recall and lower precision on all evaluation metrics , while somewhat surprisingly being better over all .
 Replacing secondorder span representations with Entity Equalization achieves 76. 64 % average F1 , while also consistently achieving the highest F 1 score on all three evaluation metrics .

@@ -10,7 +10,7 @@ We make contributions in the following five aspects :
 ( 3 ) On the WIDER FACE hard test set , RetinaFace outperforms the state of the art average precision ( AP ) by 1.1 % ( achieving AP equal to 91.4 % ) .
 ( 4 ) On the IJB - C test set , RetinaFace enables state of the art methods ( ArcFace ) to improve their results in face verification ( TAR = 89.59 % for FAR = 1 e - 6 ) .
 ( 5 ) By employing light - weight backbone networks , Retina Face can run real - time on a single CPU core fora VGA - resolution image .
-Extra annotations and code have been made available at : https://github.com/deepinsight/insightface/tree/master/RetinaFace.
+Extra annotations and code have been made available at : https://github.com/deepinsight/insightface/tree/master/RetinaFace .
 Introduction
 Automatic face localisation is the prerequisite step of facial image analysis for many applications such as facial attribute ( e.g. expression and age ) and facial identity recognition .
 A narrow definition of face localisation may refer to traditional face detection , which aims at estimating the face bounding boxes without any scale and position prior .

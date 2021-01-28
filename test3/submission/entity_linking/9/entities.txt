@@ -1,0 +1,94 @@
+21	19	26	propose
+21	29	35	method
+21	36	48	to construct
+21	51	66	novel embedding
+21	72	84	jointly maps
+21	85	103	words and entities
+21	104	108	into
+21	113	141	same continuous vector space
+22	16	42	similar words and entities
+22	47	53	placed
+22	54	59	close
+22	60	62	to
+22	63	74	one another
+22	75	77	in
+22	80	92	vector space
+25	0	9	Our model
+25	13	21	based on
+25	26	43	skip - gram model
+25	87	93	learns
+25	94	104	to predict
+25	105	122	each context word
+25	123	128	given
+25	133	144	target word
+26	10	21	consists of
+26	26	48	following three models
+27	8	38	conventional skip - gram model
+27	44	50	learns
+27	51	61	to predict
+27	62	79	neighboring words
+27	80	85	given
+27	90	101	target word
+27	102	104	in
+27	105	117	text corpora
+27	128	142	KB graph model
+27	148	154	learns
+27	155	166	to estimate
+27	167	187	neighboring entities
+27	188	193	given
+27	198	211	target entity
+27	212	214	in
+27	219	229	link graph
+27	230	232	of
+27	237	239	KB
+27	254	274	anchor context model
+27	280	286	learns
+27	287	297	to predict
+27	298	315	neighboring words
+27	316	321	given
+27	326	339	target entity
+27	340	345	using
+27	346	377	anchors and their context words
+27	378	380	in
+27	385	387	KB
+32	0	14	Our NED method
+32	15	23	combines
+32	30	38	contexts
+32	39	43	with
+32	44	69	several standard features
+32	99	104	using
+32	105	132	supervised machine learning
+23	15	22	measure
+23	27	37	similarity
+23	38	45	between
+23	46	63	any pair of items
+23	119	138	by simply computing
+23	145	162	cosine similarity
+29	42	49	develop
+29	52	78	straightforward NED method
+29	84	92	computes
+29	93	105	two contexts
+29	106	111	using
+29	13	31	proposed embedding
+29	137	163	textual context similarity
+29	170	179	coherence
+2	58	85	Named Entity Disambiguation
+4	0	35	Named Entity Disambiguation ( NED )
+5	78	81	NED
+215	0	10	Our method
+215	24	32	achieved
+215	33	53	enhanced performance
+215	54	56	on
+215	66	97	CoNLL and the TAC 2010 datasets
+218	11	23	outperformed
+218	24	62	all the state - of - the - art methods
+218	63	65	on
+218	66	79	both datasets
+216	14	24	found that
+216	29	35	choice
+216	36	38	of
+216	39	66	candidate generation method
+216	67	88	considerably affected
+216	89	100	performance
+216	101	103	on
+216	108	121	CoNLL dataset

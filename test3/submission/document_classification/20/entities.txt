@@ -1,0 +1,56 @@
+17	18	23	train
+17	24	66	both mLSTM and Transformer language models
+17	67	69	on
+17	72	96	large 40 GB text dataset
+17	104	112	transfer
+17	113	125	those models
+17	126	128	to
+17	129	161	two text classification problems
+17	164	180	binary sentiment
+17	216	255	multidimensional emotion classification
+17	256	264	based on
+17	269	295	Plutchik wheel of emotions
+140	0	23	Binary Sentiment Tweets
+143	10	21	Transformer
+143	22	26	gets
+143	27	52	close but does not exceed
+143	57	73	state of the art
+143	74	76	on
+143	81	92	SST dataset
+143	98	105	exceeds
+143	115	141	mL - STM and ELMo baseline
+143	158	190	Watson and Google Sentiment APIs
+143	191	193	on
+143	198	212	company tweets
+145	0	28	Multi - Label Emotion Tweets
+148	13	23	our models
+148	24	34	outperform
+148	35	41	Watson
+148	42	44	on
+148	45	67	every emotion category
+149	0	15	Sem Eval Tweets
+152	0	9	Our model
+152	10	18	achieved
+152	23	50	top macro-averaged F1 score
+152	51	56	among
+152	57	71	all submission
+152	74	78	with
+152	95	107	lower scores
+152	108	111	for
+152	116	133	micro -average F1
+162	0	10	Our models
+162	11	15	gets
+162	16	21	lower
+162	22	32	F 1 scores
+162	33	35	on
+162	40	62	company tweets dataset
+162	63	70	than on
+162	71	103	equivalent Se -m Eval categories
+154	101	105	find
+154	55	66	Transformer
+154	127	138	outperforms
+154	71	77	m LSTM
+154	150	156	across
+154	157	176	Plutchik categories
+2	0	29	Practical Text Classification
+139	0	7	Results

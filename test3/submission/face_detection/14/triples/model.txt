@@ -1,0 +1,6 @@
+(different types of errors||annotate||multiple attributes)
+(event categories||allows||in depth analysis)
+(in depth analysis||of||existing algorithms)
+(multiple attributes||name||occlusion)
+(Model||to quantify||different types of errors)
+(Contribution||has||Model)

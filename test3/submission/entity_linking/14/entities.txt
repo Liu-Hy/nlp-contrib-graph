@@ -1,0 +1,85 @@
+22	19	26	propose
+22	29	66	novel knowledge - based WSD algorithm
+22	67	70	for
+22	75	94	all - word WSD task
+22	103	111	utilizes
+22	116	130	whole document
+22	131	133	as
+22	138	145	context
+22	146	149	for
+22	152	156	word
+23	9	17	to model
+23	22	36	whole document
+23	37	40	for
+23	41	44	WSD
+23	50	58	leverage
+23	63	72	formalism
+23	73	75	of
+23	76	88	topic models
+23	91	101	especially
+23	102	137	Latent Dirichlet Allocation ( LDA )
+24	0	10	Our method
+24	16	23	variant
+24	24	26	of
+24	27	30	LDA
+24	31	39	in which
+24	44	61	topic proportions
+24	62	65	for
+24	68	76	document
+24	81	92	replaced by
+24	93	111	synset proportions
+24	112	115	for
+24	118	126	document
+25	3	6	use
+25	9	26	non-uniform prior
+25	27	30	for
+25	35	54	synset distribution
+25	55	59	over
+25	60	65	words
+25	66	74	to model
+25	79	88	frequency
+25	89	91	of
+25	92	97	words
+25	98	104	within
+25	107	113	synset
+26	22	27	model
+26	32	45	relationships
+26	46	53	between
+26	54	61	synsets
+26	65	70	using
+26	73	93	logisticnormal prior
+26	94	105	for drawing
+26	110	128	synset proportions
+26	129	131	of
+26	136	144	document
+2	0	43	Knowledge - based Word Sense Disambiguation
+4	0	14	Disambiguation
+5	10	13	WSD
+12	0	33	Word Sense Disambiguation ( WSD )
+169	4	19	proposed method
+169	22	32	denoted by
+169	33	41	WSD - TM
+169	94	105	outperforms
+169	110	143	state - of - the - art WSD system
+169	144	146	by
+169	149	167	significant margin
+169	189	198	achieving
+169	202	220	overall F1 - score
+169	221	223	of
+169	224	228	66.9
+169	232	243	compared to
+169	244	259	Moro14 's score
+169	260	262	of
+169	263	267	65.5
+172	4	19	proposed system
+172	20	31	outperforms
+172	32	67	all previous knowledgebased systems
+172	68	75	overall
+172	76	91	parts of speech
+170	8	20	observe that
+170	25	36	performance
+170	37	39	of
+170	44	58	proposed model
+170	62	76	not much worse
+170	77	81	than
+170	86	108	best supervised system

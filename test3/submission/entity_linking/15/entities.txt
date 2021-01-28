@@ -1,0 +1,124 @@
+27	85	92	perform
+27	93	143	entity mention detection and entity disambiguation
+27	144	151	jointly
+27	152	154	in
+27	157	176	single neural model
+27	182	187	makes
+27	192	205	whole process
+27	206	235	end - to - end differentiable
+29	0	11	To overcome
+29	16	21	noise
+29	22	24	in
+29	29	33	data
+29	39	58	automatically learn
+29	59	67	features
+29	68	72	over
+29	75	78	set
+29	79	81	of
+29	82	90	contexts
+29	91	93	of
+29	94	122	different granularity levels
+30	0	25	Each level of granularity
+30	29	39	handled by
+30	42	60	separate component
+30	61	63	of
+30	68	73	model
+31	2	25	token - level component
+31	26	34	extracts
+31	35	58	higher - level features
+31	59	63	from
+31	68	90	whole question context
+31	103	130	character - level component
+31	131	137	builds
+31	138	160	lower - level features
+31	161	164	for
+31	169	185	candidate n-gram
+32	20	27	extract
+32	28	36	features
+32	37	41	from
+32	46	68	knowledge base context
+32	69	71	of
+32	76	92	candidate entity
+32	95	121	character - level features
+32	126	139	extracted for
+32	144	156	entity label
+32	161	184	higher - level features
+32	198	206	based on
+32	211	219	entities
+32	220	231	surrounding
+32	236	252	candidate entity
+32	253	255	in
+32	260	275	knowledge graph
+33	20	30	aggregated
+33	35	39	used
+33	40	50	to predict
+33	63	69	n-gram
+33	17	19	is
+33	76	90	entity mention
+33	95	109	to what entity
+33	113	122	should be
+33	123	129	linked
+212	0	16	Existing systems
+213	24	31	compare
+213	35	52	DBPedia Spotlight
+213	62	69	used in
+213	70	88	several QA systems
+213	93	103	represents
+213	106	121	strong baseline
+213	122	125	for
+213	126	140	entity linking
+214	67	82	S - MART system
+216	8	15	include
+216	18	37	heuristics baseline
+216	43	48	ranks
+216	49	67	candidate entities
+218	0	14	Simplified VCG
+220	19	25	employ
+220	26	34	features
+220	35	45	that cover
+220	52	61	frequency
+220	62	64	of
+220	69	75	entity
+220	76	78	in
+220	79	88	Wikipedia
+220	97	110	edit distance
+220	111	118	between
+220	123	128	label
+220	129	131	of
+220	136	142	entity
+220	151	163	token n-gram
+220	172	204	number of entities and relations
+220	217	229	connected to
+220	234	240	entity
+220	241	243	in
+220	248	250	KB
+220	259	271	word overlap
+220	272	279	between
+220	284	298	input question
+220	307	313	labels
+220	314	316	of
+220	321	353	connected entities and relations
+220	362	368	length
+220	369	371	of
+220	376	382	n-gram
+42	94	147	https://github.com/UKPLab/ starsem2018-entity-linking
+2	42	56	Entity Linking
+11	41	62	entity linking ( EL )
+14	72	74	EL
+238	4	13	VCG model
+238	14	19	shows
+238	24	47	overall F- score result
+238	56	62	better
+238	63	67	than
+238	72	98	DBPedia Spotlight baseline
+238	99	101	by
+238	104	115	wide margin
+239	25	34	our model
+239	35	43	achieves
+239	44	67	higher precision values
+239	71	82	compared to
+239	83	99	other approaches
+239	115	119	keep
+239	122	140	satisfactory level
+239	141	143	of
+239	144	150	recall

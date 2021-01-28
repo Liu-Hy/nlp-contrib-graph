@@ -1,0 +1,8 @@
+(accuracy and resource usage||use||second best LSTM model ( h = 2048 and p = 512 ))
+(second best LSTM model ( h = 2048 and p = 512 )||by||default)
+(Hyperparameters||balance||accuracy and resource usage)
+(LP graph||by connecting||two nodes)
+(two nodes||if||affinity)
+(affinity||has||above 95 % percentile)
+(Hyperparameters||construct||LP graph)
+(Contribution||has||Hyperparameters)

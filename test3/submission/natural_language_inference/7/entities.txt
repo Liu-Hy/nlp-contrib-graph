@@ -1,0 +1,53 @@
+16	33	40	address
+16	45	52	lack of
+16	53	88	real natural language training data
+16	92	103	introducing
+16	106	120	novel approach
+16	121	132	to building
+16	135	176	supervised reading comprehension data set
+17	3	10	observe
+17	16	48	summary and paraphrase sentences
+17	51	55	with
+17	62	82	associated documents
+17	92	109	readily converted
+17	110	112	to
+17	113	145	context - query - answer triples
+17	146	151	using
+17	152	204	simple entity detection and anonymisation algorithms
+18	28	37	collected
+18	38	53	two new corpora
+18	54	56	of
+18	57	87	roughly a million news stories
+18	88	92	with
+18	93	111	associated queries
+18	112	116	from
+18	121	148	CNN and Daily Mail websites
+19	3	14	demonstrate
+19	19	27	efficacy
+19	28	30	of
+19	31	46	our new corpora
+19	47	58	by building
+19	59	85	novel deep learning models
+19	86	89	for
+19	90	111	reading comprehension
+5	0	15	Machine reading
+10	26	59	machine reading and comprehension
+140	19	43	attention - based models
+140	60	70	outperform
+140	75	103	pure LSTM - based approaches
+156	0	23	Word distance benchmark
+157	31	60	relatively strong performance
+157	61	63	of
+157	68	91	word distance benchmark
+157	107	118	relative to
+157	123	149	frame - semantic benchmark
+157	177	184	perform
+157	185	191	better
+164	0	13	Neural models
+165	93	128	Impatient and the Attentive Readers
+165	129	142	outperforming
+165	143	159	all other models
+167	0	13	The Deep LSTM
+168	0	6	Reader
+168	7	15	performs
+168	16	33	surprisingly well

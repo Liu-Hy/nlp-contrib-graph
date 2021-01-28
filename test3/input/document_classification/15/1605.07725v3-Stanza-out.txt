@@ -98,7 +98,7 @@ is the number of both labeled and unlabeled examples .
 See for a recent review of adversarial training methods .
 EXPERIMENTAL SETTINGS
 All experiments used TensorFlow on GPUs .
-Code will be available at https://github.com/tensorflow/models/tree/master/adversarial_text.
+Code will be available at https://github.com/tensorflow/models/tree/master/adversarial_text .
 To compare our method with other text classification methods , we tested on 5 different text datasets .
 We summarize information about each dataset in ) and we conducted a single topic classification task on the second level topics .
 We used the same division into training , test and unlabeled sets as .

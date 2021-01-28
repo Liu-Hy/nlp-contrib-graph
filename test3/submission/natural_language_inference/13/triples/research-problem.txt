@@ -1,0 +1,4 @@
+(Contribution||has research problem||Natural Language Comprehension)
+(Contribution||has research problem||machine comprehension of text)
+(Contribution||has research problem||Machine comprehension of unstructured , real - world text)
+(Contribution||has research problem||machine comprehension)

@@ -56,7 +56,7 @@ To the best of our knowledge , this is the first attempt to solve the 3D face al
 To enable the training of the 3DDFA , we construct a face database containing pairs of 2D face images and 3D face models .
 We further propose a face profiling algorithm to synthesize 60 k + training samples across large poses .
 The synthesized samples well simulate the face appearances in large poses and boost the performance of both prior and our proposed face alignment algorithms .
-The database , face profiling code and 3 DDFA code are released at http://www.cbsr.ia.ac.cn/users / xiangyuzhu/.
+The database , face profiling code and 3 DDFA code are released at http://www.cbsr.ia.ac.cn/users / xiangyuzhu/ .
 Related Works
 Generic Face Alignment :
 Face alignment in 2D aims at locating a sparse set of fiducial facial landmarks .

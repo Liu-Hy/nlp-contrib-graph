@@ -1,0 +1,4 @@
+(sequence of words||surrounding||target word)
+(real valued vector representation||i.e.||word embeddings)
+(Model||modeling||sequence of words)
+(Contribution||has||Model)

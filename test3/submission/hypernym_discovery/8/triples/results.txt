@@ -1,0 +1,4 @@
+(relations||has||not been very fruitful)
+(Results||outperform||random strategy)
+(lower scores||obtained for||multiword expressions)
+(Contribution||has||Results)

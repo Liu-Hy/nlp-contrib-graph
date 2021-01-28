@@ -1,0 +1,8 @@
+(final classifier||implemented as||MLP layer)
+(MLP layer||followed by||sigmoid or softmax function)
+(Baselines||has||final classifier)
+(logistic regression model||with||bag - ofwords)
+(logistic regression model||with||single - layer 1 D convolutional network)
+(Baselines||compare against||logistic regression model)
+(Baselines||compare with||multi-label classification of clinical text)
+(Contribution||has||Baselines)

@@ -1,0 +1,8 @@
+(Baselines||has||Bag - of - words and its TFIDF)
+(Baselines||has||Bag - of - ngrams and its TFIDF)
+(Baselines||has||Bag - of - means on word embedding)
+(k-means||on||word2vec)
+(word2vec||learnt from||training subset)
+(training subset||of||each dataset)
+(Baselines||has||Word - based ConvNets)
+(Contribution||has||Baselines)

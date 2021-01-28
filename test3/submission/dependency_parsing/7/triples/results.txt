@@ -1,0 +1,5 @@
+(dynamic oracle||for||English)
+(Chinese score||establishes||state - of - the - art)
+(Chinese score||has||state - of - the - art)
+(Results||has||Chinese score)
+(Contribution||has||Results)

@@ -1,0 +1,2 @@
+(Contribution||has research problem||Neural Data - to - Text Generation)
+(Contribution||has research problem||Data - to - text generation)

@@ -1,0 +1,8 @@
+(sequence - to - sequence model||with||attention)
+(attention||on||small human - annotated parsing dataset)
+(sequence - to - sequence model||has||attention)
+(second artificial dataset||consisting of||only high - confidence parse trees)
+(only high - confidence parse trees||measured by||agreement)
+(agreement||of||two parsers)
+(sequence - to - sequence model||with||attention)
+(Contribution||has||Experiments)

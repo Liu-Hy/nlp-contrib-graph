@@ -207,7 +207,7 @@ We use SGD optimizer for the CNN regressor with a learning rate beginning at 5 1
 The batch size is set as 32 . ? 1 , ? 2 , ? 3 and ?
 4 are set as 0.005 , 0.005 , 1 and 0.005 respectively .
 We use a two - stage strategy to train our model .
-In the first stage , we train the model using the overall loss L.
+In the first stage , we train the model using the overall loss L .
 In the second stage , we fine - tune our model using the Vertex Distance Cost , following .
 The dataset 300W - LP is used to train our model .
 This dataset contains more than 60 K face images with annotated 3 DMM coefficients .

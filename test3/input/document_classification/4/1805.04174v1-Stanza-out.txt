@@ -201,7 +201,7 @@ Out - Of - Vocabulary ( OOV ) words are initialized from a uniform distribution 
 The final classifier is implemented as an MLP layer followed by a sigmoid or softmax function depending on specific task .
 We train our model 's parameters with the Adam Optimizer ( Kingma and Ba , 2014 ) , with an initial learning rate of 0.001 , and a minibatch size of 100 .
 Dropout regularization is employed on the final MLP layer , with dropout rate 0.5 .
-The model is implemented using Tensorflow and is trained on GPU Titan X.
+The model is implemented using Tensorflow and is trained on GPU Titan X .
 The code to reproduce the experimental results is at https://github.com/guoyinwang/LEAM :
 Summary statistics of five datasets , including the number of classes , number of training samples and number of testing samples .
 Classification on Benchmark Datasets

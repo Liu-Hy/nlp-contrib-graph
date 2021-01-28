@@ -1,0 +1,4 @@
+(capsule networks||achieve||best results)
+(best results||on||4 out of 6 benchmarks)
+(Results||observe||capsule networks)
+(Contribution||has||Results)

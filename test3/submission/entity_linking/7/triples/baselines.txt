@@ -1,0 +1,7 @@
+(SVM classifier||able to learn||model)
+(model||copes with||noise)
+(our naive nearest neighbor classifiers||do not have||learned model)
+(less well||with||noisy labels)
+(Baselines||has||SVM classifier)
+(Baselines||has||Most frequent sense)
+(Contribution||has||Baselines)

@@ -1,0 +1,5 @@
+(Contribution||has research problem||Natural Language Inference)
+(Contribution||has research problem||recognize entailment and contradiction)
+(Contribution||has research problem||Recognizing entailment and contradiction)
+(Contribution||has research problem||natural language inference ( NLI ))
+(Contribution||has research problem||NLI)

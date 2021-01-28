@@ -1,0 +1,115 @@
+207	0	7	Network
+207	8	15	trained
+207	16	29	without using
+207	30	41	weight mask
+207	46	63	worst performance
+207	64	77	compared with
+207	78	96	other two settings
+208	3	9	adding
+208	10	17	weights
+208	18	20	to
+208	21	37	specific regions
+208	38	45	such as
+208	46	88	68 facial landmarks or central face region
+208	91	103	weight ratio
+208	106	111	shows
+208	112	136	considerable improvement
+208	137	139	on
+208	140	158	68 points datasets
+208	159	163	over
+208	164	176	weight ratio
+10	21	53	https://github.com/YadiraF/PRNet
+146	0	3	For
+146	4	16	optimization
+146	22	25	use
+146	26	40	Adam optimizer
+146	41	45	with
+146	48	61	learning rate
+146	62	71	begins at
+146	72	78	0.0001
+146	83	89	decays
+146	90	94	half
+146	95	100	after
+146	101	114	each 5 epochs
+147	4	14	batch size
+147	18	24	set as
+147	25	27	16
+148	0	25	All of our training codes
+148	30	46	implemented with
+148	47	57	TensorFlow
+27	19	26	propose
+27	30	51	end - to - end method
+27	52	58	called
+27	59	98	Position map Regression Network ( PRN )
+27	99	117	to jointly predict
+27	118	133	dense alignment
+27	138	149	reconstruct
+27	150	164	3 D face shape
+31	18	24	design
+31	27	42	UV position map
+31	45	53	which is
+31	56	64	2D image
+31	65	74	recording
+31	79	93	3D coordinates
+31	94	96	of
+31	99	126	complete facial point cloud
+31	150	157	keeping
+31	162	178	semantic meaning
+31	133	135	at
+31	182	195	each UV place
+32	8	13	train
+32	16	48	simple encoder - decoder network
+32	49	53	with
+32	56	69	weighted loss
+32	75	82	focuses
+32	83	87	more
+32	88	90	on
+32	91	112	discriminative region
+32	113	115	to
+32	116	123	regress
+32	128	143	UV position map
+32	144	148	from
+32	151	174	single 2 D facial image
+168	0	17	3D Face Alignment
+172	23	33	our result
+172	34	54	slightly outperforms
+172	59	97	state - of - the - art method 3D - FAN
+172	98	102	when
+172	103	114	calculating
+172	115	118	per
+172	119	127	distance
+172	128	132	with
+172	133	147	2D coordinates
+178	22	32	our method
+178	36	42	robust
+178	43	45	to
+178	50	56	change
+178	57	59	of
+178	60	77	pose and datasets
+189	34	45	outperforms
+189	50	62	best methods
+189	63	67	with
+189	70	82	large margin
+189	83	85	of
+189	86	100	more than 27 %
+189	101	103	on
+189	104	131	both 2 D and 3D coordinates
+184	0	8	Examples
+184	9	13	from
+184	14	36	AFLW2000 - 3 D dataset
+184	37	41	show
+184	47	62	our predictions
+184	67	80	more accurate
+184	81	85	than
+184	86	98	ground truth
+173	0	16	When considering
+173	21	32	depth value
+173	39	62	performance discrepancy
+173	63	70	between
+173	71	81	our method
+173	82	85	and
+173	86	94	3D - FAN
+173	95	104	increases
+2	0	48	Joint 3D Face Reconstruction and Dense Alignment
+12	0	23	3 D face reconstruction
+12	28	42	face alignment

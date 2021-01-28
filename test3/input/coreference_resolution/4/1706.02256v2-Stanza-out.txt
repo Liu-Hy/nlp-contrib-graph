@@ -38,7 +38,7 @@ This enables us to build a robust , knowledge - lean model for abstract anaphora
 We evaluate our model on the shell noun resolution dataset of and show that it outperforms their state - of - the - art results .
 Moreover , we report results of the model ( trained on our newly constructed dataset ) on unrestricted abstract anaphora instances from the ARRAU corpus .
 To our knowledge this provides the first state - of - the - art benchmark on this data subset .
-Our Tensor Flow 2 implementation of the model and scripts for data extraction are available at : https://github.com/amarasovic / neural-abstract-anaphora.
+Our Tensor Flow 2 implementation of the model and scripts for data extraction are available at : https://github.com/amarasovic / neural-abstract-anaphora .
 Related and prior work
 Abstract anaphora has been extensively studied in linguistics and shown to exhibit specific properties in terms of semantic antecedent types , their degrees of abstractness , and general dis - 2 course properties .
 In contrast to nominal anaphora , abstract anaphora is difficult to resolve , given that agreement and lexical match features are not applicable .
@@ -181,7 +181,7 @@ We trained our model in minibatches using Adam ( Kingma and Ba , 2015 ) with the
 We clip gradients by global norm , with a clipping value in { 1.0 , U ( 1 , 100 ) } .
 We train for 10 epochs and choose the model that performs best on the devset .
 Regularization .
-We used the l 2 - regularization with ? ? { 10 ?5 , log - U (10 ?7 , 10 ?2 ) }.
+We used the l 2 - regularization with ? ? { 10 ?5 , log - U (10 ?7 , 10 ?2 ) } .
 Dropout with a keep probability k p ? { 0.8 , U( 0.5 , 1.0 ) } was applied to the outputs of the LSTMs , both feed - forward layers and optionally to the input with k p ? U (0.8 , 1.0 ) .
 6 Results and analysis 6.1 Results on shell noun resolution dataset provides the results of the mentionranking model ( MR - LSTM ) on the ASN corpus using default HPs .
 Column 2 states which model produced the results : KZH13 refers to the best reported results in and TAG BL is the baseline described in Section 5.2 .

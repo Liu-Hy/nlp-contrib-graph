@@ -1,0 +1,7 @@
+(modifications||on||network proposed by Conneau et al.)
+(aim of reducing||has||number of parameters , storage size and latency)
+(Model||investigate||modifications)
+(Model||used||Temporal Depthwise Separable Convolution)
+(significantly fewer parameters||compared to||stateof - the - art CNNs)
+(Model||propose||Squeezed Very Deep Convolutional Neural Networks ( SVDCNN ))
+(Contribution||has||Model)

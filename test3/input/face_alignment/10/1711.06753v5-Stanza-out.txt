@@ -223,7 +223,7 @@ To perform data augmentation , we randomly rotated each training image between [
 In addition , we randomly flipped each training image with the probability of 50 % .
 For bounding box perturbation , we applied random translations to the upper-left and bottom - right corners of the face bounding box within 5 % of the bounding .
 A comparison of the CED curves on the AFLW dataset .
-We compare our method with a set of state - of - the - art approaches , including SDM , ERT , RCPR , CFSS , LBF , GRF , CCL , DAC - CSR and TR - DRN. box size .
+We compare our method with a set of state - of - the - art approaches , including SDM , ERT , RCPR , CFSS , LBF , GRF , CCL , DAC - CSR and TR - DRN . box size .
 Last , we randomly injected Gaussian blur (? = 1 ) to each training image with the probability of 50 % .
 Evaluation Metric :
 For evaluation of a facial landmark localisation algorithm , we adopted the widely used Normalised Mean Error ( NME ) .

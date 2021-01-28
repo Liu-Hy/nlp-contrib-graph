@@ -237,7 +237,6 @@ def load_paper_sentence(sent_path, label_path):  # (sent_path, label_path)
             else:
                 break
     ent_path = sep.join(['ent_labels']+label_path.split(sep)[1:-1]+['entities.txt'])
-    print(ent_path)
     with open(ent_path, 'r') as f:
         while(True):
             line = f.readline().rstrip("\n")
@@ -276,7 +275,7 @@ def load_paper_sentence(sent_path, label_path):  # (sent_path, label_path)
         if sent[i][6] is not None:
             sent[i][8] = sent[i][7] = sent[i][6]
 
-
+    return sent
 def load_data_sentence(file_path):
     # Get the data table of all the papers in file_path
     data = []

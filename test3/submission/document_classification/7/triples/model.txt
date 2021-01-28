@@ -1,0 +1,3 @@
+(each language||define||train , development and test corpus)
+(Model||For||each language)
+(Contribution||has||Model)

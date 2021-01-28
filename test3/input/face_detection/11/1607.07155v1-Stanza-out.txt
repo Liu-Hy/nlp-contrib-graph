@@ -199,7 +199,7 @@ In all ablation experiments , the training set was used for learning and the val
 Following , a model was trained for car detection and another for pedestrian / cyclist detection .
 One pedestrian model was learned on Caltech .
 The model configurations for original input size are shown in .
-The detector was implemented in C ++ within the Caffe toolbox , and source code is available at https://github.com/zhaoweicai/mscnn.
+The detector was implemented in C ++ within the Caffe toolbox , and source code is available at https://github.com/zhaoweicai/mscnn .
 All times are reported for implementation on a single CPU core ( 2.40 GHz ) of an Intel Xeon E5 - 2630 server with 64 GB of RAM .
 An NVIDIA Titan GPU was used for CNN computations .
 Proposal Evaluation

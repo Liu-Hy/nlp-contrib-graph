@@ -1,0 +1,134 @@
+255	14	79	multi-task RPN , Supervised Transformer , and feature combination
+255	85	96	bring about
+255	97	116	1 % , 1 % , and 2 %
+255	117	135	recall improvement
+256	48	54	remove
+256	55	66	anyone part
+256	72	77	cause
+256	80	91	recall drop
+264	0	27	Our non - top K suppression
+264	36	41	close
+264	42	50	to using
+264	51	65	all candidates
+264	72	80	achieved
+264	81	108	consistently better results
+264	109	113	than
+264	114	117	NMS
+264	118	123	under
+264	128	139	same number
+264	140	142	of
+264	143	153	candidates
+262	3	13	found that
+262	14	17	NMS
+262	26	33	include
+262	34	74	too much noisy low confidence candidates
+285	0	2	On
+285	7	19	FDDB dataset
+285	25	37	compare with
+285	38	56	all public methods
+287	7	36	AFW and PASCAL faces datasets
+287	42	54	compare with
+287	61	90	deformable part based methods
+287	93	97	e.g.
+287	98	113	structure model
+287	118	134	Tree Parts Model
+287	151	174	cascade - based methods
+287	177	182	e.g .
+288	0	10	Headhunter
+288	19	36	commercial system
+288	39	43	e.g.
+288	44	52	face.com
+288	55	62	Face ++
+288	67	73	Picasa
+33	17	24	propose
+33	27	67	new cascade Convolutional Neural Network
+33	76	83	trained
+33	84	98	end - to - end
+51	25	74	region - of - interest ( ROI ) convolution scheme
+51	75	82	to make
+51	87	95	run-time
+51	96	98	of
+51	103	133	Supervised Transformer Network
+51	134	139	to be
+51	140	154	more efficient
+52	3	13	first uses
+52	16	45	conventional boosting cascade
+52	46	55	to obtain
+52	58	61	set
+52	62	64	of
+52	65	85	face candidate areas
+53	32	36	into
+53	37	62	irregular binary ROI mask
+34	4	15	first stage
+34	16	18	is
+34	21	63	multi-task Region Proposal Network ( RPN )
+34	72	95	simultaneously proposes
+34	96	118	candidate face regions
+34	119	129	along with
+34	130	157	associated facial landmarks
+36	32	39	network
+36	43	56	calculated on
+36	61	80	original resolution
+36	81	99	to better leverage
+36	100	131	more discriminative information
+38	4	33	aligned candidate face region
+38	42	50	fed into
+38	55	77	second - stage network
+38	82	86	RCNN
+38	89	92	for
+38	93	113	further verification
+54	0	18	All DNN operations
+54	21	30	including
+54	31	42	convolution
+54	45	49	ReLU
+54	52	59	pooling
+54	66	79	concatenation
+54	90	106	processed inside
+54	111	119	ROI mask
+54	132	152	significantly reduce
+54	157	168	computation
+35	29	44	jointly conduct
+35	45	78	face detection and face alignment
+39	13	17	keep
+39	22	46	K face candidate regions
+39	47	51	with
+39	52	65	top responses
+39	66	68	in
+39	71	89	local neighborhood
+39	90	94	from
+39	99	102	RPN
+43	3	14	concatenate
+43	19	31	feature maps
+43	32	36	from
+43	41	71	two cascaded networks together
+43	72	79	to form
+43	83	95	architecture
+43	104	111	trained
+43	112	126	end - to - end
+45	148	163	jointly defines
+45	168	177	transform
+45	178	182	from
+45	126	147	candidate face region
+45	14	33	canonical positions
+45	34	36	of
+45	41	57	facial landmarks
+45	58	60	in
+45	65	83	aligned face image
+45	92	118	predicted facial landmarks
+45	119	121	in
+45	187	208	candidate face region
+46	0	2	In
+46	7	30	end - to - end training
+46	37	45	training
+46	46	48	of
+46	53	70	first - stage RPN
+46	71	81	to predict
+46	82	98	facial landmarks
+46	107	120	supervised by
+46	121	147	annotated facial landmarks
+46	148	155	in each
+46	156	173	true face regions
+47	9	13	call
+47	28	58	Supervised Transformer Network
+2	35	59	Efficient Face Detection
+4	62	88	real - word face detection
