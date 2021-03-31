@@ -1,1 +1,0 @@
-(Contribution||has research problem||Recurrent neural network grammars ( RNNG ))

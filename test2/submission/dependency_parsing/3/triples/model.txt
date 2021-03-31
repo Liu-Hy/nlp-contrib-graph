@@ -1,2 +1,0 @@
-(parser choice||on||biomedical event extraction)
-(Contribution||has||Model)

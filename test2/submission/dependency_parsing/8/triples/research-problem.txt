@@ -1,5 +1,0 @@
-(Contribution||has research problem||Globally Normalized Transition - Based Neural Networks)
-(Contribution||has research problem||globally normalized transition - based neural network model)
-(Contribution||has research problem||state - of - the - art part - ofspeech tagging)
-(Contribution||has research problem||dependency parsing)
-(Contribution||has research problem||sentence compression results)

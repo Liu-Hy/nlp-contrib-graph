@@ -1,2 +1,0 @@
-(Model||has||hypernym discovery)
-(Contribution||has||Model)

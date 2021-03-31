@@ -1,8 +1,0 @@
-(our model||produces||very competitive parsing results)
-(UAS score||at||94.51 %)
-(LAS score||at||92.87 %)
-(LAS score||at||92.87 %)
-(UAS and LAS scores||of||BIST graph - based model)
-(0.9 % lower parsing scores||than||state - of - the - art dependency parser)
-(state - of - the - art POS tagging accuracy||at||97.97 %)
-(Contribution||has||Experiments)

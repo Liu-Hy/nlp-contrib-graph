@@ -1,6 +1,0 @@
-(Light and Fast Face Detector ( LFFD )||for||edge devices)
-(Model||propose||Light and Fast Face Detector ( LFFD ))
-(Model||inspired by||one - stage and multi-scale object detection method)
-(pre-defined anchor boxes||manually designed for||each detection branch)
-(SSD||has||pre-defined anchor boxes)
-(Contribution||has||Model)

@@ -1,8 +1,0 @@
-(Model||for||domain adaptation)
-(masked language model ( MLM ) pre-training||using||unlabeled target language corpora)
-(Model||based on||masked language model ( MLM ) pre-training)
-(unsupervised data augmentation ( UDA ) )||where||synthetic paraphrases)
-(synthetic paraphrases||generated from||unlabeled corpus)
-(model||trained on||label consistency loss)
-(Model||has||unsupervised data augmentation ( UDA ) ))
-(Contribution||has||Model)

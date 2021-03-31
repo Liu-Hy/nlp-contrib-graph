@@ -1,3 +1,0 @@
-(Contribution||has research problem||Hypernymy Relations)
-(Contribution||has research problem||hypernym discovery)
-(Contribution||has research problem||unsupervised machine learning)

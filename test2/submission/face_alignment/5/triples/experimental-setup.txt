@@ -1,2 +1,0 @@
-(Experimental setup||trained with||4 Titan X GPUs)
-(Contribution||has||Experimental setup)

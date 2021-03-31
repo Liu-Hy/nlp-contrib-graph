@@ -1,4 +1,0 @@
-(our naive nearest neighbor classifiers||do not have||learned model)
-(Baselines||has||our naive nearest neighbor classifiers)
-(Baselines||has||Most frequent sense)
-(Contribution||has||Baselines)
