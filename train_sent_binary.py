@@ -1,4 +1,3 @@
-# search in the hyperparameter space with W&B sweep
 import logging
 
 import pandas as pd
