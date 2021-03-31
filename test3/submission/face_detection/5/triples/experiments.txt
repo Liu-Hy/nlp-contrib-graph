@@ -1,5 +1,0 @@
-(face detector and alignment||against||state - of - the - art methods)
-(state - of - the - art methods||in||Face Detection Data Set and Benchmark ( FDDB ))
-(state - of - the - art methods||in||Annotated Facial Landmarks in the Wild ( AFLW ) benchmark)
-(effectiveness||of||online hard sample mining)
-(Contribution||has||Experiments)

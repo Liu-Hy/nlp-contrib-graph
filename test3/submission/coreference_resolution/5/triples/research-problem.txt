@@ -1,2 +1,0 @@
-(Contribution||has research problem||Coreference Resolution)
-(Contribution||has research problem||coreference prediction)

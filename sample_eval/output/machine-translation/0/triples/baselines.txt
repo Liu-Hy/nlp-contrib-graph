@@ -1,3 +1,0 @@
-(Contribution||has||Baselines)
-(Baselines||built using||Moses)
-(Moses||with||default settings)

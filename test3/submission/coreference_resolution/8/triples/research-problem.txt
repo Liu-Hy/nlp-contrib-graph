@@ -1,2 +1,0 @@
-(Contribution||has research problem||End - to - end Neural Coreference Resolution)
-(Contribution||has research problem||end - to - end coreference resolution)

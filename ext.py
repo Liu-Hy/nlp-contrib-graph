@@ -480,10 +480,6 @@ data = load_data_sentence(file_path)
 df = pd.DataFrame(data)
 df.columns = ['idx', 'text', 'main_heading', 'heading',
               'topic', 'paper_idx', 'BIO', 'BIO_1', 'BIO_2', 'triple_A', 'triple_B', 'triple_C', 'triple_D', 'triple_E', 'SPEC_1', 'SPEC_2', 'SPEC_3', 'SPEC_4', 'predicates', 'subj/obj', 'mask', 'bi_labels', 'labels']
-#df1 = df[['labels', 'text', 'predicates', 'subj/obj', 'triple_A',
-          #'triple_B', 'triple_C', 'triple_D', 'triple_E', 'SPEC_1', 'SPEC_2', 'SPEC_3', 'SPEC_4', 'topic', 'paper_idx', 'idx']].rename(columns={'labels': 'info_unit'})
-# df1.to_csv('./interim/all_sent.csv', index=False)
-#pos = df1[df['bi_labels'] == 1]
 pos = df[df['bi_labels'] == 1]
 pos = pos[['labels', 'text', 'predicates', 'subj/obj', 'triple_A',
           'triple_B', 'triple_C', 'triple_D', 'triple_E', 'SPEC_1', 'SPEC_2', 'SPEC_3', 'SPEC_4', 'topic', 'paper_idx', 'idx']].rename(columns={'labels': 'info_unit'})

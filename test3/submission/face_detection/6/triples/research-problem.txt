@@ -1,2 +1,0 @@
-(Contribution||has research problem||Robust Face Detection)
-(Contribution||has research problem||Face detection)

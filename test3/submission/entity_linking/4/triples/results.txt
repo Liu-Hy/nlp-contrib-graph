@@ -1,8 +1,0 @@
-(our method||compared to||state - of - the - art methods)
-(state - of - the - art methods||name||QANTA)
-(mostly performed perfect||in terms of||predicting)
-(types||of||target answers)
-(our method||has||mostly performed perfect)
-(predicting||has||types)
-(Results||has||our method)
-(Contribution||has||Results)

@@ -1,3 +1,0 @@
-(Both photometric distortion and cropping||contribute to||more robust face detector)
-(Ablation analysis||has||Both photometric distortion and cropping)
-(Contribution||has||Ablation analysis)

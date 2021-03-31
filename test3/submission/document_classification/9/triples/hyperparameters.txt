@@ -1,8 +1,0 @@
-(300 - dimensional word2vec vectors||to initialize||embedding vectors)
-(Hyperparameters||use||300 - dimensional word2vec vectors)
-(mini-batch||with||size 50)
-(size 50||for||AG 's news)
-(size 25||for||other datasets)
-(Hyperparameters||conduct||mini-batch)
-(Adam optimization algorithm||with||1e - 3 learning rate)
-(Contribution||has||Hyperparameters)

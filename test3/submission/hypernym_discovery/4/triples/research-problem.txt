@@ -1,2 +1,0 @@
-(Contribution||has research problem||Hypernym discovery)
-(Contribution||has research problem||Hypernym Detection)

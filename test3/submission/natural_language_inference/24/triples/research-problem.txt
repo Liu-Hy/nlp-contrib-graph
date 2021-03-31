@@ -1,4 +1,0 @@
-(Contribution||has research problem||Answer Open-Domain Questions)
-(Contribution||has research problem||answering factoid questions in an open - domain setting)
-(Contribution||has research problem||open - domain question answering)
-(Contribution||has research problem||machine reading at scale ( MRS ))

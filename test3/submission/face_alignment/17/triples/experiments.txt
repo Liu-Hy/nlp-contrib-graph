@@ -1,3 +1,0 @@
-(style information||boosts||landmark detectors)
-(landmark detectors||with||large - scale training set)
-(Contribution||has||Experiments)

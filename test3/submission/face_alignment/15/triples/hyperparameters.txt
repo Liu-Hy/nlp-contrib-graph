@@ -1,7 +1,0 @@
-(updated||at||beginning)
-(beginning||of||each iteration)
-(initialization regeneration||has||training error)
-(training error||has||updated)
-(testing error||has||continues to descend)
-(Hyperparameters||with||initialization regeneration)
-(Contribution||has||Hyperparameters)

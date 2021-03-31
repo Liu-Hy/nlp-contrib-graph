@@ -1,4 +1,0 @@
-(Contribution||has research problem||Large - Scale Reading Comprehension)
-(Contribution||has research problem||Machine reading comprehension)
-(Contribution||has research problem||RC)
-(Contribution||has research problem||Reading comprehension ( RC ))

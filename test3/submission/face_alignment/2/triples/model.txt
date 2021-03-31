@@ -1,8 +1,0 @@
-(Model||introduce||Deep convolutional Cascade for Face Alignment ( DeCaFA ))
-(DeCaFA||composed of||several stages)
-(several stages||produce||landmark - wise attention maps)
-(landmark - wise attention maps||relatively to||heterogeneous annotation markups)
-(Model||has||DeCaFA)
-(attention maps||refined through||successive stages)
-(Model||has||attention maps)
-(Contribution||has||Model)

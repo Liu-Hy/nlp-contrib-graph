@@ -1,3 +1,0 @@
-(Contribution||has research problem||Fast Object Detection)
-(Contribution||has research problem||fast multi-scale object detection)
-(Contribution||has research problem||object detection)

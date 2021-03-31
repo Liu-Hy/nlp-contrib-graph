@@ -1,2 +1,0 @@
-(Contribution||has research problem||Text Understanding)
-(Contribution||has research problem||text comprehension)

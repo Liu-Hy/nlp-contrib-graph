@@ -1,4 +1,0 @@
-(face appearances||in||large poses)
-(synthesized samples||boost||performance)
-(performance||of||prior and our proposed face alignment algorithms)
-(Contribution||has||Experiments)

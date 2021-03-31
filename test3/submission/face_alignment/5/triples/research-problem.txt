@@ -1,7 +1,0 @@
-(Contribution||has research problem||Face Alignment)
-(Contribution||has research problem||facial landmark detection)
-(Contribution||has research problem||Message passing)
-(Contribution||has research problem||vital role)
-(Contribution||has research problem||heatmap quality improvement)
-(Contribution||has research problem||severe occlusions)
-(Contribution||has research problem||happen)

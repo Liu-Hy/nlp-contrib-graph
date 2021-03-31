@@ -1,4 +1,0 @@
-(text||as a kind of||raw signal)
-(raw signal||at||character level)
-(Model||treating||text)
-(Contribution||has||Model)

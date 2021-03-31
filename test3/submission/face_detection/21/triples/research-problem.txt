@@ -1,2 +1,0 @@
-(Contribution||has research problem||Efficient Face Detection)
-(Contribution||has research problem||real - word face detection)

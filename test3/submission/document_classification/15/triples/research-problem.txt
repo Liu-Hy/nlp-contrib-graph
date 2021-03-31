@@ -1,7 +1,0 @@
-(Contribution||has research problem||SEMI - SUPERVISED TEXT CLASSIFICATION)
-(Contribution||has research problem||adversarial and virtual adversarial training)
-(Contribution||has research problem||text classification)
-(Contribution||has research problem||input)
-(Contribution||has research problem||discrete)
-(Contribution||has research problem||series)
-(Contribution||has research problem||highdimensional one - hot vectors)

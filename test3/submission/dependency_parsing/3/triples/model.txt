@@ -1,5 +1,0 @@
-(impact||of||parser choice)
-(parser choice||on||biomedical event extraction)
-(impact||has||parser choice)
-(Model||study||impact)
-(Contribution||has||Model)

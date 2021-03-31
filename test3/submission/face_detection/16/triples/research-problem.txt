@@ -1,4 +1,0 @@
-(Contribution||has research problem||Face Detection)
-(Contribution||has research problem||Landmark Localization)
-(Contribution||has research problem||Pose Estimation)
-(Contribution||has research problem||Gender Recognition)

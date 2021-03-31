@@ -1,2 +1,0 @@
-(Contribution||has research problem||Face Alignment Across Large Poses)
-(Contribution||has research problem||Face alignment)

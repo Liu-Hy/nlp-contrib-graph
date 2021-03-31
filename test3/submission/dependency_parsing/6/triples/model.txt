@@ -1,5 +1,0 @@
-(network||uses||more regularization)
-(traditional MLP - based attention mechanism and affine label classifier||with||biaffine ones)
-(network||has||larger)
-(Model||modify||neural graphbased approach)
-(Contribution||has||Model)

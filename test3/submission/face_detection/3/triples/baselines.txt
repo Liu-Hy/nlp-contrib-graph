@@ -1,5 +1,0 @@
-(near frontal face detector||using||proposed NPD features)
-(near frontal face detector||using||classic cascade of regression trees ( CART ))
-(classic cascade of regression trees ( CART )||with||depth)
-(Baselines||trained||near frontal face detector)
-(Contribution||has||Baselines)

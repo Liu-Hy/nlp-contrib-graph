@@ -1,6 +1,0 @@
-(Contribution||has||Results)
-(Results||improves the performance||adding features)
-(adding features||computed by||neural networks)
-(Results||improves the performance||over the baseline performance)
-(Results||best performance was achieved||used both CSLM and the phrase scores)
-(used both CSLM and the phrase scores||from||RNN Encoder - Decoder)

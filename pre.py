@@ -77,7 +77,7 @@ def is_main_heading(line, judge_mask=False):
         return False
 
 # Determin if a sentence conforms to a specific case method.
-# Their are three case methods in all, eg: Attention Is All You Need; ATTENTION IS ALL YOU NEED; Attention is all you need.
+# There are three case methods in all, eg: Attention Is All You Need; ATTENTION IS ALL YOU NEED; Attention is all you need
 def case_check(line, flag):
     if flag == 1:
         match = re.search(r'[a-z]', line)
@@ -106,7 +106,6 @@ def case_check(line, flag):
                 if re.match(r'[A-Z]', word):
                     countW += 1
             return countW <= math.ceil(len(words)/3)
-
 
 # read the relevant files from the folder of one paper, and produce a data table for that paper.
 def load_paper_sentence(sent_path, label_path):
@@ -289,7 +288,7 @@ def load_paper_sentence(sent_path, label_path):
             print(f'JSONDecodeError in {js_position}\n', e)
             continue
 
-    # given a sequence of BIO taggs, get the list of tuples representing spans of entities
+    # given a sequence of BIO tags, get the list of tuples representing spans of entities
     def get_entity_spans(ls):
         spans = []
         for i in range(len(ls)):

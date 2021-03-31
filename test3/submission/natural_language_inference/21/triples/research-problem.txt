@@ -1,3 +1,0 @@
-(Contribution||has research problem||Reading Comprehension)
-(Contribution||has research problem||Cloze - style reading comprehension)
-(Contribution||has research problem||read and comprehend the human languages)

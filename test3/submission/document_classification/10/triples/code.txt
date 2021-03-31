@@ -1,1 +1,0 @@
-(Contribution||Code||https://github.com/wikipedia2vec/wikipedia2vec)

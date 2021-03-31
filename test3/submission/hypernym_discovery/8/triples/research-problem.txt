@@ -1,6 +1,0 @@
-(Contribution||has research problem||Detecting Hypernymy Relations)
-(Contribution||has research problem||Apollo team 's system)
-(Contribution||has research problem||hypernym discovery)
-(Contribution||has research problem||task 9)
-(Contribution||has research problem||Semeval 2018)
-(Contribution||has research problem||unsupervised machine learning)

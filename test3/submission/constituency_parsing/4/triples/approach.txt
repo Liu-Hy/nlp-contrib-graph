@@ -1,2 +1,0 @@
-(beam - based search procedure||with||augmented state space)
-(Contribution||has||Approach)

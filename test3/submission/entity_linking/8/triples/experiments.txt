@@ -1,3 +1,0 @@
-(RELIC||obtain||data)
-(data||from||2018 - 10 - 22 dump of English Wikipedia)
-(Contribution||has||Experiments)

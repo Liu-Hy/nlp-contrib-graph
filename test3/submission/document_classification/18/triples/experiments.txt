@@ -1,5 +1,0 @@
-(Choice of alphabet||makes||difference)
-(Choice of alphabet||has||difference)
-(Semantics||of||tasks)
-(tasks||may not||matter)
-(Contribution||has||Experiments)

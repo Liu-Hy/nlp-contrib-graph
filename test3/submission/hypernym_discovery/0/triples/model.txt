@@ -1,7 +1,0 @@
-(ADAPT team||focused on||two specialised domain English subtasks)
-(two specialised domain English subtasks||by developing||unsupervised system)
-(unsupervised system||builds||word embeddings)
-(word embeddings||from||supplied reference corpora)
-(Model||has||ADAPT team)
-(generalise||has||more easily)
-(Contribution||has||Model)

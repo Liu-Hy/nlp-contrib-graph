@@ -1,8 +1,0 @@
-(state of the art accuracy||on||AIDA)
-(Results||obtain||state of the art accuracy)
-(accuracy||on||AIDA - B dataset)
-(Results||analyzed||accuracy)
-(our method||performs||well)
-(well||in||these harder cases)
-(Results||shows that||our method)
-(Contribution||has||Results)

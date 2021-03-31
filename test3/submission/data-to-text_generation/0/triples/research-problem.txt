@@ -1,3 +1,0 @@
-(Contribution||has research problem||Data - to - Text Generation)
-(Contribution||has research problem||Transcribing structured data into natural language descriptions)
-(Contribution||has research problem||data - to - text)

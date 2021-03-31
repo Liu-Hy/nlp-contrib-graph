@@ -1,6 +1,0 @@
-(Our mention - ranking model||surpasses||all previous systems)
-(cluster - ranking model||improves||results further)
-(results further||across||both languages and all evaluation metrics)
-(cluster - ranking model||has||results further)
-(Results||has||cluster - ranking model)
-(Contribution||has||Results)

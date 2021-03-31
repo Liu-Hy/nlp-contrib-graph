@@ -1,3 +1,0 @@
-(Contribution||has research problem||joint POS tagging and dependency parsing)
-(Contribution||has research problem||joint part - of - speech ( POS ) tagging and dependency parsing)
-(Contribution||has research problem||Dependency parsing)

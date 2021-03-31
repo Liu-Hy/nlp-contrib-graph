@@ -1,2 +1,0 @@
-(Contribution||Code||https://github.com/nyu-mll/GLUE-baselines)
-(Contribution||Code||https://github.com/jsalt18-sentence-repl/jiant)

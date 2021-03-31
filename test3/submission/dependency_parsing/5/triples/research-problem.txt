@@ -1,3 +1,0 @@
-(Contribution||has research problem||Neural Network Transition - Based Parsing)
-(Contribution||has research problem||neural network transition - based dependency parsing)
-(Contribution||has research problem||dependency parsing)

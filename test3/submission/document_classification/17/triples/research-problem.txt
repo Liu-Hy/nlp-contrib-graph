@@ -1,6 +1,0 @@
-(Contribution||has research problem||Text Classification)
-(Contribution||has research problem||deep architectures)
-(Contribution||has research problem||hierarchical representations)
-(Contribution||has research problem||whole sentences)
-(Contribution||has research problem||jointly)
-(Contribution||has research problem||task)

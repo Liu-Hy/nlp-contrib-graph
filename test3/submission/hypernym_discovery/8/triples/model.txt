@@ -1,4 +1,0 @@
-(rule - based system||exploits||syntactic dependency paths)
-(syntactic dependency paths||generalize||Hearst - style lexical patterns)
-(Model||has||rule - based system)
-(Contribution||has||Model)

@@ -1,3 +1,0 @@
-(max pooling||for||all pooling layers)
-(Hyperparameters||use||max pooling)
-(Contribution||has||Hyperparameters)

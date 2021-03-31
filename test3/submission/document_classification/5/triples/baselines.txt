@@ -1,4 +1,0 @@
-(stacking SVM||with||three deep learning approaches)
-(three conventional document classification approaches||name||nave Bayes)
-(three deep learning approaches||name||DNN)
-(Contribution||has||Baselines)

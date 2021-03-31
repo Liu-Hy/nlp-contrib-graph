@@ -1,5 +1,0 @@
-(combination||of||two approaches)
-(combination||has||two approaches)
-(two approaches||name||unsupervised , pattern - based approach)
-(Model||developed by||CRIM team)
-(Contribution||has||Model)

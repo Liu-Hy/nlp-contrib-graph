@@ -1,2 +1,0 @@
-(Contribution||has research problem||learning word embeddings)
-(Contribution||has research problem||context dependent representations of phrases)

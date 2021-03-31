@@ -1,7 +1,0 @@
-(feature representation||enriches||representation capacity)
-(different combinations of channel types||impact||performance)
-(multi-view detection||proven to be||good match)
-(multi-scaling||has||feature representation)
-(performance||has||greatly)
-(multi-view detection||has||good match)
-(Contribution||has||Experiments)

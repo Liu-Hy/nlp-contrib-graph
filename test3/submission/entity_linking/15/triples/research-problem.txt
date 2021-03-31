@@ -1,3 +1,0 @@
-(Contribution||has research problem||Entity Linking)
-(Contribution||has research problem||entity linking ( EL ))
-(Contribution||has research problem||EL)

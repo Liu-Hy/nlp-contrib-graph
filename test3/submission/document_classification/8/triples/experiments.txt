@@ -1,3 +1,0 @@
-(batch size||set to||128)
-(batch size||has||128)
-(Contribution||has||Experiments)

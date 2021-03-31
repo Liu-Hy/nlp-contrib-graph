@@ -1,2 +1,0 @@
-(Contribution||has research problem||Face detection and alignment in unconstrained environment)
-(Contribution||has research problem||face detection and face alignment)

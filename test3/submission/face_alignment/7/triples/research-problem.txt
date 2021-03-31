@@ -1,3 +1,0 @@
-(Contribution||has research problem||Joint 3D Face Reconstruction and Dense Alignment)
-(Contribution||has research problem||3 D face reconstruction)
-(Contribution||has research problem||face alignment)
