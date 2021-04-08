@@ -1,0 +1,94 @@
+174	3	6	use
+174	7	36	3 - layer bidirectional LSTMs
+174	37	41	with
+174	42	62	h = 128 hidden units
+174	63	66	for
+174	67	103	both paragraph and question encoding
+177	7	13	Adamax
+177	14	17	for
+177	18	30	optimization
+175	3	8	apply
+175	13	37	Stanford CoreNLP toolkit
+175	38	41	for
+175	42	54	tokenization
+175	64	74	generating
+175	75	80	lemma
+175	83	98	partof - speech
+175	105	122	named entity tags
+176	9	34	all the training examples
+176	39	48	sorted by
+176	53	59	length
+176	60	62	of
+176	63	72	paragraph
+176	77	89	divided into
+176	90	101	minibatches
+176	102	104	of
+176	105	121	32 examples each
+178	0	7	Dropout
+178	8	12	with
+178	13	20	p = 0.3
+178	24	34	applied to
+178	35	50	word embeddings
+178	63	75	hidden units
+178	76	78	of
+178	79	84	LSTMs
+14	9	18	to answer
+14	19	31	any question
+14	49	57	retrieve
+14	62	83	few relevant articles
+14	84	89	among
+14	90	115	more than 5 million items
+14	127	131	scan
+14	147	158	to identify
+14	163	169	answer
+15	3	7	term
+15	23	55	machine reading at scale ( MRS )
+16	9	15	treats
+16	16	25	Wikipedia
+16	26	28	as
+16	31	41	collection
+16	42	44	of
+16	45	53	articles
+17	14	26	our approach
+17	30	37	generic
+17	42	50	could be
+17	51	59	switched
+17	60	62	to
+17	63	80	other collections
+17	81	83	of
+17	84	93	documents
+17	96	101	books
+17	112	136	daily updated newspapers
+20	0	6	Having
+20	9	32	single knowledge source
+20	33	39	forces
+20	44	49	model
+20	50	55	to be
+20	56	68	very precise
+20	75	84	searching
+20	85	88	for
+20	89	98	an answer
+2	21	49	Answer Open-Domain Questions
+9	36	91	answering factoid questions in an open - domain setting
+11	137	169	open - domain question answering
+182	0	27	Our system ( single model )
+182	32	39	achieve
+182	40	46	70.0 %
+182	47	58	exact match
+182	63	69	79.0 %
+182	70	80	F 1 scores
+182	81	83	on
+182	88	96	test set
+182	105	114	surpasses
+182	115	140	all the published results
+186	0	7	Without
+186	12	46	aligned question embedding feature
+186	99	109	our system
+186	127	134	achieve
+186	135	137	F1
+186	138	147	over 77 %
+187	27	38	remove both
+187	39	66	f aligned and f exact match
+187	73	84	performance
+187	85	90	drops
+187	91	103	dramatically

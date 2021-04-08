@@ -1,0 +1,8 @@
+(Contribution||has research problem||parsing accuracies)
+(Contribution||has research problem||Natural language parsing)
+(Contribution||has research problem||transition - based parsing)
+(Contribution||has research problem||classification component)
+(Contribution||has research problem||features)
+(Contribution||has research problem||current parser state)
+(Contribution||has research problem||next action)
+(Contribution||has research problem||state)

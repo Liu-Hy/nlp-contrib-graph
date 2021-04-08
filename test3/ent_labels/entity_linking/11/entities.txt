@@ -1,0 +1,106 @@
+180	121	133	major impact
+180	134	136	on
+180	137	148	our results
+180	23	58	additional training corpus ( WNGC )
+180	77	80	use
+180	84	88	BERT
+180	89	91	as
+180	92	108	input embeddings
+180	153	160	lead to
+180	161	167	scores
+180	168	173	above
+180	178	194	state of the art
+186	14	32	compression method
+186	33	40	through
+186	41	54	all relations
+186	55	63	seems to
+186	64	81	negatively impact
+186	86	96	results in
+186	97	107	some cases
+181	0	5	Using
+181	6	10	BERT
+181	11	21	instead of
+181	22	36	ELMo or Glo Ve
+181	37	45	improves
+181	63	68	score
+181	69	85	by approximately
+181	86	100	3 and 5 points
+181	101	103	in
+181	104	120	every experiment
+181	127	133	adding
+181	138	142	WNGC
+181	143	145	to
+181	150	163	training data
+181	164	172	improves
+181	179	201	approximately 2 points
+182	10	15	using
+182	16	25	ensembles
+182	26	30	adds
+182	31	54	roughly another 1 point
+182	55	57	to
+182	62	76	final F1 score
+132	0	3	For
+132	4	8	BERT
+132	14	18	used
+132	23	28	model
+132	29	34	named
+132	37	54	bert - largecased
+132	97	108	consists of
+132	109	116	vectors
+132	57	59	of
+132	120	134	dimension 1024
+132	137	147	trained on
+132	148	183	Book s Corpus and English Wikipedia
+132	117	119	of
+132	64	86	PyTorch implementation
+134	8	34	Transformer encoder layers
+134	100	108	6 layers
+134	109	113	with
+134	114	131	8 attention heads
+134	136	147	hidden size
+134	87	89	of
+134	151	155	2048
+134	164	171	dropout
+134	148	150	of
+134	175	178	0.1
+17	50	56	taking
+17	57	66	advantage
+17	67	69	of
+17	74	96	semantic relationships
+17	97	104	between
+17	105	111	senses
+17	112	120	included
+17	124	131	WordNet
+17	134	141	such as
+17	146	155	hypernymy
+17	162	170	hyponymy
+17	177	185	meronymy
+17	192	200	antonymy
+18	14	22	based on
+18	27	38	observation
+18	46	82	sense and its closest related senses
+18	135	140	share
+18	143	165	common idea or concept
+2	75	107	Neural Word Sense Disambiguation
+5	65	75	neural WSD
+6	42	45	WSD
+8	0	33	Word Sense Disambiguation ( WSD )
+164	29	36	observe
+164	42	53	our systems
+164	59	62	use
+164	67	95	sense vocabulary compression
+164	96	103	through
+164	104	113	hypernyms
+164	125	138	all relations
+164	208	211	use
+164	204	207	not
+164	188	195	systems
+164	139	145	obtain
+164	146	152	scores
+164	162	180	overall equivalent
+169	0	16	In comparison to
+169	21	32	other works
+169	152	177	outperform systematically
+169	182	198	state of the art
+169	199	201	on
+169	202	212	every task

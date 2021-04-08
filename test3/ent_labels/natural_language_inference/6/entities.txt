@@ -1,0 +1,100 @@
+102	0	34	Natural Language Inference Results
+105	0	38	Entailment , Contradiction and Neutral
+106	12	21	considers
+106	26	47	semantic relationship
+106	50	54	SNLI
+106	58	65	used as
+106	68	77	benchmark
+106	78	81	for
+106	82	92	evaluating
+106	97	108	performance
+106	109	111	of
+106	114	130	sentence encoder
+118	10	28	our implementation
+118	29	31	of
+118	36	44	baseline
+118	47	60	selfattention
+118	61	71	stacked on
+118	72	75	CNN
+118	76	80	with
+118	81	97	Dense Connection
+118	100	105	shows
+118	106	136	better performance ( + 0.4 % )
+118	137	141	than
+118	150	167	stacked on BiLSTM
+115	0	4	With
+115	5	14	tradeoffs
+115	15	26	in terms of
+115	27	65	parameters and learning time per epoch
+115	68	80	multiple DSA
+115	81	92	outperforms
+115	93	105	other models
+115	106	108	by
+115	111	135	large margin ( + 1.1 % )
+116	0	16	In comparison to
+116	21	29	baseline
+116	32	42	single DSA
+116	43	48	shows
+116	49	67	better performance
+116	68	72	than
+116	73	101	self - attention ( + 2.2 % )
+119	0	26	Sentiment Analysis Results
+127	0	10	Single DSA
+127	11	22	outperforms
+127	23	46	all the baseline models
+127	47	49	in
+127	50	65	SST - 2 dataset
+127	72	80	achieves
+127	81	100	comparative results
+127	101	103	in
+127	104	111	SST - 5
+127	126	134	verifies
+127	139	152	effectiveness
+127	153	155	of
+127	160	181	dynamic weight vector
+128	41	43	in
+128	74	85	SST dataset
+128	88	113	only marginal differences
+128	71	73	in
+128	121	132	performance
+128	133	140	between
+128	141	185	DSA and the previous self - attentive models
+128	190	195	found
+23	36	43	propose
+23	46	76	new self - attention mechanism
+23	77	80	for
+23	81	99	sentence embedding
+23	102	108	namely
+23	109	141	Dynamic Self - Attention ( DSA )
+24	17	23	modify
+24	24	39	dynamic routing
+24	53	65	functions as
+24	66	82	self - attention
+24	83	87	with
+24	92	113	dynamic weight vector
+25	0	3	DSA
+25	15	25	stacked on
+25	26	29	CNN
+25	30	34	with
+25	35	51	Dense Connection
+25	54	62	achieves
+25	63	97	new state - of - the - art results
+25	98	103	among
+25	108	133	sentence encoding methods
+25	134	136	in
+25	137	189	Stanford Natural Language Inference ( SNLI ) dataset
+25	190	194	with
+25	199	225	least number of parameters
+25	234	243	obtaining
+25	244	263	comparative results
+25	264	266	in
+25	267	310	Stanford Sentiment Treebank ( SST ) dataset
+26	8	19	outperforms
+26	20	33	recent models
+26	34	45	in terms of
+26	46	61	time efficiency
+26	62	68	due to
+26	73	120	simplicity and highly parallelized computations
+2	0	24	Dynamic Self - Attention
+4	27	59	Dynamic Self - Attention ( DSA )
+5	10	13	DSA

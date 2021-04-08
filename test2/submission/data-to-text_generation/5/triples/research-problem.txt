@@ -1,0 +1,6 @@
+(Contribution||has research problem||Neural Data - to - Text Generation)
+(Contribution||has research problem||Data - to - text generation)
+(Contribution||has research problem||planning)
+(Contribution||has research problem||generating)
+(Contribution||has research problem||fluent language)
+(Contribution||has research problem||information)

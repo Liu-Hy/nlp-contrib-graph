@@ -1,0 +1,92 @@
+193	0	6	During
+193	7	24	data augmentation
+193	27	45	total of 10 images
+193	50	62	created from
+193	63	79	each input image
+193	80	82	in
+193	87	99	training set
+195	0	8	Training
+195	12	27	performed using
+195	28	40	Theano 0.9.0
+195	45	56	Lasagne 0.2
+198	4	25	Python implementation
+198	26	33	runs at
+198	34	40	73 fps
+198	41	44	for
+198	45	51	images
+198	52	64	processed in
+198	65	73	parallel
+198	81	87	45 fps
+198	88	91	for
+198	92	98	images
+198	99	108	processed
+198	109	121	sequentially
+198	122	124	on
+198	127	147	GeForce GTX 1070 GPU
+196	0	3	For
+196	4	16	optimization
+196	20	23	use
+196	24	52	Adam stochastic optimization
+196	53	57	with
+196	61	78	initial step size
+196	79	81	of
+196	82	87	0.001
+196	92	107	mini batch size
+196	108	110	of
+196	111	113	64
+197	4	14	validation
+197	18	21	use
+197	24	37	random subset
+197	38	40	of
+197	41	51	100 images
+197	52	56	from
+197	61	73	training set
+19	51	60	proposing
+19	63	90	novel face alignment method
+19	100	103	dub
+19	104	134	Deep Alignment Network ( DAN )
+20	6	14	based on
+20	17	42	multistage neural network
+20	43	48	where
+20	49	59	each stage
+20	60	67	refines
+20	72	90	landmark positions
+20	91	103	estimated at
+20	108	122	previous stage
+21	0	9	The input
+21	10	12	to
+21	13	23	each stage
+21	24	26	of
+21	27	40	our algorithm
+21	73	83	face image
+21	84	97	normalized to
+21	100	114	canonical pose
+21	122	127	image
+21	128	140	learned from
+21	145	156	dense layer
+21	157	159	of
+21	164	178	previous stage
+22	3	14	make use of
+22	19	36	entire face image
+22	37	43	during
+22	48	55	process
+22	56	58	of
+22	59	73	face alignment
+22	79	100	additionally input at
+22	101	111	each stage
+22	114	130	landmark heatmap
+2	60	81	robust face alignment
+12	12	26	face alignment
+210	2	24	failure rate reduction
+210	25	27	of
+210	28	32	60 %
+210	33	35	on
+210	40	62	300 W private test set
+211	28	32	72 %
+211	33	35	on
+211	40	60	300W public test set
+211	25	27	of
+212	2	17	9 % improvement
+212	25	35	mean error
+212	36	38	on
+212	43	61	challenging subset

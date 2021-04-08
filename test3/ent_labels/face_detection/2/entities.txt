@@ -1,0 +1,114 @@
+175	4	17	loss function
+175	18	21	for
+175	22	25	SRN
+175	26	28	is
+175	38	41	sum
+175	42	44	of
+175	49	74	STC loss and the STR loss
+176	4	20	backbone network
+176	24	38	initialized by
+176	43	94	pretrained ResNet - 50 model and all the parameters
+176	95	97	in
+176	102	132	newly added convolution layers
+176	137	151	initialized by
+176	156	173	" xavier " method
+177	3	14	fine - tune
+177	19	28	SRN model
+177	29	34	using
+177	35	38	SGD
+177	39	43	with
+177	44	56	0.9 momentum
+177	59	78	0.0001 weight decay
+177	85	98	batch size 32
+178	3	6	set
+178	11	24	learning rate
+178	25	27	to
+178	28	33	10 ?2
+178	34	37	for
+178	42	58	first 100 epochs
+178	65	70	decay
+178	74	76	to
+178	77	94	10 ? 3 and 10 ? 4
+178	95	98	for
+178	99	123	another 20 and 10 epochs
+179	3	12	implement
+179	13	16	SRN
+179	17	22	using
+179	27	45	Py - Torch library
+43	19	30	investigate
+43	35	42	effects
+43	43	45	of
+43	46	86	two - step classification and regression
+43	87	89	on
+43	90	106	different levels
+43	107	109	of
+43	110	126	detection layers
+43	131	138	propose
+43	141	171	novel face detection framework
+43	174	179	named
+43	180	216	Selective Refinement Network ( SRN )
+43	225	244	selectively applies
+43	245	285	two - step classification and regression
+43	286	288	to
+43	289	304	specific levels
+43	305	307	of
+43	308	324	detection layers
+44	4	21	network structure
+44	22	24	of
+44	25	28	SRN
+44	49	60	consists of
+44	61	76	two key modules
+44	79	87	named as
+44	92	142	Selective Two - step Classification ( STC ) module
+44	151	197	Selective Two - step Regression ( STR ) module
+45	19	22	STC
+45	26	36	applied to
+45	37	47	filter out
+45	48	76	most simple negative samples
+45	102	106	from
+45	111	141	low levels of detection layers
+45	150	158	contains
+45	159	173	88.9 % samples
+48	17	23	design
+48	26	61	Receptive Field Enhancement ( RFE )
+48	62	72	to provide
+48	73	102	more diverse receptive fields
+48	103	120	to better capture
+48	125	145	extreme - pose faces
+2	33	64	High Performance Face Detection
+4	17	31	face detection
+213	0	11	AFW Dataset
+217	14	17	SRN
+217	18	29	outperforms
+217	36	66	state - of - the - art methods
+217	67	71	with
+217	76	100	top AP score ( 99.87 % )
+218	0	19	PASCAL Face Dataset
+221	0	3	SRN
+221	4	12	achieves
+221	17	47	state - of - the - art results
+221	48	60	by improving
+221	61	76	4.99 % AP score
+221	77	88	compared to
+221	93	115	second best method STN
+222	0	12	FDDB Dataset
+225	20	27	our SRN
+225	28	32	sets
+225	35	73	new state - of - the - art performance
+225	76	80	i.e.
+225	83	108	98.8 % true positive rate
+225	109	113	when
+225	118	143	number of false positives
+225	147	155	equal to
+225	156	160	1000
+227	0	18	WIDER FACE Dataset
+230	17	21	find
+230	27	30	SRN
+230	31	39	performs
+230	40	50	favourably
+230	51	58	against
+230	63	85	state - of - the - art
+230	86	94	based on
+230	99	123	average precision ( AP )
+230	124	130	across
+230	135	148	three subsets

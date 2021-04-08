@@ -1,0 +1,8 @@
+(hierarchical classification||call||Hierarchical Deep Learning for Text classification ( HDLTex ))
+(Model||perform||hierarchical classification)
+(hierarchical document classification||call||Hierarchical Deep Learning for Text classification ( HDLTex ))
+(HDLTex||combines||deep learning architectures)
+(deep learning architectures||to allow||over all and specialized learning)
+(HDLTex||name||deep learning architectures)
+(Model||has||HDLTex)
+(Contribution||has||Model)

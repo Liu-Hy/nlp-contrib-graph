@@ -1,0 +1,274 @@
+title
+Natural Language Comprehension with the EpiReader
+abstract
+We present the EpiReader , a novel model for machine comprehension of text .
+Machine comprehension of unstructured , real - world text is a major research goal for natural language processing .
+Current tests of machine comprehension pose questions whose answers can be inferred from some supporting text , and evaluate a model 's response to the questions .
+The EpiReader is an end - to - end neural model comprising two components : the first component proposes a small set of candidate answers after comparing a question to its supporting text , and the second component formulates hypotheses using the proposed candidates and the question , then reranks the hypotheses based on their estimated concordance with the supporting text .
+We present experiments demonstrating that the EpiReader sets anew state - of - the - art on the CNN and Children 's Book Test machine comprehension benchmarks , outperforming previous neural models by a significant margin .
+Introduction
+When humans reason about the world , we tend to formulate a variety of hypotheses and counterfactuals , then test them in turn by physical or thought experiments .
+The philosopher Epicurus first formalized this idea in his Principle of Multiple Explanations : if several theories are consistent with the observed data , retain them all until more data is observed .
+In this paper , we argue that the same principle can be applied to machine comprehension of natural language .
+We propose a deep , end - to - end , neural comprehension model that we call the EpiReader .
+Comprehension of natural language by machines , at a near- human level , is a prerequisite for an extremely broad class of useful applications of artificial intelligence .
+Indeed , most human knowledge is collected in the natural language of text .
+Machine comprehension ( MC ) has therefore garnered significant attention from the machine learning research community .
+Machine comprehension is typically evaluated by posing a set of questions based on a supporting text passage , then scoring a system 's answers to those questions .
+We all took similar tests in school .
+Such tests are objectively gradable and may assess a range of abilities , from basic understanding to causal reasoning to inference .
+In the past year , two large - scale MC datasets have been released : the CNN / Daily Mail corpus , consisting of news articles from those outlets , and the Children 's Book Test ( CBT ) , consisting of short excerpts from books available through Project Gutenberg .
+The size of these datasets ( on the order of 10 5 distinct questions ) makes them amenable to data - intensive deep learning techniques .
+Both corpora use Clozestyle questions , which are formulated by replacing a word or phrase in a given sentence with a placeholder token .
+The task is then to find the answer that " fills in the blank " .
+In tandem with these corpora , a host of neural machine comprehension models has been developed .
+We compare the EpiReader to these earlier models through training and evaluation on the CNN and CBT datasets .
+The EpiReader factors into two components .
+The first component extracts a small set of potential answers based on a shallow comparison of the question with its supporting text ; we call this the Extractor .
+The second component reranks the proposed answers based on deeper semantic comparisons with the text ; we call this the Reasoner .
+We can summarize this process as Extract ?
+Hypothesize ?
+Test 2 .
+The semantic comparisons implemented by the Reasoner are based on the concept of recognizing textual entailment ( RTE ) , also known as natural language inference .
+This process is computationally demanding .
+Thus , the Extractor serves the important function of filtering a large set of potential answers down to a small , tractable set of likely candidates for more thorough testing .
+The Extractor follows the form of a pointer network , and uses a differentiable attention mechanism to indicate words in the text that potentially answer the question .
+This approach was used ( on it s own ) for question answering with the Attention Sum Reader .
+The Extractor outputs a small set of answer candidates along with their estimated probabilities of correctness .
+The Reasoner forms hypotheses by inserting the candidate answers into the question , then estimates the concordance of each hypothesis with each sentence in the supporting text .
+We use these estimates as a measure of the evidence for a hypothesis , and aggregate evidence overall sentences .
+In the end , we combine the Reasoner 's evidence with the Extractor 's probability estimates to produce a final ranking of the answer candidates .
+This paper is organized as follows .
+In Section 2 we formally define the problem to be solved and give some background on the datasets used in our tests .
+In Section 3 we describe the EpiReader , focusing on its two components and how they combine .
+Section 4 discusses related work , and Section 5 details our experimental results and analysis .
+We conclude in Section 6 . The CNN and Daily Mail datasets were released together and have the same form .
+The Daily Mail dataset is significantly larger , and our tests with this data are still in progress .
+The Extractor performs extraction , while the Reasoner both hypothesizes and tests .
+Problem definition , notation , datasets
+The task of the EpiReader is to answer a Cloze - style question by reading and comprehending a supporting passage of text .
+The training and evaluation data consist of tuples ( Q , T , a * , A ) , where Q is the question ( a sequence of words {q 1 , ...q | Q | } ) , T is the text ( a sequence of words {t 1 , ... , t | T | } ) , A is a set of possible answers {a 1 , ... , a | A | } , and a * ?
+A is the correct answer .
+All words come from a vocabulary V , and A ? T .
+In each question , there is a placeholder token indicating the missing word to be filled in .
+Datasets
+CNN
+This corpus is built using articles scraped from the CNN website .
+The articles themselves form the text passages , and questions are generated synthetically from short summary statements that accompany each article .
+These summary points are ( presumably ) written by human authors .
+Each question is created by replacing a named entity in a summary point with a placeholder token .
+All named entities in the articles and questions are replaced with anonymized tokens that are shuffled for each ( Q , T ) pair .
+This forces the model to rely only on the text , rather than learning world knowledge about the entities during training .
+The CNN corpus ( henceforth CNN ) was presented by .
+Children 's Book Test
+This corpus is constructed similarly to CNN , but from children 's books available through Project Gutenberg .
+Rather than articles , the text passages come from book excerpts of 20 sentences .
+Since no summaries are provided , a question is generated by replacing a single word in the next ( i.e. 21st ) sentence .
+The corpus distinguishes questions based on the type of word that is replaced : named entity , common noun , verb , or preposition .
+Like , we focus only on the first two classes since showed that standard LSTM language models already achieve humanlevel performance on the latter two .
+Unlike in the CNN corpora , named entities are not anonymized and shuffled in the Children 's Book Test ( CBT ) .
+The CBT was presented by .
+Due to the construction of questions in each corpus , CNN and CBT assess different aspects of machine comprehension .
+The summary points of CNN are condensed paraphrasings of information from the text , so determining the correct answer relies more on recognizing textual entailment .
+On the other hand , a CBT question , generated from a sentence which continues the text passage ( rather than summarizes it ) , is more about making a prediction based on context .
+The EpiReader
+Overview and intuition
+The EpiReader explicitly leverages the observation that the answer to a question is often a word or phrase from the related text passage .
+This condition holds for the CNN and CBT datasets .
+EpiReader 's first module , the Extractor , can thus select a small set of candidate answers by pointing to their locations in the supporting passage .
+This mechanism is detailed in Section 3.2 , and was used previously by the Attention Sum Reader .
+Pointing to candidate answers removes the need to apply a softmax over the entire vocabulary as in , which is computationally more costly and uses less - direct information about the context of a predicted answer in the supporting text .
+EpiReader 's second module , the Reasoner , begins by formulating hypotheses using the extracted answer candidates .
+It generates each hypothesis by replacing the placeholder token in the question with an answer candidate .
+Cloze - style questions are ideally - suited to this process , because inserting the correct answer at the placeholder location produces a well - formed , grammatical statement .
+Thus , the correct hypothesis will " make sense " to a language model .
+The Reasoner then tests each hypothesis individually .
+It compares a hypothesis to the text , split into sentences , to measure textual entailment , and then aggregates entailment overall sentences .
+This computation uses a pair of convolutional encoder networks followed by a recurrent neural network .
+The convolutional encoders generate abstract representations of the hypothesis and each text sentence ; the recurrent network estimates and aggregates entailment .
+This is described formally in Section 3.3 .
+The end - toend EpiReader model , combining the Extractor and Reasoner modules , is depicted in .
+Throughout our model , words will be represented with trainable embeddings .
+We represent these embeddings using a matrix W ? R D|V | , where Dis the embedding dimension and | V | is the vocabulary size .
+The Extractor
+The Extractor is a Pointer Network .
+It uses a pair of bidirectional recurrent neural networks , f ( ? T , T ) and g( ?
+Q , Q ) , to encode the text passage and the question .
+?
+T represents the parameters of the text encoder , and T ?
+R DN is a matrix representation of the text ( comprising N words ) , whose columns are individual word embeddings ti .
+Likewise , ?
+Q represents the parameters of the question encoder , and Q ?
+R DN
+Q is a matrix representation of the question ( comprising N Q words ) , whose columns are individual word embeddings q j .
+We use a recurrent neural network with gated recurrent units ( GRU ) to scan over the columns ( i.e. word embeddings ) of the input matrix .
+We selected the GRU because it is computationally simpler than Long Short - Term Memory ( Hochreiter and Schmidhuber , 1997 ) , while still avoiding the problem of vanishing / exploding gradients often encountered when training recurrent networks .
+The GRU 's hidden state gives a representation of the ith word conditioned on preceding words .
+To include context from proceeding words , we run a second GRU over T in the reverse direction .
+We refer to the combination as a biGRU .
+At each step the biGRU outputs two d-dimensional encoding vectors , one for the forward direction and one for the backward direction .
+We concatenate these to yield a vector f ( t i ) ?
+R 2 d .
+The question biGRU is similar , but we get a single - vector representation of the question by concatenating the final forward state with the initial backward state , which we denote g ( Q ) ?
+R 2 d .
+As in Kadlec et al. , we model the probability that the ith word in text T answers question Q using
+which takes the inner product of the text and question representations followed by a softmax .
+In many cases unique words repeat in a text .
+Therefore , we compute the total probability that word w is the correct answer using a sum : This probability is evaluated for each unique word in T .
+Finally , the Extractor outputs the set {p 1 , ... , p K } of the K highest word probabilities from 2 , along with the corresponding set of K most probable answer words { 1 , ... , K }.
+The Reasoner
+The indicial selection involved in gathering { 1 , ... , K } is not a smooth operation .
+To construct an end - to - end differentiable model , we bypass this by propagating the probability estimates of the Extractor directly through the Reasoner .
+The Reasoner begins by inserting the answer candidates , which are single words or phrases , into the question sequence Q at the placeholder location .
+This forms K hypotheses { H 1 , ... , H K }.
+At this point , we consider each hypothesis to have probability p ( H k ) ? pk , as estimated by the Extractor .
+The Reasoner updates and refines this estimate .
+The hypotheses represent new information in some sense - they are statements we have constructed , albeit from words already present in the question and text passage .
+The Reasoner estimates entailment between the statements H k and the passage T .
+We denote these estimates using e k = F ( H k , T ) , with F to be defined .
+We start by reorganizing T into a sequence of N s sentences : T = {t 1 , . . . , t N } ? {S 1 , . . . , S Ns } , where
+Si is a sequence of words .
+For each hypothesis and each sentence of the text , Reasoner input consists of two matrices :
+Si ?
+R D|S i | , whose columns are the embedding vectors for each word of sentence Si , and H k ?
+R D|H k | , whose columns are the embedding vectors for each word in the hypothesis H k .
+The embedding vectors themselves come from matrix W , as before .
+These matrices feed into a convolutional architecture based on that of Severyn and Moschitti ( 2016 ) .
+The architecture first augments Si with matrix M ? R 2|S i | .
+The first row of M contains the inner product of each word embedding in the sentence with the candidate answer embedding , and the second row contains the maximum inner product of each sentence word embedding with any word embedding in the question .
+These word - matching features were inspired by similar approaches in and , where they were shown to improve entailment estimates .
+The augmented
+Si is then convolved with a bank of filters F S ?
+R ( D+2 ) m , while H k is convolved with filters F H ?
+R Dm , where m is the convolutional filter width .
+We add a bias term and apply a nonlinearity ( we use a ReLU ) following the convolution .
+Maxpooling over the sequences then yields two vectors : the representation of the text sentence , r Si ?
+RN F , and the representation of the hypothesis , r H k ?
+RN F , where NF is the number of filters .
+We then compute a scalar similarity score between these vector representations using the bilinear form
+where R ?
+RN F N F is a matrix of trainable parameters .
+We then concatenate the similarity score with the sentence and hypothesis representations to get a vector ,
+There are more powerful models of textual entailment that could have been used in place of this convolutional architecture .
+We adopted the approach of Severyn and Moschitti ( 2016 ) for computational efficiency .
+The resulting sequence of N s vectors feeds into yet another GRU for synthesis , of hidden dimension d S .
+Intuitively , it is often the case that evidence for a particular hypothesis is distributed over several sentences .
+For instance , if we hypothesize that the football is in the park , perhaps it is because one sentence tells us that Sam picked up the football and a later one tells us that Sam ran to the park .
+3
+The Reasoner synthesizes distributed information by running a GRU network over x ik , where i indexes sentences and represents the step dimension .
+The final hidden state of the GRU is fed through a fully - connected layer , yielding a single scalar y k .
+This value represents the collected evidence for H k based on the text .
+In practice , the Reasoner processes all K hypotheses in parallel and the estimated entailment of each is normalized by a softmax , e k ? exp ( y k ) .
+The reranking step performed by the Reasoner helps mitigate a significant weakness of most existing attention mechanisms .
+Specifically , these mechanisms blend representations of all possible outcomes together using " soft " attention , rather than considering them discretely using " hard " attention .
+This is like exploring amaze by generating an average path out of the several before you , and then attempting to follow it by walking through a wall .
+Examining possibilities individually , as in the Reasoner module , is more natural .
+Combining components
+Finally , we combine the evidence from the Reasoner with the probability from the Extractor .
+We compute the output probability of each hypothesis , ? k , according to the product
+whereby the evidence of the Reasoner can be interpreted as a correction to the Extractor probabilities , applied as an additive shift in log -space .
+We experimented with other combinations of the Extractor and Reasoner , but we found the multiplicative approach to yield the best performance .
+After combining results from the Extractor and Reasoner to get the probabilities ?
+k described in Eq. 4 , we optimize the parameters of the full EpiReader to minimize a cost comprising two terms , L E and L R .
+The first term is a standard negative loglikelihood objective , which encourages the Extractor to rate the correct answer above other answers .
+This is the same loss term used in .
+This loss is given by :
+where P ( a * | T , Q ) is as defined in Eq. 2 , and a * denotes the true answer .
+The second term is a marginbased loss on the end - to - end probabilities ? k .
+We define ? * as the probability ?
+k corresponding to the true answer word a * .
+This term is given by :
+where ?
+is a margin hyperparameter , { 1 , ... , K } is the set of K answers proposed by the Extractor , and [ x ] + indicates truncating x to be non-negative .
+Intuitively , this loss says that we want the end - to - end probability ?
+* for the correct answer to beat least ?
+larger than the probability ?
+i for any other answer proposed by the Extractor .
+During training , the correct answer is occasionally missed by the Extractor , especially in early epochs .
+We counter this issue by forcing the correct answer into the top K set while training .
+When evaluating the model on validation and test examples we rely fully on the top K answers proposed by the Extractor .
+To get the final loss term L ER , minus 2 regularization terms on the model parameters , we take a weighted combination of L E and L R :
+where ?
+is a hyperparameter for weighting the relative contribution of the Extractor and Reasoner losses .
+In practice , we found that ?
+should be fairly large ( e.g. 10 < ? < 100 ) .
+Empirically , we observed that the output probabilities from the Extractor often peak and saturate the first softmax ; hence , the Extractor term can come to dominate the Reasoner term without the weight ?
+( we discuss the Extractor 's propensity to overfit in Section 5 ) .
+Related Work
+The Impatient and Attentive Reader models were proposed by .
+The Attentive Reader applies bidirectional recurrent encoders to the question and supporting text .
+It then uses the attention mechanism described in to compute a fixed - length representation of the text based on a weighted sum of the text encoder 's output , guided by comparing the question representation to each location in the text .
+Finally , a joint representation of the question and supporting text is formed by passing their separate representations through a feedforward MLP and an answer is selected by comparing the MLP output to a representation of each possible answer .
+The Impatient Reader operates similarly , but computes attention over the text after processing each consecutive word of the question .
+The two models achieved similar performance on the CNN and Daily Mail datasets .
+Memory Networks were first proposed by and later applied to machine comprehension by .
+This model builds fixed - length representations of the question and of windows of text surrounding each candidate answer , then uses a weighted - sum attention mechanism to combine the window representations .
+As in the previous Readers , the combined window representation is then compared with each possible answer to form a prediction about the best answer .
+What distinguishes Memory Networks is how they construct the question and text window representations .
+Rather than a recurrent network , they use a specially - designed , trainable transformation of the word embeddings .
+Most of the details for the very recent AS Reader are provided in the description of our Extractor module in Section 3.2 , so we do not summarize it further here .
+This model set the previous state - of - the - art on the CBT dataset .
+During the write - up of this paper , another very recent model came to our attention .
+propose using a bilinear term instead of a tanh layer to compute the attention between question and passage words , and also uses the attended word encodings for direct , pointer - style prediction as in .
+This model set the previous state - of - theart on the CNN dataset .
+However , this model used embedding vectors pretrained on a large external corpus .
+The EpiReader borrows ideas from other models as well .
+The Reasoner 's convolutional architecture is based on Severyn and Moschitti ( 2016 ) and .
+Our use of word - level match - ing was inspired by the Parallel - Hierarchical model of and the natural language inference model of .
+Finally , the idea of formulating and testing hypotheses for question - answering was used to great effect in IBM 's Dee pQA system for Jeopardy ! , although that was a more traditional information retrieval pipeline rather than an end - to - end neural model .
+Evaluation
+Implementation and training details
+To train our model we used stochastic gradient descent with the ADAM optimizer ( Kingma and Ba , 2014 ) , with an initial learning rate of 0.001 .
+The word embeddings were initialized randomly , drawing from the uniform distribution over .
+We used batches of 32 examples , and early stopping with a patience of 2 epochs .
+Our model was implement in Theano using the Keras framework .
+The results presented below for the EpiReader were obtained by searching over a small grid of hyperparameter settings .
+We selected the model that , on each dataset , maximized accuracy on the validation set , then evaluated it on the test set .
+We record the best settings for each dataset in .
+As has been done previously , we train separate models on CBT 's named entity ( CBT - NE ) and common noun ( CBT - CN ) splits .
+All our models used 2 - regularization at 0.001 , ? = 50 , and ? = 0.04 .
+We did not use dropout but plan to investigate its effect in the future .
+and also present results for ensembles of their models .
+Time did not permit us to generate an ensemble of EpiReaders on the CNN dataset so we omit those measures ; however , EpiReader ensembles ( of seven models ) demonstrated improved performance on the CBT dataset .
+Results
+In , we compare the performance of the EpiReader against that of several baselines , on the validation and test sets of the CBT and CNN corpora .
+We measure EpiReader performance at the output of both the Extractor and the Reasoner .
+The EpiReader achieves state - of - the - art performance across the board for both datasets .
+On CNN , we score 2.2 % higher on test than the best previous model of .
+Interestingly , an analysis of the CNN dataset by suggests that approximately 25 % of the test examples contain coreference errors or questions which are " ambiguous / hard " even for a human analyst .
+If this estimate is accurate , then the EpiReader , achieving an absolute test accuracy of 74.0 % , is operating close to expected human performance .
+On the other hand , ambiguity is unlikely to be distributed evenly over entities , so a good model should be able to perform at better - thanchance levels even on questions where the correct answer is uncertain .
+If , on the 25 % of " noisy " questions , the model can shift it s hit rate from , e.g. , 1/10 to 1 / 3 , then there is still a fair amount of performance to gain .
+On CBT - CN our single model scores 4.0 % higher than the previous best of the AS Reader .
+The improvement on CBT - NE is more modest at 1.1 % .
+Looking more closely at our CBT - NE results , we found that the validation and test accuracies had relatively high variance even in late epochs of training .
+We discovered that many of the validation and test questions were asked about the same named entity , which may explain this issue .
+Analysis
+Aside from achieving state - of - the - art results at its final output , the EpiReader framework gives a boost to its Extractor component through the joint training process .
+In , we provide accuracy scores evaluated at the output of the Extractor .
+These are all higher than the analogous scores reported for the AS Reader , which we verified ourselves to within negligible difference .
+Based on our own work with that We verified that our Extractor achieved a similar rate , and of course this is vital for performance of the full system , since the Reasoner can not recover when the correct answer is not among its inputs .
+Our results demonstrate that the Reasoner often corrects erroneous answers from the Extractor .
+gives an example of this correction .
+In the text passage , from CBT - NE , Mr. Blacksnake is pursuing Mr. Toad , presumably to eat him .
+The dialogue in the question sentence refers to both : Mr. Toad is its subject , referred to by the pronoun " he " , and Mr. Blacksnake is its object .
+In the preceding sentences , it is clear ( to a human ) that Jimmy is worried about Mr. Toad and his potential encounter with Mr. Blacksnake .
+The Extractor , however , points most strongly to " Toad " , possibly because he has been referred to most recently .
+The Reasoner corrects this error and selects " Blacksnake " as the answer .
+This relies on a deeper understanding of the text .
+The named entity can , in this case , be inferred through an alternation of the entities most recently referred to .
+This kind alternation is typical of dialogues , when two actors Mr. Blacksnake grinned and started after him , not very fast because he knew that he would n't have to run very fast to catch old Mr. Toad , and he thought the exercise would do him good . " Still , the green meadows would n't be quite the same without old Mr. Toad .
+I should miss him if anything happened to him .
+I suppose it would be partly my fault , too , for if I had n't pulled over that piece of bark , he probably would have stayed there the rest of the day and been safe . "
+QUESTION : " Maybe he wo n't meet Mr. XXXXX , " said a little voice inside of Jimmy .
+EXTRACTOR : Toad REASONER : Blacksnake 1 .
+18 .
+21 .
+19 .
+20 . interact in turns .
+The Reasoner can capture this behavior because it examines sentences in sequence .
+Conclusion
+In this article we presented the novel EpiReader framework for machine comprehension , and evaluated it on two large , complex datasets : CNN and CBT .
+Our model achieves state - of - the - art results on these corpora , outperforming all previous approaches .
+In future work , we plan to augment our framework with a more powerful model for natural language inference , and explore the effect of pretraining such a model specifically on an inference task .
+We also plan to try simplifying the model by reusing the Extractor 's biGRU encodings in the Reasoner .

@@ -1,0 +1,3 @@
+(multiple attributes||name||occlusion)
+(Model||annotate||multiple attributes)
+(Contribution||has||Model)

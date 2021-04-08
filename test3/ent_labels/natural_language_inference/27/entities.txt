@@ -1,0 +1,71 @@
+19	19	26	propose
+19	27	32	SDNet
+19	37	85	contextual attention - based deep neural network
+19	86	89	for
+19	94	98	task
+19	99	101	of
+19	102	135	conversational question answering
+21	13	18	apply
+21	19	60	both inter-attention and self - attention
+21	61	63	on
+21	64	84	passage and question
+21	85	94	to obtain
+21	97	125	more effective understanding
+21	126	128	of
+21	133	161	passage and dialogue history
+22	11	16	SDNet
+22	17	26	leverages
+22	31	50	latest breakthrough
+22	51	53	in
+22	54	57	NLP
+22	60	85	BERT contextual embedding
+23	111	119	employed
+23	122	134	weighted sum
+23	33	35	of
+23	138	156	BERT layer outputs
+23	159	163	with
+23	164	186	locked BERT parameters
+24	13	20	prepend
+24	21	36	previous rounds
+24	37	39	of
+24	40	61	questions and answers
+24	62	64	to
+24	69	85	current question
+24	86	100	to incorporate
+24	101	123	contextual information
+2	58	94	CONVERSATIONAL QUESTION AN - SWERING
+4	0	41	Conversational question answering ( CQA )
+5	41	78	machine reading comprehension ( MRC )
+5	87	90	CQA
+132	10	15	SDNet
+132	16	26	overpasses
+132	27	54	all but one baseline models
+132	55	60	after
+132	65	77	second epoch
+132	84	92	achieves
+132	93	123	state - of - the - art results
+132	124	134	only after
+132	135	143	8 epochs
+128	26	54	significantly better results
+128	55	59	than
+128	60	75	baseline models
+129	16	34	single SDNet model
+129	35	43	improves
+129	44	55	overall F 1
+129	56	58	by
+129	59	64	1.6 %
+129	67	80	compared with
+129	81	112	previous state - of - art model
+129	113	115	on
+129	116	120	CoQA
+129	123	130	Flow QA
+130	0	20	Ensemble SDNet model
+130	21	37	further improves
+130	38	45	overall
+130	46	55	F 1 score
+130	56	58	by
+130	59	64	2.7 %
+130	96	103	achieve
+130	104	123	over 80 % F 1 score
+130	124	126	on
+130	127	158	in - domain datasets ( 80.7 % )

@@ -1,0 +1,55 @@
+2	0	41	Pragmatically Informative Text Generation
+10	39	43	cast
+10	44	82	language generation and interpretation
+10	83	85	as
+13	9	18	builds on
+13	29	72	learned Rational Speech Acts ( RSA ) models
+13	84	101	generated strings
+13	106	114	selected
+13	131	136	behav
+13	188	192	with
+13	195	221	5 out of 5 customer rating
+13	225	236	Fitzbillies
+26	4	26	canonical presentation
+26	27	29	of
+26	34	47	RSA framework
+26	80	91	grounded in
+26	92	112	reference resolution
+26	154	163	referents
+26	183	194	distractors
+26	240	251	descriptors
+26	255	264	referents
+89	0	25	Abstractive Summarization
+94	4	21	pragmatic methods
+94	22	28	obtain
+94	29	41	improvements
+94	42	44	of
+94	45	52	0.2-0.5
+94	53	55	in
+94	56	68	ROUGE scores
+94	73	87	0.2-1.8 METEOR
+94	88	92	over
+94	97	111	base S 0 model
+94	114	118	with
+94	123	155	distractor - based approach SD 1
+94	156	169	outperforming
+94	174	207	reconstructorbased approach S R 1
+95	0	4	SD 1
+95	5	7	is
+95	8	14	strong
+95	15	21	across
+95	22	33	all metrics
+95	36	45	obtaining
+95	46	53	results
+95	54	68	competitive to
+95	73	106	best previous abstractive systems
+95	115	130	Coverage ratios
+95	134	148	attribute type
+95	161	164	for
+95	169	182	base model S0
+95	189	192	for
+95	197	218	pragmatic system SD 1
+95	219	236	when constructing
+95	241	251	distractor
+95	252	262	by masking
+95	267	286	specified attribute

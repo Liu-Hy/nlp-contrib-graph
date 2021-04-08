@@ -1,0 +1,59 @@
+163	19	25	notice
+163	33	43	importance
+163	44	46	of
+163	47	63	skip connections
+163	64	71	between
+163	72	82	GCN layers
+164	0	30	Residual and dense connections
+164	31	38	lead to
+164	39	54	similar results
+165	0	17	Dense connections
+165	39	46	produce
+165	47	53	models
+165	54	60	bigger
+165	67	89	slightly less accurate
+165	92	96	than
+165	97	117	residual connections
+2	38	72	Structured Data to Text Generation
+4	22	73	neural text generation from graph - structured data
+22	29	69	graph structured data to text generation
+132	0	11	WebNLG task
+134	18	27	the model
+134	28	32	with
+134	33	44	GCN encoder
+134	45	56	outperforms
+134	59	74	strong baseline
+134	80	87	employs
+134	92	104	LSTM encoder
+134	107	111	with
+134	112	128	.009 BLEU points
+135	4	13	GCN model
+135	22	33	more stable
+135	34	38	than
+135	43	51	baseline
+135	52	56	with
+135	59	77	standard deviation
+135	78	80	of
+135	81	94	.004 vs . 010
+137	4	16	GCN EC model
+137	17	28	outperforms
+137	29	38	PKUWRITER
+137	115	117	by
+137	118	134	.047 BLEU points
+137	141	150	MELBOURNE
+137	151	153	by
+137	154	170	.014 BLEU points
+139	0	14	SR11 Deep task
+150	8	15	compare
+150	20	33	neural models
+150	34	38	with
+150	39	58	upper bound results
+150	79	81	by
+150	86	100	pipeline model
+150	101	103	of
+150	104	134	The STUMBA - D and TBDIL model
+150	135	142	obtains
+150	156	175	.794 and . 805 BLUE
+150	178	191	outperforming
+150	196	213	GCN - based model
+131	0	7	Results

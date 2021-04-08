@@ -1,0 +1,170 @@
+265	4	10	Adding
+265	11	18	weights
+265	19	21	to
+265	22	36	central points
+265	37	39	of
+265	44	60	facial landmarks
+265	61	68	reduces
+265	73	76	NME
+265	77	79	by
+265	80	92	0.09 to 0.23
+265	93	95	on
+265	100	110	two stages
+267	7	29	self - critic learning
+267	33	41	not used
+267	48	51	NME
+267	52	61	increases
+267	62	64	by
+267	65	74	0.04/0.18
+267	75	78	for
+267	79	105	with / without weight mask
+268	10	35	self - supervision scheme
+268	36	42	reduce
+268	43	46	NME
+268	47	49	by
+268	50	53	0.1
+268	54	58	when
+268	63	74	weight mask
+268	78	82	used
+268	89	93	0.23
+268	94	96	if
+268	101	112	weight mask
+268	116	123	removed
+270	35	40	found
+270	52	56	FLMs
+270	57	59	as
+270	60	65	input
+270	70	80	accelerate
+270	85	96	convergence
+270	97	99	of
+270	100	116	training process
+209	3	6	use
+209	9	29	two - stage strategy
+209	30	38	to train
+209	39	48	our model
+210	0	2	In
+210	7	18	first stage
+210	24	29	train
+210	34	39	model
+210	40	45	using
+210	50	64	overall loss L
+211	7	19	second stage
+211	25	36	fine - tune
+211	37	46	our model
+211	47	52	using
+211	57	77	Vertex Distance Cost
+206	7	20	SGD optimizer
+206	21	24	for
+206	29	42	CNN regressor
+206	43	47	with
+206	50	63	learning rate
+206	64	76	beginning at
+206	77	84	5 10 ?5
+206	89	109	decays exponentially
+206	116	129	discriminator
+206	130	134	uses
+206	139	143	Adam
+206	144	146	as
+206	147	156	optimizer
+206	157	161	with
+206	166	185	fixed learning rate
+206	186	193	1 10 ?4
+205	0	19	Our proposed 2 DASL
+205	23	39	implemented with
+205	40	47	Pytorch
+41	9	20	to overcome
+41	25	45	intrinsic limitation
+41	46	48	of
+41	49	82	existing 3 D face recovery models
+41	88	95	propose
+41	98	119	novel learning method
+41	125	134	leverages
+41	135	169	2D " in - the - wild " face images
+41	185	209	supervise and facilitate
+41	214	236	3D face model learning
+45	3	9	design
+45	12	51	novel self - supervised learning method
+45	65	73	to train
+45	76	90	3 D face model
+45	91	95	with
+45	96	112	weak supervision
+45	113	117	from
+45	118	127	2D images
+47	4	9	model
+47	28	35	recover
+47	36	48	2D landmarks
+47	49	53	from
+47	54	71	predicted 3D ones
+47	72	75	via
+47	76	106	direct 3D - to - 2D projection
+49	15	34	our proposed method
+49	40	48	exploits
+49	49	68	cycle - consistency
+49	69	73	over
+49	78	101	2D landmark predictions
+51	0	13	To facilitate
+51	18	44	overall learning procedure
+51	47	57	our method
+51	63	71	exploits
+51	72	94	self - critic learning
+2	0	73	Joint 3D Face Reconstruction and Dense Face Alignment from A Single Image
+9	0	46	3 D face reconstruction from a single 2D image
+31	0	23	3 D face reconstruction
+227	0	20	Dense face alignment
+239	44	54	our 2 DASL
+239	55	63	achieves
+239	68	78	lowest NME
+239	85	105	on the evaluation of
+239	111	133	2 D and 3D coordinates
+239	134	139	among
+239	140	155	all the methods
+245	21	31	our method
+245	32	40	achieves
+245	45	60	lowest mean NME
+245	61	63	on
+245	64	88	both of the two datasets
+245	99	109	lowest NME
+245	110	116	across
+245	117	126	all poses
+245	127	129	on
+245	130	143	AFLW2000 - 3D
+246	0	9	Our 2DASL
+246	15	23	performs
+246	24	30	better
+246	31	35	than
+246	36	41	PRNet
+246	44	52	reducing
+246	53	56	NME
+246	57	59	by
+246	60	73	0.09 and 0.08
+246	74	76	on
+246	77	106	AFLW2000 - 3D and AFLW - LFPA
+240	0	3	For
+240	4	25	3 DMM - based methods
+240	28	43	3 DDFA and DeFA
+240	46	56	our method
+240	57	68	outperforms
+240	74	76	by
+240	79	91	large margin
+240	92	94	on
+240	104	122	68 spare landmarks
+240	131	148	dense coordinates
+247	14	16	on
+247	17	46	large poses ( from 60 to 90 )
+247	49	55	2 DASL
+247	56	64	achieves
+247	65	78	0.2 lower NME
+247	79	83	than
+247	84	89	PRNet
+249	0	23	3 D face reconstruction
+255	21	46	3D reconstruction results
+255	47	49	of
+255	50	56	2 DASL
+255	57	68	outperforms
+255	69	75	3 DDFA
+255	76	78	by
+255	79	83	0.39
+255	90	94	2.29
+255	95	98	for
+255	99	103	DeFA
+23	0	46	3 D face reconstruction from a single 2D image

@@ -1,0 +1,6 @@
+(Face R - FCN||enumerates||multiple configurations)
+(multiple configurations||of||anchor)
+(multiple configurations||to accurately search for||faces)
+(RPN stage||has||Face R - FCN)
+(Baselines||In terms of||RPN stage)
+(Contribution||has||Baselines)

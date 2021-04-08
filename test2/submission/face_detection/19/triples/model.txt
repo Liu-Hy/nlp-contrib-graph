@@ -1,0 +1,8 @@
+(deformable layer||with||fewer channels)
+(fewer channels||attached to||backbone network)
+(backbone network||to produce||" thin " feature map)
+(" thin " feature map||fed to||full connected layer)
+(full connected layer||building||efficient yet accurate two - stage detector)
+(deformable layer||has||fewer channels)
+(Model||has||multi-scale training and testing strategy)
+(Contribution||has||Model)

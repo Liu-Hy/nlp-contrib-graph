@@ -1,0 +1,8 @@
+(Model||to||text classification tasks)
+(Model||has||Adversarial perturbations)
+(perturbation||on||continuous word embeddings)
+(continuous word embeddings||instead of||discrete word inputs)
+(Model||define||perturbation)
+(text classifier||by stabilizing||classification function)
+(Model||propose||text classifier)
+(Contribution||has||Model)

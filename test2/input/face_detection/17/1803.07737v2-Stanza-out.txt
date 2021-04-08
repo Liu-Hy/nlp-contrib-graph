@@ -1,0 +1,240 @@
+title
+Pyramid Box : A Context - assisted Single Shot Face Detector
+abstract
+Face detection has been well studied for many years and one of remaining challenges is to detect small , blurred and partially occluded faces in uncontrolled environment .
+This paper proposes a novel contextassisted single shot face detector , named PyramidBox to handle the hard face detection problem .
+Observing the importance of the context , we improve the utilization of contextual information in the following three aspects .
+First , we design a novel context anchor to supervise high - level contextual feature learning by a semi-supervised method , which we call it PyramidAnchors .
+Second , we propose the Low - level Feature Pyramid Network to combine adequate high - level context semantic feature and Low - level facial feature together , which also allows the PyramidBox to predict faces of all scales in a single shot .
+Third , we introduce a contextsensitive structure to increase the capacity of prediction network to improve the final accuracy of output .
+In addition , we use the method of Data - anchor - sampling to augment the training samples across different scales , which increases the diversity of training data for smaller faces .
+By exploiting the value of context , PyramidBox achieves superior performance among the state - of - the - art over the two common face detection benchmarks , FDDB and WIDER FACE .
+Our code is available in Pad - dlePaddle : https://github.com/PaddlePaddle/models/tree/develop/
+fluid/face_detection .
+Introduction
+Face detection is a fundamental and essential task in various face applications .
+The breakthrough work by Viola - Jones utilizes AdaBoost algorithm with Haar - Like features to train a cascade of face vs. non-face classifiers .
+Since that , numerous of subsequent works are proposed for improving the cascade detectors .
+Then , introduce deformable part models ( DPM ) into face detection tasks by modeling the relationship of deformable facial parts .
+These methods are mainly based on designed features which are less representable and trained by separated steps .
+With the great breakthrough of convolutional neural networks ( CNN ) , a lot of progress for face detection has been made in recent years due to utilizing modern CNN - based object detectors , including R - CNN , SSD , YOLO , FocalLoss and their extensions .
+Benefiting from the powerful deep learning approach and end - to - end optimization , the CNN - based face detectors have achieved much better performance and provided anew baseline for later methods .
+Recent anchor - based detection frameworks aim at detecting hard faces in uncontrolled environment such as WIDER FACE .
+SSH and S 3 FD develop scale - invariant networks to detect faces with different scales from different layers in a single network .
+Face R - FCN re-weights embedding responses on score maps and eliminates the effect of non-uniformed contribution in each facial part using a position - sensitive average pooling .
+FAN proposes an anchor - level attention by highlighting the features from the face region to detect the occluded faces .
+Though these works give an effective way to design anchors and related networks to detect faces with different scales , how to use the contextual information in face detection has not been paid enough attention , which should play a significant role in detection of hard faces .
+Actually , as shown in , it is clear that faces never occur isolated in the real world , usually with shoulders or bodies , providing a rich source of contextual associations to be exploited especially when the facial texture is not distinguishable for the sake of low - resolution , blur and occlusion .
+We address this issue by introducing a novel framework of context assisted network to make full use of contextual signals as the following steps .
+Firstly , the network should be able to learn features for not only faces , but also contextual parts such as heads and bodies .
+To achieve this goal , extra labels are needed and the anchors matched to these parts should be designed .
+In this work , we use a semi-supervised solution to generate approximate labels for contextual parts related to faces and a series of anchors called PyramidAnchors are invented to be easily added to general anchor - based architectures .
+Secondly , high - level contextual features should be adequately combined with the low - level ones .
+The appearances of hard and easy faces can be quite differ -ent , which implies that not all high - level semantic features are really helpful to smaller targets .
+We investigate the performance of Feature Pyramid Networks ( FPN ) and modify it into a Low - level Feature Pyramid Network ( LFPN ) to join mutually helpful features together .
+Thirdly , the predict branch network should make full use of the joint feature .
+We introduce the Context - sensitive prediction module ( CPM ) to incorporate context information around the target face with a wider and deeper network .
+Meanwhile , we propose a max - in - out layer for the prediction module to further improve the capability of classification network .
+In addition , we propose a training strategy named as Data - anchor - sampling to make an adjustment on the distribution of the training dataset .
+In order to learn more representable features , the diversity of hard - set samples is important and can be gained by data augmentation across samples .
+For clarity , the main contributions of this work can be summarized as fivefold :
+1 .
+We propose an anchor-based context assisted method , called PyramidAnchors , to introduce supervised information on learning contextual features for small , blurred and partially occluded faces .
+2 . We design the Low - level Feature Pyramid Networks ( LFPN ) to merge contextual features and facial features better .
+Meanwhile , the proposed method can handle faces with different scales well in a single shot .
+3 . We introduce a context - sensitive prediction module , consisting of a mixed network structure and max - in - out layer to learn accurate location and classification from the merged features .
+4 . We propose the scale aware Data - anchor - sampling strategy to change the distribution of training samples to put emphasis on smaller faces .
+5 . We achieve superior performance over state - of - the - art on the common face detection benchmarks FDDB and WIDER FACE .
+The rest of the paper is organized as follows .
+Section 2 provides an overview of the related works .
+Section 3 introduces the proposed method .
+Section 4 presents the experiments and Section 5 concludes the paper .
+Related Work
+Anchor - based Face Detectors .
+Anchor was first proposed by Faster R - CNN , and then it was widely used in both two - stage and one single shot object detectors .
+Then anchor - based object detectors have achieved remarkable progress in recent years .
+Similar to FPN , Lin uses translation - invariant anchor boxes , and Zhang designs scales of anchors to ensure that the detector can handle various scales of faces well .
+FaceBoxes introduces anchor densification to ensure different types of anchors have the same density on the image .
+S 3 FD proposed anchor matching strategy to improve the recall rate of tiny faces .
+Scale - invariant
+Face Detectors .
+To improve the performance of face detector to handle faces of different scales , many state - of - the - art works construct different structures in the same framework to detect faces with variant size , where the high - level features are designed to detect large faces while low - level features for small faces .
+In order to integrate high - level semantic feature into low - level layers with higher resolution , FPN proposed a top - down architecture to use high - level semantic feature maps at all scales .
+Recently , FPN - style framework achieves great performance on both objection detection and face detection .
+Context - associated
+Face Detectors .
+Recently , some works show the importance of contextual information for face detection , especially for finding small , blurred and occluded faces .
+CMS - RCNN used Faster R - CNN in face detection with body contextual information .
+Hu et al. trained separate detectors for different scales .
+SSH modeled the context information by large filters on each prediction module .
+FAN proposed an anchor - level attention , by highlighting the features from the face region , to detect the occluded faces .
+PyramidBox
+This section introduces the context - assisted single shot face detector , Pyramid - Box .
+We first briefly introduce the network architecture in Sec. 3.1 .
+Then we present a context - sensitive prediction module in Sec. 3.2 , and propose a novel anchor method , named PyramidAnchors , in Sec. 3.3 .
+Finally , Sec. 3.4 presents the associated training methodology including data - anchor - sampling and maxin - out .
+Network Architecture
+Anchor - based object detection frameworks with sophisticated design of anchors have been proved effective to handle faces of variable scales when predictions are made at different levels of feature map .
+Meanwhile , FPN structures showed strength on merging high - level features with the lower ones .
+The architecture of PyramidBox uses the same extended VGG16 backbone and anchor scale design as S 3 FD , which can generate feature maps at different levels and anchors with equal - proportion interval .
+Low - level FPN is added on this backbone and a Context - sensitive Predict Module is used as a branch network from each pyramid detection layer to get the final output .
+The key is that we design a novel pyramid anchor method which generates a series of anchors for each face at different levels .
+The details of each component in the architecture are as follows :
+Scale - equitable
+Backbone Layers .
+We use the base convolution layers and extra convolutional layers in S 3 FD as our backbone layers , which keep layers of VGG16 from conv 1 1 to pool 5 , then convert fc 6 and fc 7 of VGG16 to conv fc layers , and then add more convolutional layers to make it deeper .
+Low - level Feature Pyramid Layers .
+To improve the performance of face detector to handle faces of different scales , the low - level feature with highresolution plays a key role .
+Hence , many state - of - the - art works construct different structures in the same framework to detect faces with variant size , where the high - level features are designed to detect large faces while lowlevel features for small faces .
+In order to integrate high - level semantic feature into low - level layers with higher resolution , FPN proposed a top - down architecture to use high - level semantic feature maps at all scales .
+Recently , FPN - style framework achieves great performance on both objection detection and face detection .
+As we know , all of these works build FPN start from the top layer , which should be argued that not all high - level features are undoubtedly helpful to small faces .
+First , faces that are small , blurred and occluded have different texture feature from the large , clear and complete ones .
+So it is rude to directly use all high - level features to enhance the performance on small faces .
+Second , high - level features are extracted from regions with little face texture and may introduce noise information .
+For example , in the backbone layers of our PyramidBox , the receptive field of the top two layers conv 7 2 and conv 6 2 are 724 and 468 , respectively .
+Notice that the input size of training image is 640 , which means that the top two layers contain too much noisy context features , so they may not contribute to detecting medium and small faces .
+Alternatively , we build the Low - level Feature Pyramid Network ( LFPN ) starting a top - down structure from a middle layer , whose receptive field should be close to the half of the input size , instead of the top layer .
+Also , the structure of each block of LFPN , as same as FPN , one can see ( a ) for details .
+Pyramid Detection Layers .
+We select lfpn 2 , lfpn 1 , lfpn 0 , conv fc 7 , conv 6 2 and conv 7 2 as detection layers with anchor size of 16 , 32 , 64 , 128 , 256 and 512 , respectively .
+Here lfpn 2 , lfpn 1 and lfpn 0 are output layer of LFPN based on conv 3 3 , conv 4 3 and conv 5 3 , respectively .
+Moreover , similar to other SSD - style methods , we use L2 normalization to rescale the norm of LFPN layers .
+Predict Layers .
+Each detection layer is followed by a Context - sensitive Predict Module ( CPM ) , see Sec 3.2 .
+Notice that the outputs of CPM are used for supervising pyramid anchors , see Sec. 3.3 , which approximately cover face , head and body region in our experiments .
+The output size of the l -th CPM is w l h l cl , where w l = h l = 640 / 2 2 +l is the corresponding feature size and the channel size cl equals to 20 for l = 0 , 1 , . . . , 5 . Here the features of each channels are used for classification and regression of faces , heads and bodies , respectively , in which the classification of face need 4 ( = cpl + cn l ) channels , where cpl and cn l are max - in - out of foreground and background label respectively , satisfying
+Moreover , the classification of both head and body need two channels , while each of face , head and body have four channels to localize .
+Pyramid Box loss layers .
+For each target face , see in Sec. 3.3 , we have a series of pyramid anchors to supervise the task of classification and regression simultaneously .
+We design a PyramidBox Loss .
+see Sec. 3.4 , in which we use softmax loss for classification and smooth L1 loss for regression .
+Context - sensitive Predict Module
+Predict Module .
+In original anchor - based detectors , such as SSD and YOLO , the objective functions are applied to the selected feature maps directly .
+As proposed in MS - CNN , enlarging the sub-network of each task can improve accuracy .
+Recently , SSH increases the receptive field by placing a wider convolutional prediction module on top of layers with different strides , and DSSD adds residual blocks for each prediction module .
+Indeed , both SSH and DSSD make the prediction module deeper and wider separately , so that the prediction module get the better feature to classify and localize .
+Inspired by the Inception - ResNet , it is quite clear that we can jointly enjoy the gain of wider and deeper network .
+We design the Context - sensitive Predict Module ( CPM ) , see ( b ) , in which we replace the convolution layers of context module in SSH by the residual - free prediction module of DSSD .
+This would allow our CPM to reap all the benefits of the DSSD module approach while remaining rich contextual information from SSH context module .
+Max - in - out .
+The conception of Maxout was first proposed by Goodfellow et al ..
+Recently , S 3 FD [ 20 ] applied max - out background label to reduce the false positive rate of small negatives .
+In this work , we use this strategy on both positive and negative samples .
+Denote it as max - in - out , see ( c ) .
+We first predict c p + c n scores for each prediction module , and then select max c p as the positive score .
+Similarly , we choose the max score of c n to be the negative score .
+In our experiment , we set c p = 1 and c n = 3 for the first prediction module since that small anchors have more complicated background , while c p = 3 and c n = 1 for other prediction modules to recall more faces .
+PyramidAnchors
+Recently anchor - based object detectors and face detectors have achieved remarkable progress .
+It has been proved that balanced anchors for each scale are necessary to detect small faces .
+But it still ignored the context feature at each scale because the anchors are all designed for face regions .
+To address this problem , we propose a novel alternatively anchor method , named PyramidAnchors .
+For each target face , PyramidAnchors generate a series of anchors corresponding to larger regions related to a face that contains more contextual information , such as head , shoulder and body .
+We choose the layers to set such anchors by matching the region size to the anchor size , which will supervise higher - level layers to learn more representable features for lower - level scale faces .
+Given extra labels of head , shoulder or body , we can accurately match the anchors to ground truth to generate the loss .
+As it 's unfair to add additional labels , we implement it in a semi-supervised way under the assumption that regions with the same ratio and offset to different faces own similar contextual feature .
+Namely , we can use a set of uniform boxes to approximate the actual regions of head , shoulder and body , as long as features from these boxes are similar among different faces .
+For a target face localized at region target at original image , considering the anchor i , j , which means the j - th anchor at the i - th feature layer with stride size s i , we define the label of k-th pyramid - anchor by
+fork = 0 , 1 , . . . , K , respectively , where spa is the stride of pyramid anchors .
+anchor i , j s i denotes the corresponding region in the original image of anchor i , j , and anchor i , j s i /s pa k represents the corresponding down - sampled region by stride spa k .
+The threshold is the same as other anchor - based detectors .
+Besides , a Pyramid Box Loss will be demonstrated in Sec. 3.4 .
+In our experiments , we set the hyper parameter spa = 2 since the stride of adjacent prediction modules is 2 .
+Furthermore , let threshold = 0.35 and K =
+2 . Then label 0 , label 1 and label 2 are labels of face , head and body respectively .
+One can see that a face would generate 3 targets in three continuous prediction modules , which represent for the face itself , the head and body corresponding to the face .
+shows an example .
+Benefited from the PyramidBox , our face detector can handle small , blurred and partially occluded faces better .
+Notice that the pyramid anchors are generated automatically without any extra label and this semi-supervised learning help PyramidAnchors extract approximate contextual features .
+In prediction process , we only use output of the face branch , so no additional computational cost is incurred at runtime , compared to standard anchor - based face detectors .
+Training
+In this section , we introduce the training dataset , data augmentation , loss function and other implementation details .
+Train dataset .
+We trained PyramidBox on 12 , 880 images of the WIDER FACE training set with color distort , random crop and horizontal flip .
+Data - anchor - sampling .
+Data sampling is a classical subject in statistics , machine learning and pattern recognition , it achieves great development in recent years .
+For the task of objection detection , Focus Loss address the class imbalance by reshaping the standard cross entropy loss .
+Here we utilize a data augment sample method named Data - anchor - sampling .
+In short , data - anchor- sampling resizes train images by reshaping a random face in this image to a random smaller anchor size .
+More specifically , we first randomly select a face of size sf ace in a sample .
+As previously mentioned that the scales of anchors in our PyramidBox , as shown in Sec By resizing the original image with the scale s * and cropping a standard size of 640 640 containing the selected face randomly , we get the anchor -sampled train data .
+For example , we first select a face randomly , suppose it s size is 140 , then its nearest anchor-size is 128 , then we need to choose a target size from 16 , 32 , 64 , 128 and 256 .
+In general , assume that we select 32 , then we resize the original image by scale of 32/140 = 0.2285 .
+Finally , by cropping a 640 640 sub - image from the last resized image containing the originally selected face , we get the sampled train data .
+As shown in , data - anchor - sampling changes the distribution of the train data as follows :
+1 ) the proportion of small faces is larger than the large ones .
+2 ) generate smaller face samples through larger ones to increase the diversity of face samples of smaller scales .
+Pyramid Box loss .
+As a generalization of the multi-box loss in , we employ the Pyramid Box Loss function for an image is defined as
+where the k - th pyramid - anchor loss is given by
+( 3 ) Here k is the index of pyramid - anchors ( k = 0 , 1 , and 2 represents for face , head and body , respectively , in our experiments ) , and i is the index of an anchor and p k , i is the predicted probability of anchor i being the k - th object ( face , head or body ) .
+The ground - truth label defined by
+For example , when k = 0 , the ground - truth label is equal to the label in Fast R - CNN , otherwise , when k ?
+1 , one can determine the corresponding label by matching between the down - sampled anchors and ground - truth faces .
+Moreover , t k,i is a vector representing the 4 parameterized coordinates of the predicted bounding box , and t * k , i is that of ground - truth box associated with a positive anchor , we can define it by
+where ?
+x , k and ?
+y ,k denote offset of shifts , s w , k and s h,k are scale factors respect to width and height respectively .
+In our experiments , we set ? x , k = ?
+y ,k = 0 , s w , k = s h ,k = 1 fork < 2 and ? x , 2 = 0 , ? y ,2 = t * h , s w ,2 = 7 8 , s h,2 = 1 fork =
+2 . The classification loss L k , cls is log loss over two classes ( face vs. not face ) and the regression loss L k, reg is the smooth L 1 loss defined in .
+The term p * k , i L k, reg means the regression loss is activated only for positive anchors and disabled otherwise .
+The two terms are normalized with N k , cls , N k , reg , and balancing weights ? and ?
+k fork = 0 , 1 , 2 .
+Optimization .
+As for the parameter initialization , our PyramidBox use the pre-trained parameters from VGG16 .
+The parameters of conv fc 67 and conv fc 7 are initialized by sub - sampling parameters from fc 6 and fc 7 of VGG16 and the other additional layers are randomly initialized with " xavier " in .
+We use a learning rate of 10 ? 3 for 80 k iterations , and 10 ? 4 for the next 20 k iterations , and 10 ? 5 for the last 20 k iterations on the WIDER FACE training set with batch size 16 .
+We also use a momentum of 0.9 and a weight decay of 0.0005 .
+Experiments
+In this section , we firstly analyze the effectiveness of our Pyramid Box through a set of experiments , and then evaluate the final model on WIDER FACE and FDDB face detection benchmarks .
+Model Analysis
+We analyze our model on the WIDER FACE validation set by contrast experiments .
+Baseline .
+Our Pyramid
+Box shares the same architecture of S 3 FD , so we directly use it as a baseline .
+Contrast Study .
+To better understand PyramidBox , we conduct contrast experiments to evaluate the contributions of each proposed component , from which we can get the following conclusions .
+Low - level feature pyramid network ( LFPN ) is crucial for detecting hard faces .
+The results listed in prove that LFPN started from a middle layer , using conv fc7 in our Pyramid Box , is more powerful , which implies that features with large gap in scale may not help each other .
+The comparison between the first and forth column of indicates that LFPN increases the m AP by 1.9 % on hard subset .
+This significant improvement demonstrates the effectiveness of joining high - level semantic features with the low - level ones .
+Data - anchor - sampling makes detector easier to train .
+We employ Data - anchor - sampling based on LFPN network and the result shows that our data - anchor - sampling effectively improves the performance .
+The mAP is increased by 0.4 % , 0.4 % and 0.6 % on easy , medium and hard subset , respectively .
+One can see that Data - anchor - sampling works well not only for small hard faces , but also for easy and medium faces . PyramidAnchor and Pyramid
+Box loss is promising .
+By comparing the first and last column in , one can see that PyamidAnchor effectively improves the performance , i.e. , 0.7 % , 0.6 % and 0.9 % on easy , medium and hard , respectively .
+This dramatical improvement shows that learning contextual information is helpful to the task of detection , especially for hard faces .
+Wider and deeper context prediction module is better .
+shows that the performance of CPM is better than both DSSD module and SSH context module .
+Notice that the combination of SSH and DSSD gains very little compared to SSH alone , which indicates that large receptive field is more important to predict the accurate location and classification .
+In addition , by comparing the last two column of , one can find that the method of Max - in - out improves the mAP on WIDER FACE validation set about + 0.2 % ( Easy ) , + 0.3 % ( Medium ) and + 0.1 % ( Hard ) , respectively .
+To conclude this section , we summarize our results in , from which one can see that m AP increase 2.1 % , 2.3 % and 4.7 % on easy , medium and hard subset , respectively .
+This sharp increase demonstrates the effectiveness of proposed PyramidBox , especially for hard faces .
+Evaluation on Benchmark
+We evaluate our PyramidBox on the most popular face detection benchmarks , including Face Detection Data Set and Benchmark ( FDDB ) and WIDER FACE .
+FDDB Dataset .
+It has 5 , 171 faces in 2 , 845 images collected from the Yahoo !
+news website .
+We evaluate our face detector on FDDB against the other state - of - art methods .
+The PyramidBox achieves state - ofart performance and the result is shown in and .
+WIDER FACE Dataset .
+It contains 32 , 203 images and 393 , 703 annotated faces with a high degree of variability in scale , pose and occlusion .
+The database is split into training ( 40 % ) , validation ( 10 % ) and testing ( 50 % ) set , where both validation and test set are divided into " easy " , " medium " and " hard " subsets , regarding the difficulties of the detection .
+Our PyramidBox is trained only on the training set and evaluated on both validation set and testing set comparing with the state - of - the - art face detectors , such as. presents the precision - recall curves and mAP values .
+Our PyramidBox outperforms others across all three subsets , i.e. 0.961 ( easy ) , 0.950 ( medium ) , 0.889 ( hard ) for validation set , and 0.956 ( easy ) , 0.946 ( medium ) , 0.887 ( hard ) for testing set .
+Conclusion
+This paper proposed a novel context - assisted single shot face detector , denoted as PyramidBox , to handle the unconstrained face detection problem .
+We designed a novel context anchor , named PyramidAnchor , to supervise face detector to learn features from contextual parts around faces .
+Besides , we modified feature pyramid network into a low - level feature pyramid network to combine features from high - level and high - resolution , which are effective for finding small faces .
+We also proposed a wider and deeper prediction module to make full use of joint feature .
+In addition , we introduced Data - anchor - sampling to augment the train data to increase the diversity of train data for small faces .
+The experiments demonstrate that our contributions lead PyramidBox to the state - of - the - art performance on the common face detection benchmarks , especially for hard faces .
+In this section , we show the robustness of our PyramidBox algorithm by testing it on the face images having large variance in scale , blur , pose and occlusion .
+Even in the images filled with small , blurred or partially occluded faces and big face with exaggerate expression , our PyramidBox can recall most of these faces , see .
+Besides , the robustness of scale , occlusion , blur , and pose is respectively described in the and .
+On the right of image , detector confidence is present to you directly by colorbar .
+Please zoom in for more details .

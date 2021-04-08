@@ -1,0 +1,183 @@
+139	75	77	on
+139	82	100	WIDER FACE dataset
+143	0	28	Feature Enhance Module First
+146	0	5	shows
+146	11	37	our feature enhance module
+146	42	49	improve
+146	50	68	VGG16 - based FSSD
+146	69	73	from
+146	74	98	92.6 % , 90.2 % , 79.1 %
+146	99	101	to
+146	102	126	93.0 % , 91.4 % , 84.6 %
+147	0	30	Progressive Anchor Loss Second
+147	40	58	Res50 - based FSSD
+147	75	77	to
+150	0	5	shows
+150	6	33	our progressive anchor loss
+150	38	45	improve
+150	65	70	using
+150	71	74	FEM
+150	75	79	from
+150	80	104	95.0 % , 94.1 % , 88.0 %
+150	108	132	95.3 % , 94.4 % , 88.6 %
+151	0	24	Improved Anchor Matching
+153	0	5	shows
+153	11	39	our improved anchor matching
+153	44	51	improve
+153	52	69	Res101 based FSSD
+153	70	75	using
+153	76	79	FEM
+153	80	84	from
+153	85	109	95.8 % , 95.1 % , 89.7 %
+153	110	112	to
+153	113	137	96.1 % , 95.2 % , 90.0 %
+135	41	99	https://github.com/TencentYoutuResearch/FaceDetection-DSFD
+127	4	21	backbone networks
+127	26	40	initialized by
+127	45	68	pretrained VGG / ResNet
+127	69	71	on
+127	72	81	Image Net
+128	0	47	All newly added convolution layers ' parameters
+128	52	66	initialized by
+128	71	88	' xavier ' method
+130	4	14	batch size
+130	18	24	set to
+130	25	27	16
+131	4	17	learning rate
+131	21	27	set to
+131	28	33	10 ?3
+131	34	37	for
+131	42	58	first 40 k steps
+131	68	73	decay
+131	77	79	to
+131	80	97	10 ? 4 and 10 ? 5
+131	98	101	for
+131	102	116	two 10 k steps
+133	0	23	Non-maximum suppression
+133	27	39	applied with
+133	40	55	jaccard overlap
+133	56	58	of
+133	59	62	0.3
+133	63	73	to produce
+133	74	111	top 750 high confident bounding boxes
+133	112	115	per
+133	116	121	image
+129	3	6	use
+129	7	10	SGD
+129	11	15	with
+129	16	19	0.9
+129	20	28	momentum
+129	31	37	0.0005
+129	38	50	weight decay
+129	51	65	to fine - tune
+129	66	80	our DSFD model
+132	0	6	During
+132	7	16	inference
+132	23	44	first shot 's outputs
+132	45	48	are
+132	49	56	ignored
+132	65	76	second shot
+132	77	85	predicts
+132	86	119	top 5 k high confident detections
+134	0	3	For
+134	6	30	bounding box coordinates
+134	36	46	round down
+134	47	67	top left coordinates
+134	72	79	roundup
+134	80	96	width and height
+134	97	106	to expand
+134	111	133	detection bounding box
+178	0	18	WIDER FACE Dataset
+182	14	22	our DSFD
+182	23	31	achieves
+182	36	52	best performance
+182	53	58	among
+182	59	107	all of the state - of - the - art face detectors
+182	108	116	based on
+182	121	145	average precision ( AP )
+182	146	152	across
+182	157	170	three subsets
+182	236	238	on
+182	239	253	validation set
+182	180	186	96.6 %
+182	189	193	Easy
+182	198	204	95.7 %
+182	207	213	Medium
+182	220	226	90.4 %
+182	229	233	Hard
+182	319	327	test set
+182	260	266	96.0 %
+182	269	273	Easy
+182	278	284	95.3 %
+182	287	293	Medium
+182	300	306	90.0 %
+182	309	313	Hard
+184	0	12	FDDB Dataset
+187	14	22	our DSFD
+187	23	31	achieves
+187	32	66	state - of - the - art performance
+187	67	74	on both
+187	75	114	discontinuous and continuous ROC curves
+187	117	121	i.e.
+187	122	139	99.1 % and 86.2 %
+187	140	144	when
+187	149	174	number of false positives
+187	175	184	equals to
+187	185	192	1 , 000
+188	0	12	After adding
+188	13	35	additional annotations
+188	36	38	to
+188	45	60	unlabeled faces
+188	67	82	false positives
+188	96	102	can be
+188	103	118	further reduced
+188	83	85	of
+188	86	95	our model
+188	123	133	outperform
+188	134	151	all other methods
+30	19	26	propose
+30	27	49	three novel techniques
+31	11	20	introduce
+31	23	53	Feature Enhance Module ( FEM )
+31	54	64	to enhance
+31	69	100	discriminability and robustness
+31	101	103	of
+31	108	116	features
+31	125	133	combines
+31	138	148	advantages
+31	149	151	of
+31	156	159	FPN
+31	160	162	in
+31	163	173	PyramidBox
+31	178	207	Receptive Field Block ( RFB )
+31	208	210	in
+31	211	217	RFBNet
+32	82	88	design
+32	89	120	Progressive Anchor Loss ( PAL )
+32	126	130	uses
+32	131	155	progressive anchor sizes
+32	156	159	for
+32	169	185	different levels
+32	197	212	different shots
+32	63	65	in
+33	18	24	assign
+33	25	45	smaller anchor sizes
+33	53	63	first shot
+33	70	73	use
+33	74	86	larger sizes
+33	46	48	in
+33	94	105	second shot
+34	11	18	propose
+34	19	51	Improved Anchor Matching ( IAM )
+34	60	70	integrates
+34	71	131	anchor partition strategy and anchor-based data augmentation
+34	132	147	to better match
+34	148	178	anchors and ground truth faces
+34	190	198	provides
+34	199	220	better initialization
+34	221	224	for
+34	229	238	regressor
+36	86	102	proposed network
+36	103	105	as
+36	106	138	Dual Shot Face Detector ( DSFD )
+4	35	49	face detection

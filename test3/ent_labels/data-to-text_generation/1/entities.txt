@@ -1,0 +1,70 @@
+158	3	8	built
+158	13	27	ensemble model
+158	28	33	using
+158	38	55	seq2seq framework
+158	56	59	for
+158	60	70	TensorFlow
+159	0	26	Our individual LSTM models
+159	27	30	use
+159	33	59	bidirectional LSTM encoder
+159	60	64	with
+159	65	74	512 cells
+159	75	78	per
+159	79	84	layer
+159	95	105	CNN models
+159	106	109	use
+159	112	127	pooling encoder
+160	4	11	decoder
+160	12	14	in
+160	15	25	all models
+160	32	53	4 - layer RNN decoder
+160	54	58	with
+160	59	83	512 LSTM cells per layer
+160	93	102	attention
+165	19	30	E2E Dataset
+170	0	27	Automatic Metric Evaluation
+172	34	57	LSTM and the CNN models
+172	58	78	clearly benefit from
+172	79	106	additional pseudo - samples
+172	12	14	in
+172	114	126	training set
+180	0	2	On
+180	7	28	official E2E test set
+180	31	49	our ensemble model
+180	50	58	performs
+180	59	69	comparably
+180	70	72	to
+180	77	91	baseline model
+210	15	37	TV and Laptop Datasets
+210	12	14	on
+212	11	29	our ensemble model
+212	30	38	performs
+212	39	52	competitively
+212	53	57	with
+212	62	70	baseline
+212	78	88	TV dataset
+212	98	109	outperforms
+212	71	73	on
+212	120	134	Laptop dataset
+212	135	137	by
+212	140	151	wide margin
+28	8	15	present
+28	18	60	neural ensemble natural language generator
+28	72	86	train and test
+28	87	89	on
+28	90	120	three large unaligned datasets
+28	121	123	in
+28	128	172	restaurant , television , and laptop domains
+29	3	10	explore
+29	11	21	novel ways
+29	22	34	to represent
+29	39	48	MR inputs
+29	51	60	including
+29	61	74	novel methods
+29	75	78	for
+29	79	93	delexicalizing
+29	94	116	slots and their values
+29	119	143	automatic slot alignment
+29	170	187	semantic reranker
+2	46	98	Sequence - to - Sequence Natural Language Generation
+4	0	27	Natural language generation

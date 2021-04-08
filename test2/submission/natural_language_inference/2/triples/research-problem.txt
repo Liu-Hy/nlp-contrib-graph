@@ -1,0 +1,5 @@
+(Contribution||has research problem||Natural Language Inference)
+(Contribution||has research problem||natural language inference)
+(Contribution||has research problem||recognizing textual entailment ( RTE ))
+(Contribution||has research problem||Machine Reading Comprehension ( MRC ))
+(Contribution||has research problem||NLI)

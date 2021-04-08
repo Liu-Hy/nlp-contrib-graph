@@ -1,0 +1,98 @@
+33	50	55	train
+33	56	74	separate detectors
+33	75	84	tuned for
+33	85	123	different scales ( and aspect ratios )
+35	30	43	train and run
+35	44	70	scale - specific detectors
+35	71	73	in
+35	76	93	multitask fashion
+35	101	112	make use of
+35	113	121	features
+35	122	134	defined over
+35	135	150	multiple layers
+35	151	153	of
+35	154	187	single ( deep ) feature hierarchy
+41	0	9	To extend
+41	10	18	features
+41	19	31	fine - tuned
+41	32	36	from
+41	37	51	these networks
+41	52	54	to
+41	55	62	objects
+41	63	65	of
+41	66	77	novel sizes
+41	83	89	employ
+41	92	107	simply strategy
+41	110	116	resize
+41	117	123	images
+41	124	126	at
+41	127	138	test - time
+41	139	141	by
+41	142	170	interpolation and decimation
+42	113	122	find that
+42	123	136	interpolating
+42	141	153	lowest layer
+42	154	156	of
+42	100	107	pyramid
+42	172	192	particularly crucial
+42	193	204	for finding
+42	205	218	small objects
+43	6	24	our final approach
+43	25	27	is
+43	30	46	delicate mixture
+43	47	49	of
+43	50	76	scale - specific detectors
+43	86	93	used in
+43	96	121	scale - invariant fashion
+52	3	14	demonstrate
+52	20	47	convolutional deep features
+52	48	62	extracted from
+52	63	78	multiple layers
+52	126	158	effective " foveal " descriptors
+52	235	241	across
+52	242	263	large receptive field
+52	164	176	capture both
+52	177	201	high - resolution detail
+52	206	234	coarse low - resolution cues
+53	3	7	show
+53	13	38	highresolution components
+53	39	41	of
+53	42	64	our foveal descriptors
+53	67	81	extracted from
+53	82	108	lower convolutional layers
+53	115	122	crucial
+53	123	126	for
+53	132	153	accurate localization
+218	0	10	WIDER FACE
+220	11	47	our hybrid - resolution model ( HR )
+220	48	56	achieves
+220	57	91	state - of - the - art performance
+220	92	94	on
+220	95	116	all difficulty levels
+220	142	149	reduces
+220	150	155	error
+220	156	158	on
+220	163	175	" hard " set
+220	176	178	by
+220	179	181	2X
+224	0	4	FDDB
+226	0	40	Our out - of - the - box detector ( HR )
+226	41	52	outperforms
+226	53	74	all published results
+226	75	77	on
+226	82	96	discrete score
+229	0	13	Our regressor
+229	17	29	trained with
+229	30	56	10 - fold cross validation
+228	0	4	With
+228	9	29	post - hoc regressor
+228	32	44	our detector
+228	45	53	achieves
+228	54	88	state - of - the - art performance
+228	89	91	on
+228	96	112	continuous score
+2	0	18	Finding Tiny Faces
+7	44	62	object recognition
+7	105	128	detecting small objects
+8	58	77	finding small faces
+26	22	36	face detection

@@ -1,0 +1,6 @@
+(frequency - based baseline||predicts||most frequent tag)
+(Tagspace||is||tag prediction model)
+(Tagspace||based on||Wsabie model)
+(Tagspace||has||tag prediction model)
+(Baselines||compare with||Tagspace)
+(Contribution||has||Baselines)

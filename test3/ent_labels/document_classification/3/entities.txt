@@ -1,0 +1,86 @@
+141	0	3	For
+141	4	25	SVDCNN and Char - CNN
+141	77	97	network architecture
+141	98	112	implemented in
+141	113	120	PyTorch
+146	4	32	SVDCNN experimental settings
+146	37	47	similar to
+146	52	72	original VDCNN paper
+146	75	80	using
+146	85	100	same dictionary
+146	109	128	same embedding size
+146	129	131	of
+146	132	134	16
+147	4	12	training
+147	21	35	performed with
+147	36	39	SGD
+147	42	51	utilizing
+147	52	62	size batch
+147	63	65	of
+147	66	68	64
+147	71	75	with
+147	78	85	maximum
+147	86	88	of
+147	89	99	100 epochs
+148	3	6	use
+148	10	31	initial learning rate
+148	32	34	of
+148	35	39	0.01
+148	44	52	momentum
+148	53	55	of
+148	56	59	0.9
+148	66	78	weight decay
+148	79	81	of
+148	82	87	0.001
+149	25	37	performed on
+149	41	87	NVIDIA GTX 1060 GPU + Intel Core i 7 4770s CPU
+30	19	30	investigate
+30	31	44	modifications
+30	45	47	on
+30	52	86	network proposed by Conneau et al.
+30	96	111	aim of reducing
+30	116	163	number of parameters , storage size and latency
+31	33	37	used
+31	38	78	Temporal Depthwise Separable Convolution
+31	83	116	Global Average Pooling techniques
+32	40	47	propose
+32	52	111	Squeezed Very Deep Convolutional Neural Networks ( SVDCNN )
+32	148	156	requires
+32	157	187	significantly fewer parameters
+32	188	199	compared to
+32	204	228	stateof - the - art CNNs
+2	53	72	Text Classification
+158	4	21	network reduction
+158	22	33	obtained by
+158	38	41	GAP
+158	107	116	FC layers
+159	0	11	Considering
+159	14	21	dataset
+159	22	26	with
+159	27	46	four target classes
+159	53	62	comparing
+159	63	80	SVDCNN with VDCNN
+159	87	107	number of parameters
+159	108	110	of
+159	129	140	passed from
+159	141	146	12.59
+159	147	149	to
+159	150	173	0.02 million parameters
+159	176	188	representing
+159	191	200	reduction
+159	201	203	of
+159	204	211	99.84 %
+160	44	54	Char - CNN
+160	61	75	proposed model
+160	76	78	is
+160	79	94	99.82 % smaller
+162	10	31	most in - depth model
+162	39	52	occupies only
+162	53	57	6 MB
+166	0	9	Regarding
+166	10	26	accuracy results
+167	19	41	performance difference
+167	42	49	between
+167	50	73	VDCNN and SVDCNN models
+167	74	88	varies between
+167	89	102	0.4 and 1.3 %

@@ -1,0 +1,78 @@
+23	19	26	present
+23	29	33	MANN
+23	34	39	named
+23	40	68	SAM ( sparse access memory )
+24	0	15	By thresholding
+24	16	36	memory modifications
+24	37	39	to
+24	42	55	sparse subset
+24	62	67	using
+24	68	93	efficient data structures
+24	94	97	for
+24	98	129	content - based read operations
+24	132	141	our model
+24	145	152	optimal
+24	153	155	in
+24	156	170	space and time
+24	171	186	with respect to
+24	187	198	memory size
+2	0	42	Scaling Memory - Augmented Neural Networks
+15	36	68	memory augmented neural networks
+137	0	34	Learning with sparse memory access
+145	0	5	shows
+145	11	24	sparse models
+145	37	47	learn with
+145	48	69	comparable efficiency
+145	34	36	to
+145	77	89	dense models
+145	111	116	learn
+145	117	133	more effectively
+145	134	137	for
+145	159	195	priority sort and associative recall
+148	0	25	Scaling with a curriculum
+160	0	3	For
+160	4	13	all tasks
+160	16	19	SAM
+160	32	47	advance further
+160	48	52	than
+160	57	69	other models
+160	76	78	in
+160	83	106	associative recall task
+160	125	132	advance
+160	133	140	through
+160	145	155	curriculum
+160	29	31	to
+160	159	168	sequences
+160	169	186	greater than 4000
+164	0	36	Question answering on the Babi tasks
+169	4	9	MANNs
+169	12	18	except
+169	23	26	NTM
+169	33	46	able to learn
+169	47	56	solutions
+169	57	70	comparable to
+169	75	96	previous best results
+169	99	109	failing at
+169	110	116	only 2
+169	117	119	of
+169	124	129	tasks
+170	4	8	SDNC
+170	20	25	solve
+170	26	35	all but 1
+170	36	38	of
+170	43	48	tasks
+170	55	75	best reported result
+170	76	78	on
+170	79	83	Babi
+174	15	18	NTM
+174	23	37	perform poorly
+175	0	27	Learning on real world data
+187	0	3	SAM
+187	4	16	outperformed
+187	17	29	other models
+192	0	16	All of the MANNs
+192	22	29	able to
+192	30	37	perform
+192	38	49	much better
+192	50	54	than
+192	55	61	chance

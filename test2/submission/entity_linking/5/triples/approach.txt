@@ -1,0 +1,7 @@
+(method||reducing||vocabulary of senses)
+(vocabulary of senses||of||Word Net)
+(meaning||of||every word)
+(vocabulary of senses||by selecting||minimal set of senses)
+(minimal set of senses||required for differentiating||meaning)
+(Approach||propose||method)
+(Contribution||has||Approach)

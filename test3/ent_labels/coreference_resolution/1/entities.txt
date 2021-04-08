@@ -1,0 +1,101 @@
+104	11	19	pretrain
+104	20	29	our model
+104	46	49	for
+104	50	68	around 200 K steps
+104	73	76	use
+104	81	99	learned parameters
+104	100	103	for
+104	104	118	initialization
+105	13	16	set
+105	21	27	number
+105	28	30	of
+105	31	51	sampled trajectories
+105	64	68	tune
+105	73	97	regularization parameter
+105	105	107	in
+105	108	150	{ 10 ?5 , 10 ?4 , 0.001 , 0.01 , 0.1 , 1 }
+105	155	158	set
+105	165	171	10 ? 4
+23	19	26	propose
+23	29	94	goal - directed endto - end deep reinforcement learning framework
+23	95	105	to resolve
+23	106	117	coreference
+24	18	26	leverage
+24	31	50	neural architecture
+24	54	56	as
+24	57	75	our policy network
+24	84	92	includes
+24	93	101	learning
+24	102	121	span representation
+24	124	131	scoring
+24	132	157	potential entity mentions
+24	164	174	generating
+24	177	201	probability distribution
+24	202	247	over all possible coreference linking actions
+24	248	252	from
+24	257	272	current mention
+24	273	275	to
+24	280	291	antecedents
+25	7	15	sequence
+25	16	18	of
+25	19	34	linking actions
+25	46	65	our reward function
+25	69	76	used to
+25	77	84	measure
+25	85	93	how good
+25	98	128	generated coreference clusters
+25	144	163	directly related to
+25	164	194	coreference evaluation metrics
+26	13	22	introduce
+26	26	53	entropy regularization term
+26	54	66	to encourage
+26	67	78	exploration
+26	83	90	prevent
+26	95	101	policy
+26	102	106	from
+26	107	129	prematurely converging
+26	130	132	to
+26	135	152	bad local optimum
+27	13	19	update
+27	24	61	regularized policy network parameters
+27	62	70	based on
+27	75	82	rewards
+27	83	98	associated with
+27	99	108	sequences
+27	109	111	of
+27	112	127	sampled actions
+27	140	151	computed on
+27	156	176	whole input document
+115	50	75	our base reinforced model
+115	76	84	improves
+115	89	106	average F 1 score
+115	107	113	around
+115	114	122	2 points
+115	125	156	statistical significant t- test
+115	157	161	with
+115	162	170	p < 0.05
+120	10	24	our full model
+120	25	33	achieves
+120	38	70	state - of the - art performance
+120	71	73	of
+120	74	91	73.8 % F1 - score
+120	97	102	using
+120	103	134	ELMo and entropy regularization
+117	22	27	using
+117	28	50	entropy regularization
+117	51	63	to encourage
+117	64	75	exploration
+117	80	87	improve
+117	92	98	result
+117	99	101	by
+117	102	109	1 point
+118	11	22	introducing
+118	27	61	context - dependent ELMo embedding
+118	62	64	to
+118	65	79	our base model
+118	92	98	boosts
+118	103	114	performance
+2	49	71	Coreference Resolution
+101	0	11	Experiments
+109	0	7	Results
+

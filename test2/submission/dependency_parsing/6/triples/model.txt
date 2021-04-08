@@ -1,0 +1,7 @@
+(neural graphbased approach||to achieve||competitive performance)
+(competitive performance||build||network)
+(network||uses||more regularization)
+(affine label classifier||with||biaffine ones)
+(network||has||larger)
+(Model||modify||neural graphbased approach)
+(Contribution||has||Model)

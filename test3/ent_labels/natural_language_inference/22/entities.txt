@@ -1,0 +1,144 @@
+193	9	14	study
+193	19	31	contribution
+193	32	34	of
+193	39	52	ARU component
+194	4	12	accuracy
+194	13	22	decreases
+194	43	50	drop to
+194	51	58	88.25 %
+196	22	39	attentive pooling
+196	43	49	better
+196	50	54	than
+196	55	66	max pooling
+197	11	17	remove
+197	22	37	highway network
+197	44	52	accuracy
+197	58	62	drop
+197	63	65	to
+197	66	73	88.36 %
+198	27	54	character - level embedding
+198	61	69	accuracy
+198	75	79	drop
+198	80	82	to
+198	83	90	88.26 %
+163	0	4	ESIM
+163	7	42	Enhanced Sequential Inference Model
+163	43	45	is
+163	49	74	interaction - based model
+163	75	78	for
+163	79	105	natural language inference
+166	0	5	BiMPM
+166	8	51	Bilateral Multi- Perspective Matching model
+166	58	101	interaction - based sentence matching model
+166	102	106	with
+166	107	127	superior performance
+168	0	3	SSE
+168	6	41	Shortcut - Stacked Sentence Encoder
+168	48	87	encodingbased sentence - matching model
+168	96	104	enhances
+168	105	125	multi - layer BiLSTM
+168	126	130	with
+168	131	154	short - cut connections
+170	0	4	DIIN
+170	7	44	Densely Interactive Inference Network
+170	51	76	interaction - based model
+170	77	80	for
+170	81	115	natural language inference ( NLI )
+153	0	3	For
+153	4	17	Quora dataset
+153	23	26	use
+153	31	57	Glove - 840B - 300D vector
+153	58	60	as
+153	65	91	pre-trained word embedding
+154	4	23	character embedding
+154	27	47	randomly initialized
+154	48	52	with
+154	53	58	150 D
+154	67	78	hidden size
+154	79	81	of
+154	82	87	BiGRU
+154	91	97	set to
+154	98	101	300
+157	0	13	Dropout layer
+157	22	32	applied to
+157	37	43	output
+157	44	46	of
+157	51	74	attentive pooling layer
+157	77	81	with
+157	84	96	dropout rate
+157	97	99	of
+157	100	103	0.1
+158	3	17	Adam optimizer
+158	21	28	used to
+158	29	37	optimize
+158	38	63	all the trainable weights
+159	4	17	learning rate
+159	21	27	set to
+159	28	34	4e - 4
+159	43	53	batch size
+159	57	63	set to
+159	64	67	200
+160	61	74	SGD optimizer
+160	75	79	with
+160	82	95	learning rate
+160	21	23	of
+160	99	105	1e - 3
+160	114	121	to find
+160	124	144	better local optimum
+155	3	6	set
+155	9	12	0.8
+155	13	15	in
+155	20	46	multi - task loss function
+178	0	13	Quora dataset
+178	16	37	BiMPM and ESIM models
+178	38	45	without
+178	46	82	any sentence interaction information
+178	92	102	very close
+178	106	110	DIIN
+178	117	165	state - of - the - art interaction - based model
+179	0	13	LCQMC dataset
+180	25	29	show
+180	35	44	our model
+180	45	56	outperforms
+180	57	84	state - of the - art models
+181	0	10	BQ dataset
+182	14	23	our model
+182	24	35	outperforms
+182	36	65	state - of - the - art models
+182	66	68	by
+182	71	83	large margin
+182	86	94	reaching
+182	95	104	83 . 62 %
+182	107	116	recording
+182	121	155	state - of - the - art performance
+183	0	11	TCS dataset
+184	22	36	our MSEM model
+184	37	45	achieves
+184	50	66	best performance
+28	3	9	employ
+28	12	27	connected graph
+28	28	37	to depict
+28	42	61	paraphrase relation
+28	62	69	between
+28	70	79	sentences
+28	80	83	for
+28	88	95	PI task
+28	102	109	propose
+28	112	148	multi-task sentence - encoding model
+28	157	163	solves
+28	243	257	simultaneously
+28	168	198	paraphrase identification task
+28	207	242	sentence intent classification task
+29	13	41	semantic retrieval framework
+29	47	57	integrates
+29	62	102	encoding - based sentence matching model
+29	103	107	with
+29	112	158	approximate nearest neighbor search technology
+29	180	184	find
+29	189	210	most similar question
+29	211	223	very quickly
+29	224	228	from
+29	229	252	all available questions
+2	62	80	Question Answering
+4	0	25	Question Answering ( QA )
+5	46	48	QA

@@ -1,0 +1,175 @@
+title
+Neural Models for Reasoning over Multiple Mentions using Coreference
+abstract
+Many problems in NLP require aggregating information from multiple mentions of the same entity which maybe far apart in the text .
+Existing Recurrent Neural Network ( RNN ) layers are biased towards short - term dependencies and hence not suited to such tasks .
+We present a recurrent layer which is instead biased towards coreferent dependencies .
+The layer uses coreference annotations extracted from an external system to connect entity mentions belonging to the same cluster .
+Incorporating this layer into a state - of - the - art reading comprehension model improves performance on three datasets - Wikihop , LAMBADA and the b Abi AI tasks - with large gains when training data is scarce .
+Introduction
+A long - standing goal of NLP is to build systems capable of reasoning about the information present in text .
+One important form of reasoning for Question Answering ( QA ) models is the ability to aggregate information from multiple mentions of entities .
+We call this coreference - based reasoning since multiple pieces of information , which may lie across sentence , paragraph or document boundaries , are tied together with the help of referring expressions which denote the same real - world entity .
+shows examples .
+QA models which directly read text to answer questions ( commonly known as Reading Comprehension systems ) , typically consist of RNN layers .
+RNN layers have a bias towards sequential recency , i.e. a tendency to favor short - term dependencies .
+Attention mechanisms alleviate part of the issue , but empirical studies suggest RNNs with attention also have difficulty modeling long - term dependencies .
+We conjecture that when training data is scarce , and inductive biases play an important role , RNN - based models would have trouble with coreference - based reasoning .
+At the same time , systems for coreference resolution have seen a gradual increase in accuracy over the years .
+Hence , in this work we use the annotations produced by such systems to adapt a standard RNN layer by introducing a bias towards coreferent recency .
+Specifically , given an input sequence and coreference clusters extracted from an external system , we introduce a term in the update equations for Gated Recurrent Units ( GRU ) which depends on the hidden state of the coreferent antecedent of the current token ( if it exists ) .
+This way hidden states are propagated along coreference chains and the original sequence in parallel .
+We compare our Coref - GRU layer with the regular GRU layer by incorporating it in a recent model for reading comprehension .
+On synthetic data specifically constructed to test coreferencebased reasoning , C - GRUs lead to a large improvement over regular GRUs .
+We show that the structural bias introduced and coreference signals are both important to reach high performance in this case .
+On a more realistic dataset , with noisy coreference annotations , we see small but significant improvements over a state - of - the - art baseline .
+As we reduce the training data , the gains become larger .
+Lastly , we apply the same model to a broad - context language modeling task , where coreference resolution is an important factor , and show improved performance over state - of - the - art .
+Related Work
+Entity - based models .
+presented a generative model for jointly predicting the next word in the text and its gold - standard coreference annotation .
+The difference in our work is that we look at the task of reading comprehension , and also work in the more practical setting of system extracted coreferences .
+EntNets also maintain dynamic memory slots for entities , but do not use coreference signals and instead update all memories after reading each sentence , which leads to poor performance in the low - data regime ( c.f.. model references in text as explicit latent variables , but limit their work to text generation .
+used a pooling operation to aggregate entity information across multiple mentions .
+also noted the importance of reference resolution for reading comprehension , and we compare our model to their one - hot pointer reader .
+Syntactic - recency .
+Recent work has used syntax , in the form of dependency trees , to replace the sequential recency bias in RNNs with a syntactic recency bias .
+However , syntax only looks at dependencies within sentence boundaries , whereas our focus here is on longer ranges .
+Our resulting layer is structurally similar to Graph LSTMs , with an additional attention mechanism over the graph edges .
+However , while found that using coreference did not lead to any gains for the task of relation extraction , here we show that it has a positive impact on the reading comprehension task .
+Self - Attention models are becoming popular for modeling long - term dependencies , and may also benefit from coreference information to bias the learning of those dependencies .
+Here we focus on recurrent layers and leave such an analysis to future work .
+Part of this work was described in an unpub - lished preprint .
+The current paper extends that version and focuses exclusively on coreference relations .
+We also report results on the WikiHop dataset , including the performance of the model in the low - data regime .
+Model
+Coref - GRU ( C - GRU ) Layer .
+Suppose we are given an input sequence w 1 , w 2 , . . . , w T along with their word vectors x 1 , . . . , x T and annotations for the most recent coreferent antecedent for each token y 1 , . . . , y T , where y t ?
+{ 0 , . . . , t ?
+1 } and y t = 0 denotes the null antecedent ( for tokens not belonging to any cluster ) .
+We assume all tokens belonging to a mention in a cluster belong to that cluster , and there are C clusters in total .
+Our recurrent layer is adapted from GRU cells , but similar extensions can be derived for other recurrent cells as well .
+The update equations in a GRU all take the same basic form given by :
+The bias for sequential recency comes from the second term U h t ?1 .
+In this work we add another term to introduce a bias towards coreferent recency instead :
+where h yt is the hidden state of the coreferent antecedent of wt ( with h 0 = 0 ) , ?
+sand ?
+care nonlinear functions applied to the hidden states coming from the sequential antecedent and the coreferent antecedent , respectively , and ?
+t is a scalar weight which decides the relative importance of the two terms based on the current input ( so that , for example , pronouns may assign a higher weight for the coreference state ) .
+When y t = 0 , ?
+t is set to 1 , otherwise it is computed using a keybased addressing scheme , as
+, where k is a trainable key vector .
+In this work we use simple slicing func -
+which decompose the hidden states into a sequential and a coreferent component , respectively .
+shows an illustration of the layer , and the full update equations are given in Appendix A.
+Connection to Memory Networks .
+We can also view the model as a memory network with a memory state
+Mt at each time step which is a C d matrix .
+The rows of this memory matrix correspond to the state of each coreference cluster at time step t.
+The main difference between Coref - GRUs and atypical memory network such as EntNets lies in the fact that we use coreference annotations to read and write from the memory rather than let model learn how to access the memory .
+With Coref - GRUs , only the content of the memories needs to be learned .
+As we shall see in Section 4 , this turns out to be a useful bias in the low - data regime .
+Bidirectional C - GRU .
+To extend to the bidirectional case , a second layer is fed the same sequence in the reverse direction , x T , . . . , x 1 and y t ?
+{ 0 , t + 1 , . . . , T } now denotes the immediately descendent coreferent token from wt .
+Outputs from the two layers are then concatenated to form the bi-directional output ( see ) .
+Complexity .
+The resulting layer has the same time - complexity as that of a regular GRU layer .
+The memory complexity increases since we have to keep track of the hidden states for each coreference cluster in the input .
+If there are C clusters and B is the batch size , the resulting complexity is by O ( BT Cd ) .
+This scales linearly with the input size T , however we leave exploration of more efficient architectures to future work .
+Reading comprehension architecture .
+All tasks we look at involve tuples of the form ( p , q , a , C ) , where the goal is to find the answer a from candidates C to question q with passage p as context .
+We use the Gated - Attention ( GA ) reader as abase architecture , which computes representations of the passage by passing it through multiple bidirectional GRU layers with an attention mechanism in between layers .
+We compare the original GA architecture ( GA w/ GRU ) with one where the bidirectional GRU layers are replaced with bidirectional C - GRU layers ( GA w / C - GRU ) .
+Performance is reported in terms of the accuracy of detecting the correct answer from C , and all models are trained using cross - entropy loss .
+When comparing two models we ensure the number of parameters are the same in each .
+Other implementation details are listed in Appendix B.
+Experiments & Results
+Method
+Avg Max # failed :
+Accuracy on b Abi -1 K , averaged across all 20 tasks .
+Following previous work we run each task for 10 random seeds , and report the Avg and Max ( based on dev set ) performance .
+A task is considered failed if its Max performance is < 0.95 .
+BAbi AI tasks .
+Our first set of experiments are on the 1 K training version of the synthetic b Abi AI tasks .
+The passages and questions in this dataset are generated using templates , removing many complexities inherent in natural language , but it still provides a useful testbed for us since some tasks are specifically constructed to test the coreference - based reasoning we tackle here .
+Experiments on more natural data are described below .
+shows a comparison of EntNets , QRNs ( the best published results on b Abi -1 K ) , and our models .
+We also include the results for a single layer version of GA Reader ( which we denote simply as Bi - GRU or Bi - C - GRU when using coreference ) to enable fair comparison with EntNets .
+In each case we see clear improvements of using C - GRU layers over GRU layers .
+Interestingly , EntNets , which have > 99 % performance when trained with 10K examples only reach 70 % performance with 1 K training examples .
+The Bi - C - GRU model significantly improves on this baseline , which shows that , with less data , coreference annotations can provide a useful bias for a memory network on how to read and write memories .
+A break - down of task - wise performance is given in Appendix C. Comparing C - GRU to the GRU based method , we find that the main gains are on tasks 2 ( two supporting facts ) , 3 ( three supporting facts ) and 16 ( basic induction ) .
+All these tasks require aggregation of information across sentences to derive the answer .
+Comparing to the QRN baseline , we found that C - GRU was significantly worse on task 15 ( basic deduction ) .
+On closer examination we found that this was because our simplistic coreference module which matches tokens exactly was notable to resolve " mice " to " mouses " and " cats " to " cat " .
+On the other hand , C - GRU was significantly better than QRN on task 16 ( basic induction ) .
+We also include a baseline which uses coreference features as 1 - hot vectors appended to the input word vectors ( GA w/ GRU + 1 - hot ) .
+This provides the model with information about the coreference clusters , but does not improve performance , suggesting that the regular GRU is unable to track the given coreference information across long distances to solve the task .
+On the other hand , in ( left ) we show how the performance of GA w / C - GRU varies as we remove gold - standard mentions from coreference clusters , or if we replace them with random mentions ( GA w / random - GRU ) .
+In both cases there is a sharp drop in performance , showing that specifically using coreference for connecting mentions is important .
+Wikihop dataset .
+Next we apply our model to the Wikihop dataset , which is specifically constructed to test multi-hop reading comprehension across documents .
+Each instance in this dataset consists of a collection of passages ( p 1 , . . . , p N ) , and a query of the form ( h , r ) where h is an entity and r is a relation .
+The task is to find the tail entity t from a set of provided candidates C .
+As preprocessing we concatenate all documents in a random order , and extract coreference annotations from the Berkeley Entity Resolution system 62 % F 1 score on the CoNLL 2011 test set .
+We only keep the coreference clusters which contain at least one candidate from C or an entity which co-occurs with the head entity h.
+We report results in when using the full training set , as well as when using a reduced training set of sizes 1 K and 5 K , to test the model under a low - data regime .
+In we also show the training curves of exp ( ? loss ) on the validation set .
+We see higher performance for the C - GRU model in the low data regime , and better generalization throughout the training curve for all three settings .
+This supports our conjecture that the GRU layer has difficulty learning the kind of coreference - based reasoning required in this dataset , and that the bias towards coreferent recency helps with that .
+However , perhaps surprisingly , given enough data both models perform comparably .
+This could either indicate that the baseline learns the required reasoning patterns when given enough data , or , that the bias towards corefence - based reasoning hurts performance for some other types of questions .
+Indeed , there are 9 % questions which are answered correctly by the baseline but not by C - GRU , however , we did not find any consistent patterns among these in our analyses .
+Lastly , we note that both models vastly outperform the best reported result of BiDAf from 1 . We believe this is because the GA models select answers from the list of candidatees , whereas BiDAF ignores those candidates .
+Method overall context
+Chu et al. 0.4900 - GA w/ GRU 0.5398 0.6677 GA w/ GRU + 1 - hot 0.5338 0.6603 GA w/ C - GRU 0.5569 0.6888 LAMBADA dataset .
+Our last set of experiments is on the broad - context language modeling task of LAMBADA dataset .
+This dataset consists of passages 4 - 5 sentences long , where the last word needs to be predicted .
+Interestingly , though , the passages are filtered such that human volunteers were able to predict the missing token given the full passage , but not given only the last sentence .
+Hence , predicting these tokens involves a broader understanding of the whole passage .
+Analysis of the questions suggests that around 20 % of the questions need coreference understanding to answer correctly .
+Hence , we apply our model which uses coreference information for this task .
+We use the same setup as which formulated the problem as a reading comprehension one by treating the last sentence as query , and the remaining passage as context to extract the answer from .
+In this manner only 80 % of the questions are answerable , but the performance increases substantially compared to pure language modeling based approaches .
+For this dataset we used Stanford CoreNLP to extract coreferences , which achieved 0.63 F1 on the CoNLL test set .
+shows a comparison of the GA w/ GRU baseline and GA w/ C - GRU models .
+We see a significant gain in performance when using the layer with coreference bias .
+Furthermore , the 1 - hot baseline which uses the same coreference information , but with sequential recency bias fails to improve over the regular GRU layer .
+While the improvement for C - GRU is small , it is significant , and we note that questions in this dataset involve several different types of reasoning with better performance than reported here ( as of April 2018 ) .
+Since we were unable to find publications for these models we omit them here .
+out of which we only tackle one specific kind .
+The proposed GA w / C - GRU layer sets a new state - of the - art on this dataset .
+Conclusion
+We present a recurrent layer with a bias towards coreferent recency , with the goal of tackling reading comprehension problems which require aggregating information from multiple mentions of the same entity .
+Our experiments show that when combined with a powerful reading architecture , the layer provides a useful inductive bias for solving problems of this kind .
+In future work , we aim to apply this model to other problems where longterm dependencies at the document level are important .
+Noise in the coreference annotations has a detrimental effect on the performance ) , hence we also aim to explore joint models which learn to do coreference resolution and reading together .
+A C - GRU update equations
+For simplicity , we introduce the variable mt which concatenates ( || ) the sequential and coreferent hidden states :
+Then the update equations are given by :
+The attention parameter ?
+t is given by :
+where k 1 and k 2 are trainable key vectors .
+B Implementation details
+We use K = 3 layers with the GA architecture .
+We keep the same hyperparameter settings when using GRU or C - GRU layers , which we describe here .
+For the bAbi dataset , we use a hidden state size of d = 64 , batch size of B = 32 , and learning rate 0.01 which is halved after every 120 updates .
+We also use dropout with rate 0.1 at the output of each layer .
+The maximum number of coreference clusters across all tasks was C = 13 .
+Half of the tasks in this dataset are extractive , meaning the answer is present in the passage , whereas the other half are classification tasks , where the answer is in a list of candidates which may not be in the passage .
+For the extractive tasks , we use the attention sum layer as described in the GA Reader paper .
+For the classification tasks we replace this with a softmax layer for predicting one of the classes .
+For the Wikihop dataset , we use a hidden state size of d = 64 , batch size B = 16 , and learning rate of 0.0005 which was halved every 2500 updates .
+The maximum number of coreference clusters was set to 50 for this dataset .
+We used dropout of 0.2 in between the intermediate layers , and initialized word embeddings with Glove .
+We also used character embeddings , which were concatenated with the word embeddings , of size 10 .
+These were output from a CNN layer with 50 filters each of width 5 .
+Following , we also appended a feature to the word embeddings in the passage which indicated if the token appeared in the query or not .
+For the LAMBADA dataset , we use a hidden state size of d = 256 , batch size of B = 64 , and learning rate of 0.0005 which was halved every 2 epochs .
+Word vectors were initialized with Glove , and dropout of 0.2 was applied after intermediate layers .
+The maximum number of coreference clusters in this dataset was 15 . :
+Breakdown of task - wise performance on bAbi dataset .
+Tasks where C - GRU is significant better / worse than either GRU or QRNs are highlighted .
+C Task - wise b Abi performance

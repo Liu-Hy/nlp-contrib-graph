@@ -1,0 +1,84 @@
+202	0	14	QASent dataset
+207	6	12	adding
+207	13	39	some word overlap features
+207	40	47	between
+207	52	65	two sentences
+207	72	83	performance
+207	88	110	improved significantly
+214	7	15	see that
+214	16	25	our model
+214	46	49	got
+214	54	62	best MAP
+214	63	68	among
+214	69	86	all previous work
+214	95	109	comparable MRR
+214	110	114	than
+214	115	118	dos
+215	0	15	Wiki QA dataset
+218	4	20	best performance
+218	56	67	acquired by
+218	70	86	bigram CNN model
+218	87	101	combining with
+218	106	127	word overlap features
+225	0	12	MSRP dataset
+237	49	58	our model
+237	59	67	obtained
+237	70	92	comparable performance
+237	113	126	without using
+237	127	146	any sparse features
+237	149	174	extra annotated resources
+237	179	207	specific training strategies
+45	19	26	propose
+45	29	40	novel model
+45	83	108	decomposing and composing
+45	109	126	lexical semantics
+45	127	131	over
+45	132	141	sentences
+46	0	5	Given
+46	8	21	sentence pair
+46	28	33	model
+46	34	44	represents
+46	45	54	each word
+46	55	57	as
+46	60	83	low -dimensional vector
+46	106	116	calculates
+46	119	143	semantic matching vector
+46	144	147	for
+46	148	157	each word
+46	158	166	based on
+46	167	176	all words
+46	177	179	in
+46	184	198	other sentence
+47	5	13	based on
+47	18	42	semantic matching vector
+47	45	61	each word vector
+47	65	80	decomposed into
+47	81	95	two components
+47	100	117	similar component
+47	124	144	dissimilar component
+48	3	6	use
+48	7	25	similar components
+48	26	28	of
+48	29	42	all the words
+48	43	55	to represent
+48	60	73	similar parts
+48	74	76	of
+48	81	94	sentence pair
+48	101	122	dissimilar components
+48	123	125	of
+48	126	136	every word
+48	137	145	to model
+48	150	166	dissimilar parts
+48	167	177	explicitly
+49	15	42	two - channel CNN operation
+49	46	55	performed
+49	56	66	to compose
+49	71	104	similar and dissimilar components
+49	105	109	into
+49	112	126	feature vector
+50	14	37	composed feature vector
+50	41	49	utilized
+50	50	60	to predict
+50	65	84	sentence similarity
+2	0	28	Sentence Similarity Learning
+4	18	37	sentence similarity

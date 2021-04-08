@@ -1,0 +1,164 @@
+52	55	114	http://www.cbsr.ia.ac.cn/users/scliao/ projects / npdface /
+232	3	7	used
+232	10	28	detection template
+232	29	31	of
+232	32	44	24 24 pixels
+233	3	6	set
+233	11	24	maximum depth
+233	25	27	of
+233	32	48	tree classifiers
+233	55	65	learned as
+233	66	71	eight
+233	82	108	at most eight NPD features
+233	120	133	evaluated for
+233	134	154	each tree classifier
+234	0	2	In
+234	7	28	soft cascade training
+234	34	37	set
+234	42	51	threshold
+234	52	54	of
+234	55	64	each exit
+234	65	67	as
+234	72	85	minimal score
+234	86	88	of
+234	89	105	positive samples
+235	0	18	Our final detector
+235	19	27	contains
+235	28	54	1,226 deep quadratic trees
+235	61	80	46,401 NPD features
+238	2	29	subset of the training data
+238	46	55	including
+238	56	74	12,102 face images
+238	79	100	12,315 nonface images
+239	4	22	detection template
+239	23	25	is
+239	26	38	20 20 pixels
+240	4	20	detector cascade
+240	21	29	contains
+240	30	39	15 stages
+240	46	49	for
+240	50	60	each stage
+240	67	91	target false accept rate
+240	92	95	was
+240	96	99	0.5
+240	102	106	with
+240	109	123	detection rate
+240	124	126	of
+240	127	132	0.999
+237	26	33	trained
+237	36	62	near frontal face detector
+237	148	152	with
+237	153	158	depth
+237	119	121	of
+237	162	166	four
+237	63	68	using
+237	73	94	proposed NPD features
+237	103	147	classic cascade of regression trees ( CART )
+254	14	27	FDDB Database
+265	10	23	observed that
+265	28	43	proposed method
+265	44	55	outperforms
+265	56	84	most of the baseline methods
+274	28	49	proposed NPD detector
+274	50	58	is among
+274	63	77	top performers
+274	78	81	for
+274	86	101	discrete metric
+266	4	30	proposed NPD face detector
+266	31	33	is
+266	38	53	second best one
+266	54	56	at
+266	57	63	FP = 0
+266	64	67	for
+266	72	87	discrete metric
+266	96	110	third best one
+266	111	114	for
+266	119	136	continuous metric
+278	33	56	Joint Cascade algorithm
+278	57	59	is
+278	64	80	most competitive
+278	91	102	in terms of
+278	103	121	accuracy and speed
+295	14	28	GENKI Database
+307	26	52	proposed NPD face detector
+307	53	78	significantly outperforms
+307	79	83	both
+307	88	129	Viola - Jones and PittPatt face detectors
+308	14	32	CMU - MIT Database
+314	24	35	compared to
+314	40	75	Viola - Jones frontal face detector
+314	82	94	NPD detector
+314	95	103	performs
+314	104	110	better
+314	111	115	when
+314	120	145	number of false positives
+314	148	155	FP < 50
+314	170	184	slightly worse
+314	185	189	than
+314	190	203	Viola - Jones
+314	204	206	at
+314	207	217	higher FPs
+38	64	73	construct
+38	76	117	single soft - cascade AdaBoost classifier
+38	118	127	to handle
+38	128	150	complex face manifolds
+38	155	194	arbitrary pose and occlusion conditions
+38	14	21	propose
+38	24	59	deep quadratic tree learning method
+34	21	49	simple pixel - level feature
+34	52	58	called
+34	63	98	Normalized Pixel Difference ( NPD )
+35	3	6	NPD
+35	10	21	computed as
+35	26	31	ratio
+35	32	34	of
+35	39	49	difference
+35	50	57	between
+35	58	88	any two pixel intensity values
+35	89	91	to
+35	96	115	sum of their values
+36	4	15	NPD feature
+36	20	48	several desirable properties
+36	51	58	such as
+36	59	75	scale invariance
+36	78	89	boundedness
+36	96	137	ability to reconstruct the original image
+40	14	38	different types of faces
+40	46	72	automatically divided into
+40	73	89	different leaves
+40	90	92	of
+40	95	110	tree classifier
+40	121	142	complex face manifold
+40	143	145	in
+40	148	170	high dimensional space
+40	178	192	partitioned in
+40	197	213	learning process
+41	12	43	" divide and conquer " strategy
+41	47	53	tackle
+41	54	82	unconstrained face detection
+41	83	85	in
+41	88	105	single classifier
+41	108	115	without
+41	116	128	pre-labeling
+41	129	131	of
+41	132	137	views
+41	138	140	in
+41	145	157	training set
+41	158	160	of
+41	161	172	face images
+42	4	27	resulting face detector
+42	31	40	robust to
+42	41	51	variations
+42	52	54	in
+42	55	90	pose , occlusion , and illumination
+42	107	136	blur and low image resolution
+37	80	113	resulting face detection template
+37	128	138	scaled for
+37	139	164	multiscale face detection
+37	11	15	show
+37	21	33	NPD features
+37	41	54	obtained from
+37	57	69	lookup table
+4	59	73	face detection
+14	24	50	automatic face recognition
+19	83	119	unconstrained face detection problem

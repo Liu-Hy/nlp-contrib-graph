@@ -1,0 +1,258 @@
+title
+Disconnected Recurrent Neural Networks for Text Categorization
+abstract
+Recurrent neural network ( RNN ) has achieved remarkable performance in text categorization .
+RNN can model the entire sequence and capture long - term dependencies , but it does not do well in extracting key patterns .
+In contrast , convolutional neural network ( CNN ) is good at extracting local and position - invariant features .
+In this paper , we present a novel model named disconnected recurrent neural network ( DRNN ) , which incorporates position - invariance into RNN .
+By limiting the distance of information flow in RNN , the hidden state at each time step is restricted to represent words near the current position .
+The proposed model makes great improvements over RNN and CNN models and achieves the best performance on several benchmark datasets for text categorization .
+Introduction
+Text categorization is a fundamental and traditional task in natural language processing ( NLP ) , which can be applied in various applications such as sentiment analysis , question classification and topic classification .
+Nowadays , one of the most commonly used methods to handle the task is to represent a text with a low dimensional vector , then feed the vector into a softmax function to calculate the probability of each category .
+Recurrent neural network ( RNN ) and convolutional neural network ( CNN ) are two kinds of neural networks usually used to represent the text .
+RNN can model the whole sequence and capture long - term dependencies .
+However , modeling the entire sequence sometimes case1 :
+One of the seven great unsolved mysteries of mathematics may have been cracked by a reclusive Russian .
+case2 : A reclusive Russian may have cracked one of the seven great unsolved mysteries of mathematics .
+can be a burden , and it may neglect key parts for text categorization .
+In contrast , CNN is able to extract local and position - invariant features well .
+is an example of topic classification , where both sentences should be classified as Science and Technology .
+The key phrase that determines the category is unsolved mysteries of mathematics , which can be well extracted by CNN due to position - invariance .
+RNN , however , does n't address such issues well because the representation of the key phrase relies on all the previous terms and the representation changes as the key phrase moves .
+In this paper , we incorporate positioninvariance into RNN and propose a novel model named Disconnected Recurrent Neural Network ( DRNN ) .
+Concretely , we disconnect the information transmission of RNN and limit the maximal transmission step length as a fixed value k , so that the representation at each step only depends on the previous k ?
+1 words and the current word .
+In this way , DRNN can also alleviate the burden of modeling the entire document .
+To maintain the position - invariance , we utilize max pooling to extract the important information , which has been suggested by .
+Our proposed model can also be regarded as a special 1D CNN where convolution kernels are replaced with recurrent units .
+Therefore , the maximal transmission step length can also be consid-ered as the window size in CNN .
+Another difference to CNN is that DRNN can increase the window size k arbitrarily without increasing the number of parameters .
+We also find that there is a trade - off between position - invariance and long - term dependencies in the DRNN .
+When the window size is too large , the position - invariance will dis appear like RNN .
+By contrast , when the window size is too small , we will lose the ability to model long - term dependencies just like CNN .
+We find that the optimal window size is related to the type of task , but affected little by training dataset sizes .
+Thus , we can search the optimal window size by training on a small dataset .
+We conduct experiments on seven large - scale text classification datasets introduced by .
+The experimental results show that our proposed model outperforms the other models on all of these datasets .
+Our contributions can be concluded as follows :
+1 . We propose a novel model to incorporate position - variance into RNN .
+Our proposed model can both capture long - term dependencies and local information well .
+2 .
+We study the effect of different recurrent units , pooling operations and window sizes on model performance .
+Based on this , we propose an empirical method to find the optimal window size .
+3 .
+Our proposed model outperforms the other models and achieves the best performance on seven text classification datasets .
+Related Work
+Deep neural networks have shown great success in many NLP tasks such as machine translation , sentiment classification , etc .
+Nowadays , nearly most of deep neural networks models are based on CNN or RNN .
+Below , we will introduce some important works about text classification based on them .
+Convolutional Neural Networks
+CNN has been used in natural language processing because of the local correlation and position - invariance .
+first utilize 1D CNN in part of speech ( POS ) , named entity recognition ( NER ) and semantic role labeling ( SRL ) .
+proposes to classify sentence by encoding a sentence with multiple kinds of convolutional filters .
+To capture the relation between words , propose a novel CNN model with a dynamic k-max pooling .
+introduce an empirical exploration on the use of character - level CNN for text classification .
+Shallow CNN can not encode long - term information well .
+Therefore , propose to use very deep CNN in text classification and achieve good performance .
+Similarly , propose a deep pyramid CNN which both achieves good performance and reduces training time .
+Recurrent Neural Networks RNN is suitable for handling sequence input like natural language .
+Thus , many RNN variants are used in text classification .
+utilize LSTM to model the relation of sentences .
+Similarly , propose hierarchical attention model which incorporates attention mechanism into hierarchical GRU model so that the model can better capture the important information of a document .
+incorporate the residual networks into RNN , which makes the model handle longer sequence .
+propose a novel LSTM with a cache mechanism to capture long - range sentiment information .
+Hybrid model
+Some researchers attempt to combine the advantages of CNN and RNN. ) extract local and global features by CNN and RNN separately .
+firstly model sentences by RNN , and then use CNN to get the final representation .
+replace convolution filters with deep LSTM , which is similar to what is proposed in this paper .
+The main differences are as follows .
+Firstly , they regard their models as CNN and set a small window size of 3 , while we propose to use a large window size .
+We argue that small window size makes the model lose the ability to capture long - term dependencies .
+Secondly , we utilize max pooling but not mean pooling , because max pooling can maintain position - invariance better .
+Finally , our DRNN model is more general and can make use of different kinds of recurrent units .
+We find that using GRU as recurrent units outperforms LSTM which is utilized by . :
+Three model architectures .
+In order to ensure the consistency of the hidden output , we pad k ?
+1 zero vectors on the left of the input sequence for DRNN and CNN .
+Here window size k is 3 .
+3 Method
+Recurrent Neural Network ( RNN )
+RNN is a class of neural network which models a sequence by incorporating the notion of time step .
+shows the structure of RNN .
+Hidden states at each step depend on all the previous inputs , which sometimes can be a burden and neglect the key information .
+A variant of RNN has been introduced by with the name of gated recurrent unit ( GRU ) .
+GRU is a special type of RNN , capable of learning potential long - term dependencies by using gates .
+The gating units can control the flow of information and mitigate the vanishing gradients problem .
+GRU has two types of gates : reset gate rt and update gate z t .
+The hidden state ht of GRU is computed as
+where h t?1 is the previous state , h t is the candidate state computed with new input information and is the element - wise multiplication .
+The update gate z t decides how much new information is updated .
+z t is computed as follows :
+here x t is the input vector at step t.
+The candidate stateh t is computed b ?
+where rt is the reset gate which controls the flow of previous information .
+Similarly to the update gate , the reset gate rt is computed as :
+We can see that the representation of step t depends upon all the previous input vectors .
+Thus , we can also express the tth step state shown in Equation .
+Disconntected Recurrent Neural Networks ( DRNN )
+To reduce the burden of modeling the entire sentence , we limit the distance of information flow in RNN .
+Like other RNN variants , we feed the input sequence into an RNN model and generate an output vector at each step .
+One important difference from RNN is that the state of our model at each step is only related to the previous k ?
+1 words but not all the previous words .
+Here k is a hyperparameter called window size that we need to set .
+Our proposed model DRNN is illustrated in .
+Since the output at each step only depends on the previous k ?
+1 words and current word , the output can also be regarded as a representation of a phrase with k words .
+Phrases with the same k words will always have the same representation no matter where they are .
+That is , we incorporate the position - invariance into RNN by disconnecting the information flow of RNN .
+Similarly , we can get the state ht as follows :
+Here k is the window size , and RN N can be naive RNN , LSTM , GRU or any other kinds of recurrent units .
+Comparison with Convolutional Neural
+Network
+here , we concatenate k word vectors and generate vector ct .
+Then we can get the output of convolution as follows :
+where
+Wis a set of convolution filters and b is a bias vector .
+Then a pooling operation can be applied after the convolutional layer and generate a fixed size vector .
+Similarly to RNN and DRNN , we can also represent the context vector of CNN as followings :
+Obviously , the parameters of convolution filters W increase as the window size k increases .
+By contrast , for DRNN the parameters do not increase with the increase of window size .
+Hence , DRNN can mitigate overfitting problem caused by the increase of parameters .
+DRNN for Text Classification
+DRNN is a general model framework , which can be used for a variety of tasks .
+In this paper , we only discuss how to apply DRNN in text categorization .
+We utilize GRU as recurrent units of DRNN and get the context representation of each step .
+Every w t - 3 w t - 2 w t - 1 wt ht ht w t - 3 w t - 2 w t - 1 w t : Dropout in DRNN .
+The dashed arrows indicate connections where dropout is applied .
+The left model only applies dropout in input and output layers , but the right model applies dropout in hidden states .
+context vector can be considered as a representation of a text fragment .
+Then we feed the context vectors into a multi - layer perceptron ( MLP ) to extract high - level features as illustrated in .
+Before feeding the vectors into MLP , we utilize Batch Normalization after DRNN , so that the model can alleviate the internal covariate shift problem .
+To get the text representation vector , we apply max pooing after MLP layer to extract the most important information and position - invariant features .
+Finally ,
+We feed the text representation vector into an MLP with rectified linear unit ( ReLU ) activation and send the output of MLP to a softmax function to predict the probability of each category .
+We use cross entropy loss function as follows :
+where ?
+i is the predicted probability and y i is the true probability of class i.
+To alleviate the overfitting problem , we apply dropout regularization in DRNN model .
+Dropout is usually applied in the input and output layers but not the hidden states of RNN , because the number of previous states is variable .
+In contrast , our DRNN model has a fixed window size for output at each step , so we also apply dropout in the hidden states .
+In this paper , we apply dropout in the input layer , output layer , and hidden states .
+The shows the difference to apply dropout between
+Datasets Introduction
+We use 7 large - scale text classification datasets which are proposed by .
+We summarize the datasets in .
+AG corpus is news and DBPedia is an ontology which comes from the Wikipedia .
+Yelp and Amazon corpus are reviews for which we should predict the sentiment .
+Here P. means that we only need to predict the polarities of the dataset , while F. indicates that we need predict the star number of the review .
+Yahoo! Answers ( Yah. A. ) is a question answering dataset .
+We can see that these datasets contain various domains and sizes , which would be credible to validate our models .
+Implementation Details
+We tokenize all the corpus with NLTK 's tokenizer .
+We limit the vocabulary size of each dataset as shown in .
+The words not in vocabulary are replaced with a special token UNK .
+also shows the window sizes that we set for these datasets .
+We utilize the 300D Glo Ve 840B vectors ( Pennington et al. , 2014 ) as our pre-trained word embeddings .
+For words that do not appear in Glo Ve , we average the vector representations of 8 words around the word in training dataset as its word vector , which has been applied by .
+When training our model , word embeddings are updated along with other parameters .
+We use Adadelta ( Zeiler , 2012 ) to optimize all the trainable parameters .
+The hyperparameter of Adadelta is set as Zeiler ( 2012 ) suggest that is 1 e ? 6 and ? is 0.95 .
+To avoid the gradient explosion problem , we apply gradient norm clipping .
+The batch size is set to 128 and all the dimensions of input vectors and hidden shows that our proposed model significantly outperforms all the other models in 7 datasets .
+DRNN does not have too many hyperparameters .
+The main hyperparameter is the window size which can be determined by an empirical method .
+The top block shows the traditional methods and some other neural networks which are not based on RNN or CNN .
+The linear model achieves a strong baseline in small datasets , but performs not well in large data .
+Fast - Text and region embedding methods achieve comparable performance with other CNN and RNN based models .
+Experimental Results
+The RNN based models are listed in the second block and CNN based models are in the third block .
+The D - LSTM is a discriminative LSTM model .
+Hierarchical attention network ( HAN ) is a hierarchical GRU model with attentive pooling .
+We can see that very deep CNN ( VDCNN ) performs well in large datasets .
+However , VDCNN is a CNN model with 29 convolutional layers , which needs to be tuned more carefully .
+By contrast , our proposed model can achieve : DGRU compared with CNN better performance in these datasets by simply setting a large window size .
+Char-CRNN in the fourth block is a model which combines positioninvariance of CNN and long - term dependencies of RNN .
+Nevertheless , they do not achieve great improvements over other models .
+They first utilize convolution operation to extract position - invariant features , and then use RNN to capture long - term dependencies .
+Here , modeling the whole sequence with RNN leads to a loss of position - invariance .
+Compared with their model , our model can better maintain the position - invariance by max pooling .
+shows that our model achieves 10 - 50 % relative error reduction compared with char - CRNN in these datasets .
+Comparison with RNN and CNN
+In this section , we compare DRNN with CNN , GRU and LSTM .
+To make these models comparable , we im - plement these models with the same architecture shown in .
+We just replace the DRNN with CNN or RNN .
+we firstly compare DRNN with CNN on AG dataset .
+shows that DRNN performs far better than CNN .
+In addition , the optimal window size of CNN is 3 , while for DRNN the optimal window size is 15 .
+It indicates that DRNN can model longer sequence as window size increases .
+By contrast , simply increasing the window size of CNN only results in overfitting .
+That is also why design complex CNN models to learn long - term dependencies other than simply increase the window size of convolution filters .
+In addition , we also compare our model with GRU and LSTM .
+The experimental results are shown in .
+Our model DRNN achieves much better performance than GRU and LSTM .
+Qualitative Analysis
+To investigate why DGRU performs better than CNN and GRU , we do some error analysis on Yelp P. dataset .
+shows two examples which have been both case1 :
+I love Hampton Inn but this location is in serious need of remodeling and some deep cleaning .
+Musty smell everywhere .
+case2 : Pretty good service , but really busy and noisy !!
+It gets a little overwhelming because the salespeople are very knowledgeable and bombard you with useless techy information to I guess impress you ??
+Anyways I bought the Ipad 3 and it is freaking awesome and makes up for the store .
+I would give the Ipad 3 a gazillion stars if I could .
+I left it at home today and got really sad when I was driving away .
+Boo Hoo !! :
+Examples of error analysis .
+The case 1 is a negative review and case 2 is a positive review .
+The first example is misclassified by CNN and classified correctly by GRU .
+The second one is just the contrary .
+DGRU classify both examples correctly .
+classified correctly by DRNN .
+The first example is misclassified by CNN and classified correctly by GRU .
+It is just contrary to the second example .
+Considering the first example , CNN may extract some key phrases such as I love and misclassifies the example as P ositive , while GRU can model long sequence and capture the information after but .
+For the second example , however , GRU still captures the information after but and neglects the key phrases such as pretty good service and freaking awesome , which leads to the wrong classification .
+DGRU can both extract the local key features such as pretty good service and capture long - term information such as the sentence after but , which makes it perform better than GRU and CNN .
+Component Analysis
+Recurrent Unit
+In this part , we study the impact of different recurrent units on the effectiveness of DRNN .
+We choose three types of recurrent units : naive RNN , LSTM and GRU which have been compared by .
+We carry out the experiments with different window sizes to eliminate the impact of window sizes .
+All the experiments in this part are conducted on the AG dataset .
+We find that the disconnected naive RNN performs just a little worse than disconnected LSTM ( DLSTM ) and disconnected GRU ( DGRU ) when the window size is lower than 5 .
+However , when the window size is more than 10 , its performance decreases rapidly and the error rate becomes even more than 20 % .
+We believe that it is due to vanishing gradient problem of naive RNN .
+From ( a ) , we can see that window sizes affect the performance of DGRU and DLSTM .
+DGRU achieves the best performance when the window size is 15 , while the best window size for DLSTM is 5 .
+The performance of DGRU is always better than DLSTM no matter what the window size is .
+We also find that the DGRU model converges faster than DLSTM in the process of training .
+Therefore , we apply GRU as recurrent units of DRNN in this paper for all the other experiments .
+Pooling Method Pooling is a kind of method to subsample the values to capture more important information .
+In NLP , pooling can also convert a variable - length tensor or vector into a fixed - length one , so that it can be dealt with more easily .
+There 're several kinds of pooling methods such as max pooling , mean pooling and attentive pooling .
+We still conduct the experiments on AG dataset .
+shows the experimental results of three pooling methods along with different window sizes .
+From ( b ) , we can see that the DRNN model with max pooling performs better than the others .
+This maybe because that max pooling can capture position - invariant features better .
+We find attentive pooling is not significantly affected by window sizes .
+However , the performance of mean pooling becomes worse as the window becomes larger .
+Window size analysis
+In this section , we mainly study what factors affect the optimal window size .
+In addition to the recurrent units and pooling methods discussed above , we believe the optimal window size maybe also related to the amount of training data and the type of task .
+In order to study the factors that affect the optimal window size , we conduct experiments on three datasets : AG , DBP and Yelp Polarity .
+To eliminate the influence of differrnt training data sizes , we conduct experiments with the same training data size .
+From ( a ) we can see that the type of task has a great impact on the optimal window size .
+For AG and DBPedia , the optimal window size is 15 .
+However , for Yelp P. the optimal window size is 40 or even larger .
+The result is intuitive , because sentiment analysis such as Yelp often involves long - term dependencies , while topic classification such as AG and DBPedia relys more on the key phrases .
+From ( b ) and ( c ) we can see the effect of different training data sizes on the optimal window size .
+Surprisingly , the effect of different training data sizes on the optimal window size seems little .
+We can see that for both DBPedia and Yelp corpus , the trend of error rate with the window size is similar .
+This shows that the number of training data has little effect on the choice of the optimal window size .
+It also provides a good empirical way for us to choose the optimal window size .
+That is , conducting experiments on a small dataset first to select the optimal window size .
+Conclusion
+In this paper , we incorporate position - invariance into RNN , so that our proposed model DRNN can both capture key phrases and long - term dependencies .
+We conduct experiments to compare the effects of different recurrent units and pooling operations .
+In addition , We also analyze what factors affect the optimal window size of DRNN and present an empirical method to search it .
+The experimental results show that our proposed model outperforms CNN and RNN models , and achieve the best performance in seven large - scale text classification datasets .

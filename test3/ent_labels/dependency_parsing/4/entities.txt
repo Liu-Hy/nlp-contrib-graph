@@ -1,0 +1,110 @@
+158	52	66	re-implemented
+158	71	114	graph - based Deep Biaffine ( BIAF ) parser
+25	19	26	propose
+25	29	62	novel neural network architecture
+25	63	66	for
+25	67	85	dependency parsing
+25	88	122	stackpointer networks ( STACKPTR )
+26	0	8	STACKPTR
+26	9	11	is
+26	14	45	transition - based architecture
+26	48	52	with
+26	57	92	corresponding asymptotic efficiency
+26	105	114	maintains
+26	117	128	global view
+26	129	131	of
+26	136	144	sentence
+26	150	156	proves
+26	157	166	essential
+26	167	180	for achieving
+26	181	201	competitive accuracy
+27	0	19	Our STACKPTR parser
+27	26	41	pointer network
+27	42	44	as
+27	49	57	backbone
+27	67	80	equipped with
+27	84	98	internal stack
+27	99	110	to maintain
+27	115	120	order
+27	121	123	of
+27	124	134	head words
+27	135	137	in
+27	138	153	tree structures
+28	4	19	STACKPTR parser
+28	20	28	performs
+28	29	36	parsing
+28	37	39	in
+28	43	88	incremental , topdown , depth - first fashion
+28	109	118	generates
+28	122	125	arc
+28	126	138	by assigning
+28	141	146	child
+28	147	150	for
+28	155	163	headword
+28	91	93	at
+28	171	174	top
+28	175	177	of
+28	182	196	internal stack
+165	0	2	On
+165	3	14	UAS and LAS
+165	21	47	Full variation of STACKPTR
+165	48	52	with
+165	53	74	decoding beam size 10
+165	75	86	outperforms
+165	87	91	BIAF
+165	92	94	on
+165	95	102	Chinese
+165	109	116	obtains
+165	117	140	competitive performance
+165	141	143	on
+165	144	151	English
+165	156	162	German
+168	3	14	LCM and UCM
+168	17	25	STACKPTR
+168	26	51	significantly outperforms
+168	52	56	BIAF
+168	57	59	on
+168	60	73	all languages
+166	39	49	Full model
+166	50	58	achieves
+166	63	76	best accuracy
+166	77	79	on
+166	80	99	English and Chinese
+166	108	116	performs
+166	117	131	slightly worse
+166	132	136	than
+166	137	142	+ sib
+166	143	145	on
+166	146	152	German
+175	0	25	re-implementation of BIAF
+175	26	33	obtains
+175	34	52	better performance
+175	53	57	than
+175	62	74	original one
+177	0	2	On
+177	3	9	German
+177	16	27	performance
+177	31	42	competitive
+177	43	47	with
+177	48	52	BIAF
+177	59	79	significantly better
+177	80	84	than
+177	85	97	other models
+176	0	9	Our model
+176	10	18	achieves
+176	19	53	state - of - the - art performance
+176	54	61	on both
+176	62	65	UAS
+176	70	73	LAS
+176	74	76	on
+176	77	84	Chinese
+176	91	99	best UAS
+176	100	102	on
+176	103	110	English
+169	26	28	on
+169	29	31	RA
+169	36	50	slightly worse
+169	51	55	than
+169	56	60	BIAF
+2	29	47	Dependency Parsing
+160	5	12	Results

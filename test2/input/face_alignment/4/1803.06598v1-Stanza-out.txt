@@ -1,0 +1,211 @@
+title
+Facial Landmarks Detection by Self - Iterative Regression based Landmarks - Attention Network
+abstract
+Cascaded Regression ( CR ) based methods have been proposed to solve facial landmarks detection problem , which learn a series of descent directions by multiple cascaded regressors separately trained in coarse and fine stages .
+They outperform the traditional gradient descent based methods in both accuracy and running speed .
+However , cascaded regression is not robust enough because each regressor 's training data comes from the output of previous regressor .
+Moreover , training multiple regressors requires lots of computing resources , especially for deep learning based methods .
+In this paper , we develop a Self - Iterative Regression ( SIR ) framework to improve the model efficiency .
+Only one self - iterative regressor is trained to learn the descent directions for samples from coarse stages to fine stages , and parameters are iteratively updated by the same regressor .
+Specifically , we proposed Landmarks - Attention Network ( LAN ) as our regressor , which concurrently learns features around each landmark and obtains the holistic location increment .
+By doing so , not only the rest of regressors are removed to simplify the training process , but the number of model parameters is significantly decreased .
+The experiments demonstrate that with only 3.72 M model parameters , our proposed method achieves the stateof - the - art performance .
+Introduction
+Facial landmarks detection is one of the most important techniques in face analysis , such as face recognition , facial animation and 3D face reconstruction .
+It aims to detect the facial landmarks such as eyes , nose and mouth , namely predicting the location parameters of landmarks .
+Researchers usually regard this task as atypical non -linear least squares problem .
+The Newton 's method and its variants are the traditional gradient based solution , whose convergence rate is quadratic and is guaranteed to converge , provided that the initial estimate is sufficiently close to the minimum .
+However , when the objective function is not differentiable ( e.g. SIFT ) or the Hessian matrix is not positive definite , the method wo n't works well .
+In recent years , cascaded regression based methods Copyright c 2018 , Association for the Advancement of Artificial Intelligence ( www.aaai.org ) .
+All rights reserved .
+( a ) Cascaded Regression .
+( b ) Self - Iterative Regression . :
+Facial landmarks detection process of Cascaded Regression ( a ) and Self - Iterative Regression ( b ) .
+To predict the landmarks ' location parameters , the CR based methods require multiple regressors , while SIR just need one regressor and updates parameters iteratively .
+have been proposed and applied to solve the non-linear least squares problem .
+They usually train multiple regressors to predict the parameters ' increment sequentially , which outperform the traditional gradient descent based methods in both accuracy and running speed .
+Moreover , deep learning based cascaded regression methods ) are widely leveraged for this task because of the powerful ability to extract the discriminative feature .
+However , when applying cascaded regression system , three main problems arise :
+( 1 ) Each regressor just works well in its local data space , when previous regressor predicts the false descent direction , the final results are very likely to drift away ; ( 2 ) In general , higher accuracy can be obtained by adding more cascaded regressors , while it will increase model storage memory and computing resources ;
+( 3 ) Subsequent regressors usually can not be activated for training until previous regressors finished their training process , which increases the system complexity .
+In this paper , we develop a Self - Iterative Regression ( SIR ) framework to solve the above issues .
+By means of the powerful representation of Convolutional Neural Network ( CNN ) , we only train one regressor to learn the descent directions in coarse and fine stages together .
+The training data is obtained by random sampling in the parameter space , and in the test - ing process , parameters are updated iteratively by calling the same regressor , which is dubbed Self - Iterative Regression .
+The testing process is illustrated in ( b ) .
+The experimental results show that for deep learning based method , one regressor achieves comparable performance to state - of the - art multiple cascaded regressors and significantly reduce the training complexity .
+Moreover , to obtain discriminative landmarks features , we proposed a Landmarks - Attention Network ( LAN ) , which focuses on the appearance around landmarks .
+It first concurrently extracts local landmarks ' features and then obtains the holistic increment , which significantly reduces the dimension of the final feature layer and the number of model parameters .
+The contributions of this paper are summarized as follows :
+1 . We propose a novel regression framework called SIR to solve the non-linear least squares problem , which simplifies the cascaded regression framework and obtains stateof - the - art performance in facial landmarks detection task .
+2 . The Landmarks - Attention Network ( LAN ) is developed to independently learn discriminative features around each landmarks , which significantly reduces the dimension of feature layer and the number of model parameters .
+3 . Experimental results on several publicly available benchmarks demonstrate the effectiveness of the proposed method .
+Related Work
+In this section , we will review related works in solving nonlinear least squares problems , especially facial landmarks detection problem. , which consists of multiple Stacked Auto - encoder Networks ( SANs ) .
+The first SAN quickly predicts the preliminary location of landmarks by a low - resolution image , and the subsequent SANs then refine the location with higher and higher resolution .
+Trigeorgis et al. proposed the Mnemonic Descent Method ( MDM ) , which regards the nonlinear least squares optimization as a dynamic process .
+The Recurrent Neural Network ( RNN ) is introduced to maintain an internal memory unit that accumulates the history information so as to relate the cascaded refinement process .
+Joo et al. proposed a iterative error feedback ( Carreira et al. 2016 ) method to solve the human pose extimation problems .
+Same with MDM , their training data is generated by previous stages , while ours is obtained by random sampling in coarse stages and fine stages , which simplifies the training process .
+Xiao et al.
+propose a Long Short Term Memory ( LSTM ) based recurrent attentive - refinement network , which also follows the pipeline of cascaded regressions .
+Instead of updating all landmarks location together , it first extracts reliable landmarks by a CNN and then infers locations of the rest noisy landmarks , resulting in improved accuracy .
+However , these deep cascaded regression methods usually require more computing resources and also suffer from the same drawbacks as discussed above .
+Cascaded Regression
+Before introducing our method , we begin with the cascaded regression framework in brief for better understanding .
+As illustrated in ( a ) , in the training process of cascaded regression , K regressors ( R 1 , R 2 , , R K ) are trained sequentially .
+Each regressor R k is computed by minimizing the expected loss between the predicted and the optimal parameters 's increment .
+It is formulated as
+( 1 ) where x k, i is i th example ink th regression process , ?? * k , i = ? * i ? ?
+k , i is the corresponding target increment , i.e. , the difference between ground truth parameter ? * i and present parameter ?
+k , i .
+After obtaining R k , the target parameter is updated by Equ. ,
+( 2 ) Then , new training dataset will be generated according to the updated parameter for the next regression .
+In the testing process , parameter will be sequentially refined by these cascaded regressors in Equ 2 .
+Self - Iterative Regression
+In this section , we will describe our facial landmarks detection method including the Gaussian random sampling and the Landmarks - Attention Network in detail .
+The overall procedure is presented in .
+Gaussian random
+Sampling
+Generating training data is key important process in our method .
+Cascaded regression generates training data according to previous regressor , while our method obtains it ( c ) Iterative predicting and updating process .
+The training process consists of ( a ) and ( b ) , while the testing process consists of ( b ) and ( c ) .
+In the figure , one of the dimension of facial Landmarks Model parameter S is showed , and ?
+is landmarks ' location parameter .
+by random sampling , which includes most possible landmarks distribution from coarse stages to fine stages .
+Let ( x j , y j ) be the j th landmark 's position coordinates and ? = ( x 1 , y 1 , x 2 , y 2 , ... , x M , y M ) be all landmarks ' location parameters , where M is the total number of facial landmarks .
+It is not a good choice to directly sample in location parameter ?
+since it s dimension is so high that the training process will be hard to converge and is very likely to generate unreasonable face shape .
+To improve the effectiveness of sampling process , we indirectly obtain sampling location ?
+according to anew facial landmarks model that is similar to 3D Morphable Model ( 3 DMM ) .
+Facial landmarks distribution will be represented by pose and shape parameter .
+Facial Landmarks Model .
+We obtain intrinsic face shape parameter by Principal Component Analysis ( PCA ) and pose parameter ( including 2D translation , in - plane rotation and scale ) by geometry transformation .
+The shape , translation , rotation angle and scale coefficient are represented by ? , t 2 d , ? , f respectively .
+Finally , facial landmarks model parameters can be represented by S = [? , t 2 d , ? , f ] .
+Sand ?
+are two kinds of representation for facial landmarks .
+Scan be converted to ?
+by
+where S 0 is the mean shape , A is the PCA shape matrix and
+Random sampling in facial landmarks model
+Sand then converting to location parameter ?
+makes the sampling process easier to control and generates more reasonable landmarks ' distribution .
+Sampling space .
+For each face I , let Sgt represent its ground truth facial landmarks model parameters .
+We random select values in each dimension of S obeying distribution D which is a union set of two Gaussian distribution .
+The sampling space of each face is represented by
+where N ( , ) represents Gaussian distribution , and ?
+is its standard deviation .
+We adopt this sampling distribution because training regressor around mean location and ground truth location affects the performance in coarse and fine stages , respectively , and the final location error usually obeys Gaussian distribution .
+The value of standard deviation ?
+affects the final performance .
+System with larger ?
+will contain more training space which makes the system more robust , while the final accuracy may decrease because sampling probability around ground truth will decrease and vise versa .
+The effect of ? will be discussed in the Experiments section .
+For i - th image in the t - th sampling period , sampling parameter S t , i is obtained by random selecting a value in Equ . ( 4 ) .
+We then calculate location parameters ?
+t , i by Equ ( 3 ) and extract patches P t , i in location ?
+t , i .
+Finally , we set P t , i as the training input data and set ?? t , i = ? * i ? ?
+t , i as regressor 's corresponding target increment .
+The process is also summarized in Algorithm 1 , and the training data is represented as
+where T is the number of sampling period , N is the number of images in raw dataset .
+The sampling process is illustrated in .
+By the sampling process , we obtained nearly unlimited training data and the training space contains most possible landmarks ' distribution from coarse stages to fine stages .
+The sampled training data is online generated to save the system memory .
+Algorithm
+1 Sampling process of SIR Input : Raw face landmarks dataset :
+for i = 1 to N do Set P t , i as the regressor 's input data ; 7 :
+Set ?? t , i = ? * i ? ?
+t , i as regressor 's target increment ; 8 : end for 9 : end for
+Landmarks - Attention Network
+In this section , we will describe the structure of the proposed regressor .
+Our goal is to learn a mapping between appearance features and landmarks ' location increment .
+Previous works usually first obtain robust initialization location by extracting features in the whole image and then refine the location by many refinement networks or stack all landmarks patches to directly extract all landmarks features .
+They either require a number of model parameters or generate indiscriminative features .
+Thus we propose a Landmarks - Attention Network ( LAN ) to overcome the above two drawbacks .
+Our regressor is a single CNN which concurrently pays attention to appearance feature around each facial landmark .
+Specifically , for each landmarks patch , we extract features by several convolutional and pooling layers , then concatenate these independent feature vectors and add two fully connected layers to learn a holistic location increment .
+The structure of each feature extraction sub -network is illustrated in ( b ) and the detailed information of the sub-network is presented in .
+Compared to the previous networks , our proposed model has three advantages :
+( 1 ) The landmarks feature extracted by independent sub - networks can be more discriminative , as showed in ( 2 ) Concatenating all independent features vectors and adding fully connected layers can obtain a holistic landmarks location increment , especially when some landmarks are occluded or blurred ; ( 3 ) Our network is very light , whose parameters number ( 3.72 M in total ) is far less than other CNN models ( e.g. , AlexNet ( Krizhevsky , Sutskever , and Hinton 2012 ) contains about 60M parameters and VGGNet contains about 138M parameters ) .
+Training
+The training process is illustrated in ( a ) and ( b ) .
+Since sampling period T can be large enough , online random sampling process can generate nearly unlimited training data T t=1 N i=1 ( P t , i , ?? t , i ) . Then , the above described LAN is trained to learn the descent directions in coarse and fine stages together .
+This process can be formulated as
+where R ? is the target self - iterative regressor ( i.e. , LAN ) , and t indicates the t th sampling period .
+Since the training space of SIR includes most possible landmarks distribution from coarse stages to fine stages , the training process will generate a Descent Direction Map ( DDM ) in the sampling space where each sample 's descent direction roughly points toward the ground truth .
+As illustrated in , SIR is more robust than CR because the former can cover more training space and is n't affected by the optimization path .
+When the previous regressor predicts false descent directions , SIR can still converge to the ground truth while CR is prone to drift away .
+( a ) Cascaded Regression ( b ) Self - Iterative Regression : ( a ) Typical cascaded regression process : starting from initial value , parameters are updated and close to the ground truth ( such as init ? C 1 ? C 2 ? gt ) by regressors R k ( k = 1 , 2 , 3 , ... ) .
+Once one regressor predicts the false direction , the final result is prone to drift away ; ( b ) SIR Descent Direction Map : the training space of SIR includes distribution from coarse stages to fine stages and all descent directions are pointed to ground truth .
+Self - Iterative Updating
+For the testing process , similar to the cascaded regression methods , starting from initial location parameters ?
+0 , we iteratively update the location parameters ?
+k and extract new patches P k till converges .
+The process is presented in Algorithm 2 , and facial landmarks location parameter is updated by , ?
+k+1 = ? k + R ? ( P k ) , k = 0 , 1 , . ( 7 )
+Algorithm 2 Self - Iterative updating process of SIR Input : Regressor R ? , Initial location ?
+0 , Total iteration times K Output : Prediction of facial landmarks ' location ?
+K 1 : fork = 0 to K ?
+1 do 2:
+Extract patches
+P kin location ?
+k 3:
+Experiments
+In this section , we perform experiments to demonstrate the effectiveness of the proposed SIR compared to state - of - theart methods .
+Specifically , we evaluate the proposed method model by ( 1 ) comparing the performance of SIR vs. stateof - the - art and baseline cascaded regression ; ( 2 ) comparing the number of model parameters and memory storage of pretrain models ; and ( 3 ) studying the effect of the proposed feature extraction network ( LAN ) , the number of iteration times and sampling space parameter .
+Datasets .
+The 300 - W dataset is short for 300 faces in - thewild , which is designed for evaluating the performance of facial landmarks detection .
+The training set ( 3 , 148 faces in total ) consists of AFW dataset ( Ramanan 2012 ) , HELEN training set ) and LFPW training set .
+Two testing sets are established , i.e. , public testing set ( 689 faces in total ) including HELEN testing set , LFPW testing set ) and IBUG dataset ; and competition testing set ( 600 faces in total ) including 300 indoor and 300 outdoor faces images .
+Metrics .
+Normalized Mean Error ( NME ) measures landmarks ' mean location error normalized by inter-pupil ( eyes centers ) distance or interocular ( outer eye corners ) distance .
+Cumulative Error Distribution ( CED ) curve is the cumulative distribution function of the normalized error , which can avoid heavily impacted by some big failures .
+We also calculated another two evaluation metrics , namely Area - Under - the - Curve ( AUC ? ) and Failure Rate ( FR ? ) .
+Similar as MDM ) , we consider mean point - to - point error greater than 0.08 as a failure , i.e. , ? = 0.08 . Implementation Detail .
+We perform the experiments based on a machine with Core i7 - 5930 k CPU , 32 GB memory and GTX 1080 GPU with 8G video memory .
+The detected faces are resized into 256 256 and the location patch size is 57 57 .
+For CNN structure , the Rectified Linear Unit ( ReLU ) is adopted as the activation function , and the optimizer is the Adadelta ( Zeiler 2012 ) approach , learning rate is set to 0.1 and weight decay is set to 1 e ?
+4 . Training the CNN requires around 2 days .
+Comparison with State - of - the - arts
+As shown in , we compare the proposed method with several state - of - the - art facial landmarks detection methods in the public testing set .
+Specifically , the common subset consists of LFPW testing set ( 224 faces ) and HELEN testing set ( 330 faces ) and the challenging subset is IBUG dataset ( 135 faces ) .
+Thus the the full set ( 689 faces ) of the union of the common ( 554 faces ) and challenging subsets ( 135 faces ) .
+The NME results shows that SIR performs comparatively with RAR ) and outperform other existing methods .
+Besides , more visual results are also illustrated in .
+In the more challenging IBUG subset , our method achieves robust performance in large pose , expression and illumination environment .
+On the other hand , we evaluate SIR in the competition testing set .
+As shown in , the SIR method outperform the state - of - the - art methods according to the CED curve .
+Moreover , presents the quantitative results for both the 51 - point and 68 - point error metrics ( i.e. , AUC and Failure Rate at a threshold of 0.08 of the normalised error ) , compared to existing methods ) .
+The promising performances on two metrics indicate the effectiveness of the proposed method .
+Comparison with Cascaded Regression
+As discussed before , previous cascaded regression methods adding more regressors can achieve better performance , but increase the number of model parameters , computing resources and storage space , especially for deep learning based methods .
+Different from them , our method obtains state - of - the - art performance by iterative call the same regressor rather than adding anymore regressors .
+Our method reduces the model complexity while keeps the performance in two folds : ( 1 ) the proposed network focuses on the landmarks ' local feature , which significantly reduces the dimension of final feature layer ;
+( 2 ) only one CNN module is required to iteratively predict the location parameters , while cascaded regression usually requires at least three regressors .
+To prove the effectiveness of SIR , we add a baseline CR method which extracts features by the same LAN while adopts cascaded regression framework .
+Both baseline CR and SIR is updated for 4 times before the stable performance .
+As shown in , our method requires parameters and memory far less than other cascaded regression based methods .
+Discussion and Analysis
+In this section , we perform analyses on the effect of several important modules in our method to the final performance .
+Effect of different feature extraction networks .
+In SIR framework , we adopt the Landmarks - Attention Network ( we call it SIR - LAN ) to extract landmarks patches features separately , while some works stack all landmarks patches and then extract the whole features directly ( we call it SIR - Stack ) , as illustrated in .
+To demonstrate the effectiveness of our network , we conduct an experiment by SIR framework to compare the above two networks with the same number of CNN layers and model parameters , the structure of SIR - Stack is showed in .
+The result illustrated in shows that the proposed network extracting patches features separately performs significantly better than previous methods extracting patches feature together ( e.g. , MDM ) . Effect of iteration times .
+From , we can find that the accuracy will be improved by adding iteration times before the stable performance ( i.e. , 4 iterations ) is achieved .
+When increasing iteration times , more model memory will be added in baseline CR .
+Figure 7 : Effect of iteration times .
+Top : Comparison between SIR and baseline CR inaccuracy .
+With the increase of iteration times , both SIR and baseline CR can decrease the detection error and SIR performs better than baseline CR .
+Bottom : Comparison between SIR and baseline CR in in Model Memory .
+Increasing the iteration times will increase its model memory of baseline CR , while SIR does n't because it can iteratively call itself .
+Effect of Gaussian sampling space parameters .
+As one of the most important processes , random sampling space significantly affects the final robustness and accuracy .
+As shown in , the NME results are presented by varying the standard deviation ? of Gaussian sampling .
+Appropriate values lead to promising performance so that we set ? = 0.2 in our method .
+Conclusion
+In this paper , we develop a SIR framework solve the nonlinear least squares problems .
+Compared with cascaded regression , it only needs to train a single regressor to learn descent directions in coarse stages to fine stages together , and refines the target parameters iteratively by call the same regressor .
+Experimental results in the facial landmarks detection task demonstrate that the proposed self - iterative regressor achieves comparable accuracy to state - of - the - art methods , but significantly reduces the number of parameters and memory storage of the pre-trained models .
+In the future , we will extend the proposed method to other applications , such as human pose prediction , structure from motion and 3D face reconstruction .

@@ -1,0 +1,103 @@
+4	0	14	Face detection
+42	19	26	propose
+42	29	66	Light and Fast Face Detector ( LFFD )
+42	67	70	for
+42	71	83	edge devices
+43	23	34	inspired by
+43	39	90	one - stage and multi-scale object detection method
+44	27	29	of
+44	30	33	SSD
+44	42	66	pre-defined anchor boxes
+44	71	92	manually designed for
+44	93	114	each detection branch
+227	3	13	initialize
+227	14	28	all parameters
+227	29	33	with
+227	34	47	xavier method
+227	52	57	train
+227	62	69	network
+227	70	74	from
+227	75	82	scratch
+229	4	23	optimization method
+229	24	26	is
+229	27	30	SGD
+229	31	35	with
+229	36	48	0.9 momentum
+229	51	68	zero weight decay
+229	73	83	batch size
+229	84	86	32
+232	4	25	initial learning rate
+232	26	28	is
+232	29	32	0.1
+233	3	8	train
+233	9	29	1,500,000 iterations
+233	34	40	reduce
+233	45	58	learning rate
+233	59	73	by multiplying
+233	74	77	0.1
+233	78	80	at
+233	81	136	iteration 600,000 , 1,000,000 , 1,200,000 and 1,400,000
+234	4	17	training time
+234	18	20	is
+234	21	33	about 5 days
+234	34	38	with
+234	39	61	two NVIDIA GTX 1080 TI
+235	0	10	Our method
+235	14	31	implemented using
+235	32	37	MXNet
+253	59	86	DSFD ( Resnet152 backbone )
+253	89	119	Pyramid Box ( VGG16 backbone )
+253	122	146	S3 FD ( VGG16 backbone )
+253	149	171	SSH ( VGG16 backbone )
+253	176	185	FaceBoxes
+261	0	12	FDDB dataset
+268	34	45	can achieve
+268	46	59	high accuracy
+268	60	64	with
+268	65	78	marginal gaps
+269	4	17	proposed LFFD
+269	18	23	gains
+269	24	47	slightly lower accuracy
+269	48	52	than
+269	57	75	first four methods
+269	82	93	outperforms
+269	94	103	FaceBoxes
+270	12	20	indicate
+270	26	30	LFFD
+270	31	33	is
+270	34	42	superior
+270	43	56	for detecting
+270	57	76	unconstrained faces
+271	0	18	WIDER FACE dataset
+282	10	26	performance drop
+282	30	37	evident
+282	38	41	for
+282	75	86	compared to
+285	11	22	Pyramid Box
+285	23	30	obtains
+285	35	47	best results
+285	48	50	on
+285	51	61	Hard parts
+285	76	87	performance
+285	88	90	of
+285	91	94	SSH
+285	95	97	on
+285	98	108	Hard parts
+285	112	134	decreased dramatically
+286	10	19	FaceBoxes
+286	20	32	does not get
+286	33	50	desirable results
+286	51	53	on
+286	54	75	Medium and Hard parts
+292	15	35	proposed method LFFD
+292	36	60	consistently outperforms
+292	61	73	Face - Boxes
+293	15	19	LFFD
+293	23	34	better than
+293	35	38	SSH
+293	39	48	that uses
+293	49	54	VGG16
+293	55	57	as
+293	62	70	backbone
+293	71	73	on
+293	74	84	Hard parts

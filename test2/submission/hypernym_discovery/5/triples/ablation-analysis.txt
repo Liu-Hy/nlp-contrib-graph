@@ -1,0 +1,6 @@
+(Ablation analysis||show||subsampling)
+(word embeddings||during||training)
+(Ablation analysis||fine - tuning||word embeddings)
+(supervised model||prone to||overfitting)
+(Ablation analysis||note||supervised model)
+(Contribution||has||Ablation analysis)

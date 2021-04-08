@@ -1,0 +1,62 @@
+53	4	20	forget gate bias
+53	24	41	initialized to be
+53	42	78	one and the rest of model parameters
+53	83	95	sampled from
+53	96	115	U ( ? 0.05 , 0.05 )
+54	0	7	Dropout
+54	11	21	applied to
+54	22	47	non-recurrent connections
+54	52	61	gradients
+54	66	73	clipped
+54	74	78	when
+54	85	89	norm
+54	93	107	bigger than 20
+55	4	17	learning rate
+55	18	20	is
+55	21	34	0.25 0.85 max
+55	47	59	epoch number
+51	14	31	three LSTM layers
+51	32	36	with
+51	37	48	1,500 units
+51	58	70	trained with
+51	71	96	truncated backpropagation
+51	97	104	through
+51	105	109	time
+51	110	114	with
+51	115	130	mini-batch size
+51	131	133	20
+51	138	147	step size
+51	148	150	50
+52	3	13	initialize
+52	14	29	starting states
+52	30	34	with
+52	35	75	previous minibatch 's last hidden states
+56	20	23	use
+56	24	39	vanilla softmax
+56	40	44	over
+56	48	65	entire vocabulary
+8	71	78	present
+8	81	108	neural - net parse reranker
+8	154	158	with
+8	175	194	simple architecture
+2	0	7	Parsing
+4	10	27	syntactic parsing
+7	15	46	deep learning syntactic parsing
+77	2	25	single LSTM - LM ( GS )
+77	35	39	with
+77	40	55	Charniak ( GS )
+77	56	63	reaches
+77	64	68	93.6
+77	76	111	ensemble of eight LSTM - LMs ( GS )
+77	112	116	with
+77	117	132	Charniak ( GS )
+77	133	141	achieves
+77	144	164	new state of the art
+77	167	175	93.8 F 1
+78	0	4	When
+78	5	10	trees
+78	15	27	converted to
+78	28	49	Stanford dependencies
+78	52	65	5 UAS and LAS
+78	70	87	95.9 % and 94.1 %
+72	0	7	Results

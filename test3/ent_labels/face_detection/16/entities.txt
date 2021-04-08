@@ -1,0 +1,141 @@
+321	0	14	Face Detection
+333	36	66	both HyperFace and HF - ResNet
+333	67	77	outperform
+333	78	128	all the reported academic and commercial detectors
+333	129	131	on
+333	136	159	AFW and PASCAL datasets
+334	0	9	HyperFace
+334	10	18	achieves
+334	21	57	high mean average precision ( m AP )
+334	58	60	of
+334	61	79	97.9 % and 92.46 %
+334	82	85	for
+334	86	109	AFW and PASCAL datasets
+335	0	11	HF - ResNet
+335	12	28	further improves
+335	33	37	m AP
+335	38	40	to
+335	41	58	99.4 % and 96.2 %
+340	158	160	on
+340	165	177	FDDB dataset
+340	27	48	HyperFace performance
+340	52	65	comparable to
+340	138	144	DP2MFD
+340	149	157	Faceness
+340	180	184	with
+340	185	189	m AP
+340	9	11	of
+340	193	199	90.1 %
+342	8	12	show
+342	18	32	multitask CNNs
+342	35	49	Multitask Face
+342	54	63	HyperFace
+342	66	76	outperform
+342	77	89	R - CNN Face
+342	90	92	by
+342	95	106	wide margin
+350	0	22	Landmarks Localization
+370	0	5	shows
+370	11	20	HyperFace
+370	21	29	performs
+370	30	51	consistently accurate
+370	52	59	overall
+370	60	71	pose angles
+372	14	18	find
+372	24	59	R - CNN Fiducial and Multitask Face
+372	60	66	attain
+372	67	86	similar performance
+389	3	10	observe
+389	16	25	HyperFace
+389	26	34	achieves
+389	37	51	comparable NME
+389	52	54	of
+389	55	60	10.88
+389	69	80	HF - ResNet
+389	81	89	achieves
+389	94	120	state - of - theart result
+389	121	123	on
+389	124	128	IBUG
+389	129	133	with
+389	134	137	NME
+389	138	140	of
+389	141	145	8.18
+376	43	65	significantly improves
+376	70	81	performance
+376	82	86	over
+376	87	96	HyperFace
+376	97	105	for both
+376	106	127	AFW and AFLW datasets
+393	0	15	Pose Estimation
+401	33	63	both HyperFace and HF - ResNet
+401	64	74	outperform
+401	75	91	existing methods
+401	92	94	by
+401	97	109	large margin
+409	0	11	HF - ResNet
+409	12	28	further improves
+409	33	44	performance
+409	45	48	for
+409	49	53	roll
+409	56	61	pitch
+409	73	76	yaw
+410	0	18	Gender Recognition
+418	0	2	On
+418	7	19	LFWA dataset
+418	22	32	our method
+418	33	44	outperforms
+418	45	65	PANDA and FaceTracer
+423	0	11	HF - ResNet
+423	12	20	achieves
+423	21	51	state - of - the - art results
+423	52	59	on both
+423	60	84	CelebA and LFWA datasets
+427	4	13	HyperFace
+427	14	18	with
+427	21	51	linear bounding box regression
+427	56	71	traditional NMS
+427	72	80	achieves
+427	83	87	m AP
+427	88	90	of
+427	91	95	94 %
+15	19	26	present
+15	29	44	novel framework
+15	45	53	based on
+15	54	58	CNNs
+15	59	75	for simultaneous
+15	76	90	face detection
+15	93	122	facial landmarks localization
+15	125	145	head pose estimation
+15	150	168	gender recognition
+16	3	9	design
+16	12	28	CNN architecture
+16	29	37	to learn
+16	38	53	common features
+16	74	81	exploit
+16	86	93	synergy
+22	3	8	refer
+22	13	16	set
+22	17	19	of
+22	20	47	intermediate layer features
+22	48	50	as
+22	51	64	hyperfeatures
+29	11	20	construct
+29	23	44	separate fusion - CNN
+29	45	52	to fuse
+29	57	70	hyperfeatures
+30	9	17	to learn
+30	22	27	tasks
+30	33	38	train
+30	44	58	simultaneously
+30	59	64	using
+30	65	88	multiple loss functions
+32	4	12	deep CNN
+32	13	26	combined with
+32	31	43	fusion - CNN
+32	51	67	learned together
+32	68	70	in
+32	74	92	end -toend fashion
+2	53	67	Face Detection
+2	70	91	Landmark Localization
+2	94	109	Pose Estimation
+2	116	134	Gender Recognition

@@ -1,0 +1,107 @@
+49	3	12	show that
+49	13	17	CWEs
+49	25	33	utilized
+49	34	42	directly
+49	43	54	to approach
+49	59	67	WSD task
+50	0	8	To learn
+50	13	34	semantic capabilities
+50	35	37	of
+50	38	42	CWEs
+50	48	54	employ
+50	57	92	simple , yet interpretable approach
+50	93	95	to
+50	96	99	WSD
+50	100	105	using
+50	108	159	k -nearest neighbor classification ( kNN ) approach
+2	41	66	Word Sense Disambiguation
+7	119	152	word sense disambiguation ( WSD )
+8	48	51	WSD
+134	0	25	Contextualized Embeddings
+137	0	11	Simple k NN
+137	12	16	with
+137	17	21	ELMo
+137	22	32	as well as
+137	33	48	BERT embeddings
+137	49	54	beats
+137	59	75	state of the art
+137	76	78	of
+137	83	102	lexical sample task
+138	0	4	BERT
+138	10	21	outperforms
+138	22	32	all others
+138	33	35	on
+138	40	51	SE - 3 task
+141	10	20	similarity
+141	21	23	of
+141	24	49	contextualized embeddings
+141	50	64	largely relies
+141	65	67	on
+141	68	123	semantically and structurally similar sentence contexts
+141	124	126	of
+141	127	149	polysemic target words
+146	24	59	SE - 2 and SE - 3 training datasets
+146	60	67	provide
+146	68	77	more CWEs
+146	78	81	for
+146	82	101	each word and sense
+146	108	120	our approach
+146	121	129	performs
+146	130	136	better
+146	137	141	with
+146	144	158	growing number
+146	159	161	of
+146	162	166	CWEs
+149	11	15	CWEs
+149	28	45	not organize well
+149	46	48	in
+149	49	72	spherically shaped form
+149	73	75	in
+149	80	95	embedding space
+139	13	20	observe
+139	23	45	major performance drop
+139	46	48	of
+139	49	61	our approach
+139	62	65	for
+139	70	95	two all - words WSD tasks
+139	105	121	no training data
+139	125	133	provided
+139	134	144	along with
+139	149	157	test set
+151	0	17	Nearest Neighbors
+152	0	15	K- Optimization
+155	0	3	For
+155	4	33	SensEval - 2 and SensEval - 3
+155	39	46	achieve
+155	49	82	new state - of - the - art result
+157	8	16	S7 - T *
+157	27	34	achieve
+157	35	53	minor improvements
+157	54	58	with
+157	61	69	higher k
+157	82	105	drastically lack behind
+157	110	126	state of the art
+158	0	19	Senses in CWE space
+159	3	14	investigate
+159	24	44	different CWE models
+159	45	51	encode
+159	52	63	information
+159	64	71	such as
+159	72	94	distinguishable senses
+159	95	97	in
+159	104	116	vector space
+162	4	20	Flair embeddings
+162	21	33	hardly allow
+162	34	48	to distinguish
+162	49	61	any clusters
+162	65	76	most senses
+162	81	97	scattered across
+162	102	113	entire plot
+163	0	2	In
+163	7	27	ELMo embedding space
+163	34	46	major senses
+163	51	74	slightly more separated
+163	75	77	in
+163	78	95	different regions
+163	96	98	of
+163	103	114	point cloud
