@@ -6,9 +6,6 @@ import os
 import re
 import math
 import pandas as pd
-import json
-#from parse import *
-
 
 base_dir = 'input'
 label_dir = 'sent_labels'
@@ -30,7 +27,6 @@ def get_dir(topic_ls=None, paper_ls=None):
                 dir_ls.append(os.path.join(topic, str(i)))
     return dir_ls
 
-
 def get_file_path(dirs):
     # Get the relevant files from each directory of paper.
     rx1 = '(.*Stanza-out.txt$)'
@@ -48,10 +44,9 @@ def get_file_path(dirs):
             res = re.match(rx2, file2)
             if res:
                 new[1] = os.path.join(dir2, file2)
-        assert new[0]!='' and new[1]!=''
+        assert new[0] != '' and new[1] != ''
         file_path.append(new)
     return file_path
-
 
 def is_heading(line):
     # Determine if a line is a heading
@@ -63,7 +58,6 @@ def is_heading(line):
         res = re.match(rx, line)
         return True if res else False
     return False
-
 
 def is_main_heading(line, judge_mask=False):
     '''
@@ -83,35 +77,36 @@ def is_main_heading(line, judge_mask=False):
 
 # Determin if a sentence conforms to a specific case method.
 # Their are three case methods in all, eg: Attention Is All You Need; ATTENTION IS ALL YOU NEED; Attention is all you need.
-def case_check(line, flag):
+
+
+def check_case(line, flag):
     if flag == 1:
         match = re.search(r'[a-z]', line)
         if match:
             return False
         return True
     else:
-        countW = 0
+        wd_num = 0
         words = line.split(' ')
         if flag == 0:
-            prep = ['a', 'an', 'and', 'the', 'or', 'but', 'nor', 'if',
-                    'for', 'in', 'on', 'with', 'by', 'as', 'to', 'of', 'via']
+            stp_wd = ['a', 'an', 'and', 'the', 'or', 'if', 'by', 'as', 'to',
+                      'of', 'for', 'in', 'on', 'but', 'via', 'nor', 'with']
             if not words[0].istitle():
-                countW += 1
+                wd_num += 1
             if len(words) > 1:
                 if not words[-1].istitle():
-                    countW += 1
+                    wd_num += 1
                 for word in words[1:-1]:
-                    if not word.istitle() and word not in prep:
-                        countW += 1
-            return countW <= math.ceil(len(words)/5)
+                    if not word.istitle() and word not in stp_wd:
+                        wd_num += 1
+            return wd_num <= math.ceil(len(words)/5)
         if flag == 2:
             if not words[0].istitle():
-                countW += 1
+                wd_num += 1
             for word in words[1:]:
                 if re.match(r'[A-Z]', word):
-                    countW += 1
-            return countW <= math.ceil(len(words)/3)
-
+                    wd_num += 1
+            return wd_num <= math.ceil(len(words)/3)
 
 # read the relevant files from the folder of one paper, and produce a data table for that paper.
 def load_paper_sentence(sent_path, label_path):  # (sent_path, label_path)
@@ -125,7 +120,7 @@ def load_paper_sentence(sent_path, label_path):  # (sent_path, label_path)
             if line:
                 if is_heading(line) and is_main_heading(line):
                     for m in range(3):
-                        if case_check(line, m):
+                        if check_case(line, m):
                             count[m] += 1
             else:
                 break
@@ -153,7 +148,7 @@ def load_paper_sentence(sent_path, label_path):  # (sent_path, label_path)
                     ofs3 = 0
                 else:
                     ofs3 += 1
-                if is_heading(line) and case_check(line, flg):
+                if is_heading(line) and check_case(line, flg):
                     heading = line    # update the heading buffer
 
                     if is_main_heading(line):
@@ -176,10 +171,10 @@ def load_paper_sentence(sent_path, label_path):  # (sent_path, label_path)
                     # For plain text line, store both the heading and the main heading.
                     ofs1 += 1
                     if is_main_heading(main_h, judge_mask=True):
-                        sent.append([i, line, main_h, heading, 
+                        sent.append([i, line, main_h, heading,
                                      task, index, None, None, None, ofs1, 0, i-1, 0, ofs3, 0, 0, 0, None])
                     else:
-                        sent.append([i, line, main_h, heading, 
+                        sent.append([i, line, main_h, heading,
                                      task, index, None, None, None, ofs1, 0, i-1, 0, ofs3, 0, 1, 0, None])
             else:
                 break
@@ -204,7 +199,7 @@ def load_paper_sentence(sent_path, label_path):  # (sent_path, label_path)
                 for j in range(i-sof+1, i+1):
                     sent[j][14] = sent[j][13]/sof
         sent[i][12] = sent[i][11]/len(sent)
-    
+
     # slice the sentence with the span of characters, returns the span of words
     def get_word_idx(sent, start, end):
         ls = sent.split(' ')
@@ -236,7 +231,8 @@ def load_paper_sentence(sent_path, label_path):  # (sent_path, label_path)
                     len(sent[int(line)-1][1].split(' '))
             else:
                 break
-    ent_path = sep.join(['ent_labels']+label_path.split(sep)[1:-1]+['entities.txt'])
+    ent_path = sep.join(['ent_labels']+label_path.split(sep)
+                        [1:-1]+['entities.txt'])
     with open(ent_path, 'r') as f:
         while(True):
             line = f.readline().rstrip("\n")
@@ -276,6 +272,7 @@ def load_paper_sentence(sent_path, label_path):  # (sent_path, label_path)
             sent[i][8] = sent[i][7] = sent[i][6]
 
     return sent
+
 def load_data_sentence(file_path):
     # Get the data table of all the papers in file_path
     data = []

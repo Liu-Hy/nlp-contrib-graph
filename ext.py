@@ -1,6 +1,5 @@
 '''
-Data preprocessing and cleaning
-get a dataframe of all sentences, together with relevant information to the tasks
+Generate a csv file of sentences with their info units, predicates, terms, and different types of triples
 '''
 import os
 import re
@@ -9,12 +8,14 @@ import pandas as pd
 import json
 from parse import *
 
-
 base_dir = 'training-data'
 sep = os.path.sep
 reports = []
-special_trip = ['# If none of the phrases in a triple can be found in any sentence in the corresponding info unit,', 
-'# and the triple does not take the form of "Contribution||has||(unit name)"', '# it will be listed here.']
+'''
+If none of the phrases in a triple can be found in any sentence in the corresponding info unit,
+and the triple does not take the form of "Contribution||has||(unit name)", it will be listed here.
+'''
+special_trip = []
 
 def get_dir(topic_ls=None, paper_ls=None):
     # Get the list of directories
@@ -82,6 +83,8 @@ def is_main_heading(line, judge_mask=False):
 
 # Determin if a sentence conforms to a specific case method.
 # Their are three case methods in all, eg: Attention Is All You Need; ATTENTION IS ALL YOU NEED; Attention is all you need.
+
+
 def case_check(line, flag):
     if flag == 1:
         match = re.search(r'[a-z]', line)
@@ -236,7 +239,8 @@ def load_paper_sentence(sent_path, label_path):
 
     # decide which information unit each positive sentence belongs to.
     j_dir = sep.join(sent_path.split(sep)[:-1]) + sep + 'info-units'
-    for unit in os.listdir(j_dir):  # For each json file representing an information unit
+    # For each json file representing an information unit
+    for unit in os.listdir(j_dir):
         js_file = os.path.join(j_dir, unit)
         try:
             with open(js_file, 'r') as f:
@@ -289,7 +293,7 @@ def load_paper_sentence(sent_path, label_path):
         t_file = os.path.join(t_dir, unit)
         js_file = os.path.join(j_dir, unit.replace('.txt', '.json'))
         try:
-            with open(js_file,'r') as g:
+            with open(js_file, 'r') as g:
                 js = json.load(g, strict=False)
                 js = {'Contribution': js}
         except json.JSONDecodeError as e:
@@ -314,10 +318,10 @@ def load_paper_sentence(sent_path, label_path):
                     evidence = find_tri_sent(
                         js, triple, [], [], [])  # unit[:-4]
                     if not evidence:
-                        js_position = sep.join(js_file.split(sep)[-4:]) #
+                        js_position = sep.join(js_file.split(sep)[-4:])
                         paper_triple_stat[0] += 1
                         #print(f'the triple \'{triple}\' not found in {js_position}')
-                    else:                       
+                    else:
                         cands = evidence[0].split('\n')
                         for i in range(len(cands)):
                             for j in range(len(aux)):
@@ -333,7 +337,7 @@ def load_paper_sentence(sent_path, label_path):
                         #try:
                         paper_triple_stat[max(lens)] += 1
                         #except IndexError:
-                            #print(f'List index out of range. The actual number of max is {max(lens)} for triple \'{triple}\' in\n', t_file)
+                        #print(f'List index out of range. The actual number of max is {max(lens)} for triple \'{triple}\' in\n', t_file)
                         if max(lens) == 0:
                             if triple[0] == 'Contribution' and triple[1] == 'has':
                                 paper_normal_root += 1
@@ -353,15 +357,15 @@ def load_paper_sentence(sent_path, label_path):
                             if max(lens) == 3:
                                 sent[aux[idx][0]][9].append(triple)
                             if max(lens) == 2:
-                                if found == [1,0,1]:
+                                if found == [1, 0, 1]:
                                     sent[aux[idx][0]][10].append(triple)
                                 elif found == [0, 1, 1]:
                                     uni_name = unit[:-4]
                                     if triple[0] == (uni_name[0].upper()+uni_name[1:]).replace('-', ' '):
                                         sent[aux[idx][0]][11].append(triple)
-                                    else: #SPEC A
+                                    else:  # SPEC A
                                         sent[aux[idx][0]][14].append(triple)
-                                else: # SPEC B
+                                else:  # SPEC B
                                     sent[aux[idx][0]][15].append(triple)
                             if max(lens) == 1:
                                 if found == [0, 0, 1]:
@@ -370,9 +374,9 @@ def load_paper_sentence(sent_path, label_path):
                                         sent[aux[idx][0]][12].append(triple)
                                     elif triple[0] == 'Contribution':
                                         sent[aux[idx][0]][13].append(triple)
-                                    else: # SPEC C
+                                    else:  # SPEC C
                                         sent[aux[idx][0]][16].append(triple)
-                                else: # SPEC D
+                                else:  # SPEC D
                                     sent[aux[idx][0]][17].append(triple)
 
                             for i in range(3):
@@ -388,9 +392,10 @@ def load_paper_sentence(sent_path, label_path):
                                         else:
                                             continue
                                         break
-                            if new_item and len(new_item)>2:
+                            if new_item and len(new_item) > 2:
                                 cross_sents = new_item[1:]
-                                cross_sents = sorted(cross_sents, key=lambda x: x[0])
+                                cross_sents = sorted(
+                                    cross_sents, key=lambda x: x[0])
                                 new_item = new_item[0:1]
                                 new_item += cross_sents
                                 new_item.append('- '*80)
@@ -403,7 +408,7 @@ def load_paper_sentence(sent_path, label_path):
     # An S-P-O type corresponds to a combination of boolean indicators
     # The 4 keys stand for 'predicate', 'subject', 'object', 'both subject and object' respectively.
     good_state = {'p': [0, 1, 0], 's': [1, 0, 0],
-                    'ob': [0, 0, 1], 'b': [1, 0, 1]}
+                  'ob': [0, 0, 1], 'b': [1, 0, 1]}
     for i in range(len(aux)):
         for item in aux[i][1]:
             if item[:3] not in good_state.values():
@@ -451,7 +456,7 @@ def load_data_sentence(file_path):
     for tuple in file_path:
         sentence_path, label_path = tuple
         paper_data, paper_triple_stat, paper_normal_root = load_paper_sentence(
-        sentence_path, label_path)
+            sentence_path, label_path)
         for i in range(5):
             triple_stat[i] += paper_triple_stat[i]
         data += paper_data
@@ -482,5 +487,5 @@ df.columns = ['idx', 'text', 'main_heading', 'heading',
               'topic', 'paper_idx', 'BIO', 'BIO_1', 'BIO_2', 'triple_A', 'triple_B', 'triple_C', 'triple_D', 'triple_E', 'SPEC_1', 'SPEC_2', 'SPEC_3', 'SPEC_4', 'predicates', 'subj/obj', 'mask', 'bi_labels', 'labels']
 pos = df[df['bi_labels'] == 1]
 pos = pos[['labels', 'text', 'predicates', 'subj/obj', 'triple_A',
-          'triple_B', 'triple_C', 'triple_D', 'triple_E', 'SPEC_1', 'SPEC_2', 'SPEC_3', 'SPEC_4', 'topic', 'paper_idx', 'idx']].rename(columns={'labels': 'info_unit'})
-pos.to_csv('./interim/try1.csv', index=False)
+           'triple_B', 'triple_C', 'triple_D', 'triple_E', 'SPEC_1', 'SPEC_2', 'SPEC_3', 'SPEC_4', 'topic', 'paper_idx', 'idx']].rename(columns={'labels': 'info_unit'})
+pos.to_csv('./interim/triples.csv', index=False)
