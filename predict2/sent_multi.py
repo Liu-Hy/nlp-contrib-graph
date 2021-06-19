@@ -10,7 +10,6 @@ transformers_logger = logging.getLogger("transformers")
 transformers_logger.setLevel(logging.WARNING)
 
 df = pd.read_csv('pos_sent.csv')
-df = df.drop(columns=['bi_labels'])
 df['title'] = df['main_heading'] + ': ' + df['heading']
 df.loc[((df['main_heading'] == df['heading']) | (pd.isnull(df['heading']))), 'title'] = df['main_heading']
 df['title'] = df['title'].fillna('')
