@@ -1,0 +1,6 @@
+(first layer||of||question - passage attention phase)
+(first layer||successfully align||question keywords)
+(question - passage attention phase||successfully align||question keywords)
+(question keywords||with||corresponding passage keywords)
+(first layer||has||question - passage attention phase)
+(Contribution||has||Experiments)

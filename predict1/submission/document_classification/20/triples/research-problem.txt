@@ -1,0 +1,6 @@
+(Contribution||has research problem||Practical Text Classification)
+(Contribution||has research problem||Multi-emotion sentiment classification)
+(Contribution||has research problem||attention - based Transformer network)
+(Contribution||has research problem||40 GB of text)
+(Contribution||has research problem||0.69 F1 score)
+(Contribution||has research problem||SemEval Task 1:E - c multidimensional emotion classification problem)

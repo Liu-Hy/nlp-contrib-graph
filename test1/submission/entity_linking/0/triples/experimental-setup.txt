@@ -1,6 +1,0 @@
-(Experimental setup||implemented in||Torch framework)
-(Experimental setup||has||Variable size mini-batches)
-(diagonal matrices A , B , C||keep||number of parameters)
-(number of parameters||has||very low)
-(Experimental setup||using||diagonal matrices A , B , C)
-(Contribution||has||Experimental setup)

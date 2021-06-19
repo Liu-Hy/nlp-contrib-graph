@@ -1,0 +1,79 @@
+164	0	5	Scale
+166	4	11	results
+166	12	14	of
+166	15	26	small scale
+166	31	38	abysmal
+166	41	63	none of the algorithms
+166	67	82	able to achieve
+166	83	100	more than 12 % AP
+168	0	9	Occlusion
+172	0	4	With
+172	5	22	partial occlusion
+172	29	40	performance
+172	41	60	drops significantly
+173	4	14	maximum AP
+173	18	29	only 26.5 %
+173	30	41	achieved by
+173	42	50	Faceness
+177	0	4	Pose
+183	4	20	best performance
+183	24	35	achieved by
+183	36	44	Faceness
+183	47	51	with
+183	54	60	recall
+183	61	71	below 20 %
+149	3	9	select
+149	10	12	VJ
+149	15	18	ACF
+149	21	24	DPM
+149	31	39	Faceness
+32	3	12	introduce
+32	15	51	large - scale face detection dataset
+32	52	58	called
+32	59	69	WIDER FACE
+33	3	14	consists of
+33	15	30	32 , 203 images
+33	31	35	with
+33	36	59	393 , 703 labeled faces
+33	71	86	10 times larger
+33	87	91	than
+33	96	134	current largest face detection dataset
+34	10	22	vary largely
+34	23	25	in
+34	26	36	appearance
+34	39	43	pose
+34	50	55	scale
+35	9	20	to quantify
+35	21	46	different types of errors
+35	52	60	annotate
+35	61	80	multiple attributes
+35	83	92	occlusion
+35	95	99	pose
+35	106	122	event categories
+35	131	137	allows
+35	138	155	in depth analysis
+35	156	158	of
+35	159	178	existing algorithms
+2	15	29	Face Detection
+155	0	7	Overall
+158	0	8	Faceness
+158	9	20	outperforms
+158	21	34	other methods
+158	35	37	on
+158	38	51	three subsets
+158	54	58	with
+158	59	70	DPM and ACF
+158	71	73	as
+158	74	99	marginal second and third
+161	4	12	hard set
+161	16	37	even more challenging
+159	0	3	For
+159	8	16	easy set
+159	23	47	average precision ( AP )
+159	48	50	of
+159	51	63	most methods
+159	68	77	over 60 %
+160	43	45	on
+160	50	60	medium set
+160	4	15	performance
+160	16	26	drops 10 %

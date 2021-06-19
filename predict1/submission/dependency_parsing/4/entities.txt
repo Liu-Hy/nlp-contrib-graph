@@ -1,0 +1,205 @@
+2	29	47	Dependency Parsing
+4	38	56	dependency parsing
+4	59	96	stack - pointer networks ( STACKPTR )
+11	0	18	Dependency parsing
+25	19	26	propose
+25	29	62	novel neural network architecture
+25	63	66	for
+25	67	85	dependency parsing
+25	88	122	stackpointer networks ( STACKPTR )
+27	4	19	STACKPTR parser
+27	26	41	pointer network
+27	42	44	as
+27	49	57	backbone
+27	67	80	equipped with
+27	84	98	internal stack
+27	99	110	to maintain
+27	115	134	order of head words
+27	135	137	in
+27	138	153	tree structures
+28	4	19	STACKPTR parser
+28	20	28	performs
+28	29	36	parsing
+28	37	39	in
+28	43	88	incremental , topdown , depth - first fashion
+28	109	118	generates
+28	126	138	by assigning
+28	141	146	child
+28	155	163	headword
+28	164	177	at the top of
+28	182	196	internal stack
+29	39	46	capture
+29	47	58	information
+29	59	63	from
+29	68	122	whole sentence and all the previously derived subtrees
+29	131	142	maintaining
+29	145	168	number of parsing steps
+29	169	175	linear
+29	176	178	in
+29	183	198	sentence length
+128	0	3	For
+128	4	26	all the parsing models
+128	27	29	in
+128	30	49	different languages
+128	55	65	initialize
+128	66	78	word vectors
+128	79	83	with
+128	84	110	pretrained word embeddings
+129	0	3	For
+129	4	50	Chinese , Dutch , English , German and Spanish
+129	56	59	use
+129	64	96	structured - skipgram embeddings
+130	4	19	other languages
+130	23	26	use
+130	27	46	Polyglot embeddings
+132	0	22	Parameter optimization
+132	26	40	performed with
+132	45	59	Adam optimizer
+132	60	64	with
+132	65	80	? 1 = ? 2 = 0.9
+132	86	92	choose
+132	96	117	initial learning rate
+132	118	120	of
+132	121	132	? 0 = 0.001
+133	4	17	learning rate
+136	0	9	To reduce
+136	14	21	effects
+136	22	24	of
+136	25	47	" gradient exploding "
+136	53	56	use
+136	57	74	gradient clipping
+136	75	77	of
+136	78	81	5.0
+138	0	11	To mitigate
+138	12	23	overfitting
+138	29	34	apply
+138	35	42	dropout
+139	0	3	For
+139	4	9	BLSTM
+139	15	18	use
+139	19	36	recurrent dropout
+139	37	41	with
+139	44	53	drop rate
+139	54	56	of
+139	57	61	0.33
+139	62	69	between
+139	70	83	hidden states
+139	88	92	0.33
+139	93	100	between
+139	101	107	layers
+140	20	23	use
+140	24	41	embedding dropout
+140	42	46	with
+140	49	53	rate
+140	54	56	of
+140	57	61	0.33
+140	62	64	on
+140	65	106	all word , character , and POS embeddings
+162	59	63	with
+162	64	88	different decoder inputs
+162	91	120	Org , + gpar , + sib and Full
+162	123	128	where
+162	133	142	Org model
+162	143	151	utilizes
+162	161	182	encoder hidden states
+162	183	185	of
+162	186	196	head words
+162	209	232	+ gpar and + sib models
+162	233	241	augments
+162	246	258	original one
+162	259	263	with
+162	264	299	grandparent and sibling information
+166	39	49	Full model
+166	50	58	achieves
+166	63	76	best accuracy
+166	77	79	on
+166	80	99	English and Chinese
+166	108	116	performs
+166	117	131	slightly worse
+166	132	136	than
+166	137	142	+ sib
+166	143	145	on
+166	146	152	German
+168	0	2	On
+168	3	14	LCM and UCM
+168	17	25	STACKPTR
+168	26	51	significantly outperforms
+168	52	56	BIAF
+168	57	59	on
+168	60	73	all languages
+168	76	83	showing
+168	88	99	superiority
+168	114	116	on
+168	117	142	complete sentence parsing
+169	4	11	results
+169	12	14	of
+169	15	25	our parser
+169	26	28	on
+169	29	31	RA
+169	36	55	slightly worse than
+169	56	60	BIAF
+172	0	14	Our Full model
+172	15	40	significantly outperforms
+172	41	75	all the transition - based parsers
+172	76	78	on
+172	105	113	achieves
+172	114	128	better results
+172	129	133	than
+172	134	160	most graph - based parsers
+175	0	17	re-implementation
+175	18	20	of
+175	21	25	BIAF
+175	26	33	obtains
+175	34	52	better performance
+175	53	57	than
+175	62	74	original one
+176	0	9	Our model
+176	10	18	achieves
+176	19	53	state - of - the - art performance
+176	54	56	on
+176	62	73	UAS and LAS
+176	74	76	on
+176	77	84	Chinese
+176	91	99	best UAS
+186	34	42	STACKPTR
+186	43	59	tends to perform
+186	60	66	better
+186	67	69	on
+186	70	87	shorter sentences
+186	96	100	make
+186	101	124	fewer parsing decisions
+186	127	149	significantly reducing
+186	164	181	error propagation
+213	0	5	CoNLL
+220	13	38	BIAF and STACKPTR parsers
+220	39	46	achieve
+220	47	81	relatively high parsing accuracies
+220	82	84	on
+220	85	105	all the 12 languages
+220	117	120	UAS
+220	125	136	higher than
+220	137	141	90 %
+221	0	2	On
+221	3	17	nine languages
+221	20	27	Catalan
+221	46	53	English
+221	108	116	STACKPTR
+221	117	128	outperforms
+221	129	133	BIAF
+221	134	142	for both
+221	143	154	UAS and LAS
+222	0	2	On
+222	3	12	Bulgarian
+222	15	23	STACKPTR
+222	24	32	achieves
+222	33	52	slightly better UAS
+222	59	62	LAS
+222	66	85	slightly worse than
+222	86	90	BIAF
+223	0	2	On
+223	3	23	Italian and Romanian
+223	26	30	BIAF
+223	31	38	obtains
+223	39	76	marginally better parsing performance
+223	77	81	than
+223	82	90	STACKPTR

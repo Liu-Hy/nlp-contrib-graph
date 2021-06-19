@@ -1,0 +1,3 @@
+(Contribution||has research problem||feature maps)
+(Contribution||has research problem||multiple times)
+(Contribution||has research problem||multiscale object detection)

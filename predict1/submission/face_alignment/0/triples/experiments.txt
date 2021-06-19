@@ -1,0 +1,5 @@
+(" in - the -wild " 3 DMM ( ITW )||in terms of||3D shape estimation accuracy)
+(3D shape estimation accuracy||against||two popular state - of - the - art alternative 3 DMM formulations)
+(ITW||has||slightly outperforms)
+(slightly outperforms||has||IMM)
+(Contribution||has||Experiments)

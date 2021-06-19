@@ -1,8 +1,0 @@
-(our best F - value||on||validation set)
-(our best F - value||is||0.68)
-(0.68||when||best cluster number)
-(best cluster number||is||2)
-(threshold||is||( 17.7 , 17.3 ))
-(best cluster number||has||2)
-(threshold||has||( 17.7 , 17.3 ))
-(Contribution||has||Results)

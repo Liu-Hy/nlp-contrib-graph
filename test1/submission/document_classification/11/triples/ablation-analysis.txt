@@ -1,4 +1,0 @@
-(text classification task||to evaluate||performance)
-(performance||of||word embeddings)
-(Ablation analysis||use||text classification task)
-(Contribution||has||Ablation analysis)

@@ -1,3 +1,0 @@
-(Contribution||has research problem||Face alignment)
-(Contribution||has research problem||Message passing)
-(Contribution||has research problem||heatmap quality improvement)

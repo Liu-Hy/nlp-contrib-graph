@@ -1,0 +1,6 @@
+(regularization hyperparameter (? = 10 ?6 )||use||stochastic gradient descent)
+(stochastic gradient descent||with||0.1 initialized learning rate)
+(0.1 initialized learning rate||with||0.05 learning rate decay)
+(0.1 initialized learning rate||with||0.05 learning rate decay)
+(Hyperparameters||is||regularization hyperparameter (? = 10 ?6 ))
+(Contribution||has||Hyperparameters)

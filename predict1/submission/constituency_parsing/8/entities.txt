@@ -1,0 +1,56 @@
+2	0	20	Constituency Parsing
+4	3	14	demonstrate
+4	20	29	replacing
+4	33	45	LSTM encoder
+4	46	50	with
+4	53	82	self - attentive architecture
+4	87	94	lead to
+4	95	107	improvements
+4	108	110	to
+4	113	168	state - of the - art discriminative constituency parser
+16	19	28	introduce
+16	31	37	parser
+16	43	51	combines
+16	55	62	encoder
+16	63	74	built using
+16	118	122	with
+16	125	132	decoder
+16	133	147	customized for
+16	148	155	parsing
+24	44	48	uses
+24	51	65	character LSTM
+24	74	82	performs
+24	83	89	better
+24	90	94	than
+24	95	128	other lexical representationseven
+89	26	34	achieves
+89	37	42	score
+89	43	45	of
+89	46	54	92.67 F1
+89	55	57	on
+89	62	95	Penn Treebank WSJ development set
+91	30	34	uses
+91	39	60	same decode procedure
+91	61	65	with
+91	69	89	LSTM - based encoder
+91	90	98	achieves
+91	101	122	development set score
+91	123	125	of
+91	126	131	92.24
+96	0	30	Content vs. Position Attention
+99	7	10	see
+99	16	25	our model
+99	26	39	learns to use
+99	42	53	combination
+99	54	56	of
+99	61	80	two attention types
+99	83	87	with
+99	88	111	positionbased attention
+100	8	11	see
+100	17	42	content - based attention
+100	43	45	is
+100	46	57	more useful
+100	58	60	at
+100	61	73	later layers
+100	74	76	in
+100	81	88	network

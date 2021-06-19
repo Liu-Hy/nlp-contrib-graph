@@ -1,0 +1,8 @@
+(region size 20||on||RCV1)
+(seq -CNN||with||regular concatenation input)
+(obtained tv-embeddings||to produce||additional input)
+(additional input||to||supervised region embedding)
+(supervised region embedding||of||one - hot CNN)
+(supervised region embedding||resulting in||higher accuracy)
+(one - hot CNN||resulting in||higher accuracy)
+(Contribution||has||Tasks)

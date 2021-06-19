@@ -1,4 +1,0 @@
-(beneficial||for||face classification)
-(beneficial||for||bounding box regression tasks)
-(joint landmarks localization task learning||has||beneficial)
-(Contribution||has||Experiments)

@@ -1,3 +1,0 @@
-(Model||show||pragmatic reasoning)
-(Model||has||Reconstructor - based pragmatic system)
-(Contribution||has||Model)

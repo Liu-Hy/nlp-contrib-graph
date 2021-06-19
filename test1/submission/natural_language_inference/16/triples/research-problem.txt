@@ -1,4 +1,0 @@
-(Contribution||has research problem||Text Understanding)
-(Contribution||has research problem||new state of the art)
-(Contribution||has research problem||all evaluated datasets)
-(Contribution||has research problem||teaching machines)

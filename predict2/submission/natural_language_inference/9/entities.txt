@@ -1,0 +1,91 @@
+2	2	15	BERT Baseline
+2	24	41	Natural Questions
+14	26	34	describe
+14	37	55	BERT - based model
+14	56	59	for
+14	64	81	Natural Questions
+17	44	59	jointly predict
+17	60	82	short and long answers
+17	83	85	in
+17	88	100	single model
+17	121	138	pipeline approach
+17	154	167	each document
+17	168	172	into
+17	173	200	multiple training instances
+17	201	209	by using
+17	210	239	overlapping windows of tokens
+17	302	325	aggressively downsample
+17	326	340	null instances
+17	378	380	at
+17	381	394	training time
+17	395	404	to create
+17	407	428	balanced training set
+17	446	463	" [ CLS ] " token
+17	464	466	at
+17	467	480	training time
+17	481	491	to predict
+17	492	506	null instances
+17	511	515	rank
+17	516	521	spans
+17	522	524	at
+17	525	539	inference time
+17	540	542	by
+17	547	557	difference
+17	570	580	span score
+54	3	14	initialized
+54	15	24	our model
+54	25	29	from
+54	32	42	BERT model
+54	51	63	finetuned on
+54	64	75	SQ u AD 1.1
+56	3	10	trained
+56	15	20	model
+56	21	34	by minimizing
+56	35	41	loss L
+56	57	61	with
+56	66	80	Adam optimizer
+56	106	110	with
+56	113	123	batch size
+56	124	126	of
+56	127	128	8
+57	48	53	tuned
+57	58	74	number of epochs
+57	83	104	initial learning rate
+57	105	108	for
+57	109	119	finetuning
+57	135	147	training for
+57	148	155	1 epoch
+57	156	160	with
+57	164	185	initial learning rate
+57	186	188	of
+57	189	197	3 10 ? 5
+57	198	201	was
+57	206	218	best setting
+58	0	10	Evaluation
+58	38	40	on
+58	45	64	NQ dev and test set
+58	65	69	with
+58	72	93	single Tesla P100 GPU
+60	4	14	BERT model
+60	15	18	for
+60	19	21	NQ
+60	22	30	performs
+60	31	50	dramatically better
+60	51	55	than
+60	60	66	models
+61	0	9	Our model
+61	10	16	closes
+61	21	24	gap
+61	25	32	between
+61	37	46	F 1 score
+61	47	58	achieved by
+61	63	88	original baseline systems
+61	97	126	super - annotator upper bound
+61	127	129	by
+61	130	134	30 %
+61	135	138	for
+61	143	162	long answer NQ task
+61	167	169	by
+61	170	174	50 %
+61	175	178	for
+61	183	203	short answer NQ task

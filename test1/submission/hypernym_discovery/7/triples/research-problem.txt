@@ -1,1 +1,0 @@
-(Contribution||has research problem||Formal concept Analysis ( FCA ))

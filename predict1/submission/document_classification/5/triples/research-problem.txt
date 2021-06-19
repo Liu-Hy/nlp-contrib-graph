@@ -1,0 +1,5 @@
+(Contribution||has research problem||searching , retrieving , and organizing text)
+(Contribution||has research problem||automatic document classification)
+(Contribution||has research problem||document classification)
+(Contribution||has research problem||Multi - Class SVM)
+(Contribution||has research problem||Text classification)

@@ -1,0 +1,8 @@
+(Contribution||has research problem||3D facial)
+(Contribution||has research problem||3D Morphable Model ( 3 DMM ))
+(Contribution||has research problem||facial analysis)
+(Contribution||has research problem||model fitting)
+(Contribution||has research problem||image synthesis)
+(Contribution||has research problem||3 DMM)
+(Contribution||has research problem||highly variable 3 D face shapes)
+(Contribution||has research problem||large amount of high - quality 3 D face scans)

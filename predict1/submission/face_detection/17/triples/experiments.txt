@@ -1,0 +1,7 @@
+(Focus Loss||address||class imbalance)
+(class imbalance||by reshaping||standard cross entropy loss)
+(objection detection||has||Focus Loss)
+(smaller face samples||through||larger ones)
+(larger ones||to increase||diversity of face samples)
+(diversity of face samples||of||smaller scales)
+(Contribution||has||Experiments)

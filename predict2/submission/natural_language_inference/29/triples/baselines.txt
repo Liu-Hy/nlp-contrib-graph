@@ -1,0 +1,5 @@
+(multiple stacking layers||to allow||evidence)
+(needed||to allow||evidence)
+(evidence||fully propagated through||passage)
+(multiple stacking layers||has||needed)
+(Contribution||has||Baselines)

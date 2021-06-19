@@ -1,0 +1,238 @@
+2	30	49	Text Classification
+4	0	21	Neural network models
+4	32	44	demonstrated
+4	72	94	remarkable performance
+4	95	97	in
+4	98	128	sentence and document modeling
+8	0	8	C - LSTM
+8	12	27	able to capture
+8	28	47	both local features
+8	48	50	of
+8	51	58	phrases
+8	59	61	as
+8	70	108	global and temporal sentence semantics
+29	19	28	introduce
+29	54	57	for
+29	58	66	C - LSTM
+29	67	79	by combining
+29	80	92	CNN and LSTM
+29	93	95	to
+29	96	111	model sentences
+30	0	15	To benefit from
+30	20	30	advantages
+30	31	33	of
+30	56	62	design
+30	65	109	simple end - to - end , unified architecture
+30	110	120	by feeding
+30	125	131	output
+30	132	134	of
+30	137	152	one - layer CNN
+30	153	157	into
+30	158	162	LSTM
+31	4	7	CNN
+31	11	32	constructed on top of
+31	37	61	pre-trained word vectors
+31	62	66	from
+31	67	94	massive unlabeled text data
+31	95	103	to learn
+31	104	132	higher - level representions
+31	133	135	of
+31	136	143	n-grams
+32	5	13	to learn
+32	14	37	sequential correlations
+32	38	42	from
+32	43	81	higher - level suqence representations
+32	88	100	feature maps
+32	101	103	of
+32	104	107	CNN
+32	112	124	organized as
+32	125	151	sequential window features
+32	152	160	to serve
+32	168	173	input
+32	174	176	of
+32	177	181	LSTM
+33	25	37	constructing
+33	38	42	LSTM
+33	43	56	directly from
+33	61	75	input sentence
+33	81	96	first transform
+33	97	110	each sentence
+33	111	115	into
+33	116	154	successive window ( n- gram ) features
+33	155	174	to help disentangle
+33	175	182	factors
+33	183	185	of
+33	186	196	variations
+33	197	203	within
+33	204	213	sentences
+37	8	12	show
+37	22	36	combination of
+37	37	49	CNN and LSTM
+37	50	61	outperforms
+37	62	112	individual multi - layer CNN models and RNN models
+142	3	12	implement
+142	23	31	based on
+142	32	38	Theano
+142	45	59	python library
+142	68	76	supports
+142	77	111	efficient symbolic differentiation
+142	116	131	transparent use
+142	132	134	of
+142	137	140	GPU
+143	0	15	To benefit from
+143	20	54	efficiency of parallel computation
+143	55	57	of
+143	62	69	tensors
+143	75	80	train
+143	85	90	model
+143	91	93	on
+143	96	99	GPU
+144	0	3	For
+144	4	22	text preprocessing
+144	33	40	convert
+144	41	55	all characters
+144	56	58	in
+144	63	70	dataset
+144	71	73	to
+144	74	83	lowercase
+145	0	3	For
+145	4	7	SST
+145	13	20	conduct
+145	21	80	hyperparameter ( number of filters , filter length in CNN ;
+145	81	107	memory dimension in LSTM ;
+145	108	161	dropout rate and which layer to apply , etc. ) tuning
+145	162	164	on
+145	169	184	validation data
+145	185	187	in
+145	192	206	standard split
+146	0	3	For
+146	4	8	TREC
+146	14	21	holdout
+146	22	34	1000 samples
+146	35	39	from
+146	44	60	training dataset
+146	61	64	for
+146	65	86	hyperparameter search
+146	91	96	train
+146	101	106	model
+146	107	112	using
+146	117	131	remaining data
+147	32	35	use
+147	36	59	one convolutional layer
+147	79	82	for
+147	83	93	both tasks
+148	0	3	For
+148	8	19	filter size
+148	25	37	investigated
+148	38	52	filter lengths
+148	53	55	of
+148	56	67	2 , 3 and 4
+148	68	70	in
+148	71	80	two cases
+148	87	113	single convolutional layer
+148	114	118	with
+148	123	141	same filter length
+148	152	181	multiple convolutional layers
+148	182	186	with
+148	187	227	different lengths of filters in parallel
+153	0	6	Binary
+153	7	9	is
+153	12	35	2 - classification task
+155	20	27	methods
+155	28	38	related to
+155	39	68	convolutional neural networks
+158	18	27	our model
+159	0	30	features after convolution and
+159	35	43	sequence
+159	44	46	of
+159	47	69	window representations
+159	73	81	fed into
+159	82	86	LSTM
+162	8	15	exploit
+162	16	38	different combinations
+162	39	41	of
+162	42	66	different filter lengths
+164	34	40	choose
+164	43	69	single convolutional layer
+164	70	74	with
+164	75	88	filter length
+165	8	11	SST
+165	18	35	number of filters
+165	36	38	of
+165	39	47	length 3
+165	51	57	set to
+165	61	64	150
+165	73	89	memory dimension
+165	90	92	of
+165	93	97	LSTM
+165	101	107	set to
+165	111	114	150
+166	4	40	word vector layer and the LSTM layer
+166	45	60	dropped outwith
+166	63	74	probability
+166	75	77	of
+166	78	81	0.5
+167	0	3	For
+167	4	8	TREC
+167	15	32	number of filters
+167	36	42	set to
+167	46	49	300
+167	58	74	memory dimension
+167	78	84	set to
+167	88	91	300
+168	4	40	word vector layer and the LSTM layer
+168	45	60	dropped outwith
+168	63	74	probability
+168	75	77	of
+168	78	81	0.5
+169	8	11	add
+169	12	29	L2 regularization
+169	30	34	with
+169	37	43	factor
+169	44	46	of
+169	47	52	0.001
+169	53	55	to
+169	60	67	weights
+169	68	70	in
+169	75	88	softmax layer
+185	0	3	For
+185	8	34	binary classification task
+185	40	47	achieve
+185	48	66	comparable results
+185	67	82	with respect to
+185	87	114	state - of - the - art ones
+189	6	15	Comparing
+189	28	35	against
+189	36	62	single CNN and LSTM models
+189	63	68	shows
+189	74	78	LSTM
+189	90	114	long - term dependencies
+189	115	121	across
+189	122	131	sequences
+189	132	134	of
+189	135	172	higher - level representations better
+198	6	16	Our result
+198	17	41	consistently outperforms
+198	42	78	all published neural baseline models
+199	6	16	Our result
+199	20	28	close to
+199	41	67	state - of - the - art SVM
+199	73	83	depends on
+199	84	110	highly engineered features
+203	8	19	investigate
+203	24	30	impact
+203	31	33	of
+203	34	65	different filter configurations
+203	66	68	in
+203	73	92	convolutional layer
+203	93	95	on
+203	100	117	model performance
+211	0	15	For the case of
+211	16	45	multiple convolutional layers
+211	66	76	shown that
+211	77	98	filter configurations
+211	99	103	with
+211	104	119	filter length 3
+211	120	128	performs
+211	129	135	better
+211	136	140	that

@@ -1,0 +1,6 @@
+(Babelfy||exploits||semantic network structure)
+(semantic network structure||from||BabelNet)
+(Babelfy||builds||unified graph - based architecture)
+(unified graph - based architecture||for||WSD and Entity Linking)
+(Babelfy||has||semantic network structure)
+(Contribution||has||Experiments)

@@ -1,0 +1,5 @@
+(sparse feature pairs||to||hypernym extraction)
+(Model||apply||sparse feature pairs)
+(correspondence||between||variable tree and the hypernym hierarchy)
+(Model||Exploiting||correspondence)
+(Contribution||has||Model)

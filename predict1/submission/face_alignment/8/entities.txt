@@ -1,0 +1,248 @@
+2	0	53	Joint 3D Face Reconstruction and Dense Face Alignment
+9	0	46	3 D face reconstruction from a single 2D image
+13	15	21	taking
+13	26	53	sparse 2 D facial landmarks
+13	82	83	2
+13	89	99	introduces
+13	100	137	four novel self - supervision schemes
+13	138	147	that view
+13	152	190	2D landmark and 3D landmark prediction
+13	191	193	as
+13	196	218	self - mapping process
+13	221	230	including
+13	235	283	2D and 3D landmark self - prediction consistency
+13	286	305	cycle - consistency
+13	306	310	over
+13	315	337	2D landmark prediction
+13	342	355	self - critic
+13	356	360	over
+13	365	393	predicted 3 DMM coefficients
+13	394	402	based on
+13	403	423	landmark predictions
+14	50	62	2DASL method
+14	63	85	significantly relieves
+14	86	93	demands
+14	94	96	on
+14	105	149	conventional paired 2D - to - 3D annotations
+14	154	159	gives
+14	160	197	much higher - quality 3 D face models
+14	198	215	without requiring
+14	220	245	additional 3D annotations
+23	0	46	3 D face reconstruction from a single 2D image
+31	0	23	3 D face reconstruction
+41	9	20	to overcome
+41	25	45	intrinsic limitation
+41	88	95	propose
+41	98	119	novel learning method
+41	125	134	leverages
+41	135	169	2D " in - the - wild " face images
+41	170	209	to effectively supervise and facilitate
+41	214	236	3D face model learning
+45	3	9	design
+45	12	51	novel self - supervised learning method
+45	60	73	able to train
+45	76	90	3 D face model
+45	91	95	with
+45	96	112	weak supervision
+45	113	117	from
+45	118	127	2D images
+49	15	34	our proposed method
+49	40	48	exploits
+49	49	68	cycle - consistency
+49	69	73	over
+49	78	101	2D landmark predictions
+49	111	117	taking
+49	122	144	recovered 2D landmarks
+49	145	147	as
+49	193	195	2D
+49	251	260	that have
+49	261	277	small difference
+49	278	282	with
+49	287	301	annotated ones
+51	0	13	To facilitate
+51	18	44	overall learning procedure
+51	47	50	our
+51	63	71	exploits
+51	72	94	self - critic learning
+52	3	17	takes as input
+52	18	22	both
+52	27	71	latent representation and 3 DMM coefficients
+52	72	74	of
+52	78	88	face image
+52	93	99	learns
+52	102	114	critic model
+52	115	126	to evaluate
+52	131	152	intrinsic consistency
+52	153	160	between
+52	165	226	predicted 3 DMM coefficients and the corresponding face image
+52	229	237	offering
+52	238	257	another supervision
+52	258	261	for
+52	262	285	3 D face model learning
+57	28	35	aims to
+57	36	49	fully utilize
+57	54	98	abundant " in - the - wild " 2 D face images
+57	99	108	to assist
+57	109	132	3 D face model learning
+59	33	46	able to train
+59	47	62	3 D face models
+59	63	67	with
+59	68	83	2 D face images
+59	84	86	by
+59	87	113	self - supervised learning
+61	3	10	develop
+61	16	53	self - critic learning based approach
+61	60	65	could
+61	66	85	effectively improve
+61	90	122	3D face model learning procedure
+61	134	146	better model
+154	0	38	2D assisted self - supervised learning
+170	28	30	of
+170	112	119	discard
+170	129	135	sample
+170	136	148	18 landmarks
+170	149	153	from
+170	158	180	68 2D facial landmarks
+205	23	39	implemented with
+205	40	47	Pytorch
+206	3	6	use
+206	7	20	SGD optimizer
+206	21	24	for
+206	29	42	CNN regressor
+206	43	47	with
+206	50	63	learning rate
+206	64	76	beginning at
+206	77	84	5 10 ?5
+206	89	95	decays
+206	130	134	uses
+206	139	143	Adam
+206	144	146	as
+206	147	156	optimizer
+206	157	161	with
+206	166	193	fixed learning rate 1 10 ?4
+211	25	36	fine - tune
+211	37	46	our model
+211	47	52	using
+211	57	77	Vertex Distance Cost
+215	4	23	2D facial landmarks
+215	24	26	of
+215	27	46	all the face images
+215	51	62	detected by
+215	66	104	advanced 2 D facial landmarks detector
+218	0	9	Each face
+218	13	27	annotated with
+218	32	64	corresponding 3 DMM coefficients
+218	73	95	68 3D facial landmarks
+223	0	10	Each image
+223	14	28	annotated with
+223	29	48	34 facial landmarks
+230	17	28	our results
+230	29	32	are
+230	33	46	more accurate
+230	47	51	than
+230	56	68	ground truth
+230	69	71	in
+230	72	82	some cases
+239	40	43	see
+239	44	54	our 2 DASL
+239	55	63	achieves
+239	68	84	lowest NME ( % )
+239	85	105	on the evaluation of
+239	111	133	2 D and 3D coordinates
+239	134	139	among
+240	0	3	For
+240	4	25	3 DMM - based methods
+240	28	43	3 DDFA and DeFA
+240	46	56	our method
+240	57	68	outperforms
+240	74	76	by
+240	79	91	large margin
+240	92	99	on both
+240	104	122	68 spare landmarks
+240	131	148	dense coordinates
+246	0	9	Our 2DASL
+246	15	23	performs
+246	24	30	better
+246	31	35	than
+246	36	41	PRNet
+246	44	52	reducing
+246	53	56	NME
+246	57	59	by
+246	60	73	0.09 and 0.08
+246	74	76	on
+246	77	90	AFLW2000 - 3D
+246	95	106	AFLW - LFPA
+252	21	27	employ
+252	32	74	Iterative Closest Points ( ICP ) algorithm
+252	75	82	to find
+252	87	115	corresponding nearest points
+252	116	123	between
+252	128	150	reconstructed 3 D face
+252	159	183	ground truth point cloud
+255	21	46	3D reconstruction results
+255	47	49	of
+255	50	56	2 DASL
+255	57	68	outperforms
+255	69	75	3 DDFA
+255	76	78	by
+255	79	94	0.39 , and 2.29
+255	95	98	for
+255	99	103	DeFA
+257	21	40	reconstructed shape
+257	41	43	of
+257	44	54	our 2 DASL
+257	55	58	are
+257	59	70	more smooth
+257	88	110	PRNet and VRN - Guided
+257	111	120	introduce
+257	121	135	some artifacts
+257	136	140	into
+257	145	166	reconstructed results
+257	175	180	makes
+257	185	204	reconstructed faces
+257	205	209	look
+257	210	221	unnaturally
+260	6	19	2DASL ( cyc )
+260	28	42	takes as input
+260	47	58	combination
+260	62	77	RGB face images
+260	108	112	with
+260	113	130	self - supervison
+260	183	195	2DASL ( sc )
+260	204	218	takes as input
+260	223	238	RGB face images
+260	244	249	using
+260	250	272	self - critic learning
+261	6	22	2DASL ( cyc+sc )
+261	31	39	contains
+261	45	63	self - supervision
+261	68	93	self - critic supervision
+265	4	10	Adding
+265	11	18	weights
+265	19	21	to
+265	22	29	central
+265	30	36	points
+265	37	39	of
+265	44	60	facial landmarks
+265	61	68	reduces
+265	73	76	NME
+265	77	79	by
+265	80	84	0.09
+265	85	87	to
+265	88	92	0.23
+265	93	95	on
+265	100	110	two stages
+267	0	2	If
+267	7	29	self - critic learning
+267	30	32	is
+267	33	41	not used
+267	48	51	NME
+267	52	61	increases
+267	62	64	by
+267	65	74	0.04/0.18
+267	75	78	for
+267	79	105	with / without weight mask
+269	4	15	best result
+269	19	32	achieved when
+269	33	55	both these two modules
+269	60	64	used

@@ -1,0 +1,28 @@
+4	0	52	Teaching machines to read natural language documents
+5	0	15	Machine reading
+16	24	32	directly
+16	45	88	lack of real natural language training data
+16	89	103	by introducing
+16	106	120	novel approach
+16	121	132	to building
+16	135	176	supervised reading comprehension data set
+18	28	37	collected
+18	38	53	two new corpora
+18	54	56	of
+18	57	87	roughly a million news stories
+18	88	92	with
+18	93	111	associated queries
+18	112	116	from
+18	121	148	CNN and Daily Mail websites
+32	99	107	learning
+32	108	136	reading comprehension models
+33	39	45	create
+33	46	73	two machine reading corpora
+33	74	87	by exploiting
+33	88	113	online newspaper articles
+33	124	142	matching summaries
+95	3	7	tune
+95	12	46	maximum penalty per word ( m = 8 )
+95	47	49	on
+95	54	69	validation data
+156	0	23	Word distance benchmark

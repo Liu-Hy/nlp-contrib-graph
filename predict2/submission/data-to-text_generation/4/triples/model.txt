@@ -1,0 +1,7 @@
+(content plan||from||input and conditions)
+(input and conditions||on||content plan)
+(content plan||to generate||output document)
+(Model||learns||content plan)
+(end - to - end||using||neural networks)
+(Model||train||end - to - end)
+(Contribution||has||Model)

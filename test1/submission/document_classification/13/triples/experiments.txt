@@ -1,4 +1,0 @@
-(dimensionality||of||unsupervised embeddings)
-(dimensionality||set to||300)
-(unsupervised embeddings||set to||300)
-(Contribution||has||Experiments)

@@ -1,6 +1,0 @@
-(size||of||word vector dimension)
-(word vector dimension||as||d = 300)
-(vectors||with||word2 vec toolkit)
-(word2 vec toolkit||on||English Gigaword ( LDC2011T07 ))
-(Hyperparameters||set||size)
-(Contribution||has||Hyperparameters)

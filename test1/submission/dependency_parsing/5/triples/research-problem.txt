@@ -1,6 +1,0 @@
-(Contribution||has research problem||Syntactic analysis)
-(Contribution||has research problem||unlabeled data)
-(Contribution||has research problem||training)
-(Contribution||has research problem||accuracy)
-(Contribution||has research problem||our model)
-(Contribution||has research problem||94.26 % UAS / 92.41 % LAS)

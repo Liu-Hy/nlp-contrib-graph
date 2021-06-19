@@ -1,0 +1,6 @@
+(Contribution||has research problem||Distributed word representation)
+(Contribution||has research problem||AI)
+(Contribution||has research problem||active learning and self learning)
+(Contribution||has research problem||named entity recognition on twitter)
+(Contribution||has research problem||conditional random fields learning)
+(Contribution||has research problem||Learning word representation)

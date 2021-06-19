@@ -1,7 +1,0 @@
-(Word2vec||to produce||word embeddings)
-(Hyperparameters||has||Word2vec)
-(skip - gram model ( - cbow 0 )||used with||embedding dimension)
-(embedding dimension||set to||300)
-(embedding dimension||has||300)
-(Hyperparameters||has||skip - gram model ( - cbow 0 ))
-(Contribution||has||Hyperparameters)

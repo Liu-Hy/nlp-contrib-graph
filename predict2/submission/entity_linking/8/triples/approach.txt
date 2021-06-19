@@ -1,0 +1,8 @@
+(independent entity embeddings||trained to match||fixed length vector representations)
+(fixed length vector representations||of||textual context)
+(Approach||present||RELIC ( Representations of Entities Learned in Context ))
+(RELIC||to||entity typing)
+(Approach||apply||RELIC)
+(model||using||Tensor Flow)
+(Approach||train||model)
+(Contribution||has||Approach)

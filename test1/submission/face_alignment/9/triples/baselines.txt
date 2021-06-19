@@ -1,6 +1,0 @@
-(hourglass architecture||with||human annotations)
-(GHCU||considers||global face shape)
-(global face shape||as||constraint)
-(global face shape||has||constraint)
-(Baselines||has||GHCU)
-(Contribution||has||Baselines)

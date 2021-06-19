@@ -1,0 +1,102 @@
+2	14	51	Ensemble of Greedy Dependency Parsers
+13	26	34	to build
+13	37	85	firstorder graph - based ( FOG ) ensemble parser
+13	93	98	seeks
+13	99	108	consensus
+13	109	114	among
+13	115	159	20 randomly - initialized stack LSTM parsers
+13	162	171	achieving
+13	172	210	nearly the best - reported performance
+13	211	213	on
+13	218	267	standard Penn Treebank Stanford dependencies task
+18	30	40	distilling
+18	45	53	ensemble
+18	54	58	into
+18	61	78	single FOG parser
+18	79	83	with
+18	84	107	discriminative training
+18	108	119	by defining
+18	122	139	new cost function
+19	25	31	derive
+19	36	40	cost
+19	41	43	of
+19	44	68	each possible attachment
+19	69	73	from
+19	78	107	ensemble 's division of votes
+19	114	117	use
+19	123	127	cost
+19	128	130	in
+19	131	154	discriminative learning
+22	41	70	graphbased dependency parsing
+69	0	52	Our ensembles of greedy , locally normalized parsers
+69	53	60	perform
+69	61	71	comparably
+69	72	74	to
+69	146	149	for
+69	150	171	training and decoding
+114	13	24	ensemble is
+114	25	34	confident
+114	37	41	cost
+114	42	45	for
+114	46	49	its
+114	50	62	choice ( s )
+114	66	71	lower
+114	89	94	under
+114	95	107	Hamming cost
+150	12	17	apply
+150	20	49	per-epoch learning rate decay
+150	50	52	of
+150	53	57	0.05
+150	58	60	to
+150	65	79	Adam optimizer
+151	10	24	Adam optimizer
+151	25	46	automatically adjusts
+151	51	71	global learning rate
+151	72	84	according to
+151	85	109	past gradient magnitudes
+151	115	119	find
+151	130	156	additional per-epoch decay
+151	157	178	consistently improves
+151	179	190	performance
+151	191	197	across
+151	198	224	all settings and languages
+155	3	7	used
+155	12	27	standard splits
+155	28	31	for
+155	32	45	all languages
+157	0	3	For
+157	4	10	German
+157	14	17	use
+157	22	36	predicted tags
+157	37	48	provided by
+157	53	86	CoNLL 2009 shared task organizers
+158	16	30	augmented with
+158	31	74	pretrained structured - skipgram embeddings
+158	81	88	English
+158	92	96	used
+158	101	135	Gigaword corpus and 100 dimensions
+158	176	208	German WMT 2010 monolingual data
+161	0	3	For
+161	8	22	Adam optimizer
+161	26	29	use
+161	34	50	default settings
+161	51	53	in
+161	58	84	CNN neural network library
+178	14	22	training
+178	27	37	same model
+178	38	42	with
+178	43	60	distillation cost
+178	61	66	gives
+178	67	90	consistent improvements
+178	91	94	for
+178	95	108	all languages
+183	4	9	model
+183	10	22	trained with
+183	23	35	Hamming cost
+183	36	44	achieved
+183	45	66	93.1 UAS and 90.9 LAS
+183	69	80	compared to
+183	81	102	93.6 UAS and 91.1 LAS
+183	103	106	for
+183	111	116	model
+183	122	139	distillation cost

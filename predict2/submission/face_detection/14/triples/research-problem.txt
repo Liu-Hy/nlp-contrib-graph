@@ -1,0 +1,4 @@
+(Contribution||has research problem||WIDER FACE)
+(Contribution||has research problem||Face Detection)
+(Contribution||has research problem||large - scale face detection dataset)
+(Contribution||has research problem||WIDER FACE)

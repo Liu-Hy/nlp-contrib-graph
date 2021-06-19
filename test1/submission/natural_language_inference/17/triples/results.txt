@@ -1,5 +1,0 @@
-(Interannotator agreement||is||high)
-(high||with||Fleiss 's ?)
-(Fleiss 's ?||of||0.73)
-(Interannotator agreement||has||high)
-(Contribution||has||Results)

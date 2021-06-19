@@ -1,0 +1,151 @@
+284	0	5	Using
+284	8	42	global image - based discriminator
+284	46	55	redundant
+284	63	79	global structure
+284	83	96	guaranteed by
+284	101	116	rendering layer
+285	32	37	using
+285	38	72	global image - based discriminator
+285	77	82	cause
+285	83	99	severe artifacts
+285	100	102	in
+285	107	124	resultant texture
+287	10	18	patchGAN
+287	19	25	offers
+287	26	60	higher realism and fewer artifacts
+45	11	18	utilize
+45	19	39	two network decoders
+45	42	52	instead of
+45	53	67	two PCA spaces
+45	70	72	as
+45	77	111	shape and texture model components
+46	50	56	design
+46	57	75	different networks
+46	76	79	for
+46	80	97	shape and texture
+46	104	136	multi - layer perceptron ( MLP )
+46	137	140	for
+46	141	146	shape
+46	151	187	convolutional neural network ( CNN )
+46	188	191	for
+46	192	199	texture
+52	24	54	differentiable rendering layer
+52	55	66	to generate
+52	69	87	reconstructed face
+52	88	97	by fusing
+52	102	109	3D face
+52	112	119	texture
+52	130	158	camera projection parameters
+52	159	171	estimated by
+52	176	183	encoder
+47	0	12	Each decoder
+47	18	22	take
+47	25	56	shape or texture representation
+47	57	59	as
+47	60	65	input
+47	70	76	output
+47	81	113	dense 3 D face or a face texture
+50	4	11	encoder
+50	12	17	takes
+50	20	34	2 D face image
+50	35	37	as
+50	38	43	input
+50	48	57	generates
+50	62	90	shape and texture parameters
+50	93	103	from which
+50	104	116	two decoders
+50	117	125	estimate
+50	130	149	3D face and texture
+51	4	24	3 D face and texture
+51	31	52	perfectly reconstruct
+51	57	67	input face
+51	70	72	if
+51	77	104	fitting algorithm and 3 DMM
+51	109	120	well learnt
+53	14	41	endto - end learning scheme
+53	67	91	encoder and two decoders
+53	96	102	learnt
+53	103	110	jointly
+53	111	122	to minimize
+53	127	137	difference
+53	138	145	between
+53	150	168	reconstructed face
+53	177	187	input face
+54	0	16	Jointly learning
+54	21	56	3 DMM and the model fitting encoder
+54	70	78	leverage
+54	83	99	large collection
+54	100	102	of
+54	103	126	unconstrained 2D images
+54	127	145	without relying on
+54	146	154	3D scans
+49	13	18	learn
+49	23	40	fitting algorithm
+49	41	43	to
+49	44	63	our nonlinear 3 DMM
+49	75	88	formulated as
+49	91	102	CNN encoder
+55	3	7	show
+55	8	30	significantly improved
+55	31	69	shape and texture representation power
+55	70	74	over
+55	79	91	linear 3 DMM
+208	4	9	model
+208	13	28	optimized using
+208	29	43	Adam optimizer
+208	44	48	with
+208	52	73	initial learning rate
+208	74	76	of
+208	77	82	0.001
+208	83	98	when minimizing
+208	99	102	L 0
+208	109	115	0.0002
+208	116	131	when minimizing
+208	132	133	L
+209	3	6	set
+209	11	31	following parameters
+209	34	35	Q
+209	38	46	53 , 215
+209	49	54	U = V
+209	57	60	128
+209	63	72	l S = l T
+209	75	78	160
+226	0	20	Representation Power
+230	23	31	minimize
+230	36	56	reconstruction error
+230	57	59	in
+230	64	75	image space
+230	78	85	through
+230	90	105	rendering layer
+230	106	110	with
+230	115	134	groundtruth S and m
+233	8	29	our nonlinear texture
+233	33	42	closer to
+233	47	58	groundtruth
+233	59	63	than
+233	68	80	linear model
+233	83	97	especially for
+233	98	120	in - the - wild images
+235	17	36	our nonlinear model
+235	41	60	significantly lower
+235	61	85	L 1 reconstruction error
+235	86	90	than
+235	95	98	lin
+247	26	68	significantly smaller reconstruction error
+247	69	73	than
+247	78	90	linear model
+247	93	110	0.0196 vs. 0.0241
+264	27	44	3D reconstruction
+265	3	9	obtain
+265	12	21	low error
+265	30	43	comparable to
+265	44	72	optimization - based methods
+271	0	22	3D Face Reconstruction
+280	3	10	achieve
+280	11	27	on - par results
+280	28	32	with
+280	33	47	Garrido et al.
+280	89	99	surpassing
+280	104	128	other regression methods
+12	126	140	face alignment
+12	145	162	3D reconstruction

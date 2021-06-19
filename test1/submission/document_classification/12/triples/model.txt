@@ -1,6 +1,0 @@
-(new graph neural networkbased method||for||text classification)
-(Model||propose||new graph neural networkbased method)
-(Model||model||Graph Convolutional Network ( GCN ))
-(text classification problem||into||anode classification problem)
-(Model||turn||text classification problem)
-(Contribution||has||Model)

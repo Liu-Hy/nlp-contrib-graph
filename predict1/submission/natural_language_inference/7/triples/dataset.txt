@@ -1,0 +1,5 @@
+(two new corpora||of||roughly a million news stories)
+(roughly a million news stories||with||associated queries)
+(associated queries||from||CNN and Daily Mail websites)
+(Dataset||collected||two new corpora)
+(Contribution||has||Dataset)

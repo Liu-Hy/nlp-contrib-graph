@@ -1,0 +1,8 @@
+(single Document Reader model||trained on||SQuAD training set)
+(SQuAD||used on||all evaluation sets)
+(SQuAD||has||single Document Reader model)
+(Baselines||has||SQuAD)
+(each dataset independently||using||distant supervision ( DS ) training set)
+(Baselines||has||Fine-tune ( DS ))
+(Baselines||has||Multitask ( DS ))
+(Contribution||has||Baselines)

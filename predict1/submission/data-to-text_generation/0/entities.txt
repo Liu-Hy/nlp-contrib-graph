@@ -1,0 +1,219 @@
+2	25	52	Data - to - Text Generation
+4	0	63	Transcribing structured data into natural language descriptions
+20	9	16	decoder
+20	17	26	generates
+20	27	32	words
+20	33	47	conditioned on
+36	35	42	propose
+36	45	74	new structured - data encoder
+36	75	88	assuming that
+36	89	99	structures
+36	100	109	should be
+36	110	133	hierarchically captured
+37	17	27	focuses on
+37	32	40	encoding
+37	41	43	of
+37	48	64	data - structure
+37	76	83	decoder
+37	87	99	chosen to be
+37	102	118	classical module
+39	5	10	model
+39	15	32	general structure
+39	33	35	of
+39	45	50	using
+39	53	77	two - level architecture
+39	80	94	first encoding
+39	95	107	all entities
+39	108	123	on the basis of
+39	124	138	their elements
+39	141	145	then
+39	146	154	encoding
+39	159	173	data structure
+39	174	189	on the basis of
+39	190	202	its entities
+39	210	219	introduce
+39	224	243	Transformer encoder
+39	244	246	in
+39	247	270	data - to - text models
+39	271	280	to ensure
+39	281	296	robust encoding
+39	297	299	of
+39	300	323	each element / entities
+39	324	340	in comparison to
+39	341	351	all others
+39	397	406	integrate
+39	409	441	hierarchical attention mechanism
+39	442	452	to compute
+39	457	477	hierarchical context
+39	478	486	fed into
+39	491	498	decoder
+192	0	2	Li
+192	3	5	is
+192	8	34	standard encoder - decoder
+192	35	39	with
+192	42	64	delayed copy mechanism
+192	67	71	text
+192	75	95	first generated with
+192	96	108	placeholders
+192	121	132	replaced by
+192	133	148	salient records
+192	149	163	extracted from
+192	168	173	table
+192	174	176	by
+192	179	194	pointer network
+195	3	14	consists in
+195	17	43	standard encoder - decoder
+195	46	50	with
+195	54	66	added module
+195	67	84	aimed at updating
+195	85	107	record representations
+195	108	114	during
+195	119	137	generation process
+196	0	2	At
+196	3	21	each decoding step
+196	26	49	gated recurrent network
+196	50	58	computes
+196	73	79	should
+196	116	134	new representation
+206	0	3	For
+206	8	22	encoder module
+206	72	75	use
+206	78	118	two - layers multi-head self - attention
+206	119	123	with
+206	124	133	two heads
+207	0	11	To fit with
+207	16	43	small number of record keys
+207	44	46	in
+207	47	58	our dataset
+207	67	81	embedding size
+207	85	93	fixed to
+207	94	96	20
+208	4	8	size
+208	9	11	of
+208	16	57	record value embeddings and hidden layers
+208	58	60	of
+208	65	85	Transformer encoders
+208	95	101	set to
+208	102	105	300
+209	3	6	use
+209	7	14	dropout
+209	15	17	at
+209	18	26	rate 0.5
+210	15	27	trained with
+210	30	40	batch size
+210	41	43	of
+210	44	46	64
+212	16	28	trained with
+212	33	47	Adam optimizer
+212	54	75	initial learning rate
+212	76	78	is
+212	79	84	0.001
+212	94	104	reduced by
+212	105	109	half
+212	110	115	every
+212	116	126	10 K steps
+213	3	7	used
+213	8	19	beam search
+213	20	24	with
+213	25	34	beam size
+213	35	37	of
+213	38	39	5
+213	40	46	during
+213	47	56	inference
+214	19	33	implemented in
+214	34	47	Open NMT - py
+215	25	77	https://github.com/KaijuML/data-to-text-hierarchical
+229	13	23	comparison
+229	24	31	between
+229	32	78	scenario Hierarchical - kv and Hierarchical -k
+229	79	84	shows
+229	90	98	omitting
+229	99	121	entirely the influence
+229	122	124	of
+229	129	142	record values
+229	143	145	in
+229	150	169	attention mechanism
+229	170	172	is
+229	173	187	more effective
+229	248	256	excepted
+234	0	25	Scores of Hierarchical -k
+234	26	29	are
+234	30	35	sharp
+234	38	42	with
+234	43	60	all of the weight
+234	61	63	on
+234	68	82	correct record
+234	109	136	scores of Hierarchical - kv
+234	141	145	more
+234	146	162	distributed over
+234	163	182	all PTS QTR records
+234	196	203	failing
+234	220	231	correct one
+235	18	32	our best model
+235	33	48	Hierarchical -k
+235	49	57	reaching
+235	58	71	17.5 vs. 16.5
+235	72	79	against
+235	84	97	best baseline
+244	0	23	Our hierarchical models
+244	24	31	achieve
+244	32	59	significantly better scores
+244	60	62	on
+244	63	74	all metrics
+244	96	121	flat architecture Wiseman
+247	18	26	achieves
+247	27	41	only 75 . 62 %
+247	42	44	of
+247	45	54	precision
+247	172	178	scores
+247	206	216	leading to
+252	19	30	introducing
+252	35	59	Transformer architecture
+252	60	62	is
+252	63	76	promising way
+252	77	102	to implicitly account for
+252	103	117	data structure
+253	0	23	Our hierarchical models
+253	24	34	outperform
+253	39	58	two - step decoders
+253	59	61	of
+253	62	86	Li and Puduppully - plan
+253	87	89	on
+253	95	127	BLEU and all qualitative metrics
+254	17	36	sensibly outperform
+254	40	49	precision
+254	50	52	at
+254	53	69	factual mentions
+254	76	102	baseline Puduppully - plan
+254	103	110	reaches
+254	111	125	34.28 mentions
+255	4	14	comparison
+255	15	19	with
+255	20	37	Puduppully - updt
+255	38	43	shows
+255	49	69	dynamically updating
+255	74	82	encoding
+255	83	89	across
+255	94	112	generation process
+255	117	124	lead to
+255	125	155	better Content Ordering ( CO )
+259	24	31	encodes
+259	32	40	saliency
+259	41	46	among
+259	47	65	records / entities
+259	66	82	more effectively
+266	21	29	proposed
+266	32	52	hierarchical encoder
+266	53	56	for
+266	57	72	structured data
+266	85	94	leverages
+266	99	108	structure
+266	109	116	to form
+266	117	141	efficient representation
+266	142	144	of
+266	145	154	its input
+266	165	179	strong synergy
+266	180	184	with
+266	189	211	hierarchical attention
+266	212	214	of
+266	215	237	its associated decoder

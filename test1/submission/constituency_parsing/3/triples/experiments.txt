@@ -1,3 +1,0 @@
-(word - vector embedding||with||pre-trained word vectors)
-(pre-trained word vectors||obtained from||word2 vec)
-(Contribution||has||Experiments)

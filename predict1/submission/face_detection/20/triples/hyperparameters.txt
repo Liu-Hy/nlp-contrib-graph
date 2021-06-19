@@ -1,0 +1,4 @@
+(2048||as||number of weak classifiers)
+(number of weak classifiers||contained in||soft cascade)
+(Hyperparameters||choose||2048)
+(Contribution||has||Hyperparameters)

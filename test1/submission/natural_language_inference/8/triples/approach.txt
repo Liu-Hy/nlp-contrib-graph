@@ -1,4 +1,0 @@
-(unified deep learning framework||for recognizing||textual entailment)
-(Approach||proposed||unified deep learning framework)
-(Approach||based on||building biL - STM models)
-(Contribution||has||Approach)

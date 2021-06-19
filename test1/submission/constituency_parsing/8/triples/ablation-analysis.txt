@@ -1,6 +1,0 @@
-(our model||learns to use||combination)
-(combination||of||two attention types)
-(two attention types||with||positionbased attention)
-(combination||has||two attention types)
-(Ablation analysis||see||our model)
-(Contribution||has||Ablation analysis)

@@ -1,0 +1,166 @@
+4	3	10	present
+4	13	18	novel
+4	19	60	boundary - aware face alignment algorithm
+4	61	73	by utilising
+4	74	88	boundary lines
+4	89	91	as
+4	96	115	geometric structure
+4	116	118	of
+4	121	131	human face
+4	132	139	to help
+4	140	168	facial landmark localisation
+12	3	12	utilising
+12	13	33	boundary information
+12	34	36	of
+12	37	52	300 - W dataset
+12	55	65	our method
+12	66	74	achieves
+12	75	92	3.92 % mean error
+12	93	97	with
+12	98	117	0.39 % failure rate
+12	118	120	on
+12	121	133	COFW dataset
+12	140	157	1.25 % mean error
+12	158	160	on
+12	161	180	AFLW - Full dataset
+30	18	27	represent
+30	28	44	facial structure
+30	45	50	using
+30	51	68	13 boundary lines
+31	0	25	Each facial boundary line
+31	33	50	interpolated from
+31	53	90	sufficient number of facial landmarks
+31	91	97	across
+31	98	115	multiple datasets
+31	145	158	inconsistency
+31	159	161	of
+31	166	184	annotation schemes
+32	4	45	boundary - aware face alignment algorithm
+32	46	54	contains
+32	55	65	two stages
+33	9	17	estimate
+33	18	42	facial boundary heatmaps
+33	52	59	regress
+33	60	69	landmarks
+33	70	86	with the help of
+33	87	104	boundary heatmaps
+35	36	42	facial
+35	73	82	introduce
+35	83	109	adversarial learning ideas
+35	110	118	by using
+35	121	174	landmark - based boundary effectiveness discriminator
+37	4	30	boundary heatmap estimator
+37	33	51	landmark regressor
+37	58	94	boundary effectiveness discriminator
+37	95	101	can be
+37	102	109	jointly
+37	118	120	in
+37	124	145	end - to - end manner
+39	6	16	generating
+39	17	41	facial boundary heatmaps
+39	48	52	next
+39	61	69	deriving
+39	70	86	facial landmarks
+39	87	92	using
+39	93	103	boundaries
+43	0	16	To fully utilise
+43	21	42	structure information
+43	48	53	apply
+43	54	71	boundary heatmaps
+43	72	74	at
+43	75	90	multiple stages
+43	91	93	in
+43	98	125	landmark regression network
+50	0	10	Each image
+50	14	28	annotated with
+50	29	41	98 landmarks
+50	46	58	6 attributes
+207	0	12	AFLW dataset
+207	20	28	contains
+207	29	56	24386 in - the - wild faces
+207	57	61	with
+207	62	77	large head pose
+207	78	83	up to
+207	84	87	120
+207	88	91	for
+207	92	95	yaw
+207	100	102	90
+207	107	121	pitch and roll
+224	19	31	trained with
+224	32	44	Caffe [ 24 ]
+224	45	47	on
+224	48	62	4 Titan X GPUs
+231	0	10	Our method
+231	11	19	performs
+231	20	24	best
+231	25	30	among
+231	31	72	all of the state - of - the - art methods
+240	0	5	shows
+240	10	20	CED curves
+240	21	23	of
+240	24	27	our
+240	35	42	against
+240	43	73	state - of - the - art methods
+240	74	76	on
+240	81	98	COFW - 68 dataset
+241	0	9	Our model
+241	10	21	outperforms
+241	22	38	previous results
+241	39	43	with
+241	46	58	large margin
+242	3	10	achieve
+242	11	28	4.62 % mean error
+242	29	33	with
+242	34	53	2.17 % failure rate
+243	4	16	failure rate
+243	17	19	is
+243	20	41	significantly reduced
+243	42	44	by
+243	45	51	3.75 %
+247	11	22	clear boost
+247	23	30	between
+247	31	41	our method
+247	42	64	without and with using
+247	65	85	boundary information
+249	11	21	our method
+249	22	26	uses
+249	27	47	boundary information
+249	48	56	achieves
+249	57	112	29 % , 32 % and 29 % relative performance improve- ment
+249	113	117	over
+249	122	162	baseline method ( " LAB without boundary
+249	167	169	on
+249	170	179	COFW - 29
+249	182	193	AFLW - Full
+249	198	212	AFLW - Frontal
+253	0	3	Our
+253	14	25	consists of
+253	26	52	several pivotal components
+253	55	59	i.e.
+253	62	89	boundary information fusion
+253	92	107	message passing
+253	112	132	adversarial learning
+263	18	33	our final model
+263	39	44	fuses
+263	45	65	boundary information
+263	66	68	in
+263	69	84	all four levels
+263	85	93	improves
+263	94	104	mean error
+263	105	109	from
+263	110	116	7.12 %
+263	117	119	to
+263	120	126	6.13 %
+281	19	26	present
+281	29	38	novel use
+281	39	41	of
+281	42	57	facial boundary
+281	58	67	to derive
+281	68	84	facial landmarks
+285	4	11	runtime
+285	12	14	of
+285	15	28	our algorithm
+285	29	31	is
+285	32	37	60 ms
+285	38	40	on
+285	41	52	TITAN X GPU

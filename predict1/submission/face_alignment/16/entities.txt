@@ -1,0 +1,152 @@
+2	32	46	Face Alignment
+11	40	85	https://github.com/ZhiwenShao/MCNet-Extension
+27	13	18	needs
+27	19	31	extra labels
+27	32	34	of
+27	35	52	facial attributes
+27	53	56	for
+27	57	65	training
+27	66	73	samples
+27	82	88	limits
+27	93	105	universality
+32	6	19	observed that
+32	24	28	nose
+32	29	35	can be
+32	36	45	localized
+32	46	53	roughly
+32	54	58	with
+32	63	90	locations of eyes and mouth
+35	20	27	propose
+35	30	59	novel deep learning framework
+35	60	65	named
+35	66	97	Multi - Center Learning ( MCL )
+35	98	108	to exploit
+35	113	132	strong correlations
+35	133	138	among
+35	139	148	landmarks
+36	16	19	our
+36	28	32	uses
+36	33	65	multiple shape prediction layers
+36	66	76	to predict
+36	81	103	locations of landmarks
+36	110	137	each shape prediction layer
+36	138	151	emphasizes on
+36	156	165	detection
+36	166	168	of
+36	171	199	certain cluster of landmarks
+37	3	12	weighting
+37	17	21	loss
+37	22	24	of
+37	25	38	each landmark
+37	41	62	challenging landmarks
+37	67	74	focused
+37	75	82	firstly
+37	89	114	each cluster of landmarks
+37	115	117	is
+37	118	135	further optimized
+38	11	22	to decrease
+38	27	43	model complexity
+38	49	56	propose
+38	59	82	model assembling method
+38	83	95	to integrate
+38	96	128	multiple shape prediction layers
+38	129	133	into
+38	134	160	one shape prediction layer
+39	21	31	reinforces
+39	36	52	learning process
+39	53	55	of
+39	56	69	each landmark
+39	70	74	with
+39	77	97	low model complexity
+41	70	89	strong correlations
+41	90	95	among
+41	96	105	landmarks
+42	3	10	propose
+42	13	36	model assembling method
+42	43	50	ensures
+42	53	73	low model complexity
+87	0	17	C. Face Alignment
+208	3	10	enhance
+208	15	24	diversity
+208	25	27	of
+208	28	45	raw training data
+208	46	59	on account of
+208	66	92	limited variation patterns
+208	95	100	using
+208	101	111	five steps
+208	114	122	rotation
+208	125	140	uniform scaling
+208	143	154	translation
+208	157	172	horizontal flip
+208	179	195	JPEG compression
+213	3	8	train
+213	9	16	our MCL
+213	17	22	using
+213	26	67	open source deep learning framework Caffe
+217	4	31	maximum learning iterations
+217	32	34	of
+217	35	47	pre-training
+217	52	72	each finetuning step
+217	73	76	are
+217	77	93	1810 4 and 610 4
+217	117	139	initial learning rates
+217	140	142	of
+217	143	155	pre-training
+217	160	183	each fine - tuning step
+217	184	187	are
+217	188	202	0.02 and 0.001
+234	0	9	FLD + PDE
+234	10	18	performs
+234	19	44	facial landmark detection
+234	47	78	pose and deformation estimation
+234	96	98	in
+234	109	122	training data
+234	123	125	of
+234	126	157	pose and deformation estimation
+237	0	14	Our method MCL
+237	15	26	outperforms
+237	27	69	most of the state - of - the - art methods
+237	72	85	especially on
+237	86	98	AFLW dataset
+256	4	46	Global Average Pooling vs. Full Connection
+266	4	27	Robustness of Weighting
+273	0	4	When
+273	5	6	?
+273	7	9	is
+273	10	13	0.4
+273	16	18	WM
+273	38	54	good performance
+279	0	11	Compared to
+279	12	14	WM
+279	21	59	left eye model and the right eye model
+279	65	71	reduce
+279	76	92	alignment errors
+279	93	95	of
+279	102	124	corresponding clusters
+282	0	6	Taking
+282	11	25	left eye model
+282	70	76	errors
+282	77	79	of
+282	80	89	landmarks
+282	90	92	of
+282	93	121	right eye , mouth , and chin
+283	11	14	for
+283	19	36	right eye cluster
+283	43	58	right eye model
+283	59	67	improves
+283	72	80	accuracy
+283	81	99	more significantly
+283	100	104	than
+283	109	123	left eye model
+287	10	23	Simplified AM
+287	36	44	acquired
+287	45	57	good results
+290	10	19	seen that
+290	20	43	Weighting Simplified AM
+290	44	52	improves
+290	62	64	on
+290	65	69	COFW
+290	74	89	fails to search
+290	92	107	better solution
+290	108	110	on
+290	111	115	IBUG

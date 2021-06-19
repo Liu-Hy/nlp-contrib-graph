@@ -1,0 +1,7 @@
+(Contribution||has research problem||challenges)
+(Contribution||has research problem||unconstrained face detection)
+(Contribution||has research problem||arbitrary)
+(Contribution||has research problem||face detection)
+(Contribution||has research problem||first step)
+(Contribution||has research problem||automatic face recognition applications)
+(Contribution||has research problem||face detection with arbitrary facial variations)

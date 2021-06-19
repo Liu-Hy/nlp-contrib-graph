@@ -1,3 +1,0 @@
-(deformable layer||used to output||" thin " feature map)
-(" thin " feature map||with exploiting||image context)
-(Contribution||has||Baselines)

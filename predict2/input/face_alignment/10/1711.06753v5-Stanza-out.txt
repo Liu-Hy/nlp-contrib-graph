@@ -1,0 +1,292 @@
+title
+Wing Loss for Robust Facial Landmark Localisation with Convolutional Neural Networks
+abstract
+We present a new loss function , namely Wing loss , for robust facial landmark localisation with Convolutional Neural Networks ( CNNs ) .
+We first compare and analyse different loss functions including L2 , L1 and smooth L1 .
+The analysis of these loss functions suggests that , for the training of a CNN - based localisation model , more attention should be paid to small and medium range errors .
+To this end , we design a piece - wise loss function .
+The new loss amplifies the impact of errors from the interval ( - w , w) by switching from L1 loss to a modified logarithm function .
+To address the problem of under-representation of samples with large out - of - plane head rotations in the training set , we propose a simple but effective boosting strategy , referred to as pose - based data balancing .
+In particular , we deal with the data imbalance problem by duplicating the minority training samples and perturbing them by injecting random image rotation , bounding box translation and other data augmentation approaches .
+Last , the proposed approach is extended to create a two - stage framework for robust facial landmark localisation .
+The experimental results obtained on AFLW and 300W demonstrate the merits of the Wing loss function , and prove the superiority of the proposed method over the state - of - the - art approaches .
+Introduction
+Facial landmark localisation , or face alignment , aims at finding the coordinates of a set of pre-defined key points for 2 D face images .
+A facial landmark usually has specific semantic meaning , e.g. nose tip or eye centre , which provides rich geometric information for other face analysis tasks such as face recognition , emotion estimation and 3D face reconstruction .
+Thanks to the successive developments in this area of research during the past decades , we are able to perform very accurate facial landmark localisation in constrained scenarios , even using traditional approaches such as Active Shape Model ( ASM ) , Active Appearance Model ( AAM ) and Constrained Local Model ( CLM ) .
+The existing challenge is to achieve robust and accurate landmark localisation of unconstrained faces that are impacted by a variety of appearance variations , e.g. in pose , expression , illumination , image blurring and occlusion .
+To this end , cascaded - regression - based approaches have been widely used , in which a set of weak regressors are cascaded to form a strong regressor .
+However , the capability of cascaded regression is nearly saturated due to its shallow structure .
+After cascading more than four or five weak regressors , the performance of cascaded regression is hard to improve further .
+More recently , deep neural networks have been put forward as a more powerful alternative in a wide range of computer vision and pattern recognition tasks , including facial landmark localisation .
+To perform robust facial landmark localisation us - ing deep neural networks , different network types have been explored , such as the Convolutional Neural Network ( CNN ) , Auto - Encoder Network and Recurrent Neural Network ( RNN ) .
+In addition , different network architectures have been extensively studied during the recent years along with the development of deep neural networks in other AI applications .
+For example , the Fully Convolutional Network ( FCN ) and hourglass network with residual blocks have been found very effective .
+One crucial aspect of deep learning is to define a loss function leading to better - learnt representation from underlying data .
+However , this aspect of the design seems to belittle investigated by the facial landmark localisation community .
+To the best of our knowledge , most existing facial landmark localisation approaches using deep learning are based on the L2 loss .
+However , the L2 loss function is sensitive to outliers , which has been noted in connection with the bounding box regression problem in the well - known Fast R - CNN algorithm .
+Rashid et al. also notice this issue and use the smooth L1 loss instead of L2 .
+To further address the issue , we propose a new loss function , namely Wing loss ( ) , for robust facial landmark localisation .
+The main contributions of our work include :
+presenting a systematic analysis of different loss functions that could be used for regression - based facial landmark localisation with CNNs , which to our best knowledge is the first such study carried out in connection with the landmark localisation problem .
+We empirically and theoretically compare L1 , L2 and smooth L1 loss functions and find that L1 and smooth L1 perform much better than the widely used L2 loss .
+a novel loss function , namely the Wing loss , which is designed to improve the deep neural network training capability for small and medium range errors .
+a data augmentation strategy , i.e. pose - based data balancing , that compensates the low frequency of occurrence of samples with large out - of - plane head rotations in the training set .
+a two - stage facial landmark localisation framework for performance boosting .
+The paper is organised as follows .
+Section 2 presents a brief review of the related literature .
+The regression - based facial landmarking problem with CNNs is formulated in Section 3 .
+The properties of common loss functions ( L1 and L2 ) are discussed in Section 4 which also motivate the introduction of the novel Wing loss function .
+The pose - based data balancing strategy is the subject of Section 5 .
+The twostage localisation framework is proposed in Section 6 .
+The advocated approach is validated experimentally in Section 7 and the paper is drawn to conclusion in Section 8 .
+Related work
+Network Architectures :
+Most deep - learning - based facial landmark localisation approaches are regression - based .
+For such a task , the most straightforward way is to use a CNN model with regression output layers .
+The input fora regression CNN is usually an image patch enclosing the whole face region and the output is a vector consisting of the 2D coordinates of facial landmarks .
+Besides the classical CNN architecture , newly developed CNN systems have also been used for facial landmark localisation and shown promising results , e.g. FCN and the hourglass network .
+Different from traditional CNN - based approaches , FCN and hourglass network output a heat map for each landmark .
+These heat maps are of the same size as the input image .
+The value of a pixel in a heat map indicates the probability that its location is the predicted position of the corresponding landmark .
+To reduce false alarms of a generated 2D sparse heat map , Wu et al. propose a distance - aware softmax function that facilitates the training of their dual - path network .
+Thanks to the extensive studies of different deep neural networks and their use cases in unconstrained facial landmark localisation , the development of the area has been greatly promoted .
+However , the current research lacks a systematic analysis on the use of different loss functions .
+In this paper , we close this gap and design a new loss function for CNN - based facial landmark localisation .
+Dealing with Pose Variations :
+Extreme pose variations bring many difficulties to unconstrained facial landmark localisation .
+To mitigate this issue , different strategies have been explored .
+The first one is to use multiview models .
+There is along history of the use of multiview models in landmark localisation , from the earlier studies on ASM and AAM to recent work on cascaded - regression - based and deep - learningbased approaches .
+For example , Feng et al. train multiview cascaded regression models using a fuzzy membership weighting strategy , which , interestingly , outperforms even some deep - learning - based approaches .
+The second strategy , which has become very popular in recent years , is to use 3 D face models .
+By recovering the 3D shape and estimating the pose of a given input 2 D face image , the issue of extreme pose variations can be alleviated to a great extent .
+In addition , 3 D face models have also been widely used to synthesise additional 2 D face images with pose variations for the training of a pose-invariant system .
+Last , multi-task learning has been adopted to address the difficulties posed by image degradation , including pose variations .
+For example , face attribute estimation , pose estimation or 3D face reconstruction can jointly be trained with facial landmark localisation .
+The collaboration of different tasks in a multi-task learning framework can boost the performance of individual sub - tasks .
+Different from these approaches , we treat the challenge as a training data imbalance problem and advocate a posebased data balancing strategy to address this issue .
+Cascaded
+Networks :
+In the light of the coarse - to - fine cascaded regression framework , multiple networks can be stacked to form a stronger network to boost the performance .
+To this end , shape - or landmark - related features should be used to satisfy the training of multiple networks in cascade .
+However , a CNN using a global face image as input can not meet this requirement .
+To address this issue , one solution is to extract CNN features from local patches around facial landmarks .
+This idea is advocated , for example , by Trigeorgis et al. who use the Recurrent Neural Network ( RNN ) for end - to - end model training .
+As an alternative , we can train a network based on the global image patch for rough facial landmark localisation .
+Then , for each landmark or a composition of multiple landmarks in a specific region of the face , a network is trained to perform fine - grained landmark prediction .
+For another example , Yu et al. propose to inject local deformations to the estimated facial landmarks of the first network using thin - plate spline transformations .
+In this paper , we use a two - stage CNN - based landmark localisation framework .
+The first CNN is a very simple one that can perform rough facial landmark localisation very quickly .
+The aim of the first network is to mitigate the difficulties posed by inaccurate face detection and in - plane head rotations .
+Then the second CNN is used to perform finegrained landmark localisation .
+CNN - based facial landmark localisation
+The target of CNN - based facial landmark localisation is to find a nonlinear mapping :
+that outputs a shape vector s ?
+R 2 L fora given input colour image I ? R HW 3 .
+The input image is usually cropped using the bounding box output by a face detector .
+The shape vector is in the form of s = [ x 1 , ... , x L , y 1 , ... , y L ] T , where L is the number of pre-defined 2 D facial landmarks and ( x l , y l ) are the coordinates of the lth landmark .
+To obtain this mapping , first , we have to define the architecture of a multi - layer neural network with randomly initialised parameters .
+In fact , the mapping ? = (?
+1 ...
+, the target of CNN training is to find a ?
+that minimises : where loss ( ) is a pre-defined loss function that measures the difference between a predicted shape vector and its ground truth .
+In such a case , the CNN is used as a regression model learned in a supervised manner .
+To optimise the above objective function , optimisation algorithms such as Stochastic Gradient Descent ( SGD ) can be used .
+To empirically analyse different loss functions , we use a simple CNN architecture , in the following termed CNN - 6 , for facial landmark localisation , to achieve high speed in model training and testing .
+The input for this network is a 64643 colour image and the output is a vector of 2L real numbers for the 2D coordinates of L landmarks .
+As shown in , our CNN - 6 has five 3 3 convolutional layers , a fully connected layer and an output layer .
+After each convolutional and fully connected layer , a standard Relu layer is used for nonlinear activation .
+A Max pooling after each convolutional layer is used to downsize the feature map to half of the size .
+To boost the performance , more powerful network architectures can be used , such as our two - stage landmark localisation framework presented in Section 6 and the recently proposed ResNet architecture .
+We will report the results of these advanced network architectures in Section 7 .
+It should be highlighted that , to the best of our knowledge , this is the first time that such a deep residual network , i.e. ResNet - 50 , is used for facial landmark localisation .
+Wing loss
+The design of a proper loss function is crucial for CNNbased facial landmark localisation .
+However , mainly the L2 loss has been used in existing deep - neural - network - based facial landmarking systems .
+In this paper , to the best of our knowledge , we are the first to analyse different loss functions for CNN - based facial landmark localisation and demonstrate that the L1 and smooth L1 loss functions perform much better than the L2 loss .
+Motivated by our analysis , we propose a new loss function , namely Wing loss , which further improves the accuracy of CNN - based facial landmark localisation systems .
+Analysis of different loss functions
+Given a training image I and a network ? , we can predict the facial landmarks as a vector s = ? ( I ) .
+The loss is defined as :
+where sis the ground - truth shape vector of the facial landmarks .
+For f ( x ) in the above equation , L1 loss uses L1 ( x ) = | x | and L2 loss uses L2 ( x ) = 1 2 x 2 .
+The smooth L1 loss function is piecewise - defined as :
+which is quadratic for small values of | x | and linear for large values .
+More specifically , smooth L1 uses L2 ( x ) for x ? ( ? 1 , 1 ) and shifted L1 ( x ) elsewhere .
+depicts the plots of these loss functions .
+It should be noted that the smooth L1 loss is a special case of the Huber loss .
+The loss function that has widely been used in facial landmark localisation is the L2 loss function .
+However , it is wellknown that the L2 loss is sensitive to outliers .
+This is the main reason why , e.g. , Girshick and Rashid et al.
+use the smooth L1 loss function for their localisation tasks .
+For evaluation , the AFLW - Full protocol has been used 1 .
+This protocol consists of 20 k training images and 4386 test images .
+Each image has 19 facial landmarks .
+We use three state - of - the - art algorithms as our baseline for comparison .
+The first one is the Cascaded Compositional Learning algorithm ( CCL ) , which is a multi-view cascaded regression model based on random forests .
+The second one is the Two - stage Re-initialisation Deep Regression Network ( TR - DRN ) .
+The last baseline algorithm is a multi-view approach based on cascaded shape regression , namely DAC - CSR .
+We train the CNN - 6 network on AFLW using three different loss functions and report the results in .
+The L2 loss function , which has been widely used for facial landmark localisation , performs well .
+The result is better than CCL in terms accuracy but worse than DAC - CSR and TR - DRN .
+Surprisingly , when we use L1 or smooth L1 for The AFLW dataset is introduced in Section 7.2.1 . 2.7210 ?2 DAC- CSR ( CVPR2017 ) 2.2710 ?2 TR - DRN ( CVPR 2017 ) 2
+the CNN - 6 training , the performance in terms of accuracy improves significantly and outperforms all the state - of - theart baseline approaches , despite the CNN network 's simplicity .
+The proposed Wing loss
+We compare the results obtained on the AFLW dataset using the simple CNN - 6 network in by plotting the Cumulative Error Distribution ( CED ) curves .
+We can see that all the loss functions analysed in the last section perform well for large errors .
+This indicates that the training of a neural network should pay more attention to the samples with small or medium range errors .
+To achieve this target , we propose a new loss function , namely Wing loss , for CNN - based facial landmark localisation .
+In order to motivate the new loss function , we provide an intuitive analysis of the properties of the L1 and L2 loss functions .
+The magnitude of the gradients of these two functions is 1 and | x | respectively , and the magnitude of the corresponding optimal step sizes should be | x | and 1 .
+Finding the minimum in either case is straightforward .
+However , the situation becomes more complicated when we try to optimise simultaneously the location of multiple points , as in our problem of facial landmark localisation for - mulated in Eq. ( 3 ) .
+In both cases the update towards the solution will be dominated by larger errors .
+In the case of L1 , the magnitude of the gradient is the same for all the points , but the step size is disproportionately influenced by larger errors .
+For L2 , the step size is the same but the gradient will be dominated by large errors .
+Thus in both cases it is hard to correct relatively small displacements .
+The influence of small errors can be enhanced by an alternative loss function , such as ln x .
+It s gradient , given by 1 / x , increases as we approach zero error .
+The magnitude of the optimal step size is x 2 .
+When compounding the contributions from multiple points , the gradient will be dominated by small errors , but the step size by larger errors .
+This restores the balance between the influence of errors of different sizes .
+However , to prevent making large update steps in a potentially wrong direction , it is important not to overcompensate the influence of small localisation errors .
+This can be achieved by opting fora log function with a positive offset .
+This type of loss function shape is appropriate for dealing with relatively small localisation errors .
+However , in facial landmark detection of in - the - wild faces we maybe dealing with extreme poses where initially the localisation errors can be very large .
+In such a regime the loss function should promote a fast recovery from these large errors .
+This suggests that the loss function should behave more like L1 or L2 .
+As L2 is sensitive to outliers , we favour L1.
+The above intuitive argument points to a loss function which for small errors should behave as a log function with an offset , and for larger errors as L1 .
+Such a composite loss function can be defined as :
+where the non-negative w sets the range of the nonlinear part to ( ? w , w ) , limits the curvature of the nonlinear region and C = w ? w ln ( 1 + w/ ) is a constant that smoothly links the piecewise - defined linear and nonlinear parts .
+Note that we should not set to a very small value because it makes the training of a network very unstable and causes the exploding gradient problem for very small errors .
+In fact , the nonlinear part of our Wing loss function just simply takes the curve of ln ( x ) between [ / w , 1 + / w ) and scales it along both the X- axis and Y-axis by a factor of w .
+Also , we apply translation along the Y-axis to allow wing ( 0 ) = 0 and to impose continuity on the loss function .
+From , we can see that our Wing loss outperforms L2 , L1 and smooth L1 in terms of accuracy .
+The Wing loss further reduces the average normalised error from 2 10 ?2 to 1.88 10 ? 2 , which is 6 % lower than the best result obtained in the last section ) and 13 % lower than the best state - of - the - art deep - learning baseline approach , i.e.
+Pose - based data balancing
+Extreme pose variations are very challenging for robust facial landmark localisation in the wild .
+To mitigate this issue , we propose a simple but very effective Pose - based Data Balancing ( PDB ) strategy .
+We argue that the difficulty for accurately localising faces with large poses is mainly due to data imbalance , which is a well - known problem in many computer vision applications .
+For example , given a training dataset , most samples in it are likely to be nearfrontal faces .
+The neural network trained on such a dataset is dominated by frontal faces .
+By over- fitting to the frontal pose it can not adapt well to faces with large poses .
+In fact , the difficulty of training and testing on merely frontal faces should be similar to that on profile faces .
+This is the main reason why a view - based face analysis algorithm usually works well for pose - varying faces .
+As an evidence , even the classical view - based Active Appearance Model can localise faces with large poses very well ( up to 90 in yaw ) .
+To perform PDB , we first align all the training shapes to a reference shape using Procrustes Analysis , with the mean shape as the reference shape .
+Then we apply PCA to the aligned training shapes and project the original shapes to the one dimensional space defined by the shape eigenvector ( pose space ) controlling pose variations .
+The distribution of projection coefficient of the training samples is represented by a histogram with K bins , plotted in .
+With this histogram , we balance the training data by duplicating the .
+A comparison of different loss functions using our PDB strategy and two - stage landmark localisation framework , measured in terms of the average normalised error ( 10 ?2 ) on AFLW .
+The method CNN - 6/7 indicates the proposed two - stage localisation framework using CNN - 6 as the first network and CNN - 7 as the second network ( Section 6 ) .
+For CNN - 7 , the learning rate is reduced from 1 10 ? 6 to 1 10 ?8 for L2 , and from 1 10 samples falling into the bins of lower occupancy .
+We modify each duplicated sample by performing random image rotation , bounding box perturbation and other data augmentation approaches introduced in Section 7.1 .
+To deal with in - plane rotations , we use a two - stage facial landmark localisation framework that will be introduced in Section 6 .
+The results obtained by the CNN - 6 network with PDB are shown in .
+It should be noted that PDB improves the performance of CNN - 6 on the AFLW dataset for all different types of loss functions .
+Two - stage landmark localisation
+Besides the out - of - plane head rotations , the accuracy of a facial landmark localisation algorithm can be degraded by other factors , such as in - plane head rotations and inaccurate bounding boxes output from a poor face detector .
+To mitigate this issue , we advocate the use of a two - stage landmark localisation framework .
+In the proposed two - stage localisation framework , we use a very simple network , i.e. the CNN - 6 network with 64 64 3 input images , as the first network .
+The CNN - 6 network is very fast ( 400 fps on an NVIDIA GeForce GTX Titan X Pascal ) , hence it will not slowdown the speed of our facial landmark localisation algorithm too much .
+The landmarks output by the CNN - 6 network are used to refine the input image for the second network by removing the in - plane head rotation and correcting the bounding box .
+Also , the input image resolution for the second network is increased for fine - grained landmark localisation from 64 64 3 to 128 128 3 , with the addition of one set of convolutional , Relu and Max pooling layers .
+Hence , the term ' CNN - 7 ' is used to denote the second network .
+The CNN - 7 network has a similar architecture to the CNN - 6 network in .
+The difference is that CNN - 7 has 6 convolutional layers which resize the feature map from 1281283 to 2 2 512 .
+In addition , for the first convolutional layer in CNN - 7 , we double the number of 3 3 kernels from 32 to 64 .
+We use the term ' CNN - 6 / 7 ' for our two - stage facial landmark localisation framework and compare it with the CNN - 6 network in .
+As reported in the table , the use of our two - stage landmark localisation framework further improves the accuracy , regardless of the type of loss function used .
+Experimental results
+In this section , we evaluate our method on the Annotated Facial Landmarks in the Wild ( AFLW ) dataset and the 300 Faces in the Wild ( 300W ) dataset .
+We first introduce our implementation details and experimental settings .
+Then we compare our algorithm with state - of - the - art approaches on AFLW and 300W .
+Last , we analyse the performance of different networks in terms of both accuracy and speed .
+Implementation details
+In our experiments , we used Matlab 2017a and the Mat - ConvNet toolbox 2 .
+The training and testing of our networks were conducted on a server running Ubuntu 16.04 with 2 Intel Xeon E5-2667 v4 CPU , 256 GB RAM and 4 NVIDIA GeForce GTX Titan X ( Pascal ) cards .
+Note that we only use one GPU card for measuring the run time .
+We set the weight decay to 5 10 ? 4 , momentum to 0.9 and batch size to 8 for network training .
+Each model was trained for 120 k iterations .
+We did not use any other advanced techniques in our CNN - 6 and CNN - 7 networks , such as batch normalisation , dropout or residual blocks .
+The standard ReLu function was used for nonlinear activation , and Max pooling with the stride of 2 was used to downsize feature maps .
+For the convolutional layer , we used 3 3 kernels with the stride of 1 .
+All our networks , except ResNet - 50 , were trained from scratch without any pre-training on any other dataset .
+For the proposed PDB strategy , the number of bins K was set to 17 for AFLW and 9 for 300W .
+For CNN - 6 , the input image size is 64 64 3 . We reduced the learning rate from 3 10 ? 6 to 3 10 ?8 for the L2 loss , and from 3 10 ?5 to 3 10 ? 7 for the other loss functions .
+The parameters of the Wing loss were set tow = 10 and = 2 . For CNN - 7 , the input image size is 128 128 3 . We reduced the learning rate from 1 10 ? 6 to 1 10 ?8 for the L2 loss , and from 1 10 ? 5 to 1 10 ? 7 for the other loss functions .
+The parameters of the Wing loss were set tow = 15 and = 3 .
+To perform data augmentation , we randomly rotated each training image between [ ? 30 , 30 ] degrees for CNN - 6 and between [ ? 10 , 10 ] degrees for CNN - 7 .
+In addition , we randomly flipped each training image with the probability of 50 % .
+For bounding box perturbation , we applied random translations to the upper-left and bottom - right corners of the face bounding box within 5 % of the bounding .
+A comparison of the CED curves on the AFLW dataset .
+We compare our method with a set of state - of - the - art approaches , including SDM , ERT , RCPR , CFSS , LBF , GRF , CCL , DAC - CSR and TR - DRN. box size .
+Last , we randomly injected Gaussian blur (? = 1 ) to each training image with the probability of 50 % .
+Evaluation Metric :
+For evaluation of a facial landmark localisation algorithm , we adopted the widely used Normalised Mean Error ( NME ) .
+For the AFLW dataset using the AFLW - Full protocol , the given face bounding box of a test sample is a square .
+To calculate the NME of a test sample , the AFLW - Full protocol uses the width ( or height ) of the face bounding box as the normalisation term .
+For the 300 W dataset , we followed the protocol used in .
+This protocol uses the inter-pupil distance as the normalisation term , which is different from the standard 300 W protocol that uses the outer eye corner distance .
+Comparison with state of the art 7.2.1 AFLW
+We first evaluated our algorithm on the AFLW dataset , using the AFLW - Full protocol .
+AFLW is a very challenging dataset that has been widely used for benchmarking facial landmark localisation algorithms .
+The images in AFLW consist of a wide range of pose variations in yaw ( from ?90 to 90 ) , as shown in .
+The AFLW - Full protocol contains 20,000 training and 4,386 test images , and each image has 19 manually annotated facial landmarks .
+We compare the proposed method with state - of - the - art approaches in terms of accuracy in using the Cumulative Error Distribution ( CED ) curve .
+In our experiments , we used our two - stage facial landmark localisation framework by stacking the CNN - 6 and CNN - 7 networks ( denoted by CNN - 6 / 7 ) , as introduced in Section 6 .
+In addition , the proposed Pose - based Data Balancing ( PDB ) strategy was adopted , as presented in Section 5 .
+We report the results of the proposed approach using four different loss functions ..
+A comparison of the proposed approach with the stateof - the - art approaches on the 300W dataset in terms of the NME averaged overall the test samples .
+We follow the protocol used in .
+Note that the error is normalised by the inter-pupil distance , rather than the outer eye corner distance .
+As shown in , our CNN - 6/7 network outperforms all the other approaches even when trained with the commonly used L2 loss function ( magenta solid line ) .
+This validates the effectiveness of the proposed two - stage localisation framework and the PDB strategy .
+Second , by simply switching the loss function from L2 to L1 or smooth L1 , the performance of our method has been improved significantly ( red solid and black dashed lines ) .
+Last , the use of our newly proposed Wing loss function further improves the accuracy ( black solid line ) .
+The proportion of test samples ( Y-axis ) associated with a small to medium normalised mean error ( X-axis ) is increased .
+300 W
+The 300W dataset is a collection of multiple face datasets , including LFPW , HELEN , AFW and XM2VTS .
+The face images involved in 300W have been semi-automatically annotated by 68 facial landmarks .
+To perform the evaluation on 300 W , we followed the protocol used in .
+The protocol uses the full set of AFW and the training subsets of LFPW and HELEN as the training set , which contains 3148 training samples in total .
+The test set of the protocol includes the test subsets of LFPW and HELEN , as well as 135 IBUG face images newly collected by the managers of the 300W dataset .
+The final size of the test set is 689 .
+The test set is further divided into two subsets for evaluation , i.e. the common and challenging subsets .
+The common subset has 554 face images from the LFPW and HELEN test subsets and the challeng - ing subset constitutes the 135 IBUG face images .
+Similar to the experiments conducted on the AFLW dataset , we used the two - stage localisation framework with our PDB strategy .
+The results obtained by our approach with different loss functions are reported in .
+As shown in , our two - stage landmark localisation framework with the PDB strategy and the newly proposed Wing loss function outperforms all the other stateof - the - art algorithms on the 300 W dataset inaccuracy .
+The error has been reduced by almost 20 % as compared to the current best result reported by the RAR algorithm .
+Run time and network architectures
+Facial landmark localisation has been widely used in many real - time practical applications , hence the speed together with accuracy of an algorithm is crucial for the deployment of the algorithm in commercial use cases .
+To analyse the performance of our Wing loss on more advanced network architectures , we evaluated ResNet for the task of landmark localisation on AFLW and 300W .
+We used the ResNet - 50 model that was pre-trained on the Image Net ILSVRC classification problem 3 .
+We fine - tuned the model on the training sets of AFLW and 300W separately for landmark localisation .
+The input for ResNet is a 224 224 3 colour image .
+It should be highlighted that , to our best knowledge , this is the first time that such a deep network has been used for facial landmark localisation .
+For both AFLW and 300 W , by replacing the CNN - 6/7 network with ResNet - 50 , the performance has been further improved by around 10 % , as shown in .
+However , this performance boosting comes at the cost of much slower training and inference of ResNet compared to CNN - 6/7 .
+To validate the effectiveness of our Wing loss for large capacity networks , we also conducted experiments using ResNet - 50 with different loss functions on AFLW .
+The results are reported in 6 .
+The results further demonstrate the superiority of the proposed Wing loss over other loss functions for large capacity networks , e.g. ResNet - 50 .
+Last , we evaluated the speed of different networks on the 300W dataset with 68 landmarks for both GPU and CPU 3 http://www.vlfeat.org/matconvnet/pretrained/ devices .
+The results are reported in .
+According to the table , our simple CNN - 6/7 network is roughly an order of magnitude faster than ResNet - 50 at the compromise of 10 % performance difference inaccuracy .
+Also , our CNN - 6 / 7 model is much faster than most existing DNNbased facial landmark localisation approaches such as TR - DRN .
+The speed of TR - DRN is 83 fps on an NVIDIA GeForce GTX Titan X card .
+Even with a powerful GPU card , it is hard to achieve video rate ( 60 fps ) with ResNet - 50 .
+It should be noted that our CNN - 6 / 7 still outperforms the state - of - the - art approaches by a significant margin while running at 170 fps on a GPU card , as shown in .
+Conclusion
+In this paper , we analysed different loss functions that can be used for the task of regression - based facial landmark localisation .
+We found that L1 and smooth L1 loss functions perform much better inaccuracy than the L2 loss function .
+Motivated by our analysis of these loss functions , we proposed a new , Wing loss performance measure .
+The key idea of the Wing loss criterion is to increase the contribution of the samples with small and medium size errors to the training of the regression network .
+To prove the effectiveness of the proposed Wing loss function , extensive experiments have been conducted using several CNN network architectures .
+Furthermore , a pose - based data balancing strategy and a two - stage landmark localisation framework were advocated to improve the accuracy of CNN - based facial landmark localisation further .
+By evaluating our algorithm on multiple well - known benchmarking datasets , we demonstrated the merits of the proposed approach .
+It should be emphasised that the proposed Wing loss is relevant to other regression - based computer vision tasks using convolutional neural networks .
+However , being constrained by the space limitations , we leave the discussion of its extended use to future reports .

@@ -1,2 +1,0 @@
-(maximum penalty per word ( m = 8 )||on||validation data)
-(Contribution||has||Experiments)

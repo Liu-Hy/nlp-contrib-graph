@@ -1,0 +1,327 @@
+2	34	50	Object Detection
+14	0	16	Object detection
+18	0	33	Most of the appearance variations
+18	45	55	handled in
+18	56	59	CNN
+18	62	77	benefiting from
+18	82	101	invariance property
+18	102	104	of
+18	105	116	convolution
+18	121	139	pooling operations
+19	4	23	location variations
+19	24	30	can be
+19	31	40	naturally
+19	48	51	via
+19	52	67	sliding windows
+19	76	112	can be efficiently incorporated into
+19	113	116	CNN
+19	122	148	fully convolutional manner
+22	4	9	first
+22	30	37	handles
+22	38	45	objects
+22	46	48	of
+22	49	79	different scales independently
+22	80	91	by resizing
+22	96	101	input
+22	102	106	into
+22	107	123	different scales
+22	133	143	forwarding
+22	148	162	resized images
+22	163	177	multiple times
+22	178	181	for
+22	182	191	detection
+24	34	42	forwards
+24	47	52	image
+24	53	62	only once
+24	72	80	directly
+24	91	98	objects
+24	99	101	at
+24	102	117	multiple scales
+31	13	15	to
+31	20	35	feature pyramid
+31	36	38	in
+31	39	42	CNN
+31	43	56	descends from
+31	61	73	observations
+31	74	76	of
+31	77	105	modern CNN - based detectors
+31	108	117	including
+31	118	131	Faster - RCNN
+31	134	141	R - FCN
+31	144	147	SSD
+31	150	154	YOLO
+31	159	162	STN
+31	171	178	feature
+35	18	25	propose
+35	28	76	recurrent scale approximation ( RSA , see ) unit
+35	77	87	to achieve
+36	4	12	RSA unit
+36	16	30	designed to be
+36	31	38	plugged
+36	42	62	some specific depths
+36	63	65	in
+36	68	75	network
+36	80	94	to be fed with
+36	98	117	initial feature map
+36	118	120	at
+36	125	138	largest scale
+37	9	18	convolves
+37	23	28	input
+37	29	31	in
+37	34	50	recurrent manner
+37	51	62	to generate
+37	67	77	prediction
+37	78	80	of
+37	85	96	feature map
+37	105	118	half the size
+37	126	131	input
+40	15	39	scale - forecast network
+40	40	59	to globally predict
+40	60	76	potential scales
+40	77	80	for
+40	83	94	novel image
+40	102	109	compute
+40	110	126	feature pyramids
+40	127	130	for
+40	160	168	based on
+40	173	183	prediction
+42	16	42	landmark retracing network
+42	43	56	that retraces
+42	61	69	location
+42	70	72	of
+42	77	96	regressed landmarks
+42	97	99	in
+42	104	120	preceding layers
+42	125	134	generates
+42	137	153	confidence score
+42	154	157	for
+42	158	171	each landmark
+42	172	180	based on
+42	185	205	landmark feature set
+46	28	45	incorporated into
+46	48	69	unified CNN framework
+46	74	81	trained
+49	7	12	prove
+49	18	35	deep CNN features
+49	36	39	for
+49	43	48	image
+49	56	73	approximated from
+49	74	90	different scales
+49	91	96	using
+49	99	130	portable recurrent unit ( RSA )
+49	139	154	fully leverages
+49	155	165	efficiency
+179	18	20	in
+179	21	53	scale - forecast network and LRN
+180	4	23	numbers of channels
+180	28	34	set to
+180	35	39	half
+180	40	42	of
+180	47	68	original ResNet model
+181	9	14	train
+181	19	43	scale - forecast network
+181	53	56	use
+181	61	67	output
+181	68	70	of
+181	71	87	predicted scales
+181	88	97	to launch
+181	102	118	RSA unit and LRN
+184	4	14	batch size
+184	15	17	is
+184	18	19	4
+184	22	40	base learning rate
+184	44	50	set to
+184	51	56	0.001
+184	57	61	with
+184	64	72	decrease
+185	4	30	maximum training iteration
+185	31	33	is
+185	34	43	1,000,000
+186	3	6	use
+186	7	34	stochastic gradient descent
+186	35	37	as
+186	42	51	optimizer
+190	7	14	observe
+190	37	62	our trained scale network
+190	63	70	recalls
+190	71	82	almost 99 %
+190	83	85	at
+190	86	91	x = 1
+195	12	18	during
+195	19	28	inference
+195	34	37	set
+195	42	51	threshold
+195	52	66	for predicting
+195	67	83	potential scales
+195	84	86	of
+195	91	96	input
+195	112	141	approximately two predictions
+199	0	39	Performance of Scale - forecast Network
+200	23	31	RSA Unit
+203	4	9	image
+203	13	18	first
+203	19	29	resized to
+203	30	46	higher dimension
+203	47	52	being
+203	53	57	2048
+203	66	69	RSA
+207	34	42	indicate
+207	54	58	plug
+207	59	62	RSA
+207	63	65	at
+207	66	79	deeper layers
+207	86	105	performance decades
+209	14	16	in
+209	17	35	case final feature
+209	42	47	means
+209	48	51	RSA
+209	55	65	plugged at
+209	70	93	final convolution layer
+209	94	99	after
+209	100	105	res3c
+209	112	122	error rate
+209	123	125	is
+209	126	138	almost 100 %
+210	4	14	error rate
+210	15	24	decreases
+210	28	43	shallower cases
+216	4	8	path
+216	9	15	during
+216	16	34	one - time forward
+216	35	39	from
+216	40	45	image
+216	46	48	to
+216	53	62	input map
+216	63	75	right before
+216	76	79	RSA
+216	80	82	is
+216	83	90	shorter
+216	101	117	rolling out time
+216	118	127	increases
+219	12	23	computation
+219	24	38	happens before
+219	39	51	layer res2 b
+219	66	87	acceptable error rate
+219	88	90	of
+219	91	97	3.44 %
+225	0	30	Our Algorithm vs. Baseline RPN
+226	23	30	denoted
+226	50	64	combination of
+226	113	117	with
+226	122	153	region proposal network ( RPN )
+227	26	29	use
+227	34	46	original RPN
+227	47	51	with
+227	52	68	multiple anchors
+227	71	81	denoted as
+227	82	87	RPN m
+227	90	99	to detect
+227	100	123	faces of various scales
+242	0	2	On
+242	3	6	AFW
+242	9	22	our algorithm
+242	23	31	achieves
+242	35	37	AP
+242	38	40	of
+242	41	48	99.17 %
+242	49	54	using
+242	59	78	original annotation
+242	86	88	AP
+242	92	101	99 . 96 %
+242	102	107	using
+242	112	130	revised annotation
+243	0	2	On
+243	3	7	FDDB
+243	10	19	RSA + LRN
+243	20	27	recalls
+243	28	40	93.0 % faces
+243	41	45	with
+243	46	64	50 false positives
+244	0	2	On
+244	3	7	MALF
+244	10	20	our method
+244	21	28	recalls
+244	29	41	82.4 % faces
+244	42	46	with
+244	47	66	zero false positive
+247	21	26	learn
+247	29	40	transformer
+247	41	47	to fit
+247	48	63	each annotation
+247	64	68	from
+247	73	82	landmarks
+249	30	35	faces
+249	36	38	at
+249	39	53	various scales
+249	56	65	including
+249	70	87	green annotations
+249	88	99	provided in
+249	100	103	AFW
+249	104	114	as well as
+249	115	120	faces
+249	121	130	marked in
+249	131	134	red
+249	144	146	of
+249	147	158	small sizes
+249	163	166	not
+251	4	54	proposed algorithm ( Scale - forecast network with
+251	55	64	RSA + LRN
+251	67	76	tagged by
+251	77	88	LRN + RSA )
+251	89	100	outperforms
+251	101	114	other methods
+251	115	117	by
+251	120	132	large margin
+254	7	30	Generic Object Proposal
+255	7	13	verify
+255	23	51	scale approximation learning
+255	52	54	by
+255	55	63	RSA unit
+255	69	80	generalizes
+255	81	96	comparably well
+255	97	99	on
+255	104	132	generic region proposal task
+257	0	10	ILSVRC DET
+257	40	64	generic object detection
+260	3	9	choose
+260	14	31	single anchor RPN
+260	32	36	with
+260	37	49	ResNet - 101
+262	4	11	anchors
+262	16	23	of size
+262	24	39	128 ? 2 squared
+262	42	48	128256
+262	53	59	256128
+264	0	24	Scale - forecast network
+264	57	84	higher dimension of objects
+264	85	87	in
+264	92	97	image
+267	0	15	Without loss of
+267	16	22	recall
+267	25	34	RPN + RSA
+267	35	49	reduces around
+267	50	74	61.05 % computation cost
+267	75	88	compared with
+267	93	111	single - scale RPN
+267	114	118	when
+267	123	138	number of boxes
+267	139	141	is
+267	142	150	over 100
+268	0	9	RPN + RSA
+268	18	32	more efficient
+268	37	44	recalls
+268	45	57	more objects
+268	58	62	than
+268	63	75	original RPN
+269	0	37	Our model and the single - anchor RPN
+269	43	50	perform
+269	51	57	better
+269	58	62	than
+269	67	79	original RPN
+271	10	23	our scheme of
+271	30	42	RSA plus LRN
+271	43	51	competes
+271	52	62	comparably
+271	72	91	standard RPN method
+271	92	103	in terms of
+271	104	139	computation efficiency and accuracy

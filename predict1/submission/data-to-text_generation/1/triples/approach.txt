@@ -1,0 +1,7 @@
+(inputs||are||structured meaning representations ( MRs ))
+(language generators||has||inputs)
+(Approach||focuses on||language generators)
+(neural ensemble natural language generator||train and test on||three large unaligned datasets)
+(three large unaligned datasets||in||restaurant , television , and laptop domains)
+(Approach||present||neural ensemble natural language generator)
+(Contribution||has||Approach)

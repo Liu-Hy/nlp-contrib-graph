@@ -1,3 +1,0 @@
-(face detector and alignment||against||state - of - the - art methods)
-(state - of - the - art methods||in||Face Detection Data Set and Benchmark ( FDDB ))
-(Contribution||has||Experiments)

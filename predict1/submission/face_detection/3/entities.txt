@@ -1,0 +1,298 @@
+2	20	47	Unconstrained Face Detector
+4	20	30	to address
+4	31	41	challenges
+4	42	44	in
+4	45	73	unconstrained face detection
+4	76	83	such as
+4	84	93	arbitrary
+13	17	31	face detection
+14	10	20	first step
+14	21	23	in
+14	24	63	automatic face recognition applications
+19	19	27	refer to
+19	28	75	face detection with arbitrary facial variations
+19	76	78	as
+34	11	18	propose
+34	52	58	called
+34	63	98	Normalized Pixel Difference ( NPD )
+36	4	15	NPD feature
+36	20	48	several desirable properties
+36	51	58	such as
+36	59	75	scale invariance
+36	78	89	boundedness
+36	96	103	ability
+36	104	118	to reconstruct
+36	123	137	original image
+37	11	15	show
+37	21	33	NPD features
+37	41	54	obtained from
+37	57	69	lookup table
+37	80	113	resulting face detection template
+37	121	138	easily scaled for
+37	139	164	multiscale face detection
+38	14	21	propose
+38	24	59	deep quadratic tree learning method
+38	64	73	construct
+38	76	117	single soft - cascade AdaBoost classifier
+38	118	127	to handle
+38	128	150	complex face manifolds
+38	155	169	arbitrary pose
+38	174	194	occlusion conditions
+39	6	20	individual NPD
+39	30	38	may have
+39	82	91	indicates
+39	99	121	subset of NPD features
+39	122	128	can be
+39	129	146	optimally learned
+39	151	172	combined to construct
+39	173	201	more discriminative features
+39	202	204	in
+39	207	226	deep quadratic tree
+40	14	38	different types of faces
+40	73	89	different leaves
+40	90	92	of
+40	95	110	tree classifier
+40	121	142	complex face manifold
+40	143	145	in
+40	148	170	high dimensional space
+40	171	174	can
+40	178	192	partitioned in
+40	197	213	learning process
+41	5	7	is
+41	12	43	" divide and conquer " strategy
+41	44	53	to tackle
+41	54	82	unconstrained face detection
+41	83	85	in
+41	88	105	single classifier
+41	108	128	without pre-labeling
+41	132	137	views
+41	138	140	in
+41	145	172	training set of face images
+42	4	27	resulting face detector
+42	31	40	robust to
+42	41	54	variations in
+42	55	90	pose , occlusion , and illumination
+42	93	95	as
+42	107	136	blur and low image resolution
+44	24	30	called
+44	31	34	NPD
+44	87	115	several desirable properties
+44	118	127	including
+44	128	144	scale invariance
+44	147	158	boundedness
+44	165	173	enabling
+44	189	191	of
+44	196	210	original image
+45	2	29	deep quadratic tree learner
+45	33	62	proposed to learn and combine
+45	66	80	optimal subset
+45	81	83	of
+45	97	105	to boost
+45	112	128	discriminability
+46	14	62	only a single soft - cascade AdaBoost classifier
+46	73	82	to handle
+46	83	102	unconstrained faces
+46	103	107	with
+46	108	143	occlusions and arbitrary viewpoints
+46	146	158	without pose
+46	159	167	labeling
+46	171	181	clustering
+46	182	184	in
+46	189	203	training stage
+50	4	31	unconstrained face detector
+50	32	50	does not depend on
+50	51	89	pose specific cascade structure design
+50	92	105	pose labeling
+50	120	122	in
+50	127	141	training stage
+50	150	162	not required
+52	55	112	http://www.cbsr.ia.ac.cn/users/scliao/ projects / npdface
+90	19	23	show
+90	33	71	optimal ordinal / contrastive features
+90	110	124	by integrating
+90	129	150	proposed NPD features
+90	151	153	in
+90	156	175	deep quadratic tree
+91	14	43	unconstrained face variations
+91	82	98	different leaves
+91	99	101	of
+91	106	139	learned quadratic tree classifier
+144	4	15	NPD feature
+144	16	24	measures
+144	29	48	relative difference
+144	49	56	between
+144	57	73	two pixel values
+147	0	11	Compared to
+147	16	44	absolute difference | x ? y|
+147	47	50	NPD
+147	54	66	invariant to
+147	67	79	scale change
+147	80	82	of
+175	8	22	FACE DETECTION
+231	0	3	For
+231	4	32	bootstrapping nonface images
+231	43	47	used
+231	52	63	AFLW images
+231	70	76	masked
+231	81	95	facial regions
+231	96	100	with
+231	101	114	random images
+231	115	125	containing
+231	126	134	no faces
+232	3	7	used
+232	10	28	detection template
+232	29	31	of
+232	32	44	24 24 pixels
+233	3	6	set
+233	11	24	maximum depth
+233	25	27	of
+233	32	48	tree classifiers
+233	49	65	to be learned as
+233	66	71	eight
+235	4	18	final detector
+235	19	27	contains
+235	28	54	1,226 deep quadratic trees
+235	61	80	46,401 NPD features
+239	4	22	detection template
+239	23	25	is
+239	26	38	20 20 pixels
+240	4	20	detector cascade
+240	21	29	contains
+240	30	39	15 stages
+240	67	91	target false accept rate
+240	92	95	was
+240	96	99	0.5
+240	102	106	with
+240	109	123	detection rate
+240	124	126	of
+240	127	132	0.999
+251	7	17	test stage
+251	22	34	scale factor
+251	35	37	of
+251	38	41	1.2
+251	46	53	set for
+251	54	74	multiscale detection
+266	4	12	proposed
+266	13	30	NPD face detector
+266	31	33	is
+266	38	53	second best one
+266	54	56	at
+266	57	63	FP = 0
+266	64	67	for
+266	72	87	discrete metric
+266	96	110	third best one
+266	111	114	for
+266	119	136	continuous metric
+274	10	23	observed that
+274	28	49	proposed NPD detector
+274	53	58	among
+274	63	77	top performers
+274	78	81	for
+274	86	101	discrete metric
+278	33	56	Joint Cascade algorithm
+278	57	59	is
+278	64	84	most competitive one
+278	91	102	in terms of
+278	103	121	accuracy and speed
+286	4	15	performance
+286	16	18	of
+286	23	40	Zhu-Ramanan model
+286	41	43	is
+286	44	60	quite impressive
+291	0	52	Many rotated , occluded , and out - of - focus faces
+291	60	72	successfully
+291	89	104	proposed method
+307	12	16	show
+307	26	52	proposed NPD face detector
+307	53	78	significantly outperforms
+307	88	129	Viola - Jones and PittPatt face detectors
+308	14	32	CMU - MIT Database
+318	0	8	detector
+318	12	18	better
+318	19	23	when
+318	24	30	FP < 3
+318	37	56	SURF cascade method
+318	57	68	outperforms
+318	69	72	NPD
+318	73	75	at
+318	76	86	higher FPs
+321	18	37	proposed NPD method
+321	41	52	not as good
+321	60	72	Soft cascade
+321	79	108	state - of - the - art method
+321	109	111	on
+321	116	133	CMU - MIT dataset
+322	12	31	proposed NPD method
+322	32	42	can detect
+322	43	53	about 80 %
+322	54	56	of
+322	61	74	frontal faces
+322	75	82	without
+322	87	102	false positives
+339	4	16	NPD detector
+339	17	25	performs
+339	26	32	better
+339	33	37	than
+339	42	72	Haar , LBP , and POF detectors
+339	73	77	with
+339	82	111	same CART based weak learners
+340	4	28	performance improvements
+340	29	35	due to
+340	36	48	NPD features
+340	49	53	over
+340	54	83	Haar , LBP , and POF features
+340	84	87	are
+340	88	115	about 6 % , 19 % , and 15 %
+340	133	136	for
+340	137	152	discrete metric
+340	165	186	4 % , 13 % , and 10 %
+340	208	218	continuous
+340	228	230	at
+340	231	233	FP
+341	0	3	NPD
+341	7	18	better than
+341	19	22	POF
+342	0	3	NPD
+342	4	12	performs
+342	13	19	better
+342	20	24	than
+342	25	37	Haar and LBP
+342	40	53	especially at
+342	54	73	low false positives
+352	17	22	using
+352	23	27	CART
+352	28	38	instead of
+352	39	55	stump classifier
+352	56	64	improves
+352	69	95	face detection performance
+352	96	98	by
+352	99	115	about 0 % - 17 %
+352	116	119	for
+352	120	135	discrete metric
+352	140	150	0 % - 11 %
+352	151	154	for
+352	155	172	continuous metric
+355	14	32	DQT based detector
+355	33	49	further improves
+355	54	65	performance
+355	68	74	due to
+355	79	109	quadratic splitting capability
+355	110	121	compared to
+355	122	138	linear splitting
+363	0	5	shows
+363	15	32	NPD face detector
+363	33	41	performs
+363	46	50	best
+363	51	53	on
+363	58	87	pose and illumination subsets
+363	90	99	thanks to
+363	104	163	scale - invariant NPD features and the deep quadratic trees
+381	4	23	original resolution
+381	24	26	is
+381	27	35	1280 720
+399	4	16	NPD detector
+399	17	25	achieves
+399	26	39	similar speed
+399	40	42	as
+399	51	71	Joint Cascade method
+403	48	82	face detection in cluttered scenes

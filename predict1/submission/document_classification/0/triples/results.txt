@@ -1,0 +1,6 @@
+(Tagspace model||described using||convolutions)
+(convolutions||consider||linear version)
+(linear version||achieves||comparable performance)
+(Tagspace model||is||much faster)
+(Results||has||Tagspace model)
+(Contribution||has||Results)

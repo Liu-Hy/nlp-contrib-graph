@@ -1,0 +1,106 @@
+184	0	35	Neutral Pose Reconstruction on MICC
+194	0	11	Our results
+194	34	57	improved absolute error
+194	58	60	to
+194	65	77	ground truth
+194	78	80	by
+194	81	90	20 - 25 %
+195	12	23	more stable
+195	24	30	across
+195	31	52	changing environments
+196	0	24	Face Recognition Results
+202	0	10	Our method
+202	11	19	achieves
+202	23	41	average similarity
+202	42	49	between
+202	50	69	rendering and photo
+202	70	72	of
+202	73	78	0.403
+202	79	81	on
+202	82	91	MoFA test
+205	0	21	Our method 's results
+205	26	35	closer to
+205	40	66	same - person distribution
+205	67	71	than
+205	76	104	differentperson distribution
+211	14	22	distance
+211	23	30	between
+211	35	89	GT distribution and the same - person LFW distribution
+211	93	101	very low
+211	104	108	with
+211	120	129	same mean
+20	11	19	presents
+20	22	28	method
+20	29	32	for
+20	33	41	training
+20	44	62	regression network
+20	157	169	to reproduce
+20	170	182	image pixels
+20	68	75	removes
+20	85	89	need
+20	90	93	for
+20	94	118	supervised training data
+20	127	135	reliance
+20	136	138	on
+20	139	156	inverse rendering
+21	14	21	network
+21	22	31	learns to
+21	32	40	minimize
+21	43	47	loss
+21	48	56	based on
+21	61	85	facial identity features
+21	86	97	produced by
+21	100	124	face recognition network
+21	125	132	such as
+21	133	143	VGG - Face
+21	147	164	Google 's FaceNet
+23	3	10	exploit
+23	16	26	invariance
+23	27	35	to apply
+23	38	42	loss
+23	48	55	matches
+23	60	77	identity features
+23	78	85	between
+23	90	106	input photograph
+23	113	132	synthetic rendering
+23	133	135	of
+23	140	154	predicted face
+26	3	12	alleviate
+26	17	32	fooling problem
+26	33	44	by applying
+26	45	63	three novel losses
+26	68	91	batch distribution loss
+26	92	100	to match
+26	105	115	statistics
+26	116	118	of
+26	119	138	each training batch
+26	139	141	to
+26	164	179	morphable model
+26	184	197	loopback loss
+26	198	207	to ensure
+26	212	230	regression network
+26	235	256	correctly reinterpret
+26	261	271	own output
+26	280	304	multi-view identity loss
+26	310	318	combines
+26	319	327	features
+26	328	332	from
+26	333	361	multiple , independent views
+26	157	159	of
+26	369	384	predicted shape
+27	23	28	train
+27	31	70	3D shape and texture regression network
+27	71	81	using only
+27	84	108	face recognition network
+27	113	133	morphable face model
+27	142	149	dataset
+27	150	152	of
+27	153	174	unlabeled face images
+28	3	7	show
+28	63	78	3D face results
+28	79	86	improve
+28	87	89	on
+28	94	102	accuracy
+28	103	105	of
+28	106	119	previous work
+2	26	55	3D Morphable Model Regression

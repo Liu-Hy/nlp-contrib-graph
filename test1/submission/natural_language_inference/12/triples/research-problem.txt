@@ -1,4 +1,0 @@
-(Contribution||has research problem||FINDING)
-(Contribution||has research problem||text - based question and answering)
-(Contribution||has research problem||relational reasoning)
-(Contribution||has research problem||question relevant information)

@@ -1,3 +1,0 @@
-(Model||consider||feature extraction and classification)
-(deep architectures||of||many convolutional layers)
-(Contribution||has||Model)

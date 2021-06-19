@@ -1,2 +1,0 @@
-(Contribution||has research problem||Word Sense Disambiguation of Text Data)
-(Contribution||has research problem||Word Sense Disambiguation ( WSD ) algorithm)

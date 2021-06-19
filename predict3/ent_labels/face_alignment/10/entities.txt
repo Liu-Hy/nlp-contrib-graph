@@ -1,0 +1,202 @@
+34	2	21	novel loss function
+34	24	30	namely
+34	35	44	Wing loss
+34	65	75	to improve
+34	80	119	deep neural network training capability
+34	120	123	for
+34	124	153	small and medium range errors
+35	2	28	data augmentation strategy
+35	31	35	i.e.
+35	36	63	pose - based data balancing
+35	71	82	compensates
+35	87	100	low frequency
+35	101	103	of
+35	104	114	occurrence
+35	115	117	of
+35	118	125	samples
+35	126	130	with
+35	131	168	large out - of - plane head rotations
+35	169	171	in
+35	176	188	training set
+36	2	52	two - stage facial landmark localisation framework
+36	53	56	for
+36	57	77	performance boosting
+226	29	69	set of state - of - the - art approaches
+226	72	81	including
+226	82	85	SDM
+226	88	91	ERT
+226	94	98	RCPR
+226	101	105	CFSS
+226	108	111	LBF
+226	114	117	GRF
+226	120	123	CCL
+226	126	135	DAC - CSR
+226	140	148	TR - DRN
+209	24	28	used
+209	29	41	Matlab 2017a
+209	50	71	Mat - ConvNet toolbox
+211	18	21	use
+211	13	34	only use one GPU card
+211	35	48	for measuring
+211	53	61	run time
+212	74	77	for
+212	78	94	network training
+212	3	6	set
+212	11	23	weight decay
+212	24	26	to
+212	27	35	5 10 ? 4
+212	38	46	momentum
+212	47	49	to
+212	50	53	0.9
+212	58	68	batch size
+212	69	71	to
+212	72	73	8
+216	0	3	For
+216	8	27	convolutional layer
+216	33	37	used
+216	38	49	3 3 kernels
+216	50	54	with
+216	59	65	stride
+216	66	68	of
+216	69	70	1
+218	8	29	proposed PDB strategy
+218	36	52	number of bins K
+218	57	63	set to
+218	64	66	17
+218	67	70	for
+218	71	75	AFLW
+218	80	81	9
+218	82	85	for
+218	86	90	300W
+219	4	11	CNN - 6
+219	18	34	input image size
+219	38	45	64 64 3
+219	51	58	reduced
+219	63	76	learning rate
+219	77	81	from
+219	82	90	3 10 ? 6
+219	91	93	to
+219	94	101	3 10 ?8
+219	102	105	for
+219	110	117	L2 loss
+219	129	136	3 10 ?5
+219	137	139	to
+219	140	148	3 10 ? 7
+219	149	152	for
+219	157	177	other loss functions
+224	63	65	to
+224	4	29	bounding box perturbation
+224	35	42	applied
+224	43	62	random translations
+224	70	107	upper-left and bottom - right corners
+224	108	110	of
+224	115	132	face bounding box
+224	133	139	within
+224	140	143	5 %
+224	144	146	of
+224	151	159	bounding
+220	64	71	CNN - 7
+220	78	94	input image size
+220	95	97	is
+220	98	107	128 128 3
+220	113	120	reduced
+220	125	138	learning rate
+220	139	143	from
+220	144	152	1 10 ? 6
+220	156	163	1 10 ?8
+220	164	167	for
+220	172	179	L2 loss
+220	191	199	1 10 ? 5
+220	153	155	to
+220	203	211	1 10 ? 7
+220	212	215	for
+220	220	240	other loss functions
+220	200	202	to
+220	4	14	parameters
+220	15	17	of
+220	22	31	Wing loss
+220	37	40	set
+220	41	57	tow = 10 and = 2
+210	4	24	training and testing
+210	25	27	of
+210	28	40	our networks
+210	46	58	conducted on
+210	61	67	server
+210	68	75	running
+210	76	88	Ubuntu 16.04
+210	89	93	with
+210	96	121	Intel Xeon E5-2667 v4 CPU
+210	124	134	256 GB RAM
+210	139	184	4 NVIDIA GeForce GTX Titan X ( Pascal ) cards
+213	0	10	Each model
+213	15	26	trained for
+213	27	43	120 k iterations
+215	4	26	standard ReLu function
+215	31	39	used for
+215	40	60	nonlinear activation
+215	67	78	Max pooling
+215	79	83	with
+215	88	94	stride
+215	95	97	of
+215	98	99	2
+215	104	111	used to
+215	112	120	downsize
+215	121	133	feature maps
+227	10	27	randomly injected
+227	28	50	Gaussian blur (? = 1 )
+227	51	53	to
+227	54	73	each training image
+227	74	78	with
+227	83	94	probability
+227	95	97	of
+227	98	102	50 %
+222	0	10	To perform
+222	11	28	data augmentation
+222	34	50	randomly rotated
+222	56	70	training image
+222	71	78	between
+222	79	100	[ ? 30 , 30 ] degrees
+222	101	104	for
+222	105	112	CNN - 6
+222	125	146	[ ? 10 , 10 ] degrees
+222	147	150	for
+222	151	158	CNN - 7
+234	39	43	AFLW
+246	14	35	our CNN - 6/7 network
+246	36	47	outperforms
+246	48	72	all the other approaches
+248	9	11	by
+248	12	28	simply switching
+248	33	46	loss function
+248	47	51	from
+248	52	54	L2
+248	55	57	to
+248	58	60	L1
+248	64	73	smooth L1
+248	80	91	performance
+248	92	94	of
+248	95	105	our method
+248	115	137	improved significantly
+249	11	17	use of
+249	22	55	newly proposed Wing loss function
+249	56	72	further improves
+249	77	85	accuracy
+251	0	5	300 W
+262	14	61	our two - stage landmark localisation framework
+262	62	66	with
+262	71	83	PDB strategy
+262	92	125	newly proposed Wing loss function
+262	126	137	outperforms
+262	146	182	other stateof - the - art algorithms
+262	183	185	on
+262	190	203	300 W dataset
+263	4	9	error
+263	19	29	reduced by
+263	30	41	almost 20 %
+263	45	56	compared to
+263	61	80	current best result
+263	81	92	reported by
+263	97	110	RAR algorithm
+2	14	49	Robust Facial Landmark Localisation
+14	0	28	Facial landmark localisation
+14	34	48	face alignment

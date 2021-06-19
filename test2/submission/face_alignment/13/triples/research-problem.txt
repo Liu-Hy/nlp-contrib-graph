@@ -1,5 +1,0 @@
-(Contribution||has research problem||superior representation power)
-(Contribution||has research problem||nonlinear 3 DMM)
-(Contribution||has research problem||linear counterpart)
-(Contribution||has research problem||contribution)
-(Contribution||has research problem||face alignment and 3D reconstruction)

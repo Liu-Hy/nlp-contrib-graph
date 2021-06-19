@@ -1,0 +1,93 @@
+title
+Bag of Tricks for Efficient Text Classification
+abstract
+This paper explores a simple and efficient baseline for text classification .
+Our experiments show that our fast text classifier fastText is often on par with deep learning classifiers in terms of accuracy , and many orders of magnitude faster for training and evaluation .
+We can train fastText on more than one billion words in less than ten minutes using a standard multicore CPU , and classify half a million sentences among 312K classes in less than a minute .
+Introduction
+Text classification is an important task in Natural Language Processing with many applications , such as web search , information retrieval , ranking and document classification .
+Recently , models based on neural networks have become increasingly popular .
+While these models achieve very good performance in practice , they tend to be relatively slow both at train and test time , limiting their use on very large datasets .
+Meanwhile , linear classifiers are often considered as strong baselines for text classification problems .
+Despite their simplicity , they often obtain stateof - the - art performances if the right features are used .
+They also have the potential to scale to very large corpus .
+In this work , we explore ways to scale these baselines to very large corpus with a large output space , in the context of text classification .
+Inspired by the recent work in efficient word representation learning , we show that linear models with a rank constraint and a fast loss approximation can train on a billion words within ten minutes , while achieving performance on par with the state - of - the - art .
+We evaluate the quality of our approach fastText 1 on two different tasks , namely tag prediction and sentiment analysis .
+Model architecture
+A simple and efficient baseline for sentence classification is to represent sentences as bag of words ( BoW ) and train a linear classifier , e.g. , a logistic regression or an SVM .
+However , linear classifiers do not share parameters among features and classes .
+This possibly limits their generalization in the context of large output space where some classes have very few examples .
+Common solutions to this problem are to factorize the linear classifier into low rank matrices or to use multilayer neural networks .
+shows a simple linear model with rank constraint .
+The first weight matrix A is a look - up table over the words .
+The word representations are then averaged into a text representation , which is in turn fed to a linear classifier .
+The text representa - tion is an hidden variable which can be potentially be reused .
+This architecture is similar to the cbow model of , where the middle word is replaced by a label .
+We use the softmax function f to compute the probability distribution over the predefined classes .
+For a set of N documents , this leads to minimizing the negative loglikelihood over the classes :
+where x n is the normalized bag of features of the nth document , y n the label , A and B the weight matrices .
+This model is trained asynchronously on multiple CPUs using stochastic gradient descent and a linearly decaying learning rate .
+Hierarchical softmax
+When the number of classes is large , computing the linear classifier is computationally expensive .
+More precisely , the computational complexity is O ( kh ) where k is the number of classes and h the dimension of the text representation .
+In order to improve our running time , we use a hierarchical softmax ) based on the Huffman coding tree .
+During training , the computational complexity drops to O ( h log 2 ( k ) ) .
+The hierarchical softmax is also advantageous at test time when searching for the most likely class .
+Each node is associated with a probability that is the probability of the path from the root to that node .
+If the node is at depth l + 1 with parents n 1 , . . . , n l , it s probability is
+This means that the probability of anode is always lower than the one of its parent .
+Exploring the tree with a depth first search and tracking the maximum probability among the leaves allows us to discard any branch associated with a small probability .
+In practice , we observe a reduction of the complexity to O ( h log 2 ( k ) ) at test time .
+This approach is further extended to compute the T - top targets at the cost of O ( log ( T ) ) , using a binary heap .
+N - gram features
+Bag of words is invariant to word order but taking explicitly this order into account is often computationally very expensive .
+Instead , we use a bag of n-grams as additional features to capture some partial information about the local word order .
+This is very efficient in practice while achieving comparable results to methods that explicitly use the order .
+We maintain a fast and memory efficient mapping of the n-grams by using the hashing trick with the same hashing function as in and 10M bins if we only used bigrams , and 100M otherwise .
+Experiments
+We evaluate fastText on two different tasks .
+First , we compare it to existing text classifers on the problem of sentiment analysis .
+Then , we evaluate its capacity to scale to large output space on a tag prediction dataset .
+Note that our model could be implemented with the Vowpal Wabbit library , 2 but we observe in practice , that our tailored implementation is at least 2 - 5 faster .
+Sentiment analysis
+Datasets and baselines .
+We employ the same 8 datasets and evaluation protocol of .
+We report the n-grams and TFIDF baselines from We also compare to following their evaluation protocol .
+We report their main baselines as well as their two approaches based on recurrent networks ( Conv - GRNN and LSTM - GRNN ) .
+Results .
+We present the results in .
+We use 10 hidden units and run fastText for 5 epochs with a learning rate selected on a validation set from { 0.05 , 0.1 , 0.25 , 0.5 } .
+On this task , adding bigram information improves the performance by 1 - 4 % .
+Overall our accuracy is slightly better than char - CNN and char - CRNN and , a bit worse than VDCNN .
+Note that we can increase the accuracy slightly by using more n-grams , for example with trigrams , the performance on Sogou goes up to 97.1 % .
+Finally , shows that our method is competitive with the methods presented in .
+We tune the hyperparameters on the validation set and observe that using n-grams up to 5 leads to the best performance .
+Unlike , fastText does not use pre-trained word embeddings , which can be explained the 1 % difference in accuracy .
+We show a few correct and incorrect tag predictions .
+up compared to neural network based methods increases with the size of the dataset , going up to at least a 15,000 speed - up .
+Tag prediction
+Dataset and baselines .
+To test scalability of our approach , further evaluation is carried on the YFCC100M dataset which consists of almost 100M images with captions , titles and tags .
+We focus on predicting the tags according to the title and caption ( we do not use the images ) .
+We remove the words and tags occurring less than 100 times and split the data into a train , validation and test set .
+The train set contains 91,188,648 examples ( 1.5B tokens ) .
+The validation has 930,497 examples and the test set 543,424 .
+The vocabulary size is 297,141 and there are 312,116 unique tags .
+We will release a script that recreates this dataset so that our numbers could be reproduced .
+We report precision at 1 .
+We consider a frequency - based baseline which predicts the most frequent tag .
+We also compare with Tagspace ( Weston et al. , 2014 ) , which is a tag prediction model similar to ours , but based on the Wsabie model of .
+While the Tagspace model is described using convolutions , we consider the linear version , which achieves comparable performance but is much faster .
+Results and training time . and 200 .
+Both models achieve a similar performance with a small hidden layer , but adding bigrams gives us a significant boost in accuracy .
+At test time , Tagspace needs to compute the scores for all the classes which makes it relatively slow , while our fast inference gives a significant speed - up when the number of classes is large ( more than 300 K here ) .
+Overall , we are more than an order of magnitude faster to obtain model with a better quality .
+The speedup of the test phase is even more significant ( a 600 speedup ) .
+shows some qualitative examples .
+Discussion and conclusion
+In this work , we propose a simple baseline method for text classification .
+Unlike unsupervisedly trained word vectors from word2vec , our word features can be averaged together to form good sentence representations .
+In several tasks , fastText obtains performance on par with recently proposed methods inspired by deep learning , while being much faster .
+Although deep neural networks have in theory much higher representational power than shallow models , it is not clear if simple text classification problems such as sentiment analysis are the right ones to evaluate them .
+We will publish our code so that the research community can easily build on top of our work .

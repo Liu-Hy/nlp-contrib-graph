@@ -1,3 +1,0 @@
-(question - answer pairs||annotated through||crowdsourcing)
-(Dataset||has||question - answer pairs)
-(Contribution||has||Dataset)

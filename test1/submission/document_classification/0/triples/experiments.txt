@@ -1,5 +1,0 @@
-(tags||according to||title and caption)
-(predicting||has||tags)
-(vocabulary size||is||297,141)
-(vocabulary size||has||297,141)
-(Contribution||has||Experiments)

@@ -1,0 +1,3 @@
+(model||maintains||state)
+(Model||has||model)
+(Contribution||has||Model)

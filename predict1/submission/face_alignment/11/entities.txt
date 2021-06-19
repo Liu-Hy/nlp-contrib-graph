@@ -1,0 +1,134 @@
+2	26	55	3D Morphable Model Regression
+10	0	23	Finding the coordinates
+18	3	6	map
+18	16	20	from
+18	23	49	facial recognition network
+18	50	54	into
+18	55	74	identity parameters
+18	83	114	Basel 2017 Morphable Face Model
+20	33	41	training
+20	44	62	regression network
+20	68	75	removes
+20	94	118	supervised training data
+20	127	138	reliance on
+20	139	156	inverse rendering
+20	157	169	to reproduce
+20	170	182	image pixels
+21	22	31	learns to
+21	32	40	minimize
+21	43	47	loss
+21	48	56	based on
+21	61	85	facial identity features
+21	86	97	produced by
+21	100	124	face recognition network
+21	125	132	such as
+21	133	143	VGG - Face
+21	147	164	Google 's FaceNet
+23	30	35	apply
+23	38	42	loss
+23	43	55	that matches
+23	60	77	identity features
+23	78	85	between
+23	90	106	input photograph
+23	113	132	synthetic rendering
+23	133	135	of
+23	140	154	predicted face
+26	3	12	alleviate
+26	17	32	fooling problem
+26	33	35	by
+26	36	44	applying
+26	45	63	three novel losses
+26	68	91	batch distribution loss
+26	92	100	to match
+26	105	115	statistics
+26	116	118	of
+26	119	138	each training batch
+26	139	141	to
+26	146	156	statistics
+26	157	159	of
+26	164	179	morphable model
+26	184	197	loopback loss
+26	198	207	to ensure
+26	212	230	regression network
+26	231	256	can correctly reinterpret
+26	261	271	own output
+26	280	304	multi-view identity loss
+26	305	318	that combines
+26	319	327	features
+26	328	332	from
+26	333	361	multiple , independent views
+26	362	364	of
+26	369	384	predicted shape
+27	23	28	train
+27	31	70	3D shape and texture regression network
+27	71	76	using
+27	77	108	only a face recognition network
+27	113	133	morphable face model
+27	142	174	dataset of unlabeled face images
+105	3	6	use
+105	11	33	Phong reflection model
+105	34	37	for
+105	38	45	shading
+138	0	19	Identity prediction
+138	27	43	further enhanced
+138	44	52	by using
+138	53	67	multiple poses
+138	68	71	for
+138	72	81	each face
+142	0	18	Batch Distribution
+171	11	16	shows
+171	17	53	improved likeness and color fidelity
+171	54	58	over
+171	59	76	competing methods
+171	79	105	especially in the shape of
+171	110	114	eyes
+184	0	35	Neutral Pose Reconstruction on MICC
+185	69	71	on
+185	76	115	MICC Florence 3D Faces dataset ( MICC )
+190	11	18	average
+190	42	55	before making
+190	58	79	single reconstruction
+194	12	20	indicate
+194	34	42	improved
+194	43	57	absolute error
+194	58	60	to
+194	65	77	ground truth
+194	78	80	by
+194	81	90	20 - 25 %
+194	113	128	more consistent
+194	153	162	with less
+195	12	23	more stable
+195	24	30	across
+195	31	52	changing environments
+196	0	24	Face Recognition Results
+202	0	10	Our method
+202	11	19	achieves
+202	23	41	average similarity
+202	42	49	between
+202	50	69	rendering and photo
+202	70	72	of
+202	73	78	0.403
+202	79	81	on
+202	82	91	MoFA test
+205	0	21	Our method 's results
+205	26	35	closer to
+205	40	66	same - person distribution
+205	67	71	than
+205	76	104	differentperson distribution
+205	108	117	all cases
+205	130	151	other methods results
+205	158	167	closer to
+205	172	203	different - person distribution
+211	14	22	distance
+211	23	30	between
+211	35	89	GT distribution and the same - person LFW distribution
+211	90	92	is
+211	93	101	very low
+211	104	108	with
+211	109	146	almost the same mean ( 0.51 vs 0.50 )
+251	0	15	Facial features
+251	16	32	smoothly degrade
+251	33	35	as
+251	40	61	necessary information
+251	65	82	no longer present
+251	90	101	input image

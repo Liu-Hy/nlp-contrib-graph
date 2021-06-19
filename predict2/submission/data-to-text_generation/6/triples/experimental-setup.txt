@@ -1,0 +1,5 @@
+(our system||using||PyTorch framework)
+(Experimental setup||developed||our system)
+(negative log - likelihood loss||using||teacher forcing and Adam)
+(Experimental setup||minimize||negative log - likelihood loss)
+(Contribution||has||Experimental setup)

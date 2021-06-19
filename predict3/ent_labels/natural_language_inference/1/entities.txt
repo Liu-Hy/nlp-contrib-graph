@@ -1,0 +1,157 @@
+117	3	10	compare
+117	11	20	our model
+117	21	28	against
+117	29	44	reported models
+117	45	47	in
+117	50	57	Seq2Seq
+117	60	63	ASR
+117	66	71	BiDAF
+117	82	116	Multi-range Reasoning Unit ( MRU )
+118	3	14	implemented
+118	15	34	two baseline models
+118	63	67	with
+118	68	86	Context Zoom layer
+125	4	9	model
+125	13	30	implemented using
+125	31	37	Python
+125	42	52	Tensorflow
+126	8	15	weights
+126	16	18	of
+126	23	28	model
+126	33	47	initialized by
+126	48	69	Glorot Initialization
+126	74	80	biases
+126	85	101	initialized with
+126	102	107	zeros
+128	0	13	All the words
+128	22	35	not appear in
+128	36	41	Glove
+128	46	60	initialized by
+128	61	69	sampling
+128	70	74	from
+128	77	104	uniform random distribution
+130	4	26	number of hidden units
+130	31	37	set to
+130	38	41	100
+127	3	6	use
+127	9	37	300 dimensional word vectors
+127	38	42	from
+127	43	48	GloVe
+127	51	55	with
+127	56	87	840 billion pre-trained vectors
+127	90	103	to initialize
+127	108	123	word embeddings
+129	3	8	apply
+129	9	16	dropout
+129	17	24	between
+129	29	35	layers
+129	36	40	with
+129	41	57	keep probability
+129	58	60	of
+129	61	64	0.8
+131	3	10	trained
+131	11	20	our model
+131	21	25	with
+131	30	66	AdaDelta ( Zeiler , 2012 ) optimizer
+131	67	70	for
+131	71	80	50 epochs
+131	86	107	initial learning rate
+131	108	110	of
+131	111	114	0.1
+131	123	137	minibatch size
+131	138	140	of
+131	141	143	32
+19	31	38	develop
+19	41	84	novel context zoom - in network ( ConZNet )
+19	85	88	for
+19	89	97	RC tasks
+19	110	122	skip through
+19	123	139	irrelevant parts
+19	140	142	of
+19	145	153	document
+19	158	166	generate
+19	170	176	answer
+19	177	182	using
+19	183	216	only the relevant regions of text
+20	4	24	ConZNet architecture
+20	25	36	consists of
+20	37	47	two phases
+21	0	2	In
+21	7	18	first phase
+21	22	30	identify
+21	35	51	relevant regions
+21	52	54	of
+21	55	59	text
+21	60	72	by employing
+21	75	107	reinforcement learning algorithm
+23	4	16	second phase
+23	20	28	based on
+23	32	62	encoder - decoder architecture
+23	71	82	comprehends
+23	87	113	identified regions of text
+23	118	127	generates
+23	132	138	answer
+23	139	147	by using
+23	150	183	residual self - attention network
+23	184	186	as
+23	187	194	encoder
+23	201	228	RNNbased sequence generator
+23	229	239	along with
+23	242	257	pointer network
+23	258	260	as
+23	265	272	decoder
+27	29	39	our method
+27	48	55	ability
+27	56	65	to select
+27	66	82	relevant regions
+27	83	85	of
+27	86	90	text
+27	91	108	not just based on
+27	113	121	question
+27	126	133	also on
+27	143	150	regions
+27	155	165	related to
+27	166	176	each other
+28	11	22	our decoder
+28	23	31	combines
+28	32	47	span prediction
+28	52	71	sequence generation
+29	5	11	allows
+29	16	23	decoder
+29	24	31	to copy
+29	32	37	words
+29	38	42	from
+29	47	63	relevant regions
+29	64	66	of
+29	67	71	text
+29	83	94	to generate
+29	95	100	words
+29	101	105	from
+29	108	124	fixed vocabulary
+2	51	72	Reading Comprehension
+4	70	98	Reading Comprehension ( RC )
+7	122	124	RC
+138	4	15	performance
+138	16	18	of
+138	19	28	our model
+138	29	46	gradually dropped
+138	47	51	from
+138	52	73	sample size 7 onwards
+141	19	28	the model
+141	29	50	improved dramatically
+141	51	55	with
+141	56	76	sample sizes 3 and 5
+141	77	88	compared to
+141	93	109	sample size of 1
+144	32	58	self - attention mechanism
+144	59	61	in
+144	66	84	Context zoom layer
+144	91	110	important component
+144	111	122	to identify
+144	123	149	related relevant sentences
+139	12	17	shows
+139	18	26	evidence
+139	32	61	only a few relevant sentences
+139	66	79	sufficient to
+139	80	86	answer
+139	89	97	question

@@ -1,0 +1,138 @@
+2	47	82	Matching Natural Language Sentences
+4	0	17	Semantic matching
+11	0	54	Matching two potentially heterogenous language objects
+11	58	65	central
+12	3	14	generalizes
+12	19	38	conventional notion
+12	39	41	of
+12	42	52	similarity
+16	22	29	propose
+16	30	56	deep neural network models
+16	65	70	adapt
+16	75	97	convolutional strategy
+16	140	142	to
+16	143	159	natural language
+17	86	92	devise
+17	95	106	novel model
+17	112	130	can naturally host
+17	165	168	for
+17	169	178	sentences
+17	187	221	simple - to - comprehensive fusion
+17	222	224	of
+17	225	242	matching patterns
+17	243	247	with
+17	252	283	same convolutional architecture
+128	24	31	perform
+128	32	38	better
+128	39	43	with
+128	44	77	mini-batch ( 100 ? 200 in sizes )
+128	84	97	can be easily
+128	98	110	parallelized
+128	114	128	single machine
+128	129	133	with
+128	134	145	multi-cores
+129	0	3	For
+129	4	18	regularization
+129	24	37	find that for
+129	38	56	both architectures
+129	59	73	early stopping
+129	74	87	is enough for
+129	88	94	models
+129	95	99	with
+129	100	142	medium size and large training sets ( with
+129	143	164	over 500K instances )
+131	3	6	use
+131	7	38	50 - dimensional word embedding
+131	39	51	trained with
+131	56	65	Word2 Vec
+136	3	6	use
+136	7	11	ReLu
+136	12	14	as
+136	19	38	activation function
+136	39	42	for
+136	43	80	all of models ( convolution and MLP )
+136	89	95	yields
+136	96	124	comparable or better results
+136	125	127	to
+136	128	152	sigmoid - like functions
+136	159	168	converges
+136	169	175	faster
+142	0	9	WORDEMBED
+142	31	48	each short - text
+142	49	51	as
+142	56	59	sum
+142	67	76	embedding
+142	77	79	of
+142	84	101	words it contains
+143	4	18	matching score
+143	19	21	of
+143	22	39	two short - texts
+143	44	59	calculated with
+143	63	66	MLP
+143	67	71	with
+143	76	85	embedding
+143	86	88	of
+143	93	106	two documents
+143	118	127	DEEPMATCH
+143	164	175	train it on
+143	176	188	our datasets
+143	189	193	with
+143	194	209	3 hidden layers
+143	214	232	1,000 hidden nodes
+143	233	235	in
+143	240	258	first hidden layer
+143	261	270	URAE+ MLP
+144	3	6	use
+144	11	42	Unfolding Recursive Autoencoder
+144	43	49	to get
+144	52	89	100 dimensional vector representation
+144	90	92	of
+144	93	106	each sentence
+144	113	116	put
+144	120	123	MLP
+144	124	126	on
+144	131	134	top
+144	135	140	as in
+144	141	150	WORDEMBED
+144	153	170	SENNA + MLP / SIM
+145	3	6	use
+145	11	38	SENNA - type sentence model
+145	39	42	for
+145	43	66	sentence representation
+146	0	6	SENMLP
+146	12	16	take
+146	21	35	whole sentence
+146	36	38	as
+146	39	44	input
+146	47	51	with
+146	52	87	word embedding aligned sequentially
+146	96	99	use
+146	103	106	MLP
+146	107	116	to obtain
+146	121	139	score of coherence
+148	0	34	Experiment I : Sentence Completion
+156	4	16	two proposed
+156	24	27	get
+156	28	39	nearly half
+156	40	42	of
+156	47	58	cases right
+156	63	67	with
+156	68	80	large margin
+156	81	85	over
+156	86	107	other sentence models
+156	119	126	without
+156	127	153	explicit sequence modeling
+157	0	8	ARC - II
+157	9	20	outperforms
+157	21	28	ARC - I
+157	29	42	significantly
+157	45	52	showing
+158	33	44	SENNA + MLP
+158	45	53	performs
+158	54	65	fairly well
+162	6	9	ARC
+162	15	20	beats
+162	21	33	other models
+162	34	38	with
+162	39	52	large margins
+162	61	78	two convolutional

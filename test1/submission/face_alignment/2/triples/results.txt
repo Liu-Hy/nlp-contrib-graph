@@ -1,6 +1,0 @@
-(predicted landmarks||close to||corresponding ground truth)
-(predicted landmarks||in the presence of||facial expressions ( CelebA ))
-(corresponding ground truth||in the presence of||rotations and occlusions ( WFLW ))
-(predicted landmarks||has||corresponding ground truth)
-(Results||notice||predicted landmarks)
-(Contribution||has||Results)

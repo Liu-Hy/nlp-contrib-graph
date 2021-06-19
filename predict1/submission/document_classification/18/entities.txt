@@ -1,0 +1,26 @@
+2	45	64	Text Classification
+13	0	19	Text classification
+18	19	35	explore treating
+18	41	43	as
+18	54	64	raw signal
+18	65	67	at
+18	68	83	character level
+18	90	98	applying
+18	99	136	temporal ( one-dimensional ) ConvNets
+30	4	10	design
+30	11	13	is
+30	14	21	modular
+30	24	29	where
+30	34	43	gradients
+30	48	59	obtained by
+30	60	78	back - propagation
+30	79	89	to perform
+30	90	102	optimization
+118	4	13	dimension
+118	14	16	of
+118	21	30	embedding
+118	31	33	is
+118	34	37	300
+120	4	19	number of means
+120	20	22	is
+120	23	27	5000

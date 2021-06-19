@@ -1,0 +1,4 @@
+(3 DMM fitting results||on||CelebA dataset)
+(personal facial characteristic||in||both shape and texture)
+(low error||comparable to||optimization - based methods)
+(Contribution||has||Experiments)

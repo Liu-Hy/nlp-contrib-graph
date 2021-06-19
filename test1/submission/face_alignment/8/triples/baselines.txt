@@ -1,7 +1,0 @@
-(2DASL ( cyc )||takes as input||combination)
-(2DASL ( sc )||takes as input||RGB face images)
-(RGB face images||using||self - critic learning)
-(Baselines||has||2DASL ( cyc ))
-(2DASL ( cyc+sc )||contains||self - supervision)
-(2DASL ( cyc+sc )||contains||self - critic supervision)
-(Contribution||has||Baselines)

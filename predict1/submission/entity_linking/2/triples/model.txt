@@ -1,0 +1,5 @@
+(various neural architectures||of||different complexities)
+(different complexities||ranging from||single bidirectional Long Short - Term Memory)
+(single bidirectional Long Short - Term Memory||to||sequence - tosequence approach)
+(Model||design , analyze and compare||various neural architectures)
+(Contribution||has||Model)

@@ -1,6 +1,0 @@
-(approximation||of||higher - order inference)
-(higher - order inference||uses||span - ranking architecture)
-(Model||introduce||approximation)
-(coarseto - fine approach||learned with||single endto - end objective)
-(Model||propose||coarseto - fine approach)
-(Contribution||has||Model)

@@ -1,0 +1,180 @@
+2	53	67	Face Detection
+2	70	91	Landmark Localization
+2	116	122	Gender
+11	0	32	D ETECTION and analysis of faces
+15	19	26	present
+15	29	44	novel framework
+15	45	53	based on
+15	54	58	CNNs
+15	59	62	for
+15	63	90	simultaneous face detection
+15	93	122	facial landmarks localization
+15	125	145	head pose estimation
+15	150	168	gender recognition
+15	169	173	from
+15	176	187	given image
+16	3	9	design
+16	12	28	CNN architecture
+16	29	37	to learn
+16	38	53	common features
+16	54	57	for
+16	64	69	tasks
+16	74	81	exploit
+16	86	93	synergy
+17	3	10	exploit
+17	25	36	information
+17	37	49	contained in
+17	50	58	features
+17	62	88	hierarchically distributed
+17	104	111	network
+27	0	15	Features fusion
+29	11	20	construct
+29	23	44	separate fusion - CNN
+29	45	52	to fuse
+29	57	70	hyperfeatures
+37	0	6	Fusing
+37	11	38	intermediate layer features
+37	39	47	provides
+37	48	76	additional performance boost
+51	45	48	MTL
+53	15	23	based on
+53	26	42	mixture of trees
+53	43	47	with
+53	50	70	shared pool of parts
+53	89	110	every facial landmark
+53	114	124	modeled as
+53	125	130	apart
+53	135	139	uses
+53	140	155	global mixtures
+53	156	166	to capture
+53	171	190	topological changes
+53	191	197	due to
+53	198	218	viewpoint variations
+60	3	8	fuses
+60	9	36	all the intermediate layers
+60	37	39	of
+60	42	45	CNN
+60	46	48	at
+60	49	71	three different scales
+60	72	74	of
+60	79	92	image pyramid
+60	93	96	for
+60	97	116	multi-task training
+60	117	119	on
+60	120	132	diverse sets
+66	13	33	strategically design
+66	38	58	network architecture
+66	59	68	such that
+66	73	78	tasks
+66	79	86	exploit
+66	87	127	low level as well as high level features
+66	128	130	of
+66	135	142	network
+67	8	23	jointly predict
+67	28	32	task
+67	36	76	face detection and landmark localization
+84	0	22	Landmarks localization
+88	10	16	former
+88	17	23	learns
+88	28	43	shape increment
+88	44	49	given
+88	52	70	mean initial shape
+88	84	90	trains
+88	94	110	appearance model
+88	111	121	to predict
+88	126	144	keypoint locations
+100	0	18	Gender recognition
+144	3	11	provides
+144	12	23	annotations
+144	24	27	for
+144	28	55	21 landmark points per face
+144	58	68	along with
+144	73	92	face bounding - box
+144	95	129	face pose ( yaw , pitch and roll )
+144	134	152	gender information
+148	3	6	use
+148	11	37	Selective Search algorithm
+148	38	40	in
+148	41	48	R - CNN
+148	49	60	to generate
+148	61	77	region proposals
+148	78	81	for
+148	82	87	faces
+148	88	90	in
+148	94	99	image
+157	3	6	use
+157	7	23	21 point markups
+157	24	27	for
+157	28	52	face landmarks locations
+157	56	64	provided
+157	72	84	AFLW dataset
+170	8	13	learn
+170	18	35	visibility factor
+170	36	52	in order to test
+170	57	65	presence
+170	66	68	of
+170	73	91	predicted landmark
+178	0	18	Gender Recognition
+179	0	10	Predicting
+179	18	20	is
+179	23	40	two class problem
+179	41	51	similar to
+179	52	66	face detection
+211	0	3	IRP
+211	4	12	improves
+211	17	23	recall
+211	24	37	by generating
+211	38	62	more candidate proposals
+211	63	71	by using
+211	76	107	predicted landmarks information
+211	108	112	from
+211	117	148	initial set of region proposals
+263	0	6	R- CNN
+271	8	15	perform
+271	18	48	linear bounding box regression
+271	49	60	to localize
+271	65	82	face co-ordinates
+433	0	16	Fast - HyperFace
+434	4	20	Hyperface method
+434	24	33	tested on
+434	36	43	machine
+434	44	48	with
+434	49	56	8 cores
+434	61	78	GTX TITAN - X GPU
+438	8	15	propose
+438	18	30	fast version
+438	31	33	of
+438	34	43	HyperFace
+438	50	54	uses
+438	57	87	high recall fast face detector
+438	88	98	instead of
+438	99	115	Selective Search
+438	116	127	to generate
+438	128	154	candidate region proposals
+439	3	12	implement
+439	15	28	face detector
+439	29	34	using
+439	35	73	Single Shot Detector ( SSD ) framework
+445	0	16	Fast - HyperFace
+445	17	25	consumes
+445	28	38	total time
+445	39	41	of
+445	42	47	0.15s
+445	106	108	on
+445	111	126	GTX TITAN X GPU
+446	4	20	Fast - HyperFace
+446	21	29	achieves
+446	32	36	m AP
+446	37	39	of
+446	40	46	97.6 %
+446	47	49	on
+446	50	73	AFW face detection task
+447	7	23	Fast - HyperFace
+447	24	32	improves
+447	37	42	speed
+447	43	45	by
+447	48	60	factor of 12
+447	61	65	with
+447	66	88	negligible degradation
+447	89	91	in
+447	92	103	performance

@@ -1,0 +1,6 @@
+(Fast - HyperFace||achieves||m AP)
+(m AP||of||97.6 %)
+(m AP||on||AFW face detection task)
+(97.6 %||on||AFW face detection task)
+(Results||has||Fast - HyperFace)
+(Contribution||has||Results)

@@ -1,2 +1,0 @@
-(Contribution||has research problem||Facial Alignment)
-(Contribution||has research problem||Nonlinear statistical model approaches)

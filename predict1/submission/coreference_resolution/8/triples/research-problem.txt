@@ -1,0 +1,5 @@
+(Contribution||has research problem||End - to - end)
+(Contribution||has research problem||first end - to - end coreference resolution model)
+(Contribution||has research problem||significantly outperforms)
+(Contribution||has research problem||all previous work)
+(Contribution||has research problem||syntactic parser or handengineered mention detector)

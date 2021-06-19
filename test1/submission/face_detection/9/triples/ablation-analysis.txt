@@ -1,8 +1,0 @@
-(massively - large receptive fields||can be||effectively encoded)
-(foveal descriptor||captures||coarse context)
-(foveal descriptor||captures||high - resolution image features)
-(massively - large receptive fields||has||effectively encoded)
-(Ablation analysis||show||massively - large receptive fields)
-(encoding of scale||in||existing pre-trained deep networks)
-(Ablation analysis||explore||encoding of scale)
-(Contribution||has||Ablation analysis)

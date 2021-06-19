@@ -1,0 +1,161 @@
+2	35	54	Text Classification
+4	0	31	Distributed word representation
+15	0	2	AI
+15	7	21	combination of
+15	22	55	active learning and self learning
+15	56	59	for
+15	60	95	named entity recognition on twitter
+15	96	101	using
+15	102	136	conditional random fields learning
+18	0	28	Learning word representation
+30	19	26	propose
+30	29	66	task - oriented word embedding method
+30	69	79	denoted as
+30	80	84	ToWE
+30	87	95	to solve
+37	18	26	focus on
+37	27	46	text classification
+39	0	2	In
+39	7	31	joint learning framework
+39	38	60	contextual information
+39	64	82	captured following
+39	87	110	context prediction task
+40	13	29	task information
+40	35	45	regularize
+40	50	62	distribution
+40	63	65	of
+40	84	91	to have
+40	94	123	clear classification boundary
+40	135	141	adjust
+40	146	158	distribution
+40	159	161	of
+40	166	177	other words
+40	178	180	in
+40	185	200	embedding space
+46	3	10	propose
+46	13	50	task - oriented word embedding method
+46	59	81	specially designed for
+46	82	101	text classification
+47	3	13	introduces
+47	18	44	function - aware component
+47	49	59	highlights
+47	60	89	word 's functional attributes
+47	90	92	in
+47	97	112	embedding space
+47	113	128	by regularizing
+47	133	154	distribution of words
+47	155	162	to have
+47	165	194	clear classification boundary
+147	3	13	represents
+147	14	27	each document
+147	28	30	as
+147	33	45	bag of words
+147	54	70	weighting scheme
+147	71	73	is
+147	74	79	TFIDF
+150	3	12	comprises
+150	13	16	two
+150	33	37	CBOW
+150	44	52	predicts
+150	57	68	target word
+150	69	74	using
+150	75	94	context information
+150	105	116	Skip - gram
+150	141	149	predicts
+150	150	167	each context word
+150	168	173	using
+150	178	189	target word
+150	202	215	Glo Ve method
+150	216	218	is
+150	221	271	state - of - the - art matrix factorization method
+153	19	22	use
+153	27	51	text classification task
+153	52	63	to evaluate
+153	68	79	performance
+153	80	82	of
+153	83	98	word embeddings
+155	3	9	regard
+155	10	28	document embedding
+155	29	31	as
+155	34	50	document feature
+155	55	62	trained
+155	65	82	linear classifier
+155	83	88	using
+155	89	98	Liblinear
+160	3	12	tokenized
+160	17	23	corpus
+160	24	28	with
+160	33	51	Stanford Tokenizer
+160	58	73	converted it to
+160	74	83	lowercase
+160	91	98	removed
+160	103	113	stop words
+161	24	43	all word embeddings
+161	44	50	adhere
+161	83	97	dimensionality
+161	98	100	of
+161	101	108	vectors
+161	109	111	is
+161	112	115	300
+161	122	126	size
+161	134	148	context window
+161	149	151	is
+161	152	153	5
+161	160	186	number of negative samples
+161	187	189	is
+161	190	192	25
+164	0	13	Group dataset
+168	0	13	Group dataset
+170	4	17	recommended N
+170	18	20	is
+170	21	24	150
+170	25	29	with
+170	34	44	constraint
+170	54	59	total
+175	5	15	tuned from
+175	16	22	0 to 1
+175	25	29	with
+175	32	41	step size
+175	42	44	of
+175	45	48	0.1
+176	20	28	based on
+176	29	49	Skip - gram and CBOW
+176	50	57	reaches
+176	58	77	optimal performance
+176	78	82	when
+176	83	102	? = 0.4 and ? = 0.3
+183	6	16	Our method
+183	17	25	performs
+183	26	32	better
+183	33	37	than
+183	42	55	other methods
+183	66	75	proved to
+183	79	94	highly reliable
+183	95	98	for
+183	103	127	text classification task
+184	20	36	ToWE - SG method
+184	37	62	significantly outperforms
+184	67	82	other baselines
+184	83	85	on
+184	90	104	20 New s Group
+184	107	125	5 Abstract s Group
+186	10	32	word embedding methods
+186	33	43	outperform
+186	48	78	basic bag - of - words methods
+186	95	105	indicating
+189	10	25	Retrofit method
+189	26	28	is
+189	33	80	knowledge - base enhanced word embedding method
+190	0	10	Our method
+190	11	19	achieves
+190	20	38	better performance
+190	39	43	over
+190	44	59	Retrofit method
+191	75	82	obvious
+191	88	91	TWE
+191	92	100	achieves
+191	103	131	relatively lower performance
+193	11	22	outperforms
+193	27	37	TWE method
+193	38	40	on
+193	50	93	document - level and sentence - level tasks

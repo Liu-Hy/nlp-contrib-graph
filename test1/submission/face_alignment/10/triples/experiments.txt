@@ -1,8 +1,0 @@
-(loss function||from||L2 to L1)
-(performance||of||our method)
-(improved||has||significantly)
-(significantly||has||red solid and black dashed lines)
-(speed||of||TR - DRN)
-(TR - DRN||is||83 fps)
-(83 fps||on||NVIDIA GeForce GTX Titan X card)
-(Contribution||has||Experiments)

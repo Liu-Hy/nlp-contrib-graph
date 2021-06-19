@@ -1,0 +1,7 @@
+(Contribution||has research problem||detector)
+(Contribution||has research problem||around 800 faces out)
+(Contribution||has research problem||reportedly 1000 present)
+(Contribution||has research problem||novel characterizations)
+(Contribution||has research problem||scale , resolution , and context)
+(Contribution||has research problem||small objects)
+(Contribution||has research problem||Multi - task modeling of scales)

@@ -1,7 +1,0 @@
-(little impact||on||performance)
-(adequate||in terms of||speed / performance trade - off)
-(Larger layer size||has||little impact)
-(performance||has||our)
-(our||has||adequate)
-(Ablation analysis||has||Larger layer size)
-(Contribution||has||Ablation analysis)

@@ -1,0 +1,43 @@
+2	58	74	NATURAL LANGUAGE
+4	4	42	natural language understanding ( NLU )
+34	10	52	online evaluation platform and leaderboard
+34	55	73	based primarily on
+34	74	100	privately - held test data
+47	3	5	is
+47	6	22	model - agnostic
+47	25	37	allowing for
+47	38	49	any kind of
+47	50	64	representation
+47	88	97	including
+47	98	104	models
+47	117	125	explicit
+47	161	164	for
+47	165	174	sentences
+48	0	4	GLUE
+48	10	23	diverges from
+48	24	32	SentEval
+48	33	35	in
+48	40	52	selection of
+48	53	69	evaluation tasks
+48	79	90	included in
+48	95	100	suite
+145	0	24	Interannotator agreement
+145	25	27	is
+145	28	32	high
+145	35	39	with
+145	42	53	Fleiss 's ?
+145	54	56	of
+145	57	61	0.73
+156	3	12	implement
+156	24	26	in
+156	31	47	AllenNLP library
+157	48	89	https://github.com/nyu-mll/GLUE-baselines
+157	126	173	https://github.com/jsalt18-sentence-repl/jiant.
+172	3	8	train
+172	20	24	with
+172	25	52	Adam ( Kingma & Ba , 2015 )
+172	53	57	with
+172	58	79	initial learning rate
+172	80	86	10 ? 4
+172	91	101	batch size
+172	102	105	128

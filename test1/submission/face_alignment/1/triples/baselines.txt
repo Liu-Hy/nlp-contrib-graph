@@ -1,4 +1,0 @@
-(VRN - Guided||uses||another stacked hourglass network)
-(another stacked hourglass network||for||landmark localization)
-(Baselines||has||VRN - Guided)
-(Contribution||has||Baselines)

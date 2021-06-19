@@ -1,0 +1,8 @@
+(model||with||SPC and CFC constraints)
+(corresponding landmarks||on||cheek)
+(corresponding landmarks||apply||landmark marching algorithm)
+(landmark marching algorithm||to move||contour landmarks)
+(contour landmarks||from||self - occluded location)
+(self - occluded location||to||silhouette)
+(Baselines||To find||corresponding landmarks)
+(Contribution||has||Baselines)

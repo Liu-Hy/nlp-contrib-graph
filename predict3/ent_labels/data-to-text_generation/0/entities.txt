@@ -1,0 +1,179 @@
+226	21	24	see
+226	29	42	lower results
+226	43	54	obtained by
+226	59	72	Flat scenario
+226	73	84	compared to
+226	89	104	other scenarios
+229	13	23	comparison
+229	24	31	between
+229	32	78	scenario Hierarchical - kv and Hierarchical -k
+229	79	84	shows
+229	90	107	omitting entirely
+229	129	142	record values
+229	143	145	in
+229	150	169	attention mechanism
+229	173	187	more effective
+244	0	23	Our hierarchical models
+244	24	31	achieve
+244	32	59	significantly better scores
+244	60	62	on
+244	63	74	all metrics
+244	80	91	compared to
+244	96	113	flat architecture
+253	24	34	outperform
+253	39	58	two - step decoders
+253	59	61	of
+253	62	86	Li and Puduppully - plan
+253	87	94	on both
+253	95	127	BLEU and all qualitative metrics
+251	8	13	shows
+251	19	36	our Flat scenario
+251	37	44	obtains
+251	47	76	significant higher BLEU score
+251	99	108	generates
+251	109	128	fluent descriptions
+251	129	133	with
+251	134	151	accurate mentions
+251	178	189	included in
+251	194	211	gold descriptions
+191	0	7	Wiseman
+191	13	46	standard encoder - decoder system
+191	47	51	with
+191	52	66	copy mechanism
+192	0	2	Li
+192	8	34	standard encoder - decoder
+192	35	39	with
+192	42	64	delayed copy mechanism
+192	67	71	text
+192	75	95	first generated with
+192	96	108	placeholders
+192	121	132	replaced by
+192	133	148	salient records
+192	149	163	extracted from
+192	168	173	table
+192	174	176	by
+192	179	194	pointer network
+193	0	17	Puduppully - plan
+193	18	25	acts in
+193	26	35	two steps
+193	40	72	first standard encoder - decoder
+193	73	82	generates
+193	85	89	plan
+193	142	175	second standard encoder - decoder
+193	176	185	generates
+193	186	190	text
+193	123	127	from
+193	201	205	plan
+194	0	17	Puduppully - updt
+195	3	14	consists in
+195	17	43	standard encoder - decoder
+195	46	50	with
+195	54	66	added module
+195	67	75	aimed at
+195	76	84	updating
+195	85	107	record representations
+195	108	114	during
+195	119	137	generation process
+196	0	2	At
+196	3	21	each decoding step
+196	24	49	a gated recurrent network
+196	50	58	computes
+196	65	72	records
+196	73	82	should be
+196	83	90	updated
+208	4	8	size
+208	9	11	of
+208	16	39	record value embeddings
+208	44	57	hidden layers
+208	58	60	of
+208	65	85	Transformer encoders
+208	95	101	set to
+208	102	105	300
+214	0	14	All the models
+214	19	33	implemented in
+214	34	47	Open NMT - py
+209	3	6	use
+209	7	14	dropout
+209	15	17	at
+209	18	22	rate
+209	23	26	0.5
+210	15	27	trained with
+210	30	40	batch size
+210	41	43	of
+210	44	46	64
+212	33	47	Adam optimizer
+212	54	75	initial learning rate
+212	79	84	0.001
+212	94	104	reduced by
+212	105	109	half
+212	110	115	every
+212	116	126	10 K steps
+211	40	45	train
+211	50	55	model
+211	56	59	for
+211	62	74	fixed number
+211	75	77	of
+211	78	90	25 K updates
+211	97	104	average
+211	109	116	weights
+211	117	119	of
+211	124	142	last 5 checkpoints
+211	145	147	at
+211	148	165	every 1 K updates
+211	168	177	to ensure
+211	178	192	more stability
+211	193	199	across
+211	200	204	runs
+213	3	7	used
+213	8	19	beam search
+213	20	24	with
+213	25	34	beam size
+213	35	37	of
+213	38	39	5
+213	40	46	during
+213	47	56	inference
+36	35	42	propose
+36	45	74	new structured - data encoder
+36	75	83	assuming
+36	89	99	structures
+36	100	109	should be
+36	110	133	hierarchically captured
+37	17	27	focuses on
+37	32	40	encoding
+37	41	43	of
+37	48	64	data - structure
+39	5	10	model
+39	15	32	general structure
+39	33	35	of
+39	40	44	data
+39	45	50	using
+39	53	77	two - level architecture
+39	80	94	first encoding
+39	95	107	all entities
+39	108	123	on the basis of
+39	130	138	elements
+39	141	154	then encoding
+39	159	173	data structure
+39	174	189	on the basis of
+39	194	202	entities
+39	210	219	introduce
+39	224	243	Transformer encoder
+39	244	246	in
+39	247	270	data - to - text models
+39	271	280	to ensure
+39	281	296	robust encoding
+39	297	299	of
+39	300	323	each element / entities
+39	327	340	comparison to
+39	341	351	all others
+39	397	406	integrate
+39	409	441	hierarchical attention mechanism
+39	442	452	to compute
+39	457	477	hierarchical context
+39	478	486	fed into
+39	491	498	decoder
+2	25	52	Data - to - Text Generation
+4	0	63	Transcribing structured data into natural language descriptions
+4	117	133	data - to - text
+188	0	9	Baselines
+215	25	77	https://github.com/KaijuML/data-to-text-hierarchical

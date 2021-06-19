@@ -1,0 +1,4 @@
+(Yago and WiBi||achieve||best over all results)
+(Yago and WiBi||has||best over all results)
+(Results||has||Yago and WiBi)
+(Contribution||has||Results)

@@ -1,0 +1,7 @@
+(Corpus - level accuracy differences||of||at least 0.17 %)
+(Corpus - level accuracy differences||of||0.26 %)
+(at least 0.17 %||in||GENIA)
+(0.26 %||in||CRAFT)
+(0.26 %||between||two POS tagging models)
+(CRAFT||between||two POS tagging models)
+(Contribution||has||Experiments)

@@ -1,5 +1,0 @@
-(batches||of||32 examples)
-(patience||of||2 epochs)
-(early stopping||with||patience)
-(patience||of||2 epochs)
-(Contribution||has||Experiments)

@@ -1,0 +1,153 @@
+2	30	58	Abstract Anaphora Resolution
+4	0	27	Resolving abstract anaphora
+28	13	24	inspired by
+28	29	52	mention - ranking model
+28	53	56	for
+28	57	79	coreference resolution
+28	84	100	combines it with
+28	103	114	Siamese Net
+28	117	129	for learning
+28	130	140	similarity
+28	141	148	between
+28	149	158	sentences
+29	0	5	Given
+29	9	27	anaphoric sentence
+29	206	212	learns
+29	213	228	representations
+29	229	232	for
+29	237	273	candidate and the anaphoric sentence
+29	274	276	in
+29	279	291	shared space
+30	26	39	combined into
+30	42	62	joint representation
+30	68	80	to calculate
+30	83	88	score
+30	94	107	characterizes
+30	112	120	relation
+41	62	77	data extraction
+41	97	154	https://github.com/amarasovic / neural-abstract-anaphora.
+160	0	5	PS BL
+160	13	21	performs
+160	22	27	worse
+160	28	32	than
+160	37	48	KZH13 model
+160	49	51	on
+160	56	59	ASN
+174	0	10	Embeddings
+174	11	14	for
+174	15	19	tags
+174	24	35	initialized
+174	41	47	values
+174	48	58	drawn from
+174	63	105	uniform distribution U ? 1 ? d+t , 1 ? d+t
+174	196	210	tag embeddings
+177	4	8	size
+177	9	11	of
+177	16	35	LSTMs hidden states
+177	40	46	set to
+177	47	78	{ 100 , qlog - U ( 30 , 150 ) }
+178	3	14	initialized
+178	19	34	weight matrices
+178	35	37	of
+178	42	47	LSTMs
+178	48	52	with
+178	53	79	random orthogonal matrices
+179	4	9	first
+179	10	35	feed - forward layer size
+179	39	45	set to
+179	48	53	value
+179	54	56	in
+179	57	69	Optimization
+180	3	10	trained
+180	11	20	our model
+180	21	23	in
+180	24	35	minibatches
+180	36	41	using
+180	42	71	Adam ( Kingma and Ba , 2015 )
+180	72	76	with
+180	81	94	learning rate
+180	98	104	10 ? 4
+180	109	127	maximal batch size
+180	128	130	64
+181	3	7	clip
+181	8	17	gradients
+181	18	20	by
+181	21	32	global norm
+181	35	39	with
+181	42	56	clipping value
+181	57	59	in
+181	60	83	{ 1.0 , U ( 1 , 100 ) }
+182	3	12	train for
+182	13	22	10 epochs
+182	27	33	choose
+182	38	43	model
+182	49	57	performs
+182	58	62	best
+182	63	65	on
+182	70	76	devset
+184	3	7	used
+184	12	32	l 2 - regularization
+184	33	37	with
+184	38	49	? ? { 10 ?5
+185	0	7	Dropout
+185	8	12	with
+185	15	62	keep probability k p ? { 0.8 , U( 0.5 , 1.0 ) }
+185	67	77	applied to
+185	82	89	outputs
+185	90	92	of
+185	97	102	LSTMs
+185	105	131	both feed - forward layers
+185	154	159	input
+185	165	185	k p ? U (0.8 , 1.0 )
+186	38	67	shell noun resolution dataset
+186	96	130	mentionranking model ( MR - LSTM )
+186	131	133	on
+186	138	148	ASN corpus
+186	149	154	using
+186	155	166	default HPs
+188	0	11	In terms of
+188	12	21	s@1 score
+188	24	33	MR - LSTM
+188	34	45	outperforms
+188	51	67	KZH13 's results
+188	72	78	TAG BL
+188	79	105	without even necessitating
+188	106	115	HP tuning
+190	24	28	with
+190	29	32	HPs
+190	33	41	tuned on
+190	42	52	ARRAU - AA
+190	58	64	obtain
+190	65	72	results
+190	73	84	well beyond
+190	85	90	KZH13
+190	99	125	all ablated model variants
+190	126	133	perform
+190	134	139	worse
+190	140	144	than
+190	149	159	full model
+190	170	192	large performance drop
+190	193	206	when omitting
+190	207	242	syntactic information ( tag , cut )
+199	8	10	on
+199	15	27	ARRAU corpus
+200	4	13	MR - LSTM
+200	17	32	more successful
+200	33	35	in
+200	36	45	resolving
+200	46	53	nominal
+200	54	58	than
+200	59	78	pronominal anaphors
+206	0	11	Contrary to
+206	36	44	omitting
+206	45	66	syntactic information
+206	67	73	boosts
+206	74	85	performance
+206	86	88	in
+206	89	99	ARRAU - AA
+209	66	109	MR - LSTM without context embedding ( ctx )
+209	110	118	achieves
+209	121	142	comparable s@ 2 score
+209	143	147	with
+209	152	159	variant
+209	199	220	better s@3 - 4 scores

@@ -1,0 +1,8 @@
+(AFLW dataset||contains||24386 in - the - wild faces)
+(24386 in - the - wild faces||with||large head pose)
+(24386 in - the - wild faces||with||90)
+(large head pose||up to||120)
+(large head pose||up to||90)
+(120||for||yaw)
+(Tasks||has||AFLW dataset)
+(Contribution||has||Tasks)

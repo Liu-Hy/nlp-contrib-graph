@@ -1,0 +1,3 @@
+(Encoder ( decoder ) embeddings and hidden dimensions||set to||300)
+(Tasks||has||Encoder ( decoder ) embeddings and hidden dimensions)
+(Contribution||has||Tasks)

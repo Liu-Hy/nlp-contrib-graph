@@ -1,3 +1,0 @@
-(VJ , ACF , DPM , and Faceness||as||baselines)
-(Baselines||select||VJ , ACF , DPM , and Faceness)
-(Contribution||has||Baselines)

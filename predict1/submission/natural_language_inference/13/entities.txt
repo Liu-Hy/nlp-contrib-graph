@@ -1,0 +1,86 @@
+2	0	30	Natural Language Comprehension
+4	45	74	machine comprehension of text
+5	0	21	Machine comprehension
+12	34	38	same
+12	56	66	applied to
+12	67	88	machine comprehension
+12	89	91	of
+12	92	108	natural language
+13	3	10	propose
+13	13	63	deep , end - to - end , neural comprehension model
+13	72	76	call
+13	81	90	EpiReader
+16	0	28	Machine comprehension ( MC )
+26	4	13	EpiReader
+26	14	21	factors
+26	22	26	into
+26	27	41	two components
+40	16	23	combine
+40	28	48	Reasoner 's evidence
+40	49	53	with
+40	58	92	Extractor 's probability estimates
+40	93	103	to produce
+40	106	119	final ranking
+40	120	122	of
+40	127	144	answer candidates
+63	0	21	Children 's Book Test
+94	4	13	Extractor
+94	14	16	is
+94	19	34	Pointer Network
+109	17	22	biGRU
+109	23	30	outputs
+109	31	65	two d-dimensional encoding vectors
+109	68	75	one for
+109	80	97	forward direction
+109	102	109	one for
+109	114	132	backward direction
+221	9	18	our model
+221	22	26	used
+221	27	54	stochastic gradient descent
+221	55	59	with
+221	64	78	ADAM optimizer
+221	106	110	with
+221	114	135	initial learning rate
+221	136	138	of
+221	139	144	0.001
+222	4	19	word embeddings
+222	25	45	initialized randomly
+222	48	60	drawing from
+222	65	85	uniform distribution
+223	3	7	used
+223	8	15	batches
+223	16	18	of
+223	19	30	32 examples
+223	37	51	early stopping
+223	52	56	with
+223	59	67	patience
+223	68	70	of
+223	71	79	2 epochs
+224	14	26	implement in
+224	27	33	Theano
+224	34	39	using
+224	44	59	Keras framework
+229	15	19	used
+229	20	38	2 - regularization
+229	39	41	at
+229	42	47	0.001
+236	4	13	EpiReader
+236	14	22	achieves
+236	23	57	state - of - the - art performance
+236	58	64	across
+236	69	74	board
+236	79	92	both datasets
+237	3	6	CNN
+237	12	17	score
+237	18	30	2.2 % higher
+237	31	33	on
+237	34	38	test
+237	39	43	than
+237	48	67	best previous model
+243	4	15	improvement
+243	16	18	on
+243	19	27	CBT - NE
+243	28	30	is
+243	31	42	more modest
+243	43	45	at
+243	46	51	1.1 %

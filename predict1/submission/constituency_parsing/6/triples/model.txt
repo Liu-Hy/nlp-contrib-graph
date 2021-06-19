@@ -1,0 +1,5 @@
+(neural - net parse reranker||achieves||very good results)
+(very good results||with||comparatively simple architecture)
+(very good results||has||93.8 F 1)
+(Model||present||neural - net parse reranker)
+(Contribution||has||Model)

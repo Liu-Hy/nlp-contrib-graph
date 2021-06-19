@@ -1,4 +1,0 @@
-(Contribution||has research problem||High performance face detection)
-(Contribution||has research problem||Face detection)
-(Contribution||has research problem||performance)
-(Contribution||has research problem||face detection)

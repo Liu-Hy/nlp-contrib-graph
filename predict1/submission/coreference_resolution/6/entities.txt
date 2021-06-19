@@ -1,0 +1,97 @@
+2	82	106	Co -reference Resolution
+4	18	25	present
+4	28	48	word embedding model
+4	49	60	that learns
+4	61	88	cross - sentence dependency
+4	89	102	for improving
+4	103	154	end - to - end co-reference resolution ( E2E - CR )
+24	267	274	propose
+24	277	301	cross - sentence encoder
+24	302	305	for
+24	306	346	end - to - end co-reference ( E2E - CR )
+25	0	9	Borrowing
+25	14	18	idea
+25	19	21	of
+25	25	47	external memory module
+25	58	79	external memory block
+25	80	90	containing
+25	91	125	syntactic and semantic information
+25	126	130	from
+25	131	148	context sentences
+25	152	160	added to
+25	165	184	standard LSTM model
+26	0	4	With
+26	10	17	context
+26	37	45	proposed
+26	63	69	encode
+26	70	85	input sentences
+26	86	88	as
+26	91	96	batch
+26	108	117	calculate
+26	122	137	representations
+26	138	140	of
+26	141	152	input words
+26	153	162	by taking
+26	168	206	target sentences and context sentences
+26	207	211	into
+26	212	225	consideration
+39	0	32	Language Representation Learning
+68	0	37	LSTMs with Cross - Sentence Attention
+87	18	30	LSTM modules
+87	31	41	applied in
+87	42	51	our model
+87	52	56	have
+87	57	73	200 output units
+88	3	6	ASL
+88	12	21	calculate
+88	22	49	cross - sentence dependency
+88	50	55	using
+88	58	79	multilayer perceptron
+88	80	84	with
+88	85	101	one hidden layer
+88	102	115	consisting of
+88	116	132	150 hidden units
+89	4	25	initial learning rate
+89	29	35	set as
+89	36	41	0.001
+89	46	52	decays
+89	53	60	0.001 %
+89	61	66	every
+89	67	76	100 steps
+90	13	27	optimized with
+90	32	46	Adam algorithm
+92	0	2	In
+92	3	26	co-reference prediction
+92	32	38	select
+92	39	64	250 candidate antecedents
+92	65	67	as
+92	68	86	our baseline model
+97	0	14	Comparing with
+97	19	33	baseline model
+97	39	47	achieved
+97	48	63	67.2 % F1 score
+97	70	79	ASL model
+97	80	88	improved
+97	93	104	performance
+97	105	107	by
+97	108	113	0.6 %
+97	118	126	achieved
+97	127	144	67.8 % average F1
+100	2	9	Uh- huh
+108	0	4	show
+108	26	34	consider
+108	35	62	cross - sentence dependency
+108	63	87	significantly outperform
+108	92	106	baseline model
+108	115	122	encodes
+108	123	136	each sentence
+108	137	141	from
+108	146	160	input document
+122	33	36	ASL
+122	37	52	takes knowledge
+122	53	57	from
+122	58	75	context sentences
+122	76	78	if
+122	79	91	local inputs
+122	92	95	are
+122	96	118	not informative enough

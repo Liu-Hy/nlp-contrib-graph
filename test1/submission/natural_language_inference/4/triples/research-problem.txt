@@ -1,5 +1,0 @@
-(Contribution||has research problem||Large - Scale Reading Comprehension)
-(Contribution||has research problem||novel deep neural network architecture)
-(Contribution||has research problem||long - range dependency)
-(Contribution||has research problem||RC tasks)
-(Contribution||has research problem||Reading comprehension ( RC ))

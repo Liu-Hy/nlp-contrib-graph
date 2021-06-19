@@ -1,8 +1,0 @@
-(modeling questions||in||end - to - end neural network framework)
-(modeling questions||has||end - to - end neural network framework)
-(Model||introduced||syntactic information)
-(information||as||adaptation problem)
-(information||as||proposed)
-(proposed||has||adaptation models)
-(Model||viewed and modelled||different types of questions)
-(Contribution||has||Model)

@@ -1,0 +1,4 @@
+(frequency - based baseline||predicts||most frequent tag)
+(Tagspace ( Weston et al. , 2014 )||based on||Wsabie model)
+(Tagspace ( Weston et al. , 2014 )||has||tag)
+(Contribution||has||Baselines)

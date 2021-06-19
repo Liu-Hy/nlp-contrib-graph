@@ -1,0 +1,8 @@
+(face detector||similar to||SSH)
+(SSH||with||three detection feature maps)
+(Baselines||has||face detector)
+(Single||is||our proposed detector)
+(our proposed detector||with||single detection feature map)
+(Single||has||our proposed detector)
+(Baselines||has||Single)
+(Contribution||has||Baselines)

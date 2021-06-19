@@ -1,5 +1,0 @@
-(Contribution||has research problem||NTI)
-(Contribution||has research problem||full n-ary tree)
-(Contribution||has research problem||input text)
-(Contribution||has research problem||node function)
-(Contribution||has research problem||bottom - up fashion)

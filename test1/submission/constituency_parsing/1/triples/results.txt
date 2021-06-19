@@ -1,4 +1,0 @@
-(outperform||has||uni-directional transformer ( OpenAI GPT ))
-(STILTs||in||aggregate)
-(Results||has||Our CNN base model)
-(Contribution||has||Results)

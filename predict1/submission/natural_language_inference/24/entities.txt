@@ -1,0 +1,98 @@
+13	68	93	question answering ( QA )
+15	23	55	machine reading at scale ( MRS )
+16	9	15	treats
+16	16	25	Wikipedia
+16	26	28	as
+16	31	53	collection of articles
+24	8	11	MRS
+24	15	25	focused on
+24	26	40	simultaneously
+24	70	91	machine comprehension
+25	19	23	show
+25	28	57	multiple existing QA datasets
+25	82	85	MRS
+25	86	98	by requiring
+25	102	122	open - domain system
+25	123	133	to perform
+25	134	138	well
+25	139	141	on
+25	142	153	all of them
+26	3	10	develop
+26	11	15	DrQA
+26	38	56	question answering
+26	72	83	composed of
+26	92	110	Document Retriever
+26	115	121	module
+26	122	127	using
+26	128	164	bigram hashing and TF - IDF matching
+26	165	176	designed to
+26	198	216	efficiently return
+26	219	225	subset
+26	226	228	of
+26	229	246	relevant articles
+26	257	272	Document Reader
+26	277	290	multi - layer
+26	362	374	answer spans
+59	0	10	Our System
+59	13	17	DrQA
+136	0	10	WikiMovies
+174	3	6	use
+174	7	36	3 - layer bidirectional LSTMs
+174	37	41	with
+174	42	62	h = 128 hidden units
+174	63	66	for
+174	67	71	both
+174	72	103	paragraph and question encoding
+175	3	8	apply
+175	13	37	Stanford CoreNLP toolkit
+175	38	41	for
+175	42	54	tokenization
+175	64	74	generating
+175	75	80	lemma
+175	83	98	partof - speech
+175	105	122	named entity tags
+177	3	6	use
+177	7	13	Adamax
+177	14	17	for
+177	18	30	optimization
+178	0	7	Dropout
+178	8	12	with
+178	13	20	p = 0.3
+178	24	34	applied to
+178	35	75	word embeddings and all the hidden units
+178	76	78	of
+178	79	84	LSTMs
+182	0	27	Our system ( single model )
+182	32	39	achieve
+182	40	58	70.0 % exact match
+182	63	80	79.0 % F 1 scores
+182	81	83	on
+182	88	96	test set
+185	29	42	contribute to
+185	47	58	performance
+185	59	61	of
+185	62	78	our final system
+186	0	7	Without
+186	12	46	aligned question embedding feature
+186	99	109	our system
+186	119	134	able to achieve
+186	135	137	F1
+186	138	142	over
+186	143	147	77 %
+191	0	5	SQuAD
+191	10	38	single Document Reader model
+191	42	52	trained on
+191	57	75	SQuAD training set
+191	85	92	used on
+191	93	112	all evaluation sets
+192	0	16	Fine-tune ( DS )
+192	46	60	pre-trained on
+192	61	66	SQuAD
+192	76	92	fine - tuned for
+192	93	119	each dataset independently
+192	120	125	using
+192	130	169	distant supervision ( DS ) training set
+193	0	16	Multitask ( DS )
+201	117	133	unconstrained QA
+201	166	171	Dr QA
+201	187	209	reasonable performance

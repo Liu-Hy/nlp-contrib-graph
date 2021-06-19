@@ -1,0 +1,50 @@
+4	0	30	3D Morphable Models ( 3 DMMs )
+18	0	46	3 D facial shape estimation from single images
+41	3	10	propose
+41	13	24	methodology
+41	25	37	for learning
+41	40	65	statistical texture model
+41	66	70	from
+41	71	103	" in - the -wild " facial images
+41	145	168	statistical shape prior
+41	188	222	identity and expression variations
+42	129	156	featurebased texture models
+42	157	160	for
+42	161	167	3 DMMs
+43	3	7	show
+43	17	26	advantage
+43	27	35	of using
+43	40	88	" in - the -wild " feature - based texture model
+43	89	91	is
+43	101	117	fitting strategy
+43	118	122	gets
+43	123	133	simplified
+210	0	17	3D Shape Recovery
+222	4	17	Classic model
+222	18	27	struggles
+222	35	37	to
+222	42	71	" in - the -wild " conditions
+222	72	82	present in
+222	87	95	test set
+222	102	110	performs
+222	115	120	worst
+223	4	31	texture - free Linear model
+223	32	36	does
+223	37	43	better
+223	54	63	ITW model
+223	67	87	most able to recover
+223	92	105	facial shapes
+223	106	112	due to
+223	117	136	ideal feature basis
+223	137	140	for
+223	145	174	" in - the -wild " conditions
+225	3	7	note
+225	13	15	in
+225	18	91	wide variety of expression , identity , lighting and occlusion conditions
+225	105	112	able to
+225	113	133	robustly reconstruct
+225	136	162	realistic 3 D facial shape
+226	0	28	Quantitative Normal Recovery
+231	0	3	ITW
+231	4	24	slightly outperforms
+231	25	28	IMM

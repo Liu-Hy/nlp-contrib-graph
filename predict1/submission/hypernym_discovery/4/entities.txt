@@ -1,0 +1,32 @@
+4	58	70	discovery of
+4	71	84	hypernym sets
+4	85	93	based on
+4	94	108	word embedding
+4	129	139	to measure
+4	144	167	contextual similarities
+4	168	175	between
+4	176	181	words
+13	55	73	Hypernym Discovery
+82	0	8	Word2vec
+82	17	27	to produce
+82	32	47	word embeddings
+83	4	34	skip - gram model ( - cbow 0 )
+83	38	47	used with
+83	52	71	embedding dimension
+83	72	78	set to
+83	79	82	300
+87	17	36	Projection Learning
+91	3	8	using
+91	37	39	as
+91	65	83	our best F - value
+91	84	86	on
+91	91	105	validation set
+91	106	108	is
+91	109	113	0.68
+91	143	147	when
+91	152	171	best cluster number
+91	172	174	is
+91	175	176	2
+91	185	194	threshold
+91	195	197	is
+91	198	213	( 17.7 , 17.3 )

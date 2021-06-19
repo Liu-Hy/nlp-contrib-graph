@@ -1,0 +1,3 @@
+(Contribution||has research problem||natural language generation)
+(Contribution||has research problem||Sequence - to - sequence frameworks)
+(Contribution||has research problem||natural language generation ( NLG ))

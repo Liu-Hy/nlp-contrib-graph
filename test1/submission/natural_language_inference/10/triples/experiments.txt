@@ -1,2 +1,0 @@
-(two layer and three layer fully connected networks||with||Rectified Linear ( ReLU ) non-linearities)
-(Contribution||has||Experiments)

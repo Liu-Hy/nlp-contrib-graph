@@ -1,6 +1,0 @@
-(Baselines||based on||feature engineering)
-(EXAM Encoder||to preserve||only the Encoder component)
-(only the Encoder component||with||max pooling layer and FC layer)
-(only the Encoder component||to derive||final probabilities)
-(max pooling layer and FC layer||to derive||final probabilities)
-(Contribution||has||Baselines)

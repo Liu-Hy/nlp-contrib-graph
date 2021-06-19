@@ -1,3 +1,0 @@
-(iterations||of||Wikipedia dump)
-(learning rate ? = 0.025||has||linearly decreased)
-(Contribution||has||Experiments)

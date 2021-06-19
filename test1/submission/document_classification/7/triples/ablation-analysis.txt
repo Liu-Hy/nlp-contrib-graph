@@ -1,7 +1,0 @@
-(convolutional filters||applied to||windows)
-(windows||of||word embeddings)
-(windows||with||max - over - time pooling)
-(Ablation analysis||has||convolutional filters)
-(one hidden - layer MLP||as||classifier)
-(Ablation analysis||use||one hidden - layer MLP)
-(Contribution||has||Ablation analysis)

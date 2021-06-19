@@ -1,3 +1,0 @@
-(model - agnostic||allowing for||any kind of)
-(any kind of||has||representation)
-(Contribution||has||Model)

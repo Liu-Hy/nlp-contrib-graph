@@ -1,0 +1,161 @@
+228	0	14	Our CMS - RCNN
+228	18	32	implemented in
+228	37	66	Caffe deep learning framework
+229	4	38	first 5 sets of convolution layers
+229	39	43	have
+229	48	65	same architecture
+229	66	68	as
+229	73	92	deep VGG - 16 model
+229	99	105	during
+229	106	114	training
+229	121	131	parameters
+229	136	152	initialized from
+229	157	177	pre-trained VGG - 16
+233	3	12	' conv3 '
+233	16	27	followed by
+233	28	41	pooling layer
+233	42	52	to perform
+233	53	68	down - sampling
+234	5	42	' conv3 ' , ' conv4 ' , and ' conv5 '
+234	47	57	normalized
+234	58	63	along
+234	68	80	channel axis
+234	81	83	to
+234	86	114	learnable re-weighting scale
+234	119	131	concatenated
+239	15	23	features
+239	24	35	pooled from
+239	36	73	' conv3 ' , ' conv4 ' , and ' conv5 '
+239	78	94	initialized with
+239	95	100	scale
+239	101	106	to be
+239	107	132	57.75 , 81.67 , and 81.67
+239	148	151	for
+239	152	180	both face and body pipelines
+240	4	30	MS - RPN and the CMS - CNN
+240	31	36	share
+240	41	56	same parameters
+240	57	60	for
+240	61	83	all convolution layers
+240	84	91	so that
+240	92	103	computation
+240	111	115	done
+240	116	120	once
+240	123	135	resulting in
+240	136	153	higher efficiency
+232	0	2	In
+232	7	15	MS - RPN
+232	26	63	' conv3 ' , ' conv4 ' , and ' conv5 '
+232	70	85	synchronized to
+232	90	99	same size
+232	100	102	so
+232	108	121	concatenation
+232	67	69	be
+232	129	136	applied
+237	7	16	CMS - CNN
+237	23	40	RoI pooling layer
+237	49	55	ensure
+237	65	84	pooled feature maps
+237	85	89	have
+237	94	103	same size
+235	0	9	To ensure
+235	10	30	training convergence
+235	37	63	initial re-weighting scale
+235	64	75	needs to be
+235	76	89	carefully set
+236	8	11	set
+236	16	29	initial scale
+236	30	32	of
+236	33	70	' conv3 ' , ' conv4 ' , and ' conv5 '
+236	71	76	to be
+236	77	102	66.84 , 94.52 , and 94.52
+241	24	33	to shrink
+241	38	50	channel size
+241	51	53	of
+241	58	82	concatenated feature map
+241	116	124	employed
+241	87	107	11 convolution layer
+249	12	14	on
+249	15	33	WIDER FACE Dataset
+268	3	11	achieves
+268	16	38	best average precision
+268	39	41	in
+268	42	57	all level faces
+268	60	64	i.e.
+268	65	67	AP
+268	70	75	0.902
+268	78	82	Easy
+268	87	92	0.874
+268	95	101	Medium
+268	108	113	0.643
+268	116	120	Hard
+268	129	140	outperforms
+268	145	165	second best baseline
+268	166	168	by
+268	169	175	26.0 %
+268	178	182	Easy
+268	187	193	37.4 %
+268	196	202	Medium
+268	209	215	60.8 %
+268	218	222	Hard
+295	15	33	FDDB Face Database
+295	12	14	on
+304	0	10	Our method
+304	11	19	achieves
+304	24	40	best recall rate
+304	44	57	this database
+307	4	32	proposed CMS - RCNN approach
+307	33	44	outperforms
+307	45	89	most of the published face detection methods
+307	94	102	achieves
+307	105	126	very high recall rate
+307	127	144	comparing against
+307	145	162	all other methods
+21	11	19	presents
+21	23	50	advanced CNN based approach
+21	51	56	named
+21	57	115	Contextual Multi - Scale Region - based CNN ( CMS - RCNN )
+21	116	125	to handle
+21	130	137	problem
+21	138	140	of
+21	141	155	face detection
+21	156	158	in
+21	159	178	digital face images
+21	179	194	collected under
+21	195	226	numerous challenging conditions
+22	0	44	Our designed region - based CNN architecture
+22	45	51	allows
+22	56	63	network
+22	64	89	to simultaneously look at
+22	90	110	multi-scale features
+22	124	150	to explicitly look outside
+22	151	165	facial regions
+22	113	115	as
+22	173	195	potential body regions
+26	0	21	Our CMS - RCNN method
+26	22	32	introduces
+26	37	87	Multi - Scale Region Proposal Network ( MS - RPN )
+26	88	99	to generate
+26	102	105	set
+26	106	108	of
+26	109	126	region candidates
+26	135	200	Contextual Multi - Scale Convolution Neural Network ( CMS - CNN )
+26	201	206	to do
+26	207	216	inference
+26	217	219	on
+26	224	241	region candidates
+26	242	244	of
+26	245	259	facial regions
+24	36	44	helps to
+24	45	56	synchronize
+24	162	165	for
+24	166	187	facial representation
+24	66	90	global semantic features
+24	91	93	in
+24	94	111	high level layers
+24	120	141	localization features
+24	142	144	in
+24	145	161	low level layers
+2	59	87	Unconstrained Face Detection
+4	0	33	Robust face detection in the wild
+5	13	27	face detection

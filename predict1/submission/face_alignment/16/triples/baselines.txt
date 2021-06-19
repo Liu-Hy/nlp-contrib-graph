@@ -1,0 +1,5 @@
+(FLD + PDE||performs||facial landmark detection)
+(pose and deformation estimation||in||training data)
+(training data||of||pose and deformation estimation)
+(Baselines||has||FLD + PDE)
+(Contribution||has||Baselines)

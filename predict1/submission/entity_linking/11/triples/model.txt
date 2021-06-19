@@ -1,0 +1,8 @@
+(two different methods||for||building)
+(two different methods||call them||sense vocabulary compression methods)
+(building||has||subset)
+(Model||propose||two different methods)
+(method||for grouping together||multiple sense tags)
+(multiple sense tags||refer in fact to||same concept)
+(Model||propose||method)
+(Contribution||has||Model)

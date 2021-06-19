@@ -1,0 +1,157 @@
+260	10	18	observed
+260	31	54	boundary map ( " BM " )
+260	62	80	most effective one
+265	24	35	performance
+265	39	60	improved consistently
+265	61	70	by fusing
+265	71	88	boundary heatmaps
+265	89	91	at
+265	92	103	more levels
+261	0	27	Boundary information fusion
+261	31	51	one of the key steps
+261	52	54	in
+261	55	68	our algorithm
+263	18	33	our final model
+263	39	44	fuses
+263	45	65	boundary information
+263	13	15	in
+263	69	84	all four levels
+263	85	93	improves
+263	94	104	mean error
+263	105	109	from
+263	110	116	7.12 %
+263	117	119	to
+263	120	126	6.13 %
+268	4	14	comparison
+268	15	22	between
+268	23	53	" BL + HG " and " BL + HG/ B "
+268	54	63	indicates
+268	68	81	effectiveness
+268	82	84	of
+268	85	112	boundary information fusion
+268	113	124	rather than
+268	125	150	network structure changes
+269	23	50	" BL + HG " and " BL + CL "
+269	51	60	indicates
+269	65	78	effectiveness
+269	86	91	using
+269	92	118	hourglass structure design
+270	0	15	Message passing
+270	16	21	plays
+270	24	34	vital role
+270	35	38	for
+270	39	66	heatmap quality improvement
+270	67	71	when
+270	72	89	severe occlusions
+270	90	96	happen
+272	0	20	Adversarial learning
+272	21	37	further improves
+272	42	67	quality and effectiveness
+272	68	70	of
+272	71	88	boundary heatmaps
+28	17	20	use
+28	21	53	well - defined facial boundaries
+28	54	66	to represent
+28	71	90	geometric structure
+28	91	93	of
+28	98	108	human face
+30	18	27	represent
+30	28	44	facial structure
+30	45	50	using
+30	51	68	13 boundary lines
+32	0	45	Our boundary - aware face alignment algorithm
+32	46	54	contains
+32	55	65	two stages
+33	3	17	first estimate
+33	18	42	facial boundary heatmaps
+33	52	59	regress
+33	60	69	landmarks
+33	70	74	with
+33	87	104	boundary heatmaps
+37	102	117	jointly learned
+37	118	120	in
+37	124	145	end - to - end manner
+37	4	30	boundary heatmap estimator
+37	33	51	landmark regressor
+37	58	94	boundary effectiveness discriminator
+40	4	21	boundary heatmaps
+40	22	30	serve as
+40	31	44	structure cue
+40	45	53	to guide
+40	54	70	feature learning
+40	71	74	for
+40	79	97	landmark regressor
+35	0	10	To explore
+35	15	27	relationship
+35	28	35	between
+35	36	67	facial boundaries and landmarks
+35	73	82	introduce
+35	83	109	adversarial learning ideas
+35	110	118	by using
+35	121	174	landmark - based boundary effectiveness discriminator
+38	3	7	used
+38	8	35	stacked hourglass structure
+38	36	47	to estimate
+38	48	71	facial boundary heatmap
+38	76	81	model
+38	86	95	structure
+38	96	103	between
+38	104	121	facial boundaries
+38	122	129	through
+38	130	145	message passing
+38	146	157	to increase
+38	162	172	robustness
+38	173	175	to
+38	176	185	occlusion
+14	48	92	https://wywu.github.io/projects/LAB/LAB.html
+224	0	14	All our models
+224	19	31	trained with
+224	32	37	Caffe
+224	45	47	on
+224	48	62	4 Titan X GPUs
+2	38	52	Face Alignment
+16	33	58	facial landmark detection
+227	53	55	on
+227	56	60	300W
+231	0	10	Our method
+231	11	19	performs
+231	20	24	best
+231	25	30	among
+231	31	72	all of the state - of - the - art methods
+234	14	18	WFLW
+237	33	41	obtained
+237	7	29	reasonable performance
+238	0	26	Cross - dataset evaluation
+238	27	29	on
+238	30	43	COFW and AFLW
+241	0	9	Our model
+241	10	21	outperforms
+241	22	38	previous results
+241	39	43	with
+241	46	58	large margin
+243	4	16	failure rate
+243	20	41	significantly reduced
+243	42	44	by
+243	45	51	3.75 %
+243	60	69	indicates
+243	74	84	robustness
+243	85	87	of
+243	88	98	our method
+243	99	108	to handle
+243	109	119	occlusions
+249	11	21	our method
+249	22	26	uses
+249	27	47	boundary information
+249	48	56	achieves
+249	57	77	29 % , 32 % and 29 %
+249	78	112	relative performance improve- ment
+249	113	117	over
+249	122	166	baseline method ( " LAB without boundary " )
+249	167	169	on
+249	170	179	COFW - 29
+249	182	193	AFLW - Full
+249	198	212	AFLW - Frontal
+242	3	10	achieve
+242	11	28	4.62 % mean error
+242	29	33	with
+242	34	53	2.17 % failure rate

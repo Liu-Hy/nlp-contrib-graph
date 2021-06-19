@@ -1,7 +1,0 @@
-(Region Proposal Network ( RPN )||adopted in||Faster RCNN)
-(Region Proposal Network ( RPN )||employs||two stage detection schemes)
-(Model||mainly based on||Region Proposal Network ( RPN ))
-(RPN||trained||end - to - end)
-(RPN||generates||highquality region proposals)
-(Model||has||RPN)
-(Contribution||has||Model)

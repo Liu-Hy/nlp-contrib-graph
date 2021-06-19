@@ -1,0 +1,121 @@
+2	54	60	Syntax
+7	13	30	explicit modeling
+7	31	33	of
+7	34	45	composition
+7	75	91	best performance
+8	0	7	Through
+8	12	31	attention mechanism
+8	37	41	find
+8	47	57	headedness
+8	58	63	plays
+8	79	81	in
+8	82	104	phrasal representation
+8	176	183	made by
+8	184	209	hand - crafted head rules
+9	3	11	training
+9	12	20	grammars
+9	21	28	without
+9	29	47	nonterminal labels
+9	53	62	find that
+9	63	86	phrasal representations
+9	87	106	depend minimally on
+9	107	119	nonterminals
+9	122	143	providing support for
+9	148	173	endocentricity hypothesis
+11	19	27	focus on
+11	57	82	probability distributions
+11	85	130	recurrent neural network grammars ( RNNGs ; )
+11	133	150	designed to model
+11	151	172	syntactic derivations
+11	173	175	of
+11	176	185	sentences
+12	3	11	focus on
+12	12	17	RNNGs
+12	18	20	as
+12	21	57	generative probabilistic models over
+21	11	22	manipulates
+21	27	41	inductive bias
+21	42	44	of
+21	45	50	RNNGs
+21	51	58	to test
+21	59	80	linguistic hypotheses
+23	27	34	augment
+23	39	64	RNNG composition function
+23	65	69	with
+23	72	103	novel gated attention mechanism
+23	106	116	leading to
+23	121	130	GA - RNNG
+23	133	147	to incorporate
+23	148	169	more interpretability
+23	170	174	into
+23	179	184	model
+36	132	145	parameterizes
+36	150	161	information
+36	162	176	passed through
+36	177	189	compositions
+36	190	192	of
+36	193	245	phrases ( in ? and the neural network architecture )
+38	0	11	To generate
+38	14	24	sentence x
+38	65	69	RNNG
+38	70	77	samples
+38	80	99	sequence of actions
+38	100	102	to
+38	103	112	construct
+40	4	8	RNNG
+40	9	13	uses
+40	14	37	three different actions
+44	4	8	RNNG
+44	9	20	consists of
+44	23	28	stack
+44	31	37	buffer
+44	38	40	of
+44	41	56	generated words
+44	63	83	list of past actions
+44	89	96	lead to
+44	101	122	current configuration
+48	0	2	At
+48	3	16	each timestep
+48	29	36	encodes
+48	41	74	stack , buffer , and past actions
+48	77	81	with
+48	84	97	separate LSTM
+48	98	101	for
+48	102	116	each component
+48	117	119	as
+48	120	128	features
+48	129	138	to define
+48	141	153	distribution
+48	154	158	over
+48	163	182	next action to take
+48	185	199	conditioned on
+48	204	226	full algorithmic state
+56	0	23	Both inference problems
+56	31	43	solved using
+56	47	76	importance sampling procedure
+80	4	14	generative
+80	21	32	did not use
+80	37	75	pretrained word embeddings or POS tags
+80	133	142	to obtain
+105	0	30	Do the phrasal representations
+105	31	41	learned by
+105	42	50	RN - NGs
+105	51	60	depend on
+105	61	85	individual lexical heads
+149	0	3	NPs
+176	4	23	conversion accuracy
+176	27	37	better for
+176	38	60	nouns ( ? 50 % error )
+176	67	82	much better for
+176	83	125	determiners ( 30 % ) and particles ( 6 % )
+176	126	141	with respect to
+176	146	164	Collins head rules
+192	0	2	On
+192	3	12	test data
+192	24	29	usual
+192	44	53	GA - RNNG
+192	54	62	achieves
+192	63	69	94.2 %
+192	82	95	U - GA - RNNG
+192	96	104	achieves
+192	105	111	93.5 %

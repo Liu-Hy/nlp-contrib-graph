@@ -1,5 +1,0 @@
-(Hyper- parameters||such as||convolutional output dimension)
-(grid search||over||Dev set of the same language)
-(Dev set of the same language||as||train set)
-(Hyperparameters||has||Hyper- parameters)
-(Contribution||has||Hyperparameters)

@@ -1,6 +1,0 @@
-(classic 3 DMM||with||original Basel laboratory texture model)
-(classic 3 DMM||with||full lighting equation)
-(full lighting equation||term||Classic)
-(Baselines||has||classic 3 DMM)
-(Baselines||has||texture - less linear model)
-(Contribution||has||Baselines)

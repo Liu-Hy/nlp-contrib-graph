@@ -1,3 +1,0 @@
-(large - scale face detection dataset||called||WIDER FACE)
-(Dataset||introduce||large - scale face detection dataset)
-(Contribution||has||Dataset)

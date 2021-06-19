@@ -1,3 +1,0 @@
-(human facial regions||from||images)
-(robustly detect||has||human facial regions)
-(Contribution||has||Baselines)

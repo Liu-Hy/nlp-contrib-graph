@@ -1,8 +1,0 @@
-(texture - free Linear model||does||better)
-(ITW model||most able to recover||facial shapes)
-(facial shapes||due to||ideal feature basis)
-(ideal feature basis||for||" in - the -wild " conditions)
-(texture - free Linear model||has||better)
-(better||has||ITW model)
-(Results||has||texture - free Linear model)
-(Contribution||has||Results)

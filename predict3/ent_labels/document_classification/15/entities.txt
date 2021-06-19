@@ -1,0 +1,108 @@
+18	36	80	adversarial and virtual adversarial training
+18	81	83	to
+19	45	70	text classification tasks
+19	75	90	sequence models
+20	0	25	Adversarial perturbations
+20	36	46	consist of
+20	54	73	small modifications
+20	74	76	to
+20	77	107	very many real - valued inputs
+21	0	3	For
+21	4	23	text classification
+21	30	35	input
+21	36	38	is
+21	39	47	discrete
+21	62	76	represented as
+21	79	85	series
+21	86	88	of
+21	89	122	highdimensional one - hot vectors
+22	103	109	define
+22	85	97	perturbation
+22	127	129	on
+22	130	156	continuous word embeddings
+22	157	167	instead of
+22	168	188	discrete word inputs
+25	42	55	as a means of
+25	56	68	regularizing
+25	71	86	text classifier
+25	87	89	by
+25	90	101	stabilizing
+25	106	129	classification function
+101	26	91	https://github.com/tensorflow/models/tree/master/adversarial_text
+100	16	20	used
+100	21	31	TensorFlow
+100	32	34	on
+100	35	39	GPUs
+112	3	14	trained for
+112	15	28	100,000 steps
+113	3	10	applied
+113	11	28	gradient clipping
+113	29	33	with
+113	34	38	norm
+113	39	45	set to
+113	46	49	1.0
+113	50	52	on
+113	53	71	all the parameters
+113	72	78	except
+113	79	94	word embeddings
+115	0	3	For
+115	4	18	regularization
+115	19	21	of
+115	26	50	recurrent language model
+115	56	63	applied
+115	64	71	dropout
+115	72	74	on
+115	79	99	word embedding layer
+115	100	104	with
+115	105	121	0.5 dropout rate
+116	8	32	bidirectional LSTM model
+116	38	42	used
+116	43	64	512 hidden units LSTM
+116	65	68	for
+116	78	121	standard order and reversed order sequences
+116	136	167	256 dimensional word embeddings
+116	178	189	shared with
+116	190	207	both of the LSTMs
+2	33	70	SEMI - SUPERVISED TEXT CLASSIFICATION
+19	45	64	text classification
+163	3	11	saw that
+163	12	27	cosine distance
+163	28	30	on
+163	31	75	adversarial and virtual adversarial training
+163	97	109	much smaller
+163	110	122	than ones on
+163	127	166	baseline and random perturbation method
+165	0	5	shows
+165	10	26	test performance
+165	27	29	on
+165	34	56	Elec and RCV1 datasets
+166	7	10	see
+166	11	30	our proposed method
+166	31	39	improved
+166	40	56	test performance
+166	57	59	on
+166	64	79	baseline method
+166	84	92	achieved
+166	93	121	state of the art performance
+167	0	29	Our unidirectional LSTM model
+167	30	38	improves
+167	46	69	state of the art method
+167	74	110	our method with a bidirectional LSTM
+167	111	127	further improves
+167	128	135	results
+167	39	41	on
+167	139	143	RCV1
+169	30	53	Rotten Tomatoes dataset
+170	0	20	Adversarial training
+170	25	32	able to
+170	33	40	improve
+170	41	45	over
+170	50	65	baseline method
+170	72	76	with
+170	82	122	adversarial and virtual adversarial cost
+171	12	28	test performance
+171	29	31	of
+171	32	65	only virtual adversarial training
+171	70	75	worse
+171	76	80	than
+171	85	93	baseline

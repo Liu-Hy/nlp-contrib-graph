@@ -1,0 +1,6 @@
+(Glo Ve||to||models)
+(models||with||ELMo)
+(models||provides||marginal improvement)
+(ELMo||provides||marginal improvement)
+(marginal improvement||over||ELMo only models)
+(Contribution||has||Tasks)

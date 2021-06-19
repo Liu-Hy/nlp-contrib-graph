@@ -1,0 +1,5 @@
+(Contribution||has research problem||Detecting Hypernymy Relations)
+(Contribution||has research problem||Hypernym Discovery)
+(Contribution||has research problem||automatic extraction of hypernymy relations from a corpus)
+(Contribution||has research problem||hypernym discovery)
+(Contribution||has research problem||unsupervised machine learning)

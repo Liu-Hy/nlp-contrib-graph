@@ -1,3 +1,0 @@
-(Contribution||has research problem||Neural Hypernym Discovery)
-(Contribution||has research problem||hypernym discovery)
-(Contribution||has research problem||hypernym detection)

@@ -1,0 +1,118 @@
+2	0	7	FINDING
+4	13	48	text - based question and answering
+4	68	88	relational reasoning
+4	153	161	find out
+4	166	195	question relevant information
+21	4	19	external memory
+21	20	27	enables
+21	32	37	model
+21	38	50	to deal with
+21	53	67	knowledge base
+21	68	83	without loss of
+21	84	95	information
+23	0	49	Generalization updates old memories given the new
+25	0	8	Based on
+25	13	40	memory network architecture
+25	43	70	neural network based models
+25	71	75	like
+25	76	117	end - to - end memory network ( Mem N2N )
+25	120	169	gated end - to - end memory network ( GMe m N2N )
+25	172	202	dynamic memory network ( DMN )
+25	209	243	dynamic memory network + ( DMN + )
+42	21	56	" Relation Memory Network " ( RMN )
+42	62	74	able to find
+42	75	91	complex relation
+42	97	101	when
+42	104	122	lot of information
+42	123	125	is
+43	3	7	uses
+43	8	11	MLP
+43	12	23	to find out
+43	24	44	relevant information
+43	45	49	with
+43	52	70	new generalization
+43	94	105	information
+46	0	31	Relation Memory Network ( RMN )
+46	35	46	composed of
+46	47	62	four components
+46	65	74	embedding
+46	77	86	attention
+46	89	97	updating
+46	104	113	reasoning
+51	0	19	EMBEDDING COMPONENT
+61	0	13	To constitute
+61	18	37	attention component
+61	43	50	applied
+61	51	61	simple MLP
+61	62	76	represented as
+61	77	81	gt ?
+67	4	14	to control
+67	19	41	intensity of attention
+67	44	55	inspired by
+67	64	85	Neural Turing Machine
+67	86	96	reads from
+67	101	107	memory
+73	0	9	To forget
+73	14	25	information
+73	44	47	use
+73	48	76	intuitive updating component
+73	77	85	to renew
+73	90	96	memory
+77	0	19	REASONING COMPONENT
+84	0	6	MemN2N
+84	28	52	relatedness of sentences
+84	53	55	in
+84	60	79	question and memory
+84	80	89	by taking
+84	94	107	inner product
+84	118	126	sentence
+84	127	131	with
+84	136	155	highest relatedness
+84	159	170	selected as
+84	175	200	first supporting sentence
+84	201	204	for
+84	209	223	given question
+125	0	29	bAbI story - based QA dataset
+132	0	3	For
+132	4	18	regularization
+132	24	27	use
+132	28	47	batch normalization
+132	48	51	for
+132	52	60	all MLPs
+133	4	18	softmax output
+133	23	37	optimized with
+133	40	69	cross - entropy loss function
+133	70	75	using
+133	80	94	Adam optimizer
+133	95	99	with
+133	102	115	learning rate
+133	116	118	of
+133	119	125	2 e ?4
+148	6	13	trained
+148	24	27	RMN
+148	28	34	learns
+148	41	60	different solutions
+148	61	64	for
+148	65	74	each task
+149	40	59	attention component
+149	76	80	well
+149	86	93	focuses
+149	94	106	sequentially
+149	114	134	supporting sentences
+163	0	4	With
+163	9	27	match type feature
+163	30	46	all models other
+163	52	55	RMN
+163	61	83	significantly improved
+163	90	101	performance
+163	102	112	except for
+163	120	131	compared to
+163	136	151	plain condition
+171	29	32	RMN
+171	33	39	yields
+171	44	66	same error rate 25.1 %
+171	67	71	with
+171	72	92	MemN2N and GMe m N2N
+194	14	28	number of hops
+194	32	47	correlated with
+194	52	82	number of supporting sentences

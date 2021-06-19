@@ -1,0 +1,4 @@
+(conversion accuracy||better for||nouns ( ? 50 % error ))
+(conversion accuracy||much better for||determiners ( 30 % ) and particles ( 6 % ))
+(determiners ( 30 % ) and particles ( 6 % )||with respect to||Collins head rules)
+(Contribution||has||Experiments)

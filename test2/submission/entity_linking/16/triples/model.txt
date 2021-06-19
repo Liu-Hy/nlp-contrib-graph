@@ -1,6 +1,0 @@
-(supervised WSD model||leverages||Bidirectional Long Short - Term Memory ( BLSTM ) network)
-(Model||develop||supervised WSD model)
-(neural sense vectors ( i.e. sense embeddings )||learned during||model training)
-(neural word vectors ( i.e. word embeddings )||learned through||unsupervised deep learning approach)
-(Model||works with||neural sense vectors ( i.e. sense embeddings ))
-(Contribution||has||Model)

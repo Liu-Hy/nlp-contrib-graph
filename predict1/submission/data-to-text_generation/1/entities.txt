@@ -1,0 +1,94 @@
+2	46	98	Sequence - to - Sequence Natural Language Generation
+12	9	19	focuses on
+12	20	39	language generators
+12	46	52	inputs
+12	53	56	are
+12	57	99	structured meaning representations ( MRs )
+28	8	15	present
+28	18	60	neural ensemble natural language generator
+28	72	89	train and test on
+28	90	120	three large unaligned datasets
+28	121	123	in
+28	128	172	restaurant , television , and laptop domains
+158	3	8	built
+158	9	27	our ensemble model
+158	28	33	using
+158	38	55	seq2seq framework
+158	56	59	for
+158	60	70	TensorFlow
+159	27	30	use
+159	33	59	bidirectional LSTM encoder
+159	60	64	with
+159	65	84	512 cells per layer
+159	95	98	CNN
+159	106	109	use
+159	112	127	pooling encoder
+160	4	11	decoder
+160	26	29	was
+160	32	53	4 - layer RNN decoder
+160	54	58	with
+160	59	77	512 LSTM cells per
+160	78	83	layer
+162	6	24	experimenting with
+162	25	57	different beam search parameters
+162	63	73	settled on
+162	78	94	beam width of 10
+164	4	18	length penalty
+164	19	28	providing
+164	33	45	best results
+164	46	48	on
+164	53	64	E2E dataset
+164	65	68	was
+164	69	72	0.6
+164	91	113	TV and Laptop datasets
+164	117	120	was
+164	121	132	0.9 and 1.0
+165	12	14	on
+165	19	30	E2E Dataset
+172	15	19	show
+172	25	57	both the LSTM and the CNN models
+172	66	78	benefit from
+172	79	106	additional pseudo - samples
+172	107	109	in
+172	114	126	training set
+175	0	7	Testing
+175	12	31	ensembling approach
+175	32	39	reveals
+175	45	66	reranking predictions
+175	67	78	pooled from
+175	79	95	different models
+175	96	104	produces
+175	108	122	ensemble model
+175	123	130	that is
+175	131	151	over all more robust
+175	152	156	than
+175	161	181	individual submodels
+179	32	40	observed
+179	50	59	CNN model
+179	60	69	surpassed
+179	74	89	two LSTM models
+179	90	96	in the
+179	97	104	ability
+179	105	115	to realize
+179	120	152	" fast food " and " pub " values
+179	153	161	reliably
+206	3	10	observe
+206	30	51	hybrid ensemble model
+206	52	70	manages to perform
+206	75	79	best
+206	80	91	in terms of
+206	96	106	error rate
+206	109	119	as well as
+206	124	135	naturalness
+212	11	29	our ensemble model
+212	30	38	performs
+212	39	52	competitively
+212	53	57	with
+212	62	70	baseline
+212	71	73	on
+212	78	88	TV dataset
+212	98	109	outperforms
+212	113	115	on
+212	120	134	Laptop dataset
+212	135	137	by
+212	140	151	wide margin

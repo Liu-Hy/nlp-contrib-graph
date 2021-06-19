@@ -1,0 +1,221 @@
+2	33	52	Text Classification
+4	0	19	Text classification
+14	0	19	Text classification
+22	18	25	propose
+22	28	64	new graph neural networkbased method
+22	65	68	for
+22	69	88	text classification
+24	3	8	model
+24	19	23	with
+24	26	61	Graph Convolutional Network ( GCN )
+24	113	121	captures
+24	122	158	high order neighborhoods information
+26	8	12	turn
+26	13	40	text classification problem
+26	41	45	into
+26	46	74	anode classification problem
+28	32	71	https://github. com/yao8839836/text_gcn
+30	51	70	text classification
+40	18	37	Text Classification
+113	0	19	Can our model learn
+113	20	61	predictive word and document embeddings ?
+116	0	13	TF - IDF + LR
+116	16	38	bag - of - words model
+116	39	43	with
+116	44	94	term frequencyinverse document frequency weighting
+117	0	19	Logistic Regression
+117	23	30	used as
+117	35	45	classifier
+118	0	3	CNN
+118	6	34	Convolutional Neural Network
+120	0	4	LSTM
+120	39	43	uses
+120	48	65	last hidden state
+120	66	68	as
+120	73	87	representation
+120	88	90	of
+120	95	105	whole text
+122	0	8	Bi- LSTM
+122	35	48	commonly used
+122	52	71	text classification
+123	3	8	input
+123	9	36	pre-trained word embeddings
+123	37	39	to
+123	40	49	Bi - LSTM
+124	0	9	PV - DBOW
+124	14	36	paragraph vector model
+124	55	78	orders of words in text
+124	83	90	ignored
+125	3	7	used
+125	8	27	Logistic Regression
+125	28	30	as
+125	35	45	classifier
+126	0	7	PV - DM
+126	12	34	paragraph vector model
+126	55	64	considers
+126	69	79	word order
+127	3	7	used
+127	8	27	Logistic Regression
+127	28	30	as
+127	35	45	classifier
+128	0	3	PTE
+128	6	31	predictive text embedding
+128	40	54	firstly learns
+128	55	69	word embedding
+128	70	78	based on
+128	79	105	heterogeneous text network
+128	106	116	containing
+128	117	148	words , documents and labels as
+128	149	154	nodes
+128	162	170	averages
+128	171	186	word embeddings
+128	187	189	as
+128	190	209	document embeddings
+128	210	213	for
+128	214	233	text classification
+129	0	9	fast Text
+129	35	54	text classification
+129	70	76	treats
+129	81	118	average of word / n- grams embeddings
+129	119	121	as
+129	122	141	document embeddings
+129	149	154	feeds
+129	155	174	document embeddings
+129	175	179	into
+129	182	199	linear classifier
+131	0	4	SWEM
+131	7	35	simple word embedding models
+131	44	51	employs
+131	52	77	simple pooling strategies
+131	78	91	operated over
+131	92	107	word embeddings
+132	0	4	LEAM
+132	7	41	label - embedding attentive models
+132	50	56	embeds
+132	61	77	words and labels
+132	78	80	in
+132	85	101	same joint space
+132	102	105	for
+132	106	125	text classification
+134	0	15	Graph - CNN - C
+134	41	49	operates
+134	50	62	convolutions
+134	63	67	over
+134	68	100	word embedding similarity graphs
+134	162	178	Chebyshev filter
+135	0	15	Graph - CNN - S
+136	0	15	Graph - CNN - F
+136	50	55	using
+136	56	70	Fourier filter
+155	0	3	For
+155	4	12	Text GCN
+155	18	21	set
+155	26	40	embedding size
+155	41	43	of
+155	48	71	first convolution layer
+155	72	74	as
+155	75	78	200
+155	83	86	set
+155	91	102	window size
+155	103	105	as
+155	106	108	20
+158	0	3	For
+158	20	25	using
+158	26	53	pre-trained word embeddings
+158	59	63	used
+158	64	102	300 dimensional Glo Ve word embeddings
+161	0	8	Text GCN
+161	9	17	performs
+161	22	56	best and significantly outperforms
+161	57	87	all baseline models ( p < 0.05
+161	88	96	based on
+162	46	50	note
+162	56	69	TF - IDF + LR
+162	70	78	performs
+162	79	83	well
+162	84	86	on
+162	87	105	long text datasets
+162	106	110	like
+162	111	116	20 NG
+162	125	135	outperform
+162	136	139	CNN
+162	140	144	with
+162	145	181	randomly initialized word embeddings
+163	0	4	When
+163	5	39	pre-trained Glo Ve word embeddings
+163	44	52	provided
+163	55	58	CNN
+163	59	67	performs
+163	68	79	much better
+163	82	95	especially on
+163	96	113	Ohsumed and 20 NG
+164	0	3	CNN
+164	9	17	achieves
+164	22	34	best results
+164	35	37	on
+164	38	59	short text dataset MR
+166	0	9	PV - DBOW
+166	10	18	achieves
+166	19	37	comparable results
+166	38	40	to
+166	41	57	strong baselines
+166	58	60	on
+166	61	78	20 NG and Ohsumed
+168	0	7	PV - DM
+168	8	16	performs
+168	17	22	worse
+168	23	27	than
+168	28	37	PV - DBOW
+169	12	14	of
+169	15	36	PV - DBOW and PV - DM
+169	37	45	indicate
+169	51	83	unsupervised document embeddings
+169	84	87	are
+169	88	111	not very discriminative
+169	112	114	in
+169	115	134	text classification
+170	0	17	PTE and fast Text
+170	18	25	clearly
+170	37	58	PV - DBOW and PV - DM
+171	23	36	SWEM and LEAM
+171	37	44	perform
+171	45	55	quite well
+172	0	18	Graph - CNN models
+172	24	28	show
+172	29	53	competitive performances
+175	8	18	text graph
+175	19	30	can capture
+175	36	61	document - word relations
+175	105	114	GCN model
+175	138	157	Laplacian smoothing
+175	160	168	computes
+175	173	185	new features
+175	186	188	of
+175	189	194	anode
+175	195	197	as
+175	202	218	weighted average
+175	219	221	of
+175	222	228	itself
+175	237	259	second order neighbors
+176	4	21	label information
+176	22	24	of
+176	25	39	document nodes
+176	47	56	passed to
+176	63	100	neighboring word nodes ( words within
+176	105	116	documents )
+176	124	134	relayed to
+176	135	170	other word nodes and document nodes
+176	171	190	thatare neighbor to
+176	195	228	first step neighboring word nodes
+178	18	26	observed
+178	32	40	Text GCN
+178	41	48	did not
+178	60	87	CNN and LSTM - based models
+178	88	90	on
+178	91	93	MR
+194	3	7	note
+194	13	21	Text GCN
+194	22	33	can achieve
+194	34	54	higher test accuracy
+194	55	59	with
+194	60	85	limited labeled documents

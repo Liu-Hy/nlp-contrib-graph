@@ -1,0 +1,5 @@
+(structured perceptron||improved||error rates)
+(error rates||on||some of the common and difficult labels)
+(error rates||improved by||> 1 %)
+(Ablation analysis||using||structured perceptron)
+(Contribution||has||Ablation analysis)

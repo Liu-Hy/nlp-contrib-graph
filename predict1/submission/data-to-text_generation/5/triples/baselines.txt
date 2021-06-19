@@ -1,0 +1,8 @@
+(best submissions||in||WebNLG challenge)
+(best||on||all categories)
+(best submissions||has||WebNLG challenge)
+(WebNLG challenge||has||Melbourne)
+(Melbourne||has||end - to - end system)
+(LSTM decoder||with||attention)
+(LSTM decoder||with||neural checklist model)
+(Contribution||has||Baselines)

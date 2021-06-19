@@ -1,0 +1,46 @@
+20	4	14	ADAPT team
+20	15	25	focused on
+20	30	69	two specialised domain English subtasks
+20	70	83	by developing
+20	87	106	unsupervised system
+20	112	118	builds
+20	119	134	word embeddings
+20	135	139	from
+20	144	170	supplied reference corpora
+25	128	149	unsupervised approach
+25	246	262	expectation that
+25	280	290	generalise
+25	291	302	more easily
+25	306	337	unseen hypernym - hyponym pairs
+2	64	95	Unsupervised Hypernym Discovery
+4	70	88	hypernym discovery
+61	0	23	Our official submission
+61	57	59	on
+61	64	86	medical domain subtask
+61	24	30	ranked
+61	34	40	eleven
+61	41	47	out of
+61	48	56	eighteen
+61	87	91	with
+61	94	124	Mean Average Precision ( MAP )
+61	125	127	of
+61	128	132	8.13
+62	20	31	first place
+62	32	37	among
+62	38	66	all the unsupervised systems
+63	0	2	On
+63	7	36	music industry domain subtask
+63	39	49	our system
+63	50	56	ranked
+63	57	61	13th
+63	62	68	out of
+63	69	78	16 places
+63	79	83	with
+63	86	89	MAP
+63	90	92	of
+63	93	97	1.88
+63	100	107	ranking
+63	108	111	4th
+63	112	117	among
+63	122	142	unsupervised systems
+60	0	7	Results

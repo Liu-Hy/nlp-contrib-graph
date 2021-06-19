@@ -1,2 +1,0 @@
-(Contribution||has research problem||BERT Baseline)
-(Contribution||has research problem||Natural Questions)

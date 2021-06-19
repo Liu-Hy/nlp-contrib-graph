@@ -1,0 +1,182 @@
+2	59	87	Unconstrained Face Detection
+14	0	78	Detection and analysis on human subjects using facial feature based biometrics
+21	57	115	Contextual Multi - Scale Region - based CNN ( CMS - RCNN )
+21	141	158	face detection in
+22	45	51	allows
+22	56	63	network
+22	64	89	to simultaneously look at
+22	90	110	multi-scale features
+22	124	142	to explicitly look
+22	143	165	outside facial regions
+22	166	168	as
+22	173	195	potential body regions
+25	18	25	able to
+25	26	39	robustly deal
+25	49	59	challenges
+25	60	62	in
+25	67	106	problem of unconstrained face detection
+26	4	21	CMS - RCNN method
+26	22	32	introduces
+26	37	87	Multi - Scale Region Proposal Network ( MS - RPN )
+26	88	99	to generate
+26	102	105	set
+26	109	126	region candidates
+26	201	216	to do inference
+26	217	219	on
+26	224	241	region candidates
+26	242	244	of
+26	245	259	facial regions
+78	0	6	Inside
+78	11	18	network
+78	21	33	skip pooling
+78	37	44	used to
+78	45	52	extract
+78	53	64	information
+78	65	67	at
+78	68	94	multiple scales and levels
+78	95	97	of
+78	98	109	abstraction
+82	82	93	incorporate
+82	114	118	with
+82	123	139	depth descriptor
+82	140	146	beside
+82	147	159	RGB channels
+82	162	165	our
+82	173	179	solves
+82	184	191	problem
+82	192	197	under
+82	200	223	deep learning framework
+82	224	229	where
+82	234	271	global and the local context features
+82	299	314	synchronized to
+82	315	366	Faster Region - based Convolutional Neural Networks
+82	376	395	to robustly achieve
+82	396	414	semantic detection
+228	4	14	CMS - RCNN
+228	18	32	implemented in
+228	37	66	Caffe deep learning framework
+229	4	16	first 5 sets
+229	17	19	of
+229	20	38	convolution layers
+229	39	43	have
+229	48	65	same architecture
+229	66	68	as
+229	73	92	deep VGG - 16 model
+229	99	105	during
+229	106	114	training
+229	121	131	parameters
+229	136	152	initialized from
+229	157	177	pre-trained VGG - 16
+236	8	11	set
+236	16	29	initial scale
+236	30	32	of
+236	33	54	' conv3 ' , ' conv4 '
+236	71	76	to be
+236	77	102	66.84 , 94.52 , and 94.52
+239	15	23	features
+239	24	35	pooled from
+239	36	57	' conv3 ' , ' conv4 '
+239	78	94	initialized with
+239	95	100	scale
+239	101	106	to be
+239	107	132	57.75 , 81.67 , and 81.67
+239	148	151	for
+240	4	30	MS - RPN and the CMS - CNN
+240	31	36	share
+240	41	56	same parameters
+240	57	60	for
+240	61	83	all convolution layers
+240	84	86	so
+240	92	103	computation
+240	104	115	can be done
+240	116	120	once
+240	123	135	resulting in
+240	136	153	higher efficiency
+241	15	23	in order
+241	24	33	to shrink
+241	38	50	channel size
+241	51	53	of
+241	58	82	concatenated feature map
+241	87	107	11 convolution layer
+241	116	124	employed
+242	14	26	channel size
+242	27	29	of
+242	30	47	final feature map
+242	51	62	at the same
+242	68	70	as
+242	75	107	original fifth convolution layer
+242	108	110	in
+242	111	125	Faster R - CNN
+246	44	64	robustly outperforms
+246	65	88	strong baseline methods
+246	91	100	including
+246	101	116	Two - stage CNN
+246	119	142	Multi-scale Cascade CNN
+246	145	153	Faceness
+246	158	192	Aggregate Channel Features ( ACF )
+246	195	197	by
+246	200	212	large margin
+249	12	14	on
+249	15	33	WIDER FACE Dataset
+267	0	10	Our method
+267	11	22	outperforms
+267	29	45	strong baselines
+267	46	48	by
+267	51	63	large margin
+268	3	11	achieves
+268	16	38	best average precision
+268	39	41	in
+268	42	57	all level faces
+268	60	64	i.e.
+268	65	67	AP
+268	70	75	0.902
+268	87	92	0.874
+268	108	113	0.643
+268	129	140	outperforms
+268	145	165	second best baseline
+268	166	168	by
+268	169	184	26.0 % ( Easy )
+268	187	204	37.4 % ( Medium )
+268	209	224	60.8 % ( Hard )
+269	14	21	suggest
+269	34	50	difficulty level
+269	51	55	goes
+269	56	58	up
+269	61	71	CMS - RCNN
+269	72	82	can detect
+269	83	100	challenging faces
+269	101	107	better
+272	0	33	With Context v.s. Without Context
+284	19	32	context model
+284	33	41	produces
+284	44	59	longer PR curve
+295	12	14	on
+295	15	33	FDDB Face Database
+304	0	10	Our method
+304	11	19	achieves
+304	24	40	best recall rate
+307	4	12	proposed
+307	13	32	CMS - RCNN approach
+307	33	44	outperforms
+307	45	89	most of the published face detection methods
+307	94	102	achieves
+307	105	126	very high recall rate
+307	127	144	comparing against
+307	145	162	all other methods
+311	61	76	robustly detect
+311	77	97	human facial regions
+311	98	102	from
+311	103	109	images
+311	110	125	collected under
+313	25	29	show
+313	35	56	our proposed approach
+313	57	68	outperforms
+313	69	85	strong baselines
+313	86	88	on
+313	93	103	WIDER FACE
+313	108	129	consistently achieves
+313	130	154	very competitive results
+313	155	162	against
+313	163	193	state - of - the - art methods
+313	194	196	on
+313	201	205	FDDB

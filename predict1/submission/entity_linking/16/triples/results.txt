@@ -1,0 +1,5 @@
+(Results||show||5 top - performing algorithms)
+(winner||of||SensEval - 3 lexical sample)
+(htsa 3||has||winner)
+(Results||has||htsa 3)
+(Contribution||has||Results)

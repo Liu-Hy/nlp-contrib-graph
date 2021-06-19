@@ -1,0 +1,64 @@
+2	0	6	Higher
+15	3	12	introduce
+15	16	29	approximation
+15	30	32	of
+15	33	57	higher - order inference
+15	63	67	uses
+15	72	99	span - ranking architecture
+19	83	90	propose
+19	93	117	coarseto - fine approach
+19	126	138	learned with
+19	141	169	single endto - end objective
+103	4	14	increasing
+103	19	37	maximum span width
+103	38	42	from
+103	43	57	10 to 30 words
+104	2	38	https://github.com/kentonl/e2e-coref
+105	4	9	using
+105	10	25	3 highway LSTMs
+105	26	36	instead of
+105	37	38	1
+106	4	9	using
+106	10	32	Glo Ve word embeddings
+106	33	37	with
+106	40	51	window size
+106	52	54	of
+106	55	56	2
+106	57	60	for
+106	65	84	headword embeddings
+106	91	102	window size
+106	106	108	10
+106	109	112	for
+106	117	128	LSTM inputs
+110	0	2	On
+110	7	22	development set
+110	29	59	second - order model ( N = 2 )
+110	60	71	outperforms
+110	76	95	first - order model
+110	96	98	by
+110	99	105	0.8 F1
+110	116	133	third order model
+110	139	147	provides
+110	151	180	additional 0.1 F1 improvement
+118	43	45	is
+118	50	70	span - ranking model
+118	71	90	from augmented with
+118	96	126	ELMo and hyperparameter tuning
+118	135	143	achieves
+118	144	151	72.3 F1
+119	0	17	Our full approach
+119	18	26	achieves
+119	27	34	73.0 F1
+119	37	44	setting
+119	47	67	new state of the art
+119	68	71	for
+119	72	94	coreference resolution
+123	8	15	observe
+123	16	35	further improvement
+123	36	48	by including
+123	53	77	second - order inference
+124	4	15	improvement
+124	19	36	largely driven by
+124	41	58	over all increase
+124	59	61	in
+124	62	71	precision

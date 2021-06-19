@@ -1,0 +1,6 @@
+(neural network architecture||for||concerned task)
+(distributed representations||for||words and phrases)
+(various neural networks||to model||distributed representations)
+(distributed representations||for||words and phrases)
+(Model||introduce||neural network architecture)
+(Contribution||has||Model)

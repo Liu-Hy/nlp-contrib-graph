@@ -1,0 +1,157 @@
+2	0	4	DSFD
+2	7	30	Dual Shot Face Detector
+9	0	14	Face detection
+13	17	32	mainly based on
+13	37	68	Region Proposal Network ( RPN )
+13	69	79	adopted in
+13	80	91	Faster RCNN
+13	96	103	employs
+13	104	131	two stage detection schemes
+14	0	3	RPN
+14	7	14	trained
+14	15	29	end - to - end
+14	34	43	generates
+14	44	72	highquality region proposals
+14	102	123	Fast R - CNN detector
+15	17	71	Single Shot Detector ( SSD ) based one - stage methods
+15	80	90	get rid of
+15	91	94	RPN
+15	101	117	directly predict
+15	122	136	bounding boxes
+127	4	21	backbone networks
+127	26	40	initialized by
+127	45	68	pretrained VGG / ResNet
+127	69	71	on
+127	72	81	Image Net
+128	4	47	newly added convolution layers ' parameters
+128	52	66	initialized by
+128	71	88	' xavier ' method
+129	3	6	use
+129	7	10	SGD
+129	11	15	with
+129	16	28	0.9 momentum
+129	31	50	0.0005 weight decay
+129	51	65	to fine - tune
+129	66	80	our DSFD model
+130	4	14	batch size
+130	18	24	set to
+130	25	27	16
+131	4	17	learning rate
+131	21	27	set to
+131	28	33	10 ?3
+131	34	37	for
+131	42	58	first 40 k steps
+131	68	73	decay
+131	80	97	10 ? 4 and 10 ? 5
+131	98	101	for
+131	102	116	two 10 k steps
+133	0	23	Non-maximum suppression
+133	27	39	applied with
+133	40	55	jaccard overlap
+133	56	58	of
+133	59	62	0.3
+133	63	73	to produce
+133	74	121	top 750 high confident bounding boxes per image
+135	41	99	https://github.com/TencentYoutuResearch/FaceDetection-DSFD
+138	12	16	DSFD
+154	17	24	improve
+154	25	33	our DSFD
+154	34	36	to
+154	37	61	96.6 % , 95.7 % , 90.4 %
+154	62	66	with
+154	67	77	ResNet 152
+154	117	154	our improved anchor matching strategy
+154	155	172	greatly increases
+154	177	186	number of
+154	229	235	anchor
+156	0	19	Comparison with RFB
+164	4	18	Auxiliary loss
+164	19	27	based on
+164	28	46	progressive anchor
+164	64	109	all 12 different scale detection feature maps
+164	119	127	improves
+164	132	143	performance
+164	144	146	on
+164	147	190	easy , medium and hard faces simultaneously
+165	4	32	Our improved anchor matching
+165	33	41	provides
+165	42	89	better initial anchors and ground - truth faces
+165	90	92	to
+165	93	107	regress anchor
+165	108	112	from
+165	113	118	faces
+165	127	135	achieves
+165	140	152	improvements
+165	153	155	of
+165	156	161	0.3 %
+166	23	30	enlarge
+166	35	54	training batch size
+166	57	61	i.e.
+166	81	90	result in
+166	91	103	hard setting
+166	104	111	can get
+166	112	121	91.2 % AP
+170	7	11	DSFD
+170	12	16	with
+170	17	37	SE - ResNeXt101 324d
+170	38	41	got
+170	42	66	95.7 % , 94.8 % , 88.9 %
+170	69	71	on
+170	72	103	easy , medium and hard settings
+172	0	3	Our
+172	9	15	enjoys
+172	16	36	high inference speed
+172	37	51	benefited from
+172	69	98	second shot detection results
+182	14	22	our DSFD
+182	23	31	achieves
+182	36	52	best performance
+182	53	58	among
+182	59	107	all of the state - of - the - art face detectors
+182	108	116	based on
+182	121	145	average precision ( AP )
+182	146	152	across
+182	157	170	three subsets
+182	173	177	i.e.
+182	180	195	96.6 % ( Easy )
+182	198	215	95.7 % ( Medium )
+182	220	235	90.4 % ( Hard )
+182	236	238	on
+182	239	253	validation set
+182	260	275	96.0 % ( Easy )
+182	278	295	95.3 % ( Medium )
+182	300	315	90.0 % ( Hard )
+182	316	318	on
+182	319	327	test set
+186	21	44	bounding box annotation
+186	45	50	while
+186	51	56	faces
+186	57	59	in
+186	60	64	FDDB
+186	69	83	represented by
+186	84	92	ellipses
+186	98	103	learn
+186	106	135	post - hoc ellipses regressor
+186	136	148	to transform
+186	153	177	final prediction results
+187	14	22	our DSFD
+187	23	31	achieves
+187	32	66	state - of - the - art performance
+187	67	69	on
+187	117	121	i.e.
+187	122	139	99.1 % and 86.2 %
+187	140	144	when
+187	149	174	number of false positives
+187	175	184	equals to
+187	185	192	1 , 000
+188	6	12	adding
+188	13	35	additional annotations
+188	36	38	to
+188	45	60	unlabeled faces
+188	67	82	false positives
+188	83	85	of
+188	86	95	our model
+188	96	102	can be
+188	103	118	further reduced
+188	123	133	outperform
+188	134	151	all other methods

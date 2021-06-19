@@ -1,0 +1,111 @@
+2	13	49	Multilingual Document Classification
+4	0	39	Cross - lingual document classification
+17	52	75	document classification
+31	3	9	extend
+31	10	24	previous works
+31	29	32	use
+31	37	41	data
+31	42	44	in
+31	49	72	Reuters Corpus Volume 2
+31	73	82	to define
+31	83	132	new cross - lingual document classification tasks
+31	133	136	for
+31	137	167	eight very different languages
+31	170	176	namely
+31	177	184	English
+31	187	193	French
+31	196	203	Spanish
+31	206	213	Italian
+31	216	222	German
+31	225	232	Russian
+31	235	242	Chinese
+31	247	255	Japanese
+73	57	95	cross -lingual document classification
+76	19	26	propose
+76	27	51	initial strong baselines
+76	58	67	represent
+76	68	96	two complementary directions
+76	97	99	of
+76	100	108	research
+76	115	123	based on
+76	128	139	aggregation
+76	140	142	of
+76	143	171	multilingual word embeddings
+76	214	251	multilingual sentence representations
+82	25	76	zero - shot cross - lingual document classification
+86	13	52	cross - lingual document classification
+100	3	8	train
+100	11	66	simple one - layer convolutional neural network ( CNN )
+100	67	76	on top of
+100	81	96	word embeddings
+100	109	117	shown to
+100	118	125	perform
+100	126	130	well
+101	15	36	convolutional filters
+101	41	51	applied to
+101	52	59	windows
+101	60	62	of
+101	63	78	word embeddings
+101	81	85	with
+101	88	113	max - over - time pooling
+101	114	123	on top of
+103	0	17	Hyper- parameters
+103	18	25	such as
+103	26	56	convolutional output dimension
+103	76	83	done by
+103	84	95	grid search
+103	96	100	over
+103	105	133	Dev set of the same language
+103	134	136	as
+103	141	150	train set
+105	52	89	multilingual sentence representations
+106	67	110	joint multilingual sentence representations
+111	8	17	developed
+111	18	30	two versions
+111	31	33	of
+111	51	61	trained on
+111	66	81	Europarl corpus
+111	82	90	to cover
+111	95	104	languages
+111	105	112	English
+111	171	181	trained on
+111	186	207	United Nations corpus
+111	214	229	allows to learn
+111	232	256	joint sentence embedding
+111	257	260	for
+111	261	268	English
+112	3	6	use
+112	9	31	one hidden - layer MLP
+112	32	34	as
+112	35	45	classifier
+113	25	34	evaluated
+113	39	50	performance
+113	51	53	on
+113	58	81	original subset of RCV2
+113	118	157	cross - lingual document classification
+113	167	174	able to
+113	175	185	outperform
+113	221	223	in
+113	224	260	three out of six transfer directions
+116	4	15	classifiers
+116	16	24	based on
+116	29	48	MultiCCA embeddings
+116	49	56	perform
+116	57	66	very well
+116	67	69	on
+116	74	92	development corpus
+116	95	105	accuracies
+116	106	129	close or exceeding 90 %
+117	4	10	system
+117	11	21	trained on
+117	22	29	English
+117	35	43	achieves
+117	44	61	excellent results
+117	62	80	when transfered to
+117	83	102	different languages
+117	108	114	scores
+117	115	119	best
+117	120	123	for
+117	124	171	three out of seven languages ( DE , IT and ZH )
+123	0	54	Crosslingual transfer between very different languages
+124	0	48	Targeted cross - lingual document classification

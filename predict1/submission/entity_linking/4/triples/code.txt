@@ -1,0 +1,2 @@
+(Contribution||Code||learning distributed representations of entities)
+(Contribution||Code||https://github.com/studio-ousia/ntee base ( KB ))

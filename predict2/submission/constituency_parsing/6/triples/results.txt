@@ -1,0 +1,7 @@
+(single LSTM - LM ( GS )||together with||Charniak ( GS ))
+(Charniak ( GS )||reaches||93.6)
+(Charniak ( GS )||achieves||new state of the art)
+(new state of the art||has||93.8 F 1)
+(trees||converted to||Stanford dependencies)
+(UAS and LAS||are||95.9 % and 94.1 %)
+(Contribution||has||Results)

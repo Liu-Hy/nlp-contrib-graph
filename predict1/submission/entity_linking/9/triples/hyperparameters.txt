@@ -1,0 +1,3 @@
+(stochastic gradient descent ( SGD )||for||optimization)
+(Hyperparameters||use||stochastic gradient descent ( SGD ))
+(Contribution||has||Hyperparameters)

@@ -1,0 +1,6 @@
+(word embeddings||by||300D Glo Ve 840B pretrained vectors)
+(word embeddings||fix them during||training)
+(Hyperparameters||initialize||word embeddings)
+(cross-entropy loss||as||objective function)
+(Hyperparameters||use||cross-entropy loss)
+(Contribution||has||Hyperparameters)

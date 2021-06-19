@@ -1,3 +1,0 @@
-(3D face results||improve on||accuracy)
-(accuracy||of||previous work)
-(Contribution||has||Experiments)

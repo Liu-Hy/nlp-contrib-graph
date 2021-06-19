@@ -1,0 +1,8 @@
+(DAN||trained on||training subset)
+(training subset||of||300W competition data)
+(two models||trained on||DAN - Menpo)
+(DAN - Menpo||trained on||Menpo challenge training set)
+(two models||name||DAN)
+(Baselines||train||two models)
+(Baselines||consist of||two stages)
+(Contribution||has||Baselines)

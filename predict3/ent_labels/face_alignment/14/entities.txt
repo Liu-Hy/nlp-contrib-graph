@@ -1,0 +1,48 @@
+203	0	11	Our network
+203	15	29	implemented in
+203	34	49	Caffe framework
+204	2	11	new layer
+204	23	36	consisting of
+204	41	69	3D TPS transformation module
+204	76	100	camera projection module
+204	109	132	bilinear sampler module
+209	4	26	2D landmark regression
+209	30	44	implemented by
+209	45	54	attaching
+209	55	72	additional layers
+209	73	82	on top of
+209	87	109	last convolution layer
+206	3	8	adopt
+206	9	26	two architectures
+206	29	49	AlexNet and VGG - 16
+206	59	77	pre-trained models
+206	78	81	for
+206	82	120	our shared feature extraction networks
+206	134	137	use
+206	142	160	convolution layers
+206	161	165	from
+206	170	188	pre-trained models
+206	189	202	to initialize
+206	203	207	ours
+208	0	3	For
+208	8	28	AlexNet architecture
+208	34	40	freeze
+208	45	56	first layer
+208	63	66	for
+208	71	92	VGG - 16 architecture
+208	99	113	first 4 layers
+208	118	124	frozen
+33	40	47	observe
+33	53	79	fairly accurate 3 D models
+33	87	96	generated
+33	97	105	by using
+33	108	125	simple mean shape
+33	126	137	deformed to
+33	142	153	input image
+33	154	156	at
+33	159	192	relatively low computational cost
+33	193	204	compared to
+33	205	221	other approaches
+2	24	40	Facial Alignment
+14	0	36	Robust face recognition and analysis
+14	66	97	localization of facial features

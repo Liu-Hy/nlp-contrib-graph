@@ -1,4 +1,0 @@
-(training||used||stochastic gradient descent)
-(stochastic gradient descent||with||learning rate)
-(learning rate||of||0.1)
-(Contribution||has||Hyperparameters)

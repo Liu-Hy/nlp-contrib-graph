@@ -1,4 +1,0 @@
-(Difficult background pixels||has||focused)
-(area of||has||foreground pixels)
-(Ablation analysis||has||Difficult background pixels)
-(Contribution||has||Ablation analysis)

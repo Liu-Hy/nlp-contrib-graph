@@ -1,0 +1,56 @@
+2	0	25	Word Sense Disambiguation
+4	61	86	word sense disambiguation
+23	43	51	modeling
+23	56	73	sequence of words
+23	74	85	surrounding
+23	90	101	target word
+23	193	202	represent
+23	207	212	words
+23	213	218	using
+23	219	252	real valued vector representation
+83	4	15	source code
+83	18	35	implemented using
+83	36	46	TensorFlow
+83	58	69	released as
+83	70	83	open source 1
+87	4	14	embeddings
+87	19	36	initialized using
+87	39	42	set
+87	43	45	of
+87	46	79	freely available 2 Glo Ve vectors
+87	80	90	trained on
+87	91	113	Wikipedia and Gigaword
+88	0	5	Words
+88	35	51	initialized from
+88	52	65	N ( 0 , 0.1 )
+101	0	4	htsa
+101	18	24	winner
+101	25	27	of
+101	32	55	SE3 lexical sample task
+101	56	60	with
+101	63	72	F 1 score
+101	73	75	of
+101	76	80	72.9
+106	0	18	Our proposed model
+106	19	27	achieves
+106	32	41	top score
+106	42	44	on
+106	45	48	SE2
+106	57	66	tied with
+106	67	83	IMS + adapted CW
+106	87	90	SE3
+107	14	17	see
+107	23	31	dropword
+107	32	44	consistently
+107	58	65	results
+107	66	68	on
+107	69	73	both
+107	74	85	SE2 and SE3
+108	0	11	Randomizing
+108	22	24	of
+108	29	40	input words
+108	41	47	yields
+108	50	76	substantially worse result
+108	131	149	order of the words
+108	150	153	are
+108	154	165	significant

@@ -1,0 +1,87 @@
+167	3	10	perform
+167	15	26	experiments
+167	27	35	based on
+167	38	45	machine
+167	46	50	with
+167	51	71	Core i7 - 5930 k CPU
+167	74	86	32 GB memory
+167	91	103	GTX 1080 GPU
+167	104	108	with
+167	109	124	8G video memory
+168	4	18	detected faces
+168	23	35	resized into
+168	36	43	256 256
+168	52	71	location patch size
+168	72	74	is
+168	75	80	57 57
+169	0	3	For
+169	4	17	CNN structure
+169	24	54	Rectified Linear Unit ( ReLU )
+169	58	68	adopted as
+169	73	92	activation function
+169	103	112	optimizer
+169	55	57	is
+169	120	153	Adadelta ( Zeiler 2012 ) approach
+169	156	169	learning rate
+169	173	179	set to
+169	180	183	0.1
+169	188	200	weight decay
+169	204	210	set to
+169	211	216	1 e ?
+170	4	12	Training
+170	17	20	CNN
+170	21	29	requires
+170	30	43	around 2 days
+31	19	26	develop
+31	29	74	Self - Iterative Regression ( SIR ) framework
+32	0	11	By means of
+32	16	39	powerful representation
+32	40	42	of
+32	43	79	Convolutional Neural Network ( CNN )
+32	90	95	train
+32	96	109	one regressor
+32	110	118	to learn
+32	123	141	descent directions
+32	142	144	in
+32	145	167	coarse and fine stages
+36	11	20	to obtain
+36	21	54	discriminative landmarks features
+36	60	68	proposed
+36	71	108	Landmarks - Attention Network ( LAN )
+36	117	127	focuses on
+36	132	142	appearance
+36	143	149	around
+36	150	159	landmarks
+37	3	30	first concurrently extracts
+37	31	57	local landmarks ' features
+37	67	74	obtains
+37	79	97	holistic increment
+37	106	127	significantly reduces
+37	132	141	dimension
+37	142	144	of
+37	149	168	final feature layer
+37	177	183	number
+37	184	186	of
+37	187	203	model parameters
+2	0	26	Facial Landmarks Detection
+175	4	15	NME results
+175	16	21	shows
+175	27	30	SIR
+175	31	39	performs
+175	40	53	comparatively
+175	54	58	with
+175	59	62	RAR
+175	69	79	outperform
+175	80	102	other existing methods
+179	18	28	SIR method
+179	29	39	outperform
+179	44	74	state - of - the - art methods
+179	75	87	according to
+179	92	101	CED curve
+177	0	2	In
+177	7	35	more challenging IBUG subset
+177	38	48	our method
+177	49	57	achieves
+177	58	76	robust performance
+177	77	79	in
+177	80	132	large pose , expression and illumination environment

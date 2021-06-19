@@ -1,0 +1,8 @@
+(Other parameters||namely||parameters)
+(parameters||in||MEP and the embeddings)
+(MEP and the embeddings||for||entities)
+(Hyperparameters||has||Other parameters)
+(batch size||set to||252)
+(batch size||has||252)
+(Hyperparameters||has||batch size)
+(Contribution||has||Hyperparameters)

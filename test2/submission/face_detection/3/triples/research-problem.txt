@@ -1,4 +1,0 @@
-(Contribution||has research problem||unconstrained face detection)
-(Contribution||has research problem||automatic face recognition)
-(Contribution||has research problem||face detection with arbitrary facial variations)
-(Contribution||has research problem||unconstrained face detection problem)

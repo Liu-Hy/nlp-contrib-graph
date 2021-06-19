@@ -1,4 +1,0 @@
-(reconstruction error||in||image space)
-(reconstruction error||through||rendering layer)
-(rendering layer||with||groundtruth S and m)
-(Contribution||has||Baselines)

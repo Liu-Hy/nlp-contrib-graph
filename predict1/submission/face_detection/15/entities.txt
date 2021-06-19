@@ -1,0 +1,98 @@
+2	14	43	CPU Real - time Face Detector
+5	31	38	propose
+5	41	60	novel face detector
+5	63	68	named
+5	69	78	FaceBoxes
+5	81	85	with
+5	86	106	superior performance
+5	107	109	on
+5	110	133	both speed and accuracy
+13	21	59	https://github.com/sfzhang15/FaceBoxes
+15	0	14	Face detection
+41	16	27	inspired by
+41	32	35	RPN
+41	96	103	develop
+41	106	142	state - of - the - art face detector
+41	143	147	with
+41	148	165	real - time speed
+41	166	168	on
+41	173	176	CPU
+42	18	25	propose
+42	28	47	novel face detector
+42	48	53	named
+42	54	63	FaceBoxes
+42	77	85	contains
+42	88	129	single fully convolutional neural network
+42	141	148	trained
+42	149	163	end - to - end
+50	3	9	design
+50	14	60	Rapidly Digested Convolutional Layers ( RDCL )
+50	61	70	to enable
+50	71	85	face detection
+50	86	96	to achieve
+50	97	114	real - time speed
+50	115	117	on
+50	122	125	CPU
+50	131	140	introduce
+50	145	189	Multiple Scale Convolutional Layers ( MSCL )
+50	190	199	to handle
+50	200	222	various scales of face
+50	223	226	via
+50	227	253	enriching receptive fields
+50	258	283	discretizing anchors over
+50	284	290	layers
+165	8	18	parameters
+165	23	43	randomly initialized
+165	44	48	with
+165	53	70	" xavier " method
+166	3	11	finetune
+166	16	31	resulting model
+166	32	37	using
+166	38	41	SGD
+166	42	46	with
+166	47	59	0.9 momentum
+166	62	81	0.0005 weight decay
+166	86	96	batch size
+166	97	99	32
+167	4	32	maximum number of iterations
+167	33	35	is
+167	36	41	120 k
+167	49	52	use
+167	53	73	10 ? 3 learning rate
+167	74	77	for
+167	82	103	first 80 k iterations
+167	111	119	continue
+167	120	128	training
+167	129	132	for
+167	133	148	20 k iterations
+167	149	153	with
+167	154	171	10 ? 4 and 10 ? 5
+168	14	28	implemented in
+168	33	46	Caffe library
+178	22	31	comparing
+178	66	79	our FaceBoxes
+178	84	90	run at
+178	91	97	20 FPS
+178	98	100	on
+178	105	108	CPU
+178	109	113	with
+178	114	145	state - of - the - art accuracy
+201	2	11	indicates
+201	17	21	MSCL
+201	22	43	effectively increases
+201	48	52	m AP
+201	53	55	by
+201	56	61	1.0 %
+201	64	73	owning to
+202	0	4	RDCL
+212	20	33	our FaceBoxes
+212	34	45	outperforms
+212	46	56	all others
+212	57	59	by
+212	62	74	large margin
+213	31	33	on
+213	38	49	AFW dataset
+217	11	36	significantly outperforms
+217	37	84	all other methods and commercial face detectors
+218	31	33	on
+218	38	57	PASCAL face dataset

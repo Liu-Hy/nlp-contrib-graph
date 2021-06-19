@@ -1,0 +1,258 @@
+2	24	65	Neural Network Transition - Based Parsing
+10	0	18	Syntactic analysis
+13	0	2	In
+13	3	29	transition - based parsing
+13	32	41	sentences
+13	46	58	processed in
+13	61	86	linear left to right pass
+13	128	134	choose
+13	166	176	defined by
+22	83	96	able to model
+22	97	104	lexical
+22	107	137	part - of - speech ( POS ) tag
+22	144	166	arc label similarities
+22	167	169	in
+22	172	188	continuous space
+24	18	25	combine
+24	30	52	representational power
+24	53	55	of
+24	56	71	neural networks
+24	72	76	with
+24	81	96	superior search
+24	97	107	enabled by
+24	108	141	structured training and inference
+24	144	150	making
+24	151	161	our parser
+26	17	30	incorporating
+26	31	45	unlabeled data
+26	46	50	into
+26	51	59	training
+26	65	80	further improve
+26	85	93	accuracy
+26	94	96	of
+26	97	106	our model
+26	107	109	to
+26	110	135	94.26 % UAS / 92.41 % LAS
+27	19	29	start with
+27	34	49	basic structure
+27	59	63	with
+27	66	85	deeper architecture
+27	90	102	improvements
+27	103	105	to
+27	110	132	optimization procedure
+31	13	16	use
+31	21	32	activations
+31	33	37	from
+31	38	48	all layers
+31	49	51	of
+31	56	70	neural network
+31	71	73	as
+31	78	92	representation
+31	93	95	in
+31	98	125	structured perceptron model
+31	134	146	trained with
+31	147	176	beam search and early updates
+35	17	25	generate
+35	26	42	large quantities
+35	43	45	of
+35	46	75	high - confidence parse trees
+35	76	86	by parsing
+35	87	101	unlabeled data
+35	102	106	with
+35	107	128	two different parsers
+35	133	142	selecting
+35	152	161	sentences
+35	176	187	two parsers
+35	188	196	produced
+35	201	211	same trees
+47	15	23	generate
+47	24	40	large quantities
+47	41	43	of
+47	44	73	high - confidence parse trees
+47	74	84	by parsing
+47	88	104	unlabeled corpus
+47	109	118	selecting
+47	128	137	sentences
+47	138	140	on
+47	147	168	two different parsers
+47	169	177	produced
+47	182	198	same parse trees
+48	10	20	comes from
+48	21	33	tri-training
+48	44	57	applicable to
+48	85	89	show
+48	98	106	benefits
+48	107	129	neural network parsers
+48	130	139	more than
+48	140	151	models with
+48	152	169	discrete features
+173	3	6	use
+173	9	31	CRF - based POS tagger
+173	32	43	to generate
+173	44	73	5 fold jack - knifed POS tags
+173	74	76	on
+173	81	112	training set and predicted tags
+173	113	115	on
+173	120	144	dev , test and tune sets
+173	147	150	our
+173	158	162	gets
+173	163	182	comparable accuracy
+173	190	209	Stanford POS tagger
+173	210	214	with
+173	215	224	97 . 44 %
+173	225	227	on
+177	3	11	train on
+177	16	21	union
+177	22	24	of
+177	25	53	each corpora 's training set
+177	58	65	test on
+177	66	77	each domain
+180	3	18	process it with
+180	23	40	Berkeley - Parser
+180	45	80	latent variable constituency parser
+180	89	105	reimplementation
+180	106	108	of
+180	109	113	ZPar
+180	118	143	transition - based parser
+180	144	148	with
+180	149	160	beam search
+196	0	14	randomly using
+196	17	38	Gaussian distribution
+196	39	43	with
+196	44	58	variance 10 ?4
+197	3	7	used
+197	8	28	fixed initialization
+197	29	33	with
+197	34	42	bi = 0.2
+197	45	54	to ensure
+197	60	75	most Relu units
+197	80	89	activated
+197	90	96	during
+197	101	127	initial rounds of training
+199	0	3	For
+199	8	36	word embedding matrix E word
+199	42	53	initialized
+199	58	68	parameters
+199	69	74	using
+199	75	101	pretrained word embeddings
+201	0	3	For
+201	4	9	words
+201	10	26	not appearing in
+201	31	48	unsupervised data
+201	91	95	used
+201	96	117	random initialization
+205	49	60	tuned using
+205	61	71	Section 24
+205	72	74	of
+205	79	82	WSJ
+206	5	8	not
+206	9	21	tri-training
+206	27	31	used
+206	32	47	hyperparameters
+206	48	50	of
+206	51	79	? = 0.2 , ? 0 = 0.05 , = 0.9
+206	82	96	early stopping
+206	97	102	after
+206	103	119	roughly 16 hours
+206	120	122	of
+206	123	136	training time
+209	0	3	For
+209	8	28	Treebank Union setup
+209	34	37	set
+209	38	54	M 1 = M 2 = 1024
+209	55	58	for
+209	63	84	standard training set
+209	97	115	tri-training setup
+211	3	13	compare to
+211	18	41	best dependency parsers
+213	0	2	On
+213	7	24	WSJ and Web tasks
+213	27	37	our parser
+213	38	49	outperforms
+213	50	72	all dependency parsers
+213	73	75	in
+213	76	90	our comparison
+213	91	93	by
+213	96	114	substantial margin
+214	4	28	Question ( QTB ) dataset
+214	32	49	more sensitive to
+214	54	71	smaller beam size
+214	88	96	to train
+214	101	107	models
+214	108	110	in
+214	113	128	reasonable time
+214	137	148	increase to
+214	149	155	B = 32
+214	156	158	at
+214	159	178	inference time only
+214	181	207	our perceptron performance
+214	208	218	goes up to
+214	219	230	92.29 % LAS
+216	9	20	tritraining
+216	21	29	did help
+216	34	42	baseline
+216	43	45	on
+216	50	57	dev set
+216	60	80	test set performance
+216	81	110	did not improve significantly
+218	14	26	tri-training
+218	27	32	helps
+218	33	50	most dramatically
+218	51	53	to
+218	54	62	increase
+218	63	71	accuracy
+218	72	74	on
+218	79	99	Treebank Union setup
+218	100	104	with
+218	105	120	diverse domains
+218	123	131	yielding
+218	132	174	0.4 - 1.0 % absolute LAS improvement gains
+218	175	178	for
+218	179	202	our most accurate model
+242	6	12	adding
+242	15	34	second hidden layer
+242	35	45	results in
+242	48	58	large gain
+242	59	61	on
+242	66	74	tune set
+242	94	96	on
+242	101	108	dev set
+242	109	111	if
+242	139	147	not used
+273	0	3	For
+273	4	28	our neural network model
+273	31	42	training on
+273	47	53	output
+273	54	56	of
+273	76	82	yields
+273	88	100	modest gains
+273	109	120	training on
+273	125	129	data
+273	130	135	where
+273	140	157	two parsers agree
+273	158	166	produces
+273	167	195	significantly better results
+274	39	52	greedy models
+274	55	60	after
+274	61	73	tri-training
+274	80	107	greedy neural network model
+274	108	117	surpasses
+274	122	136	BerkeleyParser
+274	137	139	in
+274	140	148	accuracy
+275	36	49	up - training
+275	50	58	improved
+275	59	66	results
+275	67	80	far more than
+275	81	93	tri-training
+275	94	97	for
+275	102	110	baseline
+278	29	34	using
+278	39	60	structured perceptron
+278	61	69	improved
+278	70	81	error rates
+278	82	84	on
+278	85	124	some of the common and difficult labels
+278	127	131	ROOT
+278	168	179	improved by
+278	180	185	> 1 %

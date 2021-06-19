@@ -1,2 +1,0 @@
-(Model||present||POS tagging and dependency paring)
-(Contribution||has||Model)

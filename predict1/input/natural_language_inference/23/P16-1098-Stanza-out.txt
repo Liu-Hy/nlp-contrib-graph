@@ -1,0 +1,213 @@
+title
+Deep Fusion LSTMs for Text Semantic Matching
+abstract
+Recently , there is rising interest in modelling the interactions of text pair with deep neural networks .
+In this paper , we propose a model of deep fusion LSTMs ( DF - LSTMs ) to model the strong interaction of text pair in a recursive matching way .
+Specifically , DF - LSTMs consist of two interdependent LSTMs , each of which models a sequence under the influence of another .
+We also use external memory to increase the capacity of LSTMs , thereby possibly capturing more complicated matching patterns .
+Experiments on two very large datasets demonstrate the efficacy of our proposed architecture .
+Furthermore , we present an elaborate qualitative analysis of our models , giving an intuitive understanding how our model worked .
+* Corresponding author and soon .
+These models first encode two sequences into continuous dense vectors by separated neural models , and then compute the matching score based on sentence encoding .
+In this paradigm , two sentences have no interaction until arriving final phase .
+Introduction
+Among many natural language processing ( NLP ) tasks , such as text classification , question answering and machine translation , a common problem is modelling the relevance / similarity of a pair of texts , which is also called text semantic matching .
+Due to the semantic gap problem , text semantic matching is still a challenging problem .
+Recently , deep learning is rising a substantial interest in text semantic matching and has achieved some great progresses .
+According to their interaction ways , previous models can be classified into three categories :
+Weak interaction
+Models Some early works focus on sentence level interactions , such as ARC - I , CNTN Semi-interaction Models
+Another kind of models use soft attention mechanism to obtain the representation of one sentence by depending on representation of another sentence , such as ABCNN , Attention LSTM .
+These models can alleviate the weak interaction problem to some extent .
+Strong Interaction Models
+Some models build the interaction at different granularity ( word , phrase and sentence level ) , such as ARC - II , MultiGranCNN , Multi - Perspective CNN , , MatchPyramid .
+The final matching score depends on these different levels of interactions .
+In this paper , we adopt a deep fusion strategy to model the strong interactions of two sentences .
+Given two texts x 1 :m and y 1 :n , we define a matching vector h i , j to represent the interaction of the subsequences x 1:i and y 1:j .
+h i , j depends on the matching vectors h s ,t on previous interactions 1 ? s < i and 1 ? t < j.
+Thus , text matching can be regarded as modelling the interaction of two texts in a recursive matching way .
+Following this idea , we propose deep fusion long short - term memory neural networks ( DF - LSTMs ) to model the interactions recursively .
+More concretely , DF - LSTMs consist of two interconnected conditional LSTMs , each of which models apiece of text under the influence of another .
+The output vector of DF - LSTMs is fed into a task - specific output layer to compute the match - ing score .
+The contributions of this paper can be summarized as follows .
+1 .
+Different with previous models , DF - LSTMs model the strong interactions of two texts in a recursive matching way , which consist of two inter -and intra-dependent LSTMs .
+2 .
+Compared to the previous works on text matching , we perform extensive empirical studies on two very large datasets .
+Experiment results demonstrate that our proposed architecture is more effective .
+3 .
+We present an elaborate qualitative analysis of our model , giving an intuitive understanding how our model worked .
+Recursively Text Semantic Matching
+To facilitate our model , we firstly give some definitions .
+Given two sequences X = x 1 , x 2 , , x m and Y = y 1 , y 2 , , y n , most deep neural models try to represent their semantic relevance by a matching vector h( X , Y ) , which is followed by a score function to calculate the matching score .
+The weak interaction methods decompose matching vector by h( X , Y ) = f ( h ( X ) , h( Y ) ) , where function f ( ) maybe one of some basic operations or the combination of them : concatenation , affine transformation , bilinear , and soon .
+In this paper , we propose a strong interaction of two sequences to decompose matching vector h( X , Y ) in a recursive way .
+We refer to the interaction of the subsequences x 1:i and y 1:j ash i , j ( X , Y ) , which depends on previous interactions h s , t ( X , Y ) for 1 ? s < i and 1 ? t < j. gives an example to illustrate this .
+For sentence pair X = " Female gymnast warm up before a competition " , Y = " Gymnast get ready fora competition " , considering the interaction ) between x 1:4 = " Female gymnast warm up " and y 1:4 = " Gymnast get ready for " , which is composed by the interactions between their subsequences ( h 1 , 4 , , h 3 , 4 , h 4 ,1 , , h 4,3 ) .
+We can see that a strong interaction between two sequences can be decomposed in recursive topology structure .
+The matching vector h i , j ( X , Y ) can be written as
+where h i , j ( X| Y ) refers to conditional encoding of subsequence x 1:i influenced by y 1 : j .
+Meanwhile , h i , j ( Y | X ) is conditional encoding of subsequence y 1:j influenced by subsequence x 1:i ; ? is concatenation operation .
+These two conditional encodings depend on their history encodings .
+Based on this , we propose deep fusion LSTMs to model the matching of texts by recursive composition mechanism , which can better capture the complicated interaction of two sentences due to fully considering the interactions between subsequences .
+Long Short - Term Memory Network
+Long short - term memory neural network ( LSTM ) is a type of recurrent neural network ( RNN ) , and specifically addresses the issue of learning long - term dependencies .
+LSTM maintains a memory cell that updates and exposes its content only when deemed necessary .
+While there are numerous LSTM variants , here we use the LSTM architecture used by , which is similar to the architecture of ( Graves , 2013 ) but without peep - hole connections .
+We define the LSTM units at each time step t to be a collection of vectors in Rd : an input gate it , a forget gate ft , an output gate o t , a memory cell ct and a hidden state ht .
+dis the number of the LSTM units .
+The elements of the gating vectors it , ft and o tare in [ 0 , 1 ] .
+The LSTM is precisely specified as follows .
+where x t is the input at the current time step ; T A ,b is an affine transformation which depends on parameters of the network A and b. ?
+denotes the logistic sigmoid function and denotes elementwise multiplication .
+Intuitively , the forget gate controls the amount of which each unit of the memory cell is erased , the input gate controls how much each unit is updated , and the output gate controls the exposure of the internal memory state .
+The update of each LSTM unit can be written precisely as
+Here , the function LSTM ( , , ) is a shorthand for Eq. ( 2 - 4 ) .
+LSTM can map the input sequence of arbitrary length to a fixed - sized vector , and has been successfully applied to a wide range of NLP tasks , such as machine translation , language modelling , text matching and text classification .
+Deep Fusion LSTMs for Recursively Semantic Matching
+To deal with two sentences , one straightforward method is to model them with two separate LSTMs .
+However , this method is difficult to model local interactions of two sentences .
+Following the recursive matching strategy , we propose a neural model of deep fusion LSTMs ( DF - LSTMs ) , which consists of two interdependent LSTMs to capture the inter -and intrainteractions between two sequences .
+gives an illustration of DF - LSTMs unit .
+To facilitate our model , we firstly give some definitions .
+Given two sequences X = x 1 , x 2 , , x n and Y = y 1 , y 2 , , y m , we let xi ?
+Rd denotes the embedded representation of the word x i .
+The standard LSTM has one temporal dimension .
+When dealing with a sentence , LSTM regards the position as time step .
+At position i of sentence x 1:n , the output hi reflects the meaning of subsequence x 1:i = x 1 , , xi .
+To model the interaction of two sentences in a recursive way , we define h i , j to represent the interaction of the subsequences x 1:i and y 1 :j , which is computed by
+where h ( x ) i , j denotes the encoding of subsequence x 1:i in the first LSTM influenced by the output of the second LSTM on subsequence y 1 :j ; h ( y ) i , j is the encoding of subsequence y 1 :j in the second LSTM influenced by the output of the first LSTM on subsequence x 1:i .
+More concretely ,
+where H i , j is information consisting of history states before position ( i , j ) .
+The simplest setting is
+i, j?1 .
+In this case , our model can be regarded as grid LSTMs .
+However , there are total mn interactions in recursive matching process , LSTM could be stressed to keep these interactions in internal memory .
+Therefore , inspired by recent neural memory network , such as neural Turing machine and memory network , we introduce two external memories to keep the history information , which can relieve the pressure on low - capacity internal memory .
+Following ( Tran et al. , 2016 ) , we use external memory constructed by history hidden states , which is defined as At position i , j , two memory blocks M ( x ) , M ( y ) are used to store contextual information of x and y respectively .
+where h ( x ) and h ( x ) are outputs of two conditional LSTMs at different positions .
+The history information can be read from these two memory blocks .
+We denote a read vector from external memories as r i , j ?
+Rd , which can be computed by soft attention mechanisms .
+where a i , j ? R K represents attention distribution over the corresponding memory M i , j ? R Kd .
+More concretely , each scalar a i , j , k in attention distribution a i , j can be obtained : where M i , j , k ?
+Rd represents the k - th row memory vector at position ( i , j ) , and g ( ) is an align function defined by
+where v ?
+Rd is a parameter vector and W a ?
+R d3d is a parameter matrix .
+The history information H i , j in Eq and is computed by
+By incorporating external memory blocks , DF - LSTMs allow network to re-read history interaction information , therefore it can more easily capture complicated and long - distance matching patterns .
+As shown in , the forward pass of DF - LSTMs can be unfolded along two dimensional ordering .
+Related Models
+Our model is inspired by some recently proposed models based on recurrent neural network ( RNN ) .
+One kind of models is multi-dimensional recurrent neural network ( MD - RNN ) ( Graves et al. , 2007 ; in machine learning and computer vision communities .
+As mentioned above , if we just use the neighbor states , our model can be regarded as grid LSTMs .
+What is different is the dependency relations between the current state and history states .
+Our model uses external memory to increase its memory capacity and therefore can store large useful interactions of subsequences .
+Thus , we can discover some matching patterns with long dependence .
+Another kind of models is memory augmented RNN , such as long short - term memory - network and recurrent memory network , which extend memory network and equip the RNN with ability of re-reading the history information .
+While they focus on sequence modelling , our model concentrates more on modelling the interactions of sequence pair .
+Training
+Task Specific Output
+There are two popular types of text matching tasks in NLP .
+One is ranking task , such as community question answering .
+Another is classification task , such as textual entailment .
+We use different ways to calculate matching score for these two types of tasks .
+1 . For ranking task , the output is a scalar matching score , which is obtained by a linear transformation of the matching vector obtained by FD - LSTMs .
+2 .
+For classification task , the outputs are the probabilities of the different classes , which is computed by a softmax function on the matching vector obtained by FD - LSTMs .
+Loss Function
+Accordingly , we use two loss functions to deal with different sentence matching tasks .
+Max - Margin Loss for Ranking Task Given a positive sentence pair ( X , Y ) and its corresponding negative pair ( X , ? ) .
+The matching score s ( X , Y ) should be larger than s ( X , ? ) .
+For this task , we use the contrastive max - margin criterion to train our model on matching task .
+The ranking - based loss is defined as
+Cross - entropy Loss for Classification Task
+Given a sentence pair ( X , Y ) and its label l .
+The outputl of neural network is the probabilities of the different classes .
+The parameters of the network are trained to minimise the cross-entropy of the predicted and true label distributions .
+where l is one - hot representation of the groundtruth label l ;l is predicted probabilities of labels ; C is the class number .
+Optimizer
+To minimize the objective , we use stochastic gradient descent with the diagonal variant of Ada - Grad .
+To prevent exploding gradients , we perform gradient clipping by scaling the gradient when the norm exceeds a threshold .
+Initialization and Hyperparameters
+Orthogonal Initialization
+We use orthogonal initialization of our LSTMs , which allows neurons to react to the diverse patterns and is helpful to train a multi - layer network .
+Experiment
+In this section , we investigate the empirical performances of our proposed model on two different text matching tasks : classification task ( recognizing textual entailment ) and ranking task ( matching of question and answer ) .
+Competitor Methods
+Neural bag - of - words ( NBOW ) :
+Each sequence is represented as the sum of the embeddings of the words it contains , then they are concatenated and fed to a MLP .
+Single LSTM : Two sequences are encoded by a single LSTM , proposed by .
+Parallel LSTMs : Two sequences are first encoded by two LSTMs separately , then they are concatenated and fed to a MLP .
+Attention LSTMs : Two sequences are encoded by LSTMs with attention mechanism , proposed by .
+Word - by - word Attention LSTMs : An improved strategy of attention LSTMs , which introduces word - by - word attention mechanism and is proposed by . :
+Accuracies of our proposed model against other neural models on SNLI corpus .
+Experiment - I : Recognizing Textual Entailment
+Recognizing textual entailment ( RTE ) is a task to determine the semantic relationship between two sentences .
+We use the Stanford Natural Language Inference Corpus ( SNLI ) .
+This corpus contains 570K sentence pairs , and all of the sentences and labels stem from human annotators .
+SNLI is two orders of magnitude larger than all other existing RTE corpora .
+Therefore , the massive scale of SNLI allows us to train powerful neural networks such as our proposed architecture in this paper .
+The results of DF - LSTMs outperform all the competitor models with the same number of hidden states while achieving comparable results to the state - of - the - art and using much fewer parameters , which indicate that it is effective to model the strong interactions of two texts in a recursive matching way .
+Results
+Results of MQA are shown in the .
+we can see that the proposed model also shows its superiority on this task , which outperforms the stateof - the - arts methods on both metrics ( P@1 ( 5 ) and P@1 ( 10 ) ) with a large margin .
+By analyzing the evaluation results of questionanswer matching in , we can see strong interaction models ( attention LSTMs , our DF - LSTMs ) consistently outperform the weak interaction models ( NBOW , parallel LSTMs ) with a large margin , which suggests the importance of modelling strong interaction of two sentences .
+Understanding Behaviors of Neurons in DF - LSTMs
+To get an intuitive understanding of how the DF - LSTMs work on this problem , we examined the neuron activations in the last aggregation layer while evaluating the test set .
+We find that some cells are bound to certain roles .
+We refer to h i , j , k as the activation of the kth neuron at the position of ( i , j ) , where i ?
+{ 1 , . . . , n} and j ?
+{ 1 , . . . , m}.
+By visualizing the hidden state h i , j , k and analyzing the maximum activation , we can find that there exist multiple interpretable neurons .
+For example , when some contextualized local perspectives are semantically related at point ( i , j ) of the sentence pair , the activation value of hidden neuron h i , j , k tends to be maximum , meaning that the model could capture some reasoning patterns .
+illustrates this phenomenon .
+In , a neuron shows its ability to monitor the word pairs with the property of describing different things of the same type .
+The activation in the patch , containing the word pair " ( cat , dog ) " , is much higher than others .
+This is an informative pattern for the relation prediction of these two sentences , whose ground truth is contradiction .
+An interesting thing is there are two " dog " in sentence " Dog running with pet toy being by another dog " .
+Our model ignores the useless word , which indicates this neuron selectively captures pattern by contextual understanding , not just word level interaction .
+In , another neuron shows that it can capture the local contextual interactions , such as " ( ocean waves , beach ) " .
+These patterns can be easily captured by final layer and provide a strong support for the final prediction .
+illustrates multiple interpretable neurons and some representative word or phrase pairs which can activate these neurons .
+These cases show that our model can capture contextual interactions beyond word level .
+Case Study for Attention Addressing
+Mechanism External memory with attention addressing mechanism enables the network explicitly to utilize the history information of two sentences simultaneously .
+As a by-product , the obtained attention distribution over history hidden states also help us interpret the network and discover underlying dependencies present in the data .
+To this end , we randomly sample two good cases with entailment relation from test data and visualize attention distributions over external memory constructed by last 9 hidden states .
+As shown in , For the first sentence pair , when the word pair " ( competition , competition ) " are processed , the model simultaneously selects " warm , before " from one sentence and " gymnast , ready , for " from the other , which are informative patterns and indicate our model has the capacity of capturing phrase - phrase pair .
+Another case in ( b ) also shows by attention mechanism , the network can sufficiently utilize the history information and the fusion approach allows two LSTMs to share the history information of each other .
+Error Analysis
+Although our model DF - LSTMs are more sensitive to the discrepancy of the semantic capacity between two sentences , some cases still can not be solved by our model .
+For example , our model gives a wrong prediction of the sentence pair " A golden retriever nurses puppies / Puppies next to their mother " , whose ground truth is entailment .
+The model fails to realize " nurses " means " next to " .
+Besides , despite the large size of the training corpus , it 's still very difficult to solve some cases , which depend on the combination of the world knowledge and context - sensitive inferences .
+For example , given an entailment pair " Several women are playing volleyball / The women are hitting a ball with their arms " , all models predict " neutral " .
+These analysis suggests that some architectural improvements or external world knowledge are necessary to eliminate all errors instead of simply scaling up the basic model .
+Experiment - II : Matching Question and Answer
+Matching question answering ( MQA ) is atypical task for semantic matching .
+Given a question , we need select a correct answer from some candidate answers .
+In this paper , we use the dataset collected from Yahoo !
+Answers with the getByCategory function provided in Yahoo !
+Answers API , which produces 963 , 072 questions and corresponding best answers .
+We then select the pairs in which the length of questions and answers are both in the interval , thus obtaining 220 , 000 question answer pairs to form the positive pairs .
+For negative pairs , we first use each question 's best answer as a query to retrieval top 1 , 000 re - sults from the whole answer set with Lucene , where 4 or 9 answers will be selected randomly to construct the negative pairs .
+The whole dataset 1 is divided into training , validation and testing data with proportion 20 : 1 : 1 . Moreover , we give two test settings : selecting the best answer from 5 and 10 candidates respectively .
+Related Work
+Our model can be regarded as a strong interaction model , which has been explored in previous methods .
+One kind of methods is to compute similarities between all the words or phrases of the two sentences to model multiple - granularity interactions of two sentences , such as RAE ( Socher et 1 http://nlp.fudan.edu.cn/data/. al. , 2011 ) , Arc -II , ABCNN , MultiGranCNN , Multi- Perspective CNN , . firstly used this paradigm for paraphrase detection .
+The representations of words or phrases are learned based on recursive autoencoders .
+proposed to an end - to - end architecture with convolutional neural network ( Arc - II ) to model multiple - granularity interactions of two sentences .
+used LSTM to enhance the positional contextual interactions of the words or phrases between two sentences .
+The input of LSTM for one sentence does not involve another sentence .
+Another kind of methods is to model the conditional encoding , in which the encoding of one sentence can be affected by another sentence .
+and used LSTM to read pairs of sequences to produce a final representation , which can be regarded as interaction of two sequences .
+By incorporating an attention mechanism , they got further improvements to the predictive abilities .
+Different with these two kinds of methods , we model the interactions of two texts in a recursively matching way .
+Based on this idea , we propose a model of deep fusion LSTMs to accomplish recursive conditional encodings .
+Conclusion and Future Work
+In this paper , we propose a model of deep fusion LSTMs to capture the strong interaction for text semantic matching .
+Experiments on two large scale text matching tasks demonstrate the efficacy of our proposed model and its superiority to competitor models .
+Besides , our visualization analysis revealed that multiple interpretable neurons in our model can capture the contextual interactions of the words or phrases .
+In future work , we would like to investigate our model on more text matching tasks .

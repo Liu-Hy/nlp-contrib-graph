@@ -1,0 +1,8 @@
+(Our model||able to||solve)
+(other models||in terms of||number of solved tasks)
+(other models||in terms of||average error)
+(solve||has||all the tasks)
+(outperforming||has||other models)
+(useful or correct information||in||memory slots)
+(memory slots||corresponding to||locations)
+(Contribution||has||Experiments)

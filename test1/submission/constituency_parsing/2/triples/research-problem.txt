@@ -1,5 +1,0 @@
-(Contribution||has research problem||general purpose sequence - to - sequence models)
-(Contribution||has research problem||constituency parsing)
-(Contribution||has research problem||sequenceto - sequence model)
-(Contribution||has research problem||Sequence - to - sequence ( Seq2seq ))
-(Contribution||has research problem||Constituency Parsing)

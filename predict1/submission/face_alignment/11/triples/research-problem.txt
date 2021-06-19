@@ -1,0 +1,6 @@
+(Contribution||has research problem||Finding the coordinates)
+(Contribution||has research problem||Facial features)
+(Contribution||has research problem||smoothly degrade)
+(Contribution||has research problem||necessary information)
+(Contribution||has research problem||no longer present)
+(Contribution||has research problem||input image)

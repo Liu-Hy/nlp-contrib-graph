@@ -1,0 +1,152 @@
+title
+SDNET : CONTEXTUALIZED ATTENTION - BASED DEEP NETWORK FOR CONVERSATIONAL QUESTION AN - SWERING
+abstract
+Conversational question answering ( CQA ) is a novel QA task that requires understanding of dialogue context .
+Different from traditional single - turn machine reading comprehension ( MRC ) tasks , CQA includes passage comprehension , coreference resolution , and contextual understanding .
+In this paper , we propose an innovated contextualized attention - based deep neural network , SDNet , to fuse context into traditional MRC models .
+Our model leverages both inter-attention and self - attention to comprehend conversation context and extract relevant information from passage .
+Furthermore , we demonstrated a novel method to integrate the latest BERT contextual model .
+Empirical results show the effectiveness of our model , which sets the new state of the art result in CoQA leaderboard , outperforming the previous best model by 1.6 % F 1 .
+Our ensemble model further improves the result by 2.7 % F 1 .
+INTRODUCTION
+Traditional machine reading comprehension ( MRC ) tasks share the single - turn setting of answering a single question related to a passage .
+There is usually no connection between different questions and answers to the same passage .
+However , the most natural way humans seek answers is via conversation , which carries over context through the dialogue flow .
+To incorporate conversation into reading comprehension , recently there are several public datasets that evaluate QA model 's efficacy in conversational setting , such as CoQA , QuAC and QBLink .
+In these datasets , to generate correct responses , models are required to fully understand the given passage as well as the context of previous questions and answers .
+Thus , traditional neural MRC models are not suitable to be directly applied to this scenario .
+Existing approaches to conversational QA tasks include BiDAF + + , , DrQA + PGNet , which all try to find the optimal answer span given the passage and dialogue history .
+In this paper , we propose SDNet , a contextual attention - based deep neural network for the task of conversational question answering .
+Our network stems from machine reading comprehension models , but has several unique characteristics to tackle contextual understanding during conversation .
+Firstly , we apply both inter-attention and self - attention on passage and question to obtain a more effective understanding of the passage and dialogue history .
+Secondly , SDNet leverages the latest breakthrough in NLP : BERT contextual embedding .
+Different from the canonical way of appending a thin layer after BERT structure according to , we innovatively employed a weighted sum of BERT layer outputs , with locked BERT parameters .
+Thirdly , we prepend previous rounds of questions and answers to the current question to incorporate contextual information .
+Empirical results show that each of these components has substantial gains in prediction accuracy .
+We evaluated SDNet on CoQA dataset , which improves the previous state - of - the - art model 's result by 1.6 % ( from 75.0 % to 76.6 % ) overall F 1 score .
+The ensemble model further increase the F 1 score to 79.3 % .
+Moreover , SDNet is the first model ever to pass 80 % on CoQA 's in - domain dataset .
+APPROACH
+In this section , we propose the neural model , SDNet , for the conversational question answering task , which is formulated as follows .
+Given a passage C , and history question and answer utterances Q 1 , A 1 , Q 2 , A 2 , ... , Q k?1 , A k?1 , the task is to generate response A k given the latest question Q k  .
+The response is dependent on both the passage and history utterances .
+To incorporate conversation history into response generation , we employ the idea from DrQA + PGNet to prepend the latest N rounds of utterances to the current question Q k  .
+The problem is then converted into a machine reading comprehension task .
+In other words , the reformulate question is Q k = { Q k?N ; A k?N ; ... , Q k?1 ; A k?1 ; Q k }.
+To differentiate between question and answering , we add symbol Q before each question and A before each answer in the experiment .
+MODEL OVERVIEW
+Encoding layer encodes each token in passage and question into a fixed - length vector , which includes both word embeddings and contextualized embeddings .
+For contextualized embedding , we utilize the latest result from BERT .
+Different from previous work , we fix the parameters in BERT model and use the linear combination of embeddings from different layers in BERT .
+Integration layer uses multi - layer recurrent neural networks ( RNN ) to capture contextual information within passage and question .
+To characterize the relationship between passage and question , we conduct word - level attention from question to passage both before and after the RNNs .
+We employ the idea of history - of - word from FusionNet to reduce the dimension of output hidden vectors .
+Furthermore , we conduct self - attention to extract relationship between words at different positions of context and question .
+Output layer computes the final answer span .
+It uses attention to condense the question into a fixedlength vector , which is then used in a bilinear projection to obtain the probability that the answer should start and end at each position .
+An illustration of our model SDNet is in .
+ENCODING LAYER
+We use 300 - dim Glo Ve embedding and contextualized embedding for each word in context and question .
+We employ BERT as contextualized embedding .
+Instead of adding a scoring layer to BERT structure as proposed in , we use the transformer output from BERT as contextualized embedding in our encoding layer .
+BERT generates
+L layers of hidden states for all BPE tokens in a sentence / passage and we employ a weighted sum of these hidden states to obtain contextualized embedding .
+Furthermore , we lock BERT 's internal weights , setting their gradients to zero .
+In ablation studies , we will show that this weighted sum and weight - locking mechanism can significantly boost the model 's performance .
+In detail , suppose a word w is tokenized to s BPE tokens w = {b 1 , b 2 , ... , b s } , and BERT generates
+L hidden states for each BPE token , h l t , 1 ? l ? L , 1 ? t ? s.
+The contextual embedding BERT w for word w is then a per-layer weighted sum of average BERT embedding , with weights ? 1 , ... , ? L .
+where D ?
+R kk is a diagonal matrix and U ?
+R dk , k is the attention hidden size .
+To simplify notation , we define the attention function above as Attn ( A , B , C ) , meaning we compute the attention score ?
+ij based on two sets of vectors A and B , and use that to linearly combine vector set C .
+So the word - level attention above can be simplified as
+.
+For each context word in C , we also include a feature vector f w including 12 - dim POS embedding , 8 - dim NER embedding , a 3 - dim exact matching vector em i indicating whether each context word appears in the question , and a normalized term frequency , following the approach in DrQA .
+Therefore , the input vector for each context word isw
+RNN .
+In this component , we use two separate bidirectional RNNs ( BiLSTMs ) to form the contextualized understanding for C and Q .
+where 1 ? k ?
+K and K is the number of RNN layers .
+We use variational dropout for input vector to each layer of RNN , i.e. the dropout mask is shared over different timesteps .
+Question Understanding .
+For each question word in Q , we employ one more layer of RNN to generate a higher level of understanding of the question .
+Self - Attention on Question .
+As the question has integrated previous utterances , the model needs to directly relate previously mentioned concept with the current question .
+This is helpful for concept carry - over and coreference resolution .
+We thus employ self - attention on question .
+The formula is the same as word - level attention , except that we are attending a question to itself :
+.
+Multilevel Inter - Attention .
+After multiple layers of RNN extract different levels of understanding of each word , we conduct multilevel attention from question to context based on all layers of generated representations .
+However , the aggregated dimensions can be very large , which is computationally inefficient .
+We thus leverage the history - of - word idea from FusionNet ( Huang et al. , 2017 ) : we use all previous levels to compute attentions scores , but only linearly combine RNN outputs .
+In detail , we conduct K + 1 times of multilevel attention from each RNN layer output of question to context .
+where history - of - word vectors are defined as
+].
+An additional RNN layer is applied to obtain the contextualized representation v Ci for each word in C.
+y
+Self Attention on Context .
+Similar to questions , we conduct self attention on context to establish direct correlations between all pairs of words in C. Again , we use the history of word concept to reduce the output dimension by linearly combining v Ci .
+The self - attention is followed by an additional layer of RNN to generate the final representation of context :
+OUTPUT LAYER
+Generating Answer Span .
+This component is to generate two scores for each context word corresponding to the probability that the answer starts and ends at this word , respectively .
+Firstly , we condense the question representation into one vector :
+and w is a parametrized vector .
+Secondly , we compute the probability that the answer span should start at the i - th word :
+where W S is a parametrized matrix .
+We further fuse the start - position probability into the computation of end-position probability via a GRU , t Q = GRU ( u Q , i PS i u Ci ) .
+Thus , the probability that the answer span should end at the i - th word is :
+For CoQA dataset , the answer could be affirmation " yes " , negation " no " or no answer " unknown " .
+We separately generate three probabilities corresponding to these three scenarios , P Y , P N , P U , respectively .
+For instance , to generate the probability that the answer is " yes " , P Y , we use :
+where WY and w Y are parametrized matrix and vector , respectively .
+Training .
+For training , we use all questions / answers for one passage as a batch .
+The goal is to maximize the probability of the ground - truth answer , including span start / end position , affirmation , negation and no -answer situations .
+Equivalently , we minimize the negative log-likelihood function L:
+where i s k and i e k are the ground - truth span start and end position for the k - th question .
+indicate whether the k - th ground - truth answer is a passage span , " yes " , " no " and " unknown " , respectively .
+More implementation details are in Appendix .
+Prediction .
+During inference , we pick the largest span / yes/no/unknown probability .
+The span is constrained to have a maximum length of 15 .
+EXPERIMENTS
+We evaluated our model on CoQA , a large - scale conversational question answering dataset .
+In CoQA , many questions require understanding of both the passage and previous questions and answers , which poses challenge to conventional machine reading models .
+summarizes the domain distribution in CoQA .
+As shown , CoQA contains passages from multiple domains , and the average number of question answering turns is more than 15 per passage .
+Many questions require contextual understanding to generate the correct answer . Baseline models and metrics .
+We compare SDNet with the following baseline models : PGNet ( Seq2 Seq with copy mechanism ) , DrQA , DrQA + PGNet , BiDAF ++ and .
+Aligned with the official leaderboard , we use F 1 as the evaluation metric , which is the harmonic mean of precision and recall at word level between the predicted answer and ground truth .
+1
+Results .
+report the performance of SDNet and baseline models .
+2
+As shown , SDNet achieves significantly better results than baseline models .
+In detail , the single SDNet model improves overall F 1 by 1.6 % , compared with previous state - of - art model on CoQA , Flow QA .
+Ensemble SDNet model further improves overall F 1 score by 2.7 % , and it 's the first model to achieve over 80 % F 1 score on in - domain datasets ( 80.7 % ) .
+shows the F 1 score on development set over epochs .
+As seen , SDNet overpasses all but one baseline models after the second epoch , and achieves state - of - the - art results only after 8 epochs .
+Ablation Studies .
+We conduct ablation studies on SDNet model and display the results in .
+The results show that removing BERT can reduce the F 1 score on development set by 7.15 % .
+Our proposed weight sum of per-layer output from BERT is crucial , which can boost the performance by 1.75 % , compared with using only last layer 's output .
+This shows that the output from each layer in BERT is useful in downstream tasks .
+This technique can also be applied to other NLP tasks .
+Using BERT - base instead of BERT - large pretrained model hurts the F 1 score by 2.61 % , which manifests the superiority of BERT - large model .
+Variational dropout and self attention can each improve the performance by 0.24 % and 0.75 % , respectively .
+Contextual history .
+In SDNet , we utilize conversation history via prepending the current question with previous N rounds of questions and ground - truth answers .
+We experimented the effect of N and show the result in .
+Excluding dialogue history ( N = 0 ) can reduce the F 1 score by as
+CONCLUSIONS
+In this paper , we propose a novel contextual attention - based deep neural network , SDNet , to tackle conversational question answering task .
+By leveraging inter-attention and self - attention on passage and conversation history , the model is able to comprehend dialogue flow and fuse it with the digestion of passage content .
+Furthermore , we incorporate the latest breakthrough in NLP , BERT , and leverage it in an innovative way .
+SDNet achieves superior results over previous approaches .
+On the public dataset CoQA , SDNet outperforms previous state - of - the - art model by 1.6 % in overall F 1 metric .
+Our future work is to apply this model to open - domain multiturn QA problem with large corpus or knowledge base , where the target passage may not be directly available .
+This will bean even more realistic setting to human question answering .

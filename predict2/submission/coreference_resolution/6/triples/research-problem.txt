@@ -1,0 +1,6 @@
+(Contribution||has research problem||End - to - End Co -reference Resolution)
+(Contribution||has research problem||word embedding model)
+(Contribution||has research problem||cross - sentence dependency)
+(Contribution||has research problem||end - to - end co-reference resolution ( E2E - CR ))
+(Contribution||has research problem||attentional sentence linking models)
+(Contribution||has research problem||crosssentence dependency)

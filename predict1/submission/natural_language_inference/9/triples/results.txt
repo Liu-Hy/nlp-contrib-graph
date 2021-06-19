@@ -1,0 +1,5 @@
+(Our BERT model||for||NQ)
+(Our BERT model||performs||dramatically better)
+(NQ||performs||dramatically better)
+(Results||has||Our BERT model)
+(Contribution||has||Results)

@@ -1,0 +1,5 @@
+(GLUE||diverges from||SentEval)
+(SentEval||in||selection of)
+(evaluation tasks||included in||suite)
+(selection of||has||evaluation tasks)
+(Contribution||has||Experiments)

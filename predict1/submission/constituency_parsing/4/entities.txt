@@ -1,0 +1,89 @@
+2	10	24	Neural Parsing
+80	0	3	For
+80	8	36	LSTM generative model ( LM )
+80	42	45	use
+80	50	67	pre-trained model
+84	3	6	use
+84	7	36	actionsynchronous beam search
+84	53	57	with
+84	58	75	beam size K = 100
+84	76	79	for
+84	80	82	RD
+84	87	110	word - synchronous beam
+84	127	131	with
+84	132	135	K w
+84	157	160	for
+84	165	182	generative models
+84	183	192	RG and LM
+88	19	24	found
+88	25	43	higher performance
+88	44	47	for
+88	52	60	LM model
+88	61	71	when using
+88	74	88	candidate list
+88	89	93	from
+88	98	107	RD parser
+88	110	118	93.66 F1
+88	119	125	versus
+88	126	134	92.79 F1
+88	135	137	on
+88	142	158	development data
+111	13	22	combining
+111	27	33	scores
+111	34	36	of
+111	37	48	both models
+111	49	57	improves
+111	61	66	using
+111	71	76	score
+111	77	79	of
+111	80	98	either model alone
+113	0	17	Score combination
+113	23	48	more than compensates for
+113	53	64	decrease in
+113	65	76	performance
+113	95	99	when
+113	100	109	adding in
+113	110	120	candidates
+113	121	125	from
+113	130	146	generative model
+113	149	151	RD
+122	117	134	score combination
+122	135	143	improves
+122	144	151	results
+122	152	155	for
+122	156	166	all models
+122	207	211	with
+122	212	234	candidate augmentation
+122	235	239	from
+122	244	261	generative models
+122	271	287	further increase
+130	10	35	PTB training data setting
+130	38	43	using
+130	44	54	all models
+130	55	58	for
+130	59	92	candidates and score combinations
+130	93	95	is
+130	96	100	best
+130	103	112	achieving
+130	113	121	94.66 F1
+134	0	11	Performance
+134	17	22	using
+134	23	51	only the ensembled RD models
+134	66	71	lower
+134	77	86	rescoring
+134	89	104	single RD model
+134	105	109	with
+134	110	128	score combinations
+134	129	131	of
+134	132	145	single models
+134	155	162	RD + RG
+134	176	183	RD + LM
+135	0	2	In
+135	7	18	PTB setting
+135	21	31	ensembling
+135	32	36	with
+135	37	54	score combination
+135	55	63	achieves
+135	68	88	best over all result
+135	89	91	of
+135	92	97	94.25

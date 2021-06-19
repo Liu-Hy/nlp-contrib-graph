@@ -1,0 +1,4 @@
+(Baselines||implement||single DSA)
+(DSA and self - attention||stacked on||CNN with Dense Connection)
+(Baselines||has||DSA and self - attention)
+(Contribution||has||Baselines)

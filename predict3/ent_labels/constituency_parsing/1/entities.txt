@@ -1,0 +1,110 @@
+11	19	23	show
+11	29	58	even larger performance gains
+11	63	71	possible
+11	72	74	by
+11	75	94	jointly pretraining
+11	95	110	both directions
+11	111	113	of
+11	116	178	large language - model - inspired self - attention cloze model
+12	0	43	Our bi-directional transformer architecture
+12	44	52	predicts
+12	53	64	every token
+12	65	67	in
+12	72	85	training data
+14	0	9	Our model
+14	10	29	separately computes
+14	30	62	both forward and backward states
+14	63	67	with
+14	70	88	Equal contribution
+13	19	30	introducing
+13	33	65	cloze - style training objective
+13	66	71	where
+13	76	81	model
+13	87	94	predict
+13	99	110	center word
+13	111	116	given
+13	117	180	left - to - right and right - to - left context representations
+130	3	6	run
+130	7	18	experiments
+130	19	21	on
+130	22	38	DGX - 1 machines
+130	39	43	with
+130	44	62	8 NVIDIA V100 GPUs
+130	67	75	machines
+130	80	97	interconnected by
+130	98	108	Infiniband
+128	0	10	CNN models
+128	11	14	use
+128	18	34	adaptive softmax
+128	35	37	in
+128	42	48	output
+128	55	63	headband
+128	64	72	contains
+128	77	100	60K most frequent types
+128	101	105	with
+128	106	120	dimensionality
+128	121	125	1024
+128	128	139	followed by
+128	142	152	160 K band
+128	153	157	with
+128	158	172	dimensionality
+128	173	176	256
+129	4	17	learning rate
+129	21	39	linearly warmed up
+129	40	44	from
+129	45	51	10 ? 7
+129	52	54	to
+129	55	56	1
+129	57	60	for
+129	61	71	16 K steps
+129	81	89	annealed
+129	90	95	using
+129	98	127	cosine learning rate schedule
+129	128	132	with
+129	135	147	single phase
+129	148	150	to
+129	151	157	0.0001
+131	8	11	use
+131	16	29	NCCL2 library
+131	38	43	torch
+2	15	55	Pretraining of Self - attention Networks
+4	30	76	pretraining a bi-directional transformer model
+9	0	26	Language model pretraining
+136	0	4	GLUE
+151	0	14	All our models
+151	15	25	outperform
+151	30	57	uni-directional transformer
+153	0	18	Our CNN base model
+153	19	27	performs
+153	31	35	well
+153	28	30	as
+153	39	45	STILTs
+153	46	48	in
+153	49	58	aggregate
+163	0	24	Named Entity Recognition
+167	90	101	fine tuning
+167	102	107	gives
+167	112	124	biggest gain
+168	0	20	Constituency Parsing
+180	65	75	found that
+180	76	83	scaling
+180	88	97	bilm term
+180	98	100	by
+180	103	109	factor
+180	110	112	of
+180	113	117	0.15
+180	5	15	results in
+180	129	147	better performance
+181	0	10	shows that
+181	15	25	cloze loss
+181	26	34	performs
+181	35	55	significantly better
+181	56	60	than
+181	65	74	bilm loss
+181	84	93	combining
+181	98	112	two loss types
+181	113	129	does not improve
+181	130	134	over
+181	139	149	cloze loss
+110	0	18	Experimental setup
+135	0	7	Results

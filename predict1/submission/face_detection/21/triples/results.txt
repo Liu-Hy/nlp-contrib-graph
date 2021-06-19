@@ -1,0 +1,4 @@
+(multi-task RPN , Supervised Transformer , and feature combination||bring about||1 % , 1 % , and 2 % recall improvement)
+(Results||has||multi-task RPN , Supervised Transformer , and feature combination)
+(Results||On||FDDB dataset)
+(Contribution||has||Results)

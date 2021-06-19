@@ -1,0 +1,7 @@
+(Contribution||has research problem||Neural network models)
+(Contribution||has research problem||remarkable performance)
+(Contribution||has research problem||sentence and document modeling)
+(Contribution||has research problem||C - LSTM)
+(Contribution||has research problem||both local features)
+(Contribution||has research problem||phrases)
+(Contribution||has research problem||global and temporal sentence semantics)

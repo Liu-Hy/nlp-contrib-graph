@@ -1,8 +1,0 @@
-(new formulation||of||P ( c ))
-(Baselines||propose||new formulation)
-(beam search mechanism and a reranker||over||top k outputs)
-(beam search mechanism and a reranker||to dis advantage||utterances)
-(utterances||that do not verbalize||all the information)
-(all the information||contained in||MR)
-(Baselines||has||TGen)
-(Contribution||has||Baselines)

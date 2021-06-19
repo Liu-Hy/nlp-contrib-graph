@@ -1,0 +1,2 @@
+(Contribution||has research problem||entity - level representation)
+(Contribution||has research problem||high)
