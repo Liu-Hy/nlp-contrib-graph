@@ -35,9 +35,9 @@ For detailed description of our method, please see the [paper](https://arxiv.org
 * <code>predict1/</code> - scripts for Evaluation Phase 1 (end-to-end evaluation). Run the scripts in this order:
   * **pre**.py - test data preprocessing
   * **sent_binary**.py - contribution sentence classification
-  * **sent_multi**.py - classify the predicted contribution sentences into information units
-  * **ner**.py - extract the phrases. The 'specific-bio' scheme was used in this phase.
-  * **predict_triples**.py - extract triples of type A, B, C and D, using different models.
+  * **sent_multi**.py - information units classification
+  * **ner**.py - phrases extraction. The 'specific-bio' scheme was used in this phase.
+  * **predict_triples**.py - extraction of type A, B, C and D triples, using different models.
   * **submit**.ipynb - output formatting for submission
 * <code>predict2/</code> - scripts for Evaluation Phase 2 Part 1: given the contribution sentence labels, do the rest.
   * The naming of scripts basically follows that in *predict1/*. 
