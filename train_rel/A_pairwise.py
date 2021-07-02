@@ -43,8 +43,7 @@ def convert(arr):
                     if pre[0] == tp[1] and np[0] in tp[::2]:
                         flg = 1
                         break
-                ls.append([int(arr[i, 0]), int(arr[i, 1]),
-                           ' '.join(word_ls), flg])
+                ls.append([int(arr[i, 0]), arr[i, 1], ' '.join(word_ls), flg])
     dataframe = pd.DataFrame(ls)
     dataframe.columns = ['idx', 'info_unit', 'text', 'labels']
     return dataframe
