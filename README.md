@@ -43,8 +43,8 @@ For detailed description of our method, please see the [paper](https://arxiv.org
   * The naming of scripts basically follows that in <code>predict1/</code>. 
   * A filename ended with '-ens' indicates that an ensemble of submodels is used for prediction.
   * In this phase and later, we used the 'simple-bio' scheme for phrase extraction.
-* <code>predict3/</code> scripts for Evaluation Phase 2 Part 2: given the labels of contribution sentences and phrases, and do the rest.
-  * We copied the result of information unit classification in <code>predict2/</code>. So after running <code>pre.py</code>, we directly start from phrase classification.
+* <code>predict3/</code> scripts for Evaluation Phase 2 Part 2: given the labels of contribution sentences and phrases, do the rest.
+  * We copied the result of information unit classification in <code>predict2/</code>. So after running <code>pre.py</code>, we directly started from phrase classification.
 
 ## External Links
 * See the [official website](https://ncg-task.github.io/) for details of this task
