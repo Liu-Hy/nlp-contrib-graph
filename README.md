@@ -30,20 +30,20 @@ For detailed description of our method, please see the [paper](https://arxiv.org
   * In the 'simple_bio' scheme, we first identify the phrases, and then classify them into predicates and terms. The script for ensembling the models are also provided.
 
 * <code>train_rel/</code> - For subtask 3: triple extraction\, four models are trained to extract triples of type A, B, C and D respectively. 
-  * For type A triples, two schemes are implemented: pairwise classification and direct triple classification. The latter scheme is used in all evaluation phases for better performance. 
+  * For type A triples, two schemes are implemented: pairwise classification and direct triple classification. Only the latter scheme is used in evaluation phases.
 
 * <code>predict1/</code> scripts for Evaluation Phase 1 (end-to-end evaluation). Run the scripts in this order:
   * **pre**.py - test data preprocessing
   * **sent_binary**.py - contribution sentence classification
   * **sent_multi**.py - classify the predicted contribution sentences into information units
-  * **ner**.py - extract the phrases. The 'specific-bio' scheme was used in this stage.
+  * **ner**.py - extract the phrases. The 'specific-bio' scheme was used in this phase.
   * **predict_triples**.py - extract triples of type A, B, C and D, using different models.
   * **submit**.ipynb - output formatting for submission
 * <code>predict2/</code> scripts for Evaluation Phase 2 Part 1: given the contribution sentence labels, do the rest.
   * The naming of scripts basically follows that in <code>predict1/</code>. 
   * A filename ended with '-ens' indicates that an ensemble of submodels is used for prediction.
-  * In this stage and later, we used the 'simple-bio' scheme for phrase extraction.
-* <code>predict3/</code> scripts for Evaluation Phase 2 Part 2: Given the labels of contribution sentences and phrases, and do the rest.
+  * In this phase and later, we used the 'simple-bio' scheme for phrase extraction.
+* <code>predict3/</code> scripts for Evaluation Phase 2 Part 2: given the labels of contribution sentences and phrases, and do the rest.
   * We copied the result of information unit classification in <code>predict2/</code>. So after running <code>pre.py</code>, we directly start from phrase classification.
 
 ## External Links
