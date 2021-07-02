@@ -18,7 +18,7 @@ transformers_logger = logging.getLogger("transformers")
 transformers_logger.setLevel(logging.WARNING)
 
 pos = pd.read_csv('pos_sent.csv')
-pos1 = pd.read_csv('../test2/pos_sent.csv')
+pos1 = pd.read_csv('../predict2/pos_sent.csv')
 pos['labels'] = pos1['labels'].values
 pos.to_csv('pos_sent.csv')
 
