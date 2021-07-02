@@ -73,8 +73,8 @@ model_args.evaluate_during_training_verbose = True
 
 model_args.reprocess_input_data = True
 model_args.overwrite_output_dir = True
-model_args.output_dir = 'Ad/'
-model_args.best_model_dir = 'Ad/best_model'
+model_args.output_dir = 'A/'
+model_args.best_model_dir = 'A/best_model'
 model_args.save_model_every_epoch = True
 model_args.save_steps = -1
 model_args.manual_seed = 1
