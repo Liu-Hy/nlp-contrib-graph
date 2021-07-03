@@ -1,0 +1,55 @@
+83	4	15	source code
+83	18	35	implemented using
+83	36	46	TensorFlow
+87	4	14	embeddings
+87	19	36	initialized using
+87	39	42	set
+87	43	45	of
+87	46	79	freely available 2 Glo Ve vectors
+87	80	90	trained on
+87	91	113	Wikipedia and Gigaword
+88	0	5	Words
+88	6	18	not included
+88	27	30	set
+88	35	46	initialized
+88	47	51	from
+88	52	65	N ( 0 , 0.1 )
+23	43	51	modeling
+23	56	73	sequence of words
+23	74	85	surrounding
+23	90	101	target word
+23	193	202	represent
+23	207	212	words
+23	127	132	using
+23	219	252	real valued vector representation
+23	255	259	i.e.
+23	260	275	word embeddings
+2	0	25	Word Sense Disambiguation
+14	111	144	word sense disambiguation ( WSD )
+19	9	12	WSD
+106	0	18	Our proposed model
+106	19	27	achieves
+106	32	41	top score
+106	42	44	on
+106	45	48	SE2
+106	57	66	tied with
+106	67	83	IMS + adapted CW
+106	84	86	on
+106	87	90	SE3
+108	0	11	Randomizing
+108	16	21	order
+108	22	24	of
+108	29	40	input words
+108	41	47	yields
+108	50	76	substantially worse result
+107	14	22	see that
+107	23	31	dropword
+107	32	53	consistently improves
+107	58	65	results
+107	66	68	on
+107	69	85	both SE2 and SE3
+109	21	27	system
+109	40	52	makes use of
+109	57	68	information
+109	69	71	in
+109	76	103	pre-trained word embeddings

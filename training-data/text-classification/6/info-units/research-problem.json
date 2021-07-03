@@ -1,8 +1,0 @@
-{
-  "has research problem" : [
-    ["Universal Sentence Encoder", {"from sentence" : "Universal Sentence Encoder"}],    
-    ["encoding sentences into embedding vectors that specifically target transfer learning", {"from sentence" : "We present models for encoding sentences into embedding vectors that specifically target transfer learning to other NLP tasks ."}],
-    ["transfer learning using sentence embeddings", {"from sentence" : "We find that transfer learning using sentence embeddings tends to outperform word level transfer ."}],
-    ["transfer learning via sentence embeddings", {"from sentence" : "With transfer learning via sentence embeddings , we observe surprisingly good performance with minimal amounts of supervised training data for a transfer task ."}]
-  ]
-}

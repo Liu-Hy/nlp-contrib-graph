@@ -1,7 +1,0 @@
-(training||crop||image)
-(image||to||224 224)
-(total vocabulary size||is||10 k)
-(all words||outside||vocabulary)
-(all words||replaced by||placeholder token)
-(total vocabulary size||has||10 k)
-(Contribution||has||Experiments)

@@ -1,3 +1,0 @@
-(robust||to||poses , illuminations and occlusions)
-(our method||has||robust)
-(Contribution||has||Experiments)

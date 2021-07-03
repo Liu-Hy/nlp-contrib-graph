@@ -1,0 +1,32 @@
+{
+  "has" : {
+    "Baselines" : {
+      "For" : {
+        "word level transfer" : {
+          "use" : {
+            "word embeddings from a word2 vec skip - gram model" : {
+              "trained on" : {
+                "corpus" : {
+                  "of" : "news data"
+                }
+              },
+              "input to" : [{"convolutional neural network models" : {"name" : "CNN"}}, "DAN"]
+            }
+          },
+          "from sentence" : "For word level transfer , we use word embeddings from a word2 vec skip - gram model trained on a corpus of news data .
+The pretrained word embeddings are included as input to two model types : a convolutional neural network models ( CNN ) ; a DAN ."          
+        }
+      },
+      "has" : {
+        "Additional baseline" : {
+          "has" : {
+            "CNN and DAN models" : {
+              "are trained without using" : "pretrained word or sentence embeddings"
+            }
+          },
+          "from sentence" : "Additional baseline CNN and DAN models are trained without using any pretrained word or sentence embeddings ."          
+        }
+      }
+    }
+  }
+}

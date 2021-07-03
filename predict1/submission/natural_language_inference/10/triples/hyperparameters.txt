@@ -1,4 +1,0 @@
-(SGD||with||learning rate)
-(learning rate||of||0.01)
-(Hyperparameters||use||cross-entropy loss)
-(Contribution||has||Hyperparameters)

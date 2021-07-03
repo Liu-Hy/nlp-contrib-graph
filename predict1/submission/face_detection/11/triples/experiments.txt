@@ -1,5 +1,0 @@
-(object patches||at||original scale)
-(object patches||through||CNN impairs performance)
-(original scale||through||CNN impairs performance)
-(object patches||has||original scale)
-(Contribution||has||Experiments)

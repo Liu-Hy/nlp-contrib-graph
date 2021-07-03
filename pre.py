@@ -9,11 +9,11 @@ import pandas as pd
 import json
 from parse import *
 
-base_dir = 'training-data'
+base_dir = 'training_data'
 sep = os.path.sep
 
 def get_dir(topic_ls=None, paper_ls=None):
-    # Get the list of directories
+    # Get the list of paper directories
     dir_ls = []
     if topic_ls is None:
         topic_ls = os.listdir(base_dir)
@@ -29,7 +29,6 @@ def get_dir(topic_ls=None, paper_ls=None):
             for i in paper_ls:
                 dir_ls.append(os.path.join(base_dir, topic, str(i)))
     return dir_ls
-
 
 def get_file_path(dirs):
     # Get the relevant files from each directory of paper.
@@ -47,7 +46,6 @@ def get_file_path(dirs):
         file_path.append(new)
     return file_path
 
-
 def is_heading(line):
     # Determine if a line is a heading
     ls = line.split(' ')
@@ -58,7 +56,6 @@ def is_heading(line):
         res = re.match(rx, line)
         return True if res else False
     return False
-
 
 def is_main_heading(line, judge_mask=False):
     '''
@@ -78,7 +75,6 @@ def is_main_heading(line, judge_mask=False):
 
 # Determin if a sentence conforms to a specific case method.
 # There are three case methods in all, eg: Attention Is All You Need; ATTENTION IS ALL YOU NEED; Attention is all you need
-
 
 def check_case(line, flag):
     if flag == 1:
@@ -429,7 +425,6 @@ def load_paper_sentence(sent_path, label_path):
                             sent[aux[i][0]][8][j] = 'I-'+key
     # print(f'paper triple stat: {paper_triple_stat}')
     return sent, paper_triple_stat
-
 
 def load_data_sentence(file_path):
     # Get the data table of all the papers in file_path

@@ -1,6 +1,0 @@
-{
-  "has research problem" : [
-    ["Semi-supervised sequence tagging", {"from sentence" : "Semi-supervised sequence tagging with bidirectional language models"}],    
-    ["general semi-supervised approach for adding pretrained context embeddings from bidirectional language models to NLP systems", {"from sentence" : "In this paper , we demonstrate a general semi-supervised approach for adding pretrained context embeddings from bidirectional language models to NLP systems and apply it to sequence labeling tasks ."}]
-    ]
-}

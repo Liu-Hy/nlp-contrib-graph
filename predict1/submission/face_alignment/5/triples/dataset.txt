@@ -1,6 +1,0 @@
-(facial structure||using||13 boundary lines)
-(Dataset||represent||facial structure)
-(Each image||annotated with||98 landmarks)
-(Each image||annotated with||6 attributes)
-(Dataset||has||Each image)
-(Contribution||has||Dataset)

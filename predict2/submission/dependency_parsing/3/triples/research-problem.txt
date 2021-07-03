@@ -1,2 +1,0 @@
-(Contribution||has research problem||biomedical event extraction)
-(Contribution||has research problem||dependency parsing)

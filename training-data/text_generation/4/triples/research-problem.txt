@@ -1,3 +1,0 @@
-(Contribution||has research problem||Generating Text)
-(Contribution||has research problem||text generation)
-(Contribution||has research problem||natural language text generation)

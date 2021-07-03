@@ -1,2 +1,0 @@
-(no significant performance difference||after||training converges)
-(Contribution||has||Experiments)

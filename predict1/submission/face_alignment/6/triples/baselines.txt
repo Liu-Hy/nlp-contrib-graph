@@ -1,6 +1,0 @@
-(mixed approaches||with||deep nets and ensembles of regression trees)
-(three main families of solutions||name||ensembles of regression trees)
-(ensembles of regression trees||name||CNN - based approaches ()
-(CNN - based approaches (||name||LAB , DAN , RCN)
-(Baselines||representative of||three main families of solutions)
-(Contribution||has||Baselines)

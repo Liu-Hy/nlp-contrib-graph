@@ -1,3 +1,0 @@
-(Contribution||has research problem||Improved Semantic Representations)
-(Contribution||has research problem||predicting the semantic relatedness of two sentences)
-(Contribution||has research problem||sentiment classification)

@@ -1,8 +1,0 @@
-(deformable part based methods||e.g.||structure model)
-(deformable part based methods||e.g.||Tree Parts Model ( TSM ))
-(deformable part based methods||name||structure model)
-(Baselines||On||AFW and PASCAL faces datasets)
-(global regression||from||5 facial points)
-(5 facial points||to||face rectangles)
-(face rectangles||to match||annotation)
-(Contribution||has||Baselines)

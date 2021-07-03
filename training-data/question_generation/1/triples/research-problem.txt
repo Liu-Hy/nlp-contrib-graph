@@ -1,3 +1,0 @@
-(Contribution||has research problem||Visual Question Generation)
-(Contribution||has research problem||Generating natural questions from an image)
-(Contribution||has research problem||generating natural questions for an image)

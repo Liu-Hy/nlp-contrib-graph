@@ -1,2 +1,0 @@
-(Contribution||has research problem||Convolutional Neural Networks with Recurrent Neural Filters)
-(Contribution||has research problem||model convolution filters with RNNs)

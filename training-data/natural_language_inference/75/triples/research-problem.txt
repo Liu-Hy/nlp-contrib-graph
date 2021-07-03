@@ -1,3 +1,0 @@
-(Contribution||has research problem||Directly reading documents)
-(Contribution||has research problem||question answering ( QA ))
-(Contribution||has research problem||QA)

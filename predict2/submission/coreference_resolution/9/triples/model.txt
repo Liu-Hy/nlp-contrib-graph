@@ -1,4 +1,0 @@
-(BERT||to||coreference resolution)
-(Model||fine - tune||BERT)
-(Model||extending||c 2f - coref model)
-(Contribution||has||Model)

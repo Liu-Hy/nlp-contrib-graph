@@ -1,3 +1,0 @@
-(Contribution||has research problem||Parameter Re-Initialization)
-(Contribution||has research problem||Optimal parameter initialization)
-(Contribution||has research problem||Language modeling)

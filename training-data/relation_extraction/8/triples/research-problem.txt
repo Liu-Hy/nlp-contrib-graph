@@ -1,3 +1,0 @@
-(Contribution||has research problem||Distant Supervision for Relation Extraction)
-(Contribution||has research problem||distant supervised relation extraction)
-(Contribution||has research problem||relation extraction)

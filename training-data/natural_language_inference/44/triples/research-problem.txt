@@ -1,3 +1,0 @@
-(Contribution||has research problem||Question Answering)
-(Contribution||has research problem||question answering ( QA ))
-(Contribution||has research problem||QA)

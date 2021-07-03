@@ -1,7 +1,0 @@
-(Baselines||compare to||DBPedia Spotlight)
-(heuristics baseline||ranks||candidate entities)
-(candidate entities||according to||frequency)
-(frequency||in||Wikipedia)
-(Baselines||include||heuristics baseline)
-(Baselines||has||Simplified VCG)
-(Contribution||has||Baselines)

@@ -1,2 +1,0 @@
-(Contribution||has research problem||Efficient Text Classification)
-(Contribution||has research problem||text classification)

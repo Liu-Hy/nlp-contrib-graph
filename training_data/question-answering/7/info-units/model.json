@@ -1,0 +1,55 @@
+{
+  "has" : {
+    "Model" : {
+      "propose" : {
+        "a novel class of memory augmented neural networks" : {
+          "called" : {
+            "Neural Semantic Encoders ( NSE )" : {
+              "for" : "natural language understanding"
+            }
+          }
+        },
+        "from sentence" : "In this paper we propose a novel class of memory augmented neural networks called Neural Semantic Encoders ( NSE ) for natural language understanding ."
+      },
+      "name" : {
+        "NSE" : {
+          "has" : {
+            "variable sized encoding memory" : {
+              "to access" : {
+                "entire input sequence" : {
+                  "during" : "reading process"
+                }
+              },
+              "efficiently delivering" : "long - term dependencies overtime"
+            },
+            "from sentence" : "NSE has a variable sized encoding memory which allows the model to access entire input sequence during the reading process ; therefore efficiently delivering long - term dependencies overtime ."            
+          },
+          "sequentially processes" : "the input",
+          "supports" : ["word compositionality", {"from sentence" : "NSE sequentially processes the input and supports word compositionality inheriting both temporal and hierarchical nature of human language ."}],
+          "read from and write to" : "set of relevant encoding memories simultaneously",
+          "access" : {
+            "shared encoding memory" : {
+              "supporting" : "knowledge and representation sharing"
+            },
+            "from sentence" : "NSE can read from and write to a set of relevant encoding memories simultaneously or multiple NSEs can access a shared encoding memory effectively supporting knowledge and representation sharing ."    
+          }
+        }
+      },
+      "has" : {
+        "encoding memory" : {
+          "evolves" : "overtime",
+          "maintains" : {
+            "memory" : {
+              "of" : {
+                "input sequence" : {
+                  "through" : "read , compose and write operations"
+                }
+              }
+            }
+          },
+          "from sentence" : "The encoding memory evolves overtime and maintains the memory of the input sequence through read , compose and write operations ."          
+        }
+      }
+    }
+  }
+}

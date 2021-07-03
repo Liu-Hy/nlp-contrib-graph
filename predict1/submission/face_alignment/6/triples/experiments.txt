@@ -1,4 +1,0 @@
-(regularization||together with||new initialization)
-(regularization||contributes to||improve DCFE)
-(new initialization||contributes to||improve DCFE)
-(Contribution||has||Experiments)

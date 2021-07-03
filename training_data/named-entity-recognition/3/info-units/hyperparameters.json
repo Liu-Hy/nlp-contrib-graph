@@ -1,0 +1,29 @@
+{
+  "has" : {
+    "Hyperparameters" : {
+      "use" :{
+        "Adam optimizer" : {
+          "with" : {
+            "gradient norms" : {
+              "clipped at" : "5.0"
+            }
+          },
+          "from sentence" : "All experiments use the Adam optimizer ( Kingma and Ba , 2015 ) with gradient norms clipped at 5.0 ."
+        },
+        "early stopping" : {
+          "to prevent" : "over-fitting",
+          "from sentence" : "In addition to explicit dropout regularization , we also use early stopping to prevent over-fitting and use the following process to determine when to stop training ."
+        }
+      },
+      "fine tune" : "pre-trained Senna word embeddings",
+      "fix" : {
+        "all weights" : {
+          "in" : "pre-trained language models"
+        },
+        "from sentence" : "In all experiments , we fine tune the pre-trained Senna word embeddings but fix all weights in the pre-trained language models ."
+      },
+      "train with" : ["constant learning rate ? = 0.001", {"from sentence" : "We first train with a constant learning rate ? = 0.001 on the training data and monitor the development set performance at each epoch ."}
+      ]
+    }
+  }
+}

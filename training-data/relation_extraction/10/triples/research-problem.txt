@@ -1,3 +1,0 @@
-(Contribution||has research problem||Relation Extraction)
-(Contribution||has research problem||Relation Extraction ( RE ))
-(Contribution||has research problem||RE)

@@ -1,2 +1,0 @@
-(Contribution||has research problem||Neural Summarization)
-(Contribution||has research problem||abstractive sentence summarization)

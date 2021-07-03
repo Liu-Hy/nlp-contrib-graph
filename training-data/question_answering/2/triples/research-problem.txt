@@ -1,3 +1,0 @@
-(Contribution||has research problem||Visual Question Answering)
-(Contribution||has research problem||Visual question answering ( VQA ))
-(Contribution||has research problem||VQA)

@@ -1,4 +1,0 @@
-(beam - based search procedure||with||augmented state space)
-(augmented state space||search directly in||generative models)
-(Approach||present||beam - based search procedure)
-(Contribution||has||Approach)

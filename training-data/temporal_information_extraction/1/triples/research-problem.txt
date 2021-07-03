@@ -1,3 +1,0 @@
-(Contribution||has research problem||Temporal Relation Extraction)
-(Contribution||has research problem||Identifying temporal relations between events)
-(Contribution||has research problem||temporal processing)

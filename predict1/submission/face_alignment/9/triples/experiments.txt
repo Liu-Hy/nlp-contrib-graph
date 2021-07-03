@@ -1,4 +1,0 @@
-(GHCU||implicitly learns||whole face shape constraint)
-(whole face shape constraint||from||training data)
-(GHCU||always gives||facialshape landmarks)
-(Contribution||has||Experiments)

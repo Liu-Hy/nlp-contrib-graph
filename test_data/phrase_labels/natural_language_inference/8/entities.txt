@@ -1,0 +1,72 @@
+81	0	27	Out - of - vocabulary words
+81	28	30	in
+81	35	47	training set
+81	52	72	randomly initialized
+81	73	75	by
+81	76	84	sampling
+81	85	91	values
+81	92	106	uniformly from
+81	107	122	( 0.05 , 0.05 )
+79	2	15	dropout layer
+79	20	30	applied in
+79	35	41	output
+79	42	44	of
+79	49	56	network
+79	57	61	with
+79	66	78	dropout rate
+79	79	85	set to
+79	86	90	0.25
+78	4	14	batch size
+78	15	17	is
+78	18	21	128
+77	4	22	training objective
+77	23	25	of
+77	26	35	our model
+77	36	38	is
+77	39	59	cross - entropy loss
+77	69	72	use
+77	73	86	minibatch SGD
+77	87	91	with
+77	96	134	Rmsprop ( Tieleman and Hinton , 2012 )
+77	135	138	for
+77	139	151	optimization
+80	18	22	used
+80	23	57	pretrained 300D Glove 840B vectors
+80	58	71	to initialize
+80	76	90	word embedding
+30	19	27	proposed
+30	30	61	unified deep learning framework
+30	62	65	for
+30	66	77	recognizing
+30	78	96	textual entailment
+31	4	15	basic model
+31	19	27	based on
+31	28	36	building
+31	37	53	biL - STM models
+31	54	56	on
+31	57	85	both premises and hypothesis
+32	4	30	basic mean pooling encoder
+32	35	47	roughly form
+32	50	59	intuition
+32	60	65	about
+32	76	101	sentence is talking about
+35	17	27	introduced
+35	30	61	simple effective input strategy
+35	67	78	get ride of
+35	79	89	same words
+35	90	92	in
+35	93	115	hypothesis and premise
+107	3	11	observed
+107	17	31	more attention
+107	36	44	given to
+107	45	73	Nones , Verbs and Adjectives
+109	64	83	attention mechanism
+109	84	89	helps
+109	90	99	re-weight
+109	100	105	words
+109	106	118	according to
+109	47	57	importance
+14	38	41	RTE
+13	40	75	recognizing text entailment ( RTE )
+4	66	93	recognizing text entailment
+2	9	35	Natural Language Inference

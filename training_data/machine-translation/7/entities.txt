@@ -1,0 +1,86 @@
+45	13	15	to
+45	16	39	conditional computation
+45	43	55	to introduce
+45	58	110	new type of general purpose neural network component
+45	111	112	:
+45	115	168	Sparsely - Gated Mixture - of - Experts Layer ( MoE )
+46	8	19	consists of
+46	22	39	number of experts
+46	42	46	each
+46	49	85	simple feed - forward neural network
+46	94	118	trainable gating network
+46	125	132	selects
+46	135	190	sparse combination of the experts to process each input
+47	29	36	trained
+47	37	44	jointly
+47	45	47	by
+47	48	66	back - propagation
+47	0	12	All parts of
+47	17	24	network
+5	0	23	Conditional computation
+5	141	213	increasing model capacity without a proportional increase in computation
+16	0	53	Exploiting scale in both training data and model size
+183	0	35	100 BILLION WORD GOOGLE NEWS CORPUS
+186	72	82	MoE layers
+186	94	106	32 , experts
+190	0	4	When
+190	5	45	training over the full 100 billion words
+190	48	63	test perplexity
+190	64	86	improves significantly
+190	87	92	up to
+190	93	132	65536 experts ( 68 billion parameters )
+193	0	44	MACHINE TRANSLATION ( SINGLE LANGUAGE PAIR )
+195	4	9	model
+195	40	50	GNMT model
+195	10	15	was a
+195	16	32	modified version
+196	27	36	decreased
+196	51	62	LSTM layers
+196	63	65	in
+196	70	89	encoder and decoder
+196	90	94	from
+196	95	126	9 and 8 to 3 and 2 respectively
+196	0	9	To reduce
+196	10	21	computation
+197	3	11	inserted
+197	12	22	MoE layers
+197	23	30	in both
+197	35	42	encoder
+197	45	52	between
+197	53	67	layers 2 and 3
+197	78	85	decoder
+197	88	95	between
+197	96	110	layers 1 and 2
+198	0	4	Each
+198	5	14	MoE layer
+198	15	30	contained up to
+198	31	48	2048 experts each
+198	49	53	with
+198	54	82	about two million parameters
+206	22	33	BLEU scores
+206	37	52	40.56 and 26.03
+206	53	55	on
+206	60	97	WMT ' 14 En?Fr and En ? De benchmarks
+210	66	81	test BLEU score
+210	54	65	1.01 higher
+210	0	2	On
+210	7	32	Google Production dataset
+211	0	32	MULTILINGUAL MACHINE TRANSLATION
+214	45	47	on
+214	52	59	dev set
+214	14	22	achieves
+214	23	44	19 % lower perplexity
+214	60	64	than
+214	69	92	multilingual GNMT model
+215	0	2	On
+215	3	13	BLEU score
+215	30	49	significantly beats
+215	54	77	multilingual GNMT model
+215	78	80	on
+215	81	108	11 of the 12 language pairs
+215	111	124	by as much as
+215	125	136	5.84 points
+215	145	155	even beats
+215	160	183	monolingual GNMT models
+215	184	186	on
+215	187	209	8 of 12 language pairs

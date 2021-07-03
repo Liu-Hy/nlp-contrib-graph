@@ -1,4 +1,0 @@
-(conv3||followed by||pooling layer)
-(pooling layer||to perform||down - sampling)
-(Baselines||has||conv3)
-(Contribution||has||Baselines)

@@ -1,3 +1,0 @@
-(Contribution||has research problem||Machine Comprehension ( MC ))
-(Contribution||has research problem||MC)
-(Contribution||has research problem||machine comprehension)

@@ -1,7 +1,0 @@
-(some new state - of - the - art results||based on||AP score)
-(AP score||across||three subsets)
-(three subsets||on||validation and testing subsets)
-(96.5 % ( Easy ) , 95.7 % ( Medium ) and 91.2 % ( Hard )||for||testing subset)
-(superiority||of||our AInnoFace detector)
-(Results||outperform||all the compared state - of - the - art methods)
-(Contribution||has||Results)

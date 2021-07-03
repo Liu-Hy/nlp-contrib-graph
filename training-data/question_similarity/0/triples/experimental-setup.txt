@@ -1,3 +1,0 @@
-(Contribution||has||Experimental Setup)
-(Experimental Setup||done on||Google Colab 7 environment)
-(Google Colab 7 environment||using||Tesla T4 GPU accelerator)

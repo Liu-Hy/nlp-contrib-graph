@@ -1,0 +1,5 @@
+(Contribution||has research problem||Pretrained Language Model)
+(Contribution||has research problem||Obtaining large - scale annotated data for NLP tasks in the scientific domain)
+(Contribution||has research problem||pretrained language model based on BERT ( Devlin et al. , 2019 ))
+(Contribution||has research problem||address the lack of high - quality , large - scale labeled scientific data)
+(Contribution||has research problem||annotated data is difficult and expensive to collect due to the expertise required for quality annotation)

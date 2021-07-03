@@ -7,15 +7,15 @@ import re
 import math
 import pandas as pd
 
-base_dir = 'input'
+base_dir = os.path.join('..', 'test_data', 'input')
 sep = os.path.sep
 
 def get_dir(topic_ls=None, paper_ls=None):
-    # Get the list of directories
+    # Get the list of paper directories
     dir_ls = []
     if topic_ls is None:
         topic_ls = os.listdir(base_dir)
-        #topic_ls.remove('train-README.md')
+        topic_ls.remove('README.md')
     if paper_ls is None:
         for topic in topic_ls:
             paper_ls = os.listdir(os.path.join(base_dir, topic))
@@ -69,7 +69,6 @@ def is_main_heading(line, judge_mask=False):
 
 # Determin if a sentence conforms to a specific case method.
 # Their are three case methods in all, eg: Attention Is All You Need; ATTENTION IS ALL YOU NEED; Attention is all you need.
-
 
 def check_case(line, flag):
     if flag == 1:

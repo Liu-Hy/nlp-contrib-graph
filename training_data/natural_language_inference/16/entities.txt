@@ -1,0 +1,156 @@
+167	8	13	under
+167	18	35	Siamese framework
+167	41	50	implement
+167	51	70	two baseline models
+167	75	88	Siamese - CNN
+167	97	111	Siamese - LSTM
+171	15	17	on
+171	47	56	implement
+171	57	81	two more baseline models
+171	84	109	Multi - Perspective - CNN
+171	118	144	Multi - Perspective - LSTM
+173	172	174	on
+173	11	23	re-implement
+173	28	44	" L.D.C. " model
+173	65	67	is
+173	70	75	model
+173	76	81	under
+173	86	119	" matchingaggregation " framework
+163	82	112	paraphrase identification task
+164	9	22	experiment on
+164	27	59	" Quora Question Pairs " dataset
+175	7	15	see that
+175	16	82	" Multi - Perspective - CNN " ( or " Multi- Perspective - LSTM " )
+175	83	88	works
+175	89	100	much better
+175	101	105	than
+175	106	149	" Siamese - CNN " ( or " Siamese - LSTM " )
+176	0	19	Our " BiMPM " model
+176	20	31	outperforms
+176	36	52	" L.D.C. " model
+176	53	55	by
+176	56	77	more than two percent
+179	51	82	natural language inference task
+179	83	87	over
+179	92	104	SNLI dataset
+183	15	23	see that
+183	26	36	Only P ? Q
+183	39	65	works significantly better
+183	66	70	than
+183	73	83	Only P ? Q
+183	94	99	tells
+183	143	166	matching the hypothesis
+183	167	174	against
+183	179	186	premise
+183	187	189	is
+183	190	204	more effective
+183	205	209	than
+183	214	230	other way around
+184	9	28	our " BiMPM " model
+184	29	34	works
+184	35	46	much better
+184	47	51	than
+184	54	64	Only P ? Q
+186	12	22	our models
+186	23	30	achieve
+186	35	69	state - of - the - art performance
+186	70	77	in both
+186	78	107	single and ensemble scenarios
+186	108	111	for
+186	116	147	natural language inference task
+185	83	95	observe that
+185	96	122	our single model " BiMPM "
+185	126	137	on par with
+185	142	178	state - of - the - art single models
+185	185	209	our ' BiMPM ( Ensemble )
+185	212	217	works
+185	218	229	much better
+185	230	234	than
+185	239	247	Ensemble
+188	62	65	for
+188	66	97	answer sentence selection tasks
+190	3	16	experiment on
+190	17	29	two datasets
+190	32	41	TREC - QA
+190	46	52	WikiQA
+192	7	15	see that
+192	20	31	performance
+192	32	36	from
+192	37	46	our model
+192	47	49	is
+192	50	56	on par
+192	57	61	with
+192	66	95	state - of - the - art models
+130	3	13	initialize
+130	14	29	word embeddings
+130	30	32	in
+130	37	62	word representation layer
+130	63	67	with
+130	72	108	300 - dimensional GloVe word vectors
+130	109	124	pretrained from
+130	129	153	840B Common Crawl corpus
+131	0	3	For
+131	8	43	out - of - vocabulary ( OOV ) words
+131	49	59	initialize
+131	64	79	word embeddings
+131	80	88	randomly
+132	8	36	charactercomposed embeddings
+132	42	52	initialize
+132	53	67	each character
+132	68	70	as
+132	73	96	20 - dimensional vector
+132	103	110	compose
+132	111	120	each word
+132	121	125	into
+132	128	149	50 dimensional vector
+132	150	154	with
+132	157	167	LSTM layer
+133	3	6	set
+133	11	22	hidden size
+133	23	25	as
+133	26	29	100
+133	30	33	for
+133	34	51	all BiLSTM layers
+136	11	24	learning rate
+136	25	27	as
+136	28	33	0.001
+134	3	8	apply
+134	9	16	dropout
+134	17	19	to
+134	20	32	every layers
+134	42	45	set
+134	50	63	dropout ratio
+134	64	66	as
+134	67	70	0.1
+135	24	32	minimize
+135	37	50	cross entropy
+135	51	53	of
+135	58	70	training set
+135	77	80	use
+135	85	99	ADAM optimizer
+135	125	134	to update
+135	135	145	parameters
+137	0	6	During
+137	7	15	training
+137	21	34	do not update
+137	39	66	pre-trained word embeddings
+32	49	56	propose
+32	59	111	bilateral multi-perspective matching ( BiMPM ) model
+32	112	115	for
+32	116	126	NLSM tasks
+33	22	32	belongs to
+33	37	71	" matching aggregation " framework
+39	15	27	BiLSTM layer
+39	31	42	utilized to
+39	43	52	aggregate
+39	57	73	matching results
+39	74	78	into
+39	81	111	fixed - length matching vector
+40	10	18	based on
+40	23	38	matching vector
+40	43	51	decision
+40	55	67	made through
+40	70	91	fully connected layer
+4	0	34	Natural language sentence matching
+15	0	43	Natural language sentence matching ( NLSM )
+17	52	56	NLSM

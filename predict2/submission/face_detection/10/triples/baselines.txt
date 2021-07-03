@@ -1,7 +1,0 @@
-(Baselines||has||Feature Enhance Module)
-(Progressive Anchor Loss||use||Res50 - based FSSD)
-(Res50 - based FSSD||as||baseline)
-(Res50 - based FSSD||to add||progressive anchor loss)
-(baseline||to add||progressive anchor loss)
-(Baselines||has||Progressive Anchor Loss)
-(Contribution||has||Baselines)

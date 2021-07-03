@@ -1,3 +1,0 @@
-(Contribution||has research problem||Citation Intent Classification in Scientific Publications)
-(Contribution||has research problem||Identifying the intent of a citation in scientific papers)
-(Contribution||has research problem||citation intent classification)

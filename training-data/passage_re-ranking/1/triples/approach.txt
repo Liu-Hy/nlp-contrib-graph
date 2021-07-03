@@ -1,3 +1,0 @@
-(Contribution||has||Approach)
-(Approach||re-purposed||BERT)
-(BERT||as||passage re-ranker)

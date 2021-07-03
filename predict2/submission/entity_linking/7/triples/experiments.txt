@@ -1,4 +1,0 @@
-(significantly better||than||algorithm)
-(algorithm||based on||continuous bag of words model ( Word2 vec ))
-(continuous bag of words model ( Word2 vec )||especially on||verbs)
-(Contribution||has||Experiments)

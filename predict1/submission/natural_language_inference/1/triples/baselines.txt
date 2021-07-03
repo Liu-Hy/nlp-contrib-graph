@@ -1,8 +1,0 @@
-(span prediction layer||with||answer generation layer)
-(Baselines||replace||span prediction layer)
-(1||refer for||more details attention based seq2seq layer)
-(more details attention based seq2seq layer||without using||copy mechanism)
-(copy mechanism||in||answer generation unit)
-(1||has||more details attention based seq2seq layer)
-(Baselines||use||1)
-(Contribution||has||Baselines)

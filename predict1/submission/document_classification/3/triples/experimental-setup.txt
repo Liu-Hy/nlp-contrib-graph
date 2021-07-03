@@ -1,6 +1,0 @@
-(training||performed with||SGD)
-(SGD||utilizing||size batch of 64)
-(size batch of 64||with||maximum of 100 epochs)
-(Experimental setup||has||training)
-(Experimental setup||performed on||NVIDIA GTX 1060 GPU + Intel Core i 7 4770s CPU)
-(Contribution||has||Experimental setup)

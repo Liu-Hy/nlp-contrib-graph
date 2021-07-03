@@ -1,8 +1,0 @@
-(two variants of reinforcement learning||to directly optimize||coreference system)
-(coreference system||for||coreference evaluation metrics)
-(max-margin coreference objective||by incorporating||reward)
-(reward||associated with||each coreference decision)
-(reward||into||loss 's slack rescaling)
-(Approach||modify||max-margin coreference objective)
-(Approach||is||neural mention - ranking model)
-(Contribution||has||Approach)

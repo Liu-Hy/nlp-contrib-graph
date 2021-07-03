@@ -1,8 +1,0 @@
-(importance||of||skip connections)
-(skip connections||between||GCN layers)
-(Ablation analysis||has||importance)
-(Residual and dense connections||lead to||similar results)
-(Ablation analysis||has||Residual and dense connections)
-(Dense connections||produce||models)
-(Ablation analysis||has||Dense connections)
-(Contribution||has||Ablation analysis)

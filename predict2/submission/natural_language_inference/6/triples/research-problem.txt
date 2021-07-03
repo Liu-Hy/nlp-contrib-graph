@@ -1,7 +1,0 @@
-(Contribution||has research problem||Sentence Embedding)
-(Contribution||has research problem||Dynamic Self - Attention ( DSA ))
-(Contribution||has research problem||new self - attention mechanism)
-(Contribution||has research problem||sentence embedding)
-(Contribution||has research problem||DSA)
-(Contribution||has research problem||dynamic routing)
-(Contribution||has research problem||capsule network)

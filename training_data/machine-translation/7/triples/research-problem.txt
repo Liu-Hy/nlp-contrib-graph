@@ -1,0 +1,3 @@
+(Contribution||has research problem||Conditional computation)
+(Contribution||has research problem||increasing model capacity without a proportional increase in computation)
+(Contribution||has research problem||Exploiting scale in both training data and model size)

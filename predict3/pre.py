@@ -7,15 +7,17 @@ import re
 import math
 import pandas as pd
 
-base_dir = 'input'
-label_dir = 'sent_labels'
+base_dir = os.path.join('..', 'test_data', 'input')
+sent_label_dir = os.path.join('..', 'test_data', 'sent_labels')
+phrase_label_dir = os.path.join('..', 'test_data', 'phrase_labels')
 sep = os.path.sep
 
 def get_dir(topic_ls=None, paper_ls=None):
-    # Get the list of directories
+    # Get the list of paper directories
     dir_ls = []
     if topic_ls is None:
         topic_ls = os.listdir(base_dir)
+        topic_ls.remove('README.md')
     if paper_ls is None:
         for topic in topic_ls:
             paper_ls = os.listdir(os.path.join(base_dir, topic))
@@ -34,7 +36,7 @@ def get_file_path(dirs):
     file_path = []
     for dir in dirs:
         dir1 = os.path.join(base_dir, dir)
-        dir2 = os.path.join(label_dir, dir)
+        dir2 = os.path.join(sent_label_dir, dir)
         new = ['', '']  # stores the paths of the sentence file and the label file
         for file in os.listdir(dir1):
             res = re.match(rx1, file)
@@ -77,7 +79,6 @@ def is_main_heading(line, judge_mask=False):
 
 # Determin if a sentence conforms to a specific case method.
 # Their are three case methods in all, eg: Attention Is All You Need; ATTENTION IS ALL YOU NEED; Attention is all you need.
-
 
 def check_case(line, flag):
     if flag == 1:
@@ -231,8 +232,7 @@ def load_paper_sentence(sent_path, label_path):  # (sent_path, label_path)
                     len(sent[int(line)-1][1].split(' '))
             else:
                 break
-    ent_path = sep.join(['ent_labels']+label_path.split(sep)
-                        [1:-1]+['entities.txt'])
+    ent_path = sep.join([phrase_label_dir, task, index, 'entities.txt'])
     with open(ent_path, 'r') as f:
         while(True):
             line = f.readline().rstrip("\n")
@@ -290,7 +290,6 @@ df = pd.DataFrame(data)
 df.columns = ['idx', 'text', 'main_heading', 'heading',
               'topic', 'paper_idx', 'BIO', 'BIO_1', 'BIO_2', 'offset1', 'pro1', 'offset2', 'pro2', 'offset3', 'pro3', 'mask', 'bi_labels', 'labels']
 
-df.to_csv('all_sent.csv', index=False)
 pos = df[df['bi_labels'] == 1]
 pos.to_csv('pos_sent.csv', index=False)
-print('\n\"all_sent.csv\" and \"pos_sent.csv\" have been saved in this folder')
+print('\n\"pos_sent.csv\" has been saved in this folder')

@@ -1,6 +1,0 @@
-(Contribution||has research problem||CPU Real - time Face Detector)
-(Contribution||has research problem||novel face detector)
-(Contribution||has research problem||FaceBoxes)
-(Contribution||has research problem||superior performance)
-(Contribution||has research problem||both speed and accuracy)
-(Contribution||has research problem||Face detection)

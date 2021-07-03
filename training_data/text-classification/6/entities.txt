@@ -1,0 +1,137 @@
+84	0	3	For
+84	4	23	word level transfer
+84	29	32	use
+84	33	83	word embeddings from a word2 vec skip - gram model
+84	84	94	trained on
+84	97	103	corpus
+84	104	106	of
+84	107	116	news data
+85	47	55	input to
+85	76	111	convolutional neural network models
+85	114	117	CNN
+85	124	127	DAN
+87	0	19	Additional baseline
+87	20	38	CNN and DAN models
+87	39	64	are trained without using
+87	69	107	pretrained word or sentence embeddings
+32	88	141	https://tfhub.dev/google/universal-sentence-encoder/1
+44	16	21	based
+44	22	45	sentence encoding model
+44	46	56	constructs
+44	57	76	sentence embeddings
+44	77	82	using
+44	87	139	encoding sub - graph of the transformer architecture
+45	17	21	uses
+45	22	31	attention
+45	32	42	to compute
+45	43	72	context aware representations
+45	73	75	of
+45	76	95	words in a sentence
+45	96	118	that take into account
+45	128	172	ordering and identity of all the other words
+46	43	52	converted
+46	4	38	context aware word representations
+46	53	57	to a
+46	58	95	fixed length sentence encoding vector
+46	96	108	by computing
+46	113	131	element - wise sum
+46	132	134	of
+46	139	176	representations at each word position
+48	4	18	encoding model
+48	22	36	designed to be
+48	40	55	general purpose
+49	8	23	accomplished by
+49	24	49	using multi-task learning
+49	50	57	whereby
+49	58	81	a single encoding model
+49	82	97	is used to feed
+49	98	123	multiple downstream tasks
+54	0	30	Deep Averaging Network ( DAN )
+55	72	79	whereby
+55	80	119	input embeddings for words and bi-grams
+55	120	129	are first
+55	130	147	averaged together
+55	152	171	then passed through
+55	174	213	feedforward deep neural network ( DNN )
+55	214	224	to produce
+55	225	244	sentence embeddings
+56	15	26	Transformer
+56	53	67	takes as input
+56	70	101	lowercased PTB tokenized string
+56	106	113	outputs
+56	116	150	512 dimensional sentence embedding
+58	8	11	use
+58	15	34	mul-titask learning
+58	35	42	whereby
+58	45	63	single DAN encoder
+58	67	81	used to supply
+58	82	101	sentence embeddings
+58	102	105	for
+58	106	131	multiple downstream tasks
+59	4	21	primary advantage
+59	49	61	compute time
+59	41	43	is
+59	65	85	linear in the length
+59	22	24	of
+59	93	107	input sequence
+2	0	26	Universal Sentence Encoder
+4	22	106	encoding sentences into embedding vectors that specifically target transfer learning
+9	13	56	transfer learning using sentence embeddings
+10	5	46	transfer learning via sentence embeddings
+112	3	10	observe
+112	16	33	transfer learning
+112	34	38	from
+112	43	77	transformer based sentence encoder
+112	86	117	performs as good or better than
+112	118	135	transfer learning
+112	136	140	from
+112	145	156	DAN encoder
+117	51	83	sentence level transfer learning
+117	18	21	for
+117	22	48	smaller quantities of data
+117	84	95	can achieve
+117	96	130	surprisingly good task performance
+114	0	6	Models
+114	12	23	make use of
+114	24	56	sentence level transfer learning
+114	57	84	tend to perform better than
+114	85	125	models that only use word level transfer
+118	0	2	As
+118	7	34	training set size increases
+118	37	85	models that do not make use of transfer learning
+118	86	113	approach the performance of
+118	118	130	other models
+69	0	2	MR
+69	5	35	Movie review snippet sentiment
+69	36	38	on
+69	41	56	five star scale
+70	0	2	CR
+70	5	27	Sentiment of sentences
+70	28	38	mined from
+70	39	55	customer reviews
+71	0	4	SUBJ
+71	7	32	Subjectivity of sentences
+71	33	37	from
+71	38	70	movie reviews and plot summaries
+72	0	4	MPQA
+72	7	36	Phrase level opinion polarity
+72	37	41	from
+72	42	51	news data
+73	0	4	TREC
+73	7	43	Fine grained question classification
+73	44	56	sourced from
+73	57	61	TREC
+74	0	3	SST
+74	6	50	Binary phrase level sentiment classification
+75	0	13	STS Benchmark
+75	16	51	Semantic textual similarity ( STS )
+75	52	59	between
+75	60	74	sentence pairs
+75	75	84	scored by
+75	85	125	Pearson correlation with human judgments
+76	0	4	WEAT
+76	7	17	Word pairs
+76	18	22	from
+76	27	48	psychology literature
+76	49	51	on
+76	52	86	implicit association tests ( IAT )

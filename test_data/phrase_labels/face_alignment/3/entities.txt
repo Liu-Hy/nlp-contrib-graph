@@ -1,0 +1,111 @@
+13	40	87	https://github.com/protossw512/AdaptiveWingLoss
+231	21	24	use
+231	25	35	RM - SProp
+231	36	40	with
+231	44	65	initial learning rate
+231	66	68	of
+231	69	76	1 10 ?4
+232	3	6	set
+232	11	19	momentum
+232	20	25	to be
+232	26	27	0
+232	53	65	weight decay
+232	66	71	to be
+232	72	79	1 10 ?5
+233	3	8	train
+233	9	12	for
+233	13	24	240 epoches
+233	35	48	learning rate
+233	52	62	reduced to
+233	63	83	1 10 ?5 and 1 10 ? 6
+233	84	89	after
+233	90	108	80 and 160 epoches
+234	0	17	Data augmentation
+234	21	35	performed with
+234	36	51	random rotation
+234	54	56	50
+234	61	72	translation
+234	75	80	25 px
+234	85	93	flipping
+234	96	100	50 %
+234	109	118	rescaling
+234	121	125	15 %
+235	52	56	used
+235	0	20	Random Gaussian blur
+235	23	28	noise
+235	33	42	occlusion
+30	8	15	propose
+30	18	35	new loss function
+30	48	66	Adaptive Wing loss
+30	92	113	significantly improve
+30	118	125	quality
+30	126	128	of
+30	129	155	heatmap regression results
+32	63	69	encode
+32	89	116	full coordinate information
+32	125	136	information
+32	142	144	on
+32	145	155	boundaries
+32	156	170	predicted from
+32	175	193	previous HG module
+32	70	74	into
+32	75	84	our model
+31	11	33	translation invariance
+31	34	36	of
+31	41	62	convolution operation
+31	63	65	in
+31	66	107	bottom - up and top - down CNN structures
+31	108	115	such as
+31	116	140	stacked Hourglass ( HG )
+31	166	176	to capture
+31	177	199	coordinate information
+34	0	9	To encode
+34	10	30	boundary coordinates
+34	41	44	add
+34	47	78	sub-task of boundary prediction
+34	79	95	by concatenating
+34	99	126	additional boundary channel
+34	127	131	into
+34	136	156	ground truth heatmap
+34	166	181	jointly trained
+34	182	186	with
+34	187	201	other channels
+2	23	44	Robust Face Alignment
+15	0	14	Face alignment
+15	31	59	facial landmark localization
+244	11	13	on
+244	14	18	300W
+245	0	10	Our method
+245	22	29	achieve
+245	34	68	state - of - the - art performance
+246	0	3	For
+246	8	41	challenge subset ( iBug dataset )
+246	51	58	able to
+246	59	69	outperform
+247	0	4	Wing
+247	5	7	by
+247	10	28	significant margin
+248	14	16	on
+248	21	47	300 W private test dataset
+248	61	71	outperform
+248	76	104	previous state - of - theart
+248	105	107	on
+248	108	123	variant metrics
+248	124	133	including
+248	134	150	NME , AUC and FR
+248	151	164	measured with
+248	172	192	8 % NME and 10 % NME
+250	14	18	WFLW
+251	0	10	Our method
+251	17	25	achieves
+251	30	42	best results
+256	13	25	our approach
+256	26	31	fails
+256	32	34	on
+256	35	46	only 2.84 %
+256	47	49	of
+256	50	60	all images
+252	0	2	On
+252	3	15	every subset
+252	19	29	outperform
+252	34	70	previous state - of - the - art ap -

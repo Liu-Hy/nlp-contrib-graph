@@ -1,3 +1,0 @@
-(Word 2 Vec||has||nearest)
-(Baselines||has||Word 2 Vec)
-(Contribution||has||Baselines)

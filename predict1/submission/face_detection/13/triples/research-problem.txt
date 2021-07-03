@@ -1,8 +1,0 @@
-(Contribution||has research problem||uncontrolled face detection)
-(Contribution||has research problem||accurate and efficient face localisation)
-(Contribution||has research problem||RetinaFace)
-(Contribution||has research problem||pixel - wise face localisation)
-(Contribution||has research problem||various scales of faces)
-(Contribution||has research problem||joint extra-supervised and self - supervised multi-task learning)
-(Contribution||has research problem||Automatic face localisation)
-(Contribution||has research problem||facial image analysis)

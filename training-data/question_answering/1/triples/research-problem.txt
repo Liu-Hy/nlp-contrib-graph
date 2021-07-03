@@ -1,4 +1,0 @@
-(Contribution||has research problem||MACHINE COMPREHENSION)
-(Contribution||has research problem||Machine comprehension ( MC ))
-(Contribution||has research problem||MC)
-(Contribution||has research problem||question answering ( QA ))

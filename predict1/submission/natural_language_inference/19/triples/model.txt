@@ -1,4 +1,0 @@
-(TBCNN - pair neural model||to recognize||entailment and contradiction)
-(entailment and contradiction||between||two sentences)
-(Model||propose||TBCNN - pair neural model)
-(Contribution||has||Model)

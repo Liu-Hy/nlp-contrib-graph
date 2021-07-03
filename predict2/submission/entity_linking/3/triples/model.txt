@@ -1,6 +1,0 @@
-(semantic capabilities||of||CWEs)
-(semantic capabilities||employ||simple , yet interpretable approach)
-(simple , yet interpretable approach||to||WSD)
-(WSD||using||k -nearest neighbor classification ( kNN ) approach)
-(semantic capabilities||has||CWEs)
-(Contribution||has||Model)

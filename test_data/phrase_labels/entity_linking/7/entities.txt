@@ -1,0 +1,141 @@
+130	0	14	Sem Eval Tasks
+136	0	23	Our proposed algorithms
+136	24	31	achieve
+136	36	66	highest all - words F 1 scores
+136	67	77	except for
+136	78	93	Sem - Eval 2013
+138	0	11	Unified WSD
+138	20	37	highest F 1 score
+138	38	40	on
+138	41	72	Nouns ( Sem - Eval - 7 Coarse )
+138	79	93	our algorithms
+138	94	104	outperform
+138	105	116	Unified WSD
+138	117	119	on
+138	120	149	other part - of - speech tags
+148	0	26	Word2 Vec vectors Vs. LSTM
+150	3	11	performs
+150	12	19	similar
+150	23	52	IMS + Word2 Vec ( T: SemCor )
+151	0	5	shows
+151	15	30	LSTM classifier
+151	31	42	outperforms
+151	47	67	Word2 Vec classifier
+151	68	74	across
+151	79	84	board
+152	0	17	Sem Cor Vs. OMSTI
+153	42	57	LSTM classifier
+153	58	70	trained with
+153	71	76	OMSTI
+153	77	85	performs
+153	86	91	worse
+153	92	96	than
+153	102	109	trained
+153	110	114	with
+153	115	121	SemCor
+155	10	24	SVM classifier
+155	42	55	able to learn
+155	58	63	model
+155	70	80	copes with
+155	86	91	noise
+155	94	132	our naive nearest neighbor classifiers
+155	133	144	do not have
+155	147	160	learned model
+155	165	169	deal
+155	170	179	less well
+155	180	184	with
+155	185	197	noisy labels
+160	0	9	NOAD Eval
+178	0	15	LSTM classifier
+180	0	19	Most frequent sense
+184	0	4	LSTM
+184	5	16	outperforms
+184	17	25	Word2Vec
+184	26	28	by
+184	29	57	more than 10 % overall words
+184	66	83	most of the gains
+184	88	92	from
+184	93	110	verbs and adverbs
+186	0	23	Change of training data
+191	4	41	SemCor ( or MASC ) trained classifier
+191	45	47	on
+191	50	53	par
+191	54	58	with
+191	63	86	NOAD trained classifier
+191	87	89	on
+191	90	98	F1 score
+193	0	33	Change of language model capacity
+196	3	10	balance
+196	15	42	accuracy and resource usage
+196	48	51	use
+196	56	103	second best LSTM model ( h = 2048 and p = 512 )
+196	104	106	by
+196	107	114	default
+197	0	19	Semi-supervised WSD
+201	26	28	LP
+201	29	42	did not yield
+201	43	57	clear benefits
+201	63	68	using
+201	73	97	Word2 Vec language model
+204	0	19	Change of seed data
+205	20	22	LP
+205	23	45	substantially improves
+205	46	59	classifier F1
+205	60	64	when
+205	69	86	training datasets
+205	87	90	are
+205	91	104	SemCor + NOAD
+205	108	119	MASC + NOAD
+208	0	23	Change of graph density
+209	16	25	construct
+209	30	38	LP graph
+209	39	52	by connecting
+209	53	62	two nodes
+209	63	65	if
+209	72	80	affinity
+209	84	105	above 95 % percentile
+212	4	13	F1 scores
+212	18	35	relatively stable
+212	36	40	when
+212	45	55	percentile
+212	56	70	ranges between
+212	71	79	85 to 98
+212	86	94	decrease
+212	95	99	when
+212	104	114	percentile
+212	115	123	drops to
+212	124	126	80
+202	7	10	see
+202	11	35	significant improvements
+202	38	52	6.3 % increase
+202	53	55	on
+202	56	62	SemCor
+202	67	81	7.3 % increase
+202	82	84	on
+202	85	89	MASC
+202	92	97	using
+202	98	100	LP
+202	101	105	with
+202	110	129	LSTM language model
+20	19	27	describe
+20	28	52	two novel WSD algorithms
+21	4	9	first
+21	13	21	based on
+21	24	55	Long Short Term Memory ( LSTM )
+22	28	45	take into account
+22	46	56	word order
+22	57	61	when
+22	62	73	classifying
+23	8	15	present
+23	18	43	semi-supervised algorithm
+23	50	54	uses
+23	55	72	label propagation
+23	73	81	to label
+23	82	101	unlabeled sentences
+23	102	110	based on
+23	117	127	similarity
+23	128	130	to
+23	131	143	labeled ones
+2	0	41	Semi-supervised Word Sense Disambiguation
+4	50	83	word sense disambiguation ( WSD )
+5	133	136	WSD

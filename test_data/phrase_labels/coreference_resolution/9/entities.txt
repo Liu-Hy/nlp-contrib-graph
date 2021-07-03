@@ -1,0 +1,73 @@
+11	3	14	fine - tune
+11	15	19	BERT
+11	20	22	to
+11	23	45	coreference resolution
+12	3	10	present
+12	11	19	two ways
+12	20	22	of
+12	23	32	extending
+12	37	55	c 2f - coref model
+16	2	40	https://github.com/mandarjoshi90/coref
+63	3	9	extend
+63	14	49	original Tensorflow implementations
+63	50	52	of
+63	53	76	c 2f - coref 3 and BERT
+64	3	12	fine tune
+64	13	23	all models
+64	24	26	on
+64	31	53	OntoNotes English data
+64	54	57	for
+64	58	67	20 epochs
+64	68	73	using
+64	76	83	dropout
+64	84	86	of
+64	87	90	0.3
+64	97	111	learning rates
+64	112	114	of
+64	115	135	1 10 ?5 and 2 10 ? 4
+64	136	140	with
+64	141	153	linear decay
+64	154	157	for
+64	162	177	BERT parameters
+64	186	201	task parameters
+66	3	10	trained
+66	11	26	separate models
+66	27	31	with
+66	32	47	max segment len
+66	48	50	of
+66	51	54	128
+66	57	60	256
+66	63	66	384
+66	73	76	512
+2	9	31	Coreference Resolution
+70	0	21	Paragraph Level : GAP
+76	8	13	shows
+76	19	23	BERT
+76	24	32	improves
+76	33	46	c 2 f - coref
+76	47	49	by
+76	50	64	9 % and 11.5 %
+76	65	68	for
+76	73	94	base and large models
+78	0	26	Document Level : OntoNotes
+83	0	5	shows
+83	11	22	BERT - base
+83	23	29	offers
+83	33	44	improvement
+83	45	47	of
+83	48	53	0.9 %
+83	54	58	over
+83	63	91	ELMo - based c2 fcoref model
+87	0	12	BERT - large
+87	25	33	improves
+87	34	47	c 2 f - coref
+87	48	50	by
+87	55	73	much larger margin
+87	74	76	of
+87	77	82	3.9 %
+88	8	15	observe
+88	25	40	overlap variant
+88	41	47	offers
+88	48	62	no improvement
+88	63	67	over
+88	68	79	independent

@@ -1,7 +1,0 @@
-(neural ensemble natural language generator||train and test on||three large unaligned datasets)
-(three large unaligned datasets||in||restaurant , television , and laptop domains)
-(Model||present||neural ensemble natural language generator)
-(novel ways||to represent||MR inputs)
-(MR inputs||including||novel methods)
-(Model||explore||novel ways)
-(Contribution||has||Model)

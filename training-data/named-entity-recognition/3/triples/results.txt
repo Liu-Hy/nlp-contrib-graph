@@ -1,5 +1,0 @@
-(Contribution||has||Results)
-(Results||In||CoNLL 2003 NER task)
-(CoNLL 2003 NER task||scores||91.93 mean F 1)
-(Results||In||CoNLL 2000 Chunking task)
-(CoNLL 2000 Chunking task||achieves||96.37 mean F 1)

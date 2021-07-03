@@ -1,5 +1,0 @@
-(Contribution||has research problem||Unsupervised Hypernym Discovery)
-(Contribution||has research problem||hypernym discovery)
-(Contribution||has research problem||Hypernym Discovery)
-(Contribution||has research problem||several competing approaches)
-(Contribution||has research problem||producing word embedding vectors)

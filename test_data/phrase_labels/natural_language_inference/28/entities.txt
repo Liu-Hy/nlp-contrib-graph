@@ -1,0 +1,113 @@
+127	0	26	SYNTHETIC WORLD MODEL TASK
+134	0	3	For
+134	8	14	MemN2N
+134	20	23	set
+134	28	42	number of hops
+134	43	51	equal to
+134	52	57	T ? 2
+134	66	85	embedding dimension
+134	86	88	to
+134	89	95	d = 20
+135	4	10	EntNet
+135	15	41	embedding dimension d = 20
+135	46	60	5 memory slots
+135	71	75	LSTM
+135	80	95	50 hidden units
+135	102	113	resulted in
+135	124	137	significantly
+135	138	153	more parameters
+135	154	158	than
+135	163	179	other two models
+137	0	10	All models
+137	16	28	trained with
+137	29	33	ADAM
+137	34	38	with
+137	39	61	initial learning rates
+137	62	68	set by
+137	69	80	grid search
+137	81	85	over
+137	86	108	{ 0.1 , 0.01 , 0.001 }
+137	113	123	divided by
+137	124	125	2
+137	126	131	every
+137	132	146	10,000 updates
+139	4	10	MemN2N
+139	19	36	worst performance
+139	45	61	degrades quickly
+139	62	64	as
+139	69	75	length
+139	76	78	of
+139	83	91	sequence
+139	92	101	increases
+140	4	8	LSTM
+140	9	17	performs
+140	18	24	better
+140	37	51	loses accuracy
+140	52	54	as
+140	59	65	length
+140	66	68	of
+140	73	81	sequence
+140	82	91	increases
+171	0	29	CHILDRE N'S BOOK TEST ( CBT )
+175	21	28	methods
+175	29	33	with
+175	34	48	limited memory
+175	49	56	such as
+175	57	62	LSTMs
+175	63	70	perform
+175	71	75	well
+175	76	78	on
+175	79	113	more frequent , syntax based words
+175	114	121	such as
+175	122	144	prepositions and verbs
+28	35	39	with
+28	42	87	new kind of memory - augmented neural network
+28	93	97	uses
+28	100	145	distributed memory and processor architecture
+28	152	187	Recurrent Entity Network ( EntNet )
+29	10	21	consists of
+29	24	36	fixed number
+29	37	39	of
+29	40	60	dynamic memory cells
+29	68	78	containing
+29	81	95	vector key w j
+29	102	133	vector value ( or content ) h j
+30	0	9	Each cell
+30	13	28	associated with
+30	33	50	own " processor "
+30	55	85	simple gated recurrent network
+30	91	101	may update
+30	106	116	cell value
+30	117	122	given
+30	126	131	input
+33	20	26	EntNet
+33	27	41	can be seen as
+33	44	48	bank
+33	49	51	of
+33	52	62	gated RNNs
+33	107	120	hidden states
+33	121	134	correspond to
+33	135	165	latent concepts and attributes
+33	86	96	parameters
+33	189	197	describe
+33	202	206	laws
+33	207	209	of
+33	214	219	world
+35	6	18	hidden state
+35	22	29	updated
+35	35	39	when
+35	40	55	new information
+35	56	67	relevant to
+35	74	81	concept
+35	85	93	received
+36	4	8	keys
+36	9	16	used in
+36	21	50	addressing / gating mechanism
+36	56	69	correspond to
+36	70	90	concepts or entities
+36	101	121	modified only during
+36	122	130	learning
+36	133	143	not during
+36	144	153	inference
+2	0	24	TRACKING THE WORLD STATE
+23	54	89	simple story understanding scenario

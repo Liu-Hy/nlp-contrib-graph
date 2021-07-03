@@ -1,3 +1,0 @@
-(Contribution||has research problem||Machine Comprehension)
-(Contribution||has research problem||Understanding unstructured text)
-(Contribution||has research problem||Machine comprehension ( MC ))

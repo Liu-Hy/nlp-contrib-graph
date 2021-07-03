@@ -1,7 +1,0 @@
-(different OIE systems||into||single unified and dis ambiguated knowledge repository)
-(Baselines||has||KB - UNIFY)
-(unification algorithm||takes as input||set K of OIE - derived resources)
-(set K of OIE - derived resources||modeled as||set)
-(sense inventory||of||Babel Net)
-(Baselines||has||unification algorithm)
-(Contribution||has||Baselines)

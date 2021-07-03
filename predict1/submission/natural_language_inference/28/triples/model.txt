@@ -1,7 +1,0 @@
-(basic rules||of||approximate ( logical ) inference)
-(same category||tend to have||similar properties)
-(Model||has||basic rules)
-(new kind of memory - augmented neural network||uses||distributed memory and processor architecture)
-(distributed memory and processor architecture||name||Recurrent Entity Network ( EntNet ))
-(Model||with||new kind of memory - augmented neural network)
-(Contribution||has||Model)

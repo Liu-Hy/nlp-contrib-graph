@@ -1,7 +1,0 @@
-(Contribution||has research problem||3D Face Morphable Models)
-(Contribution||has research problem||3 D facial shape estimation from single images)
-(Contribution||has research problem||3 D facial shape recovery from a single image)
-(Contribution||has research problem||extracting the 3D facial shape)
-(Contribution||has research problem||single image)
-(Contribution||has research problem||Learning statistical priors of)
-(Contribution||has research problem||3D facial shape and texture for " in - the - wild " images)

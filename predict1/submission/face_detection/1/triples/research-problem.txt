@@ -1,7 +1,0 @@
-(Contribution||has research problem||EXTD)
-(Contribution||has research problem||Extremely Tiny Face Detector)
-(Contribution||has research problem||new multi-scale face detector)
-(Contribution||has research problem||extremely tiny number of parameters ( EXTD ))
-(Contribution||has research problem||0.1 million)
-(Contribution||has research problem||comparable performance)
-(Contribution||has research problem||deep heavy detectors)

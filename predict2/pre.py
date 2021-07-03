@@ -7,15 +7,16 @@ import re
 import math
 import pandas as pd
 
-base_dir = 'input'
-label_dir = 'sent_labels'
+base_dir = os.path.join('..', 'test_data', 'input')
+sent_label_dir = os.path.join('..', 'test_data', 'sent_labels')
 sep = os.path.sep
 
 def get_dir(topic_ls=None, paper_ls=None):
-    # Get the list of directories
+    # Get the list of paper directories
     dir_ls = []
     if topic_ls is None:
         topic_ls = os.listdir(base_dir)
+        topic_ls.remove('README.md')
     if paper_ls is None:
         for topic in topic_ls:
             paper_ls = os.listdir(os.path.join(base_dir, topic))
@@ -27,7 +28,6 @@ def get_dir(topic_ls=None, paper_ls=None):
                 dir_ls.append(os.path.join(topic, str(i)))
     return dir_ls
 
-
 def get_file_path(dirs):
     # Get the relevant files from each directory of paper.
     rx1 = '(.*Stanza-out.txt$)'
@@ -35,7 +35,7 @@ def get_file_path(dirs):
     file_path = []
     for dir in dirs:
         dir1 = os.path.join(base_dir, dir)
-        dir2 = os.path.join(label_dir, dir)
+        dir2 = os.path.join(sent_label_dir, dir)
         new = ['', '']  # stores the paths of the sentence file and the label file
         for file in os.listdir(dir1):
             res = re.match(rx1, file)
@@ -49,7 +49,6 @@ def get_file_path(dirs):
         file_path.append(new)
     return file_path
 
-
 def is_heading(line):
     # Determine if a line is a heading
     ls = line.split(' ')
@@ -60,7 +59,6 @@ def is_heading(line):
         res = re.match(rx, line)
         return True if res else False
     return False
-
 
 def is_main_heading(line, judge_mask=False):
     '''
@@ -80,7 +78,6 @@ def is_main_heading(line, judge_mask=False):
 
 # Determin if a sentence conforms to a specific case method.
 # Their are three case methods in all, eg: Attention Is All You Need; ATTENTION IS ALL YOU NEED; Attention is all you need.
-
 
 def check_case(line, flag):
     if flag == 1:
@@ -110,7 +107,6 @@ def check_case(line, flag):
                 if re.match(r'[A-Z]', word):
                     wd_num += 1
             return wd_num <= math.ceil(len(words)/3)
-
 
 # read the relevant files from the folder of one paper, and produce a data table for that paper.
 def load_paper_sentence(sent_path, label_path):  # (sent_path, label_path)
@@ -216,7 +212,6 @@ def load_paper_sentence(sent_path, label_path):  # (sent_path, label_path)
         sent[i][8] = sent[i][7] = sent[i][6]
     return sent
 
-
 def load_data_sentence(file_path):
     # Get the data table of all the papers in file_path
     data = []
@@ -234,7 +229,6 @@ df = pd.DataFrame(data)
 df.columns = ['idx', 'text', 'main_heading', 'heading',
               'topic', 'paper_idx', 'BIO', 'BIO_1', 'BIO_2', 'offset1', 'pro1', 'offset2', 'pro2', 'offset3', 'pro3', 'mask', 'bi_labels', 'labels']
 
-df.to_csv('all_sent.csv', index=False)
 pos = df[df['bi_labels'] == 1]
 pos.to_csv('pos_sent.csv', index=False)
-print('\n\"all_sent.csv\" and \"pos_sent.csv\" have been saved in this folder')
+print('\n\"pos_sent.csv\" has been saved in this folder')

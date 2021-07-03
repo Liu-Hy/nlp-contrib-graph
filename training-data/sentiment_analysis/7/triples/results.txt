@@ -1,3 +1,0 @@
-(Contribution||has||Results)
-(Results||has||Our performance)
-(Our performance||matches||prior state of the art)

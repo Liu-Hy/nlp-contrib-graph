@@ -1,5 +1,0 @@
-(logistic regression classifier||with||features)
-(features||derived by||RNN)
-(variants||of||our NABoEentity and NABoE - full models)
-(our NABoEentity and NABoE - full models||based on||Wikifier and TAGME)
-(Contribution||has||Baselines)

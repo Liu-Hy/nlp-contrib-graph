@@ -1,7 +1,0 @@
-(Contribution||has research problem||Face Detection)
-(Contribution||has research problem||Landmark Localization)
-(Contribution||has research problem||Gender)
-(Contribution||has research problem||D ETECTION and analysis of faces)
-(Contribution||has research problem||MTL)
-(Contribution||has research problem||task)
-(Contribution||has research problem||face detection and landmark localization)

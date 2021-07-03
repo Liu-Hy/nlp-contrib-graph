@@ -1,5 +1,0 @@
-(" all relations " system||applies||our second vocabulary compression)
-(our second vocabulary compression||through||all relations)
-(all relations||on||training corpus)
-(Baselines||has||" all relations " system)
-(Contribution||has||Baselines)

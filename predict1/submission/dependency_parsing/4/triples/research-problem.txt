@@ -1,3 +1,0 @@
-(Contribution||has research problem||dependency parsing)
-(Contribution||has research problem||stack - pointer networks ( STACKPTR ))
-(Contribution||has research problem||Dependency parsing)

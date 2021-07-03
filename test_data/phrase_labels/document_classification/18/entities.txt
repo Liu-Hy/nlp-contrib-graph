@@ -1,0 +1,78 @@
+103	0	19	Traditional Methods
+106	0	30	Bag - of - words and its TFIDF
+107	23	45	bag - of - words model
+107	49	60	constructed
+107	61	73	by selecting
+107	74	100	50,000 most frequent words
+107	101	105	from
+107	110	125	training subset
+112	0	31	Bag - of - ngrams and its TFIDF
+113	4	28	bag - of - ngrams models
+113	33	44	constructed
+113	45	57	by selecting
+113	62	111	500,000 most frequent n-grams ( up to 5 - grams )
+113	112	116	from
+113	121	136	training subset
+113	137	140	for
+113	141	153	each dataset
+115	0	34	Bag - of - means on word embedding
+116	40	44	uses
+116	45	52	k-means
+116	53	55	on
+116	56	64	word2vec
+116	65	76	learnt from
+116	81	96	training subset
+116	97	99	of
+116	100	112	each dataset
+121	0	21	Deep Learning Methods
+124	0	21	Word - based ConvNets
+131	0	24	Long - short term memory
+18	27	35	treating
+18	36	40	text
+18	41	53	as a kind of
+18	54	64	raw signal
+18	65	67	at
+18	68	83	character level
+18	90	98	applying
+18	99	136	temporal ( one-dimensional ) ConvNets
+194	59	85	character - level ConvNets
+194	92	100	work for
+194	101	120	text classification
+194	121	128	without
+194	133	137	need
+194	138	141	for
+194	142	147	words
+199	0	19	Traditional methods
+199	20	24	like
+199	25	38	n-grams TFIDF
+199	39	45	remain
+199	46	63	strong candidates
+199	64	67	for
+199	68	75	dataset
+199	76	78	of
+199	79	83	size
+199	84	89	up to
+199	90	119	several hundreds of thousands
+199	141	148	dataset
+199	149	156	goes to
+199	161	166	scale
+199	167	169	of
+199	170	186	several millions
+199	193	200	observe
+199	206	232	character - level ConvNets
+199	187	189	do
+199	245	251	better
+200	0	9	Conv Nets
+200	10	18	may work
+200	19	23	well
+200	24	27	for
+200	28	49	user - generated data
+207	0	18	Choice of alphabet
+207	19	24	makes
+207	27	37	difference
+211	0	9	Semantics
+211	10	12	of
+211	13	18	tasks
+211	19	26	may not
+211	27	33	matter
+2	45	64	Text Classification

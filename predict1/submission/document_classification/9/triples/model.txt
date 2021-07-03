@@ -1,3 +1,0 @@
-(pattern extraction pipelines||at||multiple levels)
-(Model||hierarchically builds||pattern extraction pipelines)
-(Contribution||has||Model)

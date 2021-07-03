@@ -1,2 +1,0 @@
-(Contribution||has research problem||Dense Face Alignment)
-(Contribution||has research problem||Face alignment)

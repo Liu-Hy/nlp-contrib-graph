@@ -1,0 +1,87 @@
+149	0	11	Experiments
+158	0	22	Part of Speech Tagging
+169	0	7	Results
+171	0	29	Our globally normalized model
+171	36	61	significantly outperforms
+171	66	77	local model
+172	0	11	Beam search
+172	12	16	with
+172	19	43	locally normalized model
+172	44	56	suffers from
+172	57	81	severe label bias issues
+187	4	7	set
+187	8	10	of
+187	11	35	character ngrams feature
+187	36	38	is
+187	39	53	very important
+187	56	66	increasing
+187	67	83	average accuracy
+187	84	86	on
+187	91	109	CoNLL '09 datasets
+187	110	112	by
+187	113	133	about 0.5 % absolute
+186	0	5	Using
+186	6	17	beam search
+186	18	22	with
+186	25	49	locally normalized model
+186	50	63	does not help
+186	70	74	with
+186	75	95	global normalization
+186	99	107	leads to
+186	110	123	7 % reduction
+186	124	126	in
+186	127	141	relative error
+189	0	18	Dependency Parsing
+191	0	7	Results
+192	41	50	our model
+192	51	59	compares
+192	60	69	favorably
+192	70	72	to
+192	77	88	94.26 % LAS
+192	93	104	92.41 % UAS
+194	0	11	Our results
+194	17	41	significantly outperform
+194	46	69	LSTM - based approaches
+11	16	27	demonstrate
+11	33	63	simple feed - forward networks
+11	64	71	without
+11	72	86	any recurrence
+11	91	98	achieve
+11	99	130	comparable or better accuracies
+11	131	135	than
+11	136	141	LSTMs
+11	164	183	globally normalized
+12	47	51	uses
+12	54	94	transition system and feature embeddings
+15	3	10	compute
+15	11	20	gradients
+15	21	29	based on
+15	35	67	approximate global normalization
+15	72	79	perform
+15	80	109	full backpropagation training
+15	110	112	of
+15	113	142	all neural network parameters
+15	143	151	based on
+15	156	164	CRF loss
+13	43	54	beam search
+13	55	70	for maintaining
+13	71	90	multiple hypotheses
+13	95	104	introduce
+13	105	125	global normalization
+13	126	130	with
+13	133	175	conditional random field ( CRF ) objective
+13	176	187	to overcome
+13	192	210	label bias problem
+14	9	12	use
+14	13	27	beam inference
+14	33	44	approximate
+14	49	67	partition function
+14	68	70	by
+14	71	83	summing over
+14	88	96	elements
+14	97	99	in
+14	104	108	beam
+14	115	118	use
+14	119	132	early updates
+2	0	54	Globally Normalized Transition - Based Neural Networks
+4	15	68	globally normalized transition - based neural network

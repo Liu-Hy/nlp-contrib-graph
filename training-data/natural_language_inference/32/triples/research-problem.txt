@@ -1,2 +1,0 @@
-(Contribution||has research problem||CONVERSATIONAL MACHINE COMPREHENSION)
-(Contribution||has research problem||conversational machine comprehension ( MC ))

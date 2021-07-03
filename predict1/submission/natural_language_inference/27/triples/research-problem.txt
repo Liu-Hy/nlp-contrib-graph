@@ -1,6 +1,0 @@
-(Contribution||has research problem||CONVERSATIONAL QUESTION)
-(Contribution||has research problem||Conversational question answering ( CQA ))
-(Contribution||has research problem||machine reading comprehension ( MRC ))
-(Contribution||has research problem||CQA)
-(Contribution||has research problem||passage)
-(Contribution||has research problem||machine reading comprehension ( MRC ))

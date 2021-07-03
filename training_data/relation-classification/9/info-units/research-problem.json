@@ -1,0 +1,8 @@
+{
+  "has research problem" : [
+    ["Pretrained Language Model", {"from sentence" : "SCIBERT : A Pretrained Language Model for Scientific Text"}],
+    ["Obtaining large - scale annotated data for NLP tasks in the scientific domain", {"from sentence" : "Obtaining large - scale annotated data for NLP tasks in the scientific domain is challenging and expensive ."}],
+    ["pretrained language model based on BERT ( Devlin et al. , 2019 )", "address the lack of high - quality , large - scale labeled scientific data", {"from sentence": "We release SCIBERT , a pretrained language model based on BERT ( Devlin et al. , 2019 ) to address the lack of high - quality , large - scale labeled scientific data ."}],
+    ["annotated data is difficult and expensive to collect due to the expertise required for quality annotation", {"from sentence" : "In general domains , large - scale training data is often possible to obtain through crowdsourcing , but in scientific domains , annotated data is difficult and expensive to collect due to the expertise required for quality annotation ."}]
+  ]
+}

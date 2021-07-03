@@ -1,0 +1,231 @@
+192	0	14	After removing
+192	19	45	exact match binary feature
+192	51	55	find
+192	60	71	performance
+192	72	79	degrade
+192	80	82	to
+192	83	87	78.2
+192	88	90	on
+192	91	104	matched score
+192	105	107	on
+192	108	123	development set
+192	128	132	78.0
+192	133	135	on
+192	136	152	mismatched score
+197	3	9	obtain
+197	10	14	73.2
+197	15	18	for
+197	19	32	matched score
+197	37	41	73.6
+197	42	44	on
+197	45	60	mismatched data
+200	6	12	remove
+200	13	38	encoding layer completely
+200	53	59	obtain
+200	62	66	73.5
+200	67	70	for
+200	71	84	matched score
+200	89	93	73.2
+200	94	97	for
+200	98	114	mismatched score
+201	11	22	demonstrate
+201	27	51	feature extraction layer
+201	52	56	have
+201	57	76	powerful capability
+201	77	87	to capture
+201	92	108	semantic feature
+202	28	63	both self - attention and fuse gate
+202	71	85	retaining only
+202	86	101	highway network
+203	4	10	result
+203	11	19	improves
+203	20	22	to
+203	23	36	77.7 and 77.3
+203	50	52	on
+203	53	91	matched and mismatched development set
+204	48	57	fuse gate
+204	82	93	performance
+204	94	101	degrade
+204	60	62	to
+204	105	109	73.5
+204	110	113	for
+204	114	127	matched score
+204	132	136	73.8
+204	137	140	for
+204	141	151	mismatched
+205	26	29	use
+205	34	42	addition
+205	43	45	of
+205	50	64	representation
+205	65	70	after
+205	71	86	highway network
+205	87	90	and
+205	95	109	representation
+205	110	115	after
+205	116	132	self - attention
+205	133	135	as
+205	136	151	skip connection
+205	177	197	performance increase
+205	198	200	to
+205	201	214	77.3 and 76.3
+137	3	12	implement
+137	13	26	our algorithm
+137	27	31	with
+137	32	52	Tensorflow framework
+138	3	21	Adadelta optimizer
+138	40	44	with
+138	45	68	? as 0.95 and as 1e ? 8
+138	72	79	used to
+138	80	88	optimize
+138	89	114	all the trainable weights
+139	4	25	initial learning rate
+139	29	35	set to
+139	36	39	0.5
+139	44	54	batch size
+139	55	57	to
+139	58	60	70
+140	20	31	not improve
+140	32	58	best in domain performance
+140	59	62	for
+140	63	75	30,000 steps
+140	81	94	SGD optimizer
+140	95	99	with
+140	100	113	learning rate
+140	114	116	of
+140	117	123	3e ? 4
+140	132	139	to help
+140	9	14	model
+140	149	153	find
+140	156	176	better local optimum
+141	0	14	Dropout layers
+141	19	33	applied before
+141	34	51	all linear layers
+141	56	61	after
+141	62	84	word - embedding layer
+143	3	13	initialize
+143	18	33	word embeddings
+143	34	38	with
+143	39	75	pre-trained 300D Glo Ve 840B vectors
+143	86	112	out - of - vocabulary word
+143	113	116	are
+143	117	137	randomly initialized
+143	138	142	with
+143	143	163	uniform distribution
+144	4	24	character embeddings
+144	25	28	are
+144	29	49	randomly initialized
+144	50	54	with
+144	55	59	100D
+145	3	14	crop or pad
+145	15	19	each
+145	20	25	token
+145	26	33	to have
+145	34	47	16 characters
+146	4	30	1D convolution kernel size
+146	31	34	for
+146	35	54	character embedding
+146	55	57	is
+146	58	59	5
+147	0	11	All weights
+147	16	29	constraint by
+147	30	47	L2 regularization
+152	4	26	first scale down ratio
+153	0	2	in
+153	3	27	feature extraction layer
+153	31	37	set to
+153	38	41	0.3
+153	46	75	transitional scale down ratio
+154	3	9	set to
+154	10	13	0.5
+155	4	19	sequence length
+155	23	29	set as
+155	32	43	hard cutoff
+155	44	46	on
+155	47	62	all experiments
+155	65	67	48
+155	68	71	for
+155	72	80	MultiNLI
+155	83	85	32
+155	86	89	for
+155	90	94	SNLI
+155	99	101	24
+155	102	105	for
+155	106	133	Quora Question Pair Dataset
+142	3	6	use
+142	10	39	exponential decayed keep rate
+142	40	46	during
+142	47	55	training
+142	58	63	where
+142	68	85	initial keep rate
+142	86	88	is
+142	89	92	1.0
+142	101	111	decay rate
+142	112	114	is
+142	115	120	0.977
+142	121	124	for
+142	125	142	every 10,000 step
+23	18	22	push
+23	27	47	multi-head attention
+23	48	50	to
+23	53	60	extreme
+23	61	72	by building
+23	75	125	word - by - word dimension - wise alignment tensor
+23	135	139	call
+23	140	158	interaction tensor
+24	4	22	interaction tensor
+24	23	30	encodes
+24	35	70	high - order alignment relationship
+24	71	78	between
+24	79	93	sentences pair
+26	3	6	dub
+26	11	28	general framework
+26	29	31	as
+26	32	69	Interactive Inference Network ( IIN )
+2	45	71	NATURAL LANGUAGE INFERENCE
+10	29	32	NLI
+10	47	78	recognizing textual entiailment
+10	84	87	RTE
+159	14	22	MULTINLI
+164	0	12	Our approach
+164	15	28	without using
+164	33	52	recurrent structure
+164	55	63	achieves
+164	68	106	new state - of - the - art performance
+164	107	109	of
+164	110	116	80.0 %
+164	119	128	exceeding
+164	129	171	current state - of - the - art performance
+164	172	174	by
+164	175	188	more than 5 %
+165	33	37	find
+165	42	76	out - of - domain test performance
+165	77	79	is
+165	80	98	consistently lower
+165	99	103	than
+165	104	132	in - domain test performance
+167	14	18	SNLI
+175	3	7	show
+175	8	24	our model , DIIN
+175	27	35	achieves
+175	36	70	state - of - the - art performance
+175	71	73	on
+175	78	101	competitive leaderboard
+179	14	41	QUORA QUESTION PAIR DATASET
+182	0	5	BIMPM
+182	6	12	models
+182	13	46	different perspective of matching
+182	47	54	between
+182	55	68	sentence pair
+182	69	71	on
+182	72	86	both direction
+182	94	104	aggregates
+182	105	120	matching vector
+182	121	125	with
+182	126	130	LSTM
+183	0	27	DECATT word and DECATT char
+183	28	32	uses
+183	33	84	automatically collected in - domain paraphrase data
+183	85	102	to noisy pretrain
+183	103	152	n-gram word embedding and ngram subword embedding
+183	169	171	on
+183	172	200	decomposable attention model

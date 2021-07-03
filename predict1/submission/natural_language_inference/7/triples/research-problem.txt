@@ -1,2 +1,0 @@
-(Contribution||has research problem||Teaching machines to read natural language documents)
-(Contribution||has research problem||Machine reading)

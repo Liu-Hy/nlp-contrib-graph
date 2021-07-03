@@ -1,3 +1,0 @@
-(Contribution||has research problem||VDCNN accuracy)
-(Contribution||has research problem||increases)
-(Contribution||has research problem||depth)

@@ -1,5 +1,0 @@
-(most of the state - of - the - art methods||especially on||AFLW dataset)
-(Our method MCL||has||outperforms)
-(outperforms||has||most of the state - of - the - art methods)
-(Results||has||Our method MCL)
-(Contribution||has||Results)

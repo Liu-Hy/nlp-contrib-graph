@@ -1,3 +1,0 @@
-(Contribution||has research problem||populate knowledge bases with facts)
-(Contribution||has research problem||populate a knowledge base with relational facts)
-(Contribution||has research problem||relation extraction)

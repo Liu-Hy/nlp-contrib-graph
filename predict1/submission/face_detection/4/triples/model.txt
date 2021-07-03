@@ -1,8 +1,0 @@
-(aggregate channel features ( ACF )||take advantages of||channel features)
-(Model||has||aggregate channel features ( ACF ))
-(Two - stage methods||consist of||proposal selection)
-(Model||has||Two - stage methods)
-(Light and Fast Face Detector ( LFFD )||for||edge devices)
-(Light and Fast Face Detector ( LFFD )||considerably balancing||running efficiency)
-(Model||propose||Light and Fast Face Detector ( LFFD ))
-(Contribution||has||Model)

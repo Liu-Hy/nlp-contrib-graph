@@ -1,2 +1,0 @@
-(Contribution||has research problem||PASSAGE RE - RANKING)
-(Contribution||has research problem||query - based passage re-ranking)

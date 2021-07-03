@@ -1,0 +1,7 @@
+{
+  "has research problem" : [
+    ["Language Understanding", {"from sentence" : "BERT : Pre-training of Deep Bidirectional Transformers for Language Understanding"}],
+    ["language representation model", {"from sentence" : "We introduce a new language representation model called BERT , which stands for Bidirectional Encoder Representations from Transformers ."}],
+    ["Language model pre-training", {"from sentence" : "Language model pre-training has been shown to be effective for improving many natural language processing tasks ."}]
+  ]
+}

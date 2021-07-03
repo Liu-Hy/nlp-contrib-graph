@@ -1,4 +1,0 @@
-(Contribution||has research problem||Neural Question Generation from Text)
-(Contribution||has research problem||Automatic question generation)
-(Contribution||has research problem||Automatic question generation from natural language text)
-(Contribution||has research problem||question generation)

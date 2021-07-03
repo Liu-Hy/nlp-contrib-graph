@@ -1,4 +1,0 @@
-(representation||stays close to||unseen similar words)
-(unseen similar words||in||inference time)
-(inference time||improved||model)
-(Contribution||has||Ablation analysis)

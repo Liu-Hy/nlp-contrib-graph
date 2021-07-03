@@ -1,2 +1,0 @@
-(Contribution||has research problem||Abstractive Text Summarization)
-(Contribution||has research problem||Automatic summarization)

@@ -8,7 +8,7 @@ import pandas as pd
 import json
 from parse import *
 
-base_dir = 'training-data'
+base_dir = 'training_data'
 sep = os.path.sep
 reports = []
 '''
@@ -18,7 +18,7 @@ and the triple does not take the form of "Contribution||has||(unit name)", it wi
 special_trip = []
 
 def get_dir(topic_ls=None, paper_ls=None):
-    # Get the list of directories
+    # Get the list of paper directories
     dir_ls = []
     if topic_ls is None:
         topic_ls = os.listdir(base_dir)

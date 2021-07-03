@@ -1,3 +1,0 @@
-(Contribution||has research problem||Answer Selection)
-(Contribution||has research problem||sentence - level answer- selection)
-(Contribution||has research problem||Automatic question answering ( QA ))

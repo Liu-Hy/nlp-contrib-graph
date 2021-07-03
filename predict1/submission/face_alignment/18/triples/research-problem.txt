@@ -1,3 +1,0 @@
-(Contribution||has research problem||Deep Alignment Network)
-(Contribution||has research problem||convolutional neural network)
-(Contribution||has research problem||Face alignment)

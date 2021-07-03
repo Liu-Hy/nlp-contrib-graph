@@ -1,7 +1,0 @@
-(parser||combines||encoder)
-(decoder||customized for||parsing)
-(Model||introduce||parser)
-(character LSTM||performs||better)
-(better||than||other lexical representationseven)
-(Model||present||character LSTM)
-(Contribution||has||Model)

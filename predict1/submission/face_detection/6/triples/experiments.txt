@@ -1,6 +1,0 @@
-(train set||of||WIDER FACE)
-(fails||on||some of the images)
-(some of the images||with||extremely hard faces)
-(train set||has||WIDER FACE)
-(official pre-trained SSH 1||has||fails)
-(Contribution||has||Experiments)

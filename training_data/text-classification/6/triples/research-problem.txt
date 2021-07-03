@@ -1,0 +1,4 @@
+(Contribution||has research problem||Universal Sentence Encoder)
+(Contribution||has research problem||encoding sentences into embedding vectors that specifically target transfer learning)
+(Contribution||has research problem||transfer learning using sentence embeddings)
+(Contribution||has research problem||transfer learning via sentence embeddings)

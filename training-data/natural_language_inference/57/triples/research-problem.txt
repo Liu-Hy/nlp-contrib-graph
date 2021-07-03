@@ -1,3 +1,0 @@
-(Contribution||has research problem||ORDER - EMBEDDINGS OF IMAGES AND LANGUAGE)
-(Contribution||has research problem||single visual - semantic hierarchy over words , sentences , and images)
-(Contribution||has research problem||visualsemantic hierarchy)

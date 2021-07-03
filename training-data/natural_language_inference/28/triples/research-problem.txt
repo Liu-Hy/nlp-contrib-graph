@@ -1,2 +1,0 @@
-(Contribution||has research problem||Recurrent Neural Networks ( RNN ))
-(Contribution||has research problem||RNN)

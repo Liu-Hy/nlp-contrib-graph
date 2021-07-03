@@ -1,4 +1,0 @@
-(contextualized word representation||based on||deep bidirectional language model)
-(deep bidirectional language model||trained on||large text corpus)
-(ELMo||has||contextualized word representation)
-(Contribution||has||Baselines)

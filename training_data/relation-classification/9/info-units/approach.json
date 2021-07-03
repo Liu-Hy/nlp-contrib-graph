@@ -1,0 +1,59 @@
+{
+  "has" : {
+    "Approach" : {
+      "name" : {
+        "SCIB - ERT" : {
+          "follows" : {
+            "same architecture as BERT" : {
+              "pretrained on" : "scientific text"
+            }
+          }
+        },
+        "from sentence" : "SCIB - ERT follows the same architecture as BERT but is instead pretrained on scientific text ."
+      },
+      "construct" : {
+        "SCIVOCAB" : {
+          "has" : {
+            "a new WordPiece vocabulary" : {
+              "on" : {
+                "our scientific corpus": {
+                  "using" : "Sen - tencePiece 1 library"
+                }
+              }
+            }
+          }
+        },
+        "from sentence" : "We construct SCIVOCAB , a new WordPiece vocabulary on our scientific corpus using the Sen - tencePiece 1 library ."        
+      },
+      "has" : {
+        "Corpus" : {
+          "train" : {
+            "SCIBERT" : {
+              "on" : {
+                "random sample" : {
+                  "of" : {
+                    "1.14 M papers" : {
+                      "from" : "Semantic Scholar"
+                    }
+                  }
+                }
+              }
+            },
+            "from sentence" : "Corpus
+We train SCIBERT on a random sample of 1.14 M papers from Semantic Scholar ."
+
+          },
+          "consists" : {
+            "18 % papers" : {
+              "from" : "computer science domain"
+            },
+            "82 %" : {
+              "from" : "broad biomedical domain"
+            },
+            "from sentence" : "This corpus consists of 18 % papers from the computer science domain and 82 % from the broad biomedical domain ."            
+          }          
+        }
+      }
+    }
+  }
+}

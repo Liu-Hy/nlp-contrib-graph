@@ -1,7 +1,0 @@
-(Both models||achieve||similar performance)
-(similar performance||with||small hidden layer)
-(Both models||adding||bigrams)
-(bigrams||gives us||significant boost)
-(significant boost||in||accuracy)
-(Both models||has||similar performance)
-(Contribution||has||Experiments)

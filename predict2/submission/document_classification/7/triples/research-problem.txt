@@ -1,5 +1,0 @@
-(Contribution||has research problem||Multilingual Document Classification)
-(Contribution||has research problem||Cross - lingual document classification)
-(Contribution||has research problem||data)
-(Contribution||has research problem||eight very different languages)
-(Contribution||has research problem||English)

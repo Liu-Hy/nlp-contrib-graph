@@ -1,3 +1,0 @@
-(Contribution||has research problem||Face alignment)
-(Contribution||has research problem||very dense 3D alignment)
-(Contribution||has research problem||largepose face images)

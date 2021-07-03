@@ -3,17 +3,17 @@ This repo contains data and code to solve SemEval-2021 Task 11: NLP Contribution
 For detailed description of our method, please see the [paper](https://arxiv.org/abs/2105.05435/) "UIUC_BioNLP at SemEval-2021 Task 11: A Cascade of Neural Models for Structuring Scholarly NLP Contributions".
 
 ## Data
-* <code>training-data/</code> contains the training data merged with the trial data. The corpus covers 29 topics in NLP, each with one or more papers
-* <code>interim/</code> contains intermediate data files converted from the training data
+* <code>training_data/</code> - the training data merged with the trial data, with full annotation.
+* <code>interim/</code> - intermediate data files converted from the training data
   * **all_sent**.csv - contains all the sentences, each with its section header, positional features, paper topic and index, BIO tags, etc.
   * **pos_sent**.csv - a subset of *all_sent*.csv consisting of all the positive sentences.
   * **triples**.csv - contains each positive sentence with the predicates and terms in it, and the corresponding triples of different types.
-
+* <code>test_data/</code> - the test data, with sentence and phrase annotation released.
 
 ## Scripts
 * **pre**.py - preprocess training data, report potential errors, produce *all_sent*.csv and *pos_sent*.csv
 * **ext**.py - preprocess training data, and produce *triples*.csv
-* <code>simpletransformers/</code> - this folder contains the customized Simple Transformers package
+* <code>simpletransformers/</code> - the customized Simple Transformers package
   * With customized model for subtask 1 to incorporate additional features
   * Extended from Simple Transformers version 0.51.10, compatible with common usage
   * Please first install the common package by running this code:

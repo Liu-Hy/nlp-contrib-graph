@@ -1,7 +1,0 @@
-(annotations||for||21 landmark points per face)
-(21 landmark points per face||along with||face bounding - box)
-(21 landmark points per face||along with||gender information)
-(Hyperparameters||provides||annotations)
-(21 point markups||for||face landmarks locations)
-(Hyperparameters||use||21 point markups)
-(Contribution||has||Hyperparameters)

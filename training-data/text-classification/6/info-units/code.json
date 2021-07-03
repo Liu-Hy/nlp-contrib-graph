@@ -1,3 +1,0 @@
-{
-  "Code" : ["https://tfhub.dev/google/universal-sentence-encoder/1", {"from sentence" : "Both models are implemented in TensorFlow and are available to download from TF Hub : 1 https://tfhub.dev/google/universal-sentence-encoder/1"}]
-}
