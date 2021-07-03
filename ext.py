@@ -35,7 +35,6 @@ def get_dir(topic_ls=None, paper_ls=None):
                 dir_ls.append(os.path.join(base_dir, topic, str(i)))
     return dir_ls
 
-
 def get_file_path(dirs):
     # Get the relevant files from each directory of paper.
     rx = '(.*Stanza-out.txt$)|(^sentences.txt$)'
@@ -52,7 +51,6 @@ def get_file_path(dirs):
         file_path.append(new)
     return file_path
 
-
 def is_heading(line):
     # Determine if a line is a heading
     ls = line.split(' ')
@@ -63,7 +61,6 @@ def is_heading(line):
         res = re.match(rx, line)
         return True if res else False
     return False
-
 
 def is_main_heading(line, judge_mask=False):
     '''
@@ -83,7 +80,6 @@ def is_main_heading(line, judge_mask=False):
 
 # Determin if a sentence conforms to a specific case method.
 # Their are three case methods in all, eg: Attention Is All You Need; ATTENTION IS ALL YOU NEED; Attention is all you need.
-
 
 def case_check(line, flag):
     if flag == 1:
@@ -113,7 +109,6 @@ def case_check(line, flag):
                 if re.match(r'[A-Z]', word):
                     countW += 1
             return countW <= math.ceil(len(words)/3)
-
 
 # read the relevant files from the folder of one paper, and produce a data table for that paper.
 def load_paper_sentence(sent_path, label_path):
@@ -447,7 +442,6 @@ def load_paper_sentence(sent_path, label_path):
     # print(f'paper triple stat: {paper_triple_stat}')
     return sent, paper_triple_stat, paper_normal_root
 
-
 def load_data_sentence(file_path):
     # Get the data table of all the papers in file_path
     triple_stat = [0] * 5
@@ -471,12 +465,11 @@ def load_data_sentence(file_path):
     print(
         f'{count_3} ({round(count_3 * 100 / count_1, 2)}%) are cross-sentence triples')
     print(f'{normal_root} ({round(normal_root * 100 / count_1, 2)}%) takes the form \'Contribution||has||...\'')
-    print(f'0: {triple_stat[0]} ({round(triple_stat[0] * 100 / count_1, 2)}%)')
-    print(f'1: {triple_stat[1]} ({round(triple_stat[1] * 100 / count_1, 2)}%)')
-    print(f'2: {triple_stat[2]} ({round(triple_stat[2] * 100 / count_1, 2)}%)')
-    print(f'3: {triple_stat[3]} ({round(triple_stat[3] * 100 / count_1, 2)}%)')
+    #print(f'0: {triple_stat[0]} ({round(triple_stat[0] * 100 / count_1, 2)}%)')
+    #print(f'1: {triple_stat[1]} ({round(triple_stat[1] * 100 / count_1, 2)}%)')
+    #print(f'2: {triple_stat[2]} ({round(triple_stat[2] * 100 / count_1, 2)}%)')
+    #print(f'3: {triple_stat[3]} ({round(triple_stat[3] * 100 / count_1, 2)}%)')
     return data
-
 
 dirs = get_dir()
 file_path = get_file_path(dirs)
@@ -484,8 +477,9 @@ data = load_data_sentence(file_path)
 
 df = pd.DataFrame(data)
 df.columns = ['idx', 'text', 'main_heading', 'heading',
-              'topic', 'paper_idx', 'BIO', 'BIO_1', 'BIO_2', 'triple_A', 'triple_B', 'triple_C', 'triple_D', 'triple_E', 'SPEC_1', 'SPEC_2', 'SPEC_3', 'SPEC_4', 'predicates', 'subj/obj', 'mask', 'bi_labels', 'labels']
+              'topic', 'paper_idx', 'BIO', 'BIO_1', 'BIO_2', 'triple_A', 'triple_B', 'triple_C', 'triple_D', 'SPEC_0', 'SPEC_1', 'SPEC_2', 'SPEC_3', 'SPEC_4', 'predicates', 'subj/obj', 'mask', 'bi_labels', 'labels']
 pos = df[df['bi_labels'] == 1]
 pos = pos[['labels', 'text', 'predicates', 'subj/obj', 'triple_A',
-           'triple_B', 'triple_C', 'triple_D', 'triple_E', 'SPEC_1', 'SPEC_2', 'SPEC_3', 'SPEC_4', 'topic', 'paper_idx', 'idx']].rename(columns={'labels': 'info_unit'})
+           'triple_B', 'triple_C', 'triple_D', 'SPEC_0', 'SPEC_1', 'SPEC_2', 'SPEC_3', 'SPEC_4', 'topic', 'paper_idx', 'idx']].rename(columns={'labels': 'info_unit'})
 pos.to_csv('./interim/triples.csv', index=False)
+print('\n\"triples.csv\" has been saved to ./interim')
