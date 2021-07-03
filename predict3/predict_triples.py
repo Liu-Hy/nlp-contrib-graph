@@ -192,8 +192,8 @@ for i in range(4):
             if df.loc[j, 'preds'] == 2:
                 df.loc[j, 'cand'][1] = 'name'
     data=[]
-    for i in range(len(df)):
-        temp = list(df[df['idx']==i]['cand'])
+    for k in range(len(df)):
+        temp = list(df[df['idx']==k]['cand'])
         temp = [t for t in temp if t]
         data.append(str(temp))
     data=pd.DataFrame(data,columns=['triple_'+lt[i]])
