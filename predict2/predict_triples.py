@@ -15,6 +15,7 @@ transformers_logger.setLevel(logging.WARNING)
 
 df0 = pd.read_csv('phrases.csv')
 df0.insert(loc=0, column='idx', value=np.arange(len(df0)))
+sent_num = len(df0)
 
 def convert_A(arr):
     trip_ls = []
@@ -192,7 +193,7 @@ for i in range(4):
             if df.loc[j, 'preds'] == 2:
                 df.loc[j, 'cand'][1] = 'name'
     data=[]
-    for k in range(len(df)):
+    for k in range(sent_num):
         temp = list(df[df['idx']==k]['cand'])
         temp = [t for t in temp if t]
         data.append(str(temp))

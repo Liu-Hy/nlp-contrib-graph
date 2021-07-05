@@ -2,6 +2,14 @@
 This repo contains data and code to solve SemEval-2021 Task 11: NLP Contribution Graph\
 For detailed description of our method, please see the [paper](https://arxiv.org/abs/2105.05435/) "UIUC_BioNLP at SemEval-2021 Task 11: A Cascade of Neural Models for Structuring Scholarly NLP Contributions".
 
+## Dependencies
+* This repo requires <code>simpletransformers/</code> - the customized Simple Transformers package 
+  * With customized model for subtask 1 to incorporate additional features
+  * Extended from Simple Transformers version 0.51.10, compatible with common usage
+  * Please first install the common package by running this code:
+    * <code>pip install simpletransformers==0.51.10</code>\
+    find the installation directory, and replace the <code>simpletransformers</code> folder with this folder
+
 ## Data
 * <code>training_data/</code> - the training data merged with the trial data, with full annotation.
 * <code>interim/</code> - intermediate data files converted from the training data
@@ -13,12 +21,6 @@ For detailed description of our method, please see the [paper](https://arxiv.org
 ## Scripts
 * **pre**.py - preprocess training data, report potential errors, produce *all_sent*.csv and *pos_sent*.csv
 * **ext**.py - preprocess training data, and produce *triples*.csv
-* <code>simpletransformers/</code> - the customized Simple Transformers package
-  * With customized model for subtask 1 to incorporate additional features
-  * Extended from Simple Transformers version 0.51.10, compatible with common usage
-  * Please first install the common package by running this code:
-    * <code>pip install simpletransformers==0.51.10</code>\
-    find the installation directory, and replace the <code>simpletransformers</code> folder with this folder
 
 * <code>train_sent/</code> - Note that all scripts in this folder require the customized Simple Transformers package.
   * A binary classifier is trained for subtask 1: contribution sentence classification
@@ -46,7 +48,7 @@ For detailed description of our method, please see the [paper](https://arxiv.org
 * <code>predict3/</code> - scripts for Evaluation Phase 2 Part 2: given the labels of contribution sentences and phrases, do the rest.
   * We copied the result of information unit classification in *predict2/*. Thus after running *pre*.py, we directly started from phrase classification.
 
-## External Links
+## Useful Links
 * [Task description paper](https://arxiv.org/abs/2106.07385)
 * [Official website](https://ncg-task.github.io/) of the task
 * [Training data](https://github.com/ncg-task/training-data) and [trial data](https://github.com/ncg-task/trial-data) release.
