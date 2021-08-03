@@ -9,7 +9,7 @@ from simpletransformers.classification import (
     ClassificationModel,
 )
 
-logging.basicConfig(level=logging.INFO)
+logging.basicConfig(level=logging.WARNING)
 transformers_logger = logging.getLogger("transformers")
 transformers_logger.setLevel(logging.WARNING)
 
@@ -168,6 +168,7 @@ model_args.overwrite_output_dir = True
 model_args.reprocess_input_data = True
 model_args.manual_seed = 1
 model_args.fp16 = False
+model_args.use_multiprocessing = False
 model_args.do_lower_case = True
 
 def triple_F1(ref, pred):

@@ -16,7 +16,7 @@ from simpletransformers.classification import (
 labelset = ["B", "I", "O"]
 type_ls = ['']
 
-logging.basicConfig(level=logging.INFO)
+logging.basicConfig(level=logging.WARNING)
 transformers_logger = logging.getLogger("transformers")
 transformers_logger.setLevel(logging.WARNING)
 
@@ -52,7 +52,7 @@ def phrase_F1(ref, pred):
 
 base_dir = '../train_ner/'
 model_ls = []
-for i in range(43):
+for i in range(32):
     folder = os.path.join(base_dir, 'identify_sub'+str(i))
     models = os.listdir(folder)
     models = [os.path.join(folder, model) for model in models if model[:11]
@@ -65,7 +65,7 @@ model_args.save_model_every_epoch = False
 model_args.overwrite_output_dir = True
 model_args.fp16 = False
 model_args.manual_seed = 1
-model_args.use_multiprocessing = True
+model_args.use_multiprocessing = False
 model_args.do_lower_case = False
 
 each_pred = [[] for k in range(len(model_ls))]
@@ -116,7 +116,7 @@ model_args1.overwrite_output_dir = True
 model_args1.reprocess_input_data = True
 model_args1.manual_seed = 1
 model_args1.fp16 = False
-model_args1.use_multiprocessing = True
+model_args1.use_multiprocessing = False
 model_args1.do_lower_case = False
 
 model_ls = []

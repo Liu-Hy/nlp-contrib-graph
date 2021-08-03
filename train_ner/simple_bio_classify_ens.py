@@ -61,6 +61,7 @@ model_args.reprocess_input_data = True
 model_args.fp16 = False
 model_args.save_model_every_epoch = True
 model_args.save_steps = -1
+model_args.use_multiprocessing = False
 
 model_args.num_train_epochs = 10
 model_args.train_batch_size = 8

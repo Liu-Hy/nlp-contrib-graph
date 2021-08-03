@@ -9,7 +9,7 @@ from simpletransformers.ner import (
 labelset = ["B-p", "I-p", "B-n", "I-n", "O"]
 type_ls = ['-p', '-n']
 
-logging.basicConfig(level=logging.INFO)
+logging.basicConfig(level=logging.WARNING)
 transformers_logger = logging.getLogger("transformers")
 transformers_logger.setLevel(logging.WARNING)
 
@@ -26,6 +26,7 @@ df = pd.DataFrame(data, columns=['sentence_id', 'words', 'labels'])
 model_args = NERArgs()
 model_args.reprocess_input_data = True
 model_args.save_model_every_epoch = False
+model_args.use_multiprocessing = False
 model_args.overwrite_output_dir = True
 model_args.fp16 = False
 model_args.manual_seed = 1

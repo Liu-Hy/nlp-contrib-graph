@@ -80,6 +80,7 @@ model_args.save_steps = -1
 model_args.manual_seed = 1
 model_args.fp16 = False
 model_args.num_train_epochs = 10
+model_args.use_multiprocessing = False
 model_args.train_batch_size = 16
 model_args.gradient_accumulation_steps = 4
 model_args.learning_rate = 1e-5

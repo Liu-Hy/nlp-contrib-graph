@@ -13,7 +13,7 @@ from simpletransformers.classification import (
 labelset = ["B", "I", "O"]
 type_ls = ['']
 
-logging.basicConfig(level=logging.INFO)
+logging.basicConfig(level=logging.WARNING)
 transformers_logger = logging.getLogger("transformers")
 transformers_logger.setLevel(logging.WARNING)
 
@@ -60,6 +60,7 @@ model_args1.overwrite_output_dir = True
 model_args1.reprocess_input_data = True
 model_args1.manual_seed = 1
 model_args1.fp16 = False
+model_args1.use_multiprocessing = False
 model_args1.do_lower_case = False
 
 base_dir = '../train_ner/'

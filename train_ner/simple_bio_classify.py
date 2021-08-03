@@ -49,9 +49,7 @@ ratio = len(train_neg)/len(train_pos)
 print(f'imbalance ratio: {ratio}')
 
 model_args = ClassificationArgs()
-# arguments for early stop
 model_args.use_early_stopping = True
-# model_args.early_stopping_delta = 0.01
 model_args.early_stopping_metric = "F1_score"
 model_args.early_stopping_metric_minimize = False
 model_args.early_stopping_patience = 2
@@ -65,9 +63,9 @@ model_args.fp16 = False
 model_args.save_model_every_epoch = True
 model_args.save_steps = -1
 model_args.output_dir = 'classify/'
+model_args.use_multiprocessing = False
 model_args.best_model_dir = 'classify/best_model'
 
-model_args.use_multiprocessing = True
 model_args.num_train_epochs = 10
 model_args.train_batch_size = 8
 model_args.gradient_accumulation_steps = 4

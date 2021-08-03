@@ -88,6 +88,7 @@ model_args.save_model_every_epoch = True
 model_args.save_steps = -1
 model_args.manual_seed = 1
 model_args.fp16 = False
+model_args.use_multiprocessing = False
 model_args.num_train_epochs = 20
 model_args.train_batch_size = 16
 model_args.gradient_accumulation_steps = 4

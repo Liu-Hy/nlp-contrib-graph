@@ -38,7 +38,7 @@ model_args.save_model_every_epoch = True
 model_args.save_eval_checkpoints = False
 model_args.save_steps = -1
 model_args.manual_seed = 1
-model_args.use_multiprocessing = True
+model_args.use_multiprocessing = False
 model_args.num_train_epochs = 4
 model_args.train_batch_size = 8
 model_args.gradient_accumulation_steps = 4
@@ -64,7 +64,7 @@ def get_entity_spans(ls):
     spans = sorted(spans, key=lambda x: x[0])
     return spans
 
-for i in range(43):
+for i in range(32):
     idx = np.random.randint(len(pos), size=len(pos))
     print(idx[:30])
     model_args.output_dir = 'identify_sub'+str(i)
