@@ -54,6 +54,7 @@ preds = [label_list[p] for p in preds]
 df['labels'] = preds
 df['paper'] = df['topic']+df['paper_idx'].astype(str)
 
+# judge if a sentence is in 'Code' unit
 def judge_code(s):
     s = s.lower()
     if 'github.' in s or 'github .' in s:
@@ -63,7 +64,7 @@ def judge_code(s):
     else:
         return 0
 
-
+# decide whether an article has the unit 'model' or 'approach', if it has a sentence classified as 'method'
 def classify_method(df):
     headings = ''.join(str(heading).lower()
                        for heading in df['main_heading'].unique())
@@ -85,8 +86,8 @@ terms = set(['keras', 'pytorch', 'torch', 'tensorflow', 'theano', 'cuda', 'cpu',
              'nltk', 'spacy', 'corenlp', 'stanford', 'tokenizer',
              'run'])
 
-
-def classify_hyper_setup(df):  # df should contain sentences from the same paper
+# decide whether an article has the unit 'hyperparameters' or 'experimental-setup', if it has a sentence classified as 'hyper-setup'
+def classify_hyper_setup(df):
     df = df[df['labels'] == 'hyper-setup']
     text = ' '.join(list(df['text'].values))
     if len(terms.intersection(set(text.lower().split()))) > 0:
@@ -94,7 +95,7 @@ def classify_hyper_setup(df):  # df should contain sentences from the same paper
     else:
         return 'hyperparameters'
 
-
+# apply the above rules to subdivide similar units
 df1 = df[df['labels'] == 'method']
 paper_ls = list(df1['paper'].unique())
 for paper in paper_ls:
@@ -106,7 +107,7 @@ paper_ls = list(df2['paper'].unique())
 for paper in paper_ls:
     df.loc[(df['paper'] == paper) & (df['labels'] == 'hyper-setup'),
            'labels'] = classify_hyper_setup(df[df['paper'] == paper])
-
+# identify code sentences and override labels
 for i in range(len(df)):
     if judge_code(df.iloc[i, 1]) == 1:
         df.at[i, 'labels'] = 'code'

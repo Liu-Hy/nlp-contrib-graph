@@ -1,12 +1,8 @@
 import logging
 import os
 import pandas as pd
-import sklearn
 import numpy as np
-import seaborn as sn
-import matplotlib.pyplot as plt
 from scipy.special import softmax
-from sklearn.metrics import classification_report, confusion_matrix
 from simpletransformers.classification import (
     ClassificationArgs1,
     ClassificationModel1,
@@ -44,6 +40,7 @@ def F1_score(ref, pred):
     print('This is prediction mode. Please neglect the evaluation score.')
     return 0.5
 
+# get the paths of the ~45 submodels
 base_dir = '../train_sent/'
 model_ls = []
 for i in range(8):
@@ -52,6 +49,7 @@ for i in range(8):
     models = [os.path.join(folder,model) for model in models if model[:11]=='checkpoint-' and int(model.split('-')[-1])>10 and int(model.split('-')[-1])<18]
     model_ls += models
 
+# get submodel predictions
 each_pred = []
 for i in range(len(model_ls)):
     model = ClassificationModel1(
@@ -63,33 +61,20 @@ for i in range(len(model_ls)):
     result, model_outputs, wrong_predictions = model.eval_model(df, F1_score=F1_score)
     each_pred.append(model_outputs)
 
+# ensemble the predictions
 np.set_printoptions(precision=5)
 m=np.zeros_like(each_pred[0])
 for i in range(len(each_pred)):
     m = m + softmax(each_pred[i], axis=1)
 m = m/len(each_pred)
-
 rank=(-m).argsort(axis=1)[:,:3]
-
-preds=[]
-for i in range(len(rank)):
-    if rank[i,0]==4:
-        if rank[i,1]==8:
-            preds.append(rank[i,2])
-        else:
-            preds.append(rank[i,1])
-    elif rank[i,0]==8:
-        if rank[i,1]==4:
-            preds.append(rank[i,2])
-        else:
-            preds.append(rank[i,1])
-    else:
-        preds.append(rank[i,0])
+preds=[rank[i,0] for i in range(len(rank))]
 
 preds = [label_list[p] for p in preds]
 df['labels']=preds
 df['paper']=df['topic']+df['paper_idx'].astype(str)
 
+# decide whether an article has the unit 'model' or 'approach', if it has a sentence classified as 'method'
 def classify_method(df): # df should contain sentences from the same paper
     headings = ''.join(str(heading).lower() for heading in df['main_heading'].unique())
     if 'model' in headings:
@@ -109,6 +94,7 @@ terms = {'theano', 'torch', 'nltk', 'scikit-learn', 'paddle', 'cuda', 'allennlp'
          'dsstne', 'ibm', 'cpus', 'sk-learn', 'gpu', 'caffe', 'scipy', 'tokenizer', 'spacy', 'intel', 'cntk', 'orange3', 
          'rip', 'licensing', 'tensorflow', 'cpu', 'textblob', 'dynet', 'geforce', 'keras', 'amazon', 'cloud', 'gluon'}
 
+# decide whether an article has the unit 'hyperparameters' or 'experimental-setup', if it has a sentence classified as 'hyper-setup'
 def classify_hyper_setup(df): # df should contain sentences from the same paper
     df=df[df['labels']=='hyper-setup']
     text=' '.join(list(df['text'].values))
@@ -117,6 +103,7 @@ def classify_hyper_setup(df): # df should contain sentences from the same paper
     else:
         return 'hyperparameters'
 
+# judge if a sentence is in 'Code' unit
 def judge_code(s):
     s=s.lower()
     if 'github.' in s or 'github .' in s or 'gitlab.' in s or 'gitlab .' in s:
@@ -126,6 +113,7 @@ def judge_code(s):
     else:
         return 0
 
+# apply the above rules to subdivide similar units
 df1=df[df['labels']=='method']
 paper_ls=list(df1['paper'].unique())
 for paper in paper_ls:
@@ -135,7 +123,7 @@ df2=df[df['labels']=='hyper-setup']
 paper_ls=list(df2['paper'].unique())
 for paper in paper_ls:
     df.loc[(df['paper']==paper)&(df['labels']=='hyper-setup'),'labels']=classify_hyper_setup(df[df['paper']==paper])
-
+# identify code sentences and override labels
 for i in range(len(df)):
     if judge_code(df.loc[i,'text'])==1:
         df.at[i,'labels']='code'

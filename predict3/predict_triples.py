@@ -17,6 +17,7 @@ df0 = pd.read_csv('phrases.csv')
 df0.insert(loc=0, column='idx', value=np.arange(len(df0)))
 sent_num = len(df0)
 
+# generate a dataframe of possible type A triples to be classified, and so on
 def convert_A(arr):
     trip_ls = []
     ls = []
@@ -41,10 +42,6 @@ def convert_A(arr):
                             word_ls.insert(indx[w][1]+2*w, '[[')
                             word_ls.insert(indx[w][2]+2*w+1, ']]')
                     flg = 0
-                    for tp in literal_eval(arr[i, 5]):
-                        if tp == [np_ls[j][0], pre_ls[p][0], np_ls[k][0]]:
-                            flg = 1
-                            break
                     ls.append([int(arr[i, 0]), ' '.join(word_ls), flg])
     dataframe = pd.DataFrame(ls)
     dataframe.columns = ['idx', 'text', 'labels']
@@ -53,14 +50,16 @@ def convert_A(arr):
 def convert_B(arr):
     ls = []
     trip_list = []
+    A = pd.read_csv('A.csv').values
     for i in range(len(arr)):
+        a_ls = load(A[i,0])
         lth = len(load(arr[i, 4]))
         for p1 in range(lth-1):
-            for p2 in range(p1+1, p1+2):  # p1+2 or lth
+            for p2 in range(p1+1, p1+2):
                 phrase1 = load(arr[i, 4])[p1]
                 phrase2 = load(arr[i, 4])[p2]
-                a_ls = load(arr[i, 5])
                 possible = 1
+                # terms that co-occcur in type A cannot be in type B triples
                 for a in a_ls:
                     if (a[0] == phrase1[0] and a[2] == phrase2[0]) or (a[0] == phrase2[0] and a[2] == phrase1[0]):
                         possible = 0
@@ -74,15 +73,7 @@ def convert_B(arr):
                     word_ls.insert(phrase2[1][0]+2, '[[')
                     word_ls.insert(phrase2[1][1]+3, ']]')
                     flg = 0
-                    trip_ls = load(arr[i, 6])
-                    for trip in trip_ls:
-                        if trip[0] == phrase1[0] and trip[2] == phrase2[0]:
-                            if trip[1] == 'has':
-                                flg = 1
-                                break
-                            elif trip[1] == 'name':
-                                flg = 2
-                                break
+                    trip_ls = []
                     ls.append([int(arr[i, 0]), phrase1[0], phrase2[0],
                                trip_ls, ' '.join(word_ls), flg])
     dataframe = pd.DataFrame(ls)
@@ -112,14 +103,7 @@ def convert_C(arr):
                 unit_ls = ['[[']+(unit.split(' '))+[']]']
                 word_ls = unit_ls+[':']+word_ls
                 flg = 0
-                if arr[i, 7] == '[]':
-                    trip_ls = []
-                else:
-                    trip_ls = load(arr[i, 7])
-                    for trip in trip_ls:
-                        if trip[1] == pre[0] and trip[2] == np[0]:
-                            flg = 1
-                            break
+                trip_ls = []
                 ls.append([int(arr[i, 0]), unit, pre[0], np[0],
                            trip_ls, ' '.join(word_ls), flg])
     dataframe = pd.DataFrame(ls)
@@ -146,14 +130,7 @@ def convert_D(arr):
                 unit_ls = ['[[']+(unit.split(' '))+[']]']
                 word_ls = unit_ls+[':']+word_ls
                 flg = 0
-                if arr[i, 8] == '[]':
-                    trip_ls = []
-                else:
-                    trip_ls = load(arr[i, 8])
-                    for trip in trip_ls:
-                        if trip[1] == 'has' and trip[2] == np[0]:
-                            flg = 1
-                            break
+                trip_ls = []
                 ls.append([int(arr[i, 0]), unit, np[0],
                            trip_ls, ' '.join(word_ls), flg])
     dataframe = pd.DataFrame(ls)
@@ -176,6 +153,7 @@ def triple_F1(ref, pred):
 
 df0 = df0.values
 lt = ['A','B','C','D']
+# predict using the model for each type, and store the predicted triples
 for i in range(4):
     df, trip_list = convert_ls[i](df0)
     model = ClassificationModel(
@@ -208,7 +186,6 @@ D = pd.read_csv('D.csv')
 
 t = pd.read_csv('phrases.csv')
 t = t.reset_index(drop=True)
-t = t.drop(columns=['triple_A', 'triple_B', 'triple_C', 'triple_D'])
 t = pd.concat([t, A, B, C, D], axis=1)
 pos = pd.read_csv('pos_sent.csv')
 bu = pos[['topic', 'paper_idx', 'idx']]

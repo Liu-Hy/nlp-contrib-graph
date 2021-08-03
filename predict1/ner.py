@@ -84,10 +84,6 @@ for k in range(len(pred_label)):
 a = pd.DataFrame(phrase_ls)
 a.columns = ['predicates', 'subj/obj']
 a = pd.concat([pos[['labels', 'text']], a], axis=1)
-a['triple_A'] = '[]'
-a['triple_B'] = '[]'
-a['triple_C'] = '[]'
-a['triple_D'] = '[]'
 a = a.reset_index(drop=True)
 
 a.to_csv('phrases.csv', index=False)

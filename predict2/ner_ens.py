@@ -50,6 +50,7 @@ def get_entity_spans(ls):
 def phrase_F1(ref, pred):
     return 0
 
+# get the paths of the ~96 submodels
 base_dir = '../train_ner/'
 model_ls = []
 for i in range(32):
@@ -68,9 +69,9 @@ model_args.manual_seed = 1
 model_args.use_multiprocessing = False
 model_args.do_lower_case = False
 
+# get submodel predictions
 each_pred = [[] for k in range(len(model_ls))]
 for i in range(len(model_ls)):
-    # Create a TransformerModel
     model = NERModel(
         'bert',
         model_ls[i],
@@ -81,6 +82,7 @@ for i in range(len(model_ls)):
         df, F1_score=phrase_F1)
     each_pred[i] = [get_entity_spans(label) for label in pred_label]
 
+# ensemble the predictions
 pred_ls = [[] for i in range(len(pos))]
 for i in range(len(pos)):
     preds = []
@@ -93,11 +95,12 @@ for i in range(len(pos)):
 p = [str(l) for l in pred_ls]
 pos = pd.read_csv('pos_sent.csv')
 pos['BIO_1'] = p
-
 pos.to_csv('pos_sent.csv')
 
-####### variable name no overlap
-
+'''
+Classify the phrases into predicates and terms
+Ensembling is also used
+'''
 pred_ls2 = list(pos['BIO_1'].values)
 pred_ls2 = [load(p) for p in pred_ls2]
 ls1 = []
@@ -116,7 +119,7 @@ model_args1.overwrite_output_dir = True
 model_args1.reprocess_input_data = True
 model_args1.manual_seed = 1
 model_args1.fp16 = False
-model_args1.use_multiprocessing = False
+model_args1.use_multiprocessing = False  # True if cpu memory is enough
 model_args1.do_lower_case = False
 
 model_ls = []
@@ -163,10 +166,6 @@ for i in range(len(dataframe)):
 a = pd.DataFrame(phrase_ls)
 a.columns = ['predicates', 'subj/obj']
 a = pd.concat([pos[['labels', 'text']], a], axis=1)
-a['triple_A'] = '[]'
-a['triple_B'] = '[]'
-a['triple_C'] = '[]'
-a['triple_D'] = '[]'
 a = a.reset_index(drop=True)
 
 a.to_csv('phrases.csv', index=False)

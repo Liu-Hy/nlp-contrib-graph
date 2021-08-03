@@ -92,10 +92,10 @@ model_args.use_multiprocessing = False
 model_args.num_train_epochs = 20
 model_args.train_batch_size = 16
 model_args.gradient_accumulation_steps = 4
-model_args.learning_rate = 1e-5
+model_args.learning_rate = 3e-5
 model_args.scheduler = "polynomial_decay_schedule_with_warmup"
 model_args.polynomial_decay_schedule_power = 0.5
-model_args.warmup_steps = 200
+#model_args.warmup_steps = 200
 model_args.do_lower_case = True
 
 def triple_F1(ref, pred):
